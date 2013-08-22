@@ -1,0 +1,34 @@
+<h1><%=t '.caption' %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th class="span5"></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.title %></td>
+        <td><%= image_tag photo.image_url(:thumb) %></td>
+        <td>
+         <%=link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"), user_photo_path(current_user,photo)%>
+        </td>
+        <td>
+         <%=link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_user_photo_path(current_user,photo) %></td>
+        <td>
+        <%=link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), user_photo_path(current_user,photo), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new'), new_user_photo_path(current_user),{class: "btn btn-primary"} %>

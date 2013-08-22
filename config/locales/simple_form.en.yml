@@ -14,9 +14,10 @@ en:
     # labels:
     #   defaults:
     #     password: 'Password'
-    #   user:
+    #   topics:
     #     new:
-    #       email: 'E-mail to sign in.'
+    #       name: 'Название'
+    #       content: "Описание"
     #     edit:
     #       email: 'E-mail.'
     # hints:

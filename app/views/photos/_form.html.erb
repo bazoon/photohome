@@ -1,0 +1,16 @@
+<%= simple_form_for([current_user,@photo]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.file_field :image %>
+    <%= f.association :topic %>
+    <%= f.input :theme_tokens, :input_html => {data: {load: @photo.themes.map {|t| {id: t.name,name: t.name}}   }} %>
+  </div>
+
+  
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>

@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <% @novelties.each do |novelty| %>
+    <%@novelties.each do |novelty| %>
       <tr>
         <td><%= novelty.title %></td>
         <td><%= novelty.content %></td>
@@ -27,7 +27,9 @@
         <td><%= novelty.user.name %></td>
         <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"),novelty %></td>
         <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_novelty_path(novelty) %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), novelty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        <%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), novelty, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       
       </tr>
     <% end %>

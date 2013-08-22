@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
+
   def index
-    @users = User.all
+    @last_photos = Photo.last(3)
   end
+
+
 end

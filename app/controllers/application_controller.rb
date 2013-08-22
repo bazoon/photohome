@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_filter :set_current_locale
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
   end
@@ -20,7 +22,6 @@ class ApplicationController < ActionController::Base
 	def set_current_locale
 	  current_locale = 'ru' # default one
 	  current_locale = params[:locale] if params[:locale]  # or add here some checking 
-
 	  I18n.locale = current_locale # if it doesn't work, add .to_sym    
 	end
 
