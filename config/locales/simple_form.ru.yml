@@ -20,6 +20,13 @@ ru:
           content: "Описание"
         edit:
           email: 'E-mail.'
+      message:
+        title: "Тема"
+        content: "Содержание" 
+        reason:  "Причина"
+
+
+
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

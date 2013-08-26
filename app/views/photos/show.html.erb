@@ -10,5 +10,14 @@
   <%= image_tag @photo.image %>
 </p>
 
+<hr/>
+
+
+
+= render partial: 'the_comments/tree', locals: { commentable: @blog, comments_tree: @comments }
+
+
+<% end %>
+
 <%= link_to 'Edit', edit_user_photo_path(current_user,@photo) %> |
 <%= link_to 'Back', user_photos_path %>

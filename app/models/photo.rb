@@ -6,8 +6,14 @@ class Photo < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 	
 	acts_as_taggable_on :themes
+  
+  acts_as_commentable
+
 	# attr_accessible :theme_tokens
 	attr_reader :theme_tokens
+
+
+  
 
 	def theme_tokens=(tokens)
 		# binding.pry

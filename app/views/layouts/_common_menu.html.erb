@@ -1,0 +1,3 @@
+<li class="active"><a href="#">Фотографии</a></li>
+<li><a href="#about">Конкурсы</a></li>
+<li><%=link_to("Новости",list_novelties_path) if can? :read,Novelty %></li>

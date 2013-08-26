@@ -18,6 +18,11 @@ class NoveltiesController < ApplicationController
     @novelties = Novelty.paginate(:page => params[:page])
   end
 
+
+  def list
+    @novelties = Novelty.paginate(:page => params[:page])
+  end
+
   # GET /novelties/1
   # GET /novelties/1.json
   def show

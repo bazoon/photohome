@@ -6,9 +6,18 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  
+  has_many :photos
+  has_many :messages
+
+
   def admin?
   	has_role?("admin")       	
   end       
+
+  def comment_moderator? comment
+    admin? || id == comment.holder_id
+  end
 
 
   def is_stuff?

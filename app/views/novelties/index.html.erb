@@ -7,7 +7,6 @@
   <thead>
     <tr>
       <th>Заголовок</th>
-      <th>Содержание</th>
       <th>Дата</th>
       <th>Опубликовано<nobr/>?</th>
       <th>Пользователь</th>
@@ -21,7 +20,6 @@
     <%@novelties.each do |novelty| %>
       <tr>
         <td><%= novelty.title %></td>
-        <td><%= novelty.content %></td>
         <td><%= I18n.l(novelty.publish_date) %></td>
         <td><%= novelty.published %></td>
         <td><%= novelty.user.name %></td>

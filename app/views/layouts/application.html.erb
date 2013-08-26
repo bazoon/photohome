@@ -40,14 +40,9 @@
           <a class="brand" href="/">Photohome</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Фотографии</a></li>
-              <li><a href="#about">Конкурсы</a></li>
-              <li><a href="#contact">Статьи</a></li>
-              <li><a href="#contact">Новости</a></li>
-              
+              <%= render 'layouts/common_menu' %>
               <%= render 'layouts/moder_menu' if current_user && current_user.is_stuff? %>
               <%= render 'layouts/admin_menu' if current_user && current_user.admin? %>
-
             </ul>
 
     <nav class="pull-right">

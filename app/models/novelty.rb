@@ -1,5 +1,9 @@
 class Novelty < ActiveRecord::Base
 	belongs_to :user
-	self.per_page = 2
+  acts_as_commentable
+
+	self.per_page = 10
+
+
 
 end

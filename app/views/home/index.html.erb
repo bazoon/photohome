@@ -15,21 +15,12 @@
 
         <div class="carousel-inner">
     
-         <div class="item active"><%=image_tag @last_photos.first.image_url %>
-         <div class="carousel-caption">
-                  <h4><%= @last_photos.first.title%></h4>
-                  
-          </div>
-          </div> 
+         
 
-          <% @last_photos.each do |photo| %>
-            
-            <div class="item"><%=image_tag photo.image_url %>
-         <div class="carousel-caption">
-                  <h4><%= photo.title%></h4>
-                  
-                </div>
-                </div>   
+          <% @last_photos.each_with_index do |photo,index| %>
+             <div class="item <%= "active" if index==1%>"><%=image_tag photo.image_url %>
+             <div class="carousel-caption"><h4><%= photo.title%></h4></div>
+             </div>   
           <% end %>
         
         </div>

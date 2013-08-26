@@ -21,6 +21,12 @@
 
 ru:
   save: "Сохранить"
+  opened: "Открыто"
+  in_process: "Обрабатывается"
+  closed: "Закрыто"
+  complaint: "Жалоба"
+  proposal: "Предложение"
+  contest: "Конкурс"
   # photos: "PHH"
   photos:
     index:
@@ -33,3 +39,10 @@ ru:
         content: "Описание"
         title: "Темы"
         new_topic: "Новая тема"
+  messages:
+    index:
+      new: "Новое сообщение"
+      content: "Содержание" 
+      reason: "Причина обращения"
+      status: "Статус"
+      messages: "Сообщения"

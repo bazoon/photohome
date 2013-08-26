@@ -40,7 +40,15 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'carrierwave'
 gem 'rmagick'
+# gem "mini_magick"
 gem 'acts-as-taggable-on'
+gem 'sanitize'
+# gem 'tinymce-rails-imageupload'
+# gem 'tinymce-rails'
+gem 'redactor-rails'
+gem "mini_magick"
+gem 'acts_as_commentable'
+
 
 gem 'jquery-turbolinks'
 gem 'pry'

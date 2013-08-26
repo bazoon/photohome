@@ -12,6 +12,7 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+    @comments = @photo.comments.nested_set
   end
 
   # GET /photos/new
@@ -29,6 +30,8 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     @photo.user_id = current_user.id
 
+
+    binding.pry
 
     # render :text => params.inspect
 

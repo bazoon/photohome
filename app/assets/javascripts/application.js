@@ -16,6 +16,7 @@
 //= require jquery.tokeninput
 //= require bootstrap
 //= require turbolinks
+//= require redactor-rails
 //= require_tree .
 
 

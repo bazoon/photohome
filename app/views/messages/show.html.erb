@@ -1,0 +1,22 @@
+<p>
+  <strong>Title:</strong>
+  <%= @message.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @message.status_text %>
+</p>
+
+<p>
+  <strong>Message reason:</strong>
+  <%= @message.reason_text %>
+</p>
+
+<%= link_to 'Edit', edit_user_message_path(current_user,@message) %> |
+<%= link_to 'Back', user_messages_path(current_user) %>

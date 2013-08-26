@@ -12,4 +12,18 @@ module ApplicationHelper
     html.html_safe
   end
 
+
+  def show_icon
+    content_tag(:span,"",class: "ui-icon ui-icon-folder-open")
+  end
+
+  def edit_icon
+    content_tag(:span,"",class: "ui-icon ui-icon-pencil")
+  end
+
+
+  def del_icon
+    content_tag(:span,"",class: "ui-icon ui-icon-minus")
+  end
+
 end
