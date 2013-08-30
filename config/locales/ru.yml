@@ -41,8 +41,29 @@ ru:
         new_topic: "Новая тема"
   messages:
     index:
+      title: "Тема"
       new: "Новое сообщение"
       content: "Содержание" 
       reason: "Причина обращения"
       status: "Статус"
       messages: "Сообщения"
+    show:
+      title: "Тема"   
+      content: "Содержание" 
+      reason: "Причина обращения"
+      status: "Статус"
+  admin:
+    messages:
+      index:
+        title: "Тема"
+        new: "Новое сообщение"
+        content: "Содержание" 
+        reason: "Причина обращения"
+        status: "Статус"
+        messages: "Сообщения"    
+      show:
+        title: "Тема"   
+        content: "Содержание" 
+        reason: "Причина обращения"
+        status: "Статус"
+

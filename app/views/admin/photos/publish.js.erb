@@ -1,0 +1,13 @@
+
+<%- unless @published %>
+var addklass = "glyphicon-eye-close"
+var removeklass = "glyphicon-eye-open"
+// alert("published")
+<%- else %>
+// alert("not published")
+var addklass = "glyphicon-eye-open"
+var removeklass = "glyphicon-eye-close"
+<% end %>
+
+
+$("#photo"+<%=escape_javascript "#{@id}" %>).removeClass(removeklass).addClass(addklass)

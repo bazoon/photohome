@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130826065445) do
+ActiveRecord::Schema.define(version: 20130830040109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20130826065445) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "topic_id"
+    t.boolean  "published"
   end
 
   create_table "pictures", force: true do |t|
@@ -158,6 +159,7 @@ ActiveRecord::Schema.define(version: 20130826065445) do
     t.integer  "published_comcoms_count", default: 0
     t.integer  "deleted_comcoms_count",   default: 0
     t.integer  "spam_comcoms_count",      default: 0
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -1,6 +1,12 @@
 Photohome::Application.routes.draw do
 
   
+  get "gallery/index"
+ 
+
+  get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
+  
+ 
   mount RedactorRails::Engine => '/redactor_rails'
   post "upload/get_image"
 
@@ -27,11 +33,24 @@ Photohome::Application.routes.draw do
       resources :comments
     end
 
+
+    # resources :photos
+
   	resources :users do
   		resources :photos, concerns: :commentable
-      resources :messages, concerns: :commentable
-  	end
+      resources :messages, concerns: :commentable 
+    end
   
+    namespace :admin do
+      resources :messages,concerns: :commentable
+      resources :photos do
+        member do 
+          get 'publish',as: :publish
+        end  
+      end  
+
+        
+    end
   
 
  

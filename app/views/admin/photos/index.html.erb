@@ -1,0 +1,26 @@
+<h1>Последние фотографии</h1>
+
+<br>
+
+<div class="row">  
+
+  <% @photos.each_with_index do |photo,index| %>
+  
+    <div class="col-sm-3" >
+    <div class="thumbnail">
+      <a href=<%= gallery_show_path(photo) %> class="thumbnail" >
+          <%= image_tag photo.image_url(:thumb),data: {src: photo.image_url(:thumb)} %>
+        </a>
+      
+    </div>
+    <div class="caption">
+         <%= link_to photo.published ? eye_open_icon("photo#{photo.id}") : eye_close_icon("photo#{photo.id}") ,publish_admin_photo_path(photo),remote: true %>
+        
+      </div>
+  </div>
+
+  <% end %>
+  
+</div>
+
+

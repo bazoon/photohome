@@ -6,13 +6,14 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @photos = current_user.photos.all
+    # @photos = Photo.all
   end
 
   # GET /photos/1
   # GET /photos/1.json
   def show
-    @comments = @photo.comments.nested_set
+    # @comments = @photo.comments
   end
 
   # GET /photos/new
@@ -31,9 +32,6 @@ class PhotosController < ApplicationController
     @photo.user_id = current_user.id
 
 
-    binding.pry
-
-    # render :text => params.inspect
 
     respond_to do |format|
       if @photo.save

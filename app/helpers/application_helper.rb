@@ -17,6 +17,16 @@ module ApplicationHelper
     content_tag(:span,"",class: "ui-icon ui-icon-folder-open")
   end
 
+
+  def eye_open_icon(id)
+    content_tag(:span,"",class: "glyphicon glyphicon-eye-open",id: id)
+  end  
+
+   def eye_close_icon(id)
+    content_tag(:span,"",class: "glyphicon glyphicon-eye-close",id: id)
+  end  
+
+
   def edit_icon
     content_tag(:span,"",class: "ui-icon ui-icon-pencil")
   end

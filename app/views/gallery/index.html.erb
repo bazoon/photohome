@@ -1,0 +1,25 @@
+<h1>Последние фотографии</h1>
+<br>
+<div class="row">
+
+    <% @last_photos.each_with_index do |photo,index| %>
+  
+    <div class="col-sm-3" style="height: 290px;">
+    <div class="thumbnail">
+      <a href=<%= gallery_show_path(photo) %> class="thumbnail" >
+          <%= image_tag photo.image_url(:thumb),data: {src: photo.image_url(:thumb)} %>
+        </a>
+    
+    <div class="caption">
+     <small>  <%= photo.title %>     </small>
+    </div>  
+    </div>
+    
+    
+  </div>
+
+  <% end %>
+  
+</div>
+
+

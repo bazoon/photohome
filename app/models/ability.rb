@@ -9,9 +9,12 @@ class Ability
     elsif user.has_role? :moder
       can :manage, Novelty  
     else
+      can :read,Message
+      can :manage,Comment,user_id: user.id
       can :read,:all    
     end
 
+  
 
 
 

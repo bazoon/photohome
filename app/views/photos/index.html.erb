@@ -1,9 +1,12 @@
 <h1><%=t '.caption' %></h1>
 
+
+<%= link_to t('.new'), new_user_photo_path(current_user),{class: "btn btn-primary"} %>
+
 <table>
   <thead>
-    <tr>
-      <th class="span5"></th>
+    <tr >
+      <th class="col-md-4"></th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,5 +33,3 @@
 </table>
 
 <br>
-
-<%= link_to t('.new'), new_user_photo_path(current_user),{class: "btn btn-primary"} %>

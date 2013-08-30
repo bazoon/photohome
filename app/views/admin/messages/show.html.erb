@@ -1,0 +1,57 @@
+<p>
+  <strong><%= t(".title") %>:</strong>
+  <%= @message.title %>
+</p>
+
+<p>
+  <strong><%= t(".content") %>:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong><%= t(".status") %>:</strong>
+  <%= @message.status_text %>
+</p>
+
+<p>
+  <strong><%= t(".reason") %>:</strong>
+  <%= @message.reason_text %>
+</p>
+
+
+<br/>
+
+<h4>Комментарии</h4>
+
+<% @message.comments.each do |c| %>
+
+<div>
+   <%= image_tag(c.user.avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;") %> 
+  <div><%= c.comment %></div>
+</div>
+ <%= link_to del_icon, [current_user,@message,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy,c%>
+
+<div style="clear: left; height: 20px;" ></div>
+
+<% end %>
+
+<hr/>
+
+
+<%= simple_form_for([current_user,@message,Comment.new]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :comment,placeholder: 'Напиши комментарий',:input_html => {class: "form-control"} %>
+  </div>
+  <div class="form-group">  
+    <%= f.input :commentable, :as => :hidden, :input_html => { :value => "message" }  %>
+  </div>
+
+ 
+  
+    <%= f.button :submit,class: "btn btn-default" %>
+  
+<% end %>
+
+

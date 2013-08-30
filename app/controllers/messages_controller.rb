@@ -9,6 +9,8 @@ class MessagesController < ApplicationController
     @messages = current_user && current_user.messages.all
   end
 
+
+
   # GET /messages/1
   # GET /messages/1.json
   def show

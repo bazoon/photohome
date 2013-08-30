@@ -7,7 +7,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bootstrap-sass'
+
+# gem 'bootstrap-sass'
+
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails',
+                              :branch => '3.0.0'
+
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
@@ -48,7 +55,7 @@ gem 'sanitize'
 gem 'redactor-rails'
 gem "mini_magick"
 gem 'acts_as_commentable'
-
+gem 'fotoramajs'
 
 gem 'jquery-turbolinks'
 gem 'pry'

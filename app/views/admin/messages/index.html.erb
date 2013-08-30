@@ -1,0 +1,32 @@
+<h1><%= t(".messages") %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr >
+      <th class="span2">Title</th>
+      <th><%=  t(".content")%></th>
+      
+      <th><%= t(".status") %></th>
+      <th><%= t(".reason") %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.title %></td>
+        <td><%= message.content %></td>
+        <td><%= content_tag(:span,message.status_text,class: status_class(message)) %></td>
+        <td><%= message.reason_text %></td>
+        <td><%= link_to show_icon, admin_message_path(message) %></td>
+        <td><%= link_to edit_icon, edit_admin_message_path(message) %></td>
+        <td><%= link_to del_icon, admin_message_path(message), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

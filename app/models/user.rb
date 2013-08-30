@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  mount_uploader :avatar, AvatarUploader
   
   has_many :photos
   has_many :messages
@@ -15,8 +16,12 @@ class User < ActiveRecord::Base
   	has_role?("admin")       	
   end       
 
-  def comment_moderator? comment
-    admin? || id == comment.holder_id
+  def moder?
+    has_role("moder")
+  end
+
+  def resourse_editor? resourse
+    admin? || moder? || id == resourse.user_id
   end
 
 
