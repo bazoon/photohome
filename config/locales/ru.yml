@@ -27,6 +27,7 @@ ru:
   complaint: "Жалоба"
   proposal: "Предложение"
   contest: "Конкурс"
+  comments: "Коментарии"
   # photos: "PHH"
   photos:
     index:

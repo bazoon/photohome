@@ -11,7 +11,7 @@
 <hr/>
 
 
-<h4>Comments</h4>
+<h4><%= t("comments") %></h4>
 
 <% @photo.comments.each do |c| %>
 
@@ -31,18 +31,18 @@
 <%= simple_form_for([current_user,@photo,Comment.new]) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :comment,placeholder: 'Напиши комментарий'  %>
+    <div class="form-group">
+    <%= f.input :comment,placeholder: 'Напиши комментарий',:input_html => {class: "form-control"}  %>
+    </div>
+     <div class="form-group">
     <%= f.input :commentable, :as => :hidden, :input_html => { :value => "photo" }  %>
-  </div>
-
+    </div>
  
-  <div class="form-actions">
+
     <%= f.button :submit,class: "btn btn-default" %>
-  </div>
 
 <% end %>
-
+<br>
 
 
 <%= link_to 'Edit', edit_user_photo_path(current_user,@photo) %> |
