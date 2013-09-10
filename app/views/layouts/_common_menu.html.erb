@@ -1,3 +1,3 @@
 <li class="active"><%= link_to("Фотографии",gallery_index_path) %></li>
-<li><a href="#about">Конкурсы</a></li>
+<li><%= link_to "Конкурсы",admin_competitions_path %> </li>
 <li><%=link_to("Новости",list_novelties_path) if can? :read,Novelty %></li>

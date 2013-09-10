@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130830040109) do
+ActiveRecord::Schema.define(version: 20130910035232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_juries", force: true do |t|
+    t.integer  "competition_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_nominations", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "competition_id"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -47,6 +62,33 @@ ActiveRecord::Schema.define(version: 20130830040109) do
   add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
+  create_table "competitions", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "last_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "status_id"
+    t.integer  "type_id"
+    t.date     "open_date"
+  end
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
   create_table "messages", force: true do |t|
     t.string   "title"
     t.string   "content"
@@ -75,6 +117,10 @@ ActiveRecord::Schema.define(version: 20130830040109) do
     t.datetime "updated_at"
     t.integer  "topic_id"
     t.boolean  "published"
+    t.integer  "destination_id"
+    t.boolean  "seen",           default: false
+    t.boolean  "deleted",        default: false
+    t.integer  "delayed_job_id"
   end
 
   create_table "pictures", force: true do |t|

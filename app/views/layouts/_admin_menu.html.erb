@@ -2,9 +2,9 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Управление<b class="caret"></b></a>
  
   <ul class="dropdown-menu">
-    <li><a href="#"><%= link_to 'Пользователи', users_path if current_user && current_user.admin? %></a></li>
-    <li><a href="#"><%= link_to 'Темы', topics_path %></a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><%= link_to 'Пользователи', users_path if current_user && current_user.admin? %></li>
+    <li><%= link_to 'Темы', topics_path %></li>
+    <li><%= link_to "Конкурсы",admin_competitions_path %></li>
     <li class="divider"></li>
     <li class="dropdown-header">Nav header</li>
     <li><a href="#">Separated link</a></li>

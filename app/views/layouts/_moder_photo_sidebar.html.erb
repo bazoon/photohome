@@ -1,0 +1,11 @@
+
+<%= current_user && current_user.avatar && image_tag(current_user.avatar_url(:thumb),class: "img-polaroid") %>
+
+<ul class="nav">
+      <li><%= link_to "Новые",admin_photos_path %></li>
+      <li><%= link_to "Удаленные",deleted_admin_photos_path  %></li>
+      <li><%= link_to "Ревью",review_admin_photos_path  %></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">In1</a></li>
+      <li><a href="#">TechMeMe</a></li>
+</ul>

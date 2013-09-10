@@ -1,15 +1,14 @@
 <%%= simple_form_for(@<%= singular_table_name %>) do |f| %>
   <%%= f.error_notification %>
 
- 
-  <%- attributes.each do |attribute| -%>
-  <div class="form-group">
-    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> :input_html => {class: "form-control"} %>
-  </div>
-  <%- end -%>
-  
 
+  <%- attributes.each do |attribute| -%>
+    <div class="form-group">
+    <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+    </div>
+  <%- end -%>
+
+
+    <%%= f.button :submit,input_html: {class: "btn btn-default"} %>
   
-    <%= f.button :submit,:input_html => {class: "btn btn-default"} %>
-    
 <%% end %>

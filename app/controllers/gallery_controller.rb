@@ -9,7 +9,6 @@ class GalleryController < ApplicationController
 
   def show
      @photo = Photo.find(params[:photo_id])
-    
   end
 
 end

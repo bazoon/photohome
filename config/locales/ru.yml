@@ -28,6 +28,16 @@ ru:
   proposal: "Предложение"
   contest: "Конкурс"
   comments: "Коментарии"
+  portfolio: "Портфолио"
+  review: "Ревью"
+  deleted: "Файл будет удален"
+  review_quote_exceeded: "Превышен предел загрузки фотографий на ревью"
+  portfolio_quote_exceeded: "Превышен предел загрузки фотографий в портфолио"
+  usial: "Обычный"
+  fiap: "FIAP"
+  open: "Открытый"
+  private: "Закрытый"
+
   # photos: "PHH"
   photos:
     index:
@@ -67,4 +77,20 @@ ru:
         content: "Содержание" 
         reason: "Причина обращения"
         status: "Статус"
-
+    competitions:
+      new:
+        new: "Новый конкурс"
+      index:
+        list: "Конкурсы"
+        title: "Название"
+        last_date: "Дата сдачи работ"
+        open_date: "Дата открытия"
+    nominations:
+      new:
+        new: "Новая номинация"
+      index:  
+        list: "Номинации"             
+        title: "Название"
+        description: "Описание"
+      edit:
+        edit: "Редактировать номинацию"  

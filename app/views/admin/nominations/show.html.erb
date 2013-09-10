@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @nomination.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @nomination.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_competition_nomination_path(@competition,@nomination) %> |
+<%= link_to 'Back', admin_competition_nominations_path(@competition) %>

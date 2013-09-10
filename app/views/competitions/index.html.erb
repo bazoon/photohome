@@ -1,0 +1,29 @@
+<h1>Listing competitions</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Last date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitions.each do |competition| %>
+      <tr>
+        <td><%= competition.title %></td>
+        <td><%= competition.last_date %></td>
+        <td><%= link_to show_icon, competition %></td>
+        <td><%= link_to edit_icon, edit_competition_path(competition) %></td>
+        <td><%= link_to del_icon, competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competition', new_competition_path %>

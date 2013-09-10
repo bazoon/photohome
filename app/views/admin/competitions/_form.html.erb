@@ -1,0 +1,32 @@
+<%= simple_form_for([:admin,@competition]) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :title,:input_html => {class: "form-control"} %>
+    </div>
+    <div class="form-group">
+    <%= f.input :description,  :input_html => {:class => "redactor form-control"} %>
+    </div>
+    <div class="form-group">
+    <%= f.input :last_date %>
+    </div>
+    <div class="form-group">
+    <%= f.input :open_date %>
+    </div>
+    
+    <div class="form-group">
+    <%= f.input :type_id,collection: Competition::TYPES, label_method: Competition::LABEL, value_method: Competition::VALUE,
+    :input_html => {class: "form-control"}%>
+    </div>
+
+    <div class="form-group">
+    <%= f.input :status_id,collection: Competition::STATUSES, label_method: Competition::LABEL, value_method: Competition::VALUE,
+    :input_html => {class: "form-control"}%>
+    </div>
+
+
+
+    <%= f.button :submit,input_html: {class: "btn btn-default"} %>
+  
+<% end %>

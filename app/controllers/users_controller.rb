@@ -18,7 +18,9 @@ class UsersController < ApplicationController
       
     @user.role_ids = params[:user]["role_ids"]
 
-    # if @user.update_attributes(params[:user], :as => :admin)
+    # binding.pry
+
+    # if @user.update_attributes(params[:user])
     # if @user.update_attributes(params[:user])
     if @user.save
       redirect_to users_path, :notice => "User updated."

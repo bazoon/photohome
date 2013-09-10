@@ -4,12 +4,19 @@
     <div class="form-group">
     <%= f.input :title,:input_html => {class: "form-control"} %>
     </div>
+    <%= f.hidden_field :image_cache %>
     <div class="form-group">
     <%= f.file_field :image,:input_html => {class: "form-control"} %>
     </div>
+
     <div class="form-group">
     <%= f.association :topic,:input_html => {class: "form-control"} %>
     </div>
+    <div class="form-group">
+    <%= f.input :destination_id,collection: Photo::DESTINATIONS, label_method: Photo::LABEL, value_method: Photo::VALUE,
+    :input_html => {class: "form-control"}%>
+    </div>
+
     <div class="form-group">
     <%= f.input :theme_tokens, :input_html => {data: {load: @photo.themes.map {|t| {id: t.name,name: t.name}}   }} %>
     </div>

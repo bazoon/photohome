@@ -1,0 +1,15 @@
+<%= simple_form_for([@competition,@nomination],
+    url: @nomination.id.nil? ? admin_competition_nominations_path(@competition) : 
+                               admin_competition_nomination_path(@competition,@nomination)) do |f| %>
+<%= f.error_notification %>
+
+    <div class="form-group">
+    <%= f.input :title,:input_html => {class: "form-control"} %>
+    </div>
+    <div class="form-group">
+    <%= f.input :description,:input_html => {class: "form-control"} %>
+    </div>
+
+    <%= f.button :submit,class: "btn btn-default" %>
+  
+<% end %>

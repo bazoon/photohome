@@ -1,0 +1,29 @@
+<h1>Удаленные фотографии</h1>
+
+<br>
+
+<div class="row">  
+
+  
+  <% @photos.each_with_index do |photo,index| %>
+  
+    <div class="col-sm-3" id = "<%= "t#{photo.id}" %>" >
+    <div class="caption">
+       
+       <%= link_to arrow_up_icon, undelete_admin_photo_path(photo), method: :get,remote: true, data: { confirm: 'Are you sure?' } %>
+       
+       
+
+    </div>
+    <div class="thumbnail" style = "width: 250px;height:250px;">
+      <a href=<%= admin_photo_path(photo) %> class="thumbnail" >
+          <%= image_tag photo.image_url(:thumb),data: {src: photo.image_url(:thumb)} %>
+        </a>
+      
+    </div>
+   
+  </div>
+
+  <% end %>
+  
+</div>

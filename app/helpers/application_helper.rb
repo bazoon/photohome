@@ -13,10 +13,18 @@ module ApplicationHelper
   end
 
 
+  def ld(d)
+    I18n.l(d) unless d.nil?
+  end  
+
+
   def show_icon
-    content_tag(:span,"",class: "ui-icon ui-icon-folder-open")
+    content_tag(:span,"",class: "glyphicon glyphicon-folder-open")
   end
 
+  def exclaim_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-exclamation-sign")
+  end
 
   def eye_open_icon(id)
     content_tag(:span,"",class: "glyphicon glyphicon-eye-open",id: id)
@@ -26,14 +34,30 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-eye-close",id: id)
   end  
 
-
   def edit_icon
-    content_tag(:span,"",class: "ui-icon ui-icon-pencil")
+    content_tag(:span,"",class: "glyphicon glyphicon-edit")
   end
-
 
   def del_icon
-    content_tag(:span,"",class: "ui-icon ui-icon-minus")
+    content_tag(:span,"",class: "glyphicon glyphicon-trash")
   end
+
+  def arrow_up_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-arrow-up")
+  end
+
+
+  def red_label(s)
+    content_tag(:span,s,class: "label label-danger")
+  end
+
+  def jury_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-tower")
+  end
+
+
+  def nomination_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-book")
+  end  
 
 end

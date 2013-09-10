@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(".title") %></strong>
+  <%= @competition.title %>
+</p>
+
+
+<p>
+  <strong><%= t(".last_date") %></strong>
+  <%= @competition.last_date %>
+</p>
+
+<p>
+  <strong><%= t(".open_date") %></strong>
+  <%= @competition.open_date %>
+</p>
+
+
+
+<p>
+  <strong><%= t(".description") %></strong>
+  <%= raw @competition.description %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_admin_competition_path(@competition) %> |
+<%= link_to 'Back', admin_competitions_path %>

@@ -8,6 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+gem 'delayed_job_active_record'
+
 # gem 'bootstrap-sass'
 
 
@@ -56,6 +58,8 @@ gem 'redactor-rails'
 gem "mini_magick"
 gem 'acts_as_commentable'
 gem 'fotoramajs'
+
+gem 'rails_12factor', group: :production
 
 gem 'jquery-turbolinks'
 gem 'pry'
