@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t(".title") %></strong>
   <%= @competition.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @competition.description %>
+  <strong><%= t(".description") %>:</strong>
+  <%= raw @competition.description %>
 </p>
 
 <p>
-  <strong>Last date:</strong>
-  <%= @competition.last_date %>
+  <strong><%= t(".last_date") %>:</strong>
+  <%=ld @competition.last_date %>
 </p>
+
+<p>
+  <strong><%= t(".open_date") %>:</strong>
+  <%=ld @competition.open_date %>
+</p>
+
 
 <%= link_to 'Edit', edit_competition_path(@competition) %> |
 <%= link_to 'Back', competitions_path %>

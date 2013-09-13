@@ -2,6 +2,7 @@ Photohome::Application.routes.draw do
 
   
 
+  
   get "ajax/users"
   get "gallery/index"
   get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
@@ -38,10 +39,21 @@ Photohome::Application.routes.draw do
   	resources :users do
   		resources :photos, concerns: :commentable
       resources :messages, concerns: :commentable 
+      
     end
+
+  
  
 
-    resources :competitions
+    resources :competitions do
+      member do
+        get 'aply', as: :aply
+        get 'choose_photo', as: :choose_photo
+      end  
+
+
+      resources :competition_photos
+    end  
 
     namespace :admin do
       resources :messages,concerns: :commentable

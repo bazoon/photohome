@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.tokeninput
+//= require jquery.ui.dialog
 //= require twitter/bootstrap
 //= require turbolinks
 //= require redactor-rails

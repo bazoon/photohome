@@ -63,6 +63,17 @@ ru:
       content: "Содержание" 
       reason: "Причина обращения"
       status: "Статус"
+  competitions:
+      new:
+        new: "Новый конкурс"
+      index:
+        list: "Конкурсы"
+        title: "Название"
+        last_date: "Дата сдачи работ"
+        open_date: "Дата открытия"      
+      aply:
+        choose_photo: "Выберите фотографии"
+        choose_photo_title: "Выбор фотографий для конкурса"
   admin:
     messages:
       index:
@@ -94,3 +105,4 @@ ru:
         description: "Описание"
       edit:
         edit: "Редактировать номинацию"  
+

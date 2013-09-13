@@ -5,6 +5,8 @@ class Photo < ActiveRecord::Base
   validates :user_id, presence: true
 
   before_save :check_limits
+  self.per_page = 4
+
 
   PORTFOLIO_ID = 0
   REVIEW_ID = 1
@@ -101,6 +103,10 @@ class Photo < ActiveRecord::Base
     self.save
   end
 
+
+  def image_label
+    image_url(:thumb)
+  end
 
 
 end

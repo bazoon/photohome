@@ -1,0 +1,29 @@
+<h1><%= t(".choose_photo_title") %></h1>
+<%= simple_form_for([@competition,@competition_photo]) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :photo_ids, as: :hidden %>
+    </div>
+
+    <div class="form-group">
+    <%= f.input :nomination_id, collection: @nominations,label_method: :title,value_method: :id %>
+    </div>
+
+    <%= link_to t(".choose_photo"),choose_photo_competition_path(@competition), remote: true  %> <br/>
+
+    <%= f.button :submit,input_html: {class: "btn btn-default"} %>
+    
+  <div id="next"></div>
+<% end %>
+
+
+
+
+
+
+
+
+<div id="dialog" class="r"></div>
+

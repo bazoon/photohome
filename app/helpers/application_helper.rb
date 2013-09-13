@@ -60,4 +60,8 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-book")
   end  
 
+  def request_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-envelope")
+  end
+
 end

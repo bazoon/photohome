@@ -38,7 +38,8 @@ ru:
       admin_nomination:
         title: "Название"
         description: "Описание"   
-
+      competition_photo:
+        nomination_id: "Номинация"  
 
     # hints:
     #   defaults:

@@ -1,13 +1,14 @@
-<h1>Listing competitions</h1>
+<h1><%= t(".list") %></h1>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Last date</th>
+      <th><%= t(".title") %></th>
+      <th><%= t(".last_date") %></th>
+      <th><%= t(".open_date") %></th>
       <th></th>
       <th></th>
-      <th></th>
+      
     </tr>
   </thead>
 
@@ -15,11 +16,11 @@
     <% @competitions.each do |competition| %>
       <tr>
         <td><%= competition.title %></td>
-        <td><%= competition.last_date %></td>
+        <td><%= ld competition.last_date %></td>
+        <td><%= ld competition.open_date %></td>
         <td><%= link_to show_icon, competition %></td>
-        <td><%= link_to edit_icon, edit_competition_path(competition) %></td>
-        <td><%= link_to del_icon, competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= link_to request_icon, aply_competition_path(competition) %></td>
+       </tr>
     <% end %>
   </tbody>
 </table>

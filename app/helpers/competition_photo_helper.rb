@@ -1,0 +1,2 @@
+module CompetitionPhotoHelper
+end
