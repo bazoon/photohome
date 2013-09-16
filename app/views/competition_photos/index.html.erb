@@ -1,28 +1,27 @@
-<%= form_tag do |f| %>
-  <%= f.error_notification %>
 
-    <div class="form-group">
-    <%= f.input :title,:input_html => {class: "form-control"} %>
-    </div>
-    <%= f.hidden_field :image_cache %>
-    <div class="form-group">
-    <%= f.file_field :image,:input_html => {class: "form-control"} %>
-    </div>
+<%= link_to "Apply",aply_competition_path(@competition) %>
 
-    <div class="form-group">
-    <%= f.association :topic,:input_html => {class: "form-control"} %>
-    </div>
-    <div class="form-group">
-    <%= f.input :destination_id,collection: Photo::DESTINATIONS, label_method: Photo::LABEL, value_method: Photo::VALUE,
-    :input_html => {class: "form-control"}%>
-    </div>
+<h1>Отправленные фотографии</h1>
+<br>
+<div class="row">
 
-    <div class="form-group">
-    <%= f.input :theme_tokens, :input_html => {data: {load: @photo.themes.map {|t| {id: t.name,name: t.name}}   }} %>
+    <% @competition_photos.each_with_index do |photo,index| %>
+ 
+    <div class="col-sm-3" style="height: 290px;">
+    <div class="thumbnail">  
+      <a class="thumbnail" >
+          <%= image_tag photo.image_url(:thumb),data: {src: photo.image_url(:thumb)} %>
+        </a>
+    
+    <div class="caption">
+     <small>  <%= photo.title %>     </small>
+    </div>  
     </div>
+    
+    
+  </div>
 
+  <% end %>
   
-  
-    <%= f.button :submit,class: "btn btn-default" %>
-  
-<% end %>
+</div>
+

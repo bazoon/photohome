@@ -53,6 +53,12 @@ Photohome::Application.routes.draw do
 
 
       resources :competition_photos
+
+
+      
+
+
+
     end  
 
     namespace :admin do
