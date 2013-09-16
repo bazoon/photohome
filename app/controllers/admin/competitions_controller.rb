@@ -1,5 +1,5 @@
 class Admin::CompetitionsController < Admin::BaseController
- before_action :set_competition, only: [:show, :edit, :update, :destroy]
+ before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted]
 
   # GET /competitions
   # GET /competitions.json
@@ -15,6 +15,11 @@ class Admin::CompetitionsController < Admin::BaseController
   def method_name
     
   end
+
+  def view_posted
+    @photos = @competition.competition_photos
+  end
+
 
   # GET /competitions/new
   def new

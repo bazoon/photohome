@@ -54,19 +54,20 @@ Photohome::Application.routes.draw do
 
       resources :competition_photos
 
-
-      
-
-
-
     end  
 
     namespace :admin do
       resources :messages,concerns: :commentable
 
       resources :competitions  do
+        member do
+          get 'view_posted',as: :view_posted  
+        end  
+        
+        resources :competition_photos,only: :destroy,shallow: true
         resources :nominations
         resources :jury
+
       end  
 
 

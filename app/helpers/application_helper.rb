@@ -64,4 +64,10 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-envelope")
   end
 
+  def photo_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-camera")
+  end
+
+
+
 end

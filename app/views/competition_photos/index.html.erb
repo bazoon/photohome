@@ -1,7 +1,7 @@
+<%= link_to t(:apply),aply_competition_path(@competition) %>
 
-<%= link_to "Apply",aply_competition_path(@competition) %>
-
-<h1>Отправленные фотографии</h1>
+<h1><%= @competition.title %></h1>
+<h2>Отправленные фотографии</h2>
 <br>
 <div class="row">
 
@@ -14,7 +14,7 @@
         </a>
     
     <div class="caption">
-     <small>  <%= photo.title %>     </small>
+     <small>  <%= "#{photo.title} (#{photo.nomination.title})" %>     </small>
     </div>  
     </div>
     

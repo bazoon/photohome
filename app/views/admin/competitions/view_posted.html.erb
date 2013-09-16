@@ -1,0 +1,27 @@
+<h1><%=t '.caption' %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr >
+      <th class="col-md-4"></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%=photo.title %></td>
+        <td><%=image_tag(photo.image_url(:thumb)) %> </td>
+        <td> 
+         <%=link_to del_icon,  admin_competition_photo_path(photo), method: :delete, data: { confirm: 'Are you sure?' } %> 
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -2,6 +2,7 @@ class Competition < ActiveRecord::Base
 
   has_many  :jury,class_name: "Admin::Jury"
   has_many :nominations,class_name: "Admin::Nomination"
+  has_many :competition_photos
   
   USIAL= 0
   FIAP = 1

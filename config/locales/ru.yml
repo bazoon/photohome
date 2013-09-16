@@ -37,6 +37,10 @@ ru:
   fiap: "FIAP"
   open: "Открытый"
   private: "Закрытый"
+  comp_photo_already_posted: "Фотография уже была отправлена на этот конкурс ! "
+  apply: "Подать заявку"
+  nomination_empty: "Не указана номинация"
+  photo_ids_empty: "Не выбраны фотографии"
 
   # photos: "PHH"
   photos:
