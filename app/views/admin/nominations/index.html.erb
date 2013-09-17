@@ -5,6 +5,7 @@
     <tr>
       <th><%= t(".title") %></th>
       <th><%= t(".description") %></th>
+      <th><%= t(".max_photo_count") %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= nomination.title %></td>
         <td><%= nomination.description %></td>
+        <td><%= nomination.max_photo_count %></td>
         <td><%= link_to show_icon, admin_competition_nomination_path(@competition,nomination) %></td>
         <td><%= link_to edit_icon, edit_admin_competition_nomination_path(@competition,nomination) %></td>
         <td><%= link_to del_icon, admin_competition_nomination_path(@competition,nomination), method: :delete, data: { confirm: 'Are you sure?' } %></td>

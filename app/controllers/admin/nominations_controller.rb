@@ -75,6 +75,6 @@ class Admin::NominationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_nomination_params
-      params.require(:admin_nomination).permit(:title, :description)
+      params.require(:admin_nomination).permit(:title, :description,:max_photo_count)
     end
 end
