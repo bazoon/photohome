@@ -26,5 +26,9 @@ $(document).ready(function() {
 
 $('.carousel').carousel();
 
+
+$("div[id^='flash_box']").fadeOut(3000);
+
+
 });
 
