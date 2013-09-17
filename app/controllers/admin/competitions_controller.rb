@@ -37,7 +37,7 @@ class Admin::CompetitionsController < Admin::BaseController
 
     respond_to do |format|
       if @competition.save
-        format.html { redirect_to @competition, notice: 'Competition was successfully created.' }
+        format.html { redirect_to admin_competitions_path, notice: 'Competition was successfully created.' }
         format.json { render action: 'show', status: :created, location: @competition }
       else
         format.html { render action: 'new' }
@@ -51,7 +51,7 @@ class Admin::CompetitionsController < Admin::BaseController
   def update
     respond_to do |format|
       if @competition.update(competition_params)
-        format.html { redirect_to @competition, notice: 'Competition was successfully updated.' }
+        format.html { redirect_to admin_competitions_path, notice: 'Competition was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -65,7 +65,7 @@ class Admin::CompetitionsController < Admin::BaseController
   def destroy
     @competition.destroy
     respond_to do |format|
-      format.html { redirect_to competitions_url }
+      format.html { redirect_to admin_competitions_path }
       format.json { head :no_content }
     end
   end
@@ -78,7 +78,7 @@ class Admin::CompetitionsController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def competition_params
-      params.require(:competition).permit(:title, :description, :last_date)
+      params.require(:competition).permit(:title, :description, :last_date,:open_date,:status_id,:type_id)
     end
 
 end

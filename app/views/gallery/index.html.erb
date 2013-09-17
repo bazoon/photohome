@@ -1,6 +1,11 @@
 <h1>Последние фотографии</h1>
 <br>
+
+<%= will_paginate @last_photos %>
+
 <div class="row">
+
+
 
     <% @last_photos.each_with_index do |photo,index| %>
   

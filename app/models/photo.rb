@@ -8,6 +8,8 @@ class Photo < ActiveRecord::Base
   self.per_page = 4
 
 
+
+
   PORTFOLIO_ID = 0
   REVIEW_ID = 1
 
@@ -106,6 +108,14 @@ class Photo < ActiveRecord::Base
 
   def image_label
     image_url(:thumb)
+  end
+
+
+  def self.non_competition_photo
+     Photo.find_by_sql(
+      "select *from photos where id not in 
+       (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
+        competitions.open_date > CURRENT_DATE) and (published=true)")
   end
 
 

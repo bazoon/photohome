@@ -41,7 +41,7 @@ ru:
   apply: "Подать заявку"
   nomination_empty: "Не указана номинация"
   photo_ids_empty: "Не выбраны фотографии"
-
+  competition_too_late: "Срок приема работ прошел"
   # photos: "PHH"
   photos:
     index:
