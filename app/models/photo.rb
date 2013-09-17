@@ -2,6 +2,9 @@ class Photo < ActiveRecord::Base
 	# belongs_to :gallery
   belongs_to :user
 
+  has_many :competition_photos
+
+
   validates :user_id, presence: true
 
   before_save :check_limits

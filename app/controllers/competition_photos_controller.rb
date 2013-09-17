@@ -22,19 +22,24 @@ class  CompetitionPhotosController < ApplicationController
     photo_ids = params[:competition_photo][:photo_ids]
 
 
-    error = I18n.t(:nomination_empty) if nomination_id.empty?
-    error = I18n.t(:photo_ids_empty) if photo_ids.empty?
-    error = I18n.t(:competition_too_late) if competition.last_date < Time.now
-
-
     respond_to do |format|
       
-      # binding.pry
-      if error.nil? && CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id)
+      begin
+        raise Exceptions::EmptyNomination if nomination_id.empty?
+        raise Exceptions::NoPhotoAttached if photo_ids.empty?
+        raise Exceptions::ClosedCompetition if competition.last_date < Time.now
+
+        CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id,current_user.id)
         format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
-      else
-        format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => error || I18n.t(:comp_photo_already_posted) } }
+      rescue Exception => e
+        format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => e.message } }              
       end
+
+      # if error.nil? && CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id,current_user.id)
+      #   format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
+      # else
+      #   format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => error || I18n.t(:comp_photo_already_posted) } }
+      # end
     
     end
 

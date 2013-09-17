@@ -27,7 +27,7 @@ $(document).ready(function() {
 $('.carousel').carousel();
 
 
-$("div[id^='flash_box']").fadeOut(3000);
+$("div[id^='flash_box']").fadeOut(10000);
 
 
 });

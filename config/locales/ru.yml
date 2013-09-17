@@ -42,6 +42,7 @@ ru:
   nomination_empty: "Не указана номинация"
   photo_ids_empty: "Не выбраны фотографии"
   competition_too_late: "Срок приема работ прошел"
+  max_nomination_capacity_exceeded: "Превышел предел размещения фотографии в эту номинацию"
   # photos: "PHH"
   photos:
     index:
