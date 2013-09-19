@@ -1,35 +1,11 @@
-  <div class="span8">
-      <div id="myCarousel" class="carousel slide">
-      
-        <ol class="carousel-indicators">
-      
-          <% @last_photos.each_with_index do |photo,index| %>
-            <li data-target="#myCarousel" data-slide-to="<%=index %>" </li>
-          <% end %>
-        
-        </ol>
+<div class="span8">
 
 
-        <!-- Carousel items -->
-        
 
-        <div class="carousel-inner">
+<div class="jury_estimate">
+    <!-- in this exemple, 12 is the average and 1 is the id of the line to update in DB -->
+   <div class="basic" data-average="12" data-id="11:2" photo="12"></div>
     
-         
+</div>
 
-          <% @last_photos.each_with_index do |photo,index| %>
-             <div class="item <%= "active" if index==1%>"><%=image_tag photo.image_url %>
-             <div class="carousel-caption"><h4><%= photo.title%></h4></div>
-             </div>   
-          <% end %>
-        
-        </div>
-
-
-
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-      </div>
-    
-    </div> 
+</div>

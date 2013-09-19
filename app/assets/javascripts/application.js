@@ -24,10 +24,21 @@
 
 $(document).ready(function() {
 
-$('.carousel').carousel();
 
-
+// убирает флеш сообщения через некоторое время
 $("div[id^='flash_box']").fadeOut(10000);
+
+
+ $(".jury_estimate").jRating({
+         step:true,
+         length : 4, // nb of stars
+         phpPath: "/ajax/jury_rating",
+         onSuccess : function(){
+           alert('Success : your rate has been saved :)');
+         }
+       });
+ 
+     
 
 
 });

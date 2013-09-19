@@ -98,6 +98,13 @@ ActiveRecord::Schema.define(version: 20130919033459666) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
+  create_table "jury_ratings", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "competition_photo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "messages", force: true do |t|
     t.string   "title"
     t.string   "content"

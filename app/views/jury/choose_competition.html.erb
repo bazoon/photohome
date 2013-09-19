@@ -1,0 +1,13 @@
+<%= form_tag jury_view_photos_path  do |f| %>
+
+ <div class="form-group">
+    <%= select_tag(:competition_id,options_from_collection_for_select(@competitions,:id,:title)) %>
+ </div>
+
+
+<%= submit_tag %>
+
+<% end %>
+
+
+<%= options_from_collection_for_select(@competitions,:id,:title)%>

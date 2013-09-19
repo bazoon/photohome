@@ -3,7 +3,8 @@ Photohome::Application.routes.draw do
   
 
   
-  get '/rate' => 'rater#create', :as => 'rate'
+
+ 
 
   get "ajax/users"
   get "gallery/index"
@@ -58,6 +59,15 @@ Photohome::Application.routes.draw do
 
     end  
 
+
+      
+    get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
+    post 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
+    post 'jury_rating', to: 'jury#rating', :as => :jury_rating
+
+
+
+
     namespace :admin do
       resources :messages,concerns: :commentable
 
@@ -70,7 +80,6 @@ Photohome::Application.routes.draw do
         resources :nominations
         resources :jury
       end  
-
 
       
       resources :photos do
