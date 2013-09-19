@@ -3,6 +3,8 @@ Photohome::Application.routes.draw do
   
 
   
+  get '/rate' => 'rater#create', :as => 'rate'
+
   get "ajax/users"
   get "gallery/index"
   get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
