@@ -13,8 +13,8 @@ class  Admin::CompetitionPhotosController < Admin::BaseController
 
 private
 
- def set_competition
+def set_competition
   @competition_photo = CompetitionPhoto.find(params[:id])
- end
+end
 
 end

@@ -52,7 +52,7 @@ Photohome::Application.routes.draw do
       end  
 
 
-      resources :competition_photos
+      resources :competition_photos 
 
     end  
 
@@ -67,7 +67,6 @@ Photohome::Application.routes.draw do
         resources :competition_photos,only: :destroy,shallow: true
         resources :nominations
         resources :jury
-
       end  
 
 

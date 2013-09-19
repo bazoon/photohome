@@ -21,10 +21,14 @@ class Competition < ActiveRecord::Base
   ]
 
 
-
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
 
+
+ # past last_date ?
+  def overdue?
+    last_date < Time.now
+  end
 
 
 end

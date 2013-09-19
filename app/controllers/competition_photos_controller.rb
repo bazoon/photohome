@@ -1,9 +1,9 @@
 class  CompetitionPhotosController < ApplicationController
   # layout "user_profile_layout"
+   before_action :set_competition, only: [:destroy]
 
 
   def index
-    
     @competition = Competition.find(params[:competition_id])
     @competition_photos = CompetitionPhoto.includes(:photo).where("photos.user_id = ?",current_user.id).references(:photos)
   end
@@ -13,6 +13,21 @@ class  CompetitionPhotosController < ApplicationController
   end
 
   def destroy
+    
+    @competition = Competition.find(params[:competition_id])
+
+    respond_to do |format|
+      
+      begin  
+        raise Exceptions::ClosedCompetition if @competition.overdue?
+        @competition_photo.destroy 
+        format.html { redirect_to :back }
+      rescue Exception => e 
+        format.html { redirect_to :back, :flash => { :error => e.message } }
+      end  
+
+    end
+
   end
 
   def create
@@ -27,25 +42,26 @@ class  CompetitionPhotosController < ApplicationController
       begin
         raise Exceptions::EmptyNomination if nomination_id.empty?
         raise Exceptions::NoPhotoAttached if photo_ids.empty?
-        raise Exceptions::ClosedCompetition if competition.last_date < Time.now
-
+        raise Exceptions::ClosedCompetition if competition.overdue?
         CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id,current_user.id)
         format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
       rescue Exception => e
         format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => e.message } }              
       end
 
-      # if error.nil? && CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id,current_user.id)
-      #   format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
-      # else
-      #   format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => error || I18n.t(:comp_photo_already_posted) } }
-      # end
     
     end
 
 
 
   end
+
+
+private
+
+def set_competition
+  @competition_photo = CompetitionPhoto.find(params[:id])
+end
 
 
 end
