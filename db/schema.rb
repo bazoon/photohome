@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20130919033459666) do
     t.integer  "competition_photo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rating"
   end
 
   create_table "messages", force: true do |t|

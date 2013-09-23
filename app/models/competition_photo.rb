@@ -7,6 +7,8 @@ class CompetitionPhoto < ActiveRecord::Base
   attr_reader :photo_ids
 
   delegate :image_url,:title,to: :photo
+  has_many :jury_ratings
+
 
 
   def self.create_applied(ids_string,competition_id,nomination_id,user_id)
@@ -37,6 +39,12 @@ class CompetitionPhoto < ActiveRecord::Base
     CompetitionPhoto.where(photo_id: id,competition_id: competition_id).empty?    
   end  
     
+
+  def jury_rating(user_id)
+   rating = jury_ratings.where(user_id: user_id).try(:[],0).try(:rating) || 2
+
+  end
+
 
 
 end

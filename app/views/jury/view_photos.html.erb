@@ -3,27 +3,25 @@
 <br>
 
 
-<div class="jury_estimate">
-    <!-- in this exemple, 12 is the average and 1 is the id of the line to update in DB -->
-   <div class="basic" data-average="12" data-id="11:2" photo="12"></div>
-   
-</div>
-
-
-
+<%= will_paginate @competition_photos %>
 <div class="row">
 
     <% @competition_photos.each_with_index do | competition_photo,index| %>
  
+
     <div class="col-sm-3" style="height: 290px;">
     <div class="thumbnail">  
       <a class="thumbnail" >
           <%= image_tag competition_photo.image_url(:thumb),data: {src: competition_photo.image_url(:thumb)} %>
       </a>
     
+
     <div class="caption">
      <small>  <%= "#{competition_photo.title} (#{competition_photo.nomination.title})" %>     </small>
-     
+    <%= content_tag(:div,"",class: "jury_estimate","data-id" => "#{@user.id}:#{competition_photo.id}",
+    "data-average" => competition_photo.jury_rating(@user.id)) %>      
+    
+
 
 
     </div>  
