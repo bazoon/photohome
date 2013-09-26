@@ -11,4 +11,8 @@ class Admin::Jury < ActiveRecord::Base
     # self.save
   end
 
+  def in_jury?(user)
+    Admin::Jury.where(user_id: user.id).count > 0
+  end
+
 end

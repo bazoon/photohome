@@ -1,4 +1,4 @@
 <li class="active"><%= link_to(I18n.t("gallery"),gallery_index_path) %></li>
-<li><%= link_to I18n.t("contests"),admin_competitions_path %> </li>
+<li><%= link_to I18n.t("contests"),competitions_path %> </li>
 <li><%=link_to(I18n.t("news"),list_novelties_path) if can? :read,Novelty %></li>
 

@@ -2,14 +2,12 @@ class  CompetitionPhotosController < ApplicationController
   # layout "user_profile_layout"
    before_action :set_competition, only: [:destroy]
 
-
+  # Показывает фотографии отправленные пользователем на конкурс. Только его фото.
+  # и только определенный конкурс
   def index
     @competition = Competition.find(params[:competition_id])
-    @competition_photos = CompetitionPhoto.includes(:photo).where("photos.user_id = ?",current_user.id).references(:photos)
-  end
-
-
-  def update
+    @competition_photos = CompetitionPhoto.includes(:photo).where("photos.user_id = ? and competition_photos.competition_id = ?",
+                                                           current_user.id,@competition.id).references(:photos)
   end
 
   def destroy

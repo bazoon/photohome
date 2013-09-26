@@ -53,3 +53,43 @@ en:
   profile: "Profile"
   sign_up: "Sign up"
   forgot_password: "Forgot password ?"
+
+  photos:
+    index:
+      title: "Title" 
+      new: "New"
+      caption: "Gallery"
+    topics:
+        index:
+          name: "Name"
+          content: "Description"
+          title: "Themes"
+          new_topic: "New topic"
+  messages:
+    index:
+      title: "Title"
+      new: "New"
+      content: "Content" 
+      reason: "Reason"
+      status: "Status"
+      messages: "Messages"
+    show:
+      title: "Title"   
+      content: "Content" 
+      reason: "Reason"
+      status: "Stats"
+  competitions:
+      new:
+        new: "New"
+      index:
+        list: "Contests"
+        title: "Title"
+        last_date: "Last date"
+        open_date: "Open date"      
+      aply:
+        choose_photo: "Choose photographs"
+        choose_photo_title: "Choosing photo for competition"
+      show:
+        last_date: "Last date"
+        open_date: "Open date"      
+        title: "Title"        

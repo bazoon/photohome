@@ -1,5 +1,8 @@
 class JuryController < ApplicationController
 
+  before_filter :verify_if_jury
+
+
 
   def rating
     
@@ -26,18 +29,29 @@ class JuryController < ApplicationController
 
 
   def choose_competition
-    # @competitions = Competition.where("open_date > ?",DateTime.now)
-    @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ?",current_user.id,DateTime.now)
-
+    @competitions = Competition.where("open_date > ?",DateTime.now)
+    # @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ?",current_user.id,DateTime.now)
   end
 
 
   def view_photos
     @competition = Competition.find(params[:competition_id])
+    redirect_to root_path,alert: "You are not allowed to jury this competition !" unless current_user && @competition.can_jury?(current_user)
     @competition_photos = CompetitionPhoto.where(competition_id: @competition.id).paginate(:page => params[:page])
+    binding.pry
     @user = current_user
   end
 
 
+private
+
+  def verify_if_jury
+    redirect_to root_path,alert: "Jury area !" unless current_user && current_user.in_jury?
+  end
+
+  
+
+  
+  
 
 end

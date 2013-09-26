@@ -30,5 +30,9 @@ class Competition < ActiveRecord::Base
     last_date < Time.now
   end
 
+  def can_jury?(user)
+    Competition.joins(:jury).where("admin_juries.user_id = ? and competitions.id = ?",user.id,id).count > 0
+  end
+
 
 end

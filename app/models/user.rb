@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   
   has_many :photos
   has_many :messages
+  has_many :jury,class_name: "Admin::Jury"
 
 
   def admin?
@@ -30,5 +31,8 @@ class User < ActiveRecord::Base
   	has_role?("admin") || has_role?("moder")	   	   	
   end	   	   
 
+  def in_jury?
+    jury && jury.count > 0
+  end
 
 end
