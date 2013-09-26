@@ -43,6 +43,19 @@ ru:
   photo_ids_empty: "Не выбраны фотографии"
   competition_too_late: "Срок приема работ прошел"
   max_nomination_capacity_exceeded: "Превышел предел размещения фотографии в эту номинацию"
+  gallery: "Фотографии"
+  contests: "Конкурсы"
+  news: "Новости"
+  project_name: "Фотодом"
+  sign_in: "Войти"
+  login: "Войти"
+  sign_out: "Выйти"
+  forgot_password: "Забыли пароль ?"
+
+  change_password: "Сменить пароль"
+  profile: "Профиль"
+  sign_up: "Регистрация"
+
   # photos: "PHH"
   photos:
     index:
@@ -79,6 +92,10 @@ ru:
       aply:
         choose_photo: "Выберите фотографии"
         choose_photo_title: "Выбор фотографий для конкурса"
+      show:
+        last_date: "Дата сдачи работ"
+        open_date: "Дата открытия"      
+        title: "Название"        
   admin:
     messages:
       index:

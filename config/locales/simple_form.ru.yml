@@ -14,6 +14,10 @@ ru:
     labels:
       defaults:
         password: 'Password'
+        name: "Имя"
+        email: "Почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение"
       topic:
         new:
           name: 'Название'

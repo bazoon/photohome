@@ -1,8 +1,6 @@
 Photohome::Application.routes.draw do
 
-  
 
-  
 
  
 
@@ -17,10 +15,12 @@ Photohome::Application.routes.draw do
   get "photo_ajax/theme_tokens"
 
   root :to => "home#index"
-  devise_for :users, :controllers => {:registrations => "registrations"}
+
 
     
    scope "(:locale)", locale: /en|ru/ do
+
+  devise_for :users, :controllers => {:registrations => "registrations"}
   	
     resources :novelties do
       collection do
