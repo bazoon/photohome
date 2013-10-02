@@ -35,8 +35,13 @@ module Exceptions
     end
   end
 
+  class PhotoParicipateInCompetition < Exception
+    def initialize(msg = I18n.t(:max_nomination_capacity_exceeded))
+      super(msg)
+    end
+  end
 
-  
+    
 
 
 end

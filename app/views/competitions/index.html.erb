@@ -10,6 +10,7 @@
       <th><%= t(".open_date") %></th>
       <th></th>
       <th></th>
+      <th></th>
       
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= competition.title %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
+        <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => "Фотографии") %></td>
         <td><%= link_to show_icon, competition %></td>
         <td><%= link_to request_icon, competition_competition_photos_path(competition) %></td>
        </tr>

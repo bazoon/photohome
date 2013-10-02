@@ -1,0 +1,26 @@
+<h1>Конкурсные фотографии</h1>
+<br>
+
+<div class="row">
+
+    <% @competition_photos.each_with_index do |competition_photo,index| %>
+  
+    <div class="col-sm-3" style="height: 290px;">
+    <div class="thumbnail">  
+    <a href=<%= photo_view_path(competition_photo.photo) %> class="thumbnail" >
+         <%= image_tag competition_photo.image_url(:thumb),data: {src: competition_photo.image_url(:thumb)} %>
+    </a>
+
+         
+    <div class="caption">
+     <small>  <%= competition_photo.title %>     </small><br/>
+     <small><%= "#{competition_photo.jury_count} / #{@all_jury_count}" %></small>
+    </div>  
+    </div>
+    
+    
+  </div>
+
+  <% end %>
+  
+</div>

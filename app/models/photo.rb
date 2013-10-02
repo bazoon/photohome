@@ -10,6 +10,7 @@ class Photo < ActiveRecord::Base
   before_save :check_limits
   self.per_page = 4
 
+  before_destroy :check_for_competition
 
 
 
@@ -44,6 +45,11 @@ class Photo < ActiveRecord::Base
 
 	# attr_accessible :theme_tokens
 	attr_reader :theme_tokens
+
+
+  def check_for_competition
+    competition_photos.count == 0
+  end
 
   def check_limits
     return false if self.user_id.nil?

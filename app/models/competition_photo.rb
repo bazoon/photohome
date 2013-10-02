@@ -12,8 +12,6 @@ class CompetitionPhoto < ActiveRecord::Base
 
 
   def self.create_applied(ids_string,competition_id,nomination_id,user_id)
-  
-    
       ids = ids_string.split(",")
       ids.each do |id|
       
@@ -26,6 +24,18 @@ class CompetitionPhoto < ActiveRecord::Base
       end  
   end
 
+
+  def average_rating
+    jury_ratings.average(:rating).to_i
+  end
+  
+  def sum_rating
+    jury_ratings.sum(:rating).to_i
+  end
+
+  def jury_count
+    jury_ratings.try(:count)
+  end
 
   def self.can_post_in_nomination?(nomination_id,user_id)
     max = Admin::Nomination.find(nomination_id).max_photo_count

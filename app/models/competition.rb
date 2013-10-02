@@ -3,7 +3,9 @@ class Competition < ActiveRecord::Base
   has_many  :jury,class_name: "Admin::Jury"
   has_many :nominations,class_name: "Admin::Nomination"
   has_many :competition_photos
-  
+  has_many :jury_ratings, through: :competition_photos
+  has_many :users, through: :jury
+
   USIAL= 0
   FIAP = 1
 
@@ -23,6 +25,33 @@ class Competition < ActiveRecord::Base
 
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
+
+
+  def stats
+    
+    photo_count = competition_photos.count
+    jury_count = jury.count
+    should_rate_count = photo_count * jury_count
+    rated_count = jury_ratings.count
+
+    
+
+    jury_members = []
+
+    users.each do |u|
+
+      jury_members <<  {name: u.name,count: jury_ratings.where(user_id: u.id).count}  
+    
+    end  
+
+    statistics = {}
+    statistics[:photo_count] = photo_count
+    statistics[:jury_count] = jury_count
+    statistics[:should_rate_count] = should_rate_count
+    statistics[:rated_count] = rated_count
+    statistics[:jury_members] = jury_members
+    statistics
+  end
 
 
  # past last_date ?

@@ -68,6 +68,9 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-camera")
   end
 
+  def list_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-list-alt")
+  end
 
   def ru_icon
     image_tag(asset_path("ru.png"))

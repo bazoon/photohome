@@ -37,12 +37,13 @@ Photohome::Application.routes.draw do
 
 
 
-    # resources :photos
+    resources :photos do
+        get 'view', as: :view
+    end  
 
   	resources :users do
   		resources :photos, concerns: :commentable
       resources :messages, concerns: :commentable 
-      
     end
 
   
@@ -52,6 +53,7 @@ Photohome::Application.routes.draw do
       member do
         get 'aply', as: :aply
         get 'choose_photo', as: :choose_photo
+        get 'view_photos',as: :view_photos
       end  
 
 
@@ -68,12 +70,16 @@ Photohome::Application.routes.draw do
 
 
 
+
     namespace :admin do
       resources :messages,concerns: :commentable
 
+      post 'final_rating', to: 'competitions#final_rating', :as => :final_rating
+
       resources :competitions  do
         member do
-          get 'view_posted',as: :view_posted  
+          get 'view_posted',as: :view_posted 
+          get 'stats',as: :stats 
         end  
         
         resources :competition_photos,only: :destroy,shallow: true

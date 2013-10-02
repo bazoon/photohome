@@ -1,5 +1,5 @@
 class CompetitionsController < ApplicationController
-  before_action :set_competition, only: [:show, :aply,:choose_photo]
+  before_action :set_competition, only: [:show, :aply,:choose_photo,:view_photos]
 
   # GET /competitions
   # GET /competitions.json
@@ -18,8 +18,13 @@ class CompetitionsController < ApplicationController
     @photos = current_user.photos
   end
 
+  def view_photos
+    @all_jury_count = @competition.jury.count
+    @competition_photos = @competition.competition_photos
+  end
+
   def choose_photo
-    
+   
     @photos = current_user.photos.paginate(:page => params[:page])
     @first_time =  params[:page].nil? ? "1": "0"
     respond_to do |format|

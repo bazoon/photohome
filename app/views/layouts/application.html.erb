@@ -15,7 +15,7 @@
 
   </head>
 
-  <body>
+  <body style="margin-top: 70px">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -27,13 +27,12 @@
           </button>
           <a class="navbar-brand" href="#"><%= I18n.t("project_name") %></a>
         </div>
-        <div class="navbar-collapse collapse">
+         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
            
             <%= render 'layouts/common_menu' %>
             <%= render 'layouts/moder_menu' if current_user && current_user.is_stuff? %>
             <%= render 'layouts/admin_menu' if current_user && current_user.admin? %>
-           
             <%= render 'layouts/navigation' %>
             <%= render 'layouts/lang_select' %>
           
@@ -43,25 +42,12 @@
       </div>
     </div>
 
-    <div class="wrapper">
-
     <div class="container">
-     <%=render 'layouts/messages'%>
+      <%=render 'layouts/messages'%>
       <%= yield %>
-    </div>
-
-      <hr>
-
-<div class="push"><!--//--></div>
-    </div>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->
+    </div><!-- /.container -->
 
 
-    
-
+  
   </body>
 </html>

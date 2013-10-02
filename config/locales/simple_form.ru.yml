@@ -32,6 +32,9 @@ ru:
         title: "Название"
         topic: "Раздел"
         destination_id: "Назначение"
+      comment:
+        title: "Заголовок"
+        comment: "Комментарий"  
       competition:
         title: "Название"
         description: "Положение о конкурсе"

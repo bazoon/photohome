@@ -58,7 +58,7 @@ gem 'redactor-rails'
 gem "mini_magick"
 gem 'acts_as_commentable'
 gem 'fotoramajs'
-# gem 'letsrate'
+gem 'railroady'
 
 gem 'rails_12factor', group: :production
 

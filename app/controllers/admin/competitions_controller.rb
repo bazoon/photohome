@@ -1,5 +1,5 @@
 class Admin::CompetitionsController < Admin::BaseController
- before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted]
+  before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted,:final_judge,:stats]
 
   # GET /competitions
   # GET /competitions.json
@@ -9,17 +9,31 @@ class Admin::CompetitionsController < Admin::BaseController
 
   # GET /competitions/1
   # GET /competitions/1.json
-  def show
-  end
-
-  def method_name
-    
-  end
-
+  
   def view_posted
-    @photos = @competition.competition_photos
+    @all_jury_count = @competition.jury.count
+    @competition_photos = @competition.competition_photos.sort_by {|cp|  -cp.average_rating}
   end
 
+  def stats
+    @stats = @competition.stats
+  end
+
+  def final_rating
+    competition_photo_id = params["idBox"]
+    rating = params["rate"].to_i
+    jury_ratings = JuryRating.where(competition_photo_id: competition_photo_id)
+   
+    jury_ratings.each do |jr|
+      jr.rating = rating
+      jr.save
+    end  
+
+    respond_to do |format|
+      format.json { render json: rating, status: :ok}
+    end 
+
+  end
 
   # GET /competitions/new
   def new

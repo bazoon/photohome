@@ -1,13 +1,12 @@
 <h1><%=t '.caption' %></h1>
 
 
-<%= link_to t('.new'), new_user_photo_path(current_user),{class: "btn btn-primary"} %>
+<%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} %>
 
 <table class="table table-striped">
   <thead>
     <tr >
       <th class="col-md-4"></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,14 +17,11 @@
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
-        <td><%= image_tag(photo.image_url(:thumb)) %> <%= red_label(t("deleted")) if photo.deleted %></td>
+        <td><%= link_to image_tag(photo.image_url(:thumb)),user_photo_path(@user,photo) %> <%= red_label(t("deleted")) if photo.deleted %></td>
         <td>
-         <%=link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"), user_photo_path(current_user,photo)%>
-        </td>
+         <%=link_to edit_icon, edit_user_photo_path(@user,photo) %></td>
         <td>
-         <%=link_to edit_icon, edit_user_photo_path(current_user,photo) %></td>
-        <td>
-        <%=link_to del_icon, user_photo_path(current_user,photo), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%=link_to del_icon, user_photo_path(@user,photo), method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>

@@ -51,6 +51,8 @@ ru:
   login: "Войти"
   sign_out: "Выйти"
   forgot_password: "Забыли пароль ?"
+  paricipate_in_competition: "Фотография учавствовала в 1 или более конкурсах и не может быть удалена"
+  photo_was_deleted: "Фотография была удалена"
 
   change_password: "Сменить пароль"
   profile: "Профиль"
@@ -118,6 +120,8 @@ ru:
         title: "Название"
         last_date: "Дата сдачи работ"
         open_date: "Дата открытия"
+      view_posted:
+        caption: "Фотографии"  
     nominations:
       new:
         new: "Новая номинация"

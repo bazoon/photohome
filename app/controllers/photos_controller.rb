@@ -1,19 +1,24 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  layout "user_profile_layout"
+  layout "user_profile_layout", except: :view
 
 
   # GET /photos
   # GET /photos.json
   def index
-    @photos = current_user.photos.all
-    # @photos = Photo.all
+    @photos = current_user.photos.all.paginate(:page => params[:page])
+    @user = current_user
   end
 
   # GET /photos/1
   # GET /photos/1.json
   def show
     # @comments = @photo.comments
+
+  end
+
+  def view
+    @photo = Photo.find(params[:photo_id])
   end
 
   # GET /photos/new
@@ -66,10 +71,15 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
-    @photo.destroy
+    
     respond_to do |format|
-      format.html { redirect_to user_photos_path(current_user) }
-      format.json { head :no_content }
+      if @photo.destroy
+        format.html { redirect_to user_photos_path(current_user),notice: I18n.t(:photo_was_deleted) }
+      else
+        format.html { redirect_to user_photos_path(current_user),:flash => { :error => I18n.t(:paricipate_in_competition) }   }
+      end
+
+
     end
   end
 

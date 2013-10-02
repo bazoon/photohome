@@ -3,7 +3,9 @@
 <table class="table table-striped">
   <thead>
     <tr >
-      <th class="col-md-4"></th>
+      <th class="col-md-4">Название</th>
+      <th>Голоса</th>
+      <th>Средний рейтинг</th>
       <th></th>
       <th></th>
       <th></th>
@@ -11,12 +13,22 @@
   </thead>
 
   <tbody>
-    <% @photos.each do |photo| %>
+    <% @competition_photos.each do |competition_photo| %>
       <tr>
-        <td><%=photo.title %></td>
-        <td><%=image_tag(photo.image_url(:thumb)) %> </td>
+        <td><%=competition_photo.title %></td>
+        <td><%= "#{competition_photo.jury_count} / #{@all_jury_count} " %></td>
+        <td>
+        <%= content_tag(:div,"",class: "final_estimate","data-id" => "#{competition_photo.id}",
+                        "data-average" => competition_photo.average_rating) %>       
+        </td>
+        
+        <td>
+        <%=  link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) %>
+        </td>
+
+
         <td> 
-         <%=link_to del_icon,  admin_competition_photo_path(photo), method: :delete, data: { confirm: 'Are you sure?' } %> 
+         <%=link_to del_icon, admin_competition_photo_path(competition_photo), method: :delete, data: { confirm: 'Are you sure?' } %> 
         </td>
 
       </tr>
