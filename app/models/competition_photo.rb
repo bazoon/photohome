@@ -8,6 +8,7 @@ class CompetitionPhoto < ActiveRecord::Base
 
   delegate :image_url,:title,to: :photo
   has_many :jury_ratings
+  has_many :likes
 
 
 
@@ -24,6 +25,13 @@ class CompetitionPhoto < ActiveRecord::Base
       end  
   end
 
+  def like_count
+    likes && likes.count
+  end
+
+  def liked_by(user)
+    likes.where(user_id: user.id).count > 0
+  end
 
   def average_rating
     jury_ratings.average(:rating).to_i

@@ -7,14 +7,17 @@
   
     <div class="col-sm-3" style="height: 290px;">
     <div class="thumbnail">  
-    <a href=<%= photo_view_path(competition_photo.photo) %> class="thumbnail" >
-         <%= image_tag competition_photo.image_url(:thumb),data: {src: competition_photo.image_url(:thumb)} %>
-    </a>
-
-         
+    
+         <%=link_to image_tag(competition_photo.image_url(:thumb)), photo_view_path(competition_photo.photo), class: "thumbnail" %>
+            
     <div class="caption">
-     <small>  <%= competition_photo.title %>     </small><br/>
      <small><%= "#{competition_photo.jury_count} / #{@all_jury_count}" %></small>
+     <span style = "float: right">
+     
+    <%= content_tag(:span,competition_photo.like_count,class: "label label-primary",id: "like_count#{competition_photo.id}") %>
+    <%- icon = competition_photo.liked_by(@user) ? unlike_icon("like#{competition_photo.id}") : like_icon("like#{competition_photo.id}") %>
+    <%= link_to(icon, like_path(competition_photo), remote: true) if @can_like%>
+     </span>
     </div>  
     </div>
     

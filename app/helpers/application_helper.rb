@@ -72,6 +72,14 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-list-alt")
   end
 
+  def like_icon(id)
+    content_tag(:span,"",class: "glyphicon glyphicon-thumbs-up",id: id)
+  end
+
+  def unlike_icon(id)
+    content_tag(:span,"",class: "glyphicon glyphicon-thumbs-down",id: id)
+  end
+
   def ru_icon
     image_tag(asset_path("ru.png"))
   end

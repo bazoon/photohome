@@ -21,6 +21,8 @@ class CompetitionsController < ApplicationController
   def view_photos
     @all_jury_count = @competition.jury.count
     @competition_photos = @competition.competition_photos
+    @can_like = (current_user.created_at < @competition.created_at) && (@competition.open_date > DateTime.now)
+    @user = current_user
   end
 
   def choose_photo
