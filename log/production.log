@@ -2234,3 +2234,119 @@ I, [2013-10-08T10:25:32.923676 #2455]  INFO -- :   Rendered layouts/_navigation.
 I, [2013-10-08T10:25:32.924348 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
 I, [2013-10-08T10:25:32.924607 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
 I, [2013-10-08T10:25:32.924931 #2455]  INFO -- : Completed 200 OK in 199ms (Views: 194.0ms | ActiveRecord: 1.5ms)
+I, [2013-10-08T10:59:56.598081 #2455]  INFO -- : Started GET "/user_profile/ru/4" for 127.0.0.1 at 2013-10-08 10:59:56 +0600
+I, [2013-10-08T10:59:56.601747 #2455]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-08T10:59:56.601864 #2455]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-08T10:59:56.607402 #2455]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.5ms)
+I, [2013-10-08T10:59:56.611918 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.2ms)
+I, [2013-10-08T10:59:56.613567 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.5ms)
+I, [2013-10-08T10:59:56.615401 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.0ms)
+I, [2013-10-08T10:59:56.616231 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-10-08T10:59:56.616747 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-10-08T10:59:56.616970 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:59:56.697594 #2455]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (79.5ms)
+I, [2013-10-08T10:59:56.698137 #2455]  INFO -- : Completed 200 OK in 96ms (Views: 53.0ms | ActiveRecord: 40.6ms)
+I, [2013-10-08T10:59:57.659138 #2455]  INFO -- : Started GET "/ru/jury_choose_competition" for 127.0.0.1 at 2013-10-08 10:59:57 +0600
+I, [2013-10-08T10:59:57.662590 #2455]  INFO -- : Processing by JuryController#choose_competition as HTML
+I, [2013-10-08T10:59:57.662664 #2455]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:59:57.673637 #2455]  INFO -- :   Rendered jury/choose_competition.html.erb within layouts/application (4.5ms)
+I, [2013-10-08T10:59:57.677376 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.0ms)
+I, [2013-10-08T10:59:57.678986 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.5ms)
+I, [2013-10-08T10:59:57.680861 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.0ms)
+I, [2013-10-08T10:59:57.681687 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-10-08T10:59:57.682235 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-10-08T10:59:57.682473 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:59:57.682760 #2455]  INFO -- : Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 2.8ms)
+I, [2013-10-08T10:59:58.809825 #2455]  INFO -- : Started POST "/ru/jury_view_photos" for 127.0.0.1 at 2013-10-08 10:59:58 +0600
+I, [2013-10-08T10:59:58.814897 #2455]  INFO -- : Processing by JuryController#view_photos as HTML
+I, [2013-10-08T10:59:58.815027 #2455]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DvMzWsv+EzYrzw6be+hyrCMne+9vLrUQ4na7FVGPu4=", "competition_id"=>"1", "commit"=>"Save changes", "locale"=>"ru"}
+I, [2013-10-08T10:59:59.145902 #2455]  INFO -- :   Rendered jury/view_photos.html.erb within layouts/application (299.2ms)
+I, [2013-10-08T10:59:59.150236 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.4ms)
+I, [2013-10-08T10:59:59.151796 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.5ms)
+I, [2013-10-08T10:59:59.153664 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.0ms)
+I, [2013-10-08T10:59:59.154519 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-10-08T10:59:59.155155 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-10-08T10:59:59.155430 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:59:59.155784 #2455]  INFO -- : Completed 200 OK in 341ms (Views: 185.8ms | ActiveRecord: 146.1ms)
+F, [2013-10-08T10:59:59.332492 #2455] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/stars.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T11:00:00.069417 #2455] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/assets/bg_jRatingInfos.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T11:01:16.507783 #2455]  INFO -- : Started POST "/ru/jury_view_photos" for 127.0.0.1 at 2013-10-08 11:01:16 +0600
+I, [2013-10-08T11:01:16.509411 #2455]  INFO -- : Processing by JuryController#view_photos as HTML
+I, [2013-10-08T11:01:16.509563 #2455]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DvMzWsv+EzYrzw6be+hyrCMne+9vLrUQ4na7FVGPu4=", "competition_id"=>"1", "commit"=>"Save changes", "locale"=>"ru"}
+I, [2013-10-08T11:01:16.543801 #2455]  INFO -- :   Rendered jury/view_photos.html.erb within layouts/application (26.2ms)
+I, [2013-10-08T11:01:16.547154 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.6ms)
+I, [2013-10-08T11:01:16.549343 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.6ms)
+I, [2013-10-08T11:01:16.551303 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.0ms)
+I, [2013-10-08T11:01:16.552125 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-10-08T11:01:16.552602 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.3ms)
+I, [2013-10-08T11:01:16.552830 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T11:01:16.553112 #2455]  INFO -- : Completed 200 OK in 43ms (Views: 29.5ms | ActiveRecord: 8.7ms)
+I, [2013-10-08T11:01:23.163019 #2455]  INFO -- : Started POST "/jury_rating" for 127.0.0.1 at 2013-10-08 11:01:23 +0600
+I, [2013-10-08T11:01:23.164569 #2455]  INFO -- : Processing by JuryController#rating as JSON
+I, [2013-10-08T11:01:23.164642 #2455]  INFO -- :   Parameters: {"idBox"=>"4:51", "rate"=>"6"}
+I, [2013-10-08T11:01:23.173251 #2455]  INFO -- : Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.1ms)
+I, [2013-10-08T11:01:26.574191 #2455]  INFO -- : Started POST "/ru/jury_view_photos" for 127.0.0.1 at 2013-10-08 11:01:26 +0600
+I, [2013-10-08T11:01:26.575608 #2455]  INFO -- : Processing by JuryController#view_photos as HTML
+I, [2013-10-08T11:01:26.575689 #2455]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"5DvMzWsv+EzYrzw6be+hyrCMne+9vLrUQ4na7FVGPu4=", "competition_id"=>"1", "commit"=>"Save changes", "locale"=>"ru"}
+I, [2013-10-08T11:01:26.608698 #2455]  INFO -- :   Rendered jury/view_photos.html.erb within layouts/application (26.2ms)
+I, [2013-10-08T11:01:26.611977 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.5ms)
+I, [2013-10-08T11:01:26.613673 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.6ms)
+I, [2013-10-08T11:01:26.616002 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.2ms)
+I, [2013-10-08T11:01:26.616832 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-10-08T11:01:26.617312 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.3ms)
+I, [2013-10-08T11:01:26.617614 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T11:01:26.617953 #2455]  INFO -- : Completed 200 OK in 42ms (Views: 29.8ms | ActiveRecord: 8.0ms)
+I, [2013-10-08T11:01:29.138271 #2455]  INFO -- : Started POST "/jury_rating" for 127.0.0.1 at 2013-10-08 11:01:29 +0600
+I, [2013-10-08T11:01:29.139734 #2455]  INFO -- : Processing by JuryController#rating as JSON
+I, [2013-10-08T11:01:29.139806 #2455]  INFO -- :   Parameters: {"idBox"=>"4:51", "rate"=>"3"}
+I, [2013-10-08T11:01:29.146204 #2455]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.5ms)
