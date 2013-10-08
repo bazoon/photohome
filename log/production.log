@@ -1784,3 +1784,453 @@ ActionController::RoutingError (No route matches [GET] "/assets/application-517f
   puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
 
 
+I, [2013-10-08T10:17:14.527848 #2018]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 10:17:14 +0600
+I, [2013-10-08T10:17:14.585821 #2018]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T10:17:15.019902 #2018]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.9ms)
+I, [2013-10-08T10:17:15.172077 #2018]  INFO -- :   Rendered layouts/_common_menu.html.erb (129.8ms)
+I, [2013-10-08T10:17:15.194853 #2018]  INFO -- :   Rendered layouts/_moder_menu.html (2.6ms)
+I, [2013-10-08T10:17:15.221357 #2018]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.8ms)
+I, [2013-10-08T10:17:15.250252 #2018]  INFO -- :   Rendered layouts/_navigation.html.erb (2.0ms)
+I, [2013-10-08T10:17:15.264711 #2018]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.8ms)
+I, [2013-10-08T10:17:15.280785 #2018]  INFO -- :   Rendered layouts/_messages.html.erb (1.2ms)
+I, [2013-10-08T10:17:15.281364 #2018]  INFO -- : Completed 200 OK in 695ms (Views: 293.3ms | ActiveRecord: 188.8ms)
+F, [2013-10-08T10:17:15.327358 #2018] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-517f603e28d4bb3a61eb958ee1ba500e.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:17:15.327993 #2018] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-f3c691e0615038552e9e5619d99364fe.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:17:15.370512 #2018] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/gb.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:18:23.586193 #2034]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 10:18:23 +0600
+I, [2013-10-08T10:18:23.633776 #2034]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T10:18:23.804686 #2034]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2013-10-08T10:18:23.835238 #2034]  INFO -- :   Rendered layouts/_common_menu.html.erb (28.3ms)
+I, [2013-10-08T10:18:23.838469 #2034]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-08T10:18:23.843423 #2034]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.5ms)
+I, [2013-10-08T10:18:23.845845 #2034]  INFO -- :   Rendered layouts/_navigation.html.erb (1.6ms)
+I, [2013-10-08T10:18:23.849118 #2034]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.5ms)
+I, [2013-10-08T10:18:23.850736 #2034]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-10-08T10:18:23.851189 #2034]  INFO -- : Completed 200 OK in 217ms (Views: 39.6ms | ActiveRecord: 21.4ms)
+I, [2013-10-08T10:18:23.971971 #2034]  INFO -- : Started GET "/gb.png" for 127.0.0.1 at 2013-10-08 10:18:23 +0600
+F, [2013-10-08T10:18:23.973834 #2034] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/gb.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:18:31.215004 #2034]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 10:18:31 +0600
+I, [2013-10-08T10:18:31.219877 #2034]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T10:18:31.224624 #2034]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.1ms)
+I, [2013-10-08T10:18:31.230031 #2034]  INFO -- :   Rendered layouts/_common_menu.html.erb (4.4ms)
+I, [2013-10-08T10:18:31.232877 #2034]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-08T10:18:31.236879 #2034]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.2ms)
+I, [2013-10-08T10:18:31.238424 #2034]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-08T10:18:31.239335 #2034]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-08T10:18:31.239723 #2034]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:18:31.240140 #2034]  INFO -- : Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 2.2ms)
+I, [2013-10-08T10:18:31.319053 #2034]  INFO -- : Started GET "/gb.png" for 127.0.0.1 at 2013-10-08 10:18:31 +0600
+F, [2013-10-08T10:18:31.320770 #2034] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/gb.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:19:18.516789 #2065]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 10:19:18 +0600
+I, [2013-10-08T10:19:18.565562 #2065]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T10:19:18.735034 #2065]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2013-10-08T10:19:18.762731 #2065]  INFO -- :   Rendered layouts/_common_menu.html.erb (25.2ms)
+I, [2013-10-08T10:19:18.765993 #2065]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-08T10:19:18.772036 #2065]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.9ms)
+I, [2013-10-08T10:19:18.774722 #2065]  INFO -- :   Rendered layouts/_navigation.html.erb (1.7ms)
+I, [2013-10-08T10:19:18.779452 #2065]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.8ms)
+I, [2013-10-08T10:19:18.780823 #2065]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T10:19:18.781195 #2065]  INFO -- : Completed 200 OK in 215ms (Views: 42.5ms | ActiveRecord: 19.6ms)
+F, [2013-10-08T10:19:18.927401 #2065] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/stars.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:19:24.432913 #2065]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 10:19:24 +0600
+I, [2013-10-08T10:19:24.436232 #2065]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T10:19:24.436336 #2065]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:19:24.810861 #2065]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (249.8ms)
+I, [2013-10-08T10:19:24.818072 #2065]  INFO -- :   Rendered layouts/_common_menu.html.erb (5.8ms)
+I, [2013-10-08T10:19:24.821345 #2065]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-08T10:19:24.825390 #2065]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-08T10:19:24.827685 #2065]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-10-08T10:19:24.830355 #2065]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.5ms)
+I, [2013-10-08T10:19:24.831778 #2065]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T10:19:24.832116 #2065]  INFO -- : Completed 200 OK in 395ms (Views: 120.9ms | ActiveRecord: 223.2ms)
+F, [2013-10-08T10:19:24.865974 #2065] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:19:24.876091 #2065] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:19:24.887774 #2065] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:22:36.422995 #2411]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 10:22:36 +0600
+I, [2013-10-08T10:22:36.469544 #2411]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T10:22:36.469659 #2411]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:22:36.632962 #2411]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (77.3ms)
+I, [2013-10-08T10:22:36.663018 #2411]  INFO -- :   Rendered layouts/_common_menu.html.erb (27.8ms)
+I, [2013-10-08T10:22:36.666242 #2411]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-08T10:22:36.671363 #2411]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.5ms)
+I, [2013-10-08T10:22:36.673741 #2411]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-10-08T10:22:36.677000 #2411]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.4ms)
+I, [2013-10-08T10:22:36.678517 #2411]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-10-08T10:22:36.678865 #2411]  INFO -- : Completed 200 OK in 209ms (Views: 111.4ms | ActiveRecord: 21.6ms)
+F, [2013-10-08T10:22:36.813988 #2411] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.woff"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:22:36.826650 #2411] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.ttf"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-10-08T10:22:36.834450 #2411] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/twitter/glyphicons-halflings-regular.svg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-08T10:23:01.620673 #2411]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 10:23:01 +0600
+I, [2013-10-08T10:23:01.625266 #2411]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T10:23:01.625367 #2411]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:23:01.636011 #2411]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (5.8ms)
+I, [2013-10-08T10:23:01.640866 #2411]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.8ms)
+I, [2013-10-08T10:23:01.643105 #2411]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-08T10:23:01.646054 #2411]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.6ms)
+I, [2013-10-08T10:23:01.647217 #2411]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-08T10:23:01.647943 #2411]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-10-08T10:23:01.648271 #2411]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:23:01.648688 #2411]  INFO -- : Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 2.6ms)
+I, [2013-10-08T10:23:04.567015 #2411]  INFO -- : Started GET "/ru/competitions/new" for 127.0.0.1 at 2013-10-08 10:23:04 +0600
+I, [2013-10-08T10:23:04.601402 #2411]  INFO -- : Processing by CompetitionsController#new as HTML
+I, [2013-10-08T10:23:04.601523 #2411]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:23:04.613211 #2411]  INFO -- :   Rendered competitions/_form.html.erb (2.2ms)
+I, [2013-10-08T10:23:04.613342 #2411]  INFO -- :   Rendered competitions/new.html.erb within layouts/application (7.0ms)
+I, [2013-10-08T10:23:04.613588 #2411]  INFO -- : Completed 500 Internal Server Error in 12ms
+F, [2013-10-08T10:23:04.615677 #2411] FATAL -- : 
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= simple_form_for(@competition) do |f| %>
+    2:   <%= f.error_notification %>
+    3: 
+    4: 
+  app/views/competitions/_form.html.erb:1:in `_app_views_competitions__form_html_erb___2750997150911032557_70144395338720'
+  app/views/competitions/new.html.erb:3:in `_app_views_competitions_new_html_erb___2984514808215224811_70144395326640'
+
+
+I, [2013-10-08T10:23:04.627080 #2411]  INFO -- : Started GET "/ru/competitions/new" for 127.0.0.1 at 2013-10-08 10:23:04 +0600
+I, [2013-10-08T10:23:04.629666 #2411]  INFO -- : Processing by CompetitionsController#new as HTML
+I, [2013-10-08T10:23:04.629784 #2411]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:23:04.636702 #2411]  INFO -- :   Rendered competitions/_form.html.erb (2.1ms)
+I, [2013-10-08T10:23:04.637033 #2411]  INFO -- :   Rendered competitions/new.html.erb within layouts/application (3.4ms)
+I, [2013-10-08T10:23:04.637351 #2411]  INFO -- : Completed 500 Internal Server Error in 7ms
+F, [2013-10-08T10:23:04.693353 #2411] FATAL -- : 
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= simple_form_for(@competition) do |f| %>
+    2:   <%= f.error_notification %>
+    3: 
+    4: 
+  app/views/competitions/_form.html.erb:1:in `_app_views_competitions__form_html_erb___2750997150911032557_70144395687400'
+  app/views/competitions/new.html.erb:3:in `_app_views_competitions_new_html_erb___2984514808215224811_70144395673520'
+
+
+I, [2013-10-08T10:25:24.391095 #2455]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 10:25:24 +0600
+I, [2013-10-08T10:25:24.452279 #2455]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T10:25:24.452358 #2455]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:25:24.618424 #2455]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (79.1ms)
+I, [2013-10-08T10:25:24.648309 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (26.9ms)
+I, [2013-10-08T10:25:24.651579 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (1.4ms)
+I, [2013-10-08T10:25:24.658712 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.8ms)
+I, [2013-10-08T10:25:24.661402 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (1.7ms)
+I, [2013-10-08T10:25:24.665215 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.8ms)
+I, [2013-10-08T10:25:24.666546 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T10:25:24.666928 #2455]  INFO -- : Completed 200 OK in 214ms (Views: 118.2ms | ActiveRecord: 21.8ms)
+I, [2013-10-08T10:25:31.414548 #2455]  INFO -- : Started GET "/ru/admin/competitions" for 127.0.0.1 at 2013-10-08 10:25:31 +0600
+I, [2013-10-08T10:25:31.418045 #2455]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-10-08T10:25:31.418124 #2455]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:25:31.460952 #2455]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (6.0ms)
+I, [2013-10-08T10:25:31.464914 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.5ms)
+I, [2013-10-08T10:25:31.467818 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-08T10:25:31.471931 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.0ms)
+I, [2013-10-08T10:25:31.474110 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-10-08T10:25:31.475921 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.9ms)
+I, [2013-10-08T10:25:31.477199 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T10:25:31.477509 #2455]  INFO -- : Completed 200 OK in 59ms (Views: 52.5ms | ActiveRecord: 2.1ms)
+I, [2013-10-08T10:25:32.721715 #2455]  INFO -- : Started GET "/ru/admin/competitions/new" for 127.0.0.1 at 2013-10-08 10:25:32 +0600
+I, [2013-10-08T10:25:32.725646 #2455]  INFO -- : Processing by Admin::CompetitionsController#new as HTML
+I, [2013-10-08T10:25:32.725738 #2455]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T10:25:32.914539 #2455]  INFO -- :   Rendered admin/competitions/_form.html.erb (130.2ms)
+I, [2013-10-08T10:25:32.915121 #2455]  INFO -- :   Rendered admin/competitions/new.html.erb within layouts/application (156.3ms)
+I, [2013-10-08T10:25:32.918153 #2455]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.2ms)
+I, [2013-10-08T10:25:32.920216 #2455]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-08T10:25:32.922710 #2455]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.3ms)
+I, [2013-10-08T10:25:32.923676 #2455]  INFO -- :   Rendered layouts/_navigation.html.erb (0.8ms)
+I, [2013-10-08T10:25:32.924348 #2455]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-10-08T10:25:32.924607 #2455]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T10:25:32.924931 #2455]  INFO -- : Completed 200 OK in 199ms (Views: 194.0ms | ActiveRecord: 1.5ms)
