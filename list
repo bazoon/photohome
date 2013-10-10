@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photohome</title>
+    <meta name="description" content="Photohome">
+    <link href="/assets/application-fcc2dda4d933f102d512e2078a4a0351.css" media="all" rel="stylesheet" />
+    <script src="/assets/application-8d96470fdf68b27e668a656e4835cad6.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="UYZnaa9XNkNreaif+Vk3Z1JuhxeTAWdBVldL81Y1w2s=" name="csrf-token" />
+    
+  
+
+  </head>
+
+  <body style="margin-top: 70px">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Фотодом</a>
+        </div>
+         <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+           
+            <li class="active"><a href="/gallery/index?locale=ru">Фотографии</a></li>
+<li><a href="/ru/competitions">Конкурсы</a> </li>
+<li><a href="/ru/novelties/list">Новости</a></li>
+
+
+            
+            
+                <li>
+    <a href="/ru/users/sign_in">Войти</a>
+    </li>
+    <li>
+    <a href="/ru/users/sign_up">Регистрация</a>
+    </li>
+
+
+            <li>
+  <a href="/?locale=en"><img alt="Gb" src="/assets/gb-137dfc595be86aae64429676ff431597.png" /></a>
+</li>
+
+          
+          </ul>
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div id ="flash_box">
+    <div class="alert alert-warning">
+      <a class="close" data-dismiss="alert">&#215;</a>
+      <div id="flash_alert">You are not authorized to access this page.</div>
+    </div>
+</div>
+
+      <div class="span8">
+
+
+
+<div class="jury_estimate" data-average="8" data-id = "2:89">
+</div>
+
+</div>
+    </div><!-- /.container -->
+
+
+  
+  <script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-3.newrelic.com","802014c51d","1965552","cg1WEUUKDwpTRRtbV1wHFwxZAQYe",0,134,new Date().getTime(),"","","","",""]);}</script></body>
+</html>

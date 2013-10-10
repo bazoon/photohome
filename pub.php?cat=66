@@ -1,0 +1,131 @@
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Фотошкола Гильдии фотографов. Тюмень. Официальный сайт. :: ФОТОГАЛЕРЕЯ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="css/s.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('img, div, a');
+</script>
+<style type="text/css">
+body {
+	behavior:url(js/csshover.htc);
+	}
+</style>
+<![endif]-->
+</head>
+
+<body>
+	<div class="logo"><a href="index.php">	   
+	   Фотошкола Гильдии фотографов. Тюмень. Официальный сайт. :: ФОТОГАЛЕРЕЯ
+       Фото-школа Гильдии фотографов. школа фотографии, фотошкола, Тюмень. Курсы фотографии. Фотография для начинающих,  уроки фотографии, фотокурсы, научиться фотографии. фотографы, семинары, мастеркласс для фотографов. Мы исследуем внешний мир..	 
+	</a>
+	</div>
+	<div class="top">
+		<div class="hsmm">
+			<a href="index.php" class="ihome"></a>
+			<a href="search.php" class="isearch"></a>
+			<a href="pub.php?cat=22" class="imail"></a>
+			<a href="/admin/" class="imap"></a>
+		</div>
+		<div class="slovo">Фотошкола</div>
+	</div>
+	<div class="topmenu">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			
+			<td><a href="pub.php?cat=17">О НАС</a></td>
+			<td><a href="pub.php?cat=54">Новости</a></td>
+			<td><a href="pub.php?cat=18">УЧЕБНЫЕ КУРСЫ</a></td>
+			<td><a href="pub.php?cat=66"  class="active">ФОТОГАЛЕРЕЯ</a></td>
+			<td><a href="pub.php?cat=60">ФОТОУСЛУГИ</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="content2">
+		
+      <table width="100%" border="0">
+        <tr>
+          <td class="main_text_sm" align="center" valign="top"> 
+            <table width="100%" border="0" cellspacing="2" cellpadding="2">
+              <tr> 
+                <td>
+				  
+    <div class="submenu">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td with="7"> </td>
+				<td><a href="/pub.php?cat=61">Фотоработы наших преподавателей</a></td>
+				<td with="7"><img src="images/line-set-subcat-cr.jpg"></td>
+				<td><a href="/pub.php?cat=63">Фотоработы наших выпускников</a></td>
+				<td with="7"> </td>
+			</tr>
+		</table>
+	</div>				
+				</td>
+              </tr>
+			</table>
+			
+			<table width="100%" border="0" cellspacing="2" cellpadding="2">
+              <tr> 
+               <td colspan="2" class="gallery"> 
+				   <h1>ФОТОГАЛЕРЕЯ</h1>
+				   <strong></strong>
+                </td>
+              </tr>
+			  <tr> 
+                <td height="80" width="180"> 
+                  <div align="center"><a href="/pub.php?id=346"><img src="pub_res.php?img=900" alt="Учебная фотосессия &quot;Уличный портрет. Зима&quot; 04.12.10 г."></a></div>
+                </td>
+                <td class="digest"><strong><a href="/pub.php?id=346">Учебная фотосессия &quot;Уличный портрет. Зима&quot; 04.12.10 г.</a></strong> (18.01.2011)<br>
+				   
+                </td>
+              </tr>
+			  <tr> 
+                <td colspan="2" class="main_text_sm"><div class="digest"><br><span><strong>СТРАНИЦЫ: [ 1 ]</strong></span></div></td>
+              </tr>
+			</table>			
+          </td>
+        </tr>
+      </table>
+	</div>
+	<div class="content">
+		<div class="left2"><strong><a href="/pub.php">Главная страница</a></strong>&nbsp;>&nbsp;<strong>ФОТОГАЛЕРЕЯ</strong></div>
+	</div>
+	<div class="foot">
+		ул. Кузнецова 16. Наш телефон: (3452) <strong>788-555</strong> ООО "Гильдия фотографов",  фотошкола, г.Тюмень. 2010 год<br>
+		Copyright GF © 2010 All rights reserved<br>
+дизайн сайта:  Хиневич Андрей<br>
+		<!-- Yandex.Metrika -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter2090158 = new Ya.Metrika(2090158);
+             yaCounter2090158.clickmap(true);
+             yaCounter2090158.trackLinks(true);
+        
+        } catch(e) {}
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/2090158" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href=\'http://www.liveinternet.ru/click\' "+
+"target=_blank><img src=\'http://counter.yadro.ru/hit?t18.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"\' alt=\'\' title=\'LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня\' "+
+"border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->
+	</div>
+</body>
+</html>

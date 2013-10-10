@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   end	   	   
 
   def in_jury?
-    jury && jury.count > 0
+    self.jury && self.jury.count > 0
   end
 
 end

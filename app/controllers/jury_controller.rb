@@ -1,7 +1,8 @@
 class JuryController < ApplicationController
 
-  before_filter :verify_if_jury
 
+  before_filter :verify_if_jury
+  
 
 
   def rating
@@ -12,6 +13,8 @@ class JuryController < ApplicationController
 
 
     jury_rating = JuryRating.find_or_create_by(user_id: user_id,competition_photo_id: competition_photo_id)
+    
+    authorize! :update, jury_rating
     jury_rating.rating = rate
 
         
@@ -29,7 +32,7 @@ class JuryController < ApplicationController
 
 
   def choose_competition
-    # @competitions = Competition.where("open_date > ?",DateTime.now)
+    @competitions = Competition.where("open_date > ?",DateTime.now)
     @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ?",current_user.id,DateTime.now)
   end
 

@@ -2350,3 +2350,103 @@ I, [2013-10-08T11:01:29.138271 #2455]  INFO -- : Started POST "/jury_rating" for
 I, [2013-10-08T11:01:29.139734 #2455]  INFO -- : Processing by JuryController#rating as JSON
 I, [2013-10-08T11:01:29.139806 #2455]  INFO -- :   Parameters: {"idBox"=>"4:51", "rate"=>"3"}
 I, [2013-10-08T11:01:29.146204 #2455]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.5ms)
+I, [2013-10-08T13:25:12.525304 #3161]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 13:25:12 +0600
+I, [2013-10-08T13:25:12.569866 #3161]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T13:25:12.765231 #3161]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2013-10-08T13:25:12.796500 #3161]  INFO -- :   Rendered layouts/_common_menu.html.erb (27.8ms)
+I, [2013-10-08T13:25:12.800576 #3161]  INFO -- :   Rendered layouts/_moder_menu.html (1.8ms)
+I, [2013-10-08T13:25:12.807083 #3161]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.3ms)
+I, [2013-10-08T13:25:12.809383 #3161]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-10-08T13:25:12.812507 #3161]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.3ms)
+I, [2013-10-08T13:25:12.814667 #3161]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-10-08T13:25:12.815215 #3161]  INFO -- : Completed 200 OK in 245ms (Views: 47.5ms | ActiveRecord: 68.8ms)
+I, [2013-10-08T16:12:31.878715 #4280]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 16:12:31 +0600
+I, [2013-10-08T16:12:31.924800 #4280]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T16:12:31.924893 #4280]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T16:12:31.978199 #4280]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (34.1ms)
+I, [2013-10-08T16:12:32.007299 #4280]  INFO -- :   Rendered layouts/_common_menu.html.erb (26.9ms)
+I, [2013-10-08T16:12:32.011673 #4280]  INFO -- :   Rendered layouts/_navigation.html.erb (2.2ms)
+I, [2013-10-08T16:12:32.015190 #4280]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.5ms)
+I, [2013-10-08T16:12:32.016524 #4280]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T16:12:32.016870 #4280]  INFO -- : Completed 200 OK in 92ms (Views: 58.8ms | ActiveRecord: 16.2ms)
+I, [2013-10-08T16:54:05.048597 #4280]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-10-08 16:54:05 +0600
+I, [2013-10-08T16:54:05.108476 #4280]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T16:54:05.156620 #4280]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2013-10-08T16:54:05.161542 #4280]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.7ms)
+I, [2013-10-08T16:54:05.165852 #4280]  INFO -- :   Rendered layouts/_navigation.html.erb (2.4ms)
+I, [2013-10-08T16:54:05.166687 #4280]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-08T16:54:05.167025 #4280]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T16:54:05.167433 #4280]  INFO -- : Completed 200 OK in 59ms (Views: 13.8ms | ActiveRecord: 3.3ms)
+I, [2013-10-08T22:09:32.462480 #1656]  INFO -- : Started GET "/ru/novelties/list" for 127.0.0.1 at 2013-10-08 22:09:32 +0600
+I, [2013-10-08T22:09:32.523925 #1656]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-08T22:09:32.523998 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:32.647507 #1656]  INFO -- : Redirected to http://localhost:3000/?locale=ru
+I, [2013-10-08T22:09:32.647827 #1656]  INFO -- : Completed 302 Found in 124ms (ActiveRecord: 38.7ms)
+I, [2013-10-08T22:09:32.718187 #1656]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:32 +0600
+I, [2013-10-08T22:09:32.722407 #1656]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T22:09:32.722538 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:32.943125 #1656]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2013-10-08T22:09:33.020854 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (54.9ms)
+I, [2013-10-08T22:09:33.042783 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (3.8ms)
+I, [2013-10-08T22:09:33.057122 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (5.6ms)
+I, [2013-10-08T22:09:33.082397 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (1.2ms)
+I, [2013-10-08T22:09:33.083140 #1656]  INFO -- : Completed 200 OK in 360ms (Views: 230.2ms | ActiveRecord: 99.5ms)
+I, [2013-10-08T22:09:37.291115 #1656]  INFO -- : Started GET "/ru/competitions" for 127.0.0.1 at 2013-10-08 22:09:37 +0600
+I, [2013-10-08T22:09:37.294404 #1656]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-08T22:09:37.294520 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:37.514481 #1656]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (162.5ms)
+I, [2013-10-08T22:09:37.519037 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.0ms)
+I, [2013-10-08T22:09:37.523862 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (2.3ms)
+I, [2013-10-08T22:09:37.525735 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.0ms)
+I, [2013-10-08T22:09:37.527110 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.5ms)
+I, [2013-10-08T22:09:37.527475 #1656]  INFO -- : Completed 200 OK in 233ms (Views: 94.3ms | ActiveRecord: 136.6ms)
+I, [2013-10-08T22:09:39.615232 #1656]  INFO -- : Started GET "/gallery/index?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:39 +0600
+I, [2013-10-08T22:09:39.618935 #1656]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-08T22:09:39.619012 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:39.757834 #1656]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (52.8ms)
+I, [2013-10-08T22:09:39.762698 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (3.4ms)
+I, [2013-10-08T22:09:39.765964 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (1.7ms)
+I, [2013-10-08T22:09:39.766531 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-10-08T22:09:39.766800 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T22:09:39.767140 #1656]  INFO -- : Completed 200 OK in 148ms (Views: 98.6ms | ActiveRecord: 47.2ms)
+I, [2013-10-08T22:09:45.773299 #1656]  INFO -- : Started GET "/gallery/index?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:45 +0600
+I, [2013-10-08T22:09:45.776376 #1656]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-08T22:09:45.776447 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:45.783623 #1656]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (4.3ms)
+I, [2013-10-08T22:09:45.786282 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.0ms)
+I, [2013-10-08T22:09:45.788854 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-10-08T22:09:45.789369 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.3ms)
+I, [2013-10-08T22:09:45.789622 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T22:09:45.789883 #1656]  INFO -- : Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+I, [2013-10-08T22:09:46.760608 #1656]  INFO -- : Started GET "/gallery/index?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:46 +0600
+I, [2013-10-08T22:09:46.762018 #1656]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-08T22:09:46.762092 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:46.821120 #1656]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (4.0ms)
+I, [2013-10-08T22:09:46.824153 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.3ms)
+I, [2013-10-08T22:09:46.826821 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-10-08T22:09:46.827499 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-10-08T22:09:46.827848 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T22:09:46.828189 #1656]  INFO -- : Completed 200 OK in 66ms (Views: 11.4ms | ActiveRecord: 1.0ms)
+I, [2013-10-08T22:09:48.430957 #1656]  INFO -- : Started GET "/ru/novelties/list" for 127.0.0.1 at 2013-10-08 22:09:48 +0600
+I, [2013-10-08T22:09:48.436492 #1656]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-08T22:09:48.436618 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:48.444558 #1656]  INFO -- : Redirected to http://localhost:3000/?locale=ru
+I, [2013-10-08T22:09:48.444748 #1656]  INFO -- : Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+I, [2013-10-08T22:09:48.449921 #1656]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:48 +0600
+I, [2013-10-08T22:09:48.453644 #1656]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-08T22:09:48.453717 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:48.456179 #1656]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.0ms)
+I, [2013-10-08T22:09:48.459333 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.3ms)
+I, [2013-10-08T22:09:48.464304 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (3.4ms)
+I, [2013-10-08T22:09:48.465356 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-08T22:09:48.466121 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-08T22:09:48.466510 #1656]  INFO -- : Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+I, [2013-10-08T22:09:49.824433 #1656]  INFO -- : Started GET "/gallery/index?locale=ru" for 127.0.0.1 at 2013-10-08 22:09:49 +0600
+I, [2013-10-08T22:09:49.825814 #1656]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-08T22:09:49.825889 #1656]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-08T22:09:49.832333 #1656]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (3.8ms)
+I, [2013-10-08T22:09:49.835023 #1656]  INFO -- :   Rendered layouts/_common_menu.html.erb (2.1ms)
+I, [2013-10-08T22:09:49.837786 #1656]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-10-08T22:09:49.838313 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-10-08T22:09:49.838514 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-10-08T22:09:49.838748 #1656]  INFO -- : Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.0ms)

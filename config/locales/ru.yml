@@ -53,6 +53,8 @@ ru:
   forgot_password: "Забыли пароль ?"
   paricipate_in_competition: "Фотография учавствовала в 1 или более конкурсах и не может быть удалена"
   photo_was_deleted: "Фотография была удалена"
+  incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
+
 
   change_password: "Сменить пароль"
   profile: "Профиль"

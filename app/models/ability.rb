@@ -6,18 +6,25 @@ class Ability
     
     if user.has_role? :admin
       can :manage, :all
-    elsif user.has_role? :moder
+    end  
+    
+    if user.has_role? :moder
       can :manage, Novelty  
-    else
-      can :read,Message
-      can :manage,Comment,user_id: user.id
-      can :read,:all    
+    end
+
+    if user.in_jury?
+      can :update, JuryRating, user_id: user.id
+    end  
+
+    if user.valid?
+      can :read, Message
+      can :manage, Comment,user_id: user.id
+      can :read, :all    
+      can :create, :Like
+      can :manage, :Like, user_id: user.id
     end
 
   
-
-
-
 
     # Define abilities for the passed in user here. For example:
     #

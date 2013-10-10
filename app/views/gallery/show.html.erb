@@ -11,7 +11,7 @@
 <hr/>
 
 
-<h4><%=  t("comments")%></h4>
+<h4> <%=  t("comments") if @photo.comments.count > 0 %> </h4>
 
 <% @photo.comments.each do |c| %>
 
@@ -28,16 +28,5 @@
 <hr/>
 
 
-<%= simple_form_for([current_user,@photo,Comment.new]) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :comment,placeholder: 'Здесь можно что-нибудь написать',:input_html => {:style => "width: 500px"}  %>
-    <%= f.input :commentable, :as => :hidden, :input_html => { :value => "photo"  }  %>
-  </div>
-  <br>
- 
-    <%= f.submit t(:save), :class => "btn btn-default" %>
- 
-<% end %>
+<%= render partial: "comment/form", locals: { user: current_user, photo: @photo} %>
 

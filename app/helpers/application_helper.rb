@@ -13,6 +13,10 @@ module ApplicationHelper
   end
 
 
+  def can_view?
+    not current_user.nil?
+  end
+
   def ld(d)
     I18n.l(d) unless d.nil?
   end  

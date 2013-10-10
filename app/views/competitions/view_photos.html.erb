@@ -15,9 +15,14 @@
      <span style = "float: right">
      
     <%= content_tag(:span,competition_photo.like_count,class: "label label-primary",id: "like_count#{competition_photo.id}") %>
+    
+    <% if can?(:read,Competition)  %>
     <%- icon = competition_photo.liked_by(@user) ? unlike_icon("like#{competition_photo.id}") : like_icon("like#{competition_photo.id}") %>
     <%= link_to(icon, like_path(competition_photo), remote: true) if @can_like%>
-     </span>
+    <% end  %>
+
+    </span>
+    
     </div>  
     </div>
     
