@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'delayed_job_active_record'
 
+gem 'newrelic_rpm'
+
 # gem 'bootstrap-sass'
 
 
