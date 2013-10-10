@@ -23,10 +23,10 @@
         <td><%= I18n.l(novelty.publish_date) %></td>
         <td><%= novelty.published %></td>
         <td><%= novelty.user.name %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"),novelty %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_novelty_path(novelty) %></td>
+        <td><%= link_to show_icon,novelty %></td>
+        <td><%= link_to edit_icon, edit_novelty_path(novelty) %></td>
         <td>
-        <%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), novelty, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to del_icon, novelty, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       
       </tr>

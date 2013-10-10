@@ -2,7 +2,7 @@ class Competition < ActiveRecord::Base
 
   has_many :jury,class_name: "Admin::Jury"
   has_many :nominations,class_name: "Admin::Nomination"
-  has_many :competition_photos
+  has_many :competition_photos,dependent: :destroy
   has_many :jury_ratings, through: :competition_photos
   has_many :users, through: :jury
 
