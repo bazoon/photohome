@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : link_to "Photohome",root_path %></title>
+    <title><%= content_for?(:title) ? yield(:title) :  "Photohome72" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><%= I18n.t("project_name") %></a>
+          <%=  link_to(I18n.t("project_name"),root_path,class: "navbar-brand") %>
         </div>
          <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
