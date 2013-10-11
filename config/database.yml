@@ -52,7 +52,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: photohome_development
-  pool: 5
+  pool: 25
   username: vit
   password: t97888
   template: template0
