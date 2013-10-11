@@ -2450,3 +2450,1277 @@ I, [2013-10-08T22:09:49.837786 #1656]  INFO -- :   Rendered layouts/_navigation.
 I, [2013-10-08T22:09:49.838313 #1656]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
 I, [2013-10-08T22:09:49.838514 #1656]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
 I, [2013-10-08T22:09:49.838748 #1656]  INFO -- : Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.0ms)
+I, [2013-10-10T16:30:58.690722 #2454]  INFO -- : Started DELETE "/ru/users/sign_out" for 89.204.38.176 at 2013-10-10 16:30:58 +0000
+I, [2013-10-10T16:30:58.792925 #2454]  INFO -- : Processing by Devise::SessionsController#destroy as HTML
+I, [2013-10-10T16:30:58.793090 #2454]  INFO -- :   Parameters: {"authenticity_token"=>"hwlkBKlPs1l1t5Wmmgfb7sINFu298B6wsaVtD4AHRbE=", "locale"=>"ru"}
+W, [2013-10-10T16:30:58.834354 #2454]  WARN -- : Can't verify CSRF token authenticity
+I, [2013-10-10T16:30:59.234097 #2454]  INFO -- : Completed 422 Unprocessable Entity in 441ms
+F, [2013-10-10T16:30:59.242714 #2454] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.0.0) lib/action_controller/metal/request_forgery_protection.rb:163:in `handle_unverified_request'
+  actionpack (4.0.0) lib/action_controller/metal/request_forgery_protection.rb:170:in `handle_unverified_request'
+  devise (3.0.3) lib/devise/controllers/helpers.rb:278:in `handle_unverified_request'
+  actionpack (4.0.0) lib/action_controller/metal/request_forgery_protection.rb:177:in `verify_authenticity_token'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:417:in `_run__1221992346681958784__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  newrelic_rpm (3.6.8.164) lib/new_relic/rack/error_collector.rb:43:in `call'
+  newrelic_rpm (3.6.8.164) lib/new_relic/rack/agent_hooks.rb:22:in `call'
+  newrelic_rpm (3.6.8.164) lib/new_relic/rack/browser_monitoring.rb:16:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2395682627862851543__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  puma (2.5.1) lib/puma/configuration.rb:68:in `call'
+  puma (2.5.1) lib/puma/server.rb:472:in `handle_request'
+  puma (2.5.1) lib/puma/server.rb:343:in `process_client'
+  puma (2.5.1) lib/puma/server.rb:242:in `block in run'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.5.1) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-10-10T16:31:08.392549 #2454]  INFO -- : Started GET "/" for 89.204.38.176 at 2013-10-10 16:31:08 +0000
+I, [2013-10-10T16:31:08.400349 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:31:08.496153 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.3ms)
+I, [2013-10-10T16:31:08.723559 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (219.8ms)
+I, [2013-10-10T16:31:08.741914 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.8ms)
+I, [2013-10-10T16:31:08.750166 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.0ms)
+I, [2013-10-10T16:31:08.754486 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.2ms)
+I, [2013-10-10T16:31:08.761068 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.9ms)
+I, [2013-10-10T16:31:08.761602 #2454]  INFO -- : Completed 200 OK in 361ms (Views: 254.7ms | ActiveRecord: 27.3ms)
+I, [2013-10-10T16:31:14.504576 #2454]  INFO -- : Started GET "/ru/novelties" for 89.204.38.176 at 2013-10-10 16:31:14 +0000
+I, [2013-10-10T16:31:14.512696 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-10T16:31:14.512767 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:31:14.626525 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (76.4ms)
+I, [2013-10-10T16:31:14.635149 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.7ms)
+I, [2013-10-10T16:31:14.648477 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.6ms)
+I, [2013-10-10T16:31:14.656490 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.8ms)
+I, [2013-10-10T16:31:14.658586 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.4ms)
+I, [2013-10-10T16:31:14.664183 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (4.9ms)
+I, [2013-10-10T16:31:14.664696 #2454]  INFO -- : Completed 200 OK in 152ms (Views: 117.9ms | ActiveRecord: 14.6ms)
+I, [2013-10-10T16:40:51.832256 #2454]  INFO -- : Started GET "/" for 89.204.38.176 at 2013-10-10 16:40:51 +0000
+I, [2013-10-10T16:40:51.835922 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:40:51.843765 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.2ms)
+I, [2013-10-10T16:40:51.883308 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (38.0ms)
+I, [2013-10-10T16:40:51.891155 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.2ms)
+I, [2013-10-10T16:40:51.896075 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-10T16:40:51.896517 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:40:51.896995 #2454]  INFO -- : Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+I, [2013-10-10T16:40:56.481487 #2454]  INFO -- : Started GET "/ru/users/sign_in" for 89.204.38.176 at 2013-10-10 16:40:56 +0000
+I, [2013-10-10T16:40:56.489811 #2454]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-10-10T16:40:56.489880 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:40:56.716659 #2454]  INFO -- :   Rendered devise/shared/_links.html.erb (3.4ms)
+I, [2013-10-10T16:40:56.716934 #2454]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (217.3ms)
+I, [2013-10-10T16:40:56.738313 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.1ms)
+I, [2013-10-10T16:40:56.746736 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.4ms)
+I, [2013-10-10T16:40:56.747693 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:40:56.752220 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (4.3ms)
+I, [2013-10-10T16:40:56.752742 #2454]  INFO -- : Completed 200 OK in 263ms (Views: 255.9ms | ActiveRecord: 0.0ms)
+I, [2013-10-10T16:41:48.887430 #2454]  INFO -- : Started POST "/ru/users/sign_in" for 89.204.38.176 at 2013-10-10 16:41:48 +0000
+I, [2013-10-10T16:41:48.890169 #2454]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-10-10T16:41:48.890329 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2HD3Y60uQ160ARsWYy7UqoH8jVs7Ay05rpQuiD9c4w=", "user"=>{"email"=>"vith77@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-10-10T16:41:49.110991 #2454]  INFO -- : Redirected to http://146.185.131.154/?locale=ru
+I, [2013-10-10T16:41:49.111324 #2454]  INFO -- : Completed 302 Found in 221ms (ActiveRecord: 15.8ms)
+I, [2013-10-10T16:41:49.388014 #2454]  INFO -- : Started GET "/?locale=ru" for 89.204.38.176 at 2013-10-10 16:41:49 +0000
+I, [2013-10-10T16:41:49.390357 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:41:49.390423 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:41:49.398488 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T16:41:49.420498 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.7ms)
+I, [2013-10-10T16:41:49.427260 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.7ms)
+I, [2013-10-10T16:41:49.433730 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T16:41:49.434552 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:41:49.435022 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:41:49.435438 #2454]  INFO -- : Completed 200 OK in 45ms (Views: 30.3ms | ActiveRecord: 7.8ms)
+I, [2013-10-10T16:41:54.293337 #2454]  INFO -- : Started GET "/ru/novelties" for 89.204.38.176 at 2013-10-10 16:41:54 +0000
+I, [2013-10-10T16:41:54.301151 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-10T16:41:54.301238 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:41:54.348410 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (14.8ms)
+I, [2013-10-10T16:41:54.350781 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T16:41:54.358740 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-10T16:41:54.365021 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T16:41:54.365787 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:41:54.366252 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:41:54.366739 #2454]  INFO -- : Completed 200 OK in 65ms (Views: 30.2ms | ActiveRecord: 8.7ms)
+I, [2013-10-10T16:42:04.951043 #2454]  INFO -- : Started GET "/ru/novelties/list" for 89.204.38.176 at 2013-10-10 16:42:04 +0000
+I, [2013-10-10T16:42:04.953820 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T16:42:04.953884 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:42:04.994903 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (6.5ms)
+I, [2013-10-10T16:42:04.999475 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T16:42:05.003353 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.7ms)
+I, [2013-10-10T16:42:05.013643 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:42:05.014545 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T16:42:05.014985 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:05.015420 #2454]  INFO -- : Completed 200 OK in 61ms (Views: 30.4ms | ActiveRecord: 13.4ms)
+I, [2013-10-10T16:42:11.827205 #2454]  INFO -- : Started GET "/?locale=ru" for 89.204.38.176 at 2013-10-10 16:42:11 +0000
+I, [2013-10-10T16:42:11.829592 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:42:11.829655 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:42:11.838722 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2013-10-10T16:42:11.861498 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.1ms)
+I, [2013-10-10T16:42:11.872721 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (8.9ms)
+I, [2013-10-10T16:42:11.875122 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:42:11.875889 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:42:11.880413 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:11.880896 #2454]  INFO -- : Completed 200 OK in 51ms (Views: 35.7ms | ActiveRecord: 12.8ms)
+I, [2013-10-10T16:42:13.363139 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 89.204.38.176 at 2013-10-10 16:42:13 +0000
+I, [2013-10-10T16:42:13.367149 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T16:42:13.367222 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:42:13.402248 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (17.5ms)
+I, [2013-10-10T16:42:13.421493 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.0ms)
+I, [2013-10-10T16:42:13.432462 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (8.7ms)
+I, [2013-10-10T16:42:13.434608 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:42:13.435352 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-10-10T16:42:13.435755 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:13.440232 #2454]  INFO -- : Completed 200 OK in 73ms (Views: 58.2ms | ActiveRecord: 7.1ms)
+I, [2013-10-10T16:42:19.030596 #2454]  INFO -- : Started GET "/user_profile/ru/4" for 89.204.38.176 at 2013-10-10 16:42:19 +0000
+I, [2013-10-10T16:42:19.034733 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-10T16:42:19.034798 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-10T16:42:19.046909 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (1.1ms)
+I, [2013-10-10T16:42:19.076168 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (26.8ms)
+I, [2013-10-10T16:42:19.079545 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-10T16:42:19.085946 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T16:42:19.086787 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T16:42:19.087192 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:19.104721 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (12.5ms)
+I, [2013-10-10T16:42:19.105290 #2454]  INFO -- : Completed 200 OK in 70ms (Views: 52.6ms | ActiveRecord: 12.1ms)
+I, [2013-10-10T16:42:20.619620 #2454]  INFO -- : Started GET "/ru/users/4/photos" for 89.204.38.176 at 2013-10-10 16:42:20 +0000
+I, [2013-10-10T16:42:20.797959 #2454]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-10-10T16:42:20.798128 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-10T16:42:20.821583 #2454]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (2.3ms)
+I, [2013-10-10T16:42:20.840788 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.9ms)
+I, [2013-10-10T16:42:20.852077 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (8.8ms)
+I, [2013-10-10T16:42:20.854475 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:42:20.855445 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:42:20.855944 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:20.862555 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.4ms)
+I, [2013-10-10T16:42:20.863045 #2454]  INFO -- : Completed 200 OK in 65ms (Views: 41.8ms | ActiveRecord: 15.6ms)
+I, [2013-10-10T16:42:22.467619 #2454]  INFO -- : Started GET "/ru/users/4/photos/new" for 89.204.38.176 at 2013-10-10 16:42:22 +0000
+I, [2013-10-10T16:42:22.476132 #2454]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-10-10T16:42:22.476209 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-10T16:42:22.580919 #2454]  INFO -- :   Rendered photos/_form.html.erb (95.2ms)
+I, [2013-10-10T16:42:22.581686 #2454]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (97.4ms)
+I, [2013-10-10T16:42:22.602981 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.1ms)
+I, [2013-10-10T16:42:22.605948 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.7ms)
+I, [2013-10-10T16:42:22.612179 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.0ms)
+I, [2013-10-10T16:42:22.613118 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:42:22.613535 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:42:22.621624 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (7.9ms)
+I, [2013-10-10T16:42:22.622095 #2454]  INFO -- : Completed 200 OK in 146ms (Views: 119.3ms | ActiveRecord: 24.9ms)
+I, [2013-10-10T16:43:18.511786 #2454]  INFO -- : Started POST "/ru/users/4/photos" for 89.204.38.176 at 2013-10-10 16:43:18 +0000
+I, [2013-10-10T16:43:18.682185 #2454]  INFO -- : Processing by PhotosController#create as HTML
+I, [2013-10-10T16:43:18.682393 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSUUZ3mqyAPCh88KzuCcpea236NYdxjSgFOFDQGdJKw=", "photo"=>{"title"=>"Ukr", "image_cache"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000001cc9ab0 @tempfile=#<Tempfile:/tmp/RackMultipart20131010-2454-zm0qdz>, @original_filename="image.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"image.jpg\"\r\nContent-Type: image/jpeg\r\n">, "topic_id"=>"1", "destination_id"=>"0", "theme_tokens"=>""}, "commit"=>"Создать Photo", "locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-10T16:43:20.002961 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/users/4/photos/14
+I, [2013-10-10T16:43:20.003300 #2454]  INFO -- : Completed 302 Found in 1321ms (ActiveRecord: 37.7ms)
+I, [2013-10-10T16:43:20.305509 #2454]  INFO -- : Started GET "/ru/users/4/photos/14" for 89.204.38.176 at 2013-10-10 16:43:20 +0000
+I, [2013-10-10T16:43:20.312204 #2454]  INFO -- : Processing by PhotosController#show as HTML
+I, [2013-10-10T16:43:20.312275 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4", "id"=>"14"}
+I, [2013-10-10T16:43:20.575151 #2454]  INFO -- :   Rendered comment/_form.html.erb (230.4ms)
+I, [2013-10-10T16:43:20.580313 #2454]  INFO -- :   Rendered photos/show.html.erb within layouts/user_profile_layout (260.1ms)
+I, [2013-10-10T16:43:20.599262 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.7ms)
+I, [2013-10-10T16:43:20.606616 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.7ms)
+I, [2013-10-10T16:43:20.612800 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.0ms)
+I, [2013-10-10T16:43:20.613778 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:43:20.614251 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:43:20.622685 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (7.8ms)
+I, [2013-10-10T16:43:20.623184 #2454]  INFO -- : Completed 200 OK in 311ms (Views: 294.3ms | ActiveRecord: 13.8ms)
+I, [2013-10-10T16:43:38.906873 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 89.204.38.176 at 2013-10-10 16:43:38 +0000
+I, [2013-10-10T16:43:38.910968 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T16:43:38.911035 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:43:38.935623 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (16.1ms)
+I, [2013-10-10T16:43:38.957626 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.9ms)
+I, [2013-10-10T16:43:38.968758 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (8.8ms)
+I, [2013-10-10T16:43:38.971092 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:43:38.971827 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:43:38.976345 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:43:38.976747 #2454]  INFO -- : Completed 200 OK in 66ms (Views: 49.7ms | ActiveRecord: 8.8ms)
+I, [2013-10-10T16:43:44.177925 #2454]  INFO -- : Started GET "/gallery/index?locale=ru&page=2" for 89.204.38.176 at 2013-10-10 16:43:44 +0000
+I, [2013-10-10T16:43:44.183989 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T16:43:44.184074 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "page"=>"2"}
+I, [2013-10-10T16:43:44.191334 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (3.1ms)
+I, [2013-10-10T16:43:44.213516 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.2ms)
+I, [2013-10-10T16:43:44.220675 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (4.8ms)
+I, [2013-10-10T16:43:44.222914 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:43:44.223636 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:43:44.228071 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (4.3ms)
+I, [2013-10-10T16:43:44.228483 #2454]  INFO -- : Completed 200 OK in 44ms (Views: 31.6ms | ActiveRecord: 9.8ms)
+I, [2013-10-10T16:43:49.248746 #2454]  INFO -- : Started GET "/ru/novelties" for 89.204.38.176 at 2013-10-10 16:43:49 +0000
+I, [2013-10-10T16:43:49.250830 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-10T16:43:49.250894 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:43:49.293952 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (15.8ms)
+I, [2013-10-10T16:43:49.304206 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.1ms)
+I, [2013-10-10T16:43:49.307755 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-10T16:43:49.313983 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T16:43:49.314734 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:43:49.315166 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:43:49.315610 #2454]  INFO -- : Completed 200 OK in 65ms (Views: 29.0ms | ActiveRecord: 13.8ms)
+I, [2013-10-10T16:43:51.013558 #2454]  INFO -- : Started DELETE "/ru/users/sign_out" for 89.204.38.176 at 2013-10-10 16:43:51 +0000
+I, [2013-10-10T16:43:51.020204 #2454]  INFO -- : Processing by Devise::SessionsController#destroy as HTML
+I, [2013-10-10T16:43:51.020274 #2454]  INFO -- :   Parameters: {"authenticity_token"=>"qSUUZ3mqyAPCh88KzuCcpea236NYdxjSgFOFDQGdJKw=", "locale"=>"ru"}
+I, [2013-10-10T16:43:51.041678 #2454]  INFO -- : Redirected to http://146.185.131.154/?locale=ru
+I, [2013-10-10T16:43:51.041954 #2454]  INFO -- : Completed 302 Found in 22ms (ActiveRecord: 11.5ms)
+I, [2013-10-10T16:43:51.186723 #2454]  INFO -- : Started GET "/?locale=ru" for 89.204.38.176 at 2013-10-10 16:43:51 +0000
+I, [2013-10-10T16:43:51.188790 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:43:51.188860 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:43:51.197681 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.2ms)
+I, [2013-10-10T16:43:51.213424 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.4ms)
+I, [2013-10-10T16:43:51.220917 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (6.0ms)
+I, [2013-10-10T16:43:51.221708 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:43:51.222177 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:43:51.222594 #2454]  INFO -- : Completed 200 OK in 34ms (Views: 25.5ms | ActiveRecord: 5.8ms)
+I, [2013-10-10T16:43:54.135435 #2454]  INFO -- : Started GET "/ru/users/sign_in" for 89.204.38.176 at 2013-10-10 16:43:54 +0000
+I, [2013-10-10T16:43:54.138232 #2454]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-10-10T16:43:54.138296 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:43:54.155774 #2454]  INFO -- :   Rendered devise/shared/_links.html.erb (0.9ms)
+I, [2013-10-10T16:43:54.160062 #2454]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+I, [2013-10-10T16:43:54.171736 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.5ms)
+I, [2013-10-10T16:43:54.179511 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.1ms)
+I, [2013-10-10T16:43:54.184382 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-10T16:43:54.184835 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:43:54.185283 #2454]  INFO -- : Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+I, [2013-10-10T16:44:20.091581 #2454]  INFO -- : Started POST "/ru/users/sign_in" for 89.204.38.176 at 2013-10-10 16:44:20 +0000
+I, [2013-10-10T16:44:20.094221 #2454]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-10-10T16:44:20.094303 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRGO21gIaGbzkHfDWtDvrnPfgnwWLYBEbFWWjNRYY04=", "user"=>{"email"=>"vith@yandex.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-10-10T16:44:20.294685 #2454]  INFO -- : Redirected to http://146.185.131.154/?locale=ru
+I, [2013-10-10T16:44:20.294887 #2454]  INFO -- : Completed 302 Found in 200ms (ActiveRecord: 9.7ms)
+I, [2013-10-10T16:44:21.192282 #2454]  INFO -- : Started GET "/?locale=ru" for 89.204.38.176 at 2013-10-10 16:44:21 +0000
+I, [2013-10-10T16:44:21.194238 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T16:44:21.194300 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:44:21.201687 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T16:44:21.395133 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (192.1ms)
+I, [2013-10-10T16:44:21.403148 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.4ms)
+I, [2013-10-10T16:44:21.415938 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.8ms)
+I, [2013-10-10T16:44:21.421428 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-10T16:44:21.422283 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T16:44:21.422797 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:44:21.423263 #2454]  INFO -- : Completed 200 OK in 229ms (Views: 215.9ms | ActiveRecord: 10.4ms)
+I, [2013-10-10T16:44:31.366608 #2454]  INFO -- : Started GET "/ru/users" for 89.204.38.176 at 2013-10-10 16:44:31 +0000
+I, [2013-10-10T16:44:31.371243 #2454]  INFO -- : Processing by UsersController#index as HTML
+I, [2013-10-10T16:44:31.371310 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:44:31.468303 #2454]  INFO -- :   Rendered users/_user.html.erb (12.1ms)
+I, [2013-10-10T16:44:31.485468 #2454]  INFO -- :   Rendered users/_user.html.erb (8.1ms)
+I, [2013-10-10T16:44:31.485738 #2454]  INFO -- :   Rendered users/index.html.erb within layouts/application (81.0ms)
+I, [2013-10-10T16:44:31.487848 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T16:44:31.498161 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T16:44:31.504602 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.7ms)
+I, [2013-10-10T16:44:31.505901 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T16:44:31.506817 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:44:31.507267 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:44:31.507728 #2454]  INFO -- : Completed 200 OK in 136ms (Views: 98.3ms | ActiveRecord: 23.0ms)
+I, [2013-10-10T16:44:38.600194 #2454]  INFO -- : Started GET "/ru/topics" for 89.204.38.176 at 2013-10-10 16:44:38 +0000
+I, [2013-10-10T16:44:38.608144 #2454]  INFO -- : Processing by TopicsController#index as HTML
+I, [2013-10-10T16:44:38.608217 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:44:38.623848 #2454]  INFO -- :   Rendered topics/index.html.erb within layouts/application (6.5ms)
+I, [2013-10-10T16:44:38.654180 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (21.0ms)
+I, [2013-10-10T16:44:38.660896 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T16:44:38.668228 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.0ms)
+I, [2013-10-10T16:44:38.669423 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:44:38.670360 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T16:44:38.670813 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:44:38.671322 #2454]  INFO -- : Completed 200 OK in 63ms (Views: 54.0ms | ActiveRecord: 7.3ms)
+I, [2013-10-10T16:44:48.344277 #2454]  INFO -- : Started GET "/ru/admin/competitions" for 89.204.38.176 at 2013-10-10 16:44:48 +0000
+I, [2013-10-10T16:44:48.352100 #2454]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-10-10T16:44:48.352182 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:44:48.430300 #2454]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (60.3ms)
+I, [2013-10-10T16:44:48.448691 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.1ms)
+I, [2013-10-10T16:44:48.451053 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T16:44:48.462150 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T16:44:48.463245 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T16:44:48.468390 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (5.0ms)
+I, [2013-10-10T16:44:48.468833 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:44:48.469293 #2454]  INFO -- : Completed 200 OK in 117ms (Views: 92.7ms | ActiveRecord: 18.1ms)
+I, [2013-10-10T16:44:51.651682 #2454]  INFO -- : Started GET "/ru/admin/competitions/2/nominations" for 89.204.38.176 at 2013-10-10 16:44:51 +0000
+I, [2013-10-10T16:44:51.655433 #2454]  INFO -- : Processing by Admin::NominationsController#index as HTML
+I, [2013-10-10T16:44:51.655502 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "competition_id"=>"2"}
+I, [2013-10-10T16:44:51.877001 #2454]  INFO -- :   Rendered admin/nominations/index.html.erb within layouts/application (203.5ms)
+I, [2013-10-10T16:44:51.898528 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.2ms)
+I, [2013-10-10T16:44:51.909303 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T16:44:51.916484 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T16:44:51.917671 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:44:51.918590 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T16:44:51.919048 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:44:51.919539 #2454]  INFO -- : Completed 200 OK in 264ms (Views: 238.2ms | ActiveRecord: 17.7ms)
+I, [2013-10-10T16:45:01.514349 #2454]  INFO -- : Started GET "/ru/admin/competitions/2/edit" for 89.204.38.176 at 2013-10-10 16:45:01 +0000
+I, [2013-10-10T16:45:01.518146 #2454]  INFO -- : Processing by Admin::CompetitionsController#edit as HTML
+I, [2013-10-10T16:45:01.518214 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"2"}
+I, [2013-10-10T16:45:01.571332 #2454]  INFO -- :   Rendered admin/competitions/_form.html.erb (31.2ms)
+I, [2013-10-10T16:45:01.576281 #2454]  INFO -- :   Rendered admin/competitions/edit.html.erb within layouts/application (41.4ms)
+I, [2013-10-10T16:45:01.595576 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.2ms)
+I, [2013-10-10T16:45:01.602379 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T16:45:01.610138 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T16:45:01.611301 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:45:01.615935 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.5ms)
+I, [2013-10-10T16:45:01.616422 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:45:01.616925 #2454]  INFO -- : Completed 200 OK in 99ms (Views: 73.3ms | ActiveRecord: 20.4ms)
+I, [2013-10-10T16:46:09.089526 #2454]  INFO -- : Started PATCH "/ru/admin/competitions/2" for 89.204.38.176 at 2013-10-10 16:46:09 +0000
+I, [2013-10-10T16:46:09.092283 #2454]  INFO -- : Processing by Admin::CompetitionsController#update as HTML
+I, [2013-10-10T16:46:09.092522 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"dl59dsrndHmt13aO1bmHVMXDge+h2RsV0D2Z04wB+eE=", "competition"=>{"title"=>"Городской конкурс 2013", "last_date(3i)"=>"17", "last_date(2i)"=>"10", "last_date(1i)"=>"2013", "open_date(3i)"=>"28", "open_date(2i)"=>"10", "open_date(1i)"=>"2013", "description"=>"<p>\r\n\t<strong><span style=\"color: rgb(149, 55, 52);\">1. Цели и задачи конкурса</span></strong>\r\n</p>\r\n<p>\r\n\t<br>\r\n\t  1.1. Поддержка творческой реализации жителей города в области художественной фотографии, формирование здорового образа жизни, пропаганда искусства и культуры, создание положительного образа города у подрастающего поколения.<br>\r\n\t  1.2. Выявление новых талантов и совершенствование профессионального мастерства участников конкурса, развитие фотоискусства.<br>\r\n\t<br>\r\n\t  2. Организаторы конкурса<br>\r\n\t<br>\r\n\t  2.1. Организаторами конкурса являются Управление по культуре Администрации города Тюмени, Тюменское региональное отделение Союза фотохудожников России, клуб любителей фотографии \"ФотоРегион\", фото-агентство \"РУССАР\".<br>\r\n\t<br>\r\n\t  3. Сроки и порядок проведения<br>\r\n\t<br>\r\n\t  3.1. Фотоконкурс проводится с 01 июня по 29 июля 2013 года в номинации свободная художественная фотография о городе Тюмени.<br>\r\n\t  3.2. Тема фотоконкурса: «Любимый город» - архитектура, современная или старая; люди - старики, дети, девушки и юноши; мода, радость, сибирский характер; утро, вечер, труд, отдых, парки, фонтаны, рынки, магазины, собаки, птицы, солнце, блики... в общем все, за что вы любите свой город.<br>\r\n\t<br>\r\n\t  4. Условия участия и требования к оформлению работ<br>\r\n\t<br>\r\n\t  4.1. К участию в фотоконкурсе приглашаются жители города Тюмени.<br>\r\n\t  4.2. На конкурс принимаются фотографии цветного и черно-белого изображения в электронном виде, не менее 4000 точек (пикселов) по длинной стороне с максимальным качеством.<br>\r\n\t  4.3. От одного автора принимается не более пяти фотографий. Последний день приёма работ - 20 июля 2013 года.<br>\r\n\t  4.4. В текстовой заявке на участие в фотоконкурсе указать:<br>\r\n\t  Ф.И.О. автора<br>\r\n\t  Контактный телефон<br>\r\n\t  Домашний адрес<br>\r\n\t  Электронный адрес<br>\r\n\t  Название работы<br>\r\n\t  Дату съемки<br>\r\n\t  4.5. Фотографии и текстовые заявки направлять на электронную почту <a href=\"mailto:photo072@mail.ru\">photo072@mail.ru</a>Фотографии принимаются в jpg-файлах, которые должны носить название на латинице, содержащее имя, фамилию, название работы. Например: Ivan_Stepnov_Leto_V_Derevne.jpg. Фотографии также можно загрузить на файлообменник, а ссылку направить по вышеуказанному адресу.<br>\r\n\t  4.6. Работы, направленные на фотоконкурс не возвращаются и остаются в распоряжении Администрации города Тюмени для создания фото-фонда, а также могут быть использованы в некоммерческих целях для репродукции в прессе, каталогах, брошюрах, методических выпусках и т.д.<br>\r\n\t  4.7. Тематика фоторабот должна соответствовать заявленной теме фотоконкурса.<br>\r\n\t<br>\r\n\t  5. Финансирование конкурса<br>\r\n\t<br>\r\n\t  5.1. Расходы по организации проведения фотоконкурса и награждения победителей несут организаторы.<br>\r\n\t  5.2. Специальные призы предоставляются спонсорами.<br>\r\n\t<br>\r\n\t  6. Награждение участников<br>\r\n\t<br>\r\n\t  6.1. Присланные фотографии рассматриваются жюри до 25 июля 2013 года. Награждение победителей и открытие фотовыставки пройдет в рамках празднования 427-летия города Тюмени 29 июля 2013 года на Цветном бульваре на одной из концертных площадок.<br>\r\n\t  6.2. Участники, занявшие первые три места, награждаются дипломами трех степеней и денежными премиями в размере: 1 место - 30 000 рублей, 2 место - 20 000 рублей, 3 место - 10 000 рублей. Жюри оставляет за собой право учреждения специальных призов.\r\n</p>\r\n<p>\r\n\t  Лучшие работы будут представлены на фотовыставке, которая пройдет в витринах тюменского цирка на Цветном бульваре, открытие в День города Тюмени 29 июля 2013 года.\r\n</p>\r\n<p>\r\n\t<a href=\"http://localhost:3000/ru/competitions/1/edit\"></a>\r\n</p>", "type_id"=>"0", "status_id"=>"0"}, "commit"=>"Сохранить Competition", "locale"=>"ru", "id"=>"2"}
+I, [2013-10-10T16:46:09.120524 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/admin/competitions
+I, [2013-10-10T16:46:09.120793 #2454]  INFO -- : Completed 302 Found in 28ms (ActiveRecord: 16.8ms)
+I, [2013-10-10T16:46:09.426614 #2454]  INFO -- : Started GET "/ru/admin/competitions" for 89.204.38.176 at 2013-10-10 16:46:09 +0000
+I, [2013-10-10T16:46:09.429057 #2454]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-10-10T16:46:09.429122 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:46:09.451348 #2454]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (5.7ms)
+I, [2013-10-10T16:46:09.473443 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.6ms)
+I, [2013-10-10T16:46:09.483877 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (8.8ms)
+I, [2013-10-10T16:46:09.487416 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T16:46:09.492178 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (4.6ms)
+I, [2013-10-10T16:46:09.493009 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T16:46:09.493496 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:46:09.493998 #2454]  INFO -- : Completed 200 OK in 65ms (Views: 44.4ms | ActiveRecord: 15.0ms)
+I, [2013-10-10T16:46:29.508172 #2454]  INFO -- : Started GET "/ru/novelties/list" for 89.204.38.176 at 2013-10-10 16:46:29 +0000
+I, [2013-10-10T16:46:29.510409 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T16:46:29.510475 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:46:29.549088 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (10.5ms)
+I, [2013-10-10T16:46:29.551772 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T16:46:29.558934 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T16:46:29.565959 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T16:46:29.567064 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T16:46:29.567833 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:46:29.572334 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:46:29.572822 #2454]  INFO -- : Completed 200 OK in 62ms (Views: 26.6ms | ActiveRecord: 17.9ms)
+I, [2013-10-10T16:46:33.318762 #2454]  INFO -- : Started GET "/ru/novelties" for 89.204.38.176 at 2013-10-10 16:46:33 +0000
+I, [2013-10-10T16:46:33.320970 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-10T16:46:33.321033 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T16:46:33.363921 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (16.1ms)
+I, [2013-10-10T16:46:33.370335 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T16:46:33.377326 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T16:46:33.384266 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T16:46:33.385386 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T16:46:33.386177 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T16:46:33.386620 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T16:46:33.387069 #2454]  INFO -- : Completed 200 OK in 66ms (Views: 38.6ms | ActiveRecord: 9.5ms)
+I, [2013-10-10T18:42:16.563647 #2454]  INFO -- : Started GET "/" for 92.255.165.65 at 2013-10-10 18:42:16 +0000
+I, [2013-10-10T18:42:16.566730 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T18:42:16.578253 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T18:42:16.595559 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (15.7ms)
+I, [2013-10-10T18:42:16.603912 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.3ms)
+I, [2013-10-10T18:42:16.613166 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.9ms)
+I, [2013-10-10T18:42:16.613718 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:42:16.614262 #2454]  INFO -- : Completed 200 OK in 47ms (Views: 36.7ms | ActiveRecord: 1.2ms)
+I, [2013-10-10T18:42:52.723998 #2454]  INFO -- : Started GET "/ru/users/sign_in" for 92.255.165.65 at 2013-10-10 18:42:52 +0000
+I, [2013-10-10T18:42:52.726824 #2454]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-10-10T18:42:52.726890 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:42:52.732574 #2454]  INFO -- : Started GET "/ru/users/sign_in" for 92.255.165.65 at 2013-10-10 18:42:52 +0000
+I, [2013-10-10T18:42:52.753907 #2454]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-10-10T18:42:52.754011 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:42:52.771180 #2454]  INFO -- :   Rendered devise/shared/_links.html.erb (0.9ms)
+I, [2013-10-10T18:42:52.785710 #2454]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (29.4ms)
+I, [2013-10-10T18:42:52.785491 #2454]  INFO -- :   Rendered devise/shared/_links.html.erb (0.9ms)
+I, [2013-10-10T18:42:52.801984 #2454]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (30.5ms)
+I, [2013-10-10T18:42:52.801672 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.9ms)
+I, [2013-10-10T18:42:52.815220 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.9ms)
+I, [2013-10-10T18:42:52.820100 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-10T18:42:52.831089 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:42:52.831540 #2454]  INFO -- : Completed 200 OK in 105ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+I, [2013-10-10T18:42:52.830506 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (27.0ms)
+I, [2013-10-10T18:42:52.841314 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.3ms)
+I, [2013-10-10T18:42:52.842124 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:42:52.842513 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:42:52.842794 #2454]  INFO -- : Completed 200 OK in 89ms (Views: 60.3ms | ActiveRecord: 11.2ms)
+I, [2013-10-10T18:43:19.661643 #2454]  INFO -- : Started POST "/ru/users/sign_in" for 92.255.165.65 at 2013-10-10 18:43:19 +0000
+I, [2013-10-10T18:43:19.668414 #2454]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-10-10T18:43:19.668493 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQLomPvYIJrHE6MpRKboPspbDs5fPBTBzaLX/x7wB/s=", "user"=>{"email"=>"vith@yandex.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-10-10T18:43:19.866042 #2454]  INFO -- : Redirected to http://146.185.131.154/?locale=ru
+I, [2013-10-10T18:43:19.866249 #2454]  INFO -- : Completed 302 Found in 198ms (ActiveRecord: 15.5ms)
+I, [2013-10-10T18:43:19.993581 #2454]  INFO -- : Started GET "/?locale=ru" for 92.255.165.65 at 2013-10-10 18:43:19 +0000
+I, [2013-10-10T18:43:19.995607 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T18:43:19.995669 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:43:20.006774 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T18:43:20.044880 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (36.5ms)
+I, [2013-10-10T18:43:20.047669 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:43:20.055019 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:43:20.060399 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.2ms)
+I, [2013-10-10T18:43:20.061249 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:43:20.061739 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:20.062183 #2454]  INFO -- : Completed 200 OK in 66ms (Views: 32.2ms | ActiveRecord: 26.5ms)
+I, [2013-10-10T18:43:28.286980 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:43:28 +0000
+I, [2013-10-10T18:43:28.290811 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:43:28.290879 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:43:28.330902 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (28.4ms)
+I, [2013-10-10T18:43:28.341446 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T18:43:28.348203 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T18:43:28.351320 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:43:28.356629 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:43:28.357521 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:43:28.357987 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:28.358461 #2454]  INFO -- : Completed 200 OK in 67ms (Views: 47.6ms | ActiveRecord: 13.4ms)
+I, [2013-10-10T18:43:30.408410 #2454]  INFO -- : Started GET "/?locale=ru" for 92.255.165.65 at 2013-10-10 18:43:30 +0000
+I, [2013-10-10T18:43:30.410889 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T18:43:30.410953 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:43:30.419480 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T18:43:30.442809 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (21.7ms)
+I, [2013-10-10T18:43:30.449780 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-10T18:43:30.457157 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.0ms)
+I, [2013-10-10T18:43:30.458555 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-10T18:43:30.459419 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:43:30.459867 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:30.464449 #2454]  INFO -- : Completed 200 OK in 53ms (Views: 33.6ms | ActiveRecord: 12.7ms)
+I, [2013-10-10T18:43:31.917636 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 92.255.165.65 at 2013-10-10 18:43:31 +0000
+I, [2013-10-10T18:43:31.919727 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:43:31.919790 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:43:31.945440 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (17.1ms)
+I, [2013-10-10T18:43:31.969226 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (22.5ms)
+I, [2013-10-10T18:43:31.971916 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:43:31.983120 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:43:31.988375 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:43:31.989249 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:43:31.989687 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:31.990087 #2454]  INFO -- : Completed 200 OK in 70ms (Views: 53.7ms | ActiveRecord: 9.4ms)
+I, [2013-10-10T18:43:38.702274 #2454]  INFO -- : Started GET "/gallery/index?locale=ru&page=2" for 92.255.165.65 at 2013-10-10 18:43:38 +0000
+I, [2013-10-10T18:43:38.704470 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:43:38.704541 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "page"=>"2"}
+I, [2013-10-10T18:43:38.721680 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (7.3ms)
+I, [2013-10-10T18:43:38.921772 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (199.1ms)
+I, [2013-10-10T18:43:38.932948 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.5ms)
+I, [2013-10-10T18:43:38.936622 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T18:43:38.937948 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:43:38.938926 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:43:38.939391 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:38.939929 #2454]  INFO -- : Completed 200 OK in 235ms (Views: 212.7ms | ActiveRecord: 19.7ms)
+I, [2013-10-10T18:43:41.646349 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:43:41 +0000
+I, [2013-10-10T18:43:41.650524 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:43:41.650601 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:43:41.683463 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (22.7ms)
+I, [2013-10-10T18:43:41.689768 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T18:43:41.696345 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.1ms)
+I, [2013-10-10T18:43:41.699283 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:43:41.704615 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.2ms)
+I, [2013-10-10T18:43:41.705423 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:43:41.705888 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:43:41.706341 #2454]  INFO -- : Completed 200 OK in 56ms (Views: 35.7ms | ActiveRecord: 10.3ms)
+I, [2013-10-10T18:43:49.579118 #2454]  INFO -- : Started GET "/ru/competitions/2/view_photos" for 92.255.165.65 at 2013-10-10 18:43:49 +0000
+I, [2013-10-10T18:43:49.581765 #2454]  INFO -- : Processing by CompetitionsController#view_photos as HTML
+I, [2013-10-10T18:43:49.581832 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"2"}
+I, [2013-10-10T18:43:49.734224 #2454]  INFO -- :   Rendered competitions/view_photos.html.erb within layouts/application (121.9ms)
+I, [2013-10-10T18:43:49.736727 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T18:43:49.739543 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:43:49.751291 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.0ms)
+I, [2013-10-10T18:43:49.756665 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:43:49.757635 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:43:49.758184 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.4ms)
+I, [2013-10-10T18:43:49.758692 #2454]  INFO -- : Completed 200 OK in 177ms (Views: 102.2ms | ActiveRecord: 64.5ms)
+I, [2013-10-10T18:44:07.572142 #2454]  INFO -- : Started GET "/ru/competitions/2" for 92.255.165.65 at 2013-10-10 18:44:07 +0000
+I, [2013-10-10T18:44:07.574849 #2454]  INFO -- : Processing by CompetitionsController#show as HTML
+I, [2013-10-10T18:44:07.574922 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"2"}
+I, [2013-10-10T18:44:07.591054 #2454]  INFO -- :   Rendered competitions/show.html.erb within layouts/application (2.7ms)
+I, [2013-10-10T18:44:07.609556 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.3ms)
+I, [2013-10-10T18:44:07.611888 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:44:07.618704 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.6ms)
+I, [2013-10-10T18:44:07.619789 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:44:07.624787 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.8ms)
+I, [2013-10-10T18:44:07.625179 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:44:07.625637 #2454]  INFO -- : Completed 200 OK in 51ms (Views: 35.2ms | ActiveRecord: 9.0ms)
+I, [2013-10-10T18:44:23.240081 #2454]  INFO -- : Started GET "/ru/competitions/2/competition_photos" for 92.255.165.65 at 2013-10-10 18:44:23 +0000
+I, [2013-10-10T18:44:23.249342 #2454]  INFO -- : Processing by CompetitionPhotosController#index as HTML
+I, [2013-10-10T18:44:23.249419 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "competition_id"=>"2"}
+I, [2013-10-10T18:44:23.309115 #2454]  INFO -- :   Rendered competition_photos/index.html.erb within layouts/application (45.7ms)
+I, [2013-10-10T18:44:23.509514 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (198.9ms)
+I, [2013-10-10T18:44:23.520610 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.4ms)
+I, [2013-10-10T18:44:23.523903 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:44:23.529355 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-10T18:44:23.530391 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:44:23.530850 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:44:23.531366 #2454]  INFO -- : Completed 200 OK in 282ms (Views: 251.5ms | ActiveRecord: 25.3ms)
+I, [2013-10-10T18:44:44.092136 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:44:44 +0000
+I, [2013-10-10T18:44:44.094678 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:44:44.094753 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:44:44.125888 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (25.0ms)
+I, [2013-10-10T18:44:44.132035 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (0.9ms)
+I, [2013-10-10T18:44:44.134457 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:44:44.141393 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:44:44.142482 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:44:44.143215 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:44:44.143623 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:44:44.148179 #2454]  INFO -- : Completed 200 OK in 53ms (Views: 30.7ms | ActiveRecord: 12.9ms)
+I, [2013-10-10T18:44:53.512504 #2454]  INFO -- : Started GET "/ru/novelties/list" for 92.255.165.65 at 2013-10-10 18:44:53 +0000
+I, [2013-10-10T18:44:53.515016 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T18:44:53.515081 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:44:53.555887 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (12.0ms)
+I, [2013-10-10T18:44:53.558621 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T18:44:53.569695 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:44:53.576675 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:44:53.577867 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:44:53.578620 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:44:53.579066 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:44:53.579515 #2454]  INFO -- : Completed 200 OK in 64ms (Views: 31.4ms | ActiveRecord: 10.8ms)
+I, [2013-10-10T18:45:14.347194 #2454]  INFO -- : Started GET "/ru/novelties" for 92.255.165.65 at 2013-10-10 18:45:14 +0000
+I, [2013-10-10T18:45:14.349732 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-10T18:45:14.349806 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:45:14.400302 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (20.4ms)
+I, [2013-10-10T18:45:14.402537 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T18:45:14.409465 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:45:14.416332 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:45:14.417447 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:45:14.418185 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:45:14.418613 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:45:14.419066 #2454]  INFO -- : Completed 200 OK in 69ms (Views: 34.3ms | ActiveRecord: 16.2ms)
+I, [2013-10-10T18:45:24.914361 #2454]  INFO -- : Started GET "/ru/admin/messages" for 92.255.165.65 at 2013-10-10 18:45:24 +0000
+I, [2013-10-10T18:45:24.918499 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-10T18:45:24.918565 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:45:25.000124 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (58.0ms)
+I, [2013-10-10T18:45:25.014385 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.8ms)
+I, [2013-10-10T18:45:25.024863 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.1ms)
+I, [2013-10-10T18:45:25.027685 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.6ms)
+I, [2013-10-10T18:45:25.032820 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.0ms)
+I, [2013-10-10T18:45:25.033663 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:45:25.034088 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:45:25.034556 #2454]  INFO -- : Completed 200 OK in 116ms (Views: 90.7ms | ActiveRecord: 14.3ms)
+I, [2013-10-10T18:45:35.289174 #2454]  INFO -- : Started GET "/ru/admin/messages/1" for 92.255.165.65 at 2013-10-10 18:45:35 +0000
+I, [2013-10-10T18:45:35.297480 #2454]  INFO -- : Processing by Admin::MessagesController#show as HTML
+I, [2013-10-10T18:45:35.297549 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-10T18:45:35.334212 #2454]  INFO -- :   Rendered admin/messages/show.html.erb within layouts/application (18.3ms)
+I, [2013-10-10T18:45:35.356465 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (21.0ms)
+I, [2013-10-10T18:45:35.359248 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-10T18:45:35.366464 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T18:45:35.367725 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:45:35.372826 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.9ms)
+I, [2013-10-10T18:45:35.373331 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:45:35.373818 #2454]  INFO -- : Completed 200 OK in 76ms (Views: 54.2ms | ActiveRecord: 15.7ms)
+I, [2013-10-10T18:47:47.661855 #2454]  INFO -- : Started GET "/ru/admin/messages/1" for 92.255.165.65 at 2013-10-10 18:47:47 +0000
+I, [2013-10-10T18:47:47.668607 #2454]  INFO -- : Processing by Admin::MessagesController#show as HTML
+I, [2013-10-10T18:47:47.668688 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-10T18:47:47.695798 #2454]  INFO -- :   Rendered admin/messages/show.html.erb within layouts/application (14.1ms)
+I, [2013-10-10T18:47:47.713946 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.8ms)
+I, [2013-10-10T18:47:47.900113 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (180.4ms)
+I, [2013-10-10T18:47:47.916337 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.2ms)
+I, [2013-10-10T18:47:47.917708 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:47:47.918598 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:47:47.919053 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:47:47.919541 #2454]  INFO -- : Completed 200 OK in 251ms (Views: 226.5ms | ActiveRecord: 18.4ms)
+I, [2013-10-10T18:47:54.984726 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:47:54 +0000
+I, [2013-10-10T18:47:54.989277 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:47:54.989349 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:47:55.020982 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (29.5ms)
+I, [2013-10-10T18:47:55.023251 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T18:47:55.033895 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:47:55.040948 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T18:47:55.042120 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:47:55.042892 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:47:55.043378 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:47:55.043829 #2454]  INFO -- : Completed 200 OK in 54ms (Views: 40.2ms | ActiveRecord: 12.6ms)
+I, [2013-10-10T18:47:56.729728 #2454]  INFO -- : Started GET "/ru/novelties/list" for 92.255.165.65 at 2013-10-10 18:47:56 +0000
+I, [2013-10-10T18:47:56.736427 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T18:47:56.736501 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:47:56.774197 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (7.9ms)
+I, [2013-10-10T18:47:56.777135 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.2ms)
+I, [2013-10-10T18:47:56.788495 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.2ms)
+I, [2013-10-10T18:47:56.791595 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:47:56.796902 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:47:56.797713 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:47:56.798175 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:47:56.798682 #2454]  INFO -- : Completed 200 OK in 62ms (Views: 27.5ms | ActiveRecord: 15.2ms)
+I, [2013-10-10T18:48:17.338605 #2454]  INFO -- : Started GET "/ru/topics" for 92.255.165.65 at 2013-10-10 18:48:17 +0000
+I, [2013-10-10T18:48:17.342489 #2454]  INFO -- : Processing by TopicsController#index as HTML
+I, [2013-10-10T18:48:17.342571 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:48:17.355258 #2454]  INFO -- :   Rendered topics/index.html.erb within layouts/application (6.9ms)
+I, [2013-10-10T18:48:17.379377 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (19.0ms)
+I, [2013-10-10T18:48:17.381862 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:48:17.388848 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T18:48:17.389945 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:48:17.390701 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:48:17.391129 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:48:17.391511 #2454]  INFO -- : Completed 200 OK in 49ms (Views: 34.5ms | ActiveRecord: 13.1ms)
+I, [2013-10-10T18:48:30.729784 #2454]  INFO -- : Started GET "/user_profile/ru/1" for 92.255.165.65 at 2013-10-10 18:48:30 +0000
+I, [2013-10-10T18:48:30.737012 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-10T18:48:30.737081 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-10-10T18:48:30.738520 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.3ms)
+I, [2013-10-10T18:48:30.760049 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.3ms)
+I, [2013-10-10T18:48:30.762440 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:48:30.769403 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T18:48:30.770487 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:48:30.771265 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:48:30.771657 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:48:30.778124 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (6.3ms)
+I, [2013-10-10T18:48:30.778567 #2454]  INFO -- : Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 4.5ms)
+I, [2013-10-10T18:48:34.487987 #2454]  INFO -- : Started GET "/ru/users/1/photos" for 92.255.165.65 at 2013-10-10 18:48:34 +0000
+I, [2013-10-10T18:48:34.489882 #2454]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-10-10T18:48:34.489946 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-10-10T18:48:34.530144 #2454]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (30.7ms)
+I, [2013-10-10T18:48:34.548561 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.0ms)
+I, [2013-10-10T18:48:34.550997 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:48:34.561972 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:48:34.563097 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:48:34.563859 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:48:34.568333 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:48:34.570387 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (1.9ms)
+I, [2013-10-10T18:48:34.570846 #2454]  INFO -- : Completed 200 OK in 81ms (Views: 66.6ms | ActiveRecord: 10.0ms)
+I, [2013-10-10T18:48:50.255081 #2454]  INFO -- : Started GET "/ru/users/1/photos/8/edit" for 92.255.165.65 at 2013-10-10 18:48:50 +0000
+I, [2013-10-10T18:48:50.257604 #2454]  INFO -- : Processing by PhotosController#edit as HTML
+I, [2013-10-10T18:48:50.257671 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1", "id"=>"8"}
+I, [2013-10-10T18:48:50.303791 #2454]  INFO -- :   Rendered photos/_form.html.erb (34.7ms)
+I, [2013-10-10T18:48:50.308714 #2454]  INFO -- :   Rendered photos/edit.html.erb within layouts/user_profile_layout (40.4ms)
+I, [2013-10-10T18:48:50.324580 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.8ms)
+I, [2013-10-10T18:48:50.327223 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:48:50.338371 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:48:50.339646 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:48:50.344739 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.9ms)
+I, [2013-10-10T18:48:50.345182 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:48:50.347494 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.1ms)
+I, [2013-10-10T18:48:50.352039 #2454]  INFO -- : Completed 200 OK in 90ms (Views: 65.5ms | ActiveRecord: 22.3ms)
+I, [2013-10-10T18:49:23.792292 #2454]  INFO -- : Started GET "/ru/users/1/photos/8" for 92.255.165.65 at 2013-10-10 18:49:23 +0000
+I, [2013-10-10T18:49:23.794523 #2454]  INFO -- : Processing by PhotosController#show as HTML
+I, [2013-10-10T18:49:23.794589 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1", "id"=>"8"}
+I, [2013-10-10T18:49:23.974650 #2454]  INFO -- :   Rendered comment/_form.html.erb (161.2ms)
+I, [2013-10-10T18:49:23.975910 #2454]  INFO -- :   Rendered photos/show.html.erb within layouts/user_profile_layout (173.8ms)
+I, [2013-10-10T18:49:23.998314 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.0ms)
+I, [2013-10-10T18:49:24.009185 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.3ms)
+I, [2013-10-10T18:49:24.016588 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T18:49:24.017809 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:49:24.018768 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:49:24.019244 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:49:24.021594 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-10-10T18:49:24.022140 #2454]  INFO -- : Completed 200 OK in 227ms (Views: 210.7ms | ActiveRecord: 10.5ms)
+I, [2013-10-10T18:49:37.448876 #2454]  INFO -- : Started GET "/ru/users/1/photos" for 92.255.165.65 at 2013-10-10 18:49:37 +0000
+I, [2013-10-10T18:49:37.451098 #2454]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-10-10T18:49:37.451164 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-10-10T18:49:37.493429 #2454]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (27.3ms)
+I, [2013-10-10T18:49:37.515344 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.7ms)
+I, [2013-10-10T18:49:37.518073 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:49:37.524981 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:49:37.526103 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:49:37.526920 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:49:37.527304 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:49:37.533574 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (6.1ms)
+I, [2013-10-10T18:49:37.534010 #2454]  INFO -- : Completed 200 OK in 83ms (Views: 59.6ms | ActiveRecord: 14.4ms)
+I, [2013-10-10T18:49:46.621534 #2454]  INFO -- : Started GET "/ru/users/1/messages" for 92.255.165.65 at 2013-10-10 18:49:46 +0000
+I, [2013-10-10T18:49:46.627542 #2454]  INFO -- : Processing by MessagesController#index as HTML
+I, [2013-10-10T18:49:46.627612 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-10-10T18:49:46.652435 #2454]  INFO -- :   Rendered messages/index.html.erb within layouts/user_profile_layout (7.5ms)
+I, [2013-10-10T18:49:46.671356 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.6ms)
+I, [2013-10-10T18:49:46.678145 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:49:46.685075 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:49:46.686231 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:49:46.687092 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:49:46.687518 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:49:46.693759 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (6.1ms)
+I, [2013-10-10T18:49:46.694207 #2454]  INFO -- : Completed 200 OK in 66ms (Views: 47.5ms | ActiveRecord: 12.5ms)
+I, [2013-10-10T18:49:53.470517 #2454]  INFO -- : Started GET "/ru/jury_choose_competition" for 92.255.165.65 at 2013-10-10 18:49:53 +0000
+I, [2013-10-10T18:49:53.474173 #2454]  INFO -- : Processing by JuryController#choose_competition as HTML
+I, [2013-10-10T18:49:53.474236 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:49:53.498373 #2454]  INFO -- :   Rendered jury/choose_competition.html.erb within layouts/application (3.5ms)
+I, [2013-10-10T18:49:53.520285 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.8ms)
+I, [2013-10-10T18:49:53.522799 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:49:53.528868 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.9ms)
+I, [2013-10-10T18:49:53.530042 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:49:53.530869 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:49:53.531278 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:49:53.531717 #2454]  INFO -- : Completed 200 OK in 57ms (Views: 32.9ms | ActiveRecord: 10.2ms)
+I, [2013-10-10T18:50:04.736664 #2454]  INFO -- : Started GET "/ru/novelties/list" for 92.255.165.65 at 2013-10-10 18:50:04 +0000
+I, [2013-10-10T18:50:04.739029 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T18:50:04.739093 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:50:04.777046 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (10.7ms)
+I, [2013-10-10T18:50:04.784153 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (5.4ms)
+I, [2013-10-10T18:50:04.787586 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:50:04.794852 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T18:50:04.800115 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:50:04.800957 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:50:04.801464 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:50:04.801934 #2454]  INFO -- : Completed 200 OK in 63ms (Views: 27.8ms | ActiveRecord: 17.3ms)
+I, [2013-10-10T18:50:06.280747 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:50:06 +0000
+I, [2013-10-10T18:50:06.283205 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:50:06.283297 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:50:06.318278 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (28.8ms)
+I, [2013-10-10T18:50:06.324779 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (5.1ms)
+I, [2013-10-10T18:50:06.327377 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:50:06.334419 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:50:06.335640 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:50:06.340550 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-10T18:50:06.340999 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:50:06.341456 #2454]  INFO -- : Completed 200 OK in 58ms (Views: 40.4ms | ActiveRecord: 12.0ms)
+I, [2013-10-10T18:50:08.152343 #2454]  INFO -- : Started GET "/?locale=ru" for 92.255.165.65 at 2013-10-10 18:50:08 +0000
+I, [2013-10-10T18:50:08.154799 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T18:50:08.154863 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:50:08.162800 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T18:50:08.182921 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.8ms)
+I, [2013-10-10T18:50:08.189436 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:50:08.196383 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.7ms)
+I, [2013-10-10T18:50:08.197493 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-10T18:50:08.198220 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:50:08.198619 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:50:08.198985 #2454]  INFO -- : Completed 200 OK in 44ms (Views: 21.9ms | ActiveRecord: 15.5ms)
+I, [2013-10-10T18:50:10.376800 #2454]  INFO -- : Started GET "/user_profile/ru/1" for 92.255.165.65 at 2013-10-10 18:50:10 +0000
+I, [2013-10-10T18:50:10.604250 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-10T18:50:10.604411 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-10-10T18:50:10.606977 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.5ms)
+I, [2013-10-10T18:50:10.645193 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (32.3ms)
+I, [2013-10-10T18:50:10.652757 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.5ms)
+I, [2013-10-10T18:50:10.660651 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.3ms)
+I, [2013-10-10T18:50:10.662129 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-10-10T18:50:10.663194 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:50:10.663735 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:50:10.670681 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (6.7ms)
+I, [2013-10-10T18:50:10.671261 #2454]  INFO -- : Completed 200 OK in 67ms (Views: 55.0ms | ActiveRecord: 10.2ms)
+I, [2013-10-10T18:53:10.265972 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:53:10 +0000
+I, [2013-10-10T18:53:10.269463 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:53:10.269530 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:10.301455 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (29.9ms)
+I, [2013-10-10T18:53:10.303933 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.0ms)
+I, [2013-10-10T18:53:10.315557 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.4ms)
+I, [2013-10-10T18:53:10.318542 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:53:10.319752 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:53:10.328784 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (8.9ms)
+I, [2013-10-10T18:53:10.329327 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:53:10.329841 #2454]  INFO -- : Completed 200 OK in 60ms (Views: 43.0ms | ActiveRecord: 15.8ms)
+I, [2013-10-10T18:53:12.206946 #2454]  INFO -- : Started GET "/ru/novelties/list" for 92.255.165.65 at 2013-10-10 18:53:12 +0000
+I, [2013-10-10T18:53:12.209619 #2454]  INFO -- : Processing by NoveltiesController#list as HTML
+I, [2013-10-10T18:53:12.209719 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:12.252802 #2454]  INFO -- :   Rendered novelties/list.html.erb within layouts/application (3.7ms)
+I, [2013-10-10T18:53:12.255617 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.2ms)
+I, [2013-10-10T18:53:12.267497 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.3ms)
+I, [2013-10-10T18:53:12.273886 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:53:12.275114 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:53:12.280016 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:53:12.280606 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.4ms)
+I, [2013-10-10T18:53:12.281157 #2454]  INFO -- : Completed 200 OK in 71ms (Views: 31.7ms | ActiveRecord: 12.2ms)
+I, [2013-10-10T18:53:16.356352 #2454]  INFO -- : Started GET "/ru/admin/messages" for 92.255.165.65 at 2013-10-10 18:53:16 +0000
+I, [2013-10-10T18:53:16.359038 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-10T18:53:16.359100 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:16.377961 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (4.7ms)
+I, [2013-10-10T18:53:16.395632 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.4ms)
+I, [2013-10-10T18:53:16.402690 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:53:16.409728 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-10T18:53:16.410927 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:53:16.411757 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:53:16.416280 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (4.4ms)
+I, [2013-10-10T18:53:16.416726 #2454]  INFO -- : Completed 200 OK in 58ms (Views: 36.6ms | ActiveRecord: 11.6ms)
+I, [2013-10-10T18:53:20.864632 #2454]  INFO -- : Started GET "/ru/admin/competitions" for 92.255.165.65 at 2013-10-10 18:53:20 +0000
+I, [2013-10-10T18:53:20.866832 #2454]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-10-10T18:53:20.866909 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:20.885394 #2454]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (4.3ms)
+I, [2013-10-10T18:53:20.902837 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.3ms)
+I, [2013-10-10T18:53:20.913712 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-10T18:53:20.920969 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.9ms)
+I, [2013-10-10T18:53:20.922203 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:53:20.923069 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:53:20.923510 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:53:20.923937 #2454]  INFO -- : Completed 200 OK in 57ms (Views: 42.1ms | ActiveRecord: 6.2ms)
+I, [2013-10-10T18:53:25.663840 #2454]  INFO -- : Started GET "/ru/admin/competitions/new" for 92.255.165.65 at 2013-10-10 18:53:25 +0000
+I, [2013-10-10T18:53:25.666082 #2454]  INFO -- : Processing by Admin::CompetitionsController#new as HTML
+I, [2013-10-10T18:53:25.666148 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:25.713071 #2454]  INFO -- :   Rendered admin/competitions/_form.html.erb (31.6ms)
+I, [2013-10-10T18:53:25.713649 #2454]  INFO -- :   Rendered admin/competitions/new.html.erb within layouts/application (33.3ms)
+I, [2013-10-10T18:53:25.733137 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.4ms)
+I, [2013-10-10T18:53:25.735664 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:53:25.742754 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:53:25.748119 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:53:25.749134 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:53:25.749598 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:53:25.750086 #2454]  INFO -- : Completed 200 OK in 84ms (Views: 67.2ms | ActiveRecord: 12.2ms)
+I, [2013-10-10T18:53:44.943634 #2454]  INFO -- : Started GET "/ru/admin/competitions/new" for 92.255.165.65 at 2013-10-10 18:53:44 +0000
+I, [2013-10-10T18:53:44.946765 #2454]  INFO -- : Processing by Admin::CompetitionsController#new as HTML
+I, [2013-10-10T18:53:44.946846 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:45.174651 #2454]  INFO -- :   Rendered admin/competitions/_form.html.erb (213.0ms)
+I, [2013-10-10T18:53:45.175480 #2454]  INFO -- :   Rendered admin/competitions/new.html.erb within layouts/application (214.3ms)
+I, [2013-10-10T18:53:45.193506 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (13.3ms)
+I, [2013-10-10T18:53:45.204438 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.3ms)
+I, [2013-10-10T18:53:45.207804 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:53:45.213263 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-10T18:53:45.214145 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:53:45.214646 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:53:45.215187 #2454]  INFO -- : Completed 200 OK in 268ms (Views: 249.6ms | ActiveRecord: 9.5ms)
+I, [2013-10-10T18:53:48.071673 #2454]  INFO -- : Started GET "/ru/users" for 92.255.165.65 at 2013-10-10 18:53:48 +0000
+I, [2013-10-10T18:53:48.075742 #2454]  INFO -- : Processing by UsersController#index as HTML
+I, [2013-10-10T18:53:48.075815 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:53:48.130058 #2454]  INFO -- :   Rendered users/_user.html.erb (12.7ms)
+I, [2013-10-10T18:53:48.141986 #2454]  INFO -- :   Rendered users/_user.html.erb (4.0ms)
+I, [2013-10-10T18:53:48.142263 #2454]  INFO -- :   Rendered users/index.html.erb within layouts/application (43.7ms)
+I, [2013-10-10T18:53:48.152850 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.4ms)
+I, [2013-10-10T18:53:48.160082 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T18:53:48.163225 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:53:48.168524 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:53:48.169406 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:53:48.169885 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:53:48.170420 #2454]  INFO -- : Completed 200 OK in 94ms (Views: 52.2ms | ActiveRecord: 28.6ms)
+I, [2013-10-10T18:54:26.541677 #2454]  INFO -- : Started GET "/ru/users/4" for 92.255.165.65 at 2013-10-10 18:54:26 +0000
+I, [2013-10-10T18:54:26.548405 #2454]  INFO -- : Processing by UsersController#show as HTML
+I, [2013-10-10T18:54:26.548481 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"4"}
+I, [2013-10-10T18:54:26.559623 #2454]  INFO -- :   Rendered users/show.html.erb within layouts/application (1.0ms)
+I, [2013-10-10T18:54:26.581301 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (20.1ms)
+I, [2013-10-10T18:54:26.588134 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T18:54:26.591250 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:54:26.596519 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:54:26.597456 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-10-10T18:54:26.597914 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:54:26.598386 #2454]  INFO -- : Completed 200 OK in 50ms (Views: 33.9ms | ActiveRecord: 12.3ms)
+I, [2013-10-10T18:56:33.158996 #2454]  INFO -- : Started GET "/?locale=ru" for 92.255.165.65 at 2013-10-10 18:56:33 +0000
+I, [2013-10-10T18:56:33.161190 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-10T18:56:33.161271 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:56:33.169885 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-10T18:56:33.189815 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.6ms)
+I, [2013-10-10T18:56:33.196441 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T18:56:33.199453 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:56:33.204763 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:56:33.205598 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:56:33.206026 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:56:33.206437 #2454]  INFO -- : Completed 200 OK in 45ms (Views: 31.3ms | ActiveRecord: 11.2ms)
+I, [2013-10-10T18:56:41.236548 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:56:41 +0000
+I, [2013-10-10T18:56:41.238445 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:56:41.238506 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:56:41.267458 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (23.1ms)
+I, [2013-10-10T18:56:41.273862 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T18:56:41.280824 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.3ms)
+I, [2013-10-10T18:56:41.283907 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-10T18:56:41.289170 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:56:41.289996 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:56:41.290431 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:56:41.290934 #2454]  INFO -- : Completed 200 OK in 52ms (Views: 40.3ms | ActiveRecord: 10.8ms)
+I, [2013-10-10T18:56:42.636138 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 92.255.165.65 at 2013-10-10 18:56:42 +0000
+I, [2013-10-10T18:56:42.638389 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:56:42.638451 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:56:42.661977 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (15.4ms)
+I, [2013-10-10T18:56:42.680157 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.5ms)
+I, [2013-10-10T18:56:42.682742 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:56:42.694016 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (2.0ms)
+I, [2013-10-10T18:56:42.695264 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:56:42.700031 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.6ms)
+I, [2013-10-10T18:56:42.700480 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:56:42.700913 #2454]  INFO -- : Completed 200 OK in 62ms (Views: 51.4ms | ActiveRecord: 7.9ms)
+I, [2013-10-10T18:56:45.064954 #2454]  INFO -- : Started GET "/gallery/show/12?locale=ru" for 92.255.165.65 at 2013-10-10 18:56:45 +0000
+I, [2013-10-10T18:56:45.067079 #2454]  INFO -- : Processing by GalleryController#show as HTML
+I, [2013-10-10T18:56:45.067144 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "photo_id"=>"12"}
+I, [2013-10-10T18:56:45.094420 #2454]  INFO -- :   Rendered comment/_form.html.erb (7.1ms)
+I, [2013-10-10T18:56:45.094655 #2454]  INFO -- :   Rendered gallery/show.html.erb within layouts/application (18.5ms)
+I, [2013-10-10T18:56:45.112341 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.7ms)
+I, [2013-10-10T18:56:45.114730 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:56:45.125994 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (10.1ms)
+I, [2013-10-10T18:56:45.127156 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:56:45.132028 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:56:45.132480 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:56:45.132938 #2454]  INFO -- : Completed 200 OK in 66ms (Views: 49.4ms | ActiveRecord: 14.2ms)
+I, [2013-10-10T18:56:57.487845 #2454]  INFO -- : Started POST "/ru/users/1/photos/12/comments" for 92.255.165.65 at 2013-10-10 18:56:57 +0000
+I, [2013-10-10T18:56:57.491547 #2454]  INFO -- : Processing by CommentsController#create as HTML
+I, [2013-10-10T18:56:57.491632 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"CH/UvhvDYgauz8Fzdvk9J3lLZZA2lLRYrk4fW/Zg4o4=", "comment"=>{"comment"=>"ываы ыва ваы ваываыаы аыа ыавыаы", "commentable"=>"photo"}, "commit"=>"Создать Comment", "locale"=>"ru", "user_id"=>"1", "photo_id"=>"12"}
+I, [2013-10-10T18:56:57.525815 #2454]  INFO -- : Redirected to http://146.185.131.154/gallery/show/12?locale=ru
+I, [2013-10-10T18:56:57.526086 #2454]  INFO -- : Completed 302 Found in 34ms (ActiveRecord: 13.0ms)
+I, [2013-10-10T18:56:57.657589 #2454]  INFO -- : Started GET "/gallery/show/12?locale=ru" for 92.255.165.65 at 2013-10-10 18:56:57 +0000
+I, [2013-10-10T18:56:57.659837 #2454]  INFO -- : Processing by GalleryController#show as HTML
+I, [2013-10-10T18:56:57.659906 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "photo_id"=>"12"}
+I, [2013-10-10T18:56:57.878663 #2454]  INFO -- :   Rendered comment/_form.html.erb (12.7ms)
+I, [2013-10-10T18:56:57.878930 #2454]  INFO -- :   Rendered gallery/show.html.erb within layouts/application (211.2ms)
+I, [2013-10-10T18:56:57.885191 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T18:56:57.892266 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-10T18:56:57.895562 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:56:57.900801 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-10T18:56:57.901599 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:56:57.902038 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:56:57.902487 #2454]  INFO -- : Completed 200 OK in 238ms (Views: 218.6ms | ActiveRecord: 17.4ms)
+I, [2013-10-10T18:57:08.607124 #2454]  INFO -- : Started GET "/ru/competitions" for 92.255.165.65 at 2013-10-10 18:57:08 +0000
+I, [2013-10-10T18:57:08.609403 #2454]  INFO -- : Processing by CompetitionsController#index as HTML
+I, [2013-10-10T18:57:08.609473 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:57:08.640944 #2454]  INFO -- :   Rendered competitions/index.html.erb within layouts/application (29.5ms)
+I, [2013-10-10T18:57:08.643307 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-10T18:57:08.654088 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:57:08.661282 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.9ms)
+I, [2013-10-10T18:57:08.662496 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:57:08.663333 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-10T18:57:08.663820 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:57:08.668406 #2454]  INFO -- : Completed 200 OK in 59ms (Views: 44.6ms | ActiveRecord: 12.7ms)
+I, [2013-10-10T18:57:10.901926 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 92.255.165.65 at 2013-10-10 18:57:10 +0000
+I, [2013-10-10T18:57:10.908198 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:57:10.908268 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-10T18:57:10.928273 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (15.8ms)
+I, [2013-10-10T18:57:10.948638 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (19.2ms)
+I, [2013-10-10T18:57:10.951175 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:57:10.962445 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-10T18:57:10.963703 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-10T18:57:10.968577 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-10T18:57:10.969022 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:57:10.969514 #2454]  INFO -- : Completed 200 OK in 61ms (Views: 47.0ms | ActiveRecord: 11.1ms)
+I, [2013-10-10T18:57:15.822360 #2454]  INFO -- : Started GET "/gallery/index?locale=ru&page=2" for 92.255.165.65 at 2013-10-10 18:57:15 +0000
+I, [2013-10-10T18:57:15.824266 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:57:15.824334 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "page"=>"2"}
+I, [2013-10-10T18:57:15.836315 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (6.0ms)
+I, [2013-10-10T18:57:15.856797 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (19.5ms)
+I, [2013-10-10T18:57:15.859498 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:57:15.871057 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T18:57:15.876302 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.0ms)
+I, [2013-10-10T18:57:15.877046 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:57:15.877429 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:57:15.877802 #2454]  INFO -- : Completed 200 OK in 53ms (Views: 37.3ms | ActiveRecord: 13.4ms)
+I, [2013-10-10T18:57:17.755898 #2454]  INFO -- : Started GET "/gallery/index?locale=ru&page=1" for 92.255.165.65 at 2013-10-10 18:57:17 +0000
+I, [2013-10-10T18:57:17.757756 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-10T18:57:17.757820 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "page"=>"1"}
+I, [2013-10-10T18:57:17.778562 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (12.5ms)
+I, [2013-10-10T18:57:17.796292 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.8ms)
+I, [2013-10-10T18:57:17.798728 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-10T18:57:17.810160 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (10.2ms)
+I, [2013-10-10T18:57:17.811410 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:57:17.816241 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.6ms)
+I, [2013-10-10T18:57:17.816678 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-10T18:57:17.817071 #2454]  INFO -- : Completed 200 OK in 59ms (Views: 42.5ms | ActiveRecord: 14.1ms)
+I, [2013-10-10T18:57:21.616967 #2454]  INFO -- : Started GET "/gallery/show/11?locale=ru" for 92.255.165.65 at 2013-10-10 18:57:21 +0000
+I, [2013-10-10T18:57:21.618793 #2454]  INFO -- : Processing by GalleryController#show as HTML
+I, [2013-10-10T18:57:21.618868 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "photo_id"=>"11"}
+I, [2013-10-10T18:57:21.648058 #2454]  INFO -- :   Rendered comment/_form.html.erb (4.2ms)
+I, [2013-10-10T18:57:21.648371 #2454]  INFO -- :   Rendered gallery/show.html.erb within layouts/application (22.7ms)
+I, [2013-10-10T18:57:21.660287 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.9ms)
+I, [2013-10-10T18:57:21.662775 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-10T18:57:21.673999 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-10T18:57:21.675146 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-10T18:57:21.675942 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-10T18:57:21.680435 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-10T18:57:21.680811 #2454]  INFO -- : Completed 200 OK in 62ms (Views: 50.3ms | ActiveRecord: 5.5ms)
+I, [2013-10-11T00:58:14.223848 #2454]  INFO -- : Started GET "/user_profile/ru/4" for 89.204.38.176 at 2013-10-11 00:58:14 +0000
+I, [2013-10-11T00:58:14.243677 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-11T00:58:14.243762 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-11T00:58:14.268453 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.3ms)
+I, [2013-10-11T00:58:14.355327 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (85.4ms)
+I, [2013-10-11T00:58:14.362897 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (0.8ms)
+I, [2013-10-11T00:58:14.369545 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-11T00:58:14.370462 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T00:58:14.370930 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T00:58:14.378021 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (6.9ms)
+I, [2013-10-11T00:58:14.378493 #2454]  INFO -- : Completed 200 OK in 135ms (Views: 54.5ms | ActiveRecord: 75.6ms)
+I, [2013-10-11T00:58:50.632531 #2454]  INFO -- : Started GET "/" for 89.204.38.176 at 2013-10-11 00:58:50 +0000
+I, [2013-10-11T00:58:50.634604 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-11T00:58:50.846266 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2013-10-11T00:58:50.868123 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (15.8ms)
+I, [2013-10-11T00:58:50.876464 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (6.5ms)
+I, [2013-10-11T00:58:50.877389 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T00:58:50.877848 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T00:58:50.878390 #2454]  INFO -- : Completed 200 OK in 244ms (Views: 33.0ms | ActiveRecord: 8.0ms)
+I, [2013-10-11T03:54:28.373601 #2454]  INFO -- : Started GET "/user_profile/ru/4" for 91.226.178.38 at 2013-10-11 03:54:28 +0000
+I, [2013-10-11T03:54:28.375836 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-11T03:54:28.375903 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-11T03:54:28.391633 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (8.7ms)
+I, [2013-10-11T03:54:28.403860 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.7ms)
+I, [2013-10-11T03:54:28.411485 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.0ms)
+I, [2013-10-11T03:54:28.416337 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-11T03:54:28.416768 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-11T03:54:28.437374 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (20.4ms)
+I, [2013-10-11T03:54:28.437774 #2454]  INFO -- : Completed 500 Internal Server Error in 58ms
+F, [2013-10-11T03:54:28.446457 #2454] FATAL -- : 
+ActionView::Template::Error (No route matches {:controller=>"photos", :action=>"index", :locale=>:ru, :user_id=>nil, :format=>nil} missing required keys: [:user_id]):
+    2: <%= current_user && current_user.avatar && image_tag(current_user.avatar_url(:thumb),class: "img-polaroid") %>
+    3: 
+    4: <ul class="nav">
+    5:       <li><%= link_to "Фотографии",user_photos_path(current_user) %></li>
+    6:       <li><%= link_to "Сообщения",user_messages_path(current_user) %></li>
+    7:       <li><%= link_to "Конкурсы",competitions_path %></li>
+    8:       <li><%= link_to "Жюри",jury_choose_competition_path if current_user.in_jury? %></li>
+  app/views/layouts/_user_sidebar.html.erb:5:in `_app_views_layouts__user_sidebar_html_erb__3423217764494203539_30274380'
+  app/views/layouts/user_profile_layout.html.erb:53:in `_app_views_layouts_user_profile_layout_html_erb___1806201591874403333_69974417837560'
+
+
+I, [2013-10-11T03:57:23.435712 #2454]  INFO -- : Started GET "/user_profile/ru/4" for 91.226.178.38 at 2013-10-11 03:57:23 +0000
+I, [2013-10-11T03:57:23.438169 #2454]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-10-11T03:57:23.438256 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"4"}
+I, [2013-10-11T03:57:23.439945 #2454]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.3ms)
+I, [2013-10-11T03:57:23.460136 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.8ms)
+I, [2013-10-11T03:57:23.463727 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.1ms)
+I, [2013-10-11T03:57:23.468618 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-11T03:57:23.469050 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:57:23.471888 #2454]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.7ms)
+I, [2013-10-11T03:57:23.476248 #2454]  INFO -- : Completed 500 Internal Server Error in 38ms
+F, [2013-10-11T03:57:23.479527 #2454] FATAL -- : 
+ActionView::Template::Error (No route matches {:controller=>"photos", :action=>"index", :locale=>:ru, :user_id=>nil, :format=>nil} missing required keys: [:user_id]):
+    2: <%= current_user && current_user.avatar && image_tag(current_user.avatar_url(:thumb),class: "img-polaroid") %>
+    3: 
+    4: <ul class="nav">
+    5:       <li><%= link_to "Фотографии",user_photos_path(current_user) %></li>
+    6:       <li><%= link_to "Сообщения",user_messages_path(current_user) %></li>
+    7:       <li><%= link_to "Конкурсы",competitions_path %></li>
+    8:       <li><%= link_to "Жюри",jury_choose_competition_path if current_user.in_jury? %></li>
+  app/views/layouts/_user_sidebar.html.erb:5:in `_app_views_layouts__user_sidebar_html_erb__3423217764494203539_30274380'
+  app/views/layouts/user_profile_layout.html.erb:53:in `_app_views_layouts_user_profile_layout_html_erb___1806201591874403333_69974417837560'
+
+
+I, [2013-10-11T03:57:42.717914 #2454]  INFO -- : Started GET "/" for 91.226.178.38 at 2013-10-11 03:57:42 +0000
+I, [2013-10-11T03:57:42.724251 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-11T03:57:42.728517 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.2ms)
+I, [2013-10-11T03:57:42.744815 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.9ms)
+I, [2013-10-11T03:57:42.752637 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (6.1ms)
+I, [2013-10-11T03:57:42.753487 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T03:57:42.753918 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:57:42.754420 #2454]  INFO -- : Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.8ms)
+I, [2013-10-11T03:57:48.622931 #2454]  INFO -- : Started GET "/ru/users/sign_in" for 91.226.178.38 at 2013-10-11 03:57:48 +0000
+I, [2013-10-11T03:57:48.625818 #2454]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-10-11T03:57:48.625927 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T03:57:48.648786 #2454]  INFO -- :   Rendered devise/shared/_links.html.erb (5.3ms)
+I, [2013-10-11T03:57:48.649048 #2454]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (15.9ms)
+I, [2013-10-11T03:57:48.665097 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.9ms)
+I, [2013-10-11T03:57:48.673727 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (7.0ms)
+I, [2013-10-11T03:57:48.674617 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T03:57:48.675065 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:57:48.675536 #2454]  INFO -- : Completed 200 OK in 49ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+I, [2013-10-11T03:58:22.212649 #2454]  INFO -- : Started POST "/ru/users/sign_in" for 91.226.178.38 at 2013-10-11 03:58:22 +0000
+I, [2013-10-11T03:58:22.215239 #2454]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-10-11T03:58:22.217171 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"jkCCdI6u/hTNIYKryOV2FvghlW37AA8AnO4mLpjwyKM=", "user"=>{"email"=>"vith@yandex.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-10-11T03:58:22.469726 #2454]  INFO -- : Redirected to http://146.185.131.154/?locale=ru
+I, [2013-10-11T03:58:22.469951 #2454]  INFO -- : Completed 302 Found in 253ms (ActiveRecord: 68.5ms)
+I, [2013-10-11T03:58:22.585442 #2454]  INFO -- : Started GET "/?locale=ru" for 91.226.178.38 at 2013-10-11 03:58:22 +0000
+I, [2013-10-11T03:58:22.587604 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-11T03:58:22.587667 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T03:58:22.595910 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-11T03:58:22.616577 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (19.3ms)
+I, [2013-10-11T03:58:22.619091 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-11T03:58:22.630381 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.9ms)
+I, [2013-10-11T03:58:22.631622 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-10-11T03:58:22.636476 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-11T03:58:22.636996 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:58:22.637406 #2454]  INFO -- : Completed 200 OK in 50ms (Views: 31.7ms | ActiveRecord: 11.2ms)
+I, [2013-10-11T03:58:24.991180 #2454]  INFO -- : Started GET "/gallery/index?locale=ru" for 91.226.178.38 at 2013-10-11 03:58:24 +0000
+I, [2013-10-11T03:58:24.993394 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-11T03:58:24.993462 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T03:58:25.023418 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (16.8ms)
+I, [2013-10-11T03:58:25.041734 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.2ms)
+I, [2013-10-11T03:58:25.052793 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.5ms)
+I, [2013-10-11T03:58:25.060516 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.0ms)
+I, [2013-10-11T03:58:25.061878 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-10-11T03:58:25.062717 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T03:58:25.063242 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:58:25.063673 #2454]  INFO -- : Completed 200 OK in 70ms (Views: 49.0ms | ActiveRecord: 18.2ms)
+I, [2013-10-11T03:58:31.215339 #2454]  INFO -- : Started GET "/gallery/index?locale=ru&page=2" for 91.226.178.38 at 2013-10-11 03:58:31 +0000
+I, [2013-10-11T03:58:31.217416 #2454]  INFO -- : Processing by GalleryController#index as HTML
+I, [2013-10-11T03:58:31.217479 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "page"=>"2"}
+I, [2013-10-11T03:58:31.234300 #2454]  INFO -- :   Rendered gallery/index.html.erb within layouts/application (7.8ms)
+I, [2013-10-11T03:58:31.434706 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (199.3ms)
+I, [2013-10-11T03:58:31.442403 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T03:58:31.449384 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-11T03:58:31.450540 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T03:58:31.451394 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T03:58:31.451829 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T03:58:31.456376 #2454]  INFO -- : Completed 200 OK in 239ms (Views: 220.3ms | ActiveRecord: 15.5ms)
+I, [2013-10-11T04:33:05.304817 #2454]  INFO -- : Started GET "/ru/novelties" for 91.226.178.38 at 2013-10-11 04:33:05 +0000
+I, [2013-10-11T04:33:05.307318 #2454]  INFO -- : Processing by NoveltiesController#index as HTML
+I, [2013-10-11T04:33:05.307384 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:05.360230 #2454]  INFO -- :   Rendered novelties/index.html.erb within layouts/application (18.5ms)
+I, [2013-10-11T04:33:05.362637 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (1.1ms)
+I, [2013-10-11T04:33:05.369739 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T04:33:05.376690 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-11T04:33:05.377850 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:33:05.378613 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:05.379041 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:05.379491 #2454]  INFO -- : Completed 200 OK in 72ms (Views: 31.8ms | ActiveRecord: 16.8ms)
+I, [2013-10-11T04:33:08.293469 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:08 +0000
+I, [2013-10-11T04:33:08.295897 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:08.300006 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:08.311553 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (2.5ms)
+I, [2013-10-11T04:33:08.329705 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.1ms)
+I, [2013-10-11T04:33:08.336481 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (5.2ms)
+I, [2013-10-11T04:33:08.339423 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:08.344774 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.2ms)
+I, [2013-10-11T04:33:08.345636 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:08.346068 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:08.346481 #2454]  INFO -- : Completed 200 OK in 46ms (Views: 27.9ms | ActiveRecord: 13.8ms)
+I, [2013-10-11T04:33:15.637366 #2454]  INFO -- : Started GET "/ru/admin/messages/1/edit" for 91.226.178.38 at 2013-10-11 04:33:15 +0000
+I, [2013-10-11T04:33:15.639644 #2454]  INFO -- : Processing by Admin::MessagesController#edit as HTML
+I, [2013-10-11T04:33:15.639711 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:15.669610 #2454]  INFO -- :   Rendered admin/messages/_form.html.erb (9.4ms)
+I, [2013-10-11T04:33:15.670480 #2454]  INFO -- :   Rendered admin/messages/edit.html.erb within layouts/application (14.2ms)
+I, [2013-10-11T04:33:15.688782 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (17.2ms)
+I, [2013-10-11T04:33:15.691205 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T04:33:15.698200 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:15.699328 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:33:15.704293 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.8ms)
+I, [2013-10-11T04:33:15.704749 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:15.705205 #2454]  INFO -- : Completed 200 OK in 65ms (Views: 45.8ms | ActiveRecord: 10.2ms)
+I, [2013-10-11T04:33:19.488432 #2454]  INFO -- : Started PATCH "/ru/admin/messages/1" for 91.226.178.38 at 2013-10-11 04:33:19 +0000
+I, [2013-10-11T04:33:19.491045 #2454]  INFO -- : Processing by Admin::MessagesController#update as HTML
+I, [2013-10-11T04:33:19.491119 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYILB/8JuZy99JEIcmxsOo6nemliIWOYt2R0H+Rhh2s=", "message"=>{"status_id"=>"2"}, "commit"=>"Сохранить Message", "locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:19.518707 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/admin/messages
+I, [2013-10-11T04:33:19.518996 #2454]  INFO -- : Completed 302 Found in 28ms (ActiveRecord: 12.8ms)
+I, [2013-10-11T04:33:19.630781 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:19 +0000
+I, [2013-10-11T04:33:19.633230 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:19.633295 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:19.653952 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (4.0ms)
+I, [2013-10-11T04:33:19.673201 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (18.1ms)
+I, [2013-10-11T04:33:19.675890 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.2ms)
+I, [2013-10-11T04:33:19.682870 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:19.688050 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.0ms)
+I, [2013-10-11T04:33:19.688918 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T04:33:19.689429 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:19.689896 #2454]  INFO -- : Completed 200 OK in 56ms (Views: 34.3ms | ActiveRecord: 16.9ms)
+I, [2013-10-11T04:33:23.906497 #2454]  INFO -- : Started GET "/ru/admin/messages/1/edit" for 91.226.178.38 at 2013-10-11 04:33:23 +0000
+I, [2013-10-11T04:33:23.909141 #2454]  INFO -- : Processing by Admin::MessagesController#edit as HTML
+I, [2013-10-11T04:33:23.909210 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:23.930814 #2454]  INFO -- :   Rendered admin/messages/_form.html.erb (4.2ms)
+I, [2013-10-11T04:33:23.931568 #2454]  INFO -- :   Rendered admin/messages/edit.html.erb within layouts/application (5.2ms)
+I, [2013-10-11T04:33:23.948444 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.9ms)
+I, [2013-10-11T04:33:23.950906 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T04:33:23.962025 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-11T04:33:23.963155 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-11T04:33:23.967998 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:23.968487 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:23.968873 #2454]  INFO -- : Completed 200 OK in 60ms (Views: 37.9ms | ActiveRecord: 16.1ms)
+I, [2013-10-11T04:33:26.421346 #2454]  INFO -- : Started PATCH "/ru/admin/messages/1" for 91.226.178.38 at 2013-10-11 04:33:26 +0000
+I, [2013-10-11T04:33:26.423384 #2454]  INFO -- : Processing by Admin::MessagesController#update as HTML
+I, [2013-10-11T04:33:26.423459 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYILB/8JuZy99JEIcmxsOo6nemliIWOYt2R0H+Rhh2s=", "message"=>{"status_id"=>"0"}, "commit"=>"Сохранить Message", "locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:26.446024 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/admin/messages
+I, [2013-10-11T04:33:26.446222 #2454]  INFO -- : Completed 302 Found in 23ms (ActiveRecord: 10.7ms)
+I, [2013-10-11T04:33:26.590498 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:26 +0000
+I, [2013-10-11T04:33:26.592474 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:26.592537 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:26.608650 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (5.2ms)
+I, [2013-10-11T04:33:26.620701 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.1ms)
+I, [2013-10-11T04:33:26.623113 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-11T04:33:26.634272 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:26.635418 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:33:26.640240 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.7ms)
+I, [2013-10-11T04:33:26.640701 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:26.641071 #2454]  INFO -- : Completed 200 OK in 48ms (Views: 30.3ms | ActiveRecord: 13.9ms)
+I, [2013-10-11T04:33:28.932114 #2454]  INFO -- : Started GET "/ru/admin/messages/1/edit" for 91.226.178.38 at 2013-10-11 04:33:28 +0000
+I, [2013-10-11T04:33:28.934157 #2454]  INFO -- : Processing by Admin::MessagesController#edit as HTML
+I, [2013-10-11T04:33:28.934241 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:28.953507 #2454]  INFO -- :   Rendered admin/messages/_form.html.erb (3.6ms)
+I, [2013-10-11T04:33:28.954219 #2454]  INFO -- :   Rendered admin/messages/edit.html.erb within layouts/application (4.6ms)
+I, [2013-10-11T04:33:28.968092 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (13.0ms)
+I, [2013-10-11T04:33:28.970449 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-11T04:33:28.981552 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (9.9ms)
+I, [2013-10-11T04:33:28.982786 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:33:28.983567 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:28.988040 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-11T04:33:28.988466 #2454]  INFO -- : Completed 200 OK in 54ms (Views: 36.2ms | ActiveRecord: 13.1ms)
+I, [2013-10-11T04:33:35.189139 #2454]  INFO -- : Started PATCH "/ru/admin/messages/1" for 91.226.178.38 at 2013-10-11 04:33:35 +0000
+I, [2013-10-11T04:33:35.191195 #2454]  INFO -- : Processing by Admin::MessagesController#update as HTML
+I, [2013-10-11T04:33:35.191270 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYILB/8JuZy99JEIcmxsOo6nemliIWOYt2R0H+Rhh2s=", "message"=>{"status_id"=>"0"}, "commit"=>"Сохранить Message", "locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:35.208146 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/admin/messages
+I, [2013-10-11T04:33:35.208345 #2454]  INFO -- : Completed 302 Found in 17ms (ActiveRecord: 1.3ms)
+I, [2013-10-11T04:33:35.333282 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:35 +0000
+I, [2013-10-11T04:33:35.337254 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:35.337330 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:35.533644 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (185.9ms)
+I, [2013-10-11T04:33:35.557281 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (22.0ms)
+I, [2013-10-11T04:33:35.559911 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T04:33:35.567112 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:35.572386 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-11T04:33:35.573283 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T04:33:35.573840 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.4ms)
+I, [2013-10-11T04:33:35.574365 #2454]  INFO -- : Completed 200 OK in 237ms (Views: 217.4ms | ActiveRecord: 14.9ms)
+I, [2013-10-11T04:33:37.592716 #2454]  INFO -- : Started GET "/ru/admin/messages/1/edit" for 91.226.178.38 at 2013-10-11 04:33:37 +0000
+I, [2013-10-11T04:33:37.595243 #2454]  INFO -- : Processing by Admin::MessagesController#edit as HTML
+I, [2013-10-11T04:33:37.595312 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:37.619055 #2454]  INFO -- :   Rendered admin/messages/_form.html.erb (8.6ms)
+I, [2013-10-11T04:33:37.624128 #2454]  INFO -- :   Rendered admin/messages/edit.html.erb within layouts/application (14.0ms)
+I, [2013-10-11T04:33:37.637466 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.2ms)
+I, [2013-10-11T04:33:37.648054 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (9.2ms)
+I, [2013-10-11T04:33:37.651089 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.7ms)
+I, [2013-10-11T04:33:37.656334 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (5.1ms)
+I, [2013-10-11T04:33:37.657176 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T04:33:37.657602 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:37.658042 #2454]  INFO -- : Completed 200 OK in 63ms (Views: 47.6ms | ActiveRecord: 5.2ms)
+I, [2013-10-11T04:33:44.679106 #2454]  INFO -- : Started GET "/ru/admin/messages/1/edit" for 91.226.178.38 at 2013-10-11 04:33:44 +0000
+I, [2013-10-11T04:33:44.681209 #2454]  INFO -- : Processing by Admin::MessagesController#edit as HTML
+I, [2013-10-11T04:33:44.681276 #2454]  INFO -- :   Parameters: {"locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:44.700963 #2454]  INFO -- :   Rendered admin/messages/_form.html.erb (3.8ms)
+I, [2013-10-11T04:33:44.701742 #2454]  INFO -- :   Rendered admin/messages/edit.html.erb within layouts/application (4.8ms)
+I, [2013-10-11T04:33:44.719307 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.6ms)
+I, [2013-10-11T04:33:44.725968 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.1ms)
+I, [2013-10-11T04:33:44.733055 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-10-11T04:33:44.734195 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:33:44.734984 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:44.735377 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-10-11T04:33:44.735763 #2454]  INFO -- : Completed 200 OK in 54ms (Views: 33.4ms | ActiveRecord: 16.1ms)
+I, [2013-10-11T04:33:46.184215 #2454]  INFO -- : Started PATCH "/ru/admin/messages/1" for 91.226.178.38 at 2013-10-11 04:33:46 +0000
+I, [2013-10-11T04:33:46.186286 #2454]  INFO -- : Processing by Admin::MessagesController#update as HTML
+I, [2013-10-11T04:33:46.186364 #2454]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYILB/8JuZy99JEIcmxsOo6nemliIWOYt2R0H+Rhh2s=", "message"=>{"status_id"=>"1"}, "commit"=>"Сохранить Message", "locale"=>"ru", "id"=>"1"}
+I, [2013-10-11T04:33:46.205125 #2454]  INFO -- : Redirected to http://146.185.131.154/ru/admin/messages
+I, [2013-10-11T04:33:46.205322 #2454]  INFO -- : Completed 302 Found in 19ms (ActiveRecord: 7.0ms)
+I, [2013-10-11T04:33:46.360340 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:46 +0000
+I, [2013-10-11T04:33:46.362305 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:46.362368 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:33:46.379437 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (2.5ms)
+I, [2013-10-11T04:33:46.392342 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.9ms)
+I, [2013-10-11T04:33:46.394712 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-11T04:33:46.405636 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (9.7ms)
+I, [2013-10-11T04:33:46.406711 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-10-11T04:33:46.407450 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:33:46.407941 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T04:33:46.412368 #2454]  INFO -- : Completed 200 OK in 50ms (Views: 29.8ms | ActiveRecord: 15.8ms)
+I, [2013-10-11T04:33:58.980124 #2454]  INFO -- : Started GET "/en/admin/messages" for 91.226.178.38 at 2013-10-11 04:33:58 +0000
+I, [2013-10-11T04:33:58.981969 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:33:58.982031 #2454]  INFO -- :   Parameters: {"locale"=>"en"}
+I, [2013-10-11T04:33:59.007411 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (8.2ms)
+I, [2013-10-11T04:33:59.032701 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (16.8ms)
+I, [2013-10-11T04:33:59.042253 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-10-11T04:33:59.055246 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (3.5ms)
+I, [2013-10-11T04:33:59.062174 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.8ms)
+I, [2013-10-11T04:33:59.069483 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.4ms)
+I, [2013-10-11T04:33:59.071349 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-10-11T04:33:59.071838 #2454]  INFO -- : Completed 200 OK in 90ms (Views: 66.1ms | ActiveRecord: 19.3ms)
+I, [2013-10-11T04:34:00.415873 #2454]  INFO -- : Started GET "/ru/admin/messages" for 91.226.178.38 at 2013-10-11 04:34:00 +0000
+I, [2013-10-11T04:34:00.418167 #2454]  INFO -- : Processing by Admin::MessagesController#index as HTML
+I, [2013-10-11T04:34:00.418232 #2454]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-10-11T04:34:00.437794 #2454]  INFO -- :   Rendered admin/messages/index.html.erb within layouts/application (7.7ms)
+I, [2013-10-11T04:34:00.448355 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.5ms)
+I, [2013-10-11T04:34:00.450818 #2454]  INFO -- :   Rendered layouts/_moder_menu.html (1.0ms)
+I, [2013-10-11T04:34:00.461805 #2454]  INFO -- :   Rendered layouts/_admin_menu.html.erb (1.8ms)
+I, [2013-10-11T04:34:00.462947 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-10-11T04:34:00.463721 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-10-11T04:34:00.468197 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (4.3ms)
+I, [2013-10-11T04:34:00.468588 #2454]  INFO -- : Completed 200 OK in 50ms (Views: 30.3ms | ActiveRecord: 11.1ms)
+I, [2013-10-11T04:37:02.622132 #2454]  INFO -- : Started GET "/?PHPSESSID=7ja4t5ba00143PVUJW%5EDYCGYJFWY" for 185.4.227.194 at 2013-10-11 04:37:02 +0000
+I, [2013-10-11T04:37:02.623916 #2454]  INFO -- : Processing by HomeController#index as */*
+I, [2013-10-11T04:37:02.624025 #2454]  INFO -- :   Parameters: {"PHPSESSID"=>"7ja4t5ba00143PVUJW^DYCGYJFWY"}
+I, [2013-10-11T04:37:02.637040 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2013-10-11T04:37:02.659989 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.4ms)
+I, [2013-10-11T04:37:02.670240 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (6.8ms)
+I, [2013-10-11T04:37:02.677643 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.3ms)
+I, [2013-10-11T04:37:02.684704 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (5.0ms)
+I, [2013-10-11T04:37:02.685229 #2454]  INFO -- : Completed 200 OK in 61ms (Views: 56.1ms | ActiveRecord: 2.8ms)
+I, [2013-10-11T05:47:32.692597 #2454]  INFO -- : Started GET "/" for 91.226.178.38 at 2013-10-11 05:47:32 +0000
+I, [2013-10-11T05:47:32.694751 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-11T05:47:32.701829 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-11T05:47:32.718374 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (15.1ms)
+I, [2013-10-11T05:47:32.726384 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (2.3ms)
+I, [2013-10-11T05:47:32.727250 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T05:47:32.727703 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-10-11T05:47:32.732271 #2454]  INFO -- : Completed 200 OK in 37ms (Views: 31.0ms | ActiveRecord: 3.8ms)
+I, [2013-10-11T07:03:34.693080 #2454]  INFO -- : Started GET "/" for 91.226.178.38 at 2013-10-11 07:03:34 +0000
+I, [2013-10-11T07:03:34.695463 #2454]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-10-11T07:03:34.703921 #2454]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2013-10-11T07:03:34.903819 #2454]  INFO -- :   Rendered layouts/_common_menu.html.erb (198.4ms)
+I, [2013-10-11T07:03:34.916853 #2454]  INFO -- :   Rendered layouts/_navigation.html.erb (6.7ms)
+I, [2013-10-11T07:03:34.917727 #2454]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-10-11T07:03:34.925454 #2454]  INFO -- :   Rendered layouts/_messages.html.erb (0.4ms)
+I, [2013-10-11T07:03:34.926079 #2454]  INFO -- : Completed 200 OK in 230ms (Views: 222.7ms | ActiveRecord: 0.9ms)
