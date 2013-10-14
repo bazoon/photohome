@@ -2,7 +2,7 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Модерация<b class="caret"></b></a>
  
   <ul class="dropdown-menu">
-    <li><%=link_to("Новости",novelties_path) if can? :read,Novelty %></li>
+    <li><%=link_to("Новости",admin_novelties_path) if can? :read,Novelty %></li>
     <li><%=link_to "Переписка",admin_messages_path if can? :manage,Message %></li>
     <li><%=link_to "Фотографии",admin_photos_path if can? :manage,Photo %>  </li>
    

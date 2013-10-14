@@ -76,6 +76,8 @@ Photohome::Application.routes.draw do
 
       post 'final_rating', to: 'competitions#final_rating', :as => :final_rating
 
+      resources :novelties  
+
       resources :competitions  do
         member do
           get 'view_posted',as: :view_posted 

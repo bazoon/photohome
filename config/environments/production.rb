@@ -75,7 +75,7 @@ Photohome::Application.configure do
   
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'http://146.185.131.154' }
+  config.action_mailer.default_url_options = { :host => '146.185.131.154' }
 
   
   

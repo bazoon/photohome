@@ -1,3 +1,5 @@
+<% breadcrumb :view_competition_photos, @competition %>
+
 <h1>Конкурсные фотографии</h1>
 <br>
 
@@ -8,7 +10,7 @@
     <div class="col-sm-3" style="height: 290px;">
     <div class="thumbnail">  
     
-         <%=link_to image_tag(competition_photo.image_url(:thumb)), photo_view_path(competition_photo.photo), class: "thumbnail" %>
+    <%= link_to image_tag(competition_photo.image_url(:thumb)), photo_view_path(competition_photo.photo), class: "thumbnail" %>
             
     <div class="caption">
      <small><%= "#{competition_photo.jury_count} / #{@all_jury_count}" %></small>
@@ -19,7 +21,7 @@
     <% if can?(:read,Competition)  %>
     <%- icon = competition_photo.liked_by(@user) ? unlike_icon("like#{competition_photo.id}") : like_icon("like#{competition_photo.id}") %>
     <%= link_to(icon, like_path(competition_photo), remote: true) if @can_like%>
-    <% end  %>
+    <% end %>
 
     </span>
     

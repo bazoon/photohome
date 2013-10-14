@@ -1,0 +1,13 @@
+<h1>Новости</h1>
+
+  
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails%>
+
+    <%@novelties.each do |novelty| %>
+
+      <div>    
+      <h3><%= novelty.title %></h3>
+      <div><%= raw novelty.content %></div>
+      <br/>
+
+<% end %>
