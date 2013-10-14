@@ -20,7 +20,7 @@
   <tbody>
     <% @competitions.each do |competition| %>
       <tr>
-        <td><%= competition.title %></td>
+        <td><%= link_to competition.title,view_photos_competition_path(competition) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
         <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => "Фотографии") %></td>

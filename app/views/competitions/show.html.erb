@@ -1,9 +1,9 @@
+<% breadcrumb :competition,@competition %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t(".title") %></strong>
+<h1>
   <%= @competition.title %>
-</p>
+</h1>
 
 <p>
   <strong><%= t(".last_date") %>:</strong>
@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <strong><%= t(".description") %>:</strong>
-  <%= raw @competition.description %>
+   <%= raw @competition.description %>
 </p>
 
-
-
-<%= link_to 'Edit', edit_competition_path(@competition) %> |
-<%= link_to 'Back', competitions_path %>

@@ -6,6 +6,11 @@ crumb :competitions do
   link I18n.t(:contests), competitions_path
 end
 
+crumb :competition do |competition|
+  link competition.title, competition_path(competition)
+  parent :competitions
+end
+
 crumb :view_competition_photos do |competition|
   link I18n.t(:photos_), view_photos_competition_path(competition)
   parent :competitions
