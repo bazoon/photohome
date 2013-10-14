@@ -11,4 +11,9 @@ class NoveltiesController < ApplicationController
   def show
   end
 
+private
+  def set_novelty
+      @novelty = Novelty.find(params[:id])
+    end
+
 end

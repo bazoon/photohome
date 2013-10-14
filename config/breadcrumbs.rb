@@ -21,6 +21,17 @@ crumb :aply_competition_photos do |competition|
   parent :competition_photos,competition
 end
 
+crumb :novelties do
+  link I18n.t(:novelties_), list_novelties_path
+end
+
+crumb :novelty do |novelty|
+  link novelty.title, novelty_path(novelty)
+  parent :novelties
+end
+
+
+
 
 
 # crumb :project_issues do |project|
