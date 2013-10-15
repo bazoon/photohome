@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+gem "daemons"
 gem 'delayed_job_active_record'
 
 gem 'newrelic_rpm'
