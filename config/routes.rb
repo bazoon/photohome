@@ -70,7 +70,7 @@ Photohome::Application.routes.draw do
 
 
 
-
+   # ADMIN Routes !!!
     namespace :admin do
       resources :messages,concerns: :commentable
 

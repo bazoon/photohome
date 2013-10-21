@@ -20,17 +20,12 @@ class Admin::CompetitionsController < Admin::BaseController
   end
 
   def final_rating
-    competition_photo_id = params["idBox"]
-    rating = params["rate"].to_i
-    jury_ratings = JuryRating.where(competition_photo_id: competition_photo_id)
-   
-    jury_ratings.each do |jr|
-      jr.rating = rating
-      jr.save
-    end  
+    competition_photo = CompetitionPhoto.find(params["idBox"])
+    competition_photo.place = params["rate"].to_i
+    competition_photo.save
 
     respond_to do |format|
-      format.json { render json: rating, status: :ok}
+      format.json { render json: competition_photo.place, status: :ok}
     end 
 
   end

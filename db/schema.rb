@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20130919033459666) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "nomination_id"
+    t.integer  "place",          default: 0
   end
 
   create_table "competitions", force: true do |t|

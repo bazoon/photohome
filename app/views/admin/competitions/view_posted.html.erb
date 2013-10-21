@@ -5,6 +5,7 @@
     <tr >
       <th class="col-md-4">Название</th>
       <th>Голоса</th>
+      <th>Место</th>
       <th>Средний рейтинг</th>
       <th></th>
       <th></th>
@@ -17,11 +18,15 @@
       <tr>
         <td><%=competition_photo.title %></td>
         <td><%= "#{competition_photo.jury_count} / #{@all_jury_count} " %></td>
+        
+
         <td>
         <%= content_tag(:div,"",class: "final_estimate","data-id" => "#{competition_photo.id}",
-                        "data-average" => competition_photo.average_rating) %>       
+                        "data-average" => competition_photo.place) %>       
         </td>
         
+        <td><%= competition_photo.average_rating %></td>
+
         <td>
         <%=  link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) %>
         </td>

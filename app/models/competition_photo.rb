@@ -34,7 +34,7 @@ class CompetitionPhoto < ActiveRecord::Base
   end
 
   def average_rating
-    jury_ratings.average(:rating).to_i
+    jury_ratings.average(:rating).to_f
   end
   
   def sum_rating
@@ -59,8 +59,7 @@ class CompetitionPhoto < ActiveRecord::Base
     
 
   def jury_rating(user_id)
-   rating = jury_ratings.where(user_id: user_id).try(:[],0).try(:rating) || 2
-
+    rating = jury_ratings.where(user_id: user_id).try(:[],0).try(:rating) || 0
   end
 
 

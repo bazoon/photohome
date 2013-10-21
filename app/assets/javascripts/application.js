@@ -53,12 +53,13 @@ $("div[id^='flash_box']").fadeOut(10000);
 
  $(".final_estimate").jRating({
          // step:true,
-         length : 10, // nb of stars
+         length : 3, // nb of stars
          phpPath: "/admin/final_rating",
-         nbRates: 10,
+         nbRates: 3,
          type: "big",
-         rateMax: 10,
+         rateMax: 3,
          canRateAgain: true,  
+         step: true
          // decimalLength: 1,
          
          // onSuccess : function(){
