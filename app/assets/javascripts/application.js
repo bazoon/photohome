@@ -37,7 +37,7 @@ $("div[id^='flash_box']").fadeOut(10000);
          type: "big",
          rateMax: 10,
          canRateAgain: true,  
-         // decimalLength: 1,
+         decimalLength: 2  ,
          
          // onSuccess : function(){
          //   alert('Success : your rate has been saved :)');
