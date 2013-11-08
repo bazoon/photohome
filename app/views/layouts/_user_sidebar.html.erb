@@ -2,9 +2,10 @@
 <%= current_user && current_user.avatar && image_tag(current_user.avatar_url(:thumb),class: "img-polaroid") %>
 
 <ul class="nav">
+
       <li><%= link_to "Фотографии",user_photos_path(current_user) %></li>
       <li><%= link_to "Сообщения",user_messages_path(current_user) %></li>
       <li><%= link_to "Конкурсы",competitions_path %></li>
       <li><%= link_to "Жюри",jury_choose_competition_path if current_user.in_jury? %></li>
-      
+      <li> <%= link_to I18n.t("change_password"), edit_user_registration_path if user_signed_in?%></li>
 </ul>
