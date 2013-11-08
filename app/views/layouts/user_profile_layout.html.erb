@@ -31,8 +31,7 @@
           <ul class="nav navbar-nav">
            
             <%= render 'layouts/common_menu' %>
-            <%= render 'layouts/moder_menu' if current_user && current_user.is_stuff? %>
-            <%= render 'layouts/admin_menu' if current_user && current_user.admin? %>
+            <%= render 'layouts/admin_menu' if current_user && current_user.is_stuff? %>
            
             <%= render 'layouts/navigation' %>
             <%= render 'layouts/lang_select' %>

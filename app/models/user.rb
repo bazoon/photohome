@@ -13,6 +13,14 @@ class User < ActiveRecord::Base
   has_many :messages
   has_many :jury,class_name: "Admin::Jury"
 
+  # before_save :see
+
+
+  # def see
+  #   binding.pry
+  #   a = self.name 
+  # end
+
 
   def admin?
   	has_role?("admin")       	

@@ -23,7 +23,11 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
-gem 'pg'
+
+
+# gem 'pg'
+gem 'mysql2'
+
 gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 
@@ -63,7 +67,7 @@ gem 'acts_as_commentable'
 gem 'fotoramajs'
 gem 'railroady'
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 
 gem 'jquery-turbolinks'
 gem 'pry'

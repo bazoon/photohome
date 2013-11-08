@@ -12,14 +12,26 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+# development:
+#    adapter: postgresql
+#    encoding: unicode
+#    database: photohome_development
+#    pool: 25
+#    username: vit
+#    password: t97888
+#    host: localhost
+#    port: 5432
+#    template: template0
+
 development:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   database: photohome_development
-  pool: 5
-  username: vit
-  password: t97888
-  template: template0
+  username: root
+  password: t9788886
+  host: 127.0.0.1
+  port: 3306
+  secure_auth: false
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -40,22 +52,24 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: postgresql
-  encoding: unicode
-  database: photohome_test
-  pool: 5
-  username: vit
-  password: t97888
-  template: template0
+  adapter: mysql2
+  encoding: utf8
+  database: photohome_development
+  username: root
+  password: t9788886
+  host: 127.0.0.1
+  port: 3306
+  secure_auth: false
 
 production:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   database: photohome_development
-  pool: 25
-  username: vit
-  password: t97888
-  template: template0
+  username: root
+  password: t9788886
+  host: 127.0.0.1
+  port: 3306
+  secure_auth: false
 
 cucumber:
   <<: *test

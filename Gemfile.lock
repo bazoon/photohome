@@ -165,11 +165,11 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.9)
     multi_test (0.0.2)
+    mysql2 (0.3.14)
     newrelic_rpm (3.6.8.164)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
-    pg (0.16.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -309,8 +309,8 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   mini_magick
+  mysql2
   newrelic_rpm
-  pg
   pry
   puma
   quiet_assets
