@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   validates :name, :email, presence: true
-
+  validates :last_name, :adress, :zip_code, :city, :country, presence: true
   
   has_many :photos
   has_many :messages

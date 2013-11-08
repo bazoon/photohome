@@ -66,6 +66,7 @@ gem "mini_magick"
 gem 'acts_as_commentable'
 gem 'fotoramajs'
 gem 'railroady'
+gem 'country_select'
 
 gem 'rails_12factor'
 

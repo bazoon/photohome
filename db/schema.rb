@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021055446) do
+ActiveRecord::Schema.define(version: 20131108055239) do
 
   create_table "admin_juries", force: true do |t|
     t.integer  "competition_id"
@@ -231,6 +231,13 @@ ActiveRecord::Schema.define(version: 20131021055446) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "avatar"
+    t.string   "last_name"
+    t.string   "zip"
+    t.string   "adress"
+    t.string   "zip_code"
+    t.string   "city"
+    t.string   "country"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
