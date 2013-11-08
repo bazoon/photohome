@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  validates :name, :email, presence: true
+
   
   has_many :photos
   has_many :messages
