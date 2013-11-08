@@ -34,7 +34,7 @@ class CompetitionPhoto < ActiveRecord::Base
   end
 
   def average_rating
-    jury_ratings.average(:rating).to_f
+    jury_ratings.average(:rating).to_f.round(2)
   end
   
   def sum_rating
