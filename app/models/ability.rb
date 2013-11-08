@@ -10,6 +10,8 @@ class Ability
     
     if user.has_role? :moder
       can :manage, Novelty  
+      can :manage, Admin::Album
+      can :manage, Admin::SitePhoto  
     end
 
     if user.in_jury?

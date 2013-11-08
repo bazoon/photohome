@@ -89,7 +89,16 @@ Photohome::Application.routes.draw do
         resources :jury
       end  
 
+
+      #Галлерея сайта
+      resources :site_photos do
+
+
+      end
       
+      #Альбомы сайта
+      resources :albums   
+
       resources :photos do
         member do 
           get 'publish',as: :publish
