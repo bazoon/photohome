@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
-  <%= @topic.name %>
+  <strong>Название:</strong>
+  <%= @site_photo.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @topic.content %>
+  <%= image_tag @site_photo.picture_url(:normal) %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<hr/>
+
+<%= link_to 'Edit', edit_admin_site_photo_path(@site_photo) %> |
+<%= link_to 'Back', admin_site_photos_path %>

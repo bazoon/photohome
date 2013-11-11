@@ -46,7 +46,9 @@ ru:
         title: "Название"
         description: "Описание"   
       competition_photo:
-        nomination_id: "Номинация"  
+        nomination_id: "Номинация" 
+      admin_album:
+        title: "Название" 
 
     # hints:
     #   defaults:

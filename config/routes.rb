@@ -69,8 +69,6 @@ Photohome::Application.routes.draw do
 
 
 
-
-   # ADMIN Routes !!!
     namespace :admin do
       resources :messages,concerns: :commentable
 
@@ -92,9 +90,10 @@ Photohome::Application.routes.draw do
 
       #Галлерея сайта
       resources :site_photos do
-
-
+      
       end
+
+      get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo
       
       #Альбомы сайта
       resources :albums   

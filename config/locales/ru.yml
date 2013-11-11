@@ -143,4 +143,12 @@ ru:
         max_photo_count: "Макс. кол-во фотографий"
       edit:
         edit: "Редактировать номинацию"  
+    albums:
+      index:
+        title: "Альбомы"
+        name: "Название"
+        new: "Новый альбом"
+      new:
+        new_album: "Новый альбом"
+
 

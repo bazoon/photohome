@@ -17,6 +17,10 @@ module ApplicationHelper
     not current_user.nil?
   end
 
+  def is_stuff?
+    current_user && current_user.is_stuff?
+  end
+
   def ld(d)
     I18n.l(d) unless d.nil?
   end  
@@ -83,6 +87,12 @@ module ApplicationHelper
   def unlike_icon(id)
     content_tag(:span,"",class: "glyphicon glyphicon-thumbs-down",id: id)
   end
+
+  def plus_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-plus")
+  end
+
+  
 
   def ru_icon
     image_tag(asset_path("ru.png"))

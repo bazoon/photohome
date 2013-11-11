@@ -29,7 +29,7 @@ def update
 
     respond_to do |format|
 
-      if @album.save
+      if @album.update(album_params)
         format.html { redirect_to admin_albums_path, notice: 'Album was successfully updated' }
       else
         format.html { render action: 'new' }

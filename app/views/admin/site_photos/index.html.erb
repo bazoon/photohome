@@ -1,28 +1,37 @@
-<h1><%= t('.title') %></h1>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= t('.title') %></th>
-    
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @albums.each do |topic| %>
-      <tr>
-        <td><%= topic.name %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"), admin_album_path %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_admin_album_path %></td>
-        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), admin_album_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1><%= t(".title") %></h1>
 <br>
+<%= link_to t('.new'), new_admin_site_photo_path, {class: "btn btn-primary"} %>
 
-<%= link_to t('.new_album'), new_admin_album_path,{class: "btn btn-primary"}%>
+<br><br>  
+
+<%= will_paginate @site_photos %>
+
+<div class="row">
+
+    <% @site_photos.each_with_index do |photo,index| %>
+  
+    <div class="col-sm-3" >
+    
+
+    <div class="thumbnail">  
+      <a href=<%= admin_site_photo_path(photo) %> class="thumbnail" >
+          <%= image_tag photo.picture_url(:thumb),style: "height: 150px;" %>
+      </a>
+    
+    <div class="caption">
+     <small>  <%= photo.title %>     </small>
+     <span style = "float: right">  
+      
+      <%=link_to del_icon, admin_site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff?%> 
+     </span>
+    </div>  
+     
+    </div>
+    
+    
+    
+  </div>
+
+  <% end %>
+  
+</div>

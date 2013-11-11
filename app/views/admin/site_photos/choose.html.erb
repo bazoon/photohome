@@ -1,17 +1,13 @@
 <%= simple_form_for([@site_photo]) do |f| %>
   <%= f.error_notification %>
 
-    <!-- Загрузка только внешних фотографий -->
+    <!-- Загрузка только фотографий пользователей -->
 
     <div class="form-group">
-    <%= f.input :title,:input_html => {class: "form-control"} %>
+    <%= f.input :title, :input_html => {value: @photo.title, class: "form-control"} %>
     </div>
-    
-    <%= f.hidden_field :image_cache %>
-  
-    <div class="form-group">
-    <%= f.file_field :image,:input_html => {class: "form-control"} %>
-    </div>
+
+    <%= f.hidden_field :photo_id, :value => @photo_id %>
     
     <div class="form-group">
     <%= f.association :album,:input_html => {class: "form-control"} %>

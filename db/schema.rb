@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108070213) do
+ActiveRecord::Schema.define(version: 20131111042557) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 20131108070213) do
     t.datetime "updated_at"
     t.integer  "competition_id"
     t.integer  "max_photo_count"
+  end
+
+  create_table "admin_site_photos", force: true do |t|
+    t.integer  "photo_id"
+    t.string   "image"
+    t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "comments", force: true do |t|
@@ -193,14 +202,6 @@ ActiveRecord::Schema.define(version: 20131108070213) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
-
-  create_table "site_photos", force: true do |t|
-    t.integer  "photo_id"
-    t.string   "image"
-    t.integer  "album_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
