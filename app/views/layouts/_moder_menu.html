@@ -4,3 +4,4 @@
 
 <li><%=link_to "Альбомы", admin_albums_path if can? :manage, Admin::Album %>  </li>
 <li><%=link_to "Галлерея", admin_site_photos_path if can? :manage, Admin::SitePhoto %>  </li>
+<li><%=link_to "Настройки", admin_settings_path if can? :manage, Admin::Setting %>  </li>

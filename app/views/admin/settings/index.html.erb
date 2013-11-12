@@ -1,0 +1,20 @@
+<h1><%= t(".title") %></h1>
+
+<%= link_to edit_icon, edit_admin_setting_path(@admin_setting) %>
+<table class="table table-striped">
+  
+  <tbody>
+    
+      <tr>
+        <td>Альбом</td>
+        <td><%= @admin_setting.album.title %></td>
+      </tr>
+      <tr>
+        <td>Новость</td>
+        <td><%= @admin_setting.novelty.title %></td>
+      </tr>
+    
+  </tbody>
+</table>
+
+<br>

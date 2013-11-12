@@ -12,6 +12,7 @@ class Ability
       can :manage, Novelty  
       can :manage, Admin::Album
       can :manage, Admin::SitePhoto  
+      can :manage, Admin::Setting
     end
 
     if user.in_jury?

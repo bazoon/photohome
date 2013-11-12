@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131111042557) do
+ActiveRecord::Schema.define(version: 20131112055650) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20131111042557) do
     t.datetime "updated_at"
     t.integer  "competition_id"
     t.integer  "max_photo_count"
+  end
+
+  create_table "admin_settings", force: true do |t|
+    t.integer  "album_id"
+    t.integer  "novelty_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "admin_site_photos", force: true do |t|
