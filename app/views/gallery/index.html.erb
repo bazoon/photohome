@@ -5,25 +5,18 @@
 
 <div class="row">
 
-
-
     <% @last_photos.each_with_index do |photo,index| %>
   
-    <div class="col-sm-3" >
+    <div class="col-sm-3">
     <div class="thumbnail">  
-      <a href=<%= gallery_show_path(photo) %> class="thumbnail" >
-
-          <%= image_tag photo.image_url(:thumb),style: "height: 150px;" %>
       
-      </a>
-    
-    <div class="caption">
-     <small> <%= photo.title %> </small>
-     <span style = "float: right">  
-      <%= link_to plus_icon, admin_choose_site_photo_path(photo.id) if is_stuff? %>
-     </span>
-    </div>  
 
+    <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
+    <%- l1 = link_to plus_icon, admin_choose_site_photo_path(photo.id) if is_stuff? %>
+    <%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
+
+
+    
 
     </div>
     

@@ -4,11 +4,13 @@ class Admin::SitePhoto < ActiveRecord::Base
 
  mount_uploader :image, AdminSitePhotoUploader
 
+ alias :old_image_url :image_url
+
 
 # Возвращает либо photo пользователя либо image загруженной фотографии
 
-def picture_url(size)
-  photo_id.nil? ?  image_url(size) : Photo.find(photo_id).image_url(size)
+def image_url(size)
+  photo_id.nil? ?  old_image_url(size) : Photo.find(photo_id).image_url(size)
 end
 
 def author

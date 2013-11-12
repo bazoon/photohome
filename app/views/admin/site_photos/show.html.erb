@@ -1,11 +1,4 @@
-<p>
-  <strong>Название:</strong>
-  <%= @site_photo.title %>
-</p>
-
-<p>
-  <%= image_tag @site_photo.picture_url(:normal) %>
-</p>
+<%= render partial: "photos/image", locals: { photo: @site_photo } %>
 
 <hr/>
 

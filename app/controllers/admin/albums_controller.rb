@@ -25,6 +25,11 @@ end
   end
 
 
+def show
+
+
+end
+
 def update
 
     respond_to do |format|

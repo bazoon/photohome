@@ -1,0 +1,31 @@
+<div class="row">
+
+    <% photos.each_with_index do |photo,index| %>
+  
+    <div class="col-sm-3" >
+    <div class="thumbnail">  
+    
+    <a href=<%= path %> class="thumbnail" >
+      <%= image_tag photo.image_url(:thumb), style: "height: 150px;" %>
+    </a>
+    
+    
+    
+    <div class="caption">
+     <small> <%= photo.title %> </small>
+      <span style = "float: right">  
+        <% links.each do |l| %>
+          <%= l %>
+        <% end %> 
+
+      </span>
+    </div>  
+
+     
+    </div>
+    
+  </div>
+
+  <% end %>
+  
+</div>

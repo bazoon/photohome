@@ -96,7 +96,11 @@ Photohome::Application.routes.draw do
       get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo
       
       #Альбомы сайта
-      resources :albums   
+      resources :albums do
+
+       
+
+      end
 
       resources :photos do
         member do 
