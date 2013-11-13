@@ -1,6 +1,10 @@
 <h1><%= t(".title") %></h1>
 
-<%= link_to edit_icon, edit_admin_setting_path(@admin_setting) %>
+<%= link_to edit_icon, edit_admin_setting_path(@admin_setting)  if @admin_setting%>
+<%= link_to plus_icon, new_admin_setting_path(@admin_setting)  if @admin_setting.nil?%>
+
+<% if  @admin_setting && @admin_setting.album %>
+
 <table class="table table-striped">
   
   <tbody>
@@ -16,5 +20,7 @@
     
   </tbody>
 </table>
+
+<% end  %>
 
 <br>
