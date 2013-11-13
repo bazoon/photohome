@@ -31,6 +31,7 @@ development:
   password: t97888
   # host: 127.0.0.1
   port: 3306
+  pool: 25
   secure_auth: false
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -58,6 +59,7 @@ test: &test
   username: root
   password: t97888
   # host: 127.0.0.1
+  pool: 25
   port: 3306
   secure_auth: false
 
@@ -68,6 +70,7 @@ production:
   username: root
   password: t97888
   # host: 127.0.0.1
+  pool: 25
   port: 3306
   secure_auth: false
 
