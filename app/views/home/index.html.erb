@@ -1,6 +1,7 @@
 <div class="span20">
 
 <% if @photos  %>
+
 <div class="fotorama" data-autoplay="true" data-shuffle="true" style="width: 50%; margin: 0 auto;">
    <% @photos.each do |photo| %>
     <%= image_tag(photo.image_url(:normal)) %>

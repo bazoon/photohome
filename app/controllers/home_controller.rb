@@ -2,9 +2,9 @@ class HomeController < ApplicationController
 
   def index
 
+   
     
-    
-    # @photos = Admin::Setting.first.album.site_photos
+    @photos = Admin::Setting.first.album.site_photos if Admin::Setting.first
 
 
   end
