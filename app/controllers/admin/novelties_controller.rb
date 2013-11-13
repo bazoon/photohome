@@ -86,6 +86,6 @@ class Admin::NoveltiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def novelty_params
-      params.require(:novelty).permit(:title, :content, :publish_date, :published, :user_id)
+      params.require(:novelty).permit(:title, :content, :publish_date, :published, :user_id, :digest)
     end
 end

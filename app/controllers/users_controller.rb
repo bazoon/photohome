@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_path, :notice => "User updated."
     else
-      redirect_to users_path, :alert => "Unable to update user."
+      redirect_to users_path, :alert => "Unable to update user. #{params[:user]["role_ids"]}"
     end
   end
     

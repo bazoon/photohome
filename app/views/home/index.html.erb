@@ -1,8 +1,13 @@
-<div class="span8">
+<div class="span20">
 
 
+<div class="fotorama" data-autoplay="true" data-shuffle="true" style="width: 50%; margin: 0 auto;">
+   <% @photos.each do |photo| %>
+    <%= image_tag(photo.image_url(:normal)) %>
+  <% end %> %>
 
-<div class="jury_estimate" data-average="8" data-id = "2:89">
 </div>
+
+
 
 </div>
