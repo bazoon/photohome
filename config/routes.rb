@@ -2,7 +2,6 @@ Photohome::Application.routes.draw do
 
 
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
-
   get "ajax/users"
   get "gallery/index"
   get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
@@ -14,10 +13,9 @@ Photohome::Application.routes.draw do
   get "photo_ajax/theme_tokens"
 
   root :to => "home#index"
-
-
+  get 'test' => "home#test", as: :test
     
-   scope "(:locale)", locale: /en|ru/ do
+  scope "(:locale)", locale: /en|ru/ do
 
   devise_for :users, :controllers => {:registrations => "registrations"}
   	
