@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
    
     
-    @photos = Admin::Setting.first.album.site_photos if Admin::Setting.first
+    @photos = Admin::Setting.includes(album: [:site_photos] ).first.album.site_photos if Admin::Setting.first
 
 
   end

@@ -2,9 +2,11 @@
 <li class= <%= "active" if params[:controller] == "gallery" %>>
 <%= link_to(I18n.t("gallery"),gallery_index_path) %>
 </li>
+
 <li class= <%= "active" if params[:controller] == "competitions" ||  params[:controller] == "competition_photos"%>>
   <%= link_to I18n.t("contests"),competitions_path %>
  </li>
+
 <li class= <%= "active" if params[:controller] == "novelties" %>>
-  <%=link_to(I18n.t("news"),list_novelties_path) if can? :read,Novelty %>
+  <%=link_to(I18n.t("news"),list_novelties_path) if can? :read, Novelty %>
 </li>
