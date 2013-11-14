@@ -2,6 +2,9 @@
 class RedactorRailsPictureUploader < CarrierWave::Uploader::Base
   include RedactorRails::Backend::CarrierWave
 
+
+  # a=/(src=.+.jpg)/.match(n.content) !!!
+
   # Include RMagick or ImageScience support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick

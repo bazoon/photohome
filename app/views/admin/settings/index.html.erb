@@ -3,7 +3,7 @@
 <%= link_to edit_icon, edit_admin_setting_path(@admin_setting)  if @admin_setting%>
 <%= link_to plus_icon, new_admin_setting_path(@admin_setting)  if @admin_setting.nil?%>
 
-<% if  @admin_setting && @admin_setting.album %>
+<% if  @admin_setting && @admin_setting.album && @admin_setting.novelty %>
 
 <table class="table table-striped">
   
@@ -11,11 +11,11 @@
     
       <tr>
         <td>Альбом</td>
-        <td><%= @admin_setting.album.title %></td>
+        <td><%= @admin_setting.album.title if @admin_setting.album %></td>
       </tr>
       <tr>
         <td>Новость</td>
-        <td><%= @admin_setting.novelty.title %></td>
+        <td><%= @admin_setting.novelty.title if @admin_setting.novelty%></td>
       </tr>
     
   </tbody>
