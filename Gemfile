@@ -13,6 +13,7 @@ gem 'delayed_job_active_record'
 
 gem 'newrelic_rpm'
 gem 'yui-compressor'
+gem 'cssminify'
 # gem 'bootstrap-sass'
 
 

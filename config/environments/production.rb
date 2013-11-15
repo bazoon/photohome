@@ -26,7 +26,8 @@ Photohome::Application.configure do
   config.assets.compress = true
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  config.assets.css_compressor = :yui
+  # config.assets.css_compressor = :yui
+  config.assets.css_compressor = CSSminify.new
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
