@@ -210,6 +210,7 @@ GEM
       mime-types
       orm_adapter
     rmagick (2.13.2)
+    rolify (3.2.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -318,6 +319,7 @@ DEPENDENCIES
   rb-inotify
   redactor-rails
   rmagick
+  rolify
   rspec-rails
   russian
   sanitize

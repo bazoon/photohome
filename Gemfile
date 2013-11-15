@@ -28,7 +28,7 @@ gem 'figaro'
 # gem 'pg'
 gem 'mysql2'
 
-# gem 'rolify'
+gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 
 gem 'better_errors'

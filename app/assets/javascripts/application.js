@@ -12,10 +12,18 @@
 //
 //= require jquery
 //= require jquery.turbolinks
+
 //= require jquery_ujs
 //= require jquery.tokeninput
 //= require jquery.ui.dialog
-//= require twitter/bootstrap
+
+
+
+
+// Or peek any of them yourself
+//= require twitter/bootstrap/dropdown
+//= require twitter/bootstrap/modal
+
 //= require turbolinks
 //= require redactor-rails
 //= require fotorama
