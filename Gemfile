@@ -12,7 +12,7 @@ gem "daemons"
 gem 'delayed_job_active_record'
 
 gem 'newrelic_rpm'
-
+gem 'yui-compressor'
 # gem 'bootstrap-sass'
 
 
