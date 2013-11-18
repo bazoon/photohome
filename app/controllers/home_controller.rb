@@ -2,10 +2,20 @@ class HomeController < ApplicationController
 
   def index
 
-   
-    
-    @photos = Admin::Setting.includes(album: [:site_photos] ).first.album.site_photos if Admin::Setting.first
+    setting = Admin::Setting.includes(album: [:site_photos]).first
 
+    if setting 
+    
+      @photos = setting.album.site_photos if Admin::Setting.first
+      @novelty = setting.novelty
+      @last_photos = Photo.last(4)      
+
+    else
+
+
+
+      render text: ""
+    end
 
   end
 

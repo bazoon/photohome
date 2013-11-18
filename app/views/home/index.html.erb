@@ -1,16 +1,52 @@
-<div class="span20">
 
-<% if @photos  %>
+  <div class="span20" style="width: 70%; margin: 0 auto;">
 
-<div class="fotorama" data-autoplay="true" data-shuffle="true" style="width: 50%; margin: 0 auto;">
-   <% @photos.each do |photo| %>
-    <%= image_tag(photo.image_url(:normal)) %>
-  <% end %> %>
+  <% if @photos  %>
+  <h3>Галлерея сайта</h3>
+  <div class="fotorama" data-autoplay="true" data-shuffle="true" >
+     <% @photos.each do |photo| %>
+      <%= image_tag(photo.image_url(:normal)) %>
+     <% end %> %>
+  </div>
 
-</div>
+  <% end %>
 
-<% end %>
+  
+  <% if @novelty  %>
+  <h3>Главная новость</h3>
+    <div>
+      <img src = "<%= @novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+      <p><%= raw @novelty.digest %></p>
+    </div>
+  <% end %>
 
 
+<div style="clear:both;"></div>
 
-</div>
+<br>
+<br>
+<br>
+
+  <% if @last_photos  %>
+  <h3>Последние фотографии</h3>
+  <div class="row">    
+
+ 
+
+      <% @last_photos.each do |photo|  %>
+       <div class="col-sm-3">
+         <a href=<%= gallery_show_path(photo) %> class="thumbnail" >
+          <%= image_tag photo.image_url(:small), style: "height: 100px;" %>
+         </a>
+       </div>
+      <% end %>      
+
+    
+
+  </div>
+
+
+  <% end %>
+
+  </div>  
+

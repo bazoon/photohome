@@ -40,6 +40,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [250, 250]
   end
 
+  version :small do
+    process :resize_to_limit => [150, 150]
+  end
+
+
   version :normal do
     process :resize_to_limit => [800, 600]
   end
