@@ -19,23 +19,29 @@
   <h3>Главная новость</h3>
     <div>
       <img src = "<%= @novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-      <p><%= raw @novelty.digest %></p>
+      <p><%= raw @novelty.digest %> <%= link_to t("more"), novelty_path(@novelty) %> </p>
     </div>
   <% end %>
 
 
 <div style="clear:both;"></div>
 
-<br>
-<br>
-<br>
+  <% if @article %>
+  <h3>Статьи</h3>
+    <div>
+      <img src = "<%= @article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+      <p><%= raw @article.digest %> <%= link_to t("more"), article_path(@article) %></p>
+    </div>
+  <% end %>
+
+<div style="clear:both;"></div>
+
 
   <% if @last_photos  %>
   <h3>Последние фотографии</h3>
   <div class="row">    
 
  
-
       <% @last_photos.each do |photo|  %>
        <div class="col-sm-3">
          <a href=<%= gallery_show_path(photo) %> class="thumbnail" >

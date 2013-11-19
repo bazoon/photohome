@@ -9,6 +9,7 @@ class HomeController < ApplicationController
       @photos = setting.album.site_photos if setting.album
       @novelty = setting.novelty if setting.novelty
       @last_photos = Photo.last(4)      
+      @article = Admin::Article.random
 
     else
 
@@ -23,5 +24,6 @@ class HomeController < ApplicationController
   def test
     
   end
+
 
 end
