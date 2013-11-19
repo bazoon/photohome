@@ -27,13 +27,19 @@
 //= require turbolinks
 //= require redactor-rails
 //= require fotorama
-//= require jquery.flexslider-min
+
 //= require_tree .
 
 
 $(document).ready(function() {
 
-$('.flexslider').flexslider();
+var sudoSlider = $("#slider").sudoSlider({
+   effect: "fade",
+   auto:true,
+   prevNext: true,
+     numeric:true
+
+});
  
 
 // убирает флеш сообщения через некоторое время

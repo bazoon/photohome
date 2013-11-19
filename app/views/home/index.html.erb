@@ -7,15 +7,15 @@
   <% if @photos  %>
   <h3>Галлерея сайта</h3>
 
-  <div class="flexslider">
-  <ul class="slides">
+  
+  <div id="slider">
+  <ul>
      <% @photos.each do |photo| %>
-      <li> <%= image_tag(photo.image_url(:normal)) %> </li>
+      <li data-effect="fade"> <img src= <%= photo.image_url(:normal)  %> height="40%" /> </li>
      <% end %> 
     </ul>
-      
   </div>
-   
+  
 
   <% end %>
 
