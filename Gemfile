@@ -20,6 +20,7 @@ gem 'cssminify'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails',
                               :branch => '3.0.0'
+gem 'flexslider'
 
 gem 'cancan'
 gem 'devise'

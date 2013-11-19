@@ -10,7 +10,7 @@ class Admin::SitePhoto < ActiveRecord::Base
 # Возвращает либо photo пользователя либо image загруженной фотографии
 
 def image_url(size)
-  photo_id.nil? ?  old_image_url(size) : Photo.find(photo_id).image_url(size)
+  photo_id.nil? ?  old_image_url(size) : photo.image_url(size)  
 end
 
 def author

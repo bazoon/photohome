@@ -6,11 +6,16 @@
 
   <% if @photos  %>
   <h3>Галлерея сайта</h3>
-  <div class="fotorama" data-autoplay="true" data-shuffle="true" >
+
+  <div class="flexslider">
+  <ul class="slides">
      <% @photos.each do |photo| %>
-      <%= image_tag(photo.image_url(:normal)) %>
+      <li> <%= image_tag(photo.image_url(:normal)) %> </li>
      <% end %> 
+    </ul>
+      
   </div>
+   
 
   <% end %>
 

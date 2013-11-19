@@ -1,6 +1,6 @@
 class Admin::Article < ActiveRecord::Base
 
-  scope :random, -> { first(:conditions => [ "id >= ?", (1..count).to_a.sample])  }
+  scope :random, -> { where("id>=?", (1..count).to_a.sample).first  }
 
   def first_image_src
     # binding.pry

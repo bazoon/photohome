@@ -27,11 +27,14 @@
 //= require turbolinks
 //= require redactor-rails
 //= require fotorama
+//= require jquery.flexslider-min
 //= require_tree .
 
 
 $(document).ready(function() {
 
+$('.flexslider').flexslider();
+ 
 
 // убирает флеш сообщения через некоторое время
 $("div[id^='flash_box']").fadeOut(10000);
