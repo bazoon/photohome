@@ -33,13 +33,13 @@
 
 $(document).ready(function() {
 
-var sudoSlider = $("#slider").sudoSlider({
-   effect: "fade",
-   auto:true,
-   prevNext: true,
-     numeric:true
+// var sudoSlider = $("#slider").sudoSlider({
+//    effect: "fade",
+//    auto:true,
+//    prevNext: true,
+//      numeric:true
 
-});
+// });
  
 
 // убирает флеш сообщения через некоторое время

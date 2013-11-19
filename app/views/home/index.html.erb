@@ -8,12 +8,10 @@
   <h3>Галлерея сайта</h3>
 
   
-  <div id="slider">
-  <ul>
+  <div class="fotorama" data-autoplay="true">
      <% @photos.each do |photo| %>
-      <li data-effect="fade"> <img src= <%= photo.image_url(:normal)  %> height="40%" /> </li>
+      <img src="<%= photo.image_url(:normal) %>" /> 
      <% end %> 
-    </ul>
   </div>
   
 
