@@ -1,2 +1,5 @@
 public/uploads
 tmp/
+db/*.sqlite3
+log/*.log
+tmp/**/*
