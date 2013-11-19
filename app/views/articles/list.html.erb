@@ -1,0 +1,20 @@
+<% breadcrumb :articles %>
+
+<h1><%= t(".articles") %></h1>
+
+  
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails%>
+
+<ul>
+
+    <% @articles.each do |article| %>
+
+    
+     <li><h4><%= link_to article.title, article_path(article) %></h4>
+      
+      
+      
+
+<% end %>
+
+</ul>

@@ -1,0 +1,15 @@
+<% breadcrumb :article, @article %>
+
+<h1>
+ <%= @article.title %>
+</h1>
+
+<p>
+  <%= raw @article.content %>
+</p>
+
+<small>
+  <%= ld @article.created_at %>
+</small>
+
+<br>

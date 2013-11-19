@@ -49,6 +49,10 @@ ru:
         nomination_id: "Номинация" 
       admin_album:
         title: "Название" 
+      admin_article:
+        title: "Название"
+        content: "Содержание"
+        digest: "Дайджест"
 
     # hints:
     #   defaults:

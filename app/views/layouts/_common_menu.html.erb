@@ -10,3 +10,8 @@
 <li class= <%= "active" if params[:controller] == "novelties" %>>
   <%=link_to(I18n.t("news"),list_novelties_path) if can? :read, Novelty %>
 </li>
+
+<li class= <%= "active" if params[:controller] == "articles" %>>
+  <%=link_to(I18n.t("articles_"),list_articles_path) if can? :read, Admin::Article %>
+</li>
+

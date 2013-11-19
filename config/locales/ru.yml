@@ -61,6 +61,7 @@ ru:
   photos_: "Фотографии"
   sent_photos: "Отправленные фотографии"
   novelties_: "Новости"
+  articles_: "Статьи" # _ чтобы не подхватывалось articles в названии таблицы 
 
   new: "Новая запись"
 
@@ -108,7 +109,10 @@ ru:
       show:
         last_date: "Дата сдачи работ"
         open_date: "Дата открытия"      
-        title: "Название"        
+        title: "Название"     
+  articles:
+    list:
+      articles: "Статьи"   
   admin:
     messages:
       index:
@@ -153,6 +157,20 @@ ru:
     site_photos:
       index: 
         title: "Галлерея сайта"
+    articles:
+      index:
+        articles: "Статьи"
+        title: "Название"
+        new: "Новая статья"
+      new:
+        title: "Новая статья"
+      edit:
+        title: "Редактировать статью"    
+      show:
+        title: "Название"
+        content: "Содержание"
+        digest: "Дайджест"
+
 
 
 

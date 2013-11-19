@@ -25,6 +25,14 @@ Photohome::Application.routes.draw do
       end
     end  
 
+    resources :articles, only: :show do
+      collection do
+        get 'list'
+      end
+    end  
+
+
+
     resources :topics
 
     
@@ -74,6 +82,7 @@ Photohome::Application.routes.draw do
       post 'final_rating', to: 'competitions#final_rating', :as => :final_rating
 
       resources :novelties  
+      resources :articles
 
       resources :competitions  do
         member do

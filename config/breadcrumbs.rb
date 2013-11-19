@@ -35,6 +35,16 @@ crumb :novelty do |novelty|
   parent :novelties
 end
 
+crumb :articles do
+  link I18n.t(:articles_), list_articles_path
+end
+
+
+crumb :article do |article|
+  link article.title, article_path(article)
+  parent :articles
+end
+
 
 
 
