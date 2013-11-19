@@ -6,8 +6,8 @@ class HomeController < ApplicationController
 
     if setting 
     
-      @photos = setting.album.site_photos if Admin::Setting.first
-      @novelty = setting.novelty
+      @photos = setting.album.site_photos if setting.album
+      @novelty = setting.novelty if setting.novelty
       @last_photos = Photo.last(4)      
 
     else

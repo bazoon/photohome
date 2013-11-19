@@ -8,7 +8,8 @@ class Novelty < ActiveRecord::Base
   def first_image_src
     # binding.pry
     doc = Nokogiri::HTML.parse(content)
-    src = doc.css("img")[0].attr("src")
+    imgs = doc.css("img")
+    src = imgs[0].attr("src") unless imgs.nil? or imgs.empty?
   end
 
 
