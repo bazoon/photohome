@@ -33,14 +33,7 @@
 
 $(document).ready(function() {
 
-var sudoSlider = $(".slider").sudoSlider({
-   effect: "fade",
-   auto:true,
-   prevNext: true,
-   numeric:true
 
-});
- 
 
 // убирает флеш сообщения через некоторое время
 $("div[id^='flash_box']").fadeOut(10000);
