@@ -7272,3 +7272,1110 @@ I, [2013-11-20T10:46:02.110187 #2129]  INFO -- :   Rendered layouts/_navigation.
 I, [2013-11-20T10:46:02.113959 #2129]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.9ms)
 I, [2013-11-20T10:46:02.115616 #2129]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
 I, [2013-11-20T10:46:02.116070 #2129]  INFO -- : Completed 200 OK in 754ms (Views: 117.8ms | ActiveRecord: 350.2ms)
+I, [2013-11-20T11:41:37.090716 #3031]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 11:41:37 +0600
+I, [2013-11-20T11:41:37.126574 #3031]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T11:41:37.126648 #3031]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:41:37.477829 #3031]  INFO -- :   Rendered home/index.html.erb within layouts/application (12.2ms)
+I, [2013-11-20T11:41:37.571397 #3031]  INFO -- :   Rendered layouts/_common_menu.html.erb (90.7ms)
+I, [2013-11-20T11:41:37.575480 #3031]  INFO -- :   Rendered layouts/_navigation.html.erb (2.5ms)
+I, [2013-11-20T11:41:37.579255 #3031]  INFO -- :   Rendered layouts/_lang_select.html.erb (2.9ms)
+I, [2013-11-20T11:41:37.580947 #3031]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T11:41:37.581582 #3031]  INFO -- : Completed 200 OK in 455ms (Views: 110.8ms | ActiveRecord: 59.6ms)
+F, [2013-11-20T11:41:37.670889 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-5671cfd5970c63410daadefab8eceef7.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.671578 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-b91e59b7ef630945f15afbc3854ed036.js"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.684802 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/gb-7cee8161474f206126b1579dbc63c1cd.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.690889 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/4/normal_Imag0065.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.694315 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/23/normal_Imag0109.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.699446 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/22/normal_Ima0159.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.702986 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/2/normal_Ima0154.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.718639 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/25/normal_Imag0135.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.725963 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/system/redactor_assets/pictures/7/pssa.jpg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.736346 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/system/redactor_assets/pictures/6/chernobil.jpg"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.737019 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/22/small_Ima0159.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.738440 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/23/small_Imag0109.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.739278 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/24/small_Ima0161.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+F, [2013-11-20T11:41:37.740502 #3031] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/photo/image/25/small_Imag0135.JPG"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  puma (2.6.0) lib/puma/server.rb:486:in `handle_request'
+  puma (2.6.0) lib/puma/server.rb:357:in `process_client'
+  puma (2.6.0) lib/puma/server.rb:250:in `block in run'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.6.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+I, [2013-11-20T11:41:58.153206 #3050]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 11:41:58 +0600
+I, [2013-11-20T11:41:58.197316 #3050]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T11:41:58.197427 #3050]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:41:58.510022 #3050]  INFO -- :   Rendered home/index.html.erb within layouts/application (12.4ms)
+I, [2013-11-20T11:41:58.605238 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (92.9ms)
+I, [2013-11-20T11:41:58.609386 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (2.6ms)
+I, [2013-11-20T11:41:58.613525 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.2ms)
+I, [2013-11-20T11:41:58.615281 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T11:41:58.615761 #3050]  INFO -- : Completed 200 OK in 418ms (Views: 113.2ms | ActiveRecord: 25.6ms)
+I, [2013-11-20T11:42:01.761354 #3050]  INFO -- : Started GET "/ru/users/sign_in" for 127.0.0.1 at 2013-11-20 11:42:01 +0600
+I, [2013-11-20T11:42:01.765992 #3050]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-11-20T11:42:01.766070 #3050]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:42:01.858925 #3050]  INFO -- :   Rendered devise/shared/_links.html.erb (3.6ms)
+I, [2013-11-20T11:42:01.859184 #3050]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (57.9ms)
+I, [2013-11-20T11:42:01.867545 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.1ms)
+I, [2013-11-20T11:42:01.870015 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (1.6ms)
+I, [2013-11-20T11:42:01.870756 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T11:42:01.871136 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:42:01.871505 #3050]  INFO -- : Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+I, [2013-11-20T11:42:02.853491 #3050]  INFO -- : Started POST "/ru/users/sign_in" for 127.0.0.1 at 2013-11-20 11:42:02 +0600
+I, [2013-11-20T11:42:02.860470 #3050]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-11-20T11:42:02.860608 #3050]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"6WrLH1iZfGrZLpguDehgydPeC3d/PGP5T6BWid31khc=", "user"=>{"email"=>"vith@yandex.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-11-20T11:42:03.095880 #3050]  INFO -- : Redirected to http://localhost:3000/?locale=ru
+I, [2013-11-20T11:42:03.096088 #3050]  INFO -- : Completed 302 Found in 235ms (ActiveRecord: 56.7ms)
+I, [2013-11-20T11:42:03.100910 #3050]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 11:42:03 +0600
+I, [2013-11-20T11:42:03.105732 #3050]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T11:42:03.105879 #3050]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:42:03.128477 #3050]  INFO -- :   Rendered home/index.html.erb within layouts/application (11.2ms)
+I, [2013-11-20T11:42:03.216024 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (86.6ms)
+I, [2013-11-20T11:42:03.256206 #3050]  INFO -- :   Rendered layouts/_moder_menu.html (3.8ms)
+I, [2013-11-20T11:42:03.258583 #3050]  INFO -- :   Rendered layouts/_admin_menu.html.erb (22.7ms)
+I, [2013-11-20T11:42:03.260094 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-11-20T11:42:03.261162 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-11-20T11:42:03.261898 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.4ms)
+I, [2013-11-20T11:42:03.262685 #3050]  INFO -- : Completed 200 OK in 157ms (Views: 98.0ms | ActiveRecord: 49.7ms)
+I, [2013-11-20T11:42:04.502898 #3050]  INFO -- : Started GET "/user_profile/ru/1" for 127.0.0.1 at 2013-11-20 11:42:04 +0600
+I, [2013-11-20T11:42:04.508990 #3050]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-11-20T11:42:04.509103 #3050]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:42:04.573895 #3050]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (1.0ms)
+I, [2013-11-20T11:42:04.587843 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.9ms)
+I, [2013-11-20T11:42:04.595205 #3050]  INFO -- :   Rendered layouts/_moder_menu.html (2.8ms)
+I, [2013-11-20T11:42:04.597241 #3050]  INFO -- :   Rendered layouts/_admin_menu.html.erb (7.4ms)
+I, [2013-11-20T11:42:04.599499 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T11:42:04.601367 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.0ms)
+I, [2013-11-20T11:42:04.602801 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-11-20T11:42:04.607020 #3050]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.2ms)
+I, [2013-11-20T11:42:04.607419 #3050]  INFO -- : Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 1.5ms)
+I, [2013-11-20T11:42:05.421325 #3050]  INFO -- : Started GET "/ru/users/1/photos" for 127.0.0.1 at 2013-11-20 11:42:05 +0600
+I, [2013-11-20T11:42:05.425477 #3050]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-11-20T11:42:05.425552 #3050]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:42:05.464324 #3050]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (16.3ms)
+I, [2013-11-20T11:42:05.473854 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.4ms)
+I, [2013-11-20T11:42:05.535835 #3050]  INFO -- :   Rendered layouts/_moder_menu.html (59.7ms)
+I, [2013-11-20T11:42:05.538007 #3050]  INFO -- :   Rendered layouts/_admin_menu.html.erb (62.8ms)
+I, [2013-11-20T11:42:05.538974 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T11:42:05.539769 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T11:42:05.540093 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:42:05.542558 #3050]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.3ms)
+I, [2013-11-20T11:42:05.542967 #3050]  INFO -- : Completed 200 OK in 117ms (Views: 108.7ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T11:42:06.406076 #3050]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:42:06 +0600
+I, [2013-11-20T11:42:06.410566 #3050]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:42:06.410641 #3050]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:42:06.468843 #3050]  INFO -- :   Rendered photos/_form.html.erb (54.8ms)
+I, [2013-11-20T11:42:06.469431 #3050]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (56.7ms)
+I, [2013-11-20T11:42:06.481465 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.1ms)
+I, [2013-11-20T11:42:06.486193 #3050]  INFO -- :   Rendered layouts/_moder_menu.html (2.2ms)
+I, [2013-11-20T11:42:06.488045 #3050]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.1ms)
+I, [2013-11-20T11:42:06.488947 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T11:42:06.489742 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T11:42:06.490075 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:42:06.493024 #3050]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.7ms)
+I, [2013-11-20T11:42:06.493728 #3050]  INFO -- : Completed 200 OK in 83ms (Views: 73.8ms | ActiveRecord: 8.1ms)
+I, [2013-11-20T11:42:13.316855 #3050]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:42:13 +0600
+I, [2013-11-20T11:42:13.319747 #3050]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:42:13.319885 #3050]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:42:13.337929 #3050]  INFO -- :   Rendered photos/_form.html.erb (15.1ms)
+I, [2013-11-20T11:42:13.338426 #3050]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (16.6ms)
+I, [2013-11-20T11:42:13.347704 #3050]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.3ms)
+I, [2013-11-20T11:42:13.351956 #3050]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T11:42:13.354429 #3050]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.4ms)
+I, [2013-11-20T11:42:13.355847 #3050]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2013-11-20T11:42:13.356556 #3050]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T11:42:13.356883 #3050]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:42:13.360960 #3050]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T11:42:13.361333 #3050]  INFO -- : Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 2.3ms)
+I, [2013-11-20T11:43:20.939266 #3092]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:43:20 +0600
+I, [2013-11-20T11:43:20.975558 #3092]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:43:20.975635 #3092]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:43:21.210210 #3092]  INFO -- :   Rendered photos/_form.html.erb (213.6ms)
+I, [2013-11-20T11:43:21.210793 #3092]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (215.5ms)
+I, [2013-11-20T11:43:21.303203 #3092]  INFO -- :   Rendered layouts/_common_menu.html.erb (90.0ms)
+I, [2013-11-20T11:43:21.311583 #3092]  INFO -- :   Rendered layouts/_moder_menu.html (3.3ms)
+I, [2013-11-20T11:43:21.313798 #3092]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.1ms)
+I, [2013-11-20T11:43:21.316120 #3092]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T11:43:21.320055 #3092]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.1ms)
+I, [2013-11-20T11:43:21.321509 #3092]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-11-20T11:43:21.325740 #3092]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T11:43:21.326310 #3092]  INFO -- : Completed 200 OK in 351ms (Views: 311.5ms | ActiveRecord: 21.0ms)
+I, [2013-11-20T11:43:22.798673 #3092]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:43:22 +0600
+I, [2013-11-20T11:43:22.803989 #3092]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:43:22.804108 #3092]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:43:22.818533 #3092]  INFO -- :   Rendered photos/_form.html.erb (12.8ms)
+I, [2013-11-20T11:43:22.818996 #3092]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (13.5ms)
+I, [2013-11-20T11:43:22.828551 #3092]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.7ms)
+I, [2013-11-20T11:43:22.833326 #3092]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T11:43:22.835955 #3092]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.8ms)
+I, [2013-11-20T11:43:22.837297 #3092]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-11-20T11:43:22.838270 #3092]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-11-20T11:43:22.838717 #3092]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:43:22.842600 #3092]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.6ms)
+I, [2013-11-20T11:43:22.843078 #3092]  INFO -- : Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:44:26.778266 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:26 +0600
+I, [2013-11-20T11:44:26.815984 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:26.816098 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:27.042196 #3142]  INFO -- :   Rendered photos/_form.html.erb (202.5ms)
+I, [2013-11-20T11:44:27.042829 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (204.4ms)
+I, [2013-11-20T11:44:27.135863 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (90.2ms)
+I, [2013-11-20T11:44:27.144271 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (3.4ms)
+I, [2013-11-20T11:44:27.146581 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.3ms)
+I, [2013-11-20T11:44:27.148915 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T11:44:27.152774 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.0ms)
+I, [2013-11-20T11:44:27.154251 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T11:44:27.158309 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T11:44:27.158771 #3142]  INFO -- : Completed 200 OK in 342ms (Views: 300.9ms | ActiveRecord: 21.1ms)
+I, [2013-11-20T11:44:28.421544 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:28 +0600
+I, [2013-11-20T11:44:28.426699 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:28.426817 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:28.440562 #3142]  INFO -- :   Rendered photos/_form.html.erb (12.1ms)
+I, [2013-11-20T11:44:28.441056 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.8ms)
+I, [2013-11-20T11:44:28.450670 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.7ms)
+I, [2013-11-20T11:44:28.454796 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (1.9ms)
+I, [2013-11-20T11:44:28.456287 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.3ms)
+I, [2013-11-20T11:44:28.457180 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T11:44:28.458278 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-11-20T11:44:28.458836 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T11:44:28.462088 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.0ms)
+I, [2013-11-20T11:44:28.462658 #3142]  INFO -- : Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:44:29.119374 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:29 +0600
+I, [2013-11-20T11:44:29.122126 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:29.122262 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:29.135083 #3142]  INFO -- :   Rendered photos/_form.html.erb (11.4ms)
+I, [2013-11-20T11:44:29.135522 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.1ms)
+I, [2013-11-20T11:44:29.143620 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.3ms)
+I, [2013-11-20T11:44:29.204302 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (58.4ms)
+I, [2013-11-20T11:44:29.206512 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (61.6ms)
+I, [2013-11-20T11:44:29.207490 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T11:44:29.208288 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T11:44:29.208629 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:44:29.211186 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.4ms)
+I, [2013-11-20T11:44:29.211637 #3142]  INFO -- : Completed 200 OK in 89ms (Views: 86.4ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:44:29.725666 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:29 +0600
+I, [2013-11-20T11:44:29.728881 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:29.729004 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:29.742458 #3142]  INFO -- :   Rendered photos/_form.html.erb (11.8ms)
+I, [2013-11-20T11:44:29.742975 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.5ms)
+I, [2013-11-20T11:44:29.752028 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.2ms)
+I, [2013-11-20T11:44:29.756305 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T11:44:29.757832 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.5ms)
+I, [2013-11-20T11:44:29.758588 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T11:44:29.759196 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-11-20T11:44:29.759505 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:44:29.761879 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T11:44:29.762370 #3142]  INFO -- : Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T11:44:30.319239 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:30 +0600
+I, [2013-11-20T11:44:30.322097 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:30.322235 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:30.334642 #3142]  INFO -- :   Rendered photos/_form.html.erb (11.1ms)
+I, [2013-11-20T11:44:30.335061 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (11.7ms)
+I, [2013-11-20T11:44:30.343576 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.7ms)
+I, [2013-11-20T11:44:30.347641 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (1.9ms)
+I, [2013-11-20T11:44:30.349708 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.8ms)
+I, [2013-11-20T11:44:30.350661 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T11:44:30.351306 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-11-20T11:44:30.351654 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:44:30.354212 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.3ms)
+I, [2013-11-20T11:44:30.354688 #3142]  INFO -- : Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:44:41.928679 #3142]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:44:41 +0600
+I, [2013-11-20T11:44:41.930767 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:44:41.930879 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:44:41.951869 #3142]  INFO -- :   Rendered photos/_form.html.erb (19.6ms)
+I, [2013-11-20T11:44:41.952422 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (20.4ms)
+I, [2013-11-20T11:44:42.018202 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (64.8ms)
+I, [2013-11-20T11:44:42.021068 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (1.9ms)
+I, [2013-11-20T11:44:42.021806 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T11:44:42.022148 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:44:42.026896 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (4.5ms)
+I, [2013-11-20T11:44:42.027380 #3142]  INFO -- : Completed 500 Internal Server Error in 96ms
+F, [2013-11-20T11:44:42.030985 #3142] FATAL -- : 
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"photos", :locale=>:ru, :user_id=>nil, :format=>nil} missing required keys: [:user_id]):
+    3: 
+    4: <ul class="nav">
+    5: 
+    6:       <li><%= link_to "Фотографии",user_photos_path(current_user) %></li>
+    7:       <li><%= link_to "Сообщения",user_messages_path(current_user) %></li>
+    8:       <li><%= link_to "Конкурсы",competitions_path %></li>
+    9:       <li><%= link_to "Жюри",jury_choose_competition_path if current_user.in_jury? %></li>
+  app/views/layouts/_user_sidebar.html.erb:6:in `_app_views_layouts__user_sidebar_html_erb___469410549412087251_70274395525480'
+  app/views/layouts/user_profile_layout.html.erb:52:in `_app_views_layouts_user_profile_layout_html_erb___521848364030056615_70274395508880'
+
+
+I, [2013-11-20T11:44:51.437946 #3142]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-20 11:44:51 +0600
+I, [2013-11-20T11:44:51.443239 #3142]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T11:44:51.702668 #3142]  INFO -- :   Rendered home/index.html.erb within layouts/application (12.7ms)
+I, [2013-11-20T11:44:51.711991 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.5ms)
+I, [2013-11-20T11:44:51.714591 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (1.7ms)
+I, [2013-11-20T11:44:51.715378 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T11:44:51.715986 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T11:44:51.716451 #3142]  INFO -- : Completed 200 OK in 273ms (Views: 28.4ms | ActiveRecord: 62.5ms)
+I, [2013-11-20T11:44:54.037125 #3142]  INFO -- : Started GET "/ru/users/sign_in" for 127.0.0.1 at 2013-11-20 11:44:54 +0600
+I, [2013-11-20T11:44:54.041834 #3142]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2013-11-20T11:44:54.041912 #3142]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:44:54.081832 #3142]  INFO -- :   Rendered devise/shared/_links.html.erb (3.4ms)
+I, [2013-11-20T11:44:54.082140 #3142]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (35.1ms)
+I, [2013-11-20T11:44:54.091451 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.7ms)
+I, [2013-11-20T11:44:54.094588 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (2.1ms)
+I, [2013-11-20T11:44:54.095610 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-11-20T11:44:54.096265 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T11:44:54.096816 #3142]  INFO -- : Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+I, [2013-11-20T11:45:00.807180 #3142]  INFO -- : Started POST "/ru/users/sign_in" for 127.0.0.1 at 2013-11-20 11:45:00 +0600
+I, [2013-11-20T11:45:00.811272 #3142]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2013-11-20T11:45:00.811374 #3142]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Cy/oFk7hFOpLQQiHsedS651u4SHMG+Brvr4NgKQeCg=", "user"=>{"email"=>"vith77@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in", "locale"=>"ru"}
+I, [2013-11-20T11:45:00.921126 #3142]  INFO -- : Redirected to http://localhost:3000/?locale=ru
+I, [2013-11-20T11:45:00.921330 #3142]  INFO -- : Completed 302 Found in 110ms (ActiveRecord: 16.8ms)
+I, [2013-11-20T11:45:00.924852 #3142]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 11:45:00 +0600
+I, [2013-11-20T11:45:00.928184 #3142]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T11:45:00.928255 #3142]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T11:45:01.012330 #3142]  INFO -- :   Rendered home/index.html.erb within layouts/application (11.0ms)
+I, [2013-11-20T11:45:01.023834 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.4ms)
+I, [2013-11-20T11:45:01.028406 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T11:45:01.030339 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.9ms)
+I, [2013-11-20T11:45:01.031220 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T11:45:01.031837 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-11-20T11:45:01.032292 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:45:01.032694 #3142]  INFO -- : Completed 200 OK in 104ms (Views: 30.1ms | ActiveRecord: 4.2ms)
+I, [2013-11-20T11:45:07.666229 #3142]  INFO -- : Started GET "/user_profile/ru/18" for 127.0.0.1 at 2013-11-20 11:45:07 +0600
+I, [2013-11-20T11:45:07.670454 #3142]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-11-20T11:45:07.670570 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"18"}
+I, [2013-11-20T11:45:07.674089 #3142]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.7ms)
+I, [2013-11-20T11:45:07.686556 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.5ms)
+I, [2013-11-20T11:45:07.693956 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (2.9ms)
+I, [2013-11-20T11:45:07.696060 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (7.5ms)
+I, [2013-11-20T11:45:07.698523 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T11:45:07.700392 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.0ms)
+I, [2013-11-20T11:45:07.702131 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T11:45:07.706462 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T11:45:07.707063 #3142]  INFO -- : Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 1.6ms)
+I, [2013-11-20T11:45:08.737299 #3142]  INFO -- : Started GET "/ru/users/18/photos" for 127.0.0.1 at 2013-11-20 11:45:08 +0600
+I, [2013-11-20T11:45:08.739944 #3142]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-11-20T11:45:08.740028 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"18"}
+I, [2013-11-20T11:45:08.749520 #3142]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (1.5ms)
+I, [2013-11-20T11:45:08.758555 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.1ms)
+I, [2013-11-20T11:45:08.762760 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T11:45:08.764311 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T11:45:08.765076 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T11:45:08.765837 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T11:45:08.766182 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T11:45:08.768357 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.0ms)
+I, [2013-11-20T11:45:08.768746 #3142]  INFO -- : Completed 200 OK in 29ms (Views: 20.6ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:45:10.049144 #3142]  INFO -- : Started GET "/ru/users/18/photos/new" for 127.0.0.1 at 2013-11-20 11:45:10 +0600
+I, [2013-11-20T11:45:10.051706 #3142]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:45:10.051839 #3142]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"18"}
+I, [2013-11-20T11:45:10.068085 #3142]  INFO -- :   Rendered photos/_form.html.erb (12.8ms)
+I, [2013-11-20T11:45:10.068547 #3142]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (14.5ms)
+I, [2013-11-20T11:45:10.077408 #3142]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.9ms)
+I, [2013-11-20T11:45:10.081758 #3142]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T11:45:10.083278 #3142]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T11:45:10.084187 #3142]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T11:45:10.085210 #3142]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-11-20T11:45:10.085687 #3142]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T11:45:10.089349 #3142]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T11:45:10.089904 #3142]  INFO -- : Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T11:58:14.420474 #3354]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 11:58:14 +0600
+I, [2013-11-20T11:58:14.456250 #3354]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T11:58:14.456328 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T11:58:14.685662 #3354]  INFO -- :   Rendered photos/_form.html.erb (204.9ms)
+I, [2013-11-20T11:58:14.686267 #3354]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (206.8ms)
+I, [2013-11-20T11:58:14.780991 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (92.3ms)
+I, [2013-11-20T11:58:14.789198 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (3.2ms)
+I, [2013-11-20T11:58:14.791440 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (7.9ms)
+I, [2013-11-20T11:58:14.793770 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T11:58:14.797923 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.2ms)
+I, [2013-11-20T11:58:14.799595 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T11:58:14.803724 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T11:58:14.804163 #3354]  INFO -- : Completed 200 OK in 348ms (Views: 306.1ms | ActiveRecord: 20.2ms)
+I, [2013-11-20T12:00:13.851042 #3354]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:00:13 +0600
+I, [2013-11-20T12:00:13.856683 #3354]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:00:13.856800 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:13.871758 #3354]  INFO -- :   Rendered photos/_form.html.erb (12.7ms)
+I, [2013-11-20T12:00:13.872262 #3354]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (13.5ms)
+I, [2013-11-20T12:00:13.885592 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.3ms)
+I, [2013-11-20T12:00:13.890552 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (2.3ms)
+I, [2013-11-20T12:00:13.893744 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.5ms)
+I, [2013-11-20T12:00:13.894989 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-11-20T12:00:13.896025 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-11-20T12:00:13.896688 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T12:00:13.900502 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.5ms)
+I, [2013-11-20T12:00:13.901019 #3354]  INFO -- : Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 2.5ms)
+I, [2013-11-20T12:00:25.598628 #3354]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:00:25 +0600
+I, [2013-11-20T12:00:25.602064 #3354]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:00:25.602214 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:25.674969 #3354]  INFO -- :   Rendered photos/_form.html.erb (71.3ms)
+I, [2013-11-20T12:00:25.675503 #3354]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (72.1ms)
+I, [2013-11-20T12:00:25.687366 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.9ms)
+I, [2013-11-20T12:00:25.692045 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (2.2ms)
+I, [2013-11-20T12:00:25.693683 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.9ms)
+I, [2013-11-20T12:00:25.694505 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:00:25.695133 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:00:25.695475 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:00:25.697734 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.1ms)
+I, [2013-11-20T12:00:25.698208 #3354]  INFO -- : Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 2.3ms)
+I, [2013-11-20T12:00:38.528557 #3354]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:00:38 +0600
+I, [2013-11-20T12:00:38.531605 #3354]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:00:38.531754 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:38.546706 #3354]  INFO -- :   Rendered photos/_form.html.erb (13.3ms)
+I, [2013-11-20T12:00:38.547195 #3354]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (14.0ms)
+I, [2013-11-20T12:00:38.557657 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.6ms)
+I, [2013-11-20T12:00:38.562531 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (2.3ms)
+I, [2013-11-20T12:00:38.564079 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.9ms)
+I, [2013-11-20T12:00:38.564834 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:00:38.565428 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.4ms)
+I, [2013-11-20T12:00:38.565720 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2013-11-20T12:00:38.568079 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:00:38.568508 #3354]  INFO -- : Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T12:00:40.624730 #3354]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:00:40 +0600
+I, [2013-11-20T12:00:40.627841 #3354]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:00:40.627967 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:40.640749 #3354]  INFO -- :   Rendered photos/_form.html.erb (11.3ms)
+I, [2013-11-20T12:00:40.641238 #3354]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.0ms)
+I, [2013-11-20T12:00:40.649273 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.2ms)
+I, [2013-11-20T12:00:40.653413 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (1.9ms)
+I, [2013-11-20T12:00:40.654936 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T12:00:40.655901 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T12:00:40.656576 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:00:40.656908 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:00:40.659142 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.0ms)
+I, [2013-11-20T12:00:40.659510 #3354]  INFO -- : Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T12:00:43.906439 #3354]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 12:00:43 +0600
+I, [2013-11-20T12:00:43.910226 #3354]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T12:00:43.910298 #3354]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T12:00:44.119965 #3354]  INFO -- :   Rendered home/index.html.erb within layouts/application (12.4ms)
+I, [2013-11-20T12:00:44.135404 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (13.0ms)
+I, [2013-11-20T12:00:44.143259 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (2.8ms)
+I, [2013-11-20T12:00:44.145351 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (7.7ms)
+I, [2013-11-20T12:00:44.147628 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-11-20T12:00:44.149471 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.9ms)
+I, [2013-11-20T12:00:44.208608 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (58.1ms)
+I, [2013-11-20T12:00:44.209050 #3354]  INFO -- : Completed 200 OK in 299ms (Views: 102.1ms | ActiveRecord: 23.2ms)
+I, [2013-11-20T12:00:45.727343 #3354]  INFO -- : Started GET "/user_profile/ru/1" for 127.0.0.1 at 2013-11-20 12:00:45 +0600
+I, [2013-11-20T12:00:45.731699 #3354]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-11-20T12:00:45.731777 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:45.734939 #3354]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.6ms)
+I, [2013-11-20T12:00:45.745820 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.7ms)
+I, [2013-11-20T12:00:45.750218 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T12:00:45.751718 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.5ms)
+I, [2013-11-20T12:00:45.752754 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (0.8ms)
+I, [2013-11-20T12:00:45.753393 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:00:45.753737 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:00:45.757754 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.1ms)
+I, [2013-11-20T12:00:45.758201 #3354]  INFO -- : Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 1.6ms)
+I, [2013-11-20T12:00:46.791273 #3354]  INFO -- : Started GET "/ru/users/1/photos" for 127.0.0.1 at 2013-11-20 12:00:46 +0600
+I, [2013-11-20T12:00:46.793671 #3354]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-11-20T12:00:46.793754 #3354]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:00:46.814026 #3354]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (12.1ms)
+I, [2013-11-20T12:00:46.826170 #3354]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.1ms)
+I, [2013-11-20T12:00:46.830415 #3354]  INFO -- :   Rendered layouts/_moder_menu.html (1.9ms)
+I, [2013-11-20T12:00:46.831995 #3354]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T12:00:46.832837 #3354]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:00:46.833694 #3354]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-11-20T12:00:46.834092 #3354]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:00:46.836337 #3354]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.1ms)
+I, [2013-11-20T12:00:46.836797 #3354]  INFO -- : Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 2.2ms)
+I, [2013-11-20T12:01:28.612233 #3432]  INFO -- : Started GET "/ru/users/1/photos" for 127.0.0.1 at 2013-11-20 12:01:28 +0600
+I, [2013-11-20T12:01:28.648576 #3432]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-11-20T12:01:28.648653 #3432]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:01:28.840429 #3432]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (13.3ms)
+I, [2013-11-20T12:01:28.884252 #3432]  INFO -- :   Rendered layouts/_common_menu.html.erb (41.3ms)
+I, [2013-11-20T12:01:28.893031 #3432]  INFO -- :   Rendered layouts/_moder_menu.html (3.1ms)
+I, [2013-11-20T12:01:28.895221 #3432]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.0ms)
+I, [2013-11-20T12:01:28.897914 #3432]  INFO -- :   Rendered layouts/_navigation.html.erb (1.7ms)
+I, [2013-11-20T12:01:28.901767 #3432]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.0ms)
+I, [2013-11-20T12:01:28.903228 #3432]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-11-20T12:01:28.907301 #3432]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T12:01:28.965420 #3432]  INFO -- : Completed 200 OK in 317ms (Views: 131.3ms | ActiveRecord: 18.0ms)
+I, [2013-11-20T12:01:31.498250 #3432]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:01:31 +0600
+I, [2013-11-20T12:01:31.503495 #3432]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:01:31.503614 #3432]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:01:31.626321 #3432]  INFO -- :   Rendered photos/_form.html.erb (119.4ms)
+I, [2013-11-20T12:01:31.626918 #3432]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (121.1ms)
+I, [2013-11-20T12:01:31.639462 #3432]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.0ms)
+I, [2013-11-20T12:01:31.647040 #3432]  INFO -- :   Rendered layouts/_moder_menu.html (2.9ms)
+I, [2013-11-20T12:01:31.649292 #3432]  INFO -- :   Rendered layouts/_admin_menu.html.erb (7.7ms)
+I, [2013-11-20T12:01:31.652869 #3432]  INFO -- :   Rendered layouts/_navigation.html.erb (2.1ms)
+I, [2013-11-20T12:01:31.655494 #3432]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.4ms)
+I, [2013-11-20T12:01:31.657253 #3432]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:01:31.661505 #3432]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T12:01:31.661911 #3432]  INFO -- : Completed 200 OK in 158ms (Views: 149.3ms | ActiveRecord: 7.7ms)
+I, [2013-11-20T12:01:53.269091 #3432]  INFO -- : Started GET "/photo_ajax/theme_tokens?q=d" for 127.0.0.1 at 2013-11-20 12:01:53 +0600
+I, [2013-11-20T12:01:53.272996 #3432]  INFO -- : Processing by PhotoAjaxController#theme_tokens as JSON
+I, [2013-11-20T12:01:53.273068 #3432]  INFO -- :   Parameters: {"q"=>"d"}
+I, [2013-11-20T12:01:53.307439 #3432]  INFO -- : Completed 200 OK in 34ms (Views: 0.3ms | ActiveRecord: 29.9ms)
+I, [2013-11-20T12:06:14.133622 #3528]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:06:14 +0600
+I, [2013-11-20T12:06:14.168086 #3528]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:06:14.168167 #3528]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:06:14.412320 #3528]  INFO -- :   Rendered photos/_form.html.erb (219.6ms)
+I, [2013-11-20T12:06:14.412906 #3528]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (221.5ms)
+I, [2013-11-20T12:06:14.511703 #3528]  INFO -- :   Rendered layouts/_common_menu.html.erb (96.3ms)
+I, [2013-11-20T12:06:14.522077 #3528]  INFO -- :   Rendered layouts/_moder_menu.html (3.2ms)
+I, [2013-11-20T12:06:14.524651 #3528]  INFO -- :   Rendered layouts/_admin_menu.html.erb (9.6ms)
+I, [2013-11-20T12:06:14.527102 #3528]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T12:06:14.531637 #3528]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.6ms)
+I, [2013-11-20T12:06:14.533302 #3528]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:06:14.537488 #3528]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T12:06:14.538000 #3528]  INFO -- : Completed 200 OK in 370ms (Views: 331.7ms | ActiveRecord: 16.4ms)
+I, [2013-11-20T12:06:17.273281 #3528]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:06:17 +0600
+I, [2013-11-20T12:06:17.277916 #3528]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:06:17.278033 #3528]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:06:17.291584 #3528]  INFO -- :   Rendered photos/_form.html.erb (11.9ms)
+I, [2013-11-20T12:06:17.292020 #3528]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.6ms)
+I, [2013-11-20T12:06:17.300888 #3528]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.0ms)
+I, [2013-11-20T12:06:17.304966 #3528]  INFO -- :   Rendered layouts/_moder_menu.html (1.9ms)
+I, [2013-11-20T12:06:17.306531 #3528]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T12:06:17.307325 #3528]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:06:17.308025 #3528]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:06:17.308382 #3528]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:06:17.311623 #3528]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.0ms)
+I, [2013-11-20T12:06:17.312196 #3528]  INFO -- : Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T12:06:18.194258 #3528]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:06:18 +0600
+I, [2013-11-20T12:06:18.196580 #3528]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:06:18.196668 #3528]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:06:18.211674 #3528]  INFO -- :   Rendered photos/_form.html.erb (13.4ms)
+I, [2013-11-20T12:06:18.212213 #3528]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (14.1ms)
+I, [2013-11-20T12:06:18.220640 #3528]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.5ms)
+I, [2013-11-20T12:06:18.285133 #3528]  INFO -- :   Rendered layouts/_moder_menu.html (61.2ms)
+I, [2013-11-20T12:06:18.287325 #3528]  INFO -- :   Rendered layouts/_admin_menu.html.erb (65.0ms)
+I, [2013-11-20T12:06:18.288246 #3528]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T12:06:18.288922 #3528]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:06:18.289268 #3528]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:06:18.291640 #3528]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:06:18.292131 #3528]  INFO -- : Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T12:06:18.992866 #3528]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:06:18 +0600
+I, [2013-11-20T12:06:18.996548 #3528]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:06:18.996688 #3528]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:06:19.010657 #3528]  INFO -- :   Rendered photos/_form.html.erb (12.3ms)
+I, [2013-11-20T12:06:19.011089 #3528]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.9ms)
+I, [2013-11-20T12:06:19.022250 #3528]  INFO -- :   Rendered layouts/_common_menu.html.erb (10.2ms)
+I, [2013-11-20T12:06:19.027606 #3528]  INFO -- :   Rendered layouts/_moder_menu.html (2.2ms)
+I, [2013-11-20T12:06:19.030775 #3528]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.0ms)
+I, [2013-11-20T12:06:19.034606 #3528]  INFO -- :   Rendered layouts/_navigation.html.erb (1.2ms)
+I, [2013-11-20T12:06:19.035639 #3528]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.8ms)
+I, [2013-11-20T12:06:19.036104 #3528]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:06:19.039901 #3528]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.5ms)
+I, [2013-11-20T12:06:19.040428 #3528]  INFO -- : Completed 200 OK in 44ms (Views: 40.1ms | ActiveRecord: 2.2ms)
+I, [2013-11-20T12:07:42.172403 #3528]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:07:42 +0600
+I, [2013-11-20T12:07:42.175510 #3528]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:07:42.175605 #3528]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:07:42.192217 #3528]  INFO -- :   Rendered photos/_form.html.erb (14.8ms)
+I, [2013-11-20T12:07:42.192841 #3528]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (15.7ms)
+I, [2013-11-20T12:07:42.202295 #3528]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.3ms)
+I, [2013-11-20T12:07:42.206992 #3528]  INFO -- :   Rendered layouts/_moder_menu.html (2.4ms)
+I, [2013-11-20T12:07:42.209160 #3528]  INFO -- :   Rendered layouts/_admin_menu.html.erb (5.5ms)
+I, [2013-11-20T12:07:42.210510 #3528]  INFO -- :   Rendered layouts/_navigation.html.erb (1.0ms)
+I, [2013-11-20T12:07:42.211279 #3528]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T12:07:42.211664 #3528]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:07:42.214035 #3528]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:07:42.214476 #3528]  INFO -- : Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 2.0ms)
+I, [2013-11-20T12:09:35.590298 #3602]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:09:35 +0600
+I, [2013-11-20T12:09:35.625867 #3602]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:09:35.625947 #3602]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:09:35.852111 #3602]  INFO -- :   Rendered photos/_form.html.erb (203.2ms)
+I, [2013-11-20T12:09:35.852750 #3602]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (205.1ms)
+I, [2013-11-20T12:09:35.948013 #3602]  INFO -- :   Rendered layouts/_common_menu.html.erb (92.6ms)
+I, [2013-11-20T12:09:35.957291 #3602]  INFO -- :   Rendered layouts/_moder_menu.html (3.6ms)
+I, [2013-11-20T12:09:35.959586 #3602]  INFO -- :   Rendered layouts/_admin_menu.html.erb (9.1ms)
+I, [2013-11-20T12:09:35.962146 #3602]  INFO -- :   Rendered layouts/_navigation.html.erb (1.6ms)
+I, [2013-11-20T12:09:35.966056 #3602]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.0ms)
+I, [2013-11-20T12:09:35.967562 #3602]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:09:35.971987 #3602]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.6ms)
+I, [2013-11-20T12:09:35.972458 #3602]  INFO -- : Completed 200 OK in 346ms (Views: 304.7ms | ActiveRecord: 21.7ms)
+I, [2013-11-20T12:09:57.465829 #3602]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:09:57 +0600
+I, [2013-11-20T12:09:57.469872 #3602]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:09:57.469949 #3602]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:09:57.483274 #3602]  INFO -- :   Rendered photos/_form.html.erb (10.9ms)
+I, [2013-11-20T12:09:57.483722 #3602]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (11.7ms)
+I, [2013-11-20T12:09:57.492773 #3602]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.2ms)
+I, [2013-11-20T12:09:57.497176 #3602]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T12:09:57.498722 #3602]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.6ms)
+I, [2013-11-20T12:09:57.499811 #3602]  INFO -- :   Rendered layouts/_navigation.html.erb (0.9ms)
+I, [2013-11-20T12:09:57.501038 #3602]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.9ms)
+I, [2013-11-20T12:09:57.501556 #3602]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T12:09:57.505373 #3602]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.6ms)
+I, [2013-11-20T12:09:57.505859 #3602]  INFO -- : Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T12:13:37.081120 #3678]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:13:37 +0600
+I, [2013-11-20T12:13:37.117223 #3678]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:13:37.117301 #3678]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:13:37.351048 #3678]  INFO -- :   Rendered photos/_form.html.erb (209.1ms)
+I, [2013-11-20T12:13:37.351987 #3678]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (211.4ms)
+I, [2013-11-20T12:13:37.446705 #3678]  INFO -- :   Rendered layouts/_common_menu.html.erb (91.9ms)
+I, [2013-11-20T12:13:37.455820 #3678]  INFO -- :   Rendered layouts/_moder_menu.html (3.8ms)
+I, [2013-11-20T12:13:37.458102 #3678]  INFO -- :   Rendered layouts/_admin_menu.html.erb (9.0ms)
+I, [2013-11-20T12:13:37.460848 #3678]  INFO -- :   Rendered layouts/_navigation.html.erb (1.8ms)
+I, [2013-11-20T12:13:37.464982 #3678]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.1ms)
+I, [2013-11-20T12:13:37.466546 #3678]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:13:37.471104 #3678]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.7ms)
+I, [2013-11-20T12:13:37.471700 #3678]  INFO -- : Completed 200 OK in 354ms (Views: 312.0ms | ActiveRecord: 20.6ms)
+I, [2013-11-20T12:16:10.266353 #3731]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:16:10 +0600
+I, [2013-11-20T12:16:10.267409 #3731]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:16:10 +0600
+I, [2013-11-20T12:16:10.301696 #3731]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:16:10.301828 #3731]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:16:10.329580 #3731]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:16:10.329694 #3731]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:16:10.623915 #3731]  INFO -- :   Rendered photos/_form.html.erb (288.3ms)
+I, [2013-11-20T12:16:10.624766 #3731]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (290.7ms)
+I, [2013-11-20T12:16:10.633129 #3731]  INFO -- :   Rendered photos/_form.html.erb (295.3ms)
+I, [2013-11-20T12:16:10.636414 #3731]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (299.2ms)
+I, [2013-11-20T12:16:10.685753 #3731]  INFO -- :   Rendered layouts/_common_menu.html.erb (52.3ms)
+I, [2013-11-20T12:16:10.692280 #3731]  INFO -- :   Rendered layouts/_common_menu.html.erb (54.8ms)
+I, [2013-11-20T12:16:10.698699 #3731]  INFO -- :   Rendered layouts/_moder_menu.html (3.3ms)
+I, [2013-11-20T12:16:10.704311 #3731]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T12:16:10.706169 #3731]  INFO -- :   Rendered layouts/_admin_menu.html.erb (13.6ms)
+I, [2013-11-20T12:16:10.707753 #3731]  INFO -- :   Rendered layouts/_admin_menu.html.erb (6.7ms)
+I, [2013-11-20T12:16:10.710917 #3731]  INFO -- :   Rendered layouts/_navigation.html.erb (1.6ms)
+I, [2013-11-20T12:16:10.713111 #3731]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-11-20T12:16:10.718050 #3731]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.8ms)
+I, [2013-11-20T12:16:10.719517 #3731]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.1ms)
+I, [2013-11-20T12:16:10.721731 #3731]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:16:10.723944 #3731]  INFO -- :   Rendered layouts/_messages.html.erb (1.0ms)
+I, [2013-11-20T12:16:10.730423 #3731]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (5.4ms)
+I, [2013-11-20T12:16:10.735223 #3731]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.9ms)
+I, [2013-11-20T12:16:10.735531 #3731]  INFO -- : Completed 200 OK in 433ms (Views: 376.9ms | ActiveRecord: 28.3ms)
+I, [2013-11-20T12:16:10.735606 #3731]  INFO -- : Completed 200 OK in 404ms (Views: 123.4ms | ActiveRecord: 279.6ms)
+I, [2013-11-20T12:17:07.644898 #3781]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:17:07 +0600
+I, [2013-11-20T12:17:07.680042 #3781]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:17:07.680116 #3781]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:17:07.906006 #3781]  INFO -- :   Rendered photos/_form.html.erb (202.0ms)
+I, [2013-11-20T12:17:07.906575 #3781]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (203.9ms)
+I, [2013-11-20T12:17:07.999587 #3781]  INFO -- :   Rendered layouts/_common_menu.html.erb (90.6ms)
+I, [2013-11-20T12:17:08.011168 #3781]  INFO -- :   Rendered layouts/_moder_menu.html (4.2ms)
+I, [2013-11-20T12:17:08.013740 #3781]  INFO -- :   Rendered layouts/_admin_menu.html.erb (11.6ms)
+I, [2013-11-20T12:17:08.016183 #3781]  INFO -- :   Rendered layouts/_navigation.html.erb (1.6ms)
+I, [2013-11-20T12:17:08.020367 #3781]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.2ms)
+I, [2013-11-20T12:17:08.022137 #3781]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:17:08.026298 #3781]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T12:17:08.026739 #3781]  INFO -- : Completed 200 OK in 346ms (Views: 251.9ms | ActiveRecord: 73.7ms)
+I, [2013-11-20T12:17:10.926556 #3781]  INFO -- : Started GET "/?locale=ru" for 127.0.0.1 at 2013-11-20 12:17:10 +0600
+I, [2013-11-20T12:17:10.930512 #3781]  INFO -- : Processing by HomeController#index as HTML
+I, [2013-11-20T12:17:10.930586 #3781]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T12:17:11.135836 #3781]  INFO -- :   Rendered home/index.html.erb within layouts/application (11.5ms)
+I, [2013-11-20T12:17:11.151580 #3781]  INFO -- :   Rendered layouts/_common_menu.html.erb (13.4ms)
+I, [2013-11-20T12:17:11.227483 #3781]  INFO -- :   Rendered layouts/_moder_menu.html (3.2ms)
+I, [2013-11-20T12:17:11.229649 #3781]  INFO -- :   Rendered layouts/_admin_menu.html.erb (75.9ms)
+I, [2013-11-20T12:17:11.231911 #3781]  INFO -- :   Rendered layouts/_navigation.html.erb (1.3ms)
+I, [2013-11-20T12:17:11.233765 #3781]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.0ms)
+I, [2013-11-20T12:17:11.235314 #3781]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-11-20T12:17:11.235709 #3781]  INFO -- : Completed 200 OK in 305ms (Views: 112.0ms | ActiveRecord: 22.8ms)
+I, [2013-11-20T12:17:12.747236 #3781]  INFO -- : Started GET "/user_profile/ru/1" for 127.0.0.1 at 2013-11-20 12:17:12 +0600
+I, [2013-11-20T12:17:12.751607 #3781]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-11-20T12:17:12.751683 #3781]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:17:12.754842 #3781]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.7ms)
+I, [2013-11-20T12:17:12.771539 #3781]  INFO -- :   Rendered layouts/_common_menu.html.erb (14.5ms)
+I, [2013-11-20T12:17:12.776640 #3781]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T12:17:12.778336 #3781]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.8ms)
+I, [2013-11-20T12:17:12.779134 #3781]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:17:12.779967 #3781]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-11-20T12:17:12.780378 #3781]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:17:12.784780 #3781]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.5ms)
+I, [2013-11-20T12:17:12.785172 #3781]  INFO -- : Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 2.1ms)
+I, [2013-11-20T12:17:14.057680 #3781]  INFO -- : Started GET "/ru/users/1/photos" for 127.0.0.1 at 2013-11-20 12:17:14 +0600
+I, [2013-11-20T12:17:14.061859 #3781]  INFO -- : Processing by PhotosController#index as HTML
+I, [2013-11-20T12:17:14.061932 #3781]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:17:14.144220 #3781]  INFO -- :   Rendered photos/index.html.erb within layouts/user_profile_layout (14.5ms)
+I, [2013-11-20T12:17:14.153457 #3781]  INFO -- :   Rendered layouts/_common_menu.html.erb (8.2ms)
+I, [2013-11-20T12:17:14.157919 #3781]  INFO -- :   Rendered layouts/_moder_menu.html (2.1ms)
+I, [2013-11-20T12:17:14.159553 #3781]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.7ms)
+I, [2013-11-20T12:17:14.160322 #3781]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:17:14.161039 #3781]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:17:14.161374 #3781]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:17:14.163711 #3781]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:17:14.164201 #3781]  INFO -- : Completed 200 OK in 102ms (Views: 35.0ms | ActiveRecord: 2.1ms)
+I, [2013-11-20T12:17:15.056766 #3781]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:17:15 +0600
+I, [2013-11-20T12:17:15.059134 #3781]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:17:15.059247 #3781]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:17:15.073735 #3781]  INFO -- :   Rendered photos/_form.html.erb (11.4ms)
+I, [2013-11-20T12:17:15.074174 #3781]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (13.0ms)
+I, [2013-11-20T12:17:15.082765 #3781]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.7ms)
+I, [2013-11-20T12:17:15.087038 #3781]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T12:17:15.088529 #3781]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T12:17:15.089284 #3781]  INFO -- :   Rendered layouts/_navigation.html.erb (0.6ms)
+I, [2013-11-20T12:17:15.089909 #3781]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:17:15.090234 #3781]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:17:15.092651 #3781]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:17:15.093027 #3781]  INFO -- : Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 1.8ms)
+I, [2013-11-20T12:18:04.829859 #3816]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:18:04 +0600
+I, [2013-11-20T12:18:04.866125 #3816]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:18:04.866202 #3816]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:18:05.096805 #3816]  INFO -- :   Rendered photos/_form.html.erb (205.8ms)
+I, [2013-11-20T12:18:05.097414 #3816]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (207.8ms)
+I, [2013-11-20T12:18:05.191324 #3816]  INFO -- :   Rendered layouts/_common_menu.html.erb (91.5ms)
+I, [2013-11-20T12:18:05.200282 #3816]  INFO -- :   Rendered layouts/_moder_menu.html (3.2ms)
+I, [2013-11-20T12:18:05.202519 #3816]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.2ms)
+I, [2013-11-20T12:18:05.204899 #3816]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T12:18:05.208983 #3816]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.2ms)
+I, [2013-11-20T12:18:05.210738 #3816]  INFO -- :   Rendered layouts/_messages.html.erb (0.9ms)
+I, [2013-11-20T12:18:05.214972 #3816]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.3ms)
+I, [2013-11-20T12:18:05.215417 #3816]  INFO -- : Completed 200 OK in 349ms (Views: 310.1ms | ActiveRecord: 17.3ms)
+I, [2013-11-20T12:20:21.590556 #3935]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:20:21 +0600
+I, [2013-11-20T12:20:21.626519 #3935]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:20:21.626627 #3935]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:20:21.870764 #3935]  INFO -- :   Rendered photos/_form.html.erb (219.0ms)
+I, [2013-11-20T12:20:21.871395 #3935]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (221.0ms)
+I, [2013-11-20T12:20:21.969665 #3935]  INFO -- :   Rendered layouts/_common_menu.html.erb (95.4ms)
+I, [2013-11-20T12:20:21.978457 #3935]  INFO -- :   Rendered layouts/_moder_menu.html (3.1ms)
+I, [2013-11-20T12:20:21.980591 #3935]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.3ms)
+I, [2013-11-20T12:20:21.982910 #3935]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T12:20:21.986928 #3935]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.1ms)
+I, [2013-11-20T12:20:21.988552 #3935]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:20:21.993097 #3935]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.5ms)
+I, [2013-11-20T12:20:21.993619 #3935]  INFO -- : Completed 200 OK in 367ms (Views: 328.2ms | ActiveRecord: 16.7ms)
+I, [2013-11-20T12:20:36.378247 #3935]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:20:36 +0600
+I, [2013-11-20T12:20:36.383231 #3935]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:20:36.383345 #3935]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:20:36.396914 #3935]  INFO -- :   Rendered photos/_form.html.erb (11.9ms)
+I, [2013-11-20T12:20:36.397366 #3935]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (12.6ms)
+I, [2013-11-20T12:20:36.405994 #3935]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.8ms)
+I, [2013-11-20T12:20:36.410234 #3935]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T12:20:36.412034 #3935]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.7ms)
+I, [2013-11-20T12:20:36.412885 #3935]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T12:20:36.413887 #3935]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.7ms)
+I, [2013-11-20T12:20:36.414455 #3935]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2013-11-20T12:20:36.418206 #3935]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.5ms)
+I, [2013-11-20T12:20:36.418727 #3935]  INFO -- : Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 2.1ms)
+I, [2013-11-20T12:20:37.367999 #3935]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:20:37 +0600
+I, [2013-11-20T12:20:37.370826 #3935]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:20:37.370944 #3935]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:20:37.382783 #3935]  INFO -- :   Rendered photos/_form.html.erb (10.5ms)
+I, [2013-11-20T12:20:37.383214 #3935]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (11.1ms)
+I, [2013-11-20T12:20:37.391434 #3935]  INFO -- :   Rendered layouts/_common_menu.html.erb (7.4ms)
+I, [2013-11-20T12:20:37.454766 #3935]  INFO -- :   Rendered layouts/_moder_menu.html (60.9ms)
+I, [2013-11-20T12:20:37.457065 #3935]  INFO -- :   Rendered layouts/_admin_menu.html.erb (64.2ms)
+I, [2013-11-20T12:20:37.457993 #3935]  INFO -- :   Rendered layouts/_navigation.html.erb (0.7ms)
+I, [2013-11-20T12:20:37.458679 #3935]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.5ms)
+I, [2013-11-20T12:20:37.459032 #3935]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:20:37.461431 #3935]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (2.2ms)
+I, [2013-11-20T12:20:37.461825 #3935]  INFO -- : Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 1.9ms)
+I, [2013-11-20T12:21:20.962857 #3935]  INFO -- : Started GET "/photo_ajax/theme_tokens?q=d" for 127.0.0.1 at 2013-11-20 12:21:20 +0600
+I, [2013-11-20T12:21:20.968392 #3935]  INFO -- : Processing by PhotoAjaxController#theme_tokens as JSON
+I, [2013-11-20T12:21:20.968466 #3935]  INFO -- :   Parameters: {"q"=>"d"}
+I, [2013-11-20T12:21:20.974623 #3935]  INFO -- : Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+I, [2013-11-20T12:21:21.981715 #3935]  INFO -- : Started GET "/photo_ajax/theme_tokens?q=df" for 127.0.0.1 at 2013-11-20 12:21:21 +0600
+I, [2013-11-20T12:21:21.986523 #3935]  INFO -- : Processing by PhotoAjaxController#theme_tokens as JSON
+I, [2013-11-20T12:21:21.986654 #3935]  INFO -- :   Parameters: {"q"=>"df"}
+I, [2013-11-20T12:21:21.991236 #3935]  INFO -- : Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+I, [2013-11-20T12:23:01.673092 #4038]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:23:01 +0600
+I, [2013-11-20T12:23:01.708775 #4038]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:23:01.708884 #4038]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:23:01.941372 #4038]  INFO -- :   Rendered photos/_form.html.erb (206.2ms)
+I, [2013-11-20T12:23:01.941910 #4038]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (208.2ms)
+I, [2013-11-20T12:23:02.037449 #4038]  INFO -- :   Rendered layouts/_common_menu.html.erb (93.0ms)
+I, [2013-11-20T12:23:02.046214 #4038]  INFO -- :   Rendered layouts/_moder_menu.html (3.1ms)
+I, [2013-11-20T12:23:02.048551 #4038]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.2ms)
+I, [2013-11-20T12:23:02.050872 #4038]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T12:23:02.055550 #4038]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.7ms)
+I, [2013-11-20T12:23:02.057501 #4038]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:23:02.061563 #4038]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.2ms)
+I, [2013-11-20T12:23:02.062007 #4038]  INFO -- : Completed 200 OK in 353ms (Views: 311.4ms | ActiveRecord: 18.4ms)
+I, [2013-11-20T12:23:41.955464 #4073]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:23:41 +0600
+I, [2013-11-20T12:23:41.997428 #4073]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:23:41.997541 #4073]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:23:42.221565 #4073]  INFO -- :   Rendered photos/_form.html.erb (203.6ms)
+I, [2013-11-20T12:23:42.222211 #4073]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (205.6ms)
+I, [2013-11-20T12:23:42.323146 #4073]  INFO -- :   Rendered layouts/_common_menu.html.erb (98.5ms)
+I, [2013-11-20T12:23:42.334486 #4073]  INFO -- :   Rendered layouts/_moder_menu.html (4.2ms)
+I, [2013-11-20T12:23:42.336981 #4073]  INFO -- :   Rendered layouts/_admin_menu.html.erb (11.3ms)
+I, [2013-11-20T12:23:42.339417 #4073]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T12:23:42.343411 #4073]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.1ms)
+I, [2013-11-20T12:23:42.344926 #4073]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:23:42.349087 #4073]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T12:23:42.349736 #4073]  INFO -- : Completed 200 OK in 352ms (Views: 315.9ms | ActiveRecord: 18.8ms)
+I, [2013-11-20T12:27:49.893491 #4170]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:27:49 +0600
+I, [2013-11-20T12:27:49.928926 #4170]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:27:49.929005 #4170]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:27:50.172116 #4170]  INFO -- :   Rendered photos/_form.html.erb (218.0ms)
+I, [2013-11-20T12:27:50.172742 #4170]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (220.0ms)
+I, [2013-11-20T12:27:50.273985 #4170]  INFO -- :   Rendered layouts/_common_menu.html.erb (98.5ms)
+I, [2013-11-20T12:27:50.282955 #4170]  INFO -- :   Rendered layouts/_moder_menu.html (3.2ms)
+I, [2013-11-20T12:27:50.285607 #4170]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.9ms)
+I, [2013-11-20T12:27:50.288122 #4170]  INFO -- :   Rendered layouts/_navigation.html.erb (1.5ms)
+I, [2013-11-20T12:27:50.292324 #4170]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.3ms)
+I, [2013-11-20T12:27:50.294004 #4170]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:27:50.298686 #4170]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.8ms)
+I, [2013-11-20T12:27:50.299169 #4170]  INFO -- : Completed 200 OK in 370ms (Views: 327.3ms | ActiveRecord: 20.6ms)
+I, [2013-11-20T12:29:59.257789 #4224]  INFO -- : Started GET "/ru/users/1/photos/new" for 127.0.0.1 at 2013-11-20 12:29:59 +0600
+I, [2013-11-20T12:29:59.296599 #4224]  INFO -- : Processing by PhotosController#new as HTML
+I, [2013-11-20T12:29:59.296679 #4224]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:30:00.012395 #4224]  INFO -- :   Rendered photos/_form.html.erb (693.7ms)
+I, [2013-11-20T12:30:00.012970 #4224]  INFO -- :   Rendered photos/new.html.erb within layouts/user_profile_layout (695.8ms)
+I, [2013-11-20T12:30:00.110925 #4224]  INFO -- :   Rendered layouts/_common_menu.html.erb (95.4ms)
+I, [2013-11-20T12:30:00.119934 #4224]  INFO -- :   Rendered layouts/_moder_menu.html (3.3ms)
+I, [2013-11-20T12:30:00.122222 #4224]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.7ms)
+I, [2013-11-20T12:30:00.124526 #4224]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T12:30:00.128355 #4224]  INFO -- :   Rendered layouts/_lang_select.html.erb (3.0ms)
+I, [2013-11-20T12:30:00.129819 #4224]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:30:00.134108 #4224]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.4ms)
+I, [2013-11-20T12:30:00.134630 #4224]  INFO -- : Completed 200 OK in 838ms (Views: 308.9ms | ActiveRecord: 510.2ms)
+I, [2013-11-20T12:30:14.571335 #4224]  INFO -- : Started GET "/ru/admin/competitions" for 127.0.0.1 at 2013-11-20 12:30:14 +0600
+I, [2013-11-20T12:30:14.576094 #4224]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-11-20T12:30:14.576207 #4224]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T12:30:14.650244 #4224]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (65.4ms)
+I, [2013-11-20T12:30:14.662319 #4224]  INFO -- :   Rendered layouts/_common_menu.html.erb (9.1ms)
+I, [2013-11-20T12:30:14.732368 #4224]  INFO -- :   Rendered layouts/_moder_menu.html (65.5ms)
+I, [2013-11-20T12:30:14.734563 #4224]  INFO -- :   Rendered layouts/_admin_menu.html.erb (70.3ms)
+I, [2013-11-20T12:30:14.737030 #4224]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T12:30:14.739051 #4224]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.1ms)
+I, [2013-11-20T12:30:14.740628 #4224]  INFO -- :   Rendered layouts/_messages.html.erb (0.6ms)
+I, [2013-11-20T12:30:14.741081 #4224]  INFO -- : Completed 200 OK in 165ms (Views: 131.2ms | ActiveRecord: 28.7ms)
+I, [2013-11-20T12:30:21.726886 #4224]  INFO -- : Started GET "/ru/admin/competitions/2/jury" for 127.0.0.1 at 2013-11-20 12:30:21 +0600
+I, [2013-11-20T12:30:21.731241 #4224]  INFO -- : Processing by Admin::JuryController#index as HTML
+I, [2013-11-20T12:30:21.731317 #4224]  INFO -- :   Parameters: {"locale"=>"ru", "competition_id"=>"2"}
+I, [2013-11-20T12:30:21.766407 #4224]  INFO -- :   Rendered admin/jury/index.html.erb within layouts/application (30.2ms)
+I, [2013-11-20T12:30:21.779089 #4224]  INFO -- :   Rendered layouts/_common_menu.html.erb (11.3ms)
+I, [2013-11-20T12:30:21.783354 #4224]  INFO -- :   Rendered layouts/_moder_menu.html (2.0ms)
+I, [2013-11-20T12:30:21.784841 #4224]  INFO -- :   Rendered layouts/_admin_menu.html.erb (4.4ms)
+I, [2013-11-20T12:30:21.785915 #4224]  INFO -- :   Rendered layouts/_navigation.html.erb (0.8ms)
+I, [2013-11-20T12:30:21.786741 #4224]  INFO -- :   Rendered layouts/_lang_select.html.erb (0.6ms)
+I, [2013-11-20T12:30:21.787198 #4224]  INFO -- :   Rendered layouts/_messages.html.erb (0.2ms)
+I, [2013-11-20T12:30:21.787613 #4224]  INFO -- : Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 3.7ms)
+I, [2013-11-20T12:32:19.209650 #4306]  INFO -- : Started GET "/ru/admin/competitions" for 127.0.0.1 at 2013-11-20 12:32:19 +0600
+I, [2013-11-20T12:32:19.246520 #4306]  INFO -- : Processing by Admin::CompetitionsController#index as HTML
+I, [2013-11-20T12:32:19.246626 #4306]  INFO -- :   Parameters: {"locale"=>"ru"}
+I, [2013-11-20T12:32:19.445409 #4306]  INFO -- :   Rendered admin/competitions/index.html.erb within layouts/application (32.4ms)
+I, [2013-11-20T12:32:19.467784 #4306]  INFO -- :   Rendered layouts/_common_menu.html.erb (19.7ms)
+I, [2013-11-20T12:32:19.476784 #4306]  INFO -- :   Rendered layouts/_moder_menu.html (3.1ms)
+I, [2013-11-20T12:32:19.478976 #4306]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.0ms)
+I, [2013-11-20T12:32:19.482253 #4306]  INFO -- :   Rendered layouts/_navigation.html.erb (2.0ms)
+I, [2013-11-20T12:32:19.488371 #4306]  INFO -- :   Rendered layouts/_lang_select.html.erb (4.9ms)
+I, [2013-11-20T12:32:19.490315 #4306]  INFO -- :   Rendered layouts/_messages.html.erb (0.8ms)
+I, [2013-11-20T12:32:19.490762 #4306]  INFO -- : Completed 200 OK in 244ms (Views: 73.5ms | ActiveRecord: 18.0ms)
+I, [2013-11-20T12:32:22.578002 #4306]  INFO -- : Started GET "/user_profile/ru/1" for 127.0.0.1 at 2013-11-20 12:32:22 +0600
+I, [2013-11-20T12:32:22.582294 #4306]  INFO -- : Processing by UserProfileController#edit as HTML
+I, [2013-11-20T12:32:22.582372 #4306]  INFO -- :   Parameters: {"locale"=>"ru", "user_id"=>"1"}
+I, [2013-11-20T12:32:22.585968 #4306]  INFO -- :   Rendered user_profile/edit.html.erb within layouts/user_profile_layout (0.6ms)
+I, [2013-11-20T12:32:22.601318 #4306]  INFO -- :   Rendered layouts/_common_menu.html.erb (12.9ms)
+I, [2013-11-20T12:32:22.609368 #4306]  INFO -- :   Rendered layouts/_moder_menu.html (3.0ms)
+I, [2013-11-20T12:32:22.611513 #4306]  INFO -- :   Rendered layouts/_admin_menu.html.erb (8.0ms)
+I, [2013-11-20T12:32:22.613912 #4306]  INFO -- :   Rendered layouts/_navigation.html.erb (1.4ms)
+I, [2013-11-20T12:32:22.616002 #4306]  INFO -- :   Rendered layouts/_lang_select.html.erb (1.2ms)
+I, [2013-11-20T12:32:22.617578 #4306]  INFO -- :   Rendered layouts/_messages.html.erb (0.7ms)
+I, [2013-11-20T12:32:22.622895 #4306]  INFO -- :   Rendered layouts/_user_sidebar.html.erb (3.9ms)
+I, [2013-11-20T12:32:22.623298 #4306]  INFO -- : Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 1.8ms)

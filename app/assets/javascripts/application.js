@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-
 //= require jquery_ujs
 //= require jquery.tokeninput
 //= require jquery.ui.dialog
@@ -33,7 +32,7 @@
 
 $(document).ready(function() {
 
-
+ 
 
 // убирает флеш сообщения через некоторое время
 $("div[id^='flash_box']").fadeOut(10000);
