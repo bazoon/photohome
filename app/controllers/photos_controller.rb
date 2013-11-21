@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :new]
+  before_action :set_user, only: [:show, :edit, :new, :create,:update]
 
   layout "user_profile_layout", except: :view
 
@@ -49,7 +49,7 @@ class PhotosController < ApplicationController
     
 
       if @photo.save
-        format.html { redirect_to user_photo_path(current_user,@photo), notice: 'Photo was successfully created.' }
+        format.html { redirect_to user_photo_path(@user,@photo), notice: 'Photo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @photo }
       else
         format.html { render action: 'new',notice: "Hmm" }
@@ -65,7 +65,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to user_photo_path(current_user,@photo), notice: 'Photo was successfully updated.' }
+        format.html { redirect_to user_photo_path(@user,@photo), notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
