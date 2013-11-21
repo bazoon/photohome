@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119032646) do
+ActiveRecord::Schema.define(version: 20131121050524) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -269,6 +269,7 @@ ActiveRecord::Schema.define(version: 20131119032646) do
     t.string   "city"
     t.string   "country"
     t.string   "phone"
+    t.text     "about"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

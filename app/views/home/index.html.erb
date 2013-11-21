@@ -1,14 +1,11 @@
 
-  <div>
-
-
-
 
   <% if @photos  %>
   <h3>Галлерея сайта</h3>
 
   
   <div class="fotorama" data-autoplay="true">
+
      <% @photos.each do |photo| %>
       <img src="<%= photo.image_url(:normal) %>" /> 
      <% end %> 
@@ -18,6 +15,7 @@
 
 
   <% end %>
+
 
   
   <% if @novelty  %>
@@ -29,6 +27,8 @@
     </div>
   </div>
   <% end %>
+
+
 
 
 <div style="clear:both;"></div>
@@ -44,24 +44,20 @@
 <div style="clear:both;"></div>
 
 
+
   <% if @last_photos  %>
   <h3>Последние фотографии</h3>
   <div class="row" style="padding-bottom: 70px">    
  
       <% @last_photos.each do |photo|  %>
        <div class="col-sm-3">
-       <div class="thumbnail"> 
+     
          <a href=<%= gallery_show_path(photo) %> class="thumbnail" >
           <%= image_tag photo.image_url(:thumb), style: "height: 150px;" %>
          </a>
-         </div>
+     
        </div>
       <% end %>      
-
   </div>
 
-
   <% end %>
-
-  </div>  
-

@@ -23,11 +23,14 @@ class Ability
     if user.valid?
       can :read, Message
       can :manage, Comment,user_id: user.id
+      can :manage, Photo, user_id: user.id
       can :read, :all    
       can :create, :Like
       can :manage, :Like, user_id: user.id
       can :read, Admin::Article
     end
+
+    can :read, Photo
 
   
 

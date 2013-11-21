@@ -1,13 +1,17 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :new]
+
   layout "user_profile_layout", except: :view
+
+  load_and_authorize_resource except: [:create]  #bug with create
 
 
   # GET /photos
   # GET /photos.json
   def index
-    @photos = current_user.photos.all.paginate(:page => params[:page])
-    @user = current_user
+    @user = User.find(params[:user_id])
+    @photos = @user.photos.all.paginate(:page => params[:page])
   end
 
   # GET /photos/1
@@ -23,21 +27,23 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new
+    @photo = Photo.new()
   end
 
   # GET /photos/1/edit
   def edit
+    @user = User.find(params[:user_id])
   end
 
   # POST /photos
   # POST /photos.json
   def create
+
     @photo = Photo.new(photo_params)
     @photo.user_id = current_user.id
     @photo.published = true
 
-    
+    authorize! :create, @photo #manualy authorize
 
     respond_to do |format|
     
@@ -88,6 +94,11 @@ class PhotosController < ApplicationController
     def set_photo
       @photo = Photo.find(params[:id])
     end
+
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params

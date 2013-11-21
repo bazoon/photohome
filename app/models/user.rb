@@ -46,4 +46,8 @@ class User < ActiveRecord::Base
     self.jury && self.jury.count > 0
   end
 
+  def full_name
+    "#{name} #{last_name}"
+  end
+
 end

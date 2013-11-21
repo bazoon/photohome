@@ -1,14 +1,5 @@
-<p>
-  <strong>Название:</strong>
-  <%= @photo.title %>
-</p>
 
-<p>
-  
-  <%= image_tag @photo.image_url(:normal),class: "center" %>
-</p>
-
-<hr/>
+<%= render partial: "photos/image", locals: { photo: @photo } %>
 
 
 <h4> <%=  t("comments") if @photo.comments.count > 0 %> </h4>

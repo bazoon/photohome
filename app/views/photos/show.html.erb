@@ -1,9 +1,9 @@
 <%= render partial: "image", locals: {photo: @photo } %>
-<%= render partial: "comment/comments", locals: {comments: @photo.comments } %>
-<%= render partial: "comment/form", locals: { user: current_user, photo: @photo} %>
+<%= render partial: "comment/comments", locals: {comments: @photo.comments} %>
+<%= render partial: "comment/form", locals: { user: @user, photo: @photo} %>
 
 <br>
 
 
-<%= link_to 'Edit', edit_user_photo_path(current_user,@photo) %> |
+<%= link_to 'Edit', edit_user_photo_path(@user, @photo) %> |
 <%= link_to 'Back', user_photos_path %>

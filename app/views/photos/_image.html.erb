@@ -1,10 +1,18 @@
+
+
+<p>
+  <%= image_tag photo.image_url(:normal) %>
+</p>
+
 <p>
   <strong>Название:</strong>
   <%= photo.title %>
 </p>
 
 <p>
-  <%= image_tag photo.image_url(:normal) %>
+  <strong>Автор: </strong>
+  <%= link_to(photo.user.full_name, user_profile_path(photo.user)) if photo.user %>
 </p>
+
 
 <hr/>

@@ -12,9 +12,17 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
-
-
+  #Этот фильтр сделан для преодоления бага при создании новой фотографии
+  # load_and_authorize_resource конфликтует с strong parameters
+  # смотреть photo_controller create
+  # before_filter do
+  #   resource = controller_name.singularize.to_sym
+  #   method = "#{resource}_params"
+  #   params[resource] &&= send(method) if respond_to?(method, true)
+  # end
   
+
+ 
 
   protect_from_forgery with: :exception
   
@@ -44,7 +52,7 @@ class ApplicationController < ActionController::Base
 
  
   def configure_permitted_parameters
-    registration_params = [:name, :email, :password, :password_confirmation]
+    registration_params = [:name, :avatar, :about, :email, :password, :password_confirmation, :country,:last_name, :adress, :zip_code, :city, :phone]
 
     if params[:action] == 'update'
       devise_parameter_sanitizer.for(:account_update) { 

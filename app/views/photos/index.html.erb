@@ -1,7 +1,7 @@
 <h1><%=t '.caption' %></h1>
 
 
-<%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} %>
+<%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} if can? :manage, @photo %>
 
 <table class="table table-striped">
   <thead>
@@ -19,9 +19,9 @@
         <td><%= photo.title %></td>
         <td><%= link_to image_tag(photo.image_url(:thumb)),user_photo_path(@user,photo) %> <%= red_label(t("deleted")) if photo.deleted %></td>
         <td>
-         <%=link_to edit_icon, edit_user_photo_path(@user,photo) %></td>
+         <%= link_to(edit_icon, edit_user_photo_path(@user,photo)) if can? :manage, photo %></td>
         <td>
-        <%=link_to del_icon, user_photo_path(@user,photo), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to(del_icon, user_photo_path(@user,photo), method: :delete, data: { confirm: 'Are you sure?' })  if can? :manage, photo %>
         </td>
       </tr>
     <% end %>

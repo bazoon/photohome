@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-   before_action :set_comment, only: [:update, :destroy]
    before_filter :load_commentable, except: [:destroy]
+   before_action :set_comment, only: [:update, :destroy]
+  
 
   def create
     
@@ -55,7 +56,7 @@ class CommentsController < ApplicationController
 
 
      def comment_params
-      params.require(:comment).permit(:title, :user_id, :comment)
+      params.require(:comment).permit(:title, :user_id)
     end
 
 end
