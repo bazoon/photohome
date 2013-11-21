@@ -19,6 +19,8 @@
  */
 
 
+ 
+
 .content {
   background-color: #eee;
   padding: 20px;
@@ -36,6 +38,7 @@
 
         html, body {
             height: 100%;
+
         }
         footer {
             color: #666;
@@ -67,3 +70,15 @@
      margin-left: auto;
      margin-right: auto;
 }
+
+
+/*Center navbar*/
+/*.navbar .navbar-collapse  ul {
+position:relative;left:50%;float:left;margin-right:0;margin-left:0;
+}
+
+ ADDED for centering navbar items 
+.navbar .navbar-collapse  li {
+position:relative;right:50%;float:left;margin:0;list-style:none
+}
+*/

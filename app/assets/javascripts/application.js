@@ -22,6 +22,9 @@
 // Or peek any of them yourself
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/modal
+//= require twitter/bootstrap/collapse
+
+
 
 //= require turbolinks
 //= require redactor-rails
