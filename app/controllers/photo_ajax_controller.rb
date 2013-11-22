@@ -7,7 +7,7 @@ class PhotoAjaxController < ApplicationController
 	
 
   		tags = Photo.tag_counts_on(:themes).where("name like ?",["%#{params[:q]}%"])
-  		tags = tags.map {|tag| {id: tag.id,name: tag.name} }
+  		tags = tags.map {|tag| {id: tag.name, name: tag.name} }
 
 			
   		if tags.empty?

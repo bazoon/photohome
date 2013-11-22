@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @user = User.find(params[:user_id])
-    @photos = @user.photos.all.paginate(:page => params[:page])
+    @photos = @user.photos.load.paginate(:page => params[:page])
   end
 
   # GET /photos/1

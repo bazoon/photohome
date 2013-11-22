@@ -79,7 +79,8 @@ class Photo < ActiveRecord::Base
 
 	def theme_tokens=(tokens)
 		self.theme_list = tokens
-		self.save
+   
+    self.save
 	end
 
 
