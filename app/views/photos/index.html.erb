@@ -3,6 +3,8 @@
 
 <%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} if can? :manage, @photo %>
 
+<%= will_paginate(@photos) %>
+
 <table class="table table-striped">
   <thead>
     <tr >

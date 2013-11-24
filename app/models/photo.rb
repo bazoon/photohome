@@ -78,7 +78,10 @@ class Photo < ActiveRecord::Base
 
 
 	def theme_tokens=(tokens)
-		self.theme_list = tokens
+		self.theme_list = ""
+    self.save
+    # raise Exception
+     User.current.tag(self, :with => tokens, :on => :themes)
    
     self.save
 	end

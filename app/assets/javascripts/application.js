@@ -30,6 +30,7 @@
 //= require redactor-rails
 //= require fotorama
 
+
 //= require_tree .
 
 

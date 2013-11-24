@@ -16,6 +16,16 @@ class User < ActiveRecord::Base
   has_many :messages
   has_many :jury,class_name: "Admin::Jury"
 
+  acts_as_tagger
+
+  #Для доступа к current_user в моделях
+  def self.current
+    Thread.current[:user]
+  end
+  def self.current=(user)
+    Thread.current[:user] = user
+  end
+
   # before_save :see
 
 

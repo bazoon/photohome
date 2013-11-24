@@ -70,6 +70,7 @@ gem 'fotoramajs'
 gem 'railroady'
 gem 'country_select'
 
+
 # gem 'rails_12factor'
 
 gem 'jquery-turbolinks'

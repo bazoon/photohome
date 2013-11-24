@@ -6,12 +6,14 @@ class PhotosController < ApplicationController
 
   load_and_authorize_resource except: [:create]  #bug with create
 
+  before_filter :set_current_user
+
 
   # GET /photos
   # GET /photos.json
   def index
     @user = User.find(params[:user_id])
-    @photos = @user.photos.load.paginate(:page => params[:page])
+    @photos = @user.photos.load.paginate(:page => params[:page],per_page: 8)
   end
 
   # GET /photos/1
@@ -19,6 +21,13 @@ class PhotosController < ApplicationController
   def show
     # @comments = @photo.comments
 
+  end
+
+  def tagged_photos
+    @user = User.find(params[:user_id])
+    @name = params[:name]
+    # raise Exception
+    @photos = Photo.tagged_with(@name, :on => :themes, :owned_by => @user).paginate(:page => params[:page],per_page: 8)
   end
 
   def view

@@ -46,6 +46,8 @@ Photohome::Application.routes.draw do
         get 'view', as: :view
     end  
 
+    get 'tagged_photos/user_id/:user_id/name/:name', to: 'photos#tagged_photos', as: :tagged_photos
+
   	resources :users do
   		resources :photos, concerns: :commentable
       resources :messages, concerns: :commentable 
@@ -136,5 +138,8 @@ Photohome::Application.routes.draw do
 
 
   get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile
+  get 'user_cloud/:user_id', to: 'user_profile#cloud', as: :user_cloud
+  
+
 
 end

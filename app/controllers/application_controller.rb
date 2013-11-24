@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
   # and here https://github.com/plataformatec/devise#strong-parameters
   
   before_action :configure_permitted_parameters, if: :devise_controller?
+  
 
+  def set_current_user
+      User.current = current_user
+  end
 
   #Этот фильтр сделан для преодоления бага при создании новой фотографии
   # load_and_authorize_resource конфликтует с strong parameters

@@ -1,0 +1,26 @@
+
+<div id="whatever">
+<% @freqs.each do |f| %>
+  
+  <a href = "<%= tagged_photos_path(user_id: @user, name: f[0]) %>" rel = "<%= f[1] %>"> <%= f[0] %> </a>
+
+
+  
+
+<% end %> 
+</div>
+
+
+
+<script>
+$.fn.tagcloud.defaults = {
+  size: {start: 18, end: 26, unit: 'pt'},
+  color: {start: '#cde', end: '#f52'}
+};
+
+$(function () {
+  $('#whatever a').tagcloud();
+});
+
+</script>
+
