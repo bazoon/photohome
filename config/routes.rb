@@ -1,6 +1,5 @@
 Photohome::Application.routes.draw do
 
-
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
   get "gallery/index"
@@ -51,6 +50,7 @@ Photohome::Application.routes.draw do
   	resources :users do
   		resources :photos, concerns: :commentable
       resources :messages, concerns: :commentable 
+      resources :letters, concerns: :commentable
     end
 
   
@@ -77,7 +77,8 @@ Photohome::Application.routes.draw do
 
 
     namespace :admin do
-      resources :messages,concerns: :commentable
+      resources :messages, concerns: :commentable
+      
 
       resources :settings
 

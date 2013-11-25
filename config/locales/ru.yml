@@ -113,6 +113,18 @@ ru:
   articles:
     list:
       articles: "Статьи"   
+  letters:
+    index:
+      letters: "Сообщения"
+      title: "Тема"
+      new: "Новое сообщение"
+      recipients: "Получатели" 
+      messages: "Сообщения"
+    show:
+      title: "Тема"   
+      content: "Содержание" 
+      reason: "Причина обращения"
+      status: "Статус"
   admin:
     messages:
       index:

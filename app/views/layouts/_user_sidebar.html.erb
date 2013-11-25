@@ -5,8 +5,10 @@
   <li><%= link_to "Фотографии",user_photos_path(@user) %></li>
   <li><%= link_to "Облако",user_cloud_path(@user) %></li>
 
-  <li><%= link_to "Сообщения",user_messages_path(@user) if @user ==  current_user %></li>
-  <li><%= link_to "Конкурсы",competitions_path if @user ==  current_user %> </li>
+  <li><%= link_to "Тикеты",user_messages_path(@user) if @user ==  current_user %></li>
+  <li><%= link_to "Сообщения",user_letters_path(@user) if @user ==  current_user %></li>
+  
+
   <li><%= link_to "Жюри",jury_choose_competition_path if @user.in_jury? && @user ==  current_user %></li>
   <li> <%= link_to I18n.t("change_password"), edit_user_registration_path if user_signed_in? && @user ==  current_user%></li>
 </ul>
