@@ -1,6 +1,6 @@
 <%= render partial: "image", locals: {photo: @photo } %>
-<%= render partial: "comment/comments", locals: {comments: @photo.comments} %>
-<%= render partial: "comment/form", locals: { user: @user, photo: @photo} %>
+<%= render partial: "comment/comments", locals: {resource: @photo } %>
+<%= render partial: "comment/form", locals: { user: @user, resource: @photo} %>
 
 <br>
 

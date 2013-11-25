@@ -1,13 +1,13 @@
 <% unless user.nil? %>
-<%= simple_form_for([user,photo,Comment.new]) do |f| %>
+<%= simple_form_for([user,resource,Comment.new]) do |f| %>
   <%= f.error_notification %>
     
     <div class="form-group">
-    <%= f.input :comment,placeholder: 'Напиши комментарий',:input_html => {class: "form-control"}  %>
+    <%= f.input :comment, placeholder: 'Напиши комментарий',:input_html => {class: "form-control"}  %>
     </div>
     
     <div class="form-group">
-    <%= f.input :commentable, :as => :hidden, :input_html => { :value => "photo" }  %>
+    <%= f.input :commentable, :as => :hidden, :input_html => { :value => resource.class.to_s.downcase }  %>
     </div>
 
     <%= f.button :submit,class: "btn btn-default" %>

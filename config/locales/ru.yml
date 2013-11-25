@@ -123,8 +123,7 @@ ru:
     show:
       title: "Тема"   
       content: "Содержание" 
-      reason: "Причина обращения"
-      status: "Статус"
+      recipients: "Получатели" 
   admin:
     messages:
       index:

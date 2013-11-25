@@ -1,6 +1,7 @@
 class Letter < ActiveRecord::Base
   belongs_to :user
   has_many :letter_users
+  acts_as_commentable
 
   attr_reader :letter_users_tokens
 
@@ -14,10 +15,14 @@ class Letter < ActiveRecord::Base
   end
 
 
-  def recipients
+  def recipient_names
     
     letter_users.map { |lu| lu.user.full_name  }
 
+  end
+
+  def recipients
+    letter_users.map(&:user)
   end
 
 

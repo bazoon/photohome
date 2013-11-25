@@ -51,12 +51,14 @@ class CommentsController < ApplicationController
     def load_commentable
       prefix = params[:comment][:commentable]
       @commentable = prefix+"_id"
+
       @commentable = prefix.camelize.constantize.find(params[prefix+"_id"])
+      # raise Exception
     end
 
 
      def comment_params
-      params.require(:comment).permit(:title, :user_id)
+      params.require(:comment).permit(:title, :user_id,:comment)
     end
 
 end

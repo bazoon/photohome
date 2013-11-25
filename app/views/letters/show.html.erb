@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Title:</strong>
+  <strong><%= t(".title") %></strong>
   <%= @letter.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong><%= t(".content") %></strong>
   <%= @letter.content %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @letter.user_id %>
+  <strong><%= t(".recipients") %></strong>
+  <ul>
+  <% @letter.recipients.each do |user| %>  
+  
+    <li> <%= link_to user.full_name, user_profile_path(user) %> </li>
+    
+  <% end  %>
+  </ul>
 </p>
+
+<%= render partial: "comment/comments", locals: {resource: @letter} %>
+<%= render partial: "comment/form", locals: { user: @user, resource: @letter} %>
 
 <%= link_to 'Edit', edit_user_letter_path(@user,@letter) %> |
 <%= link_to 'Back', user_letters_path(@user) %>
