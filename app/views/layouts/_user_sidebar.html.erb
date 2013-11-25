@@ -1,8 +1,6 @@
-
-<%= @user && @user.avatar && image_tag(@user.avatar_url(:thumb),class: "img-polaroid") %>
-
-
-
+<div style="padding-top: 20px">
+  <%= @user && @user.avatar && image_tag(@user.avatar_url(:thumb),class: "img-polaroid") %>
+</div>
 <ul class="nav">
   <li><%= link_to "Фотографии",user_photos_path(@user) %></li>
   <li><%= link_to "Облако",user_cloud_path(@user) %></li>

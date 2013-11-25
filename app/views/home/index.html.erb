@@ -4,13 +4,13 @@
   <h3>Галлерея сайта</h3>
 
   
-  <div class="fotorama" data-autoplay="true">
-
+<div class="fotorama" data-autoplay="true">
      <% @photos.each do |photo| %>
       <img src="<%= photo.image_url(:normal) %>" /> 
      <% end %> 
   </div>
-  
+ 
+ 
 
 
 
