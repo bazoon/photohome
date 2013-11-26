@@ -1,5 +1,10 @@
 <div style="padding-top: 20px">
+  <div>
   <%= @user && @user.avatar && image_tag(@user.avatar_url(:thumb),class: "img-polaroid") %>
+  </div>
+  <small ><%= @user && @user.full_name %></small>
+  
+
 </div>
 <ul class="nav nav-pills" >
   <li><%= link_to "Фотографии",user_photos_path(@user) %></li>
@@ -10,11 +15,11 @@
   
   <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      Сообщения <span class="caret"></span>
+      Сообщения <span class="caret"></span><%= incoming_mail_icon %>
     </a>
     <ul class="dropdown-menu">
       <li><%= link_to "Исходящие",user_letters_path(@user) if @user ==  current_user %></li>
-      <li><%= link_to "Входящие",user_incoming_letters_path(@user) if @user ==  current_user %></li>    
+      <li><%= link_to "Входящие" ,user_incoming_letters_path(@user) if @user ==  current_user %></li>    
     </ul>
   </li>
 

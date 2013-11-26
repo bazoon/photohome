@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125054937) do
+ActiveRecord::Schema.define(version: 20131126051730) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(version: 20131125054937) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "seen",       default: false
   end
 
   create_table "likes", force: true do |t|

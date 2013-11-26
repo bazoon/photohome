@@ -115,15 +115,17 @@ ru:
       articles: "Статьи"   
   letters:
     index:
-      letters: "Сообщения"
+      letters: "Исходящие"
       title: "Тема"
       new: "Новое сообщение"
-      recipients: "Получатели" 
+      recipients: "Кому" 
       messages: "Сообщения"
     show:
       title: "Тема"   
       content: "Содержание" 
-      recipients: "Получатели" 
+      recipients: "Кому" 
+    new:
+      new: "Создать сообщение"
   admin:
     messages:
       index:

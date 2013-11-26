@@ -4,11 +4,6 @@
 </p>
 
 <p>
-  <strong><%= t(".content") %></strong>
-  <%= @letter.content %>
-</p>
-
-<p>
   <strong><%= t(".recipients") %></strong>
   <ul>
   <% @letter.recipients.each do |user| %>  
@@ -19,8 +14,16 @@
   </ul>
 </p>
 
+<p>
+  <strong><%= t(".content") %></strong>
+  <%= @letter.content %>
+</p>
+
+<hr>
+
 <%= render partial: "comment/comments", locals: {resource: @letter} %>
 <%= render partial: "comment/form", locals: { user: @user, resource: @letter} %>
 
+<br><br>
 <%= link_to 'Edit', edit_user_letter_path(@user,@letter) %> |
 <%= link_to 'Back', user_letters_path(@user) %>

@@ -15,6 +15,7 @@ class LettersController < ApplicationController
   # GET /letters/1
   # GET /letters/1.json
   def show
+    @letter.update({seen: true})
   end
 
   # GET /letters/new

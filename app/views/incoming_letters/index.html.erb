@@ -19,7 +19,7 @@
   <tbody>
     <% @letters.each do |letter| %>
       <tr>
-        <td><%= letter.title %></td>
+        <td><%= content_tag(:span,"new",class: "label label-info") unless letter.seen %>  <%= letter.title %></td>
         <td><%= letter.from %></td>
         <td><%= letter.recipient_names %></td>
         <td><%= link_to show_icon, user_letter_path(letter.user.id,letter) %></td>
