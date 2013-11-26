@@ -1,0 +1,33 @@
+<h1><%= t(".letters") %></h1>
+
+<br>
+
+<%= link_to t(".new"), new_user_letter_path(@user.id), class: "btn btn-primary" %> <br><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t(".title") %></th>
+      <th><%= t(".from") %></th>
+      <th><%= t(".recipients") %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letters.each do |letter| %>
+      <tr>
+        <td><%= letter.title %></td>
+        <td><%= letter.from %></td>
+        <td><%= letter.recipient_names %></td>
+        <td><%= link_to show_icon, user_letter_path(letter.user.id,letter) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

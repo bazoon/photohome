@@ -4,10 +4,12 @@ class LettersController < ApplicationController
   
   layout "user_profile_layout"
 
+  load_and_authorize_resource except: [:create] 
+
   # GET /letters
   # GET /letters.json
   def index
-    @letters = Letter.all
+    @letters = current_user.letters
   end
 
   # GET /letters/1
@@ -77,6 +79,6 @@ class LettersController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:user_id])
+      @user = current_user#User.find(params[:user_id])
     end
 end

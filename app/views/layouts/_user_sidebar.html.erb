@@ -13,8 +13,8 @@
       Сообщения <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li><%= link_to "Входящие",user_letters_path(@user) if @user ==  current_user %></li>
-      <li><%= link_to "Исходящие",user_letters_path(@user) if @user ==  current_user %></li>    
+      <li><%= link_to "Исходящие",user_letters_path(@user) if @user ==  current_user %></li>
+      <li><%= link_to "Входящие",user_incoming_letters_path(@user) if @user ==  current_user %></li>    
     </ul>
   </li>
 

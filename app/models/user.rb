@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   has_many :photos
   has_many :messages
   has_many :jury,class_name: "Admin::Jury"
+  has_many :letters
 
   acts_as_tagger
 

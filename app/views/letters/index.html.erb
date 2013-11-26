@@ -1,5 +1,9 @@
 <h1><%= t(".letters") %></h1>
 
+<br>
+
+<%= link_to t(".new"), new_user_letter_path(@user.id), class: "btn btn-primary" %> <br><br>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -26,4 +30,4 @@
 
 <br>
 
-<%= link_to t(".new"), new_user_letter_path(@user.id) %>
+

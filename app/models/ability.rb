@@ -28,6 +28,15 @@ class Ability
       can :create, :Like
       can :manage, :Like, user_id: user.id
       can :read, Admin::Article
+      cannot :read, Letter
+      can :manage, Letter, user_id: user.id
+     
+      can :read, Letter do |letter|
+        
+        letter.letter_users.any? { |lu| lu.user.id == user.id }
+
+      end
+
     end
 
     can :read, Photo
