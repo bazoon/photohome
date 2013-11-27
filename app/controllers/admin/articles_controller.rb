@@ -4,7 +4,7 @@ class Admin::ArticlesController < Admin::BaseController
   # GET /admin/articles
   # GET /admin/articles.json
   def index
-    @admin_articles = Admin::Article.all
+    @admin_articles = Article.all
   end
 
   # GET /admin/articles/1
@@ -14,7 +14,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   # GET /admin/articles/new
   def new
-    @admin_article = Admin::Article.new
+    @admin_article = Article.new
   end
 
   # GET /admin/articles/1/edit
@@ -24,11 +24,11 @@ class Admin::ArticlesController < Admin::BaseController
   # POST /admin/articles
   # POST /admin/articles.json
   def create
-    @admin_article = Admin::Article.new(admin_article_params)
+    @admin_article = Article.new(admin_article_params)
 
     respond_to do |format|
       if @admin_article.save
-        format.html { redirect_to @admin_article, notice: 'Article was successfully created.' }
+        format.html { redirect_to [:admin, @admin_article], notice: 'Article was successfully created.' }
         format.json { render action: 'show', status: :created, location: @admin_article }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::ArticlesController < Admin::BaseController
   def update
     respond_to do |format|
       if @admin_article.update(admin_article_params)
-        format.html { redirect_to @admin_article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to [:admin, @admin_article], notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -64,11 +64,11 @@ class Admin::ArticlesController < Admin::BaseController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_article
-      @admin_article = Admin::Article.find(params[:id])
+      @admin_article = Article.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_article_params
-      params.require(:admin_article).permit(:title, :content, :digest)
+      params.require(:article).permit(:title, :content, :digest)
     end
 end

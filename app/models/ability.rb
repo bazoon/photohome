@@ -13,7 +13,7 @@ class Ability
       can :manage, Admin::Album
       can :manage, Admin::SitePhoto  
       can :manage, Admin::Setting
-      can :manage, Admin::Article
+      can :manage, Article
     end
 
     if user.in_jury?
@@ -27,7 +27,7 @@ class Ability
       can :read, :all    
       can :create, :Like
       can :manage, :Like, user_id: user.id
-      can :read, Admin::Article
+      can :read, Article
       cannot :read, Letter
       can :manage, Letter, user_id: user.id
      

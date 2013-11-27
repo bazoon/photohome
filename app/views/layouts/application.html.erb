@@ -15,7 +15,7 @@
 
   </head>
 
-  <body style="margin-top: 70px; padding-bottom: 70px">
+  <body style="margin-top: 70px;">
   
 
     <div class="navbar navbar-inverse navbar-fixed-top" >
@@ -46,24 +46,24 @@
 
     
     <div class="container">
-           
+             
       <%= breadcrumbs :separator => " &rsaquo; " %>
       <%=render 'layouts/messages'%>
       <%= yield %>
-
+     
     </div>
+    
+    <br>
+    <br>
+    <br>
+
+    <footer style="width: 100%">
+      <p>&copy; Company 2013</p>
+     </footer>
 
     
   
-
-
-  
-  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-      
-        Copiright 2013 
-  
-
-  </div>
+    
   
   
   </body>

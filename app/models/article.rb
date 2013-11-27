@@ -1,5 +1,5 @@
-class Admin::Article < ActiveRecord::Base
-
+class Article < ActiveRecord::Base
+  acts_as_commentable
   scope :random, -> { where("id>=?", (1..count).to_a.sample).first  }
 
   def first_image_src
@@ -8,6 +8,5 @@ class Admin::Article < ActiveRecord::Base
     imgs = doc.css("img")
     src = imgs[0].attr("src") unless imgs.nil? or imgs.empty?
   end
-
 
 end

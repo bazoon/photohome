@@ -16,7 +16,7 @@
         <td><%= admin_article.title %></td>
         <td><%= link_to show_icon, admin_article %></td>
         <td><%= link_to edit_icon, edit_admin_article_path(admin_article) %></td>
-        <td><%= link_to del_icon, admin_article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to del_icon, [:admin, admin_article], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

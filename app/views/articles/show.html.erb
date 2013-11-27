@@ -13,3 +13,7 @@
 </small>
 
 <br>
+
+<%= render partial: "simple_comment/comments", locals: {resource: @article } %>
+<%= render partial: "simple_comment/form", locals: { user: nil, resource: @article} %>
+

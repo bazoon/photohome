@@ -8,7 +8,7 @@
 </div>
 
 
-<%= link_to del_icon, [current_user,resource,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, c %>
+<%= link_to del_icon, [resource,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, c %>
 
 <div style="clear: left; height: 20px;" ></div>
 

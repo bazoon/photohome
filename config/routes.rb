@@ -1,5 +1,10 @@
 Photohome::Application.routes.draw do
 
+
+  concern :commentable do
+    resources :comments
+  end
+
   
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
@@ -25,7 +30,8 @@ Photohome::Application.routes.draw do
       end
     end  
 
-    resources :articles, only: :show do
+
+    resources :articles, concerns: :commentable, only: :show do
       collection do
         get 'list'
       end
@@ -36,9 +42,6 @@ Photohome::Application.routes.draw do
     resources :topics
 
     
-    concern :commentable do
-      resources :comments
-    end
 
 
 

@@ -1,6 +1,6 @@
-<% unless user.nil? %>
+<% if current_user %>
 
-<%= simple_form_for([user,resource,Comment.new]) do |f| %>
+<%= simple_form_for([resource,Comment.new]) do |f| %>
   <%= f.error_notification %>
     
     <div class="form-group">

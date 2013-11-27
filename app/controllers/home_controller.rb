@@ -10,8 +10,8 @@ class HomeController < ApplicationController
       @novelty = setting.novelty if setting.novelty
       @last_photos = Photo.last(4) 
 
-      random_article = Admin::Article.random    
-      @article = random_article if random_article.class == Admin::Article
+      random_article = Article.random    
+      @article = random_article if random_article.class == Article
 
     else
 
