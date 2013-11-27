@@ -141,7 +141,7 @@ Photohome::Application.routes.draw do
 
 
   get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile
-  get 'user_cloud/:user_id', to: 'user_profile#cloud', as: :user_cloud
+  get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
   
 
 

@@ -2,6 +2,8 @@ class JuryController < ApplicationController
 
 
   before_filter :verify_if_jury
+  before_action :set_user
+  layout "user_profile_layout"
   
 
 
@@ -52,7 +54,9 @@ private
     redirect_to root_path,alert: "Jury area !" unless current_user && current_user.in_jury?
   end
 
-  
+  def set_user
+      @user = current_user#User.find(params[:user_id])
+  end
 
   
   
