@@ -12,14 +12,16 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @letters.each do |letter| %>
-      <tr>
-        <td><%= letter.title %> </td>
+      <tr class= <%= "bold" unless letter.seen %>>
+        <td><%= link_to letter.title, user_letter_path(@user.id,letter)  %> </td>
         <td><%= letter.recipient_names %></td>
+        <td><%= l letter.updated_at, format: :long  %></td>
         <td><%= link_to show_icon, user_letter_path(@user.id,letter) %></td>
         <td><%= link_to edit_icon, edit_user_letter_path(@user.id,letter) %></td>
         <td><%= link_to del_icon, user_letter_path(@user.id, letter), method: :delete, data: { confirm: 'Are you sure?' } %></td>
