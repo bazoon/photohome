@@ -9,7 +9,7 @@ class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   def index
-    @letters = current_user.letters
+    @letters = current_user.letters.order(created_at: :desc)
   end
 
   # GET /letters/1

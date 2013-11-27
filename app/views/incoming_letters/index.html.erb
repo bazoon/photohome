@@ -13,15 +13,17 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @letters.each do |letter| %>
-      <tr>
-        <td><%= content_tag(:span,"new",class: "label label-info") unless letter.seen %>  <%= letter.title %></td>
-        <td><%= letter.from %></td>
+      <tr class= <%= "bold" unless letter.seen %>>
+        <td><%= link_to letter.title, user_letter_path(letter.user.id,letter) %></td>
+        <td><%= link_to letter.from, user_letter_path(letter.user.id,letter) %></td>
         <td><%= letter.recipient_names %></td>
+        <td><%= l letter.updated_at, format: :long  %></td>
         <td><%= link_to show_icon, user_letter_path(letter.user.id,letter) %></td>
       </tr>
     <% end %>
