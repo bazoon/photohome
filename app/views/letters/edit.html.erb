@@ -1,6 +1,7 @@
-<h1>Editing letter</h1>
+<h1><%= t(".edit") %></h1>
 
 <%= render 'form' %>
 
+<br>
 <%= link_to 'Show', user_letter_path(@user,@letter) %> |
 <%= link_to 'Back', user_letters_path(@user) %>

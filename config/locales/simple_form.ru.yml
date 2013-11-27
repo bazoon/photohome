@@ -53,6 +53,10 @@ ru:
         title: "Название"
         content: "Содержание"
         digest: "Дайджест"
+      letter:
+        title: "Заголовок"
+        content: Содержание
+        letter_users_tokens: "Адресаты"
 
     # hints:
     #   defaults:

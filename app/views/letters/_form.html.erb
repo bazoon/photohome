@@ -9,14 +9,14 @@
     <%= f.input :content,:input_html => {class: "form-control"} %>
     </div>
     <div class="form-group">
-    <%= f.input :user_id,:input_html => {class: "form-control"} %>
+    <%= f.input :user_id, as: :hidden,:input_html => {class: "form-control"} %>
     </div>
 
     <div class="form-group">
     <%= f.input :letter_users_tokens, :input_html => {data: {load: @letter.letter_users.map {|lu| {id: lu.user.id, name: lu.user.full_name}}   }} %>
     </div>
-
-
+    
+    
     <%= f.button :submit,input_html: {class: "btn btn-default"} %>
   
 <% end %>

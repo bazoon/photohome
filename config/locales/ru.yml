@@ -89,7 +89,7 @@ ru:
       content: "Содержание" 
       reason: "Причина обращения"
       status: "Статус"
-      messages: "Сообщения"
+      messages: "Тикеты"
     show:
       title: "Тема"   
       content: "Содержание" 
@@ -120,6 +120,20 @@ ru:
       new: "Новое сообщение"
       recipients: "Кому" 
       messages: "Сообщения"
+    show:
+      title: "Тема"   
+      content: "Содержание" 
+      recipients: "Кому" 
+    new:
+      new: "Создать сообщение"
+    edit:
+      edit: "Редактировать"
+  incoming_letters:
+    index:
+      letters: "Входящие"
+      title: "Тема"
+      recipients: "Кому" 
+      from: "От кого"
     show:
       title: "Тема"   
       content: "Содержание" 

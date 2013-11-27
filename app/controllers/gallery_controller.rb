@@ -17,7 +17,9 @@ class GalleryController < ApplicationController
   def show
     
     @photo = Photo.find(params[:photo_id])
-    fresh_when last_modified: @photo.created_at.utc, etag: @photo
+    #Нужно подумать об изменениях комментариев при кешировании !!!
+    
+    # fresh_when last_modified: @photo.created_at.utc, etag: @photo
     # raise Exception
     # respond_with(@photo) if stale?(:etag => @photo, :last_modified => @photo.created_at.utc)
   end
