@@ -32,6 +32,10 @@ class Competition < ActiveRecord::Base
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
 
+  def fiap?
+    type == FIAP
+  end
+
 
   def stats
     
