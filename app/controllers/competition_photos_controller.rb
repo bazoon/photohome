@@ -38,6 +38,7 @@ class  CompetitionPhotosController < ApplicationController
     respond_to do |format|
       
       begin
+        raise Exceptions::ProfileEmpty if current_user.profile_empty?
         raise Exceptions::EmptyNomination if nomination_id.empty?
         raise Exceptions::NoPhotoAttached if photo_ids.empty?
         raise Exceptions::ClosedCompetition if competition.overdue?

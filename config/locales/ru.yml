@@ -43,6 +43,7 @@ ru:
   photo_ids_empty: "Не выбраны фотографии"
   competition_too_late: "Срок приема работ прошел"
   max_nomination_capacity_exceeded: "Превышел предел размещения фотографии в эту номинацию"
+  profile_empty: "Для участия в ФИАП конкурсе у Вас не полностью заполнен профиль ! Заполните его и повторите попытку."
   gallery: "Фотографии"
   contests: "Конкурсы"
   news: "Новости"
@@ -162,8 +163,11 @@ ru:
         title: "Название"
         last_date: "Дата сдачи работ"
         open_date: "Дата открытия"
+        new: "Новый конкурс"
       view_posted:
         caption: "Фотографии"  
+      edit:
+        edit: "Редактировать"
     nominations:
       new:
         new: "Новая номинация"

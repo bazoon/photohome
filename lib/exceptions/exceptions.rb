@@ -41,7 +41,14 @@ module Exceptions
     end
   end
 
+  
+  class ProfileEmpty < Exception    
     
+    def initialize(msg = I18n.t(:profile_empty))
+      super(msg)
+    end
+   
+  end 
 
 
 end

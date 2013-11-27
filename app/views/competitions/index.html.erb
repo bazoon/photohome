@@ -25,7 +25,7 @@
         <td><%= ld competition.open_date %></td>
         <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => "Фотографии") %></td>
         <td><%= link_to show_icon, competition %></td>
-        <td><%= link_to request_icon, competition_competition_photos_path(competition) if can?(:view,Competition) %></td>
+        <td><%= link_to request_icon, competition_competition_photos_path(competition) if can?(:request, competition) %></td>
        </tr>
     <% end %>
   </tbody>

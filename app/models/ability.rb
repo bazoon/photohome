@@ -20,11 +20,11 @@ class Ability
       can :update, JuryRating, user_id: user.id
     end  
 
-    if user.valid?
+
       can :read, Message
       can :manage, Comment,user_id: user.id
       can :manage, Photo, user_id: user.id
-      can :read, :all    
+
       can :create, :Like
       can :manage, :Like, user_id: user.id
       can :read, Article
@@ -37,7 +37,9 @@ class Ability
 
       end
 
-    end
+      can :request, Competition
+
+
 
     can :read, Photo
 

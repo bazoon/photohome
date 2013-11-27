@@ -61,4 +61,11 @@ class User < ActiveRecord::Base
     "#{name} #{last_name}"
   end
 
+  def profile_empty?
+      
+     
+     last_name.blank? || adress.blank? || zip_code.blank? || city.blank? || country.blank?
+
+  end
+
 end
