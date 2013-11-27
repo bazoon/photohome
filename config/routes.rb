@@ -24,7 +24,7 @@ Photohome::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "registrations"}
   	
-    resources :novelties do
+    resources :novelties, concerns: :commentable do
       collection do
         get 'list'
       end

@@ -15,3 +15,7 @@
   <%=ld @novelty.publish_date %>
 </small>
 <br>
+
+
+<%= render partial: "simple_comment/comments", locals: {resource: @novelty } %>
+<%= render partial: "simple_comment/form", locals: { user: nil, resource: @novelty} %>
