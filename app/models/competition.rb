@@ -33,7 +33,7 @@ class Competition < ActiveRecord::Base
   VALUE = -> (s){s[:value]}  
 
   def fiap?
-    type == FIAP
+    type_id == FIAP
   end
 
 
