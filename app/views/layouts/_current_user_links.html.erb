@@ -1,0 +1,14 @@
+  <li class= <%= "active" if params[:controller] == "messages" %>><%= link_to "Тикеты",user_messages_path(user) %></li>
+  <li class="dropdown <%= "active" if params[:controller] == "letters" || params[:controller] == "incoming_letters" %>">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      Сообщения <span class="caret"></span><%= incoming_mail_icon %>
+    </a>
+    <ul class="dropdown-menu">
+      <li><%= link_to "Исходящие",user_letters_path(user) %></li>
+      <li><%= link_to "Входящие" ,user_incoming_letters_path(user) %></li>    
+    </ul>
+  </li>
+
+
+  <li class= <%= "active" if params[:controller] == "jury" %>><%= link_to "Жюри",jury_choose_competition_path if user.in_jury?  %></li>
+  <li class= <%= "active" if params[:controller] == "registrations" %>> <%= link_to I18n.t("change_password"), edit_user_registration_path if user_signed_in? %></li>
