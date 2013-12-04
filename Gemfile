@@ -76,6 +76,7 @@ gem 'country_select'
 gem 'jquery-turbolinks'
 gem 'pry'
 
+gem 'selenium-webdriver'
 gem 'capybara'
 gem 'cucumber-rails', :require=>false
 gem 'database_cleaner'

@@ -1,4 +1,4 @@
-class Admin::JuryController < ApplicationController
+class Admin::JuryController < Admin::BaseController
  before_action :set_jury, only: [:destroy]
 
 def index

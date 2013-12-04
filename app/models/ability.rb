@@ -28,6 +28,7 @@ class Ability
       can :create, :Like
       can :manage, :Like, user_id: user.id
       can :read, Article
+      can :read, Novelty
       cannot :read, Letter
       can :manage, Letter, user_id: user.id
      
