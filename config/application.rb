@@ -33,5 +33,7 @@ module Photohome
     config.i18n.default_locale = :ru
 
     config.autoload_paths += %W(#{config.root}/lib/exceptions)
+    config.autoload_paths += %W(#{config.root}/lib/monkey_patches)
+    
   end
 end

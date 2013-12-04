@@ -1,7 +1,7 @@
 <h1><%=t '.caption' %></h1>
 
 
-<%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} if can? :manage, @photo %>
+<%= link_to t('.new'), new_user_photo_path(@user),{class: "btn btn-primary"} if can? :create, Photo%>
 
 <%= will_paginate(@photos) %>
 

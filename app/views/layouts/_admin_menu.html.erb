@@ -7,7 +7,7 @@
     
     <li class="dropdown-header">Администрирование</li>
     <li><%= link_to 'Пользователи', users_path if current_user && current_user.admin? %></li>
-    <li><%= link_to 'Темы', topics_path %></li>
+    <li><%= link_to 'Темы', admin_topics_path %></li>
     <li><%= link_to "Конкурсы",admin_competitions_path %></li>
     
   </ul>

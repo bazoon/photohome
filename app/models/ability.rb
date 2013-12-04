@@ -24,6 +24,7 @@ class Ability
       can :read, Message
       can :manage, Comment,user_id: user.id
       can :manage, Photo, user_id: user.id
+      can :create, Photo
 
       can :create, :Like
       can :manage, :Like, user_id: user.id

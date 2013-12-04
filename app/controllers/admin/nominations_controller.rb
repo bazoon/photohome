@@ -1,4 +1,4 @@
-class Admin::NominationsController < ApplicationController
+class Admin::NominationsController < Admin::BaseController
   before_action :set_competition
   before_action :set_nomination, only: [:show, :edit, :update, :destroy]
 

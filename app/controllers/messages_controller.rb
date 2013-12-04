@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = current_user && current_user.messages.all
+    @messages = current_user && current_user.messages.load
   end
 
 

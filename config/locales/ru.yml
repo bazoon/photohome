@@ -66,10 +66,17 @@ ru:
   more: "...еще"
   new: "Новая запись"
   edit_user: "Редактировать личные данные"
+  last_photos: "Последние фотографии"
 
   change_password: "Личные данные"
   profile: "Профиль"
   sign_up: "Регистрация"
+  cloud: "Облако" 
+  sent_letters: "Исходящие"
+  in_letters: "Входящие"
+  jury: "Жюри"
+  tickets: "Тикеты"
+
 
   # photos: "PHH"
   photos:

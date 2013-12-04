@@ -1,4 +1,4 @@
-class Admin::NoveltiesController < ApplicationController
+class Admin::NoveltiesController < Admin::BaseController
   before_action :set_novelty, only: [:show, :edit, :update, :destroy]
 
   #Трюк для обхода ошибки связанной с Strong parameters  

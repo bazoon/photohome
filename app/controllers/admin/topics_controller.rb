@@ -1,4 +1,4 @@
-class TopicsController < ApplicationController
+class Admin::TopicsController < Admin::BaseController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
@@ -28,7 +28,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { redirect_to admin_topics_path, notice: 'Topic was successfully created.' }
         format.json { render action: 'show', status: :created, location: @topic }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
+        format.html { redirect_to admin_topics_path, notice: 'Topic was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +56,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_url }
+      format.html { redirect_to admin_topics_path }
       format.json { head :no_content }
     end
   end

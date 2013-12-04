@@ -39,7 +39,7 @@ Photohome::Application.routes.draw do
 
 
 
-    resources :topics
+   
 
     
 
@@ -91,6 +91,7 @@ Photohome::Application.routes.draw do
 
       resources :novelties  
       resources :articles
+      resources :topics
 
       resources :competitions  do
         member do
