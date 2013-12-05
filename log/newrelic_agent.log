@@ -6984,3 +6984,6 @@
 [12/05/13 09:27:58 +0600 Mac-mini-VITALIY.local (3755)] INFO : Installing Rails4 Error instrumentation
 [12/05/13 09:27:58 +0600 Mac-mini-VITALIY.local (3755)] INFO : Finished instrumentation
 [12/05/13 09:27:58 +0600 Mac-mini-VITALIY.local (3755)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[12/05/13 16:45:06 +0600 Mac-mini-VITALIY.local (3726)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `user' for #<Admin::SitePhoto:0x007ff484278ca8>
+[12/05/13 16:45:09 +0600 Mac-mini-VITALIY.local (3726)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `user' for #<Admin::SitePhoto:0x007ff485a90a98>
+[12/05/13 16:45:09 +0600 Mac-mini-VITALIY.local (3726)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `user' for #<Admin::SitePhoto:0x007ff485c496f0>

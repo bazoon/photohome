@@ -3,6 +3,12 @@
   <div id="aj">
     <%= ajax_will_paginate photos %>
   </div>
+  
+   <%= form_tag "ho" do |f| %>
+    <%= f.input :text %>
+      
+  <% end %>
+  
 
   <div id = "photos">
     <% @photos.each_with_index do |photo,index| %>
