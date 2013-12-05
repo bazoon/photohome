@@ -12,18 +12,23 @@ class CompetitionPhoto < ActiveRecord::Base
 
 
 
-  def self.create_applied(ids_string,competition_id,nomination_id,user_id)
-      ids = ids_string.split(",")
-      ids.each do |id|
-      
-        raise Exceptions::DuplicatePhoto unless not_found_duplicatate?(id,competition_id)
-        raise Exceptions::MaxNominationCapacity unless can_post_in_nomination?(nomination_id,user_id)
-
-        # binding.pry
-
-        CompetitionPhoto.create(photo_id: id,competition_id: competition_id,nomination_id: nomination_id)
+  def self.create_applied(photo_ids,competition,nomination_id,user)
+    raise Exceptions::NoPhotoAttached if photo_ids.empty?
+    ids = photo_ids.split(",")
+    ids.each do |id|
+        raise Exceptions::DuplicatePhoto unless not_found_duplicatate?(id,competition.id)  
+        self.check(competition,nomination_id,user)
+        CompetitionPhoto.create(photo_id: id,competition_id: competition.id,nomination_id: nomination_id)
       end  
   end
+
+  def self.check(competition,nomination_id,user)
+    raise Exceptions::EmptyNomination if nomination_id.empty?
+    raise Exceptions::ClosedCompetition if competition.overdue?
+    raise Exceptions::ProfileEmpty unless competition.valid_for_fiap?(user) 
+    raise Exceptions::MaxNominationCapacity unless can_post_in_nomination?(nomination_id,user)
+  end
+
 
   def like_count
     likes && likes.count
@@ -45,9 +50,9 @@ class CompetitionPhoto < ActiveRecord::Base
     jury_ratings.try(:count)
   end
 
-  def self.can_post_in_nomination?(nomination_id,user_id)
+  def self.can_post_in_nomination?(nomination_id,user)
     max = Admin::Nomination.find(nomination_id).max_photo_count
-    user_posted = Photo.joins(:competition_photos,:user).where("competition_photos.nomination_id=? and user_id=?",nomination_id,user_id).count  
+    user_posted = Photo.joins(:competition_photos,:user).where("competition_photos.nomination_id=? and user_id=?",nomination_id,user.id).count  
     return false if user_posted >= max
     true  
   end

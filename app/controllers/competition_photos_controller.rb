@@ -34,15 +34,10 @@ class  CompetitionPhotosController < ApplicationController
     nomination_id = params[:competition_photo][:nomination_id]
     photo_ids = params[:competition_photo][:photo_ids]
 
-
     respond_to do |format|
       
       begin
-        raise Exceptions::ProfileEmpty if competition.fiap? && current_user.profile_empty?
-        raise Exceptions::EmptyNomination if nomination_id.empty?
-        raise Exceptions::NoPhotoAttached if photo_ids.empty?
-        raise Exceptions::ClosedCompetition if competition.overdue?
-        CompetitionPhoto.create_applied(photo_ids,competition.id,nomination_id,current_user.id)
+        CompetitionPhoto.create_applied(photo_ids,competition,nomination_id,current_user)
         format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
       rescue Exception => e
         format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => e.message } }              

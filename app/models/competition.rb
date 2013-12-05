@@ -73,5 +73,9 @@ class Competition < ActiveRecord::Base
     Competition.joins(:jury).where("admin_juries.user_id = ? and competitions.id = ?",user.id,id).count > 0
   end
 
+  def valid_for_fiap?(user)
+    not (fiap? && user.profile_empty?)
+  end
+
 
 end
