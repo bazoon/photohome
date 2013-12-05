@@ -27,7 +27,7 @@ class CompetitionsController < ApplicationController
 
   def choose_photo
    
-    @photos = current_user.photos.paginate(:page => params[:page])
+    @photos = current_user.photos.paginate(:page => params[:page],per_page: 16)
     @first_time =  params[:page].nil? ? "1": "0"
     respond_to do |format|
       format.js

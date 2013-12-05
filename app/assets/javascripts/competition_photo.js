@@ -56,9 +56,20 @@ function add_photo(id) {
     var elem_id = "#ph"+id;
     var elem_clon = $(elem_id).clone();
 
+  
+
     elem_clon.attr("id","phc"+id);
     elem_clon.attr("num",id);
+    
+    // var elem_width = elem_clon.attr("width");
+    // var elem_height = elem_clon.attr("height");
+
+    // elem_clon.attr("width",elem_width*0.5);
+    elem_clon.attr("height",80);
+
+
     elem_clon.appendTo("#next");
+
 
 
     $("#competition_photo_photo_ids").val(add_to_string(photo_ids(),id));
