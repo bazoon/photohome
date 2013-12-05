@@ -39,7 +39,7 @@ $(document).ready(function() {
  
 
 // убирает флеш сообщения через некоторое время
-$("div[id^='flash_box']").fadeOut(10000);
+// $("div[id^='flash_box']").fadeOut(10000);
 
 
  $(".jury_estimate").jRating({

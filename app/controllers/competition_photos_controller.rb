@@ -38,7 +38,7 @@ class  CompetitionPhotosController < ApplicationController
       
       begin
         CompetitionPhoto.create_applied(photo_ids,competition,nomination_id,current_user)
-        format.html { redirect_to competition_competition_photos_path(competition.id), notice: "Photos was successfully added" }
+        format.html { redirect_to competition_competition_photos_path(competition.id), notice: I18n.t(:photos_saved) }
       rescue Exception => e
         format.html { redirect_to competition_competition_photos_path(competition.id), :flash => { :error => e.message } }              
       end
