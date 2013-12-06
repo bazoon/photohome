@@ -8,6 +8,7 @@ Photohome::Application.routes.draw do
   
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
+  get "ajax/articles"
   get "gallery/index"
   get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
   

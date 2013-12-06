@@ -13,8 +13,23 @@
    <div class="form-group">
     <%= f.input :article_count,:input_html => {class: "form-control"} %>
    </div>
-   
+
+    <div class="form-group">
+    <%= f.input :articles,label: "Статьи", :input_html => {data: {load:  Article.ids(@admin_setting.articles).map {|a| {id: a.id,name: a.title}}   }} %>
+    </div>
+                
+
 
     <%= f.button :submit,input_html: {class: "btn btn-default"} %>
   
 <% end %>
+
+<script type="text/javascript">
+  
+
+
+$('#admin_setting_articles').tokenInput('/ajax/articles',{theme: 'facebook',prePopulate: $('#admin_setting_articles').data('load')})
+
+  
+
+</script>

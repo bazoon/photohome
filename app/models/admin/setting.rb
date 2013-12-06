@@ -5,4 +5,7 @@ class Admin::Setting < ActiveRecord::Base
    has_many :photos, through: :site_photos
    belongs_to :novelty
 
+
+   
+
 end
