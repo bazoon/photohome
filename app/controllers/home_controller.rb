@@ -8,10 +8,14 @@ class HomeController < ApplicationController
     
       @photos = setting.album.site_photos if setting.album
       @novelty = setting.novelty if setting.novelty
+      @article_count = setting.article_count || 0
       @last_photos = Photo.last(4) 
+      
+      @articles = Article.random(@article_count)    
+      @first_article = @articles[0]
+      @other_articles = @articles[1..@articles.count]
 
-      random_article = Article.random    
-      @article = random_article if random_article.class == Article
+
 
     else
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127041028) do
+ActiveRecord::Schema.define(version: 20131206030152) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20131127041028) do
     t.integer  "novelty_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "article_count"
   end
 
   create_table "admin_site_photos", force: true do |t|

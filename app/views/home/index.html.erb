@@ -33,12 +33,32 @@
 
 <div style="clear:both;"></div>
 
-  <% if @article %>
-  <h3>Статьи</h3>
-    <div>
-      <img src = "<%= @article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-      <p><%= raw @article.digest %> <%= link_to t("more"), article_path(@article) %></p>
-    </div>
+  <% if @articles %>
+    
+    <h3>Статьи</h3>
+      
+      <div>
+        <img src = "<%= @first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+        <p><%= raw @first_article.digest %> <%= link_to t("more"), article_path(@first_article) %></p>
+      </div>
+     
+    <div style="clear:both;padding-top: 20px"></div>
+      
+      <div class="row">
+      <% @other_articles.each_with_index  do |article,index| %>
+      
+        <div class="col-sm-3">
+          <a href=<%= article_path(article) %> class="thumbnail" >
+            <img src = "<%= article.first_image_src %>" style="height: 100px" />
+          </a>
+          <div class="caption">
+            <%= article.title %>
+          </div>  
+        </div>  
+      
+      <% end %>
+     </div>
+
   <% end %>
 
 <div style="clear:both;"></div>

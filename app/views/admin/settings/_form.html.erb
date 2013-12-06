@@ -9,6 +9,10 @@
    <div class="form-group">
     <%= f.association :novelty,:input_html => {class: "form-control"} %>
    </div>
+
+   <div class="form-group">
+    <%= f.input :article_count,:input_html => {class: "form-control"} %>
+   </div>
    
 
     <%= f.button :submit,input_html: {class: "btn btn-default"} %>
