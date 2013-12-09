@@ -1,0 +1,24 @@
+<p>
+  <strong><%= t(".title") %>:</strong>
+  <%= @admin_banner.title %>
+</p>
+
+<p>
+  <strong><%= t(".link") %>:</strong>
+  <%= @admin_banner.link %>
+</p>
+
+<p>
+  <strong><%= t(".active") %>:</strong>
+  <%= @admin_banner.active? %>
+</p>
+
+
+
+<p>
+  <strong><%= t(".image") %></strong>
+   <%= image_tag @admin_banner.image_url, class: "img-responsive" %> 
+</p>
+
+<%= link_to 'Edit', edit_admin_banner_path(@admin_banner) %> |
+<%= link_to 'Back', admin_banners_path %>

@@ -1,0 +1,23 @@
+<%= simple_form_for(@admin_banner) do |f| %>
+  <%= f.error_notification %>
+    
+    <div class="form-group">
+    <%= f.input :title,:input_html => {class: "form-control"} %>
+    </div>
+
+    <div class="form-group">
+    <%= f.input :link,:input_html => {class: "form-control"} %>
+    </div>
+
+    <div class="form-group">
+    <%= f.input :active,:input_html => {class: "form-control"} %>
+    </div>
+    
+    <div class="form-group">
+    <%= f.label t("image") %>
+    <%= f.file_field :image, :input_html => {class: "form-control"} %>
+    </div>
+
+    <%= f.button :submit,input_html: {class: "btn btn-default"} %>
+  
+<% end %>

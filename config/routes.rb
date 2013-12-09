@@ -1,6 +1,8 @@
 Photohome::Application.routes.draw do
 
 
+ 
+
   concern :commentable do
     resources :comments
   end
@@ -84,7 +86,7 @@ Photohome::Application.routes.draw do
 
     namespace :admin do
       resources :messages, concerns: :commentable
-      
+      resources :banners      
 
       resources :settings
 

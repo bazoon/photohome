@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209045600) do
+ActiveRecord::Schema.define(version: 20131209053225) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20131209045600) do
     t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.boolean  "active"
   end
 
   create_table "admin_juries", force: true do |t|

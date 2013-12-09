@@ -62,6 +62,11 @@ ru:
         novelty: "Главная новость"
         article: "Главная статья"
         articles: "Статьи"
+      admin_banner:
+        title: "Название"
+        link: "Ссылка"
+        image: "Изображение"
+        active: "Активен"
 
 
     # hints:

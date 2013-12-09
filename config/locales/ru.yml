@@ -77,7 +77,9 @@ ru:
   jury: "Жюри"
   tickets: "Тикеты"
   photos_saved: "Фотографии были успешно сохранены !"
-
+  image: "Изображение"    
+  yess: "Да"
+  nno: "Нет"
 
   # photos: "PHH"
   photos:
@@ -209,7 +211,20 @@ ru:
         title: "Название"
         content: "Содержание"
         digest: "Дайджест"
-
-
+    banners:
+      index:
+        banners: "Баннеры"
+        title: "Название"
+        link: "Ссылка"
+        active: "Активен"
+        image: "Изображение"
+      show:
+        title: "Название"
+        link: "Ссылка"
+        active: "Активен"
+        image: "Изображение"
+      edit:
+        title: "Редактировать"
+        image: "Изображение"      
 
 
