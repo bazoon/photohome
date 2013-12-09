@@ -9,7 +9,9 @@
     <li><%= link_to 'Пользователи', users_path if current_user && current_user.admin? %></li>
     <li><%= link_to 'Темы', admin_topics_path %></li>
     <li><%= link_to "Конкурсы",admin_competitions_path %></li>
-    <li><%= link_to "Реклама",admin_banners_path %></li>
+    <li><%= link_to "Баннеры",admin_banners_path %></li>
+    <li><%= link_to "Реклама",admin_banner_placements_path %></li>
+    
   </ul>
 
 </li>

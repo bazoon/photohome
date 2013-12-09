@@ -3,6 +3,10 @@ Photohome::Application.routes.draw do
 
  
 
+  namespace :admin do
+    resources :banner_placements
+  end
+
   concern :commentable do
     resources :comments
   end

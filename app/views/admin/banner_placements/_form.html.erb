@@ -1,0 +1,21 @@
+<%= simple_form_for(@admin_banner_placement) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.association :banner %>
+    </div>
+    <div class="form-group">
+    <%= f.input :place_id %>
+    </div>
+    <div class="form-group">
+    <%= f.input :start_date %>
+    </div>
+    <div class="form-group">
+    <%= f.input :end_date %>
+    </div>
+
+
+    <%= f.button :submit,input_html: {class: "btn btn-default"} %>
+  
+<% end %>
