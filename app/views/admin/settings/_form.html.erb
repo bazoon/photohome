@@ -11,11 +11,14 @@
    </div>
 
    <div class="form-group">
-    <%= f.input :article_count,:input_html => {class: "form-control"} %>
+    <%= f.association :article,:input_html => {class: "form-control"} %>
    </div>
+  
+
+
 
     <div class="form-group">
-    <%= f.input :articles,label: "Статьи", :input_html => {data: {load:  Article.ids(@admin_setting.articles).map {|a| {id: a.id,name: a.title}}   }} %>
+    <%= f.input :articles, :input_html => {data: {load:  Article.ids(@admin_setting.articles).map {|a| {id: a.id,name: a.title}}   }} %>
     </div>
                 
 

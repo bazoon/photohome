@@ -95,11 +95,14 @@ module ApplicationHelper
   
 
   def ru_icon
-    image_tag(asset_path("ru.png"))
+    # image_tag(asset_path("ru.png"))
+    "EN"
   end
 
   def en_icon
-    image_tag(asset_path("gb.png"))
+    # image_tag(asset_path("gb.png"))
+    
+    "RU"
   end
 
 

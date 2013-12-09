@@ -57,6 +57,12 @@ ru:
         title: "Заголовок"
         content: Содержание
         letter_users_tokens: "Адресаты"
+      admin_setting:
+        album: "Альбом"
+        novelty: "Главная новость"
+        article: "Главная статья"
+        articles: "Статьи"
+
 
     # hints:
     #   defaults:

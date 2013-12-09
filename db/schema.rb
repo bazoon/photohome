@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131206043450) do
+ActiveRecord::Schema.define(version: 20131209045600) do
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20131206043450) do
     t.string   "title"
     t.text     "content"
     t.text     "digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_banners", force: true do |t|
+    t.string   "image"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,6 +57,7 @@ ActiveRecord::Schema.define(version: 20131206043450) do
     t.datetime "updated_at"
     t.integer  "article_count"
     t.string   "articles"
+    t.integer  "article_id"
   end
 
   create_table "admin_site_photos", force: true do |t|

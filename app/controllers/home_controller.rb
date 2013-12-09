@@ -11,11 +11,10 @@ class HomeController < ApplicationController
       @article_count = setting.article_count || 0
       @last_photos = Photo.last(4) 
       
-      @articles = Article.random(@article_count)    
-      @first_article = @articles[0]
-      @other_articles = @articles[1..@articles.count]
-
-
+        
+      @first_article = setting.article
+      @other_articles = Article.ids(setting.articles)
+      
 
     else
 

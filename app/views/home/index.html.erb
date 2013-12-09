@@ -33,7 +33,7 @@
 
 <div style="clear:both;"></div>
 
-  <% if @articles %>
+  <% if @first_article %>
     
     <h3>Статьи</h3>
       
@@ -45,6 +45,7 @@
     <div style="clear:both;padding-top: 20px"></div>
       
       <div class="row">
+      
       <% @other_articles.each_with_index  do |article,index| %>
       
         <div class="col-sm-3">

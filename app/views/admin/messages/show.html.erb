@@ -8,6 +8,10 @@
   <%= @message.content %>
 </p>
 
+
+<script>
+  <%= raw @message.content.html_safe %>
+</script>
 <p>
   <strong><%= t(".status") %>:</strong>
   <%= @message.status_text %>
