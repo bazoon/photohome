@@ -17,18 +17,20 @@
 
   <body style="margin-top: 70px;">
   
-
+    
     <div class="navbar navbar-inverse navbar-fixed-top" >
+    
       <div class="container">
+    
         <div class="navbar-header">
-          
+            
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
 
-          <%=  link_to(I18n.t("project_name"),root_path,class: "navbar-brand") %>
+        <%=  link_to(I18n.t("project_name"),root_path,class: "navbar-brand") %>
         </div>
          <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -46,9 +48,9 @@
 
     
     <div class="container">
-             
+      <%= render 'banners/top' %>        
       <%= breadcrumbs :separator => " &rsaquo; " %>
-      <%=render 'layouts/messages'%>
+      <%= render 'layouts/messages' %>
       <%= yield %>
      
     </div>
