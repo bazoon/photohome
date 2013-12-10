@@ -1,6 +1,8 @@
 class Admin::BannersController <  Admin::BaseController
   before_action :set_admin_banner, only: [:show, :edit, :update, :destroy]
 
+  layout "admin_layout"
+
  # GET /admin/Admin::Banners
   # GET /admin/Admin::Banners.json
   def index
@@ -69,7 +71,7 @@ class Admin::BannersController <  Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_banner_params
-      params.require(:admin_banner).permit(:image, :link, :title, :active)
+      params.require(:admin_banner).permit(:image, :link, :title)
     end
 
 

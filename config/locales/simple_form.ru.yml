@@ -67,6 +67,12 @@ ru:
         link: "Ссылка"
         image: "Изображение"
         active: "Активен"
+      admin_banner_placement:
+        banner: "Баннер"
+        place_id: "Место"
+        active: "Активно"
+        start_date: "Дата начала"
+        end_date: "Дата окончания"
 
 
     # hints:

@@ -1,6 +1,8 @@
 class Admin::BannerPlacementsController < ApplicationController
   before_action :set_admin_banner_placement, only: [:show, :edit, :update, :destroy]
 
+  layout "admin_layout"
+
   # GET /admin/banner_placements
   # GET /admin/banner_placements.json
   def index
@@ -69,6 +71,6 @@ class Admin::BannerPlacementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_banner_placement_params
-      params.require(:admin_banner_placement).permit(:banner_id, :place_id, :start_date, :end_date)
+      params.require(:admin_banner_placement).permit(:banner_id, :place_id, :start_date, :end_date, :active)
     end
 end

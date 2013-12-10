@@ -80,6 +80,8 @@ ru:
   image: "Изображение"    
   yess: "Да"
   nno: "Нет"
+  top: "Верх"
+  bottom: "Низ"
 
   # photos: "PHH"
   photos:
@@ -221,10 +223,26 @@ ru:
       show:
         title: "Название"
         link: "Ссылка"
-        active: "Активен"
         image: "Изображение"
       edit:
         title: "Редактировать"
         image: "Изображение"      
+    banner_placements:
+      index:
+        title: "Размещение баннеров"
+        banner: "Баннер"
+        place: "Место"
+        start_date: "Начальная дата"
+        end_date: "Конечная дата"
+        active: "Активен"
+      edit:
+        title: "Редактировать"
+      show:
+        title: "Размещение баннеров"
+        banner: "Баннер"
+        place: "Место"
+        start_date: "Начальная дата"
+        end_date: "Конечная дата"
+        active: "Активен"  
 
 

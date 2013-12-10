@@ -18,8 +18,7 @@
       <tr>
         <td><%= admin_banner.title %></td>
         <td><%= admin_banner.link %></td>
-        <td><%= admin_banner.active %></td>
-        <td><%= image_tag admin_banner.image_url(:thumb), class: "img-responsive" %> </td>
+         <td><%= image_tag admin_banner.image_url(:thumb), class: "img-responsive" %> </td>
         <td><%= link_to show_icon, admin_banner %></td>
         <td><%= link_to edit_icon, edit_admin_banner_path(admin_banner) %></td>
         <td><%= link_to del_icon, admin_banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>

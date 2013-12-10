@@ -1,12 +1,13 @@
-<h1>Listing admin_banner_placements</h1>
+<h1><%= t(".title") %></h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Banner</th>
-      <th>Place</th>
-      <th>Start date</th>
-      <th>End date</th>
+      <th><%= t(".banner") %></th>
+      <th><%= t(".place") %></th>
+      <th><%= t(".start_date") %></th>
+      <th><%= t(".end_date") %></th>
+      <th><%= t(".active") %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,12 +18,13 @@
     <% @admin_banner_placements.each do |admin_banner_placement| %>
       <tr>
         <td><%= admin_banner_placement.banner_id %></td>
-        <td><%= admin_banner_placement.place_id %></td>
-        <td><%= admin_banner_placement.start_date %></td>
-        <td><%= admin_banner_placement.end_date %></td>
-        <td><%= link_to 'Show', admin_banner_placement %></td>
-        <td><%= link_to 'Edit', edit_admin_banner_placement_path(admin_banner_placement) %></td>
-        <td><%= link_to 'Destroy', admin_banner_placement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= admin_banner_placement.place_label %></td>
+        <td><%= ld admin_banner_placement.start_date %></td>
+        <td><%= ld admin_banner_placement.end_date %></td>
+        <td><%= t(admin_banner_placement.active?) %></td>
+        <td><%= link_to show_icon, admin_banner_placement %></td>
+        <td><%= link_to edit_icon, edit_admin_banner_placement_path(admin_banner_placement) %></td>
+        <td><%= link_to del_icon, admin_banner_placement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Banner placement', new_admin_banner_placement_path %>
+<%= link_to 'New Banner placement', new_admin_banner_placement_path, class: "btn btn-primary"%>

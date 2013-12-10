@@ -1,0 +1,4 @@
+<ul class="nav nav-pills" >
+  <li class= <%= "active" if params[:controller] == "admin/banners" %>><%= link_to "Баннеры",admin_banners_path %> </li>
+  <li class= <%= "active" if params[:controller] == "admin/banner_placements" %>><%= link_to "Размещение",admin_banner_placements_path %></li>
+</ul>
