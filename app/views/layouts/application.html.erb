@@ -7,6 +7,7 @@
   
     <title><%= content_for?(:title) ? yield(:title) :  "Тюменский дом фотографии" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -15,18 +16,17 @@
 
   </head>
 
-  <body >
-  
+  <body class="back">
      
         
     
 
-      <section class="container">
-      <div class="content row">
+      <section class="container" style = "background: #ffffff">
+      <div class="content row" >
           <%= render 'layouts/header' %>
-          <%= render 'banners/top' %>        
+            
         <section class="main col col-lg-12">
-          
+          <%= render 'banners/top' %>      
           <%= breadcrumbs :separator => " &rsaquo; " %>
           <%= render 'layouts/messages' %>
           <%= yield %>
@@ -34,11 +34,13 @@
        
       </div><!-- content -->
     
-    </section><!-- container -->    
+  
  
-  <section class="container">
+
+  
   <footer class="row">
-    <nav class="col-lg-12">
+    <nav class="col col-lg-12">
+      <%= render 'banners/top' %>  
       <ul class="breadcrumb">
         <li><a href="about.php">About the Roux Academy</a></li>
         <li><a href="privacypolicy.php">Privacy Policy</a></li>
@@ -46,6 +48,7 @@
       </ul><!-- breadcrumb -->
     </nav><!-- nav -->
   </footer><!-- footer -->
+
 </section><!-- container -->
 
   

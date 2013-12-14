@@ -1,0 +1,20 @@
+
+
+<div id="dialog" class="modal" role="dialog">
+
+  <div id="aj">
+    <%= ajax_will_paginate photos %>
+  </div>
+
+  <div id = "photos">
+    
+  <div class="row">
+    <% @photos.each_with_index do |photo,index| %>
+         
+      <%=link_to_function(image_tag(photo.image_url(:thumb)),"add_photo(#{photo.id})",id: "ph#{photo.id}",:class => "thumbnail") %>
+     
+    <% end %>
+  </div>  
+  </div>  
+  
+</div>

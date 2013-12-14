@@ -43,6 +43,12 @@ class AdminSitePhotoUploader < CarrierWave::Uploader::Base
   version :normal do
     process :resize_to_limit => [800, 600]
   end
+
+  version :carousel do
+    process :resize_to_limit => [1500, 600]
+  end
+
+
   
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

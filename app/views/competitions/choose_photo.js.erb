@@ -1,8 +1,9 @@
-$("#dialog").html('<%= j render("choose_form",photos: @photos) %>');
+$("#dialog1").html('<%= j render("choose_form",photos: @photos) %>');
  
 
   
- $('#dialog').dialog({width: 750,height: 650,position: "center",modal: true,
-buttons: [ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ]});
+//  $('#dialog').dialog({width: 750,height: 650,position: "center",modal: false,
+// buttons: [ { text: "Ok", click: function() { $( this ).dialog( "close" ); } } ]});
   
+  $('#dialog').modal('show');
   

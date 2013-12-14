@@ -30,7 +30,7 @@ gem 'figaro'
 # gem 'pg'
 gem 'mysql2'
 
-gem 'rolify'
+gem 'rolify', '~> 3.3.0.rc4'
 gem 'simple_form', '>= 3.0.0.rc'
 
 gem 'better_errors'
@@ -84,4 +84,5 @@ gem 'email_spec'
 gem 'launchy'
 
 gem 'gretel'
-
+gem 'selenium-webdriver'
+gem "rails_best_practices"

@@ -20,9 +20,7 @@
 
 
 // Or peek any of them yourself
-//= require twitter/bootstrap/dropdown
-//= require twitter/bootstrap/modal
-//= require twitter/bootstrap/collapse
+//= require twitter/bootstrap
 
 
 
@@ -36,7 +34,8 @@
 
 $(document).ready(function() {
 
- 
+  
+
 
 // убирает флеш сообщения через некоторое время
 // $("div[id^='flash_box']").fadeOut(10000);
