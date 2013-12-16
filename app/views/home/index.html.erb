@@ -1,9 +1,9 @@
 
 
-  <% if @photos  %>
+  <% if @setting_decorator.photos  %>
      
  <div class="fotorama" data-autoplay="true" style="position:relative;margin-right:10%;margin-left:10%;" >
-     <% @photos.each do |photo| %>
+     <% @setting_decorator.photos.each do |photo| %>
       <img src="<%= photo.image_url(:carousel) %>" /> 
      <% end %> 
   </div>
@@ -14,12 +14,12 @@
 
 
   
-  <% if @novelty  %>
+  <% if @setting_decorator.novelty  %>
   <div class="jumbotron" style="padding:0px">
-  <h2> <%=  @novelty.title %> </h2>
+  <h2> <%=  @setting_decorator.novelty.title %> </h2>
     <div>
-      <img src = "<%= @novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-      <p><%= raw @novelty.digest %> <%= link_to t("more"), novelty_path(@novelty) %> </p>
+      <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+      <p><%= raw @setting_decorator.novelty.digest %> <%= link_to t("more"), novelty_path(@setting_decorator.novelty) %> </p>
     </div>
   </div>
   <% end %>
@@ -29,20 +29,20 @@
 
 <div style="clear:both;"></div>
 
-  <% if @first_article %>
+  <% if @setting_decorator.first_article %>
     
     <h3>Статьи</h3>
       
       <div>
-        <img src = "<%= @first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-        <p><%= raw @first_article.digest %> <%= link_to t("more"), article_path(@first_article) %></p>
+        <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+        <p><%= raw @setting_decorator.first_article.digest %> <%= link_to t("more"), article_path(@setting_decorator.first_article) %></p>
       </div>
      
     <div style="clear:both;padding-top: 20px"></div>
       
       <div class="row">
       
-      <% @other_articles.each_with_index  do |article,index| %>
+      <% @setting_decorator.other_articles.each_with_index  do |article,index| %>
       
         <div class="col-sm-3">
           <a href=<%= article_path(article) %> class="thumbnail" >

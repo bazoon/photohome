@@ -49,9 +49,9 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [800, 600]
   end
 
-  version :carousel do
-    process :scale => [1500, 600]
-  end
+  # version :carousel do
+  #   process :scale => [1500, 600]
+  # end
 
 
 

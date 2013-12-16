@@ -4,65 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Photohome" %></title>
+  
+    <title><%= content_for?(:title) ? yield(:title) :  "Тюменский дом фотографии" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+  
 
   </head>
 
- <body style="margin-top: 70px">
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-     <%=  link_to(I18n.t("project_name"),root_path,class: "navbar-brand") %>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-           
-            <%= render 'layouts/common_menu' %>
-            <%= render 'layouts/admin_menu' if current_user && current_user.is_stuff? %>
-           
-            <%= render 'layouts/navigation' %>
-            <%= render 'layouts/lang_select' %>
-           
-          </ul>
-          
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
+  <body class="back">
+     
+        
     
 
-    
-
-
-    <div class="container">
-      <%=render 'layouts/messages'%>
-      <div class="col-md-2" style="border: dotted 1px silver"><%= render 'layouts/user_sidebar' %></div>
-      <div class="col-md-10"><%= yield%> </div>
+      <section class="container" style = "background: #ffffff">
       
-    </div>
+      <div class="content row" >
+          <%= render 'layouts/header' %>
+          <%= render 'banners/top' %>      
+         
+         <div class="col-md-2" style="border: dotted 1px silver"><%= render 'layouts/user_sidebar' %></div>    
+         
+         <section class="main col col-lg-10">
+          <%= breadcrumbs :separator => " &rsaquo; " %>
+          <%= render 'layouts/messages' %>
+          <%= yield %>
+        </section><!-- main -->
+       
+      </div><!-- content -->
+    
+  
+ 
 
   
+  <footer class="row">
+    <nav class="col col-lg-12">
+      <%= render 'banners/top' %>  
+      <ul class="breadcrumb">
+        <li><a href="about.php">About the Roux Academy</a></li>
+        <li><a href="privacypolicy.php">Privacy Policy</a></li>
+        <li><a href="http://rouxacademy.com">Roux Academy Website</a></li>
+      </ul><!-- breadcrumb -->
+    </nav><!-- nav -->
+  </footer><!-- footer -->
+
+</section><!-- container -->
+
   
-  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-      
-        Copiright 2013 
-      
-  </div>
     
-
-
-
+  
+  
   </body>
 </html>

@@ -31,12 +31,9 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(message_params)
-    @message.user_id = current_user.id if current_user
-    @message.status_id = Message::STATUSES[0][:value]
-
-    # binding.pry
-
-
+    @message.user_id = current_user.id
+    
+    
     respond_to do |format|
       if @message.save
         format.html { redirect_to user_message_path(current_user,@message), notice: 'Message was successfully created.' }

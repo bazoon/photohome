@@ -12,4 +12,12 @@ class Comment < ActiveRecord::Base
 
   # NOTE: Comments belong to a user
   belongs_to :user
+
+  def self.create_comment(params, commentable, user_id)
+    comment = new(params)
+    comment.user_id = user_id
+    comment.commentable = commentable
+    comment
+  end
+
 end

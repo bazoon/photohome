@@ -48,9 +48,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
 
-    @photo = Photo.new(photo_params)
-    @photo.user_id = current_user.id
-    @photo.published = true
+    @photo = Photo.new(photo_params, current_user.id, true)
 
     authorize! :create, @photo #manualy authorize
 
@@ -111,6 +109,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :user_id, :image,:image_cache,:theme_tokens,:topic_id,:destination_id)
+      params.require(:photo).permit(:title, :user_id, :image,:image_cache,:theme_tokens,:topic_id,:destination_id,:age_policy_id)
     end
 end

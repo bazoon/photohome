@@ -22,12 +22,7 @@ class Admin::PhotosController < Admin::BaseController
 
   def publish
     @id = params[:id]
-
-    photo = Photo.find(@id)
-    photo.published = ! photo.published
-    photo.save
-
-    @published = photo.published
+    @published = Photo.find(@id).publish
 
     respond_to do |format|
       format.js

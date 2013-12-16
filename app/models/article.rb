@@ -2,6 +2,7 @@ class Article < ActiveRecord::Base
   acts_as_commentable
 
   scope :random, lambda {|n| where("id in (?)", all.map(&:id).to_a.sample(n))  }
+
   scope :ids, lambda {|s| s.nil? ? Article.none :  where("id in (?)", s.split(",")) }
 
 

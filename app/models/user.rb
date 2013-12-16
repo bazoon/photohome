@@ -12,10 +12,10 @@ class User < ActiveRecord::Base
 
   # validates :last_name, :adress, :zip_code, :city, :country, presence: true
   
-  has_many :photos
-  has_many :messages
+  has_many :photos, dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :jury,class_name: "Admin::Jury"
-  has_many :letters
+  has_many :letters, dependent: :destroy
 
   acts_as_tagger
 

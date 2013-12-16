@@ -2,6 +2,8 @@ class Photo < ActiveRecord::Base
 	# belongs_to :gallery
   belongs_to :user
 
+  belongs_to :age_policy, class_name: 'Admin::AgePolicy'
+
   has_many :competition_photos
 
 
@@ -46,6 +48,11 @@ class Photo < ActiveRecord::Base
 	# attr_accessible :theme_tokens
 	attr_reader :theme_tokens
 
+  def initialize(params=nil, user_id=nil, published=false)
+    super(params)
+    self.user_id = user_id
+    self.published = published
+  end
 
   def check_for_competition
     competition_photos.count == 0
@@ -129,6 +136,13 @@ class Photo < ActiveRecord::Base
       "select *from photos where id not in 
        (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
         competitions.open_date > CURRENT_DATE) and (published=true)")
+  end
+
+
+  def publish
+    self.published = ! self.published
+    self.save
+    self.published
   end
 
 

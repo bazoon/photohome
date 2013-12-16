@@ -89,6 +89,10 @@ ru:
       title: "Название" 
       new: "Новая фотография"
       caption: "Фотографии"
+    new:
+      age_policy: "Возрастное ограничение"
+    edit:
+      title: "Редактировать"
   topics:
       index:
         name: "Название"
@@ -244,5 +248,13 @@ ru:
         start_date: "Начальная дата"
         end_date: "Конечная дата"
         active: "Активен"  
+    age_policies:
+      index: 
+        title: "Возрастная классификация"
+        age: "Возраст +"    
+      edit:
+        title: "Редактировать"
+      new:
+        title: "Добавить возраст"
 
 

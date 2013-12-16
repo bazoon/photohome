@@ -5,6 +5,10 @@ class Novelty < ActiveRecord::Base
 
 	self.per_page = 10
 
+  def user_name
+    user && user.name
+  end
+
 
   def first_image_src
     # binding.pry

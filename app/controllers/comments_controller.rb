@@ -6,11 +6,15 @@ class CommentsController < ApplicationController
   def create
     
     # @comment = @commentable.comments.build(params[:comment])  
-    @comment = Comment.new(comment_params)
-    @comment.user_id = current_user.id
-    @comment.commentable = @commentable
-    @comment.save
+    # @comment = Comment.new(comment_params)
+    # @comment.user_id = current_user.id
+    # @comment.commentable = @commentable
+    # @comment.save
 
+
+    @comment = Comment.create_comment(comment_params, @commentable, current_user.id)
+    
+  
     
     respond_to do |format|
       if @comment.save
@@ -51,9 +55,7 @@ class CommentsController < ApplicationController
     def load_commentable
       prefix = params[:comment][:commentable]
       @commentable = prefix+"_id"
-
       @commentable = prefix.camelize.constantize.find(params[prefix+"_id"])
-      # raise Exception
     end
 
 

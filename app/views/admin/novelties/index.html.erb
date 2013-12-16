@@ -22,7 +22,7 @@
         <td><%= novelty.title %></td>
         <td><%= I18n.l(novelty.publish_date) %></td>
         <td><%= novelty.published %></td>
-        <td><%= novelty.user.name %></td>
+        <td><%= novelty.user_name %></td>
         <td><%= link_to show_icon, admin_novelty_path(novelty) %></td>
         <td><%= link_to edit_icon, edit_admin_novelty_path(novelty) %></td>
         <td>

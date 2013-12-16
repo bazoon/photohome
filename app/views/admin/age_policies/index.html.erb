@@ -1,0 +1,27 @@
+<h1><%= t('.title') %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('.age') %></th>
+    
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @age_policies.each do |age_policy| %>
+      <tr>
+        <td><%= age_policy.age %></td>
+        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_admin_age_policy_path(age_policy) %></td>
+        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), admin_age_policy_path(age_policy), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new'), new_admin_age_policy_path,{class: "btn btn-primary"}%>

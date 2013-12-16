@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131210035109) do
+ActiveRecord::Schema.define(version: 20131216050120) do
+
+  create_table "admin_age_policies", force: true do |t|
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_albums", force: true do |t|
     t.string   "title"
@@ -201,7 +207,7 @@ ActiveRecord::Schema.define(version: 20131210035109) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "reason_id"
-    t.integer  "status_id"
+    t.integer  "status_id",  default: 0
   end
 
   create_table "novelties", force: true do |t|
@@ -227,6 +233,7 @@ ActiveRecord::Schema.define(version: 20131210035109) do
     t.boolean  "seen",           default: false
     t.boolean  "deleted",        default: false
     t.integer  "delayed_job_id"
+    t.integer  "age_policy_id"
   end
 
   create_table "pictures", force: true do |t|

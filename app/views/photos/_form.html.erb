@@ -18,6 +18,10 @@
     </div>
 
     <div class="form-group">
+    <%= f.association :age_policy, :input_html => {class: "form-control"}%>
+    </div>
+
+    <div class="form-group">
     <%= f.input :theme_tokens, :input_html => {data: {load: @photo.themes.map {|t| {id: t.name,name: t.name}}   }} %>
     </div>
 

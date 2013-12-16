@@ -32,6 +32,7 @@ ru:
         title: "Название"
         topic: "Раздел"
         destination_id: "Назначение"
+        age_policy: "Возрастное ограничение"
       comment:
         title: "Заголовок"
         comment: "Комментарий"  
@@ -73,6 +74,8 @@ ru:
         active: "Активно"
         start_date: "Дата начала"
         end_date: "Дата окончания"
+      admin_age_policy:
+        age: "Возраст"
 
 
     # hints:

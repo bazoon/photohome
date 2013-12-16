@@ -105,6 +105,9 @@ module ApplicationHelper
     "RU"
   end
 
+  def badge(text)
+    content_tag(:span,text,class: "badge")
+  end
 
 
 

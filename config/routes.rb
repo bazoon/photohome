@@ -1,7 +1,6 @@
 Photohome::Application.routes.draw do
 
 
- 
 
   namespace :admin do
     resources :banner_placements
@@ -99,6 +98,7 @@ Photohome::Application.routes.draw do
       resources :novelties  
       resources :articles
       resources :topics
+      resources :age_policies
 
       resources :competitions  do
         member do
