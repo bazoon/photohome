@@ -1,6 +1,7 @@
 <div id="top_banners" style="padding-bottom: 10px" >
   
- <%= link_to image_tag(BannerGenerator.new.top), "/competitions",:target => "_blank" %>
+ <%- banner =  BannerGenerator.new.top %> 
+ <%= link_to image_tag(banner.image_url), banner.link ,:target => "_blank" if banner%>
 
 </div>
 
