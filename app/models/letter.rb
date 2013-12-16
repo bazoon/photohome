@@ -10,7 +10,7 @@ class Letter < ActiveRecord::Base
   def letter_users_tokens=(tokens)
 
     self.letter_users.delete_all  
-    self.save
+    self.save!
 
     # raise Exception
     

@@ -41,8 +41,5 @@ class CompetitionsController < ApplicationController
       @competition = Competition.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def competition_params
-      params.require(:competition).permit(:title, :description, :last_date)
-    end
+
 end

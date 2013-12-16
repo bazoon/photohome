@@ -25,7 +25,7 @@ def update
       jury = Admin::Jury.new
       jury.user_id = id
       jury.competition_id = competition_id
-      jury.save
+      jury.save!
     end
 
   end  
@@ -56,9 +56,5 @@ private
     @jury = Admin::Jury.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def jury_params
-    params.require(:jury).permit(:user_id, :competition_id)
-  end
 
 end

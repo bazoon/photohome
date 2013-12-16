@@ -18,7 +18,7 @@ class CompetitionPhoto < ActiveRecord::Base
     ids.each do |id|
         raise Exceptions::DuplicatePhoto unless not_found_duplicatate?(id,competition.id)  
         self.check(competition,nomination_id,user)
-        CompetitionPhoto.create(photo_id: id,competition_id: competition.id,nomination_id: nomination_id)
+        CompetitionPhoto.create!(photo_id: id,competition_id: competition.id,nomination_id: nomination_id)
       end  
   end
 

@@ -86,11 +86,11 @@ class Photo < ActiveRecord::Base
 
 	def theme_tokens=(tokens)
 		self.theme_list = ""
-    self.save
+    self.save!
     # raise Exception
     User.current.tag(self, :with => tokens, :on => :themes)
    
-    self.save
+    self.save!
 	end
 
 
@@ -106,7 +106,7 @@ class Photo < ActiveRecord::Base
     self.published = false
     self.deleted = true  
     self.delayed_job_id=self.remove_attached_image.id
-    self.save
+    self.save!
   end
 
   def undelete
@@ -114,7 +114,7 @@ class Photo < ActiveRecord::Base
       Delayed::Job.find(self.delayed_job_id).destroy 
       self.published = true
       self.deleted = false
-      self.save
+      self.save!
     end  
   end
 
@@ -122,7 +122,7 @@ class Photo < ActiveRecord::Base
   # Установление флажка о том, что фото было просмотрено модератором
   def see
     self.seen = true
-    self.save
+    self.save!
   end
 
 
@@ -141,7 +141,7 @@ class Photo < ActiveRecord::Base
 
   def publish
     self.published = ! self.published
-    self.save
+    self.save!
     self.published
   end
 

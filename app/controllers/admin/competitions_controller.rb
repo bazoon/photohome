@@ -22,7 +22,7 @@ class Admin::CompetitionsController < Admin::BaseController
   def final_rating
     competition_photo = CompetitionPhoto.find(params["idBox"])
     competition_photo.place = params["rate"].to_i
-    competition_photo.save
+    competition_photo.save!
 
     respond_to do |format|
       format.json { render json: competition_photo.place, status: :ok}

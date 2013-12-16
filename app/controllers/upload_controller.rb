@@ -5,7 +5,7 @@ protect_from_forgery with: :null_session
 
    picture = Picture.new
    picture.image = params[:image]
-   picture.save
+   picture.save!
    # render :json => picture.image.url
 
    respond_to do |format|
