@@ -21,8 +21,6 @@
 
 // Or peek any of them yourself
 //= require twitter/bootstrap
-//= require bootstrap-editable
-//= require bootstrap-editable-rails
 
 
 //= require turbolinks
