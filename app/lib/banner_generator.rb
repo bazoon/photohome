@@ -3,12 +3,14 @@ class BannerGenerator
   
 
   def top
-    Admin::BannerPlacement.select_for_top
+    banner = Admin::BannerPlacement.select_for_top
+    banner && banner.image_url
   end
 
-   def bottom
-    
-    Admin::BannerPlacement.select_for_bottom
+  def bottom
+
+    banner = Admin::BannerPlacement.select_for_bottom
+    banner && banner.image_url
 
   end
 
