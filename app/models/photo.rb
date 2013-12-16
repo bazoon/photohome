@@ -145,5 +145,15 @@ class Photo < ActiveRecord::Base
     self.published
   end
 
+  def self.theme_tokens(name)
+    
+      tags = self.tag_counts_on(:themes).where("name like ?",["%#{name}%"])
+      tags = tags.map {|tag| {id: tag.name, name: tag.name} }
+      
+      if tags.empty?
+        tags = [id: "#{name}",name: "New: #{name}"]
+      end 
+      tags
+  end
 
 end
