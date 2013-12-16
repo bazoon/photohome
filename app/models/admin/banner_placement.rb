@@ -31,7 +31,7 @@ class Admin::BannerPlacement < ActiveRecord::Base
   end
 
   def self.select_for_bottom
-    active.bottom.random.first && active.bottom.random.first.banner
+    actPlacive.bottom.random.first && active.bottom.random.first.banner
   end
     
 end
