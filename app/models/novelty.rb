@@ -1,4 +1,4 @@
-class Novelty < ActiveRecord::Base
+class Novelty < Post
 	belongs_to :user
   acts_as_commentable
 

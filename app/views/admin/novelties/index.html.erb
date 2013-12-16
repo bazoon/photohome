@@ -20,7 +20,7 @@
     <%@novelties.each do |novelty| %>
       <tr>
         <td><%= novelty.title %></td>
-        <td><%= I18n.l(novelty.publish_date) %></td>
+        <td><%= I18n.l(novelty.created_at) %></td>
         <td><%= novelty.published %></td>
         <td><%= novelty.user_name %></td>
         <td><%= link_to show_icon, admin_novelty_path(novelty) %></td>

@@ -6,7 +6,6 @@ def index
   @site_photos = Admin::SitePhoto.paginate(:page => params[:page],per_page: 16)
 end
 
-
 def edit
 end
 
@@ -77,7 +76,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def site_photo_params
-    params.require(:admin_site_photo).permit(:title, :photo_id, :image, :album_id,:album)
+    params.require(:admin_site_photo).permit(:title, :photo_id, :image, :album_id,:album,:age_policy_id)
   end
 
 end

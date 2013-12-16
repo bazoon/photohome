@@ -1,4 +1,4 @@
-class Article < ActiveRecord::Base
+class Article < Post
   acts_as_commentable
 
   scope :random, lambda {|n| where("id in (?)", all.map(&:id).to_a.sample(n))  }

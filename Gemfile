@@ -86,3 +86,4 @@ gem 'launchy'
 gem 'gretel'
 gem 'selenium-webdriver'
 gem "rails_best_practices"
+gem 'bootstrap-editable-rails'

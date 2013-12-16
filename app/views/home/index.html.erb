@@ -4,7 +4,7 @@
      
  <div class="fotorama" data-autoplay="true" style="position:relative;margin-right:10%;margin-left:10%;" >
      <% @setting_decorator.photos.each do |photo| %>
-      <img src="<%= photo.image_url(:carousel) %>" /> 
+      <img src="<%= photo.image_url(:normal) %>" /> 
      <% end %> 
   </div>
  
