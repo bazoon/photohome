@@ -17,7 +17,7 @@
   <tbody>
     <% @admin_banner_placements.each do |admin_banner_placement| %>
       <tr>
-        <td><%= admin_banner_placement.banner_id %></td>
+        <td><%=image_tag admin_banner_placement.banner.image_url(:thumb) %></td>
         <td><%= admin_banner_placement.place_label %></td>
         <td><%= ld admin_banner_placement.start_date %></td>
         <td><%= ld admin_banner_placement.end_date %></td>
