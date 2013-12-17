@@ -1,6 +1,8 @@
 class Admin::ArticlesController < Admin::BaseController
   before_action :set_admin_article, only: [:show, :edit, :update, :destroy]
 
+ load_and_authorize_resource except: [:create] 
+
   # GET /admin/articles
   # GET /admin/articles.json
   def index
@@ -25,6 +27,7 @@ class Admin::ArticlesController < Admin::BaseController
   # POST /admin/articles.json
   def create
     @admin_article = Article.new(admin_article_params)
+    @admin_article.user_id = current_user.id
 
     respond_to do |format|
       if @admin_article.save
@@ -71,4 +74,11 @@ class Admin::ArticlesController < Admin::BaseController
     def admin_article_params
       params.require(:article).permit(:title, :content, :digest)
     end
+
+  def verify_permission
+    # redirect_to root_path, alert: "Admin area !" current_user && current_user.is_stuff?
+    render :text => "Admin area !" unless current_user && (current_user.is_stuff? || current_user.is_writer?)
+  end
+
+
 end

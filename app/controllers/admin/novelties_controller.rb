@@ -1,6 +1,7 @@
 class Admin::NoveltiesController < Admin::BaseController
   before_action :set_novelty, only: [:show, :edit, :update, :destroy]
 
+
   #Трюк для обхода ошибки связанной с Strong parameters  
   # before_filter do
   #   resource = controller_path.singularize.gsub('/', '_').to_sym
@@ -88,4 +89,10 @@ class Admin::NoveltiesController < Admin::BaseController
     def novelty_params
       params.require(:novelty).permit(:title, :content, :publish_date, :published, :user_id, :digest)
     end
+
+    def verify_permission
+    # redirect_to root_path, alert: "Admin area !" current_user && current_user.is_stuff?
+      render :text => "Admin area !" unless current_user && (current_user.is_stuff? || current_user.is_writer?)
+    end
+
 end

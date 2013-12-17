@@ -1,0 +1,2 @@
+<li><%=link_to("Новости",admin_novelties_path) if can? :manage, Novelty %></li>
+<li><%=link_to("Статьи",admin_articles_path) if can? :manage, Article %></li>

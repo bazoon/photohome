@@ -1,7 +1,7 @@
 <h1><%= t(".novelties_") %></h1>
 
   <!-- #<%= will_paginate @posts %> -->
-<%= will_paginate @posts, renderer: BootstrapPagination::Rails%>
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 
 <table class="table table-striped">
   <thead>
@@ -23,10 +23,10 @@
         <td><%= I18n.l(novelty.created_at) %></td>
         <td><%= novelty.published %></td>
         <td><%= novelty.user_name %></td>
-        <td><%= link_to show_icon, admin_novelty_path(novelty) %></td>
-        <td><%= link_to edit_icon, edit_admin_novelty_path(novelty) %></td>
+        <td><%= link_to show_icon, admin_novelty_path(novelty)  %></td>
+        <td><%= link_to edit_icon, edit_admin_novelty_path(novelty) if can? :manage, novelty %></td>
         <td>
-        <%= link_to del_icon, admin_novelty_path(novelty), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to del_icon, admin_novelty_path(novelty), method: :delete, data: { confirm: 'Are you sure?' } if can? :manage, novelty %>
         </td>
       
       </tr>

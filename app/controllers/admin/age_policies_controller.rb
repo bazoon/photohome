@@ -1,4 +1,4 @@
-class Admin::AgePoliciesController < ApplicationController
+class Admin::AgePoliciesController < Admin::BaseController
   before_action :set_age_policy, only: [:show, :edit, :update, :destroy]
 
 def index

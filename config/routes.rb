@@ -37,7 +37,7 @@ Photohome::Application.routes.draw do
     end  
 
 
-    resources :articles, concerns: :commentable, only: :show do
+    resources :articles, concerns: :commentable, only: [:show,:new,:edit,:destroy] do
       collection do
         get 'list'
       end

@@ -1,4 +1,4 @@
-class Admin::BannerPlacementsController < ApplicationController
+class Admin::BannerPlacementsController < Admin::BaseController
   before_action :set_admin_banner_placement, only: [:show, :edit, :update, :destroy]
 
   layout "admin_layout"

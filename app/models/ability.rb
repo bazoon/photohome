@@ -4,6 +4,7 @@ class Ability
   def initialize(user)
     # user ||= User.new # guest user (not logged in)
     
+    #Registered users
     if user 
 
       if user.has_role? :admin
@@ -18,31 +19,43 @@ class Ability
         can :manage, Article
       end
 
+      if user.has_role? :writer
+      
+        can :create, Article
+        can :manage, Article do |article|
+            article.user_id == user.id    
+        end
+
+        can :create, Novelty
+        can :manage, Novelty do |article|
+            article.user_id == user.id    
+        end
+      end
+
       if user.in_jury?
         can :update, JuryRating, user_id: user.id
       end  
 
 
-        can :read, Message
-        can :manage, Comment,user_id: user.id
-        can :manage, Photo, user_id: user.id
-        can :create, Photo
+    can :read, Message
+    can :manage, Comment,user_id: user.id
+    can :manage, Photo, user_id: user.id
+    can :create, Photo
 
-        can :create, :Like
-        can :manage, :Like, user_id: user.id
-        can :read, Article
-        can :read, Novelty
-        cannot :read, Letter
-        can :manage, Letter, user_id: user.id
-       
-        can :read, Letter do |letter|
-          
-          letter.letter_users.any? { |lu| lu.user.id == user.id }
+    can :create, :Like
+    can :manage, :Like, user_id: user.id
+    can :read, Article
+    can :read, Novelty
+    cannot :read, Letter
+    can :manage, Letter, user_id: user.id
+   
+    can :read, Letter do |letter|
+      letter.letter_users.any? { |lu| lu.user.id == user.id }
+    end
 
-        end
-
-        can :request, Competition 
+    can :request, Competition 
     else    
+      #Unregistered users
       can :read, [Photo, Novelty, Article, Comment]
     end
         
