@@ -24,6 +24,7 @@ Photohome::Application.routes.draw do
   get "photo_ajax/theme_tokens"
 
   root :to => "home#index"
+  
   get 'test' => "home#test", as: :test
     
   scope "(:locale)", locale: /en|ru/ do

@@ -49,6 +49,7 @@ class PhotosController < ApplicationController
   def create
 
     @photo = Photo.new(photo_params, current_user.id, true)
+    # raise Exception
 
     authorize! :create, @photo #manualy authorize
 

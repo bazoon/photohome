@@ -1,14 +1,15 @@
 
 
-  <% if @setting_decorator.photos  %>
-     
- <div class="fotorama" data-autoplay="true" style="position:relative;margin-right:10%;margin-left:10%;" >
+<% if @setting_decorator.photos  %>
+  <div class="fotorama" data-autoplay="true" data-fit="cover" data-width="100%"
+     data-ratio="1200/900">
      <% @setting_decorator.photos.each do |photo| %>
-      <img src="<%= photo.image_url(:normal) %>" /> 
+
+     <img style="float: left "src="<%= photo.image_url(:carousel) %>" /> 
+      
      <% end %> 
   </div>
- 
- 
+
 
   <% end %>
 
@@ -16,9 +17,12 @@
   
   <% if @setting_decorator.novelty  %>
   <div class="jumbotron" style="padding:0px">
-  <h2> <%=  @setting_decorator.novelty.title %> </h2>
-    <div>
+  <h3> Главная новость</h3>
+  
+    <div style="border: 1px dotted silver">
+
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+      <h3> <%=  @setting_decorator.novelty.title %> </h3>
       <p><%= raw @setting_decorator.novelty.digest %> <%= link_to t("more"), novelty_path(@setting_decorator.novelty) %> </p>
     </div>
   </div>
@@ -28,20 +32,20 @@
 
 
 <div style="clear:both;"></div>
-
+  <h3> Рекомендуемая статья</h3>
   <% if @setting_decorator.first_article %>
     
-    <h3>Статьи</h3>
-      
-      <div>
+           
+      <div style="border: 1px dotted silver">
         <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
+        <h2><%= @setting_decorator.first_article.title %></h2>
         <p><%= raw @setting_decorator.first_article.digest %> <%= link_to t("more"), article_path(@setting_decorator.first_article) %></p>
-      </div>
+      
      
     <div style="clear:both;padding-top: 20px"></div>
-      
+      <p class="muted">Еще статьи...</p>
       <div class="row">
-      
+       
       <% @setting_decorator.other_articles.each_with_index  do |article,index| %>
       
         <div class="col-sm-3">
@@ -56,6 +60,8 @@
       <% end %>
      </div>
 
+  </div>
+
   <% end %>
 
 <div style="clear:both;"></div>
@@ -69,7 +75,7 @@
       <% @last_photos.each do |photo|  %>
        <div class="col-sm-3">
      
-         
+        
          <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
          <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
      
