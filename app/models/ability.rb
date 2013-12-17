@@ -2,50 +2,51 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new # guest user (not logged in)
+    # user ||= User.new # guest user (not logged in)
     
-    if user.has_role? :admin
-      can :manage, :all
-    end  
-    
-    if user.has_role? :moder
-      can :manage, Novelty  
-      can :manage, Admin::Album
-      can :manage, Admin::SitePhoto  
-      can :manage, Admin::Setting
-      can :manage, Article
-    end
+    if user 
 
-    if user.in_jury?
-      can :update, JuryRating, user_id: user.id
-    end  
-
-
-      can :read, Message
-      can :manage, Comment,user_id: user.id
-      can :manage, Photo, user_id: user.id
-      can :create, Photo
-
-      can :create, :Like
-      can :manage, :Like, user_id: user.id
-      can :read, Article
-      can :read, Novelty
-      cannot :read, Letter
-      can :manage, Letter, user_id: user.id
-     
-      can :read, Letter do |letter|
-        
-        letter.letter_users.any? { |lu| lu.user.id == user.id }
-
+      if user.has_role? :admin
+        can :manage, :all
+      end  
+      
+      if user.has_role? :moder
+        can :manage, Novelty  
+        can :manage, Admin::Album
+        can :manage, Admin::SitePhoto  
+        can :manage, Admin::Setting
+        can :manage, Article
       end
 
-      can :request, Competition
+      if user.in_jury?
+        can :update, JuryRating, user_id: user.id
+      end  
 
 
+        can :read, Message
+        can :manage, Comment,user_id: user.id
+        can :manage, Photo, user_id: user.id
+        can :create, Photo
 
-    can :read, Photo
+        can :create, :Like
+        can :manage, :Like, user_id: user.id
+        can :read, Article
+        can :read, Novelty
+        cannot :read, Letter
+        can :manage, Letter, user_id: user.id
+       
+        can :read, Letter do |letter|
+          
+          letter.letter_users.any? { |lu| lu.user.id == user.id }
 
-  
+        end
+
+        can :request, Competition 
+    else    
+      can :read, [Photo, Novelty, Article, Comment]
+    end
+        
+    
 
     # Define abilities for the passed in user here. For example:
     #
