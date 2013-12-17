@@ -38,7 +38,7 @@
            
       <div style="border: 1px dotted silver">
         <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-        <h2><%= @setting_decorator.first_article.title %></h2>
+        <h3><%= @setting_decorator.first_article.title %></h3>
         <p><%= raw @setting_decorator.first_article.digest %> <%= link_to t("more"), article_path(@setting_decorator.first_article) %></p>
       
      
