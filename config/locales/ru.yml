@@ -82,6 +82,11 @@ ru:
   nno: "Нет"
   top: "Верх"
   bottom: "Низ"
+  new_record_added: "Новая запись добавлена"
+  record_updated: "Запись обновлена"
+  
+
+
 
   # photos: "PHH"
   photos:

@@ -32,7 +32,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       if @admin_post.save
-        format.html { redirect_to [:admin, :articles], notice: "#{post_type} was created !" }
+        format.html { redirect_to [:admin, :articles], notice: I18n.t(:new_record_added) }
         format.json { render action: 'show', status: :created, location: @admin_post }
       else
         format.html { render action: 'new' }
@@ -47,7 +47,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     respond_to do |format|
       if @admin_post.update(admin_post_params)
-        format.html { redirect_to [:admin, posts_sym], notice: "#{post_type} was updated !" }
+        format.html { redirect_to [:admin, posts_sym], notice: I18n.t(:record_updated) }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

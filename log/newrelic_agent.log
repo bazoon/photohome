@@ -9044,3 +9044,6 @@
 [12/17/13 12:31:43 +0600 Mac-mini-VITALIY.local (7663)] INFO : Installing Rails4 Error instrumentation
 [12/17/13 12:31:43 +0600 Mac-mini-VITALIY.local (7663)] INFO : Finished instrumentation
 [12/17/13 12:31:43 +0600 Mac-mini-VITALIY.local (7663)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[12/17/13 12:57:04 +0600 Mac-mini-VITALIY.local (2964)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/vith/Desktop/projects/rails/photohome/app/controllers/admin/posts_controller.rb:35: syntax error, unexpected tLABEL
+...in, :articles], notice: notice: I18n.t(:new_record_added) }
+...                               ^
