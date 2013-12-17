@@ -19,10 +19,10 @@
   <div class="jumbotron" style="padding:0px">
   <h3> Главная новость</h3>
   
-    <div style="border: 1px dotted silver">
+    <div style="border: 1px dotted silver; padding: 10px">
 
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-      <h3> <%=  @setting_decorator.novelty.title %> </h3>
+      <h2> <%=  @setting_decorator.novelty.title %> </h2>
       <p><%= raw @setting_decorator.novelty.digest %> <%= link_to t("more"), novelty_path(@setting_decorator.novelty) %> </p>
     </div>
   </div>
@@ -36,9 +36,9 @@
   <% if @setting_decorator.first_article %>
     
            
-      <div style="border: 1px dotted silver">
+      <div style="border: 1px dotted silver; padding: 10px;">
         <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
-        <h3><%= @setting_decorator.first_article.title %></h3>
+        <h4><%= @setting_decorator.first_article.title %></h4>
         <p><%= raw @setting_decorator.first_article.digest %> <%= link_to t("more"), article_path(@setting_decorator.first_article) %></p>
       
      
