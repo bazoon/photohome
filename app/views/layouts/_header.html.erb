@@ -28,7 +28,7 @@
          <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <%= render 'layouts/common_menu' %>
-            <%= render 'layouts/admin_menu' if current_user && current_user.is_stuff? || current_user.is_writer? %>
+            <%= render 'layouts/admin_menu' if current_user && (current_user.is_stuff? || current_user.is_writer?) %>
             <%= render 'layouts/navigation' %>
             <%= render 'layouts/lang_select' %>
           </ul>

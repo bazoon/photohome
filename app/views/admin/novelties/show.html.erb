@@ -2,28 +2,25 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @novelty.title %>
+  <%= @admin_post.title %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= raw @novelty.content %>
+  <%= raw @admin_post.content %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= raw @novelty.digest %>
+  <%= raw @admin_post.digest %>
 </p>
 
 <p>
   <strong>Published:</strong>
-  <%= @novelty.published %>
+  <%= @admin_post.published %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @novelty.user_id %>
+  <%= @admin_post.user_id %>
 </p>
-
-<%= link_to 'Edit', edit_novelty_path(@novelty) %> |
-<%= link_to 'Back', novelties_path %>

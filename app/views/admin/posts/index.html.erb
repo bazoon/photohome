@@ -1,0 +1,29 @@
+<h1><%= t(".articles_") %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t(".title") %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_posts.each do |admin_post| %>
+      <tr>
+        <td><%= admin_post.title %></td>
+        <td><%= link_to show_icon, admin_post %></td>
+        <td><%= link_to edit_icon, [:edit,:admin,admin_post] if can? :edit, admin_post %> </td>
+        <td><%= link_to del_icon, [:admin, admin_post], method: :delete, data: { confirm: 'Are you sure?' } if can? :manage, admin_post %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<%= link_to t(".new"), [:new, :admin, @post_sym], {class: "btn btn-primary"}  if can? :manage, @post_sym.to_s.capitalize.constantize %>
+
+<br>

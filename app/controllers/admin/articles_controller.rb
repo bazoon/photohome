@@ -29,15 +29,18 @@ class Admin::ArticlesController < Admin::BaseController
     @admin_article = Article.new(admin_article_params)
     @admin_article.user_id = current_user.id
 
-    respond_to do |format|
-      if @admin_article.save
-        format.html { redirect_to [:admin, @admin_article], notice: 'Article was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @admin_article }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @admin_article.errors, status: :unprocessable_entity }
-      end
-    end
+    render text: admin_article_params.inspect
+
+    # respond_to do |format|
+    #   if @admin_article.save
+    #     format.html { redirect_to [:admin, @admin_article], notice: 'Article was successfully created.' }
+    #     format.json { render action: 'show', status: :created, location: @admin_article }
+    #   else
+    #     format.html { render action: 'new' }
+    #     format.json { render json: @admin_article.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
   end
 
   # PATCH/PUT /admin/articles/1
@@ -72,7 +75,7 @@ class Admin::ArticlesController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_article_params
-      params.require(:article).permit(:title, :content, :digest)
+      params.require(:article).permit(:title, :content, :digest,:type)
     end
 
   def verify_permission
