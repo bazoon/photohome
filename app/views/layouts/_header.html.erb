@@ -30,6 +30,9 @@
             <%= render 'layouts/common_menu' %>
             <%= render 'layouts/admin_menu' if current_user && (current_user.is_stuff? || current_user.is_writer?) %>
             <%= render 'layouts/navigation' %>
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <%= render 'layouts/lang_select' %>
           </ul>
          </div>

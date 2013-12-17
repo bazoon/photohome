@@ -53,7 +53,7 @@ en:
   profile: "Profile"
   sign_up: "Sign up"
   forgot_password: "Forgot password ?"
-
+  articles_: "Articles"
   photos:
     index:
       title: "Title" 
