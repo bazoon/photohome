@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131216082036) do
+ActiveRecord::Schema.define(version: 20131219041001) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -234,6 +234,7 @@ ActiveRecord::Schema.define(version: 20131216082036) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.integer  "age_policy_id"
   end
 
   create_table "redactor_assets", force: true do |t|

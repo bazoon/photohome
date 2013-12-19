@@ -20,7 +20,8 @@
     <div style="border: 1px dotted silver; padding: 10px">
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
       <h2> <%=  @setting_decorator.novelty.title %> </h2>
-      <p><%= raw @setting_decorator.novelty.digest %> <%= link_to t("more"), novelty_path(@setting_decorator.novelty) %> </p>
+      <p> <%= raw @setting_decorator.novelty.digest %> <%= link_to t("more"), novelty_path(@setting_decorator.novelty) %> </p>
+      <small> <%= badge "#{@setting_decorator.novelty<%= render 'post' %>.age_policy_age}+"%> </small>
     </div>
   </div>
   <% end %>
@@ -39,23 +40,27 @@
         <small class="text-muted"><%= @setting_decorator.first_article.author %> </small>
         <small class="text-muted"><%= ld @setting_decorator.first_article.created_at %> </small>
         <p><%= raw @setting_decorator.first_article.digest %> 
-      
+        <small> <%= badge "#{@setting_decorator.first_article.age_policy_age}+"%> </small>
      
     <div style="clear:both;padding-top: 20px"></div>
+
       <div class="muted">Еще статьи...</div>
       <div class="row">
        
       <% @setting_decorator.other_articles.each_with_index  do |article,index| %>
       
-        <div class="col-sm-3">
-          <a href=<%= article_path(article) %> class="thumbnail" >
-            <img src = "<%= article.first_image_src %>" style="height: 100px" />
+        
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src ="<%= article.first_image_src %>"  alt="..." style = "max-height: 150px" >
           </a>
           <div class="caption">
             <%= link_to article.title, article_path(article) %>
           </div>  
-        </div>  
-      
+        </div>
+        
+
+
       <% end %>
      </div>
 
@@ -74,7 +79,6 @@
       <% @last_photos.each do |photo|  %>
        <div class="col-sm-3">
      
-        
          <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
          <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
      
