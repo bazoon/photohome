@@ -1,5 +1,5 @@
 class Admin::PostsController < Admin::BaseController
-  before_action :set_admin_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_post, only: [:show, :edit, :update, :destroy, :promote]
 
   load_and_authorize_resource except: [:create] 
 
@@ -64,6 +64,13 @@ class Admin::PostsController < Admin::BaseController
       format.html { redirect_to [:admin, posts_sym] }
       format.json { head :no_content }
     end
+  end
+
+  def promote
+    @admin_post.promote_as_main
+    respond_to do |format|
+      format.js {  }
+    end  
   end
 
   private

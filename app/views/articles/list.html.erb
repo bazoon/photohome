@@ -10,7 +10,7 @@
     <% @articles.each do |article| %>
 
     
-     <li><h4><%= link_to article.title, article_path(article) %></h4>
+     <li><h4><span class="badge"><%="#{article.age_policy_age}+ "%></span> <%= link_to article.title , article_path(article) %></h4> 
       
       
       

@@ -92,6 +92,11 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-plus")
   end
 
+  def promote_icon(id, promoted)
+    content_tag(:span, "", class: promoted ? "promoted glyphicon glyphicon-pushpin" : "glyphicon glyphicon-pushpin", id: id)
+  end
+
+
   
 
   def ru_icon

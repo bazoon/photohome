@@ -96,8 +96,19 @@ Photohome::Application.routes.draw do
 
       post 'final_rating', to: 'competitions#final_rating', :as => :final_rating
 
-      resources :novelties, controller: "posts", type: "Novelty"  
-      resources :articles, controller: "posts", type: "Article"
+      resources :novelties, controller: "posts", type: "Novelty" do
+        member do
+          post 'promote'
+        end
+
+      end
+
+      resources :articles, controller: "posts", type: "Article" do
+        member do
+        post 'promote' 
+      end
+
+      end
       resources :topics
       resources :age_policies
 
