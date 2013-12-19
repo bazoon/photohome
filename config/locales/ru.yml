@@ -84,8 +84,7 @@ ru:
   bottom: "Низ"
   new_record_added: "Новая запись добавлена"
   record_updated: "Запись обновлена"
-  
-
+  promoted: "На главной ?" 
 
 
   # photos: "PHH"
@@ -209,15 +208,14 @@ ru:
     site_photos:
       index: 
         title: "Галлерея сайта"
-    articles:
+    posts:
       index:
-        articles: "Статьи"
         title: "Название"
-        new: "Новая статья"
+        new: "Новая запись"
       new:
-        title: "Новая статья"
+        title: "Новая запись"
       edit:
-        title: "Редактировать статью"    
+        title: "Редактировать запись"    
       show:
         title: "Название"
         content: "Содержание"

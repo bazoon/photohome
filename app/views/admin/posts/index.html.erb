@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th><%= t(".title") %></th>
+      <th><%= t("promoted") %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,7 +15,7 @@
     <% @admin_posts.each do |admin_post| %>
     
       <tr>
-        <td><%= admin_post.title.to_s + " "+admin_post.class.to_s %></td>
+        <td><%= admin_post.title.to_s %></td>
         
 
         <td>
