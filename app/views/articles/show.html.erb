@@ -1,8 +1,11 @@
 <% breadcrumb :article, @article %>
 
+
 <h1>
  <%= @article.title %>
 </h1>
+
+<p class="label label-info"><%=  @article.author %></p>
 
 <p>
   <%= raw @article.content %>
