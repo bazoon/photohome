@@ -1,20 +1,30 @@
 <% breadcrumb :articles %>
 
-<h1><%= t(".articles") %></h1>
+<h1><%= t("articles_") %></h1>
 
   
 <%= will_paginate @articles, renderer: BootstrapPagination::Rails%>
 
-<ul>
 
     <% @articles.each do |article| %>
 
     
-     <li><h4><%= age_badge(article.age_policy_age) %> <%= link_to article.title , article_path(article) %></h4> 
-      
-      
-      
+        <div class="well">
+        <h4> <%= link_to article.title, article_path(article) %> </h4>
+
+        
+        
+        <img src = "<%= article.first_image_src %>"  alt="..." style = "width: 90px; float: left ; padding: 5px;" >
+        
+        <%= raw article.digest %> 
+        <small class="text-muted"><%= article.author %>, </small>
+        <small class="text-muted"><%= ld article.created_at %> </small>
+        <br>
+        <%= age_badge(article.age_policy_age) %>
+
+        </div>
+         
+    
+    
 
 <% end %>
-
-</ul>
