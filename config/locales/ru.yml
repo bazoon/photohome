@@ -212,6 +212,7 @@ ru:
       index:
         title: "Название"
         new: "Новая запись"
+        age_policy: "Ограничение"
       new:
         title: "Новая запись"
       edit:

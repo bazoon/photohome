@@ -1,7 +1,7 @@
 
 <% if @setting_decorator.photos  %>
   <div class="fotorama" data-autoplay="true" data-fit="cover" data-width="100%"
-     data-ratio="1200/900" data-hash="true">
+     data-ratio="1200/900" data-transition="crossfade">
      <% @setting_decorator.photos.each do |photo| %>
 
      <img style="float: left "src="<%= photo.image_url(:carousel) %>" /> 
@@ -21,7 +21,7 @@
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
       <h2> <%= link_to  @setting_decorator.novelty.title, novelty_path(@setting_decorator.novelty) %> </h2>
       <p> <%= raw @setting_decorator.novelty.digest %>  </p>
-      <small> <%= badge "#{@setting_decorator.novelty.age_policy_age}+"%> </small>
+      <small> <%= age_badge(@setting_decorator.novelty.age_policy_age)%> </small>
     </div>
   </div>
   <% end %>
@@ -40,7 +40,7 @@
         <small class="text-muted"><%= @setting_decorator.first_article.author %> </small>
         <small class="text-muted"><%= ld @setting_decorator.first_article.created_at %> </small>
         <p><%= raw @setting_decorator.first_article.digest %> 
-        <small> <%= badge "#{@setting_decorator.first_article.age_policy_age}+"%> </small>
+        <small> <%= age_badge(@setting_decorator.first_article.age_policy_age) %>  </small>
      
     <div style="clear:both;padding-top: 20px"></div>
 
@@ -55,7 +55,9 @@
             <img src ="<%= article.first_image_src %>"  alt="..." style = "max-height: 150px" >
           </div>
           <div class="caption">
+            <%= age_badge(article.age_policy_age) %>
             <%= link_to article.title, article_path(article) %>
+
           </div>  
         </div>
         

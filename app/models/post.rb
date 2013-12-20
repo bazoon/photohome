@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :age_policy, class_name: 'Admin::AgePolicy'
-
+  validates :age_policy, :title, presence: true
 
   def author
     user && user.full_name

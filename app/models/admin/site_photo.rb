@@ -22,4 +22,9 @@ def age_policy
   policy || photo && photo.age_policy
 end
 
+def age_policy_age
+  age_policy.age
+end
+
+
 end

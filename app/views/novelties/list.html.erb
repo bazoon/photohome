@@ -10,7 +10,7 @@
     <%@novelties.each do |novelty| %>
 
     
-     <li><h4><%=link_to novelty.title,novelty %></h4>
+     <li><h4><%= age_badge(novelty.age_policy_age) %> <%=link_to novelty.title,novelty %></h4>
       
       
       

@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th><%= t(".title") %></th>
+      <th><%= t(".age_policy") %> </th>
       <th><%= t("promoted") %></th>
       <th></th>
       <th></th>
@@ -17,7 +18,7 @@
       <tr>
         <td><%= admin_post.title.to_s %></td>
         
-
+        <td><%= admin_post.age_policy_age %>+ </td>
         <td>
         <%= 
           link_to promote_icon("p#{admin_post.id}", admin_post.promoted?), [:promote,:admin,admin_post], remote: true, method: :post %>

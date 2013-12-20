@@ -110,8 +110,10 @@ module ApplicationHelper
     "RU"
   end
 
-  def badge(text)
-    content_tag(:span,text,class: "badge")
+  def age_badge(age)
+    labels = {0 => "default", 6 => "success", 12 => "info", 16 => "warning", 18 => "danger" }
+
+    content_tag(:span, age.to_s + " +", class: "label label-#{labels[age]}", style: "font-size: 10px" )
   end
 
 

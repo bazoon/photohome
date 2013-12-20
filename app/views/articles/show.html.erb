@@ -11,6 +11,8 @@
   <%= raw @article.content %>
 </p>
 
+<p><%= age_badge(@article.age_policy_age) %></p>
+
 <small>
   <%= ld @article.created_at %>
 </small>

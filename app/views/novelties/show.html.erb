@@ -11,6 +11,8 @@
   <%= raw @novelty.content %>
 </p>
 
+<p><%= age_badge(@novelty.age_policy_age) %></p>
+
 <small>
   <%=ld @novelty.created_at %>
 </small>

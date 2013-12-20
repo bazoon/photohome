@@ -158,4 +158,8 @@ class Photo < ActiveRecord::Base
       tags
   end
 
+  def age_policy_age
+    age_policy && age_policy.age
+  end
+
 end
