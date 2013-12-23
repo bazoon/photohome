@@ -1,0 +1,22 @@
+<%= t(".title") %>
+
+<%= will_paginate @competition_requests %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competition_requests.each do |request| %>
+      <tr>
+        <td><%= request.user_name %></td>
+      
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

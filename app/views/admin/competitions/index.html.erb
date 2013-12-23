@@ -16,15 +16,15 @@
   <tbody>
     <% @competitions.each do |competition| %>
       <tr>
-        <td><%= competition.title %></td>
+        <td><%= link_to competition.title, admin_competition_path(competition) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= content_tag(:span,ld(competition.open_date),class: competition_class(competition)) %></td>
         <td><%= link_to(list_icon, stats_admin_competition_path(competition),:title =>"Статистика") %></td>
         <td><%= link_to(jury_icon, admin_competition_jury_index_path(competition),class: "jury_link","data-toggle" => "hello",:title =>"Жюри","data-animation" => "1") %></td>
         <td><%= link_to(nomination_icon, admin_competition_nominations_path(competition),:title =>"Номинации") %></td>
-        <td><%= link_to(photo_icon,  view_posted_admin_competition_path(competition),:title => "Фотографии") %></td>
   
-        <td><%= link_to show_icon, admin_competition_path(competition) %></td>
+        <td><%= link_to(photo_icon,  view_posted_admin_competition_path(competition),:title => "Фотографии") %></td>
+        <td> <%= link_to users_icon, competition_requests_path(competition) %> </td>
         <td><%= link_to edit_icon, edit_admin_competition_path(competition) %></td>
         <td><%= link_to del_icon, admin_competition_path(competition), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

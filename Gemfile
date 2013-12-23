@@ -69,7 +69,7 @@ gem 'acts_as_commentable'
 gem 'fotoramajs'
 gem 'railroady'
 gem 'country_select'
-
+gem 'fog', "~> 1.3.1"
 
 # gem 'rails_12factor'
 

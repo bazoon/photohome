@@ -32,8 +32,12 @@ class Competition < ActiveRecord::Base
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
 
+  def open?
+    self.status_id == OPEN
+  end
+
   def fiap?
-    type_id == FIAP
+    self.type_id == FIAP
   end
 
 

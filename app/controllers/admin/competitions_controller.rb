@@ -1,5 +1,5 @@
 class Admin::CompetitionsController < Admin::BaseController
-  before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted,:final_judge,:stats]
+  before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted,:final_judge,:stats,:users]
 
   # GET /competitions
   # GET /competitions.json
@@ -37,6 +37,10 @@ class Admin::CompetitionsController < Admin::BaseController
 
   # GET /competitions/1/edit
   def edit
+  end
+
+  def users
+      
   end
 
   # POST /competitions

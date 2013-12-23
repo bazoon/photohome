@@ -1,7 +1,6 @@
 Photohome::Application.routes.draw do
 
 
-
   namespace :admin do
     resources :banner_placements
   end
@@ -77,6 +76,7 @@ Photohome::Application.routes.draw do
 
 
       resources :competition_photos 
+      resources :requests, controller: "competition_request"
 
     end  
 

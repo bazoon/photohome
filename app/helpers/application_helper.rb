@@ -116,6 +116,9 @@ module ApplicationHelper
     content_tag(:span, age.to_s + " +", class: "label label-#{labels[age]}", style: "font-size: 10px" )
   end
 
+  def users_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-user")
+  end
 
 
 end
