@@ -76,6 +76,8 @@ ru:
         end_date: "Дата окончания"
       admin_age_policy:
         age: "Возраст"
+      admin_competition_request_response:
+        response_id: "Ответ"
 
 
     # hints:

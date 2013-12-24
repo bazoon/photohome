@@ -96,7 +96,9 @@ module ApplicationHelper
     content_tag(:span, "", class: promoted ? "promoted glyphicon glyphicon-pushpin" : "glyphicon glyphicon-pushpin", id: id)
   end
 
-
+  def approve_icon(approved, id)
+    content_tag(:span,"",class:  approved ? "glyphicon glyphicon-thumbs-up" : "glyphicon glyphicon-thumbs-down",style: "font-size: 20px", id: id)
+  end
   
 
   def ru_icon

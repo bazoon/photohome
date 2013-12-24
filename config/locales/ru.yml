@@ -66,7 +66,7 @@ ru:
   more: "...еще"
   new: "Новая запись"
   edit_user: "Редактировать личные данные"
-  last_photos: "Последние фотографии"
+  last_photos: "Последние фотографии"  
 
   change_password: "Личные данные"
   profile: "Профиль"
@@ -86,7 +86,14 @@ ru:
   record_updated: "Запись обновлена"
   promoted: "На главной ?" 
 
-
+  # Для ответов на запросы на конкурсы
+  responses:
+    accept: "Заявка утверждена."
+    no_money: "Отказ. Участие не оплачено."
+    no_condition: "Отказ. Не выполнены условия участия."
+    other_reasons: "Отказ. Иная причина."
+    awaiting: "Ожидает рассмотрения"
+  
   # photos: "PHH"
   photos:
     index:
@@ -161,6 +168,14 @@ ru:
       recipients: "Кому" 
     new:
       new: "Создать сообщение"
+  competition_requests:
+    index:
+      title: "Заявки"
+      user_name: "ФИО пользователя"
+      decision: "Решение"
+    show:
+      wait: "Запрос находится на рассмотрении"
+      time_ago: "Отправлен"
   admin:
     messages:
       index:

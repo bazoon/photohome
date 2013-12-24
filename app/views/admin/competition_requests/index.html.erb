@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th><%= t("competition_requests.index.user_name") %></th>
-      <th><%= t("competition_requests.index.approved") %></th>
+      <th><%= t("competition_requests.index.decision") %></th>
     </tr>
   </thead>
 
@@ -14,7 +14,7 @@
     <% @competition_requests.each do |request| %>
       <tr>
         <td><%= request.user_name %></td>
-        <td> <%=  %></td>
+        <td> <%= request.decision %></td>
         <td><%= link_to "Resp", new_admin_request_response_path(request) %></td>
 
        </tr>

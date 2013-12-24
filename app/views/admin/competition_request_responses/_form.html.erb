@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@request_response, url: admin_request_responses_path, method: :post) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :response_id, 
+        collection: Admin::CompetitionRequestResponse::RESPONSES,
+        label_method: Admin::CompetitionRequestResponse::LABEL, 
+        value_method: Admin::CompetitionRequestResponse::VALUE, 
+        :input_html => {class: "form-control"} %>
+
+    </div>
+    
+    <div class="form-group">
+        <%= f.input :competition_request_id, as: :hidden, input_html: { value: @request.id } %>
+    </div>
+    
+    
+    <%= f.button :submit, value: I18n.t("save"), input_html: {class: "btn btn-default" } %>
+  
+<% end %>

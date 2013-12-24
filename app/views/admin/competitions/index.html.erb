@@ -24,7 +24,7 @@
         <td><%= link_to(nomination_icon, admin_competition_nominations_path(competition),:title =>"Номинации") %></td>
   
         <td><%= link_to(photo_icon,  view_posted_admin_competition_path(competition),:title => "Фотографии") %></td>
-        <td> <%= link_to users_icon, competition_requests_path(competition) %> </td>
+        <td> <%= link_to users_icon, admin_competition_requests_path(competition) %> </td>
         <td><%= link_to edit_icon, edit_admin_competition_path(competition) %></td>
         <td><%= link_to del_icon, admin_competition_path(competition), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

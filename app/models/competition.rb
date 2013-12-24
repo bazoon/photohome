@@ -16,16 +16,16 @@ class Competition < ActiveRecord::Base
   FIAP = 1
 
   TYPES = [
-    {label: I18n.t("usial"),value: USIAL},
-    {label: I18n.t("fiap"),value: FIAP}
+    { label: I18n.t("usial"), value: USIAL },
+    { label: I18n.t("fiap"), value: FIAP }
   ]
 
   OPEN = 0
   PRIVATE = 1
 
   STATUSES = [
-    {label: I18n.t("open"),value: OPEN},
-    {label: I18n.t("private"),value: PRIVATE}
+    {label: I18n.t("open"),value: OPEN },
+    {label: I18n.t("private"),value: PRIVATE }
   ]
 
 

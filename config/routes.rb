@@ -1,6 +1,10 @@
 Photohome::Application.routes.draw do
 
 
+
+  get "competition_request/approve"
+  get "competition_request/response"
+  get "competition_request/destroy"
   namespace :admin do
     resources :banner_placements
   end
@@ -43,14 +47,6 @@ Photohome::Application.routes.draw do
       end
     end  
 
-
-
-   
-
-    
-
-
-
     resources :photos do
         get 'view', as: :view
     end  
@@ -76,7 +72,8 @@ Photohome::Application.routes.draw do
 
 
       resources :competition_photos 
-      resources :requests, controller: "competition_request"
+      
+      resources :requests, controller: "competition_request", shallow: true 
 
     end  
 
@@ -86,7 +83,8 @@ Photohome::Application.routes.draw do
     post 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
     post 'jury_rating', to: 'jury#rating', :as => :jury_rating
 
-
+ 
+    # ADMIN routes
 
     namespace :admin do
       resources :messages, concerns: :commentable
@@ -121,6 +119,14 @@ Photohome::Application.routes.draw do
         resources :competition_photos,only: :destroy,shallow: true
         resources :nominations
         resources :jury
+        
+
+        resources :requests, controller: "competition_requests", shallow: true do
+          get 'approve'
+          post 'response'
+          resources :responses, shallow: true, controller: "competition_request_responses"  
+        end
+
       end  
 
 

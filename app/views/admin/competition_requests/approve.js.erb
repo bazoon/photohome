@@ -1,0 +1,11 @@
+var id = <%= escape_javascript "#{@request.id}" %>
+
+<% if @request.approved %>
+  var add = "glyphicon glyphicon-thumbs-up"
+  var remove = "glyphicon glyphicon-thumbs-down"    
+<% else %>
+  var add = "glyphicon glyphicon-thumbs-down"
+  var remove = "glyphicon glyphicon-thumbs-up"    
+<% end %>
+
+$("#r"+id).removeClass(remove).addClass(add)
