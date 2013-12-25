@@ -11011,3 +11011,41 @@
 [12/25/13 15:51:54 +0600 Mac-mini-VITALIY.local (11999)] INFO : Installing Rails4 Error instrumentation
 [12/25/13 15:51:54 +0600 Mac-mini-VITALIY.local (11999)] INFO : Finished instrumentation
 [12/25/13 15:51:55 +0600 Mac-mini-VITALIY.local (11999)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Starting the New Relic agent in "development" environment.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Reading configuration from config/newrelic.yml
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : New Relic Agent Developer Mode enabled.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Enabling the Request Sampler.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Environment: development
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : No known dispatcher detected.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Application: photohome72
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] WARN : Agent configured not to send data in this environment.
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing ActiveRecord 4 instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing legacy Excon instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing Net instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing deferred Rack instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing Rails 4 Controller instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing Rails 4 view instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Installing Rails4 Error instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : Finished instrumentation
+[12/25/13 16:19:47 +0600 Mac-mini-VITALIY.local (12812)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Starting the New Relic agent in "development" environment.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Reading configuration from config/newrelic.yml
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : New Relic Agent Developer Mode enabled.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Enabling the Request Sampler.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Environment: development
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : No known dispatcher detected.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Application: photohome72
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] WARN : Agent configured not to send data in this environment.
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing ActiveRecord 4 instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing legacy Excon instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing Net instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing deferred Rack instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing Rails 4 Controller instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing Rails 4 view instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Installing Rails4 Error instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : Finished instrumentation
+[12/25/13 16:19:48 +0600 Mac-mini-VITALIY.local (12822)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
