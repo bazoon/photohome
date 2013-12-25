@@ -3,8 +3,29 @@ class CompetitionRequest < ActiveRecord::Base
   belongs_to :user
   belongs_to :competition
   has_one :response, class_name: "Admin::CompetitionRequestResponse"
-
+  
+  #Банит фотографии если запрос сохраняется со статусом забанен
+  include CompetitionPhotoBannable
  
+  ACCEPT = 0
+  NO_MONEY = 1
+  NO_CONDITION = 2
+  OTHER_REASONS = 100
+  BANNED = 1000
+  
+  RESPONSES = [
+    {label: I18n.t("responses.accept"), value: ACCEPT },
+    {label: I18n.t("responses.no_money"), value: NO_MONEY },
+    {label: I18n.t("responses.no_condition"), value: NO_CONDITION },
+    {label: I18n.t("responses.other_reasons"), value: OTHER_REASONS },
+    {label: I18n.t("responses.banned"), value: BANNED }
+  ]
+
+
+  LABEL = -> (s) { s[:label] }
+  VALUE = -> (s) { s[:value] }  
+
+
   def self.user_request(competition, user)
     self.find_or_create_by(competition_id: competition.id, user_id: user.id)
   end
@@ -13,17 +34,25 @@ class CompetitionRequest < ActiveRecord::Base
     user && user.full_name
   end
 
-  def approve!
-    self.approved = (not self.approved)
-    self.save!
+  def open?
+    competition && competition.open?
   end
 
   def decision
-    (response && response.decision) || I18n.t("")
+    RESPONSES.select { |r| r[:value] == self.response_id }.first[:label]
   end
 
   def approved?
-    (response && response.approved?) || false
+    self.response_id == ACCEPT
   end
+
+  def banned?
+    self.response_id == BANNED
+  end
+
+  def ban_status
+    BANNED
+  end
+
 
 end

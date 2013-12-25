@@ -16,7 +16,7 @@
   <tbody>
     <% @competition_photos.each do |competition_photo| %>
       <tr>
-        <td><%=competition_photo.title %></td>
+        <td><%= competition_photo.title %> <%= competition_photo.banned ? red_label("banned") : "" %></td>
         <td><%= "#{competition_photo.jury_count} / #{@all_jury_count} " %></td>
         
 

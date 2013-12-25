@@ -1,6 +1,6 @@
 class CompetitionRequestController < ApplicationController
   before_action :set_competition, only: [:destroy, :create, :index]
-
+  before_action :set_request, only: [:edit]
 
 
   def new
@@ -9,7 +9,7 @@ class CompetitionRequestController < ApplicationController
   end
 
   def edit
-
+    
 
   end
 
@@ -21,10 +21,11 @@ class CompetitionRequestController < ApplicationController
   def create
     competition_request = CompetitionRequest.user_request(@competition, current_user)
 
-    if @competition.open? || competition_request.approved? 
+
+    if @competition.open? || competition_request.approved?
       redirect_to competition_competition_photos_path(@competition) 
     else
-      redirect_to request_path(competition_request) unless @competition.open? && competition_request.approved?
+      redirect_to request_path(competition_request) 
     end
 
     # render text: params.inspect
@@ -44,5 +45,7 @@ private
   def set_competition
     @competition = Competition.find(params[:competition_id])
   end
+
+ 
 
 end

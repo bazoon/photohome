@@ -2,10 +2,13 @@ class Competition < ActiveRecord::Base
 
   has_many :jury,class_name: "Admin::Jury"
   has_many :nominations,class_name: "Admin::Nomination"
+
   has_many :competition_photos,dependent: :destroy
+  
   has_many :jury_ratings, through: :competition_photos
   has_many :users, through: :jury
-
+  has_many :competition_requests
+  
   
   validate Proc.new {|c| errors.add(:last_date, I18n.t(:incorrect_last_date)) if c.last_date > c.open_date}
   validates :last_date, :open_date, :title, :type_id, :status_id, presence: true
@@ -31,6 +34,7 @@ class Competition < ActiveRecord::Base
 
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
+
 
   def open?
     self.status_id == OPEN

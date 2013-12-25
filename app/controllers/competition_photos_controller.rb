@@ -1,6 +1,9 @@
 class  CompetitionPhotosController < ApplicationController
   # layout "user_profile_layout"
+   include LoginRequired 
+   # skip_before_action :verify_login, only: []
    before_action :set_competition, only: [:destroy]
+
 
   # Показывает фотографии отправленные пользователем на конкурс. Только его фото.
   # и только определенный конкурс

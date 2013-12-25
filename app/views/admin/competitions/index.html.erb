@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th><%= t(".title") %></th>
+      <th><%= t(".type") %></th>
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
       <th></th>
@@ -17,6 +18,7 @@
     <% @competitions.each do |competition| %>
       <tr>
         <td><%= link_to competition.title, admin_competition_path(competition) %></td>
+        <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= content_tag(:span,ld(competition.open_date),class: competition_class(competition)) %></td>
         <td><%= link_to(list_icon, stats_admin_competition_path(competition),:title =>"Статистика") %></td>

@@ -1,7 +1,9 @@
 class CompetitionPhoto < ActiveRecord::Base
-  belongs_to :nomination,class_name: "Admin::Nomination"
+  belongs_to :nomination, class_name: "Admin::Nomination"
 
   belongs_to :photo
+  belongs_to :competition
+
   # delegate :user, to: :photo 
 
   attr_reader :photo_ids
@@ -10,7 +12,18 @@ class CompetitionPhoto < ActiveRecord::Base
   has_many :jury_ratings
   has_many :likes
 
+  NORMAL = 0
+  BANNED = 1000
 
+  def ban
+    self.banned = true
+    self.save!
+  end
+
+  def remove_ban
+    self.banned = false
+    self.save
+  end
 
   def self.create_applied(photo_ids,competition,nomination_id,user)
     raise Exceptions::NoPhotoAttached if photo_ids.empty?
@@ -28,7 +41,6 @@ class CompetitionPhoto < ActiveRecord::Base
     raise Exceptions::ProfileEmpty unless competition.valid_for_fiap?(user) 
     raise Exceptions::MaxNominationCapacity unless can_post_in_nomination?(nomination_id,user)
   end
-
 
   def like_count
     likes && likes.count

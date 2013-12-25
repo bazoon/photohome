@@ -59,6 +59,10 @@ module ApplicationHelper
     content_tag(:span,s,class: "label label-danger")
   end
 
+  def green_label(s)
+    content_tag(:span,s,class: "label label-success")
+  end
+
   def jury_icon
     content_tag(:span,"",class: "glyphicon glyphicon-tower")
   end

@@ -1,0 +1,22 @@
+<%= simple_form_for(@competition_request, url: admin_request_path, method: :patch) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :response_id, 
+        collection: CompetitionRequest::RESPONSES,
+        label_method: CompetitionRequest::LABEL, 
+        value_method: CompetitionRequest::VALUE, 
+        :input_html => {class: "form-control"} %>
+
+    </div>
+
+    <div class="form-group">
+        <%= f.input :answer, :input_html => {class: "form-control"} %>
+    </div>
+
+    
+    
+    <%= f.button :submit, value: I18n.t("save"), input_html: {class: "btn btn-default" } %>
+  
+<% end %>

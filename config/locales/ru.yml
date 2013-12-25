@@ -93,6 +93,8 @@ ru:
     no_condition: "Отказ. Не выполнены условия участия."
     other_reasons: "Отказ. Иная причина."
     awaiting: "Ожидает рассмотрения"
+    no_decision: "Нет решения"
+    banned: "Забанен"
   
   # photos: "PHH"
   photos:
@@ -130,7 +132,8 @@ ru:
         list: "Конкурсы"
         title: "Название"
         last_date: "Дата сдачи работ"
-        open_date: "Дата открытия"      
+        open_date: "Дата открытия" 
+        type: "Тип конкурса"     
       aply:
         choose_photo: "Выберите фотографии"
         choose_photo_title: "Выбор фотографий для конкурса"
@@ -173,6 +176,7 @@ ru:
       title: "Заявки"
       user_name: "ФИО пользователя"
       decision: "Решение"
+      requests: "Рассмотреть запрос"
     show:
       wait: "Запрос находится на рассмотрении"
       time_ago: "Отправлен"
@@ -195,6 +199,7 @@ ru:
         new: "Новый конкурс"
       index:
         list: "Конкурсы"
+        type: "Тип"
         title: "Название"
         last_date: "Дата сдачи работ"
         open_date: "Дата открытия"

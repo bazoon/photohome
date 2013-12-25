@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131224064219) do
+ActiveRecord::Schema.define(version: 20131225085545) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20131224064219) do
     t.datetime "updated_at"
     t.integer  "nomination_id"
     t.integer  "place",          default: 0
+    t.boolean  "banned",         default: false
   end
 
   create_table "competition_requests", force: true do |t|
@@ -148,6 +149,8 @@ ActiveRecord::Schema.define(version: 20131224064219) do
     t.boolean  "approved",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "response_id",    default: 0
+    t.text     "answer"
   end
 
   create_table "competitions", force: true do |t|
