@@ -6,20 +6,25 @@ class CompetitionRequest < ActiveRecord::Base
   
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable
- 
-  ACCEPT = 0
-  NO_MONEY = 1
-  NO_CONDITION = 2
+
+
+  AWAITING = 0
+  ACCEPTED = 1
+  NO_MONEY = 2
+  NO_CONDITION = 3
   OTHER_REASONS = 100
   BANNED = 1000
   
+
   RESPONSES = [
-    {label: I18n.t("responses.accept"), value: ACCEPT },
+    {label: I18n.t("responses.awaiting"), value: AWAITING },
+    {label: I18n.t("responses.accepted"), value: ACCEPTED },
     {label: I18n.t("responses.no_money"), value: NO_MONEY },
     {label: I18n.t("responses.no_condition"), value: NO_CONDITION },
     {label: I18n.t("responses.other_reasons"), value: OTHER_REASONS },
     {label: I18n.t("responses.banned"), value: BANNED }
   ]
+
 
 
   LABEL = -> (s) { s[:label] }
