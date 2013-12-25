@@ -7,6 +7,6 @@ module CompetitionRequestNotifieble
   end
 
 
-  def notify_user
+
 
 end
