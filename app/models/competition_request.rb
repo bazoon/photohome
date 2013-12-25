@@ -48,7 +48,7 @@ class CompetitionRequest < ActiveRecord::Base
   end
 
   def approved?
-    self.response_id == ACCEPT
+    self.response_id == ACCEPTED
   end
 
   def banned?
