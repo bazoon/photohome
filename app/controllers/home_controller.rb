@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 
 
   def test
-    
+    UserMailer.welcome_email(current_user)    
   end
 
 
