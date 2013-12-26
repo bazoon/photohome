@@ -1,5 +1,6 @@
-public/uploads
 tmp/
 db/*.sqlite3
+public/uploads
 log/*.log
 tmp/**/*
+config/application.yml

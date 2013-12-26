@@ -13,5 +13,6 @@ ADMIN_NAME: First User
 ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
 ROLES: [admin, user, VIP]
-AWS_ACCESSS: "hello"
-AWS_SECRET: "hello"
+AWS_ACCESSS: "AKIAJ5SRNOVLWYZXVHYQ"
+AWS_SECRET: "n50stBGHtMTv9ixvks8jvVNWMORXem6z52xNR8rS"
+
