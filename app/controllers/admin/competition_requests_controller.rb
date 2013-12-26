@@ -1,5 +1,5 @@
 class Admin::CompetitionRequestsController < ApplicationController
-  before_action :set_competition, only: [:destroy, :create, :index]
+  before_action :set_competition, only: [:create, :index]
   before_action :set_request, only: [:edit, :update]
 
   def index
@@ -14,7 +14,6 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   def show
     @request = CompetitionRequest.find(params[:id])
-    
   end
 
   def create
@@ -32,13 +31,12 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   #Admin only !!!
   def update
-    
+    #!!!Здесь нужен отдельный класс и возможность передать в него текущего пользователя
     if @competition_request.update(request_params)
       redirect_to admin_competition_requests_path(@competition_request.competition)
     else
       redirect_to :back, notice: 'Error !' 
     end  
-
   end
 
   

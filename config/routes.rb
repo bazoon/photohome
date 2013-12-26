@@ -2,9 +2,6 @@ Photohome::Application.routes.draw do
 
 
 
-  get "competition_request/approve"
-  get "competition_request/response"
-  get "competition_request/destroy"
   namespace :admin do
     resources :banner_placements
   end
@@ -121,11 +118,7 @@ Photohome::Application.routes.draw do
         resources :jury
         
 
-        resources :requests, controller: "competition_requests", shallow: true do
-          get 'approve'
-          post 'response'
-          resources :responses, shallow: true, controller: "competition_request_responses"  
-        end
+        resources :requests, controller: "competition_requests", shallow: true 
 
       end  
 

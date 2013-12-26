@@ -3,19 +3,8 @@ class CompetitionRequestController < ApplicationController
   before_action :set_request, only: [:edit]
 
 
-  def new
-
-
-  end
-
-  def edit
-    
-
-  end
-
   def show
     @request = CompetitionRequest.find(params[:id])
-    
   end
 
   def create

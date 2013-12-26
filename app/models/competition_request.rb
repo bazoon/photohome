@@ -6,6 +6,7 @@ class CompetitionRequest < ActiveRecord::Base
   
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable
+  include CompetitionRequestNotifieble
 
 
   AWAITING = 0

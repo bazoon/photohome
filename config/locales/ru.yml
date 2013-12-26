@@ -67,6 +67,8 @@ ru:
   new: "Новая запись"
   edit_user: "Редактировать личные данные"
   last_photos: "Последние фотографии"  
+  competition_: "Конкурс"
+  status: "Статус"
 
   change_password: "Личные данные"
   profile: "Профиль"
