@@ -1,0 +1,32 @@
+<div id="dialog" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><%= t("choose_photo") %></h4>
+      </div>
+      
+      <div class="modal-body">
+        
+      <div id="aj">
+        <%= ajax_will_paginate photos %>
+      </div>
+
+    <div id = "photos">
+    
+      <div class="row">
+        <% @photos.each_with_index do |photo,index| %>
+             
+          <%=link_to_function(image_tag(photo.image_url(:thumb)),"add_photo(#{photo.id})",id: "ph#{photo.id}",:class => "thumbnail") %>
+         
+        <% end %>
+      </div>  
+    </div>  
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"><%= t("save") %></button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal 

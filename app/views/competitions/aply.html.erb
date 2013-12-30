@@ -13,19 +13,29 @@
     <%= f.input :nomination_id, collection: @nominations,label_method: :title,value_method: :id %>
     </div>
 
-    <%= link_to t(".choose_photo"),choose_photo_competition_path(@competition), remote: true  %> <br/>
+    <%= link_to t(".choose_photo"),choose_photo_competition_path(@competition), remote: true %> <br/>
 <br>
     <%= f.button :submit,input_html: {class: "btn btn-default"},value: "Сохранить выбор" %>
     
   <div id="next"></div>
 <% end %>
 
+<div id="dialog" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><%= t("choose_photo") %></h4>
+      </div>
+      
+      <div class="modal-body">
+        
+     
 
-
-
-
-
-
-
-<div id="dialog1" class="r"></div>
-
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"><%= t("save") %></button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal 
