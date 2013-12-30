@@ -31,8 +31,10 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   #Admin only !!!
   def update
-    #!!!Здесь нужен отдельный класс и возможность передать в него текущего пользователя
+
     if @competition_request.update(request_params)
+      competition_request_notification = CompetitionRequestNotification.new(@competition_request,current_user)
+      competition_request_notification.notify
       redirect_to admin_competition_requests_path(@competition_request.competition)
     else
       redirect_to :back, notice: 'Error !' 

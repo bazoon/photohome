@@ -87,6 +87,7 @@ ru:
   new_record_added: "Новая запись добавлена"
   record_updated: "Запись обновлена"
   promoted: "На главной ?" 
+  status_changed: "Изменение статуса заявки"
 
   # Для ответов на запросы на конкурсы
   responses:

@@ -6,7 +6,7 @@ class CompetitionRequest < ActiveRecord::Base
   
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable
-  include CompetitionRequestNotifieble
+  # include CompetitionRequestNotifieble
 
 
   AWAITING = 0
@@ -30,7 +30,6 @@ class CompetitionRequest < ActiveRecord::Base
 
   LABEL = -> (s) { s[:label] }
   VALUE = -> (s) { s[:value] }  
-
 
   def self.user_request(competition, user)
     self.find_or_create_by(competition_id: competition.id, user_id: user.id)
