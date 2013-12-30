@@ -4,8 +4,9 @@
      data-ratio="1200/900" data-transition="crossfade">
      <% @setting_decorator.photos.each do |photo| %>
 
-     <img style="float: left "src="<%= photo.image_url(:normal) %>" /> 
-      
+     
+      <a href="<%= photo.image_url(:normal) %>"></a>
+        
      <% end %> 
   </div>
 
