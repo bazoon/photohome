@@ -42,7 +42,7 @@ class JuryController < ApplicationController
   def view_photos
     @competition = Competition.find(params[:competition_id])
     redirect_to root_path,alert: "You are not allowed to jury this competition !" unless current_user && @competition.can_jury?(current_user)
-    @competition_photos = CompetitionPhoto.where(competition_id: @competition.id).paginate(:page => params[:page])
+    @competition_photos = CompetitionPhoto.where(competition_id: @competition.id, banned: false).paginate(:page => params[:page])
 
     @user = current_user
   end
