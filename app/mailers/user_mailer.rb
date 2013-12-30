@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   add_template_helper(ApplicationHelper)
-  default from: 'root@37.139.14.201'
+  # default from: 'root@photohome72.ru'
 
 
   def welcome_email(user)
