@@ -29,7 +29,7 @@ def create
 
   respond_to do |format|
     if @site_photo.save
-      format.html { redirect_to admin_site_photos_path, notice: 'site_photo was successfully created.' }
+      format.html { redirect_to admin_album_path(@site_photo.album), notice: 'site_photo was successfully added.' }
     else
       format.html { render action: 'new' }
     end
