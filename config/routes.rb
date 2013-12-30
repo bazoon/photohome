@@ -51,7 +51,7 @@ Photohome::Application.routes.draw do
     get 'tagged_photos/user_id/:user_id/name/:name', to: 'photos#tagged_photos', as: :tagged_photos
 
   	resources :users do
-  		resources :photos, concerns: :commentable
+  		resources :photos, concerns: :commentable 
       resources :messages, concerns: :commentable 
       resources :letters, concerns: :commentable
       resources :incoming_letters, only: [:index, :show]

@@ -14,7 +14,7 @@ class JuryController < ApplicationController
     rate = params["rate"]
 
 
-    jury_rating = JuryRating.find_or_create_by(user_id: user_id,competition_photo_id: competition_photo_id)
+    jury_rating = JuryRating.find_or_create_by(user_id: user_id, competition_photo_id: competition_photo_id)
     
     authorize! :update, jury_rating
     jury_rating.rating = rate

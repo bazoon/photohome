@@ -4,32 +4,40 @@
 
 
 <%= will_paginate @competition_photos %>
-<div class="row">
 
-    <% @competition_photos.each_with_index do | competition_photo,index| %>
+<table class="table table-striped">
+  
+  <tr>
+    <td>Фотография</td>
+    <td>Номинация</td>
+    <td>Оценка
+      
+     
+
+    </td>
+  </tr>
+
+  <% @competition_photos.each_with_index do | competition_photo,index| %>
+
+    <tr>
+
+      <td>
+        <%= link_to image_tag(competition_photo.photo.image_url(:thumb), class: "img-responsive"), photo_view_path(competition_photo.photo) %>
+      </td>  
+      
+      <td>
+        <%= competition_photo.nomination.title %>
+      </td>
+
+      <td>
+       <%= content_tag(:div,"",class: "jury_estimate","data-id" => "#{@user.id}:#{competition_photo.id}",
+       "data-average" => competition_photo.jury_rating(@user.id)) %>      
+      </td>
+
+    </tr>
+
  
-
-    <div class="col-sm-3" style="height: 290px;">
-    <div class="thumbnail">  
-      <a class="thumbnail" >
-          <%= image_tag competition_photo.image_url(:thumb),data: {src: competition_photo.image_url(:thumb)} %>
-      </a>
-    
-
-    <div class="caption">
-     <small>  <%= "#{competition_photo.title} (#{competition_photo.nomination.title})" %>     </small>
-    <%= content_tag(:div,"",class: "jury_estimate","data-id" => "#{@user.id}:#{competition_photo.id}",
-    "data-average" => competition_photo.jury_rating(@user.id)) %>      
-    
-
-
-
-    </div>  
-    </div>
-    
-    
-  </div>
 
   <% end %>
   
-</div>
+</table>
