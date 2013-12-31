@@ -9,13 +9,11 @@ class HomeController < ApplicationController
     if setting 
       @setting_decorator = Admin::SettingDecorator.new(setting) 
       @last_photos = Photo.last(4) 
-
     else
-
-
-
       render text: ""
     end
+
+    fresh_when(setting)
 
   end
 
