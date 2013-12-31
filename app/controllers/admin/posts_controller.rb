@@ -27,6 +27,7 @@ class Admin::PostsController < Admin::BaseController
   # POST /admin/articles
   # POST /admin/articles.json
   def create
+    #!!! current_user.post_type.new
     @admin_post = post_type.new(admin_post_params)
     @admin_post.user_id = current_user.id
 
