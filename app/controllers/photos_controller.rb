@@ -1,10 +1,11 @@
 class PhotosController < ApplicationController
+  skip_before_filter :authenticate_user!, only: [:index, :show, :tagged_photos]
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :new, :create,:update]
 
   layout "user_profile_layout", except: :view
 
-  load_and_authorize_resource except: [:create]  #bug with create
+  load_and_authorize_resource except: [:create, :tagged_photos]  #bug with create
 
   before_filter :set_current_user
 

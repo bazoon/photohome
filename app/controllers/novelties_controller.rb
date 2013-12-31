@@ -1,5 +1,7 @@
 class NoveltiesController < ApplicationController
+  skip_before_filter :authenticate_user!
   before_action :set_novelty, only: [:show, :edit, :update, :destroy]
+
 
 
   def list

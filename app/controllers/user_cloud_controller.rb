@@ -1,5 +1,6 @@
 class UserCloudController < ApplicationController
   layout "user_profile_layout"
+  skip_before_filter :authenticate_user!
 
    def cloud
     @user = User.find(params[:user_id])    

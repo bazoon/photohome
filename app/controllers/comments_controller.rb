@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
-   before_filter :load_commentable, except: [:destroy]
-   before_action :set_comment, only: [:update, :destroy]
-  
+  skip_before_filter :authenticate_user!
+  before_filter :load_commentable, except: [:destroy]
+  before_action :set_comment, only: [:update, :destroy]
+
 
   def create
     

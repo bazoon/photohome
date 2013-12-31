@@ -38,7 +38,8 @@ class Ability
 
 
     can :read, Message
-    can :manage, Comment,user_id: user.id
+    can :manage, Comment, user_id: user.id
+    can :write, Comment
     can :manage, Photo, user_id: user.id
     can :create, Photo
 

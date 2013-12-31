@@ -1,6 +1,7 @@
 class GalleryController < ApplicationController
   respond_to :html
-
+  
+  skip_before_filter :authenticate_user!
 
   def index
     # @last_photos = Photo.all.where(published: true)
