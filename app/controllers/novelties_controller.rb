@@ -6,11 +6,13 @@ class NoveltiesController < ApplicationController
 
   def list
     @novelties = Novelty.paginate(:page => params[:page])
+    fresh_when(@novelties)
   end
 
   # GET /novelties/1
   # GET /novelties/1.json
   def show
+    fresh_when(@novelty)
   end
 
 private

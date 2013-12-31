@@ -8,6 +8,7 @@ class Admin::PostsController < Admin::BaseController
   def index
     @admin_posts = post_type.all
     @post_sym = post_sym
+    fresh_when(@admin_posts)
   end
 
   # GET /admin/articles/1
