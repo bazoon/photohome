@@ -70,6 +70,8 @@ gem 'fotoramajs'
 gem 'railroady'
 gem 'country_select'
 gem 'fog', "~> 1.3.1"
+gem 'foreman'
+gem "spring", group: :development
 
 # gem 'rails_12factor'
 
@@ -82,6 +84,7 @@ gem 'cucumber-rails', :require=>false
 gem 'database_cleaner'
 gem 'email_spec'
 gem 'launchy'
+
 
 gem 'gretel'
 gem 'selenium-webdriver'

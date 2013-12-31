@@ -2,8 +2,7 @@ class CompetitionRequest < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :competition
-  has_one :response, class_name: "Admin::CompetitionRequestResponse"
-  
+    
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable
   # include CompetitionRequestNotifieble

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Admin::BannerController do
+describe Admin::BannersController do
 
   describe "GET 'index'" do
     it "returns http success" do

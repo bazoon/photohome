@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Admin::AgePoliciesControllerController do
+describe Admin::AgePoliciesController do
 
   describe "GET 'new'" do
     it "returns http success" do
