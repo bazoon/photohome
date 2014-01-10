@@ -29,6 +29,7 @@ gem 'figaro'
 
 # gem 'pg'
 gem 'mysql2'
+gem 'sqlite3'
 
 gem 'rolify', '~> 3.3.0.rc4'
 gem 'simple_form', '>= 3.0.0.rc'
@@ -78,9 +79,9 @@ gem "spring", :group => :development
 gem 'jquery-turbolinks'
 gem 'pry'
 
-gem 'selenium-webdriver'
+
 gem 'capybara'
-gem 'cucumber-rails', :require=>false
+# gem 'cucumber-rails', :require=>false
 gem 'database_cleaner'
 gem 'email_spec'
 gem 'launchy'

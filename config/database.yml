@@ -81,5 +81,3 @@ production:
   port: 3306
   secure_auth: false
 
-cucumber:
-  <<: *test

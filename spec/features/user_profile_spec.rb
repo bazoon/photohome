@@ -33,7 +33,7 @@ it "Can see own profile" do
     page.should have_content(I18n.t("photos_"))
     page.should have_content(I18n.t("cloud"))
     page.should have_content(I18n.t("tickets"))
-    page.should have_content(I18n.t("sent_letters"))
+    page.should have_content(I18n.t("sent_letters")) 
     page.should have_content(I18n.t("in_letters")) 
     page.should have_content(I18n.t("change_password"))
   end
