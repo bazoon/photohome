@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -53,7 +53,7 @@ gem 'puma'
 gem 'russian'
 gem 'jquery-ui-rails'
 gem 'devise-russian'
-gem 'binding_of_caller'
+# gem 'binding_of_caller'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'carrierwave'
@@ -71,7 +71,7 @@ gem 'railroady'
 gem 'country_select'
 gem 'fog', "~> 1.3.1"
 gem 'foreman'
-gem "spring", group: :development
+gem "spring", :group => :development
 
 # gem 'rails_12factor'
 
@@ -85,7 +85,7 @@ gem 'database_cleaner'
 gem 'email_spec'
 gem 'launchy'
 
-
+gem 'simplecov', :require => false, :group => :test
 gem 'gretel'
 gem 'selenium-webdriver'
 gem "rails_best_practices"
