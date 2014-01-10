@@ -1,1 +1,0 @@
-scp /Users/vith/Desktop/projects/rails/photohome/config/application.yml root@37.139.14.201:/var/www/photohome/config/application.yml
