@@ -28,7 +28,7 @@ describe "User can login" do
   #Actions a user can't do
 
   # it "User can't see admin novelties page", :js => true do
-  it "User can't see admin novelties page" #, :js => true do
+  it "User can't see admin novelties page" do
     Warden.test_mode!     
     login_as(user, :scope => :user)
     visit '/competitions' 
