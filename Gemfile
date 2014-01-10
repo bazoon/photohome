@@ -37,7 +37,6 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'better_errors'
 gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
 gem 'guard-bundler'
-gem 'guard-cucumber'
 gem 'guard-rails'
 gem 'guard-rspec'
 gem 'hub', :require=>nil
@@ -62,8 +61,7 @@ gem 'rmagick'
 # gem "mini_magick"
 gem 'acts-as-taggable-on'
 gem 'sanitize'
-# gem 'tinymce-rails-imageupload'
-# gem 'tinymce-rails'
+
 gem 'redactor-rails'
 gem "mini_magick"
 gem 'acts_as_commentable'
@@ -81,7 +79,7 @@ gem 'pry'
 
 
 gem 'capybara'
-# gem 'cucumber-rails', :require=>false
+
 gem 'database_cleaner'
 gem 'email_spec'
 gem 'launchy'
