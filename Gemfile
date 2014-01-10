@@ -71,6 +71,7 @@ gem 'country_select'
 gem 'fog', "~> 1.3.1"
 gem 'foreman'
 gem "spring", :group => :development
+gem 'coveralls', require: false
 
 # gem 'rails_12factor'
 
