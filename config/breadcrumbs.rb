@@ -45,6 +45,25 @@ crumb :article do |article|
   parent :articles
 end
 
+crumb :admin_novelties do
+  link I18n.t(:novelties_), admin_novelties_path
+end
+
+crumb :admin_novelty do |novelty|
+  link novelty.title, admin_novelty_path(novelty)
+  parent :admin_novelties
+end
+
+crumb :admin_articles do
+  link I18n.t(:articles_), admin_articles_path
+end
+
+
+crumb :admin_article do |article|
+  link article.title, admin_article_path(article)
+  parent :admin_articles
+end
+
 
 
 

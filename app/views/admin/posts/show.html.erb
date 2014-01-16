@@ -1,20 +1,3 @@
-<p id="notice"><%= notice %></p>
+<% breadcrumb :admin_novelty, @admin_post %>
 
-<p>
-  <strong><%= t(".title") %>:</strong>
-  <%= @admin_article.title %>
-</p>
-
-<p>
-  <strong><%= t(".content") %>:</strong>
-  <%= raw @admin_article.content %>
-</p>
-
-
-<p>
-  <strong>Digest:</strong>
-  <%= raw @admin_article.digest %>
-</p>
-
-<%= link_to 'Edit', edit_admin_article_path(@admin_article) %> |
-<%= link_to 'Back', admin_articles_path %>
+<%= render partial: 'novelties/novelty', locals: { novelty: @admin_post } %>

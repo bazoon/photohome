@@ -1,24 +1,4 @@
 <% breadcrumb :article, @article %>
 
 
-<h1>
- <%= @article.title %>
-</h1>
-
-<p class="label label-info"><%=  @article.author %></p>
-
-<p>
-  <%= raw @article.content %>
-</p>
-
-<p><%= age_badge(@article.age_policy_age) %></p>
-
-<small>
-  <%= ld @article.created_at %>
-</small>
-
-<br>
-
-<%= render partial: "simple_comment/comments", locals: {resource: @article } %>
-<%= render partial: "simple_comment/form", locals: { user: nil, resource: @article} %>
-
+<%= render @article %>

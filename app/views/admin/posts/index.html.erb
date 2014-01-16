@@ -24,8 +24,8 @@
           link_to promote_icon("p#{admin_post.id}", admin_post.promoted?), [:promote,:admin,admin_post], remote: true, method: :post %>
         </td>
 
-        <td><%= link_to show_icon, admin_post %></td>
-        <td><%= link_to edit_icon, [:edit,:admin,admin_post] if can? :edit, admin_post %> </td>
+        <td><%= link_to show_icon, [:admin, admin_post] %></td>
+        <td><%= link_to edit_icon, [:edit, :admin, admin_post] if can? :edit, admin_post %> </td>
         <td><%= link_to del_icon, [:admin, admin_post], method: :delete, data: { confirm: 'Are you sure?' } if can? :manage, admin_post %></td>
       </tr>
     <% end %>
