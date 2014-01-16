@@ -10,7 +10,6 @@ class Admin::PhotosController < Admin::BaseController
     @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: true)
   end
 
-
   def review
     @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false,destination_id: 1)    
   end
@@ -29,8 +28,6 @@ class Admin::PhotosController < Admin::BaseController
     end 
      
   end
-
-
 
   def destroy
     @id = params[:id]

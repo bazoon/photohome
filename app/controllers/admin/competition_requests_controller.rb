@@ -12,10 +12,6 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   end
 
-  def show
-    @request = CompetitionRequest.find(params[:id])
-  end
-
   def create
     competition_request = CompetitionRequest.user_request(@competition, current_user)
 

@@ -1,9 +1,6 @@
-<%= render partial: "image", locals: {photo: @photo } %>
-<%= render partial: "comment/comments", locals: {resource: @photo } %>
-<%= render partial: "comment/form", locals: { user: @user, resource: @photo} if can? :write, Comment %>
+<%= render @photo %>
 
 <br>
-
 
 <%= link_to 'Edit', edit_user_photo_path(@user, @photo) if can? :manage, @photo  %> |
 <%= link_to 'Back', user_photos_path %>
