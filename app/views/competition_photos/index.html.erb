@@ -1,18 +1,18 @@
-<% breadcrumb :competition_photos, @competition %>
+<% breadcrumb :competition_photos, @apply_info.competition %>
 
 <br>
-<%= link_to t(:apply),aply_competition_path(@competition),{class: "btn btn-primary"} %>
+<%= link_to t(:apply),aply_competition_path(@apply_info.competition),{class: "btn btn-primary"} %>
 
-<h1><%= @competition.title %></h1>
+<h1><%= @apply_info.competition.title %></h1>
 <h2>Отправленные фотографии</h2>
 <br>
 <div class="row">
 
-    <% @competition_photos.each_with_index do | competition_photo,index| %>
+    <% @apply_info.photos.each_with_index do | competition_photo,index| %>
  
     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
       <%= render partial: "photos/thumb", locals: { photo: competition_photo, path: gallery_show_path(competition_photo.photo) } %>
-      <%- l1 = link_to del_icon, competition_competition_photo_path(@competition,competition_photo), method: :delete, data: { confirm: 'Are you sure?' } unless @competition.overdue? %>
+      <%- l1 = link_to del_icon, competition_photo_path(@apply_info.competition, competition_photo), method: :delete, data: { confirm: 'Are you sure?' } unless @apply_info.competition.overdue? %>
       <%= render partial: "photos/caption", locals: { photo: competition_photo.photo, links: [l1] } %>
     </div>
 

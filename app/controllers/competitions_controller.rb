@@ -18,7 +18,7 @@ class CompetitionsController < ApplicationController
   def aply
     @nominations = @competition.nominations
     @competition_photo = CompetitionPhoto.new
-    @photos = current_user.photos
+    # @photos = current_user.photos
   end
 
   def view_photos

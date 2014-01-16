@@ -35,7 +35,7 @@ gem 'rolify', '~> 3.3.0.rc4'
 gem 'simple_form', '>= 3.0.0.rc'
 
 gem 'better_errors'
-gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
+gem 'binding_of_caller'
 gem 'guard-bundler'
 gem 'guard-rails'
 gem 'guard-rspec'

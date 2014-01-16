@@ -31,10 +31,8 @@ class Admin::BannersController <  Admin::BaseController
     respond_to do |format|
       if @admin_banner.save
         format.html { redirect_to @admin_banner, notice: 'Admin::Banner was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @admin_banner }
       else
         format.html { render action: 'new' }
-        format.json { render json: @admin_banner.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,10 +43,8 @@ class Admin::BannersController <  Admin::BaseController
     respond_to do |format|
       if @admin_banner.update(admin_banner_params)
         format.html { redirect_to @admin_banner, notice: 'Admin::Banner was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @admin_banner.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -59,7 +55,6 @@ class Admin::BannersController <  Admin::BaseController
     @admin_banner.destroy
     respond_to do |format|
       format.html { redirect_to admin_banners_url }
-      format.json { head :no_content }
     end
   end
 

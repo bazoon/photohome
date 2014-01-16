@@ -12139,3 +12139,61 @@
 [01/16/14 11:59:31 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `hide_info' for #<#<Class:0x007fabea9c8a18>:0x007fabe4150738>
 [01/16/14 11:59:31 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `hide_info' for #<#<Class:0x007fabea9c8a18>:0x007fabdcf1f060>
 [01/16/14 12:00:08 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `hide_info' for #<#<Class:0x007fabea9c8a18>:0x007fabe77c0750>
+[01/16/14 12:07:52 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<CompetitionRequestController:0x007fabe471f4c0>
+[01/16/14 12:08:22 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<CompetitionRequestController:0x007fabe73c2ef0>
+[01/16/14 12:11:00 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<CompetitionRequestController:0x007fabe261df88>
+[01/16/14 12:11:17 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<CompetitionRequestController:0x007fabe65f8220>
+[01/16/14 12:15:48 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"aply", :controller=>"competitions", :locale=>:ru, :competition_id=>"2", :id=>nil, :format=>nil} missing required keys: [:id]
+[01/16/14 12:16:41 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<#<Class:0x007fabe637d5e0>:0x007fabe639db88>
+[01/16/14 12:19:55 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<#<Class:0x007fabd6f4f900>:0x007fabd6f4e820>
+[01/16/14 12:19:55 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<#<Class:0x007fabd6f4f900>:0x007fabe27271e0>
+[01/16/14 12:20:15 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"index", :controller=>"competition_photos", :locale=>:ru, :id=>"2", :format=>nil} missing required keys: [:competition_id]
+[01/16/14 12:20:27 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<#<Class:0x007fabd6f4f900>:0x007fabe4381818>
+[01/16/14 12:21:18 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"index", :controller=>"competition_photos", :locale=>:ru, :id=>"2", :format=>nil} missing required keys: [:competition_id]
+[01/16/14 12:25:04 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photos_path' for #<CompetitionPhotosController:0x007fabdc59f490>
+[01/16/14 12:26:50 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photo_path' for #<#<Class:0x007fabe8eaef98>:0x007fabd9280de8>
+[01/16/14 12:26:59 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `competition_competition_photo_path' for #<#<Class:0x007fabe8eaef98>:0x007fabe420e738>
+[01/16/14 12:50:44 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"aply", :controller=>"competitions", :locale=>:ru, :competition_id=>"2", :id=>nil, :format=>nil} missing required keys: [:id]
+[01/16/14 12:51:59 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"aply", :controller=>"competitions", :locale=>:ru, :competition_id=>"2", :id=>nil, :format=>nil} missing required keys: [:id]
+[01/16/14 12:52:12 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"index", :controller=>"competition_photos", :locale=>:ru, :competition_id=>nil, :format=>nil} missing required keys: [:competition_id]
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Starting the New Relic agent in "development" environment.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Reading configuration from config/newrelic.yml
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : New Relic Agent Developer Mode enabled.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Enabling the Request Sampler.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Environment: development
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : No known dispatcher detected.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Application: photohome72
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] WARN : Agent configured not to send data in this environment.
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing ActiveRecord 4 instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing legacy Excon instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing Net instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing deferred Rack instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing Rails 4 Controller instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing Rails 4 view instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Installing Rails4 Error instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : Finished instrumentation
+[01/16/14 14:11:23 +0600 Mac-mini-VITALIY.local (6542)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[01/16/14 14:18:39 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (2 for 1)
+[01/16/14 14:36:20 +0600 Mac-mini-VITALIY.local (3283)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Starting the New Relic agent in "development" environment.
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Reading configuration from config/newrelic.yml
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : New Relic Agent Developer Mode enabled.
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Enabling the Request Sampler.
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Environment: development
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Dispatcher: mongrel
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Application: photohome72
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] WARN : Agent configured not to send data in this environment.
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing ActiveRecord 4 instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing legacy Excon instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing Net instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing deferred Rack instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing Rails 4 Controller instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing Rails 4 view instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Installing Rails4 Error instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Finished instrumentation
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler not available: No DJ worker present
+[01/16/14 14:39:33 +0600 Mac-mini-VITALIY.local (7049)] INFO : Doing deferred dependency-detection before Rack startup

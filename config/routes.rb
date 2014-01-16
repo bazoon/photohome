@@ -65,7 +65,7 @@ Photohome::Application.routes.draw do
           get 'view_photos',as: :view_photos
         end  
 
-        resources :photos, only: [:index, :destroy, :create], controller: 'competition_photo' 
+        resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 
         resources :requests, controller: "competition_request", shallow: true, only: [:show, :create] 
       end  
 
@@ -107,6 +107,7 @@ Photohome::Application.routes.draw do
           end  
           
           resources :competition_photos, only: :destroy, shallow: true
+
           resources :nominations
           resources :jury, only: [:index, :update, :destroy]
           

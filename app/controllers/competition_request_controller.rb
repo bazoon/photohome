@@ -12,7 +12,7 @@ class CompetitionRequestController < ApplicationController
 
 
     if @competition.open? || competition_request.approved?
-      redirect_to competition_competition_photos_path(@competition) 
+      redirect_to competition_photos_path(@competition) 
     else
       redirect_to request_path(competition_request) 
     end

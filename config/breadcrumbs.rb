@@ -17,7 +17,7 @@ crumb :view_competition_photos do |competition|
 end
 
 crumb :competition_photos do |competition|
-  link I18n.t(:sent_photos), competition_competition_photos_path(competition)
+  link I18n.t(:sent_photos), competition_photos_path(competition)
   parent :competitions
 end
 

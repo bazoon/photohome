@@ -2,7 +2,7 @@
 
 <h1><%= t(".choose_photo_title") %></h1>
 
-<%= simple_form_for([@competition,@competition_photo]) do |f| %>
+<%= simple_form_for @competition_photo, :url => competition_photos_path(@competition), :html => {:method => :post } do |f| %>
   <%= f.error_notification %>
 
     <div class="form-group">

@@ -12,19 +12,6 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   end
 
-  def create
-    competition_request = CompetitionRequest.user_request(@competition, current_user)
-
-    if @competition.open? || competition_request.approved 
-      redirect_to competition_competition_photos_path(@competition) 
-    else
-      redirect_to request_path(competition_request) unless @competition.open? && competition_request.approved 
-    end
-
-    # render text: params.inspect
-
-  end
-
   #Admin only !!!
   def update
 

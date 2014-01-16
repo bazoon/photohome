@@ -38,7 +38,6 @@ def update
         format.html { redirect_to admin_albums_path, notice: 'Album was successfully updated' }
       else
         format.html { render action: 'new' }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
 
     end
@@ -54,7 +53,6 @@ def destroy
   @album.destroy
   respond_to do |format|
     format.html { redirect_to :back }
-    format.json { head :no_content }
   end  
 
 end

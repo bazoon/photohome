@@ -1,6 +1,5 @@
 class CompetitionPhoto < ActiveRecord::Base
   belongs_to :nomination, class_name: "Admin::Nomination"
-
   belongs_to :photo
   belongs_to :competition
 
@@ -12,6 +11,13 @@ class CompetitionPhoto < ActiveRecord::Base
   delegate :image_url,:title,to: :photo
   has_many :jury_ratings
   has_many :likes
+
+
+  before_destroy -> do 
+    raise Exceptions::ClosedCompetition if competition.overdue? 
+    true
+  end
+
 
   NORMAL = 0
   BANNED = 1000
@@ -80,6 +86,10 @@ class CompetitionPhoto < ActiveRecord::Base
     rating = jury_ratings.where(user_id: user_id).try(:[],0).try(:rating) || 0
   end
 
-
-
+  
 end
+
+
+
+
+
