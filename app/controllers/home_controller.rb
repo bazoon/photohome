@@ -4,22 +4,21 @@ class HomeController < ApplicationController
   def index
 
     setting = Admin::Setting.includes(:photos).first
+    @setting_decorator = Admin::SettingDecorator.new(setting) 
+    @last_photos = Photo.last(4)
     
-
-    if setting 
-      @setting_decorator = Admin::SettingDecorator.new(setting) 
-      @last_photos = Photo.last(4) 
-    else
-      render text: ""
-    end
-
-    fresh_when(setting)
+    # fresh_when(setting)
 
   end
 
 
   def test
-    UserMailer.welcome_email(current_user)    
+    # UserMailer.welcome_email(current_user)   
+
+    # p = Photo.all
+    # render json: p.select([:id])
+    render text: ENV['HOST']
+
   end
 
 

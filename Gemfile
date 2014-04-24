@@ -28,7 +28,7 @@ gem 'figaro'
 
 
 # gem 'pg'
-gem 'mysql2'
+# gem 'mysql2'
 gem 'sqlite3'
 
 gem 'rolify', '~> 3.3.0.rc4'
@@ -70,7 +70,7 @@ gem 'railroady'
 gem 'country_select'
 gem 'fog', "~> 1.3.1"
 gem 'foreman'
-gem "spring", :group => :development
+# gem "spring", :group => :development
 gem 'coveralls', require: false
 
 # gem 'rails_12factor'

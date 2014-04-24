@@ -1,10 +1,15 @@
 class Photo < ActiveRecord::Base
 	# belongs_to :gallery
+
+  scope :published, -> { where("published = ?", true) }
+
   belongs_to :user
 
   belongs_to :age_policy, class_name: 'Admin::AgePolicy'
 
   has_many :competition_photos
+
+  has_many :competitions, through: :competition_photos
 
 
   validates :user_id, presence: true
@@ -136,8 +141,11 @@ class Photo < ActiveRecord::Base
   def self.non_competition_photo_ordered
      Photo.find_by_sql(
       "select *from photos where id not in 
-       (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
-        competitions.open_date > CURRENT_DATE) and (published=true) order by photos.created_at desc")
+        (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
+         competitions.open_date > CURRENT_DATE) and (published=?) order by photos.created_at desc", true)
+
+
+
   end
 
 
