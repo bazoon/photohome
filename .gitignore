@@ -1,6 +1,7 @@
-tmp/
 db/*.sqlite3
-public/uploads
-log/*.log
 tmp/**/*
+log/*.log
 config/application.yml
+env.sh
+public/uploads
+tmp/
