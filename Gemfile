@@ -16,6 +16,7 @@ gem 'yui-compressor'
 gem 'cssminify'
 # gem 'bootstrap-sass'
 
+gem 'therubyracer'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails',
