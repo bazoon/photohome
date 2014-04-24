@@ -28,8 +28,8 @@ gem 'figaro'
 
 
 # gem 'pg'
-# gem 'mysql2'
-gem 'sqlite3'
+gem 'mysql2'
+# gem 'sqlite3'
 
 gem 'rolify', '~> 3.3.0.rc4'
 gem 'simple_form', '>= 3.0.0.rc'
