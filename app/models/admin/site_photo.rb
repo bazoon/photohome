@@ -2,11 +2,16 @@ class Admin::SitePhoto < ActiveRecord::Base
  belongs_to :album, class_name: "Admin::Album"
  belongs_to :photo
  belongs_to :policy, class_name: "Admin::AgePolicy", :foreign_key => 'age_policy_id'
+ validates :album_id, :age_policy_id, presence: true
+ validates :photo_id, presence: true, unless: :image?
 
  mount_uploader :image, AdminSitePhotoUploader
 
  alias :old_image_url :image_url
 
+def image?
+	image.nil?
+end
 
 # Возвращает либо photo пользователя либо image загруженной фотографии
 
