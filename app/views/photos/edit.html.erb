@@ -1,5 +1,7 @@
 <h1><%= t(".title") %></h1>
 
+<%= image_tag(@photo.image_url(:thumb)) %>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', user_photo_path(@user,@photo) %> |
