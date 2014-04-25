@@ -20,6 +20,12 @@ class User < ActiveRecord::Base
 
   acts_as_tagger
 
+  #change id to other attr !!!
+
+  # def to_param 
+  #   name
+  # end
+
   #Для доступа к current_user в моделях
   def self.current
     Thread.current[:user]

@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: addb7143365f97f938e3bdbb2ccfc52591230eda
-  branch: 3.0.0
-  specs:
-    anjlab-bootstrap-rails (3.0.0.rc2)
-      railties (>= 3.0)
-      sass (>= 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,6 +38,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.1.4)
     cancan (1.6.10)
     capybara (2.2.1)
@@ -167,6 +160,7 @@ GEM
     json (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
+    libv8 (3.16.14.3)
     listen (2.4.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -181,6 +175,7 @@ GEM
       subexec (~> 0.2.1)
     minitest (4.7.5)
     multi_json (1.8.4)
+    mysql2 (0.3.15)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.7.0)
@@ -232,6 +227,7 @@ GEM
       devise
       mime-types
       orm_adapter
+    ref (1.0.5)
     require_all (1.3.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -289,10 +285,12 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.8)
     subexec (0.2.3)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -317,6 +315,8 @@ GEM
     xpath (2.0.0)
       nokogiri (~> 1.3)
     yui-compressor (0.12.0)
+    zeus (0.15.1)
+      method_source (>= 0.6.7)
 
 PLATFORMS
   ruby
@@ -324,9 +324,9 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   acts_as_commentable
-  anjlab-bootstrap-rails!
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.1.1)
   cancan
   capybara
   carrierwave
@@ -357,6 +357,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   mini_magick
+  mysql2
   newrelic_rpm
   pry
   puma
@@ -377,9 +378,10 @@ DEPENDENCIES
   selenium-webdriver
   simple_form (>= 3.0.0.rc)
   simplecov
-  sqlite3
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)
   will_paginate
   will_paginate-bootstrap
   yui-compressor
+  zeus

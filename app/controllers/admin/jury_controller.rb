@@ -4,7 +4,7 @@ class Admin::JuryController < Admin::BaseController
 def index
   # render text: params.inspect
   @competition = Competition.find(params[:competition_id])
-  @jurys = Admin::Jury.where("competition_id = ?",@competition.id)
+  @jurys = Admin::Jury.where("competition_id = ?", @competition.id)
   @jury = Admin::Jury.new
   # render text: @jurys.inspect
 end
@@ -12,7 +12,7 @@ end
 
 def update
   user_ids = params[:admin_jury][:user_tokens]
-  competition_id = params[:competition_id]
+  competition_id = params[:competition]
   user_ids = user_ids.split(",")
 
   user_ids.each do |id|   
@@ -20,8 +20,8 @@ def update
 
     is_there = Admin::Jury.where(user_id: id,competition_id: competition_id).count > 0
 
-    
-    unless is_there
+        
+    if (not is_there) && competition_id
       jury = Admin::Jury.new
       jury.user_id = id
       jury.competition_id = competition_id
@@ -31,7 +31,7 @@ def update
   end  
 
 
-  # render text: user_ids
+  
   redirect_to :back
 
 end

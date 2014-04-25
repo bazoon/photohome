@@ -18,6 +18,10 @@ ru:
         email: "Почта"
         password: "Пароль"
         password_confirmation: "Подтверждение"
+        login: 'Псевдоним'
+        last_name: 'Фамилия'
+        remember_me: 'Запомнить меня'
+        about: 'Обо мне'
       topic:
         new:
           name: 'Название'

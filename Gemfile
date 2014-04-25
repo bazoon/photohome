@@ -16,11 +16,14 @@ gem 'yui-compressor'
 gem 'cssminify'
 # gem 'bootstrap-sass'
 
+
+gem 'bootstrap-sass', '~> 3.1.1'
+
 gem 'therubyracer'
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails',
-                              :branch => '3.0.0'
+# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+#                               :github => 'anjlab/bootstrap-rails',
+#                               :branch => '3.0.0'
 gem 'flexslider'
 
 gem 'cancan'
@@ -81,6 +84,7 @@ gem 'pry'
 
 
 gem 'capybara'
+gem 'zeus'
 
 gem 'database_cleaner'
 gem 'email_spec'

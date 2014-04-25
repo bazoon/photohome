@@ -116,6 +116,8 @@ Photohome::Application.routes.draw do
 
         end  
 
+        put '/admin/competitions/:competition/jury', to: 'jury#update', as: :update_jury
+
         #It is done so because of rating plugin
         post 'final_rating', to: 'competitions#final_rating', :as => :final_rating
 

@@ -139,12 +139,13 @@ class Photo < ActiveRecord::Base
   # упорядочены по дате так как find_by_sql возвращает массив и не сочетается с
   # обычным order
   def self.non_competition_photo_ordered
-     Photo.find_by_sql(
-      "select *from photos where id not in 
-        (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
-         competitions.open_date > CURRENT_DATE) and (published=?) order by photos.created_at desc", true)
+     # Photo.find_by_sql(
+     #  "select *from photos where id not in 
+     #    (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
+     #     competitions.open_date > CURRENT_DATE)  order by photos.created_at desc")
 
-
+    p = Photo.where.not(id: CompetitionPhoto.joins(:competition).where("open_date > CURRENT_DATE").map(&:photo_id))
+    p.published
 
   end
 

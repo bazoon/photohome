@@ -1,6 +1,6 @@
 <h1>Жюри</h1>
 
-  <%= simple_form_for [@competition,@jury], :url => new_admin_competition_jury_path(@competition), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
+  <%= simple_form_for [@competition,@jury], :url => admin_update_jury_path(@competition), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
 
 
       <%= f.input :user_tokens,label: "Новый член жюри", :input_html => {data: {load: ""   }} %>

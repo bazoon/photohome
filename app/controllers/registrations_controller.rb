@@ -4,7 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
   # layout "user_profile_layout", except: [:new]
 
   def update_sanitized_params
-    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :about, :email, :country, :password, :password_confirmation,:avatar)}
+    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :login, :about, :email, :country, :password, :password_confirmation,:avatar)}
   end
 
 

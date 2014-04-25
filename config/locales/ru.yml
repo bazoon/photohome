@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  login: 'Псевдоним'
   save: "Сохранить"
   opened: "Открыто"
   in_process: "Обрабатывается"
@@ -52,6 +53,7 @@ ru:
   login: "Войти"
   sign_out: "Выйти"
   forgot_password: "Забыли пароль ?"
+  did_not_recieved_confirmation: "Не получили инструкции для подвтерждения учетной записи ?"
   paricipate_in_competition: "Фотография учавствовала в 1 или более конкурсах и не может быть удалена"
   photo_was_deleted: "Фотография была удалена"
   incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
@@ -71,6 +73,9 @@ ru:
   status: "Статус"
 
   change_password: "Личные данные"
+  we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"
+  leave_it_blank: "Оставте это поле пустым, если не хотите менять пароль."
+  cancel_account: "Закрыть мою учетную запись"
   profile: "Профиль"
   sign_up: "Регистрация"
   cloud: "Облако" 

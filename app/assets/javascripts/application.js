@@ -20,7 +20,7 @@
 
 
 // Or peek any of them yourself
-//= require twitter/bootstrap
+//= require bootstrap
 
 
 //= require turbolinks
