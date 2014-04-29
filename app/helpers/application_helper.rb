@@ -103,6 +103,12 @@ module ApplicationHelper
   def approve_icon(approved, id)
     content_tag(:span,"",class:  approved ? "glyphicon glyphicon-thumbs-up" : "glyphicon glyphicon-thumbs-down",style: "font-size: 20px", id: id)
   end
+
+  
+
+  def comment_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-comment")
+  end
   
 
   def ru_icon

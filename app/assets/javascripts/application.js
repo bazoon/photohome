@@ -33,12 +33,26 @@
 
 $(document).ready(function() {
 
-  
+
+
 
 
 // убирает флеш сообщения через некоторое время
 // $("div[id^='flash_box']").fadeOut(10000);
+// !!! нужно изменить способ адресации фоторамы здесь чтобы не трогало фотораму на главной
+$('.fotorama').on(
+  'fotorama:show',
+  function (e, fotorama, extra) {
+    // console.log(fotorama.activeFrame.img);
+    var re = /\d+/;
+    var href = fotorama.activeFrame.img
+    var id = href.match(re)
+    var image_path = "/gallery/show/"+id;  
 
+    $(".comlink").attr('href',image_path)
+    
+  }
+);
 
  $(".jury_estimate").jRating({
          // step:true,

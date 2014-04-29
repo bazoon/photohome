@@ -1,5 +1,28 @@
-<p>Welcome <%= @resource.full_name %>!</p>
+</p>
+Здравствуйте, <%= @resource.full_name %> !
+Приветствуем вас на сайте Тюменского Дома фотографии и поздравляем с успешной регистрацией!
+Для активации Вашего аккаунта, просим перейти по ссылке: <%= link_to 'Подтвердить мою регистрацию', confirmation_url(@resource, :confirmation_token => @token) %>
+</p>
+</p>
+Подтверждение необходимо для исключения не санкционированного использования Вашего электронного адреса.
+Если Вы не регистрировались на сайте Тюменского Дома фотографии, то просто игнорируйте это письмо.
+Пожалуйста, не отвечайте на эот письмо, оно отправляется автоматически, ответы же на этом адресе не обрабатываются.
+С наилучшими пожеланиями, Администрация интернет проекта Тюменского Дома фотографии.
+</p>
 
-<p>You can confirm your account email through the link below:</p>
+================================================================
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @token) %></p>
+<p>
+Hello,
+welcome at Tyumen House of Photography's site !
+In order to confirm your account please click this link <%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @token) %>
+</p>
+</p>
+Confirmation is necessary for preventing unauthorized access using your e-mail address.
+If you did not register for Tyumen House of Photography please disregard this message.
+</p>
+
+Best regards, Tyumen House of Photography team.
+<p>
+This is an automated system email. Please do not reply to this email.
+</p>

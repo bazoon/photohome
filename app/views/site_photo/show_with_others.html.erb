@@ -1,0 +1,21 @@
+
+
+
+
+
+<div class="fotorama" data-shuffle="false" data-nav="thumbs" data-width="100%">
+			
+		 <a href="<%= @site_photo.image_url(:normal) %>"></a>
+     <% @others.each do |photo| %>
+	   	
+	   	<% unless photo.id == @site_photo.id  %>  
+	     <a href="<%= photo.image_url(:normal) %>"></a>
+     	<% end %>
+     
+     <% end %> 
+
+</div>
+<!-- !!! Нужно предусмотреть переход если фото загружено само по себе без пользователя -->
+<button type="button" class="btn btn-default btn-lg">
+	<%= link_to comment_icon, gallery_show_path(@site_photo.photo), class: 'comlink' %>
+</button>

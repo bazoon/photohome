@@ -4,13 +4,13 @@ class ArticlesController < ApplicationController
 
   def list
     @articles = Article.paginate(:page => params[:page])
-    fresh_when(@articles)
+   #fresh_when(@articles)
   end
 
   
   def show
     @article = Article.find(params[:id])
-    fresh_when(@article)
+    #fresh_when(@article)
   end
 
 

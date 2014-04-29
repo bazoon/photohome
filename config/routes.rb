@@ -1,5 +1,7 @@
 Photohome::Application.routes.draw do
 
+
+
   mount RedactorRails::Engine => '/redactor_rails'
 
   root :to => "home#index"
@@ -8,6 +10,7 @@ Photohome::Application.routes.draw do
     resources :comments
   end
 
+       
   
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
@@ -69,8 +72,14 @@ Photohome::Application.routes.draw do
         resources :requests, controller: "competition_request", shallow: true, only: [:show, :create] 
       end  
 
-        
+      # get "album/index"
+      # get "album/show"
 
+    resources :albums, only: [:index, :show]          
+
+   
+    get "site_photo/show_with_others/:id", to: 'site_photo#show_with_others', as: :site_photo_with_others
+    resources :site_photos, only: [:show, :show_with_others]
    
       # ADMIN routes
 

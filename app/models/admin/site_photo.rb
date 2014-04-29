@@ -9,27 +9,27 @@ class Admin::SitePhoto < ActiveRecord::Base
 
  alias :old_image_url :image_url
 
-def image?
-	image.nil?
-end
+	def image?
+		image.nil?
+	end
 
-# Возвращает либо photo пользователя либо image загруженной фотографии
+	# Возвращает либо photo пользователя либо image загруженной фотографии
 
-def image_url(size)
-  photo_id.nil? ?  old_image_url(size) : photo.image_url(size)  
-end
+	def image_url(size)
+	  photo_id.nil? ?  old_image_url(size) : photo.image_url(size)  
+	end
 
-def user
-  photo_id.nil? ? "" : Photo.find(photo_id).user 
-end
+	def user
+	  photo_id.nil? ? "" : Photo.find(photo_id).user 
+	end
 
-def age_policy
-  policy || photo && photo.age_policy
-end
+	def age_policy
+	  policy || photo && photo.age_policy
+	end
 
-def age_policy_age
-  age_policy.age
-end
+	def age_policy_age
+	  age_policy.age
+	end
 
 
 end
