@@ -1,5 +1,5 @@
 class SitePhotoController < ApplicationController
-    
+  skip_before_filter :authenticate_user!
 	before_action :set_site_photo, only: [:show, :show_with_others]
 
 
