@@ -1,3 +1,16 @@
+<h3>Последние фотографии</h3>
+<div class="row">    
+
+    <% @last_photos.each do |photo|  %>
+     <div class="col-sm-3">
+   
+       <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
+       <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
+   
+     </div>
+    <% end %>      
+</div>
+
 <% @albums.each do |album| %>
 
 <h3><%= link_to album.title, album_path(album) %></h3>

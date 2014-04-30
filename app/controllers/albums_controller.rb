@@ -3,6 +3,7 @@ class AlbumsController < ApplicationController
 
   def index
   	@albums = Admin::Album.all
+    @last_photos = Admin::SitePhoto.last(4)
   end
 
   def show
