@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
 	before_action :set_album, only: [:show]
+  skip_before_filter :authenticate_user!
 
   def index
   	@albums = Admin::Album.all
