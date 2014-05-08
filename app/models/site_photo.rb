@@ -1,4 +1,4 @@
-class Admin::SitePhoto < ActiveRecord::Base
+class SitePhoto < ActiveRecord::Base
  belongs_to :album, class_name: "Admin::Album"
  belongs_to :photo
  belongs_to :policy, class_name: "Admin::AgePolicy", :foreign_key => 'age_policy_id'
@@ -6,6 +6,8 @@ class Admin::SitePhoto < ActiveRecord::Base
  validates :photo_id, presence: true, unless: :image?
 
  mount_uploader :image, AdminSitePhotoUploader
+ acts_as_commentable
+ # TODO: 5 Remove Admin prefix
 
  alias :old_image_url :image_url
 

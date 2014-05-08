@@ -4,7 +4,7 @@
     <% @last_photos.each do |photo|  %>
      <div class="col-sm-3">
    
-       <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
+       <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
        <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
    
      </div>
@@ -24,7 +24,7 @@
      
       	<%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_with_others_path(photo) } %>
       	
-      	<%- l1 = link_to del_icon, admin_site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
+      	<%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
       	<%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
 
      

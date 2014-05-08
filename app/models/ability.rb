@@ -14,7 +14,7 @@ class Ability
       if user.has_role? :moder
         can :manage, Novelty  
         can :manage, Admin::Album
-        can :manage, Admin::SitePhoto  
+        can :manage, SitePhoto  
         can :manage, Admin::Setting
         can :manage, Article
       end

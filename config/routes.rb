@@ -59,6 +59,8 @@ Photohome::Application.routes.draw do
         resources :incoming_letters, only: [:index, :show]
       end
 
+
+      resources :site_photos, concerns: :commentable
     
       resources :competitions, only: [:index, :show] do
 
@@ -78,8 +80,11 @@ Photohome::Application.routes.draw do
     resources :albums, only: [:index, :show]          
 
    
-    get "site_photo/show_with_others/:id", to: 'site_photo#show_with_others', as: :site_photo_with_others
-    resources :site_photos, only: [:show, :show_with_others]
+    get "site_photo/show_with_others/:id", to: 'site_photos#show_with_others', as: :site_photo_with_others
+    get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo     
+
+    # TODO: 0 Make site_photo without admin prefix
+  
    
       # ADMIN routes
 
@@ -133,10 +138,9 @@ Photohome::Application.routes.draw do
 
 
         #Галлерея сайта
-        resources :site_photos 
+        # resources :site_photos 
 
-        get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo
-        
+                
         #Альбомы сайта
         resources :albums 
 

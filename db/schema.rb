@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425023733) do
+ActiveRecord::Schema.define(version: 20140508081336) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -82,16 +82,6 @@ ActiveRecord::Schema.define(version: 20140425023733) do
     t.integer  "article_count"
     t.string   "articles"
     t.integer  "article_id"
-  end
-
-  create_table "admin_site_photos", force: true do |t|
-    t.integer  "photo_id"
-    t.string   "image"
-    t.integer  "album_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.integer  "age_policy_id"
   end
 
   create_table "comments", force: true do |t|
@@ -282,6 +272,16 @@ ActiveRecord::Schema.define(version: 20140425023733) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "site_photos", force: true do |t|
+    t.integer  "photo_id"
+    t.string   "image"
+    t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.integer  "age_policy_id"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

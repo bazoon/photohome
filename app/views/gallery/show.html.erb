@@ -5,12 +5,12 @@
 <h4> <%=  t("comments") if @photo.comments.count > 0 %> </h4>
 
 <% @photo.comments.each do |c| %>
-
 <div>
    <%= image_tag(c.user.avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;") %> 
-  <div><%= c.comment %></div>
+   <div><%= c.comment %></div>
 </div>
- <%= link_to del_icon, [current_user,@photo,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy,c%>
+
+<%= link_to del_icon, [current_user,@photo,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy,c%>
 
 <div style="clear: left; height: 20px;" ></div>
 

@@ -9,8 +9,8 @@
   
     <div class="thumbnail">  
      
-      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_site_photo_path(photo) } %>
-      <%- l1 = link_to del_icon, admin_site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
+      <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
+      <%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
       <%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
 
      

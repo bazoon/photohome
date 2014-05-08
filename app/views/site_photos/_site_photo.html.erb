@@ -1,0 +1,5 @@
+<%= render partial: "photos/image", locals: {photo: site_photo } %>
+
+<%= render partial: "comment/comments", locals: {resource: site_photo } %>
+
+<%= render partial: "comment/form2", locals: {user: current_user, resource: site_photo} if can? :write, Comment %>

@@ -8,7 +8,7 @@
     </div>
     
     <div class="form-group">
-    <%= f.input :commentable, :as => :hidden, :input_html => { :value => resource.class.to_s.downcase }  %>
+    <%= f.input :commentable, :as => :hidden, :input_html => { :value => resource.class.to_s.underscore }  %>
     </div>
 
     <%= f.button :submit,class: "btn btn-default" %>
