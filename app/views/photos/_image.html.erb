@@ -11,10 +11,11 @@
   <%= photo.title %>
 </p>
 
+<% if photo.has_owner? %>
 <p>
-  <strong>Автор: </strong>
-  <%= link_to(photo.user.full_name, user_profile_path(photo.user)) if photo.user %>
+	<strong>Автор: </strong>
+  <%= link_to(photo.user_name, user_profile_path(photo.user))  %>
 </p>
-
+<% end %>
 
 <hr/>

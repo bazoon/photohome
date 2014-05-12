@@ -1,20 +1,22 @@
-class Admin::SitePhotosController < Admin::BaseController
+class Admin::SitePhotoController < Admin::BaseController
   
   before_action :set_site_photo, only: [:show, :edit, :update, :destroy]
 
 def index
-  @site_photos = Admin::SitePhoto.paginate(:page => params[:page],per_page: 16)
+  @site_photos = SitePhoto.paginate(:page => params[:page],per_page: 16)
 end
 
 def edit
 end
 
 def new
-  @site_photo = Admin::SitePhoto.new
+  @site_photo = SitePhoto.new
+  @album = Admin::Album.find(params[:album_id])
+  # render text: params.inspect
 end
 
 def choose
-   @site_photo = Admin::SitePhoto.new
+   @site_photo = SitePhoto.new
    @photo_id = params[:photo_id]
    @photo = Photo.find(@photo_id)
 end  
@@ -25,7 +27,9 @@ end
 
 def create
   # render :text => site_photo_params
-  @site_photo = Admin::SitePhoto.new(site_photo_params)
+  @site_photo = SitePhoto.new(site_photo_params)
+
+  # raise Exception  
 
   respond_to do |format|
     if @site_photo.save
@@ -34,6 +38,7 @@ def create
       format.html { render action: 'new' }
     end
   end
+
 end
 
 
@@ -71,12 +76,12 @@ end
 private
   # Use callbacks to share common setup or constraints between actions.
   def set_site_photo
-    @site_photo = Admin::SitePhoto.find(params[:id])
+    @site_photo = SitePhoto.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def site_photo_params
-    params.require(:admin_site_photo).permit(:title, :photo_id, :image, :album_id,:album,:age_policy_id)
+    params.require(:site_photo).permit(:title, :photo_id, :image,:image_cache, :album_id,:album,:age_policy_id)
   end
 
 end

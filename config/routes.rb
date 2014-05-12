@@ -146,7 +146,9 @@ Photohome::Application.routes.draw do
 
                 
         #Альбомы сайта
-        resources :albums 
+        resources :albums do
+          resources :site_photo
+        end
 
         resources :photos, only: [:index, :show, :destroy] do
           member do 

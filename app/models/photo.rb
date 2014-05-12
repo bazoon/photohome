@@ -149,7 +149,6 @@ class Photo < ActiveRecord::Base
 
   end
 
-
   def publish
     self.published = ! self.published
     self.save!
@@ -169,6 +168,14 @@ class Photo < ActiveRecord::Base
 
   def age_policy_age
     age_policy && age_policy.age
+  end
+
+  def user_name
+    user.full_name if user
+  end
+
+  def has_owner?
+    user != nil
   end
 
 end
