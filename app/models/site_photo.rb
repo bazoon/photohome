@@ -7,7 +7,7 @@ class SitePhoto < ActiveRecord::Base
 
  mount_uploader :image, AdminSitePhotoUploader
  acts_as_commentable
- # TODO: 5 Remove Admin prefix
+
 
  alias :old_image_url :image_url
 
