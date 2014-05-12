@@ -2,6 +2,8 @@ Photohome::Application.routes.draw do
 
 
 
+
+
   mount RedactorRails::Engine => '/redactor_rails'
 
   root :to => "home#index"
@@ -32,6 +34,8 @@ Photohome::Application.routes.draw do
   scope "(:locale)", locale: /en|ru/ do
 
     devise_for :users, :controllers => {:registrations => "registrations"}
+
+      resources :author, only: [:index]
     	
       resources :novelties, concerns: :commentable, only: [:show,:new,:edit,:destroy] do
         collection do
