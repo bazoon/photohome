@@ -15,7 +15,7 @@ class PhotosController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @photos = @user.photos.load.paginate(:page => params[:page],per_page: 8)
-    fresh_when(@photos)
+    # fresh_when(@photos)
   end
 
   # GET /photos/1
@@ -30,12 +30,12 @@ class PhotosController < ApplicationController
     @name = params[:name]
     # raise Exception
     @photos = Photo.tagged_with(@name, :on => :themes, :owned_by => @user).paginate(:page => params[:page],per_page: 8)
-    fresh_when(@photos)
+    # fresh_when(@photos)
   end
 
   def view
     @photo = Photo.find(params[:photo_id])
-    fresh_when(@photo)
+    # fresh_when(@photo)
   end
 
   # GET /photos/new
