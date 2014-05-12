@@ -9,6 +9,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem "daemons"
+
+# RAILS_ENV=production script/delayed_job start
+# RAILS_ENV=production script/delayed_job stop
 gem 'delayed_job_active_record'
 
 gem 'newrelic_rpm'

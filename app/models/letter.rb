@@ -4,8 +4,12 @@ class Letter < ActiveRecord::Base
   acts_as_commentable
 
   validates :user_id, presence: true
+ 
 
   attr_reader :letter_users_tokens
+
+
+
 
   def letter_users_tokens=(tokens)
 
@@ -19,7 +23,7 @@ class Letter < ActiveRecord::Base
     end
 
   end
-
+  
 
   def recipient_names
     letter_users.map { |lu| lu.user.full_name  }
@@ -32,6 +36,5 @@ class Letter < ActiveRecord::Base
   def recipients
     letter_users.map(&:user)
   end
-
 
 end

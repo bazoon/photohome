@@ -1,5 +1,5 @@
 class LettersController < ApplicationController
-  before_action :set_letter, only: [:show, :edit, :update, :destroy]
+  before_action :set_letter, only: [:show, :edit, :update, :destroy,:view]
   before_action :set_user
   
   layout "user_profile_layout"
@@ -9,14 +9,15 @@ class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   def index
-    @letters = current_user.letters.order(created_at: :desc)
+    @letters = current_user.letters.order(updated_at: :desc,seen: :desc)
   end
 
   # GET /letters/1
   # GET /letters/1.json
   def show
-    @letter.update({seen: true})
+    @letter.update({ seen: true })
   end
+
 
   # GET /letters/new
   def new

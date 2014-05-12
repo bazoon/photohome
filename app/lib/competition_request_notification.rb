@@ -17,6 +17,7 @@ class CompetitionRequestNotification
   end
 
   def self.notify(competition_request, user)
+    # raise Exception
     self.delay.send_mail(competition_request, user)
     self.delay.send_letter(competition_request, user)
   end

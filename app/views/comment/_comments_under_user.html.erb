@@ -1,4 +1,4 @@
-<h4><%= t("comments") %></h4>
+<h4> <%=  t("comments") if resource.comments.count > 0 %> </h4>
 
 <% resource.comments.each do |c| %>
 

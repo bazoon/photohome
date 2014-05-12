@@ -55,7 +55,7 @@ Photohome::Application.routes.draw do
     	resources :users do
     		resources :photos, concerns: :commentable 
         resources :messages, concerns: :commentable 
-        resources :letters, concerns: :commentable
+        resources :letters, concerns: :commentable 
         resources :incoming_letters, only: [:index, :show]
       end
 
