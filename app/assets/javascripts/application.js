@@ -65,6 +65,7 @@ $('.fotorama').on(
          // step:true,
          length : 10, // nb of stars
          phpPath: "/jury_rating",
+         bigStarsPath: 'assets/stars.png',
          nbRates: 10,
          type: "big",
          rateMax: 10,
@@ -87,6 +88,7 @@ $('.fotorama').on(
          // step:true,
          length : 3, // nb of stars
          phpPath: "/admin/final_rating",
+         bigStarsPath: 'assets/stars.png',
          nbRates: 3,
          type: "big",
          rateMax: 3,
