@@ -1,13 +1,14 @@
-<%= form_tag jury_view_photos_path  do |f| %>
-
- <div class="form-group">
-    <%= select_tag(:competition_id,options_from_collection_for_select(@competitions,:id,:title)) %>
- </div>
+<h3><%= t("jury_choose_competition") %></h3>
 
 
-<%= submit_tag %>
+<%= simple_form_for :jury, :url => jury_view_photos_path do |f| %>
+   
+    <div class="form-group">
+    	<%= f.input :competition_id, selected: 1, label: t("competition_"), collection: @competitions, label_method: :title, value_method: :id, :input_html => {class: "form-control"}  %>
+    </div>
+
+  <%= f.button :submit, value: t("choose_competition"), class: "btn btn-default" %>
+
+
 
 <% end %>
-
-
-<%= options_from_collection_for_select(@competitions,:id,:title)%>

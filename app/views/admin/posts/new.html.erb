@@ -1,4 +1,4 @@
-<h1><%= t(".title") %></h1>
+<h1><%= t("admin.#{@admin_post.class.to_s.pluralize.downcase}.new.title") %></h1>
 
 <%= render 'form' %>
 

@@ -94,6 +94,8 @@ ru:
   promoted: "На главной ?" 
   status_changed: "Изменение статуса заявки"
   choose_photo: "Выберите фотографии"
+  choose_competition: "Сделать выбор"
+  jury_choose_competition: "Текущие конкурсы"
   
   # Для ответов на запросы на конкурсы
   responses:
@@ -114,6 +116,7 @@ ru:
       caption: "Фотографии"
     new:
       age_policy: "Возрастное ограничение"
+      new: "Новая фотография"
     edit:
       title: "Редактировать"
   topics:
@@ -135,6 +138,8 @@ ru:
       content: "Содержание" 
       reason: "Причина обращения"
       status: "Статус"
+    new:
+      title: "Новое сообщение"   
   competitions:
       new:
         new: "Новый конкурс"
@@ -228,6 +233,13 @@ ru:
         max_photo_count: "Макс. кол-во фотографий"
       edit:
         edit: "Редактировать номинацию"  
+    novelties:
+      new:
+        title: "Написать новость"
+    articles:
+      new:
+        title: "Новая статья"
+
     albums:
       index:
         title: "Альбомы"

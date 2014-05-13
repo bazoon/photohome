@@ -23,7 +23,7 @@
   <tbody>
     <% @jurys.each do |j| %>
       <tr>
-        <td><%= j.user.name %></td>
+        <td><%= j.user.full_name %></td>
         <td><%= link_to del_icon, admin_competition_jury_path(@competition,j), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>  
