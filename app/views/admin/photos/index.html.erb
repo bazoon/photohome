@@ -9,7 +9,7 @@
   
   <% @photos.each_with_index do |photo,index| %>
   
-    <div class="col-sm-3" id = "<%= "t#{photo.id}" %>" >
+    <div class="col-sm-4" id = "<%= "t#{photo.id}" %>" >
     <div class="caption">
          <%= link_to photo.published ? eye_open_icon("photo#{photo.id}") : eye_close_icon("photo#{photo.id}") ,publish_admin_photo_path(photo),remote: true %>
           <span>
