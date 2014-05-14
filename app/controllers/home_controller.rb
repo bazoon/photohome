@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
     # p = Photo.all
     # render json: p.select([:id])
-    render text: ENV['HOST']
+    # render text: ENV['HOST']
 
   end
 

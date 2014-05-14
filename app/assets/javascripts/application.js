@@ -35,6 +35,27 @@ $(document).ready(function() {
 
 
 
+$('.jury_rate').on('click',function() {
+    var data = $(this).attr("data");
+    var rate = this.value;
+    $.post( "/jury_rating", { rate: rate, data: data  }, function(data) {
+
+        // alert(data);
+
+    } );
+});
+
+$('.final_estimate').on('click',function() {
+    var data = $(this).attr("data");
+    var rate = this.value;
+    $.post( "/admin/final_rating", { rate: rate, data: data  }, function(data) {
+
+        // alert(data);
+
+    } );
+});
+
+
 $('.fotorama').fotorama({
   maxwidth: '100%',
   ratio: 16/9,

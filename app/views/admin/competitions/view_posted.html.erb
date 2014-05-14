@@ -21,8 +21,8 @@
         
 
         <td>
-        <%= content_tag(:div,"",class: "final_estimate","data-id" => "#{competition_photo.id}",
-                        "data-average" => competition_photo.place) %>       
+
+          <%= final_estimate(competition_photo.place, competition_photo.id, "final_estimate")  %>    
         </td>
         
         <td><%= competition_photo.average_rating %></td>

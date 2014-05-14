@@ -20,7 +20,10 @@ class Admin::CompetitionsController < Admin::BaseController
   end
 
   def final_rating
-    competition_photo = CompetitionPhoto.find(params["idBox"])
+    # binding.pry
+
+    competition_photo = CompetitionPhoto.find(params["data"])
+
     competition_photo.place = params["rate"].to_i
     competition_photo.save!
 

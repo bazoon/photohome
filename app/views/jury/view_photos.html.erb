@@ -30,8 +30,8 @@
       </td>
 
       <td>
-       <%= content_tag(:div,"",class: "jury_estimate","data-id" => "#{@user.id}:#{competition_photo.id}",
-       "data-average" => competition_photo.jury_rating(@user.id)) %>      
+        <%= jury_rate(@user.id,competition_photo.id, competition_photo.jury_rating(@user.id),"jury_rate") %>
+        
       </td>
 
     </tr>

@@ -8,11 +8,14 @@ class JuryController < ApplicationController
 
 
   def rating
+
     
-    id = params["idBox"]
+    
+    id = params["data"]
     user_id,competition_photo_id = id.split(":")
     rate = params["rate"]
 
+    # binding.pry
 
     jury_rating = JuryRating.find_or_create_by(user_id: user_id, competition_photo_id: competition_photo_id)
     
