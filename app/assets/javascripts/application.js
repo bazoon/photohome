@@ -55,15 +55,6 @@ $('.final_estimate').on('click',function() {
     } );
 });
 
-$('.final_estimate').on('change',function() {
-    var data = $(this).attr("data");
-    var rate = this.value;
-    $.post( "/admin/final_rating", { rate: rate, data: data  }, function(data) {
-
-        // alert(data);
-
-    } );
-});
 
 $('.fotorama').fotorama({
   maxwidth: '100%',
