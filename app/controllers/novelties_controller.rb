@@ -17,7 +17,7 @@ class NoveltiesController < ApplicationController
 
 private
   def set_novelty
-      @novelty = Novelty.find(params[:id])
+      @novelty = Novelty.friendly.find(params[:id])
     end
 
 end

@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
 
   
   def show
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     #fresh_when(@article)
   end
 

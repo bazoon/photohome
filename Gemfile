@@ -80,6 +80,7 @@ gem 'foreman'
 # gem "spring", :group => :development
 gem 'coveralls', require: false
 gem 'friendly_id', '~> 5.0.0'
+gem 'babosa'
 
 # gem 'rails_12factor'
 
