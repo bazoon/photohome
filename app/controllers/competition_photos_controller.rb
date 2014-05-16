@@ -8,7 +8,7 @@ class  CompetitionPhotosController < ApplicationController
   # Показывает фотографии отправленные пользователем на конкурс. Только его фото.
   # и только определенный конкурс
   def index
-    competition = Competition.find(params[:competition_id])
+    competition = Competition.friendly.find(params[:competition_id])
     @apply_info = CompetitionPhotoApply.new(competition, current_user)
   end
 
@@ -28,7 +28,7 @@ class  CompetitionPhotosController < ApplicationController
   end
 
   def create
-    competition = Competition.find(params[:competition_id])
+    competition = Competition.friendly.find(params[:competition_id])
     nomination_id = params[:competition_photo][:nomination_id]
     photo_ids = params[:competition_photo][:photo_ids]
 

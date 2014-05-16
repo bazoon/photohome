@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516082028) do
+ActiveRecord::Schema.define(version: 20140516083824) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -152,6 +152,7 @@ ActiveRecord::Schema.define(version: 20140516082028) do
     t.integer  "status_id"
     t.integer  "type_id"
     t.date     "open_date"
+    t.string   "slug"
   end
 
   create_table "delayed_jobs", force: true do |t|

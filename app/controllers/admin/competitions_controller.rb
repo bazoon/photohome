@@ -90,7 +90,7 @@ class Admin::CompetitionsController < Admin::BaseController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_competition
-      @competition = Competition.find(params[:id])
+      @competition = Competition.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

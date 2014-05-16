@@ -3,7 +3,7 @@ class Admin::JuryController < Admin::BaseController
 
 def index
   # render text: params.inspect
-  @competition = Competition.find(params[:competition_id])
+  @competition = Competition.friendly.find(params[:competition_id])
   @jurys = Admin::Jury.where("competition_id = ?", @competition.id)
   @jury = Admin::Jury.new
   # render text: @jurys.inspect

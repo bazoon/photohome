@@ -4,7 +4,7 @@ class CompetitionRequestController < ApplicationController
 
 
   def show
-    @request = CompetitionRequest.find(params[:id])
+    @request = CompetitionRequest.friendly.find(params[:id])
   end
 
   def create
@@ -27,7 +27,7 @@ class CompetitionRequestController < ApplicationController
 private
   # Use callbacks to share common setup or constraints between actions.
   def set_competition
-    @competition = Competition.find(params[:competition_id])
+    @competition = Competition.friendly.find(params[:competition_id])
   end
 
  
