@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @user = User.find(params[:user_id])
+    @user = User.friendly.find(params[:user_id])
     @photos = @user.photos.load.paginate(:page => params[:page],per_page: 8)
     # fresh_when(@photos)
   end
@@ -26,7 +26,7 @@ class PhotosController < ApplicationController
   end
 
   def tagged_photos
-    @user = User.find(params[:user_id])
+    @user = User.friendly.find(params[:user_id])
     @name = params[:name]
     # raise Exception
     @photos = Photo.tagged_with(@name, :on => :themes, :owned_by => @user).paginate(:page => params[:page],per_page: 8)
@@ -45,7 +45,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/1/edit
   def edit
-    @user = User.find(params[:user_id])
+    @user = User.friendly.find(params[:user_id])
   end
 
   # POST /photos
@@ -108,7 +108,7 @@ class PhotosController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:user_id])
+      @user = User.friendly.find(params[:user_id])
     end
 
 

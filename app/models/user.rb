@@ -3,12 +3,18 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
+
+  extend FriendlyId
+  friendly_id :login, use: :slugged
+
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :avatar, AvatarUploader
 
   validates :name, :email, presence: true
+  
+  # after_save :set_friendly_id
 
   # validates :last_name, :adress, :zip_code, :city, :country, presence: true
   
@@ -25,6 +31,13 @@ class User < ActiveRecord::Base
   # def to_param 
   #   name
   # end
+
+  # 
+
+  def should_generate_new_friendly_id?
+    true#new_record?
+  end
+
 
   #Для доступа к current_user в моделях
   def self.current

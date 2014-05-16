@@ -9,12 +9,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
   
   def update
     authorize! :update, @user, :message => 'Not authorized as an administrator.'
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
       
     @user.role_ids = params[:user]["role_ids"]
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     
   def destroy
     authorize! :destroy, @user, :message => 'Not authorized as an administrator.'
-    user = User.find(params[:id])
+    user = User.friendly.find(params[:id])
     unless user == current_user
       user.destroy
       redirect_to users_path, :notice => "User deleted."
