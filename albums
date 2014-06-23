@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"802014c51d","applicationID":"1965552","transactionName":"cg1WEUUKDwpTRRtSVFMXVRYYDA0CU08=","queueTime":0,"applicationTime":383,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js","extra":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+    <title>Тюменский дом фотографии</title>
+    <meta name="description" content="Photohome">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href="/assets/application-7b0001ae171c72a22d7f3ea10e28e021.css" media="all" rel="stylesheet" />
+    <script src="/assets/application-f8c8560088f69f1fe958f2a48b8db504.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="MXrrC0Dpk2VovJLg8U6T8uBaJOzLtgsap6OdVffRztA=" name="csrf-token" />
+    
+  
+
+  </head>
+
+  <body class="back">
+     
+        
+    
+
+      <section class="container" style = "background: #ffffff">
+      <div class="content row" >
+      <section class="main col col-lg-12" style = "margin-bottom: 20px">
+          <div class="content row">
+  <div class="col-lg-12">
+    <header class="clearfix">
+    
+      <section id="branding">
+      
+
+        <a href="/?locale=ru"><img alt="Logo1" src="/assets/logo1-d1d475c26127a10e97c5f7295463ff0b.jpg" /></a>
+     
+
+      
+      </section><!-- branding -->
+
+      <section class="navbar navbar-inverse" >
+    
+        
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+     
+        </div>
+
+         <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown active">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Фотографии<b class="caret"></b></a>
+ 
+  <ul class="dropdown-menu">
+    
+    <li><a href="/ru/albums">Галерея</a></li>
+    <li><a href="/gallery/index?locale=ru">Последние фотографии</a></li>
+    
+    <li><a href="/ru/author">Авторы</a> </li>
+
+  </ul>
+</li>
+
+            
+
+
+
+<li class= >
+  <a href="/ru/competitions">Конкурсы</a>
+ </li>
+
+<li class= >
+  <a href="/ru/novelties/list">Новости</a>
+</li>
+
+<li class= >
+  <a href="/ru/articles/list">Статьи</a>
+</li>
+
+
+            
+                <li>
+    <a href="/ru/users/sign_in">Войти</a>
+    </li>
+  
+    <li>
+    <a href="/ru/users/sign_up">Регистрация</a>
+    </li>
+
+
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+<li class="pull-right">
+  <a href="/en/albums">RU</a>
+</li>
+
+          </ul>
+         </div>
+   
+    </section> 
+
+
+    </header><!-- header -->
+  </div><!-- column -->
+</div><!-- content -->
+          <div id="top_banners" style="padding-bottom: 10px" >
+  
+ 
+
+</div>
+
+       
+        </section>
+        <section class="main col col-lg-12" style = "margin-bottom: 20px">
+           
+          
+          <div id ="flash_box">
+</div>
+
+          <h3>Последние фотографии</h3>
+<div class="row">    
+
+     <div class="col-sm-3">
+   
+       <a href=/ru/site_photos/10 class="thumbnail" >
+  <img alt="Thumb img 0304" class="img-responsive" src="/uploads/photo/image/14/thumb_IMG_0304.JPG" style="max-height: 150px;" />
+</a>
+       <div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+
+  </span>
+</div>  
+   
+     </div>
+     <div class="col-sm-3">
+   
+       <a href=/ru/site_photos/11 class="thumbnail" >
+  <img alt="Thumb img 0385" class="img-responsive" src="/uploads/photo/image/16/thumb_IMG_0385.JPG" style="max-height: 150px;" />
+</a>
+       <div class="caption">
+ <small> <span class="label label-info" style="font-size: 10px">12 +</span> </small>
+  
+  <span style = "float: right">  
+
+  </span>
+</div>  
+   
+     </div>
+     <div class="col-sm-3">
+   
+       <a href=/ru/site_photos/12 class="thumbnail" >
+  <img alt="Thumb img 0303" class="img-responsive" src="/uploads/photo/image/13/thumb_IMG_0303.JPG" style="max-height: 150px;" />
+</a>
+       <div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+
+  </span>
+</div>  
+   
+     </div>
+     <div class="col-sm-3">
+   
+       <a href=/ru/site_photos/13 class="thumbnail" >
+  <img alt="Thumb 02 " class="img-responsive" src="/uploads/site_photo/image/13/thumb_02_.jpg" style="max-height: 150px;" />
+</a>
+       <div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+
+  </span>
+</div>  
+   
+     </div>
+</div>
+
+
+<h3><a href="/ru/albums/1">Клубная фотовыставка 2014</a></h3>
+
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/1 class="thumbnail" >
+  <img alt="Thumb 1226520086 tiket 6ff" class="img-responsive" src="/uploads/photo/image/2/thumb_1226520086_tiket-6ff.jpg" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-success" style="font-size: 10px">6 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/13 class="thumbnail" >
+  <img alt="Thumb 02 " class="img-responsive" src="/uploads/site_photo/image/13/thumb_02_.jpg" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+
+
+<div class="clearfix"></div>
+
+
+
+
+<h3><a href="/ru/albums/2">Test</a></h3>
+
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/9 class="thumbnail" >
+  <img alt="Thumb img 0356" class="img-responsive" src="/uploads/photo/image/15/thumb_IMG_0356.JPG" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-success" style="font-size: 10px">6 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/10 class="thumbnail" >
+  <img alt="Thumb img 0304" class="img-responsive" src="/uploads/photo/image/14/thumb_IMG_0304.JPG" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/11 class="thumbnail" >
+  <img alt="Thumb img 0385" class="img-responsive" src="/uploads/photo/image/16/thumb_IMG_0385.JPG" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-info" style="font-size: 10px">12 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+  
+  	  <div class="col-sm-3" >
+  
+    	<div class="thumbnail">  
+     
+      	<a href=/ru/site_photo/show_with_others/12 class="thumbnail" >
+  <img alt="Thumb img 0303" class="img-responsive" src="/uploads/photo/image/13/thumb_IMG_0303.JPG" style="max-height: 150px;" />
+</a>
+      	
+      	<div class="caption">
+ <small> <span class="label label-default" style="font-size: 10px">0 +</span> </small>
+  
+  <span style = "float: right">  
+      
+
+  </span>
+</div>  
+
+     
+    	</div>
+    
+    
+    
+  	</div>
+
+
+
+<div class="clearfix"></div>
+
+
+
+
+        </section><!-- main -->
+       
+      </div><!-- content -->
+    
+  
+ 
+
+      <hr>
+<footer class="row">
+    <nav class="col col-lg-12">
+      <div id="top_banners" style="padding-bottom: 10px" >
+ 
+ 
+
+</div>
+  
+      <ul class="breadcrumb">
+        <li><a href="">All rights reserved</a></li>
+        
+      </ul><!-- breadcrumb -->
+    </nav><!-- nav -->
+  </footer><!-- footer --> 
+  
+
+</section><!-- container -->
+
+  
+    
+  
+  
+  </body>
+</html>

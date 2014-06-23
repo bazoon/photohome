@@ -79,7 +79,9 @@ class Admin::PostsController < Admin::BaseController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_post
-      @admin_post = post_type.find(params[:id])
+      # binding.pry
+      @admin_post = post_type.friendly.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
