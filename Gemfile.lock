@@ -41,6 +41,9 @@ GEM
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
+    bullet (4.11.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (>= 1.6.0)
     cancan (1.6.10)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -129,6 +132,9 @@ GEM
       sprockets (>= 2)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
+    goldiloader (0.0.4)
+      activerecord (>= 3.2, <= 4.1)
+      activesupport (>= 3.2, <= 4.1)
     gretel (3.0.5)
       rails (>= 3.2.0)
     guard (2.3.0)
@@ -307,6 +313,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uniform_notifier (1.6.2)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -329,6 +336,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.1.1)
+  bullet
   cancan
   capybara
   carrierwave
@@ -349,6 +357,7 @@ DEPENDENCIES
   foreman
   fotoramajs
   friendly_id (~> 5.0.0)
+  goldiloader
   gretel
   guard-bundler
   guard-rails
