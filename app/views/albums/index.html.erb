@@ -1,29 +1,32 @@
 <h3>Последние фотографии</h3>
 <div class="row">    
 
+  <% cache(cache_key_last_photos) do %>
+
     <% @last_photos.each do |photo|  %>
      <div class="col-sm-3">
-   
        <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
        <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
-   
-     </div>
+      </div>
     <% end %>      
+
+  <% end %>
 </div>
 
 <% @albums.each do |album| %>
 
 <h3><%= link_to album.title, album_path(album) %></h3>
 
+  <% cache(cache_key_album_last_photos) do %>
+
 	<% album.last_photos.each_with_index do |photo,index| %>
   
-  	  <div class="col-sm-3" >
+   	  <div class="col-sm-3" >
   
     	<div class="thumbnail">  
      
       	<%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_with_others_path(photo) } %>
-      	
-      	<%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
+       	<%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
       	<%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
 
      
@@ -33,6 +36,7 @@
 
   <% end %>
 
+  <% end %>
 
 <div class="clearfix"></div>
 
