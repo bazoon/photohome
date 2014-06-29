@@ -72,7 +72,7 @@ ru:
   competition_: "Конкурс"
   status: "Статус"
   avatar_picture: "Картинка аватара"
-
+  more_articles: "Еще статьи ..."
   change_password: "Личные данные"
   we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"
   leave_it_blank: "Оставте это поле пустым, если не хотите менять пароль."

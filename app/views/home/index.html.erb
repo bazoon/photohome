@@ -46,15 +46,18 @@
      
     <div style="clear:both;padding-top: 20px"></div>
 
-      <div class="muted">Еще статьи...</div>
+      <div class="muted"><%= t("more_articles") %></div>
       <div class="row">
        
       <% @setting_decorator.other_articles.each_with_index  do |article,index| %>
-      
-        
+              
         <div class="col-xs-6 col-md-3">
           <div class="thumbnail">
-            <img src ="<%= article.first_image_src %>"  alt="..." style = "max-height: 150px" >
+
+                
+            <img src ="<%= article_image(article) %>"  alt="..." style = "max-height: 150px" >
+
+
           </div>
           <div class="caption">
             <%= age_badge(article.age_policy_age) %>
