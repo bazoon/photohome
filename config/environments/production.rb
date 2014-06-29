@@ -78,7 +78,8 @@ Photohome::Application.configure do
   
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => ENV['HOST'] }
+  config.action_mailer.default_url_options =   { :host => "domfoto72.ru" }
+  # config.action_mailer.default_url_options =   { :host => ENV['HOST'] } !!!
 
   
   

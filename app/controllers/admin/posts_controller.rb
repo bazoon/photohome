@@ -1,7 +1,11 @@
 class Admin::PostsController < Admin::BaseController
   before_action :set_admin_post, only: [:show, :edit, :update, :destroy, :promote]
 
+  before_filter :verify_permission
+
   load_and_authorize_resource except: [:create], :find_by => :slug # for friendly_id
+  
+  
 
   # GET /admin/articles
   # GET /admin/articles.json

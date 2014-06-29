@@ -71,6 +71,7 @@ ru:
   last_photos: "Последние фотографии"  
   competition_: "Конкурс"
   status: "Статус"
+  avatar_picture: "Картинка аватара"
 
   change_password: "Личные данные"
   we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"

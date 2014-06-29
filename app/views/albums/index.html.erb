@@ -1,18 +1,3 @@
-<h3>Последние фотографии</h3>
-<div class="row">    
-
-  <% cache(cache_key_last_photos) do %>
-
-    <% @last_photos.each do |photo|  %>
-     <div class="col-sm-3">
-       <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
-       <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
-      </div>
-    <% end %>      
-
-  <% end %>
-</div>
-
 <% cache(cache_key_album_last_photos) do %>
 
 <% @albums.each do |album| %>

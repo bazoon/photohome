@@ -21,15 +21,14 @@ class Ability
 
       if user.has_role? :writer
       
-        can :create, Article
-        can :manage, Article do |article|
+        can :create, Post
+        can :read, Post
+        
+        can :manage, Post do |article|
             article.user_id == user.id    
         end
 
-        can :create, Novelty
-        can :manage, Novelty do |article|
-            article.user_id == user.id    
-        end
+
       end
 
       if user.in_jury?
