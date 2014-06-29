@@ -1,7 +1,7 @@
 class Admin::PostsController < Admin::BaseController
   before_action :set_admin_post, only: [:show, :edit, :update, :destroy, :promote]
 
-  load_and_authorize_resource except: [:create] 
+  load_and_authorize_resource except: [:create], :find_by => :slug # for friendly_id
 
   # GET /admin/articles
   # GET /admin/articles.json
@@ -23,6 +23,7 @@ class Admin::PostsController < Admin::BaseController
 
   # GET /admin/articles/1/edit
   def edit
+
   end
 
   # POST /admin/articles
@@ -48,9 +49,11 @@ class Admin::PostsController < Admin::BaseController
   # PATCH/PUT /admin/articles/1.json
   def update
     respond_to do |format|
+
       if @admin_post.update(admin_post_params)
-        format.html { redirect_to [:admin, posts_sym], notice: I18n.t(:record_updated) }
+         format.html { redirect_to [:admin, posts_sym], notice: I18n.t(:record_updated) }
         format.json { head :no_content }
+        
       else
         format.html { render action: 'edit' }
         format.json { render json: @admin_post.errors, status: :unprocessable_entity }
@@ -80,6 +83,7 @@ class Admin::PostsController < Admin::BaseController
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_post
       # binding.pry
+
       @admin_post = post_type.friendly.find(params[:id])
 
     end

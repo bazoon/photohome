@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   validates :age_policy, :title, presence: true
 
   extend FriendlyId
+
   friendly_id :title, use: :slugged
 
   def author
