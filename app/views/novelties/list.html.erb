@@ -9,21 +9,20 @@
 
     <%@novelties.each do |novelty| %>
 
-    
-     
-      
+         
     
         <div class="well">
         <h4> <%= link_to novelty.title, novelty_path(novelty) %> </h4>
 
         
-        
-        <img src = "<%= novelty.first_image_src %>"  alt="..." style = "width: 90px; float: left ; padding: 5px;" >
+       
+        <img src = "<%= post_image(novelty) %>"  alt="..." style = "width: 90px; float: left ; padding: 5px;" >
         
         <%= raw novelty.digest %> 
-        <small class="text-muted"><%= novelty.author %>, </small>
+        <small class="text-muted"><%= link_to(novelty.author, user_profile_path(novelty.user_id)) if novelty && novelty.author && current_user && current_user.is_stuff? %>, </small>
         <small class="text-muted"><%= ld novelty.created_at %> </small>
         <br>
+
         <%= age_badge(novelty.age_policy_age) %>
 
         </div>

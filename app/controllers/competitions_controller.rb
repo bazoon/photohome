@@ -6,13 +6,13 @@ class CompetitionsController < ApplicationController
   # GET /competitions.json
   def index
     @competitions = Competition.all.order(:created_at).paginate(page: params[:page])
-    fresh_when(@competitions)
+    # fresh_when(@competitions)
   end
 
   # GET /competitions/1
   # GET /competitions/1.json
   def show
-    fresh_when(@competition)
+    # fresh_when(@competition)
   end
 
   def aply
@@ -27,7 +27,7 @@ class CompetitionsController < ApplicationController
 
     @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > DateTime.now)
     @user = current_user
-    fresh_when(@competition_photos)
+    # fresh_when(@competition_photos)
   end
 
   def choose_photo
