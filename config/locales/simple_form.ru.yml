@@ -68,6 +68,7 @@ ru:
         novelty: "Главная новость"
         article: "Главная статья"
         articles: "Статьи"
+        footer: "Подвал"
       admin_banner:
         title: "Название"
         link: "Ссылка"

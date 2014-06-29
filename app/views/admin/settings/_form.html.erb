@@ -13,15 +13,16 @@
    <div class="form-group">
     <%= f.association :article,:input_html => {class: "form-control"} %>
    </div>
-  
-
-
 
     <div class="form-group">
     <%= f.input :articles, :input_html => {data: {load:  Article.ids(@admin_setting.articles).map {|a| {id: a.id,name: a.title}}   }} %>
     </div>
-                
 
+   <div class="form-group">
+    <%= f.input :footer,:input_html => {class: "form-control"} %>
+   </div>
+                
+  
 
     <%= f.button :submit, value: t('save'),input_html: {class: "btn btn-default"} %>
   
