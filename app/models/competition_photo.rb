@@ -13,10 +13,10 @@ class CompetitionPhoto < ActiveRecord::Base
   has_many :likes
 
 
-  before_destroy -> do 
-    raise Exceptions::ClosedCompetition if competition.overdue? 
-    true
-  end
+  # before_destroy -> do 
+  #   raise Exceptions::ClosedCompetition if competition.overdue? 
+  #   true
+  # end
 
 
   NORMAL = 0
