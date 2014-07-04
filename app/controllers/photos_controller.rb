@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
 
   layout "user_profile_layout", except: :view
 
-  load_and_authorize_resource except: [:create, :tagged_photos]  #bug with create
+  load_and_authorize_resource except: [:show, :create, :tagged_photos]  #bug with create
 
   before_filter :set_current_user
 
