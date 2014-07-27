@@ -17,27 +17,26 @@
 
   
   <% if @setting_decorator.novelty  %>
-  <div class="jumbotron" style="padding:0px">
-  <h3> Главная новость</h3>
-    <div style="border: 1px dotted silver; padding: 10px">
+    <div>
+     <h3> Главная новость</h3>
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
       <h2> <%= link_to  @setting_decorator.novelty.title, novelty_path(@setting_decorator.novelty) %> </h2>
       <p> <%= raw @setting_decorator.novelty.digest %>  </p>
       <small> <%= age_badge(@setting_decorator.novelty.age_policy_age)%> </small>
     </div>
-  </div>
-  <% end %>
+   <% end %>
 
 
 
 
 <div style="clear:both;"></div>
-  <h3> Рекомендуемая статья</h3>
-  <% if @setting_decorator.first_article %>
-      <div classs="well" style="padding: 10px;">
+  <br>
+   <% if @setting_decorator.first_article %>
+      <div>
+      <h3> Рекомендуемая статья</h3>
         <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
         
-        <h4><%= link_to @setting_decorator.first_article.title, article_path(@setting_decorator.first_article) %></h4>
+        <h3><%= link_to @setting_decorator.first_article.title, article_path(@setting_decorator.first_article) %></h3>
         
         <small class="text-muted"><%= @setting_decorator.first_article.author %> </small>
         <small class="text-muted"><%= ld @setting_decorator.first_article.created_at %> </small>
