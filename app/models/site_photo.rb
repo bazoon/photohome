@@ -38,7 +38,7 @@ class SitePhoto < ActiveRecord::Base
 	end
 
 	def age_policy_age
-	  age_policy.age
+	  age_policy && age_policy.age
 	end
 
 

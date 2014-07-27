@@ -53,6 +53,7 @@ class Photo < ActiveRecord::Base
 	# attr_accessible :theme_tokens
 	attr_reader :theme_tokens
 
+  
   def initialize(params=nil, user_id=nil, published=false)
     super(params)
     self.user_id = user_id
