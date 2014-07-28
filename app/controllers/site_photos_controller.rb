@@ -76,7 +76,7 @@ private
 
    # Never trust parameters from the scary internet, only allow the white list through.
   def site_photo_params
-    params.require(:site_photo).permit(:title, :photo_id, :image, :album_id,:album,:age_policy_id)
+    params.require(:site_photo).permit(:title, :photo_id, :image, :album_id,:album,:age_policy_id, :user_name)
   end
 
 end

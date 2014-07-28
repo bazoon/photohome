@@ -25,7 +25,8 @@ ru:
         digest: "Дайджест"
         content: "Содержание"
         title: "Название"
-        age_policy: "Возрастное ограничение"
+        user_name: "Автор"
+        policy: "Возрастное ограничение"
       topic:
         new:
           name: 'Название'

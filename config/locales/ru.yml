@@ -250,11 +250,11 @@ ru:
 
     albums:
       index:
-        title: "Альбомы"
+        title: "Галереи"
         name: "Название"
-        new: "Новый альбом"
+        new: "Новая галерея"
       new:
-        new_album: "Новый альбом"
+        new_album: "Новая галерея"
     site_photos:
       index: 
         title: "Галлерея сайта"

@@ -29,8 +29,8 @@ class SitePhoto < ActiveRecord::Base
 	  photo_id.nil? ? "" : Photo.find(photo_id).user 
 	end
 
-	def user_name
-    photo.user.full_name if photo
+	def author
+  	photo.nil? ? user_name : photo.user.full_name 
   end
 
 	def age_policy

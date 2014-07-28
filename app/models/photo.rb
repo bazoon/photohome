@@ -108,6 +108,10 @@ class Photo < ActiveRecord::Base
 
   handle_asynchronously :remove_attached_image, :run_at => Proc.new { 24.hours.from_now }
 
+  def author
+    user && user.full_name
+  end
+
   def delete_in_24_hours
     self.published = false
     self.deleted = true  
