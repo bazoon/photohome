@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  fio: 'ФИО'
+  email: 'Почта'
+  registered: 'Зарегистрирован'
+  role: 'Роль'
   login: 'Псевдоним'
   save: "Сохранить"
   opened: "Открыто"

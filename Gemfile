@@ -107,3 +107,4 @@ gem "rails_best_practices"
 
 gem "bullet", :group => "development"
 gem 'goldiloader'
+gem 'awesome_print', :group => "development"

@@ -1,12 +1,13 @@
-<h3>Users</h3>
+<h3><%= t('users') %></h3>
 <div class="span8">
+<%= will_paginate @users %>
 <table class="table table-condensed">
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Registered</th>
-      <th>Role</th>
+      <th><%= t('fio') %></th>
+      <th><%= t('email') %></th>
+      <th><%= t('registered') %></th>
+      <th><%= t('role') %></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +15,7 @@
   <tbody>
   <% @users.each do |user| %>
     <tr>
-      <td><%= link_to user.name, user %></td>
+      <td><%= link_to user.full_name, user %></td>
       <td><%= user.email %></td>
       <td><%= l(user.created_at.to_date) %></td>
       <td><%= user.roles.map(&:name) unless user.roles.first.nil? %></td>
