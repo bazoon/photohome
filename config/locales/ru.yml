@@ -21,11 +21,13 @@
 
 ru:
   fio: 'ФИО'
+  edit: 'Редактировать'
   email: 'Почта'
   registered: 'Зарегистрирован'
   confirmed: 'Активирован'
   confirmation: 'Активация'
   unconfirmed: 'Активировать'
+  authors: 'Авторы'
   role: 'Роль'
   login: 'Псевдоним'
   save: "Сохранить"

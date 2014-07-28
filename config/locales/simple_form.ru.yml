@@ -60,6 +60,7 @@ ru:
         nomination_id: "Номинация" 
       admin_album:
         title: "Название" 
+        authors: "Авторы"
       letter:
         title: "Заголовок"
         content: Содержание

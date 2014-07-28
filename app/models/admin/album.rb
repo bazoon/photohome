@@ -3,9 +3,16 @@ class Admin::Album < ActiveRecord::Base
 
   SHOW_COUNT = 4
 
-
 	def last_photos
 		site_photos.last(SHOW_COUNT)
+	end
+
+  #!!!optimize this via sql ?
+	def authors
+		site_photos.map(&:author).compact.uniq
+		# SitePhoto.find(site_photos.ids) #.pluck(:author)
+		# SitePhoto.find_by_sql("select author from site_photos where id in (#{site_photos.ids.split(",")} )")
+		# SitePhoto.where(id: site_photos.ids).pluck(:user_name)
 	end
 
 end

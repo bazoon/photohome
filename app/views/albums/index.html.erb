@@ -1,20 +1,17 @@
 <% cache(cache_key_album_last_photos) do %>
 
 <% @albums.each do |album| %>
-
+<p>
 <h3><%= link_to album.title, album_path(album) %></h3>
-
+<small><%= t('authors') %> : <%= album.authors %></small>
+</p>
 	<% album.last_photos.each_with_index do |photo,index| %>
-  
+			  
    	  <div class="col-sm-3" >
-  
     	<div class="thumbnail">  
-     
       	<%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_with_others_path(photo) } %>
        	<%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
       	<%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
-
-     
     	</div>
     
   	</div>
