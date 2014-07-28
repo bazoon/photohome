@@ -61,6 +61,7 @@ ru:
       admin_album:
         title: "Название" 
         authors: "Авторы"
+        description: "Описание"
       letter:
         title: "Заголовок"
         content: Содержание

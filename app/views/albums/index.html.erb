@@ -3,6 +3,10 @@
 <% @albums.each do |album| %>
 <p>
 <h3><%= link_to album.title, album_path(album) %></h3>
+
+<div class="well">
+  <%= album.description %>
+</div>
 <small><%= t('authors') %> : <%= album.authors %></small>
 </p>
 	<% album.last_photos.each_with_index do |photo,index| %>
