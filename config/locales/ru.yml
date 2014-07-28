@@ -23,6 +23,9 @@ ru:
   fio: 'ФИО'
   email: 'Почта'
   registered: 'Зарегистрирован'
+  confirmed: 'Активирован'
+  confirmation: 'Активация'
+  unconfirmed: 'Активировать'
   role: 'Роль'
   login: 'Псевдоним'
   save: "Сохранить"

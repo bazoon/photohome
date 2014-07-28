@@ -8,6 +8,19 @@ class UsersController < ApplicationController
     @users = User.includes(:roles).paginate(:page => params[:page], per_page: 25)
   end
 
+  def confirm
+    authorize! :confirm, @user, :message => 'Not authorized as an administrator.'
+    @user = User.friendly.find(params[:id])
+
+    @user.skip_confirmation!
+    if @user.save
+      @text = I18n.t('confirmed')
+    else 
+      @text = 'Error saving...'
+    end
+
+  end
+
   def show
     @user = User.friendly.find(params[:id])
   end

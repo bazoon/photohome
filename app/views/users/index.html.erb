@@ -7,6 +7,7 @@
       <th><%= t('fio') %></th>
       <th><%= t('email') %></th>
       <th><%= t('registered') %></th>
+      <th><%= t('confirmation') %></th>
       <th><%= t('role') %></th>
       <th></th>
       <th></th>
@@ -18,6 +19,13 @@
       <td><%= link_to user.full_name, user %></td>
       <td><%= user.email %></td>
       <td><%= l(user.created_at.to_date) %></td>
+      
+      <td>
+      <span id="confirm<%= user.id %>">
+      <%= user.confirmed_at.nil? ? link_to(t('unconfirmed'), confirm_user_path(user), method: :post,remote: true, data: { confirm: 'Are you sure?' }) : t('confirmed') %>
+      </span>
+      </td>
+
       <td><%= user.roles.map(&:name) unless user.roles.first.nil? %></td>
       <td>
         <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>

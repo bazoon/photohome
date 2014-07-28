@@ -85,10 +85,12 @@ class User < ActiveRecord::Base
   end
 
   def profile_empty?
-      
-     
-     last_name.blank? || adress.blank? || zip_code.blank? || city.blank? || country.blank?
+    last_name.blank? || adress.blank? || zip_code.blank? || city.blank? || country.blank?
+  end
 
+  def confirm!
+    skip_confirmation!
+    save!
   end
 
 end
