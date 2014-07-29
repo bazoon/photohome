@@ -1,6 +1,9 @@
-<% unless description.nil? || description.blank? %> 
 <div class="well">
-	<%= raw description %>
-</div>
+<% unless album.description.nil? || album.description.blank? %> 
+	<%= raw album.description %>
 <% end %>
+
+<small><%= t('authors') %> : <%= album.authors %></small>
+
+</div>
  

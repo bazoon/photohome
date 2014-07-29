@@ -1,3 +1,15 @@
+  <p>
+   <h3>Тюменский дом фотографии
+   представляет вашему вниманию виртуальную выставку
+   <br>
+   <%= link_to elki(@setting_decorator.album.title), album_path(@setting_decorator.album) %>
+   </h3>
+   <small><%= t('authors') %> : <%= @setting_decorator.album.authors %></small>
+  </p>
+
+
+
+
 
 <% if @setting_decorator.photos  %>
   <div class="fotorama" data-autoplay="true" data-fit="cover" data-width="100%"

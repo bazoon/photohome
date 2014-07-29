@@ -147,5 +147,9 @@ module ApplicationHelper
                 data: competition_photo_id.to_s.html_safe,value: place.to_s.html_safe)
   end
 
+  def elki(text)
+    "&laquo;".html_safe+text+"&raquo;".html_safe
+  end
+
 
 end
