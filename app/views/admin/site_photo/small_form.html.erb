@@ -11,13 +11,10 @@
     <%= f.input :user_name,:input_html => {class: "form-control"} %>
     </div>
 
-   
     <div class="form-group">
-    <%= f.input :user_id,label: "... или существующий пользователь", :input_html => {data: {load: @site_photo.user ? [{name: @site_photo.user.full_name,id: @site_photo.user_id}] : ""  }} %>
+    <%= f.input :user_id,label: "... или существующий пользователь", :input_html => {data: {load: ""   }} %>
     </div>
     
-    
-
     <div class="form-group">
     <%= f.association :policy,:input_html => {class: "form-control"} %>
     </div>

@@ -1,4 +1,4 @@
-<%= simple_form_for([@album, @site_photo], url: admin_album_site_photo_index_path(@album.id), method: :post) do |f| %>
+<%= simple_form_for([@album, @site_photo]) do |f| %>
   <%= f.error_notification %>
 
     <!-- Загрузка только внешних фотографий -->
@@ -36,5 +36,3 @@
     <%= f.button :submit, value: t('save'),class: "btn btn-default" %>
   
 <% end %>
-
-<br>

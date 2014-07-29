@@ -3,4 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-      $('#site_photo_user_id').tokenInput('/ajax/users',{theme: 'facebook'})
+      $('#site_photo_user_id').tokenInput('/ajax/users',{theme: 'facebook',prePopulate: $('#site_photo_user_id').data('load')})
+

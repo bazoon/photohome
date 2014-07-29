@@ -16,7 +16,8 @@
      
       <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
       <%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
-      <%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
+      <%- l2 = link_to edit_icon, edit_admin_album_site_photo_path(@album.id,photo.id) if is_stuff? %>
+      <%= render partial: "photos/caption", locals: { photo: photo, links: [l2, l1] } %>
 
      
     </div>

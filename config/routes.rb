@@ -152,7 +152,8 @@ Photohome::Application.routes.draw do
         resources :albums do
           resources :site_photo
         end
-
+        
+       
         resources :photos, only: [:index, :show, :destroy] do
           member do 
             get 'publish',as: :publish

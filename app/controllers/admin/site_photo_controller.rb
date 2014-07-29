@@ -7,6 +7,7 @@ def index
 end
 
 def edit
+  @album = Admin::Album.find(params[:album_id])
 end
 
 def new
@@ -46,7 +47,7 @@ def update
     respond_to do |format|
 
       if @site_photo.update(site_photo_params)
-        format.html { redirect_to admin_site_photos_path, notice: 'site_photo was successfully updated' }
+        format.html { redirect_to admin_album_path(@site_photo.album), notice: 'site_photo was successfully updated' }
       else
         format.html { render action: 'new' }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
