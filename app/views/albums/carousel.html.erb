@@ -1,3 +1,8 @@
+<h1><%= @album.title %></h1>
+<br>
+
+<%= render partial: "description", locals: {description: @album.description} %>
+
 <div class="fotorama" data-shuffle="false" data-nav="thumbs" data-width="100%" >
 			
 		 <a href="<%= @site_photo.image_url(:normal) %>" data-fit="scaledown"></a>

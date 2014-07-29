@@ -84,10 +84,10 @@ Photohome::Application.routes.draw do
       # get "album/index"
       # get "album/show"
 
-    resources :albums, only: [:index, :show]          
-
-   
-    get "site_photo/show_with_others/:id", to: 'site_photos#show_with_others', as: :site_photo_with_others
+    resources :albums, only: [:index, :show]   
+    
+    get "/albums/:id/site_photo/:site_photo_id", to: 'albums#carousel', as: :album_carousel
+    
     get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo     
 
     # TODO: 0 Make site_photo without admin prefix

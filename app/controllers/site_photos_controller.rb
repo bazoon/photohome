@@ -1,6 +1,6 @@
 class SitePhotosController < ApplicationController
-  skip_before_filter :authenticate_user!, only: [:show, :show_with_others]
-	before_action :set_site_photo, only: [:show, :show_with_others, :edit, :update, :destroy]
+  skip_before_filter :authenticate_user!, only: [:show]
+	before_action :set_site_photo, only: [:show, :edit, :update, :destroy]
 	
 
 def edit
@@ -22,11 +22,7 @@ def show
   
 end
 
-def show_with_others
-  @others = @site_photo.album.site_photos
-  
-  
-end
+
 
 def create
   # render :text => site_photo_params

@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-	before_action :set_album, only: [:show]
+	before_action :set_album, only: [:show,:carousel]
   skip_before_filter :authenticate_user!
 
   def index
@@ -9,6 +9,11 @@ class AlbumsController < ApplicationController
 
   def show
     @site_photos = @album.last_photos
+  end
+
+  def carousel
+    @site_photo = SitePhoto.find(params[:site_photo_id])
+    @others = @album.site_photos
   end
 
 
