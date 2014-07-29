@@ -26,10 +26,9 @@ def show
 end
 
 def create
-  # render :text => site_photo_params
   @site_photo = SitePhoto.new(site_photo_params)
 
-  # raise Exception  
+  # # raise Exception  
 
   respond_to do |format|
     if @site_photo.save
@@ -81,7 +80,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def site_photo_params
-    params.require(:site_photo).permit(:title, :photo_id, :image,:image_cache, :album_id,:album,:age_policy_id, :user_name)
+    params.require(:site_photo).permit(:title, :photo_id, :image,:image_cache, :album_id,:album,:age_policy_id, :user_name, :user_id)
   end
 
 end

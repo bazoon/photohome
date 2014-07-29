@@ -17,11 +17,9 @@ def choose
 end  
 
 
-
 def show
   
 end
-
 
 
 def create

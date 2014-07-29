@@ -179,8 +179,5 @@ class Photo < ActiveRecord::Base
     user.full_name if user
   end
 
-  def has_owner?
-    user != nil
-  end
-
+ 
 end

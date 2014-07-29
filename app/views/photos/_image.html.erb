@@ -14,7 +14,7 @@
 
 <p>
 	<strong>Автор: </strong>
-	<% if photo.has_owner? %>
+	<% if photo.user %>
   	<%= link_to(photo.author, user_profile_path(photo.user))  %>
 	<% else %>
 		<%= photo.author %>

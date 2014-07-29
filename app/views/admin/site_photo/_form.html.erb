@@ -12,6 +12,11 @@
     </div>
 
     <div class="form-group">
+    <%= f.input :user_id,label: "Существующий пользователь", :input_html => {data: {load: ""   }} %>
+    </div>
+    
+
+    <div class="form-group">
     <%= f.association :policy,:input_html => {class: "form-control"} %>
     </div>
     
