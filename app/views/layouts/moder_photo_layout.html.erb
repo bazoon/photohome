@@ -25,19 +25,21 @@
       
       <div class="content row" >
         
-        <section class="main col col-lg-12" style = "margin-bottom: 20px">
+        <section class="main col col-md-12" style = "margin-bottom: 20px">
           <%= render 'layouts/header' %>
           <%= render 'banners/top' %>       
         </section>   
          
-         <div class="col-md-2" style="border: dotted 1px silver"><%= render 'layouts/moder_photo_sidebar' %></div>    
+         <div class="col-md-3" style="border: dotted 1px silver"><%= render 'layouts/moder_photo_sidebar' %></div>    
          
-         <section class="main col col-lg-10">
+         <section class="col-md-9">
           <%= breadcrumbs :separator => " &rsaquo; " %>
           <%= render 'layouts/messages' %>
           <%= yield %>
         </section><!-- main -->
-       
+   
+      
+
       </div><!-- content -->
     
   
@@ -45,7 +47,7 @@
 
   
   
-      <%= render partial: 'layouts/copyright' %>   
+     <%= render partial: 'layouts/copyright' %>
  
 
 

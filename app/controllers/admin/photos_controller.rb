@@ -19,6 +19,10 @@ class Admin::PhotosController < Admin::BaseController
     @photo.see unless @photo.seen
   end
 
+  def edit
+      @photo = Photo.find(params[:id])
+  end
+
   def publish
     @id = params[:id]
     @published = Photo.find(@id).publish
@@ -51,8 +55,25 @@ class Admin::PhotosController < Admin::BaseController
     
   end
 
+  def update
+     @photo = Photo.find(params[:id])
+    respond_to do |format|
+      if @photo.update(photo_params)
+        format.html { redirect_to admin_photos_path, notice: 'Photo was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @photo.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+private
 
 
+   def photo_params
+      params.require(:photo).permit(:title, :user_id, :image,:image_cache,:theme_tokens,:topic_id,:destination_id,:age_policy_id)
+    end
 
 
 end

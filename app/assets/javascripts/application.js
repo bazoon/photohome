@@ -21,7 +21,8 @@
 
 // Or peek any of them yourself
 //= require bootstrap
-
+//= require bootstrap-editable
+//= require bootstrap-editable-rails
 
 //= require turbolinks
 //= require redactor-rails

@@ -124,8 +124,15 @@ module ApplicationHelper
 
   def age_badge(age)
     labels = {0 => "default", 6 => "success", 12 => "info", 16 => "warning", 18 => "danger" }
-
     content_tag(:span, age.to_s + " +", class: "label label-#{labels[age]}", style: "font-size: 10px" )
+  end
+
+  def age_badge_faded(age)
+    content_tag(:span, age.to_s + " +", class: "label label-default", style: "font-size: 10px" )
+  end
+
+  def age_badge_selected(age)
+    content_tag(:span, age.to_s + " +", class: "label label-success", style: "font-size: 10px" )
   end
 
   def users_icon
@@ -149,6 +156,10 @@ module ApplicationHelper
 
   def elki(text)
     "&laquo;".html_safe+text+"&raquo;".html_safe
+  end
+
+  def edit_link_to(title, s)
+    
   end
 
 

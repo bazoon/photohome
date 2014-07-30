@@ -1,4 +1,4 @@
-class AjaxController < ApplicationController
+class Admin::AjaxController < ApplicationController
 
 
 

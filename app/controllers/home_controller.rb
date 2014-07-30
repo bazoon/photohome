@@ -5,19 +5,17 @@ class HomeController < ApplicationController
 
     setting = Admin::Setting.includes(:photos).first
     @setting_decorator = Admin::SettingDecorator.new(setting) 
-    @last_photos = Photo.last(4)
-    
+
+    # @last_photos = Photo.where(published: true).last(4)
+    @last_photos = Photo.last_published(4)
     # fresh_when(setting)
 
   end
 
 
   def test
-    # UserMailer.welcome_email(current_user)   
+    @photos = Photo.all
 
-    # p = Photo.all
-    # render json: p.select([:id])
-    # render text: ENV['HOST']
 
   end
 

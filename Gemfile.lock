@@ -38,6 +38,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-editable-rails (0.0.7)
+      railties (>= 3.1)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
@@ -336,6 +338,7 @@ DEPENDENCIES
   babosa
   better_errors
   binding_of_caller
+  bootstrap-editable-rails
   bootstrap-sass (~> 3.1.1)
   bullet
   cancan

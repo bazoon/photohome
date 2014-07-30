@@ -10,7 +10,7 @@ class GalleryController < ApplicationController
     #    (select photo_id from competition_photos,competitions where competition_photos.competition_id=competitions.id and 
     #     competitions.open_date > CURRENT_DATE) and (published=true)")
 
-    @last_photos = Photo.non_competition_photo_ordered.paginate(:page => params[:page],per_page: 12)
+    @last_photos = Photo.published_non_competition_photos.paginate(:page => params[:page],per_page: 12)
 
   end
 

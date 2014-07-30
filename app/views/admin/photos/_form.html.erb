@@ -1,14 +1,10 @@
-<%= simple_form_for([current_user, @photo]) do |f| %>
+<%= simple_form_for([:admin, @photo]) do |f| %>
   <%= f.error_notification %>
 
     <div class="form-group">
     <%= f.input :title,:input_html => {class: "form-control"} %>
     </div>
-    <%= f.hidden_field :image_cache %>
-    <div class="form-group">
-    <%= f.file_field :image,:input_html => {class: "form-control"} %>
-    </div>
-
+    
     <div class="form-group">
     <%= f.association :topic,:input_html => {class: "form-control"} %>
     </div>
@@ -21,10 +17,7 @@
     <%= f.association :age_policy, collection: Admin::AgePolicy.order('age'),:input_html => {class: "form-control"}%>
     </div>
 
-    <div class="form-group">
-    <%= f.input :theme_tokens, :input_html => {data: {load: @photo.themes.map {|t| {id: t.name,name: t.name}}   }} %>
-    </div>
-
+    
   
   
     <%= f.button :submit,value: t(:save), class: "btn btn-default" %>

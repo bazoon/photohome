@@ -1,34 +1,29 @@
-<h1><%= t("last_photos") %></h1>
-
-<br>
-
 <div class="row">  
+   <div class="col-lg-12">
+      <h1><%= t("last_photos") %></h1>
+    </div>
+ </div>
 
-
-
-  
+ 
   <% @photos.each_with_index do |photo,index| %>
   
     <div class="col-sm-4" id = "<%= "t#{photo.id}" %>" >
-    <div class="caption">
-         <%= link_to photo.published ? eye_open_icon("photo#{photo.id}") : eye_close_icon("photo#{photo.id}") ,publish_admin_photo_path(photo),remote: true %>
-          <span>
-         <%= link_to del_icon, admin_photo_path(photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } %>
-         </span> 
-         <%= exclaim_icon unless photo.seen %>
+      
+      <% l1 = link_to photo.published ? eye_open_icon("photo#{photo.id}") : eye_close_icon("photo#{photo.id}") ,publish_admin_photo_path(photo),remote: true %>
+      <% l2 = link_to edit_icon, edit_admin_photo_path(photo) %>
+      <% l3 = link_to del_icon, admin_photo_path(photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } %>
+      <% l4 = exclaim_icon unless photo.seen %>
+
+      <%= render partial: "photos/caption", locals: { photo: photo, links: [l1,l2,l3,l4] } %>
+      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo) } %>
+
+      
+      
 
     </div>
-    <div class="thumbnail" style = "width: 250px;height:270px;">
-      <a href=<%= admin_photo_path(photo) %> class="thumbnail" >
-          <%= image_tag photo.image_url(:thumb),data: {src: photo.image_url(:thumb)} %>
-        </a>
-      
-    </div>
-   
-  </div>
+
+
+
 
   <% end %>
   
-</div>
-
-

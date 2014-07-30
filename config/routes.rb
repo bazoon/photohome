@@ -15,6 +15,9 @@ Photohome::Application.routes.draw do
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
   get "ajax/articles"
+
+  put 'ajax/test'
+
   get "gallery/index"
   get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
   post "upload/get_image"
@@ -49,7 +52,8 @@ Photohome::Application.routes.draw do
 
       #distinct path for viewing photo without comments, author ...
       resources :photos do
-          get 'view', as: :view
+        get 'view', as: :view
+        # put 'update_'
       end  
 
       get 'tagged_photos/user_id/:user_id/name/:name', to: 'photos#tagged_photos', as: :tagged_photos
@@ -96,6 +100,8 @@ Photohome::Application.routes.draw do
       # ADMIN routes
 
       namespace :admin do
+
+         put 'ajax/test'
 
         resources :messages, concerns: :commentable
         resources :banners      
@@ -154,11 +160,10 @@ Photohome::Application.routes.draw do
         end
         
        
-        resources :photos, only: [:index, :show, :destroy] do
+        resources :photos, only: [:index, :show, :destroy,:edit,:update] do
           member do 
             get 'publish',as: :publish
             get 'undelete',as: :undelete  
-
           end 
 
           collection do
