@@ -93,4 +93,9 @@ class User < ActiveRecord::Base
     save!
   end
 
+  def age
+    birth_date.nil? ? 0 : (Date.today - birth_date).to_i / 365
+  end
+
+
 end

@@ -183,5 +183,6 @@ class Photo < ActiveRecord::Base
     user.full_name if user
   end
 
+  
  
 end
