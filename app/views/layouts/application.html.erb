@@ -6,6 +6,7 @@
   
   
     <title><%= content_for?(:title) ? yield(:title) :  "Тюменский дом фотографии" %></title>
+    
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
