@@ -1,0 +1,2 @@
+module AgeRestrictionHelper
+end

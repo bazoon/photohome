@@ -2,6 +2,8 @@ Photohome::Application.routes.draw do
 
 
 
+  get "age_restriction/show"
+  get "age_restriction/agreed"
   mount RedactorRails::Engine => '/redactor_rails'
 
   root :to => "home#index"

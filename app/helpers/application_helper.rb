@@ -162,5 +162,9 @@ module ApplicationHelper
     
   end
 
+  def title(page_title)
+    content_for :title, page_title.to_s + " " + request.original_url + " " + I18n.t(:title)
+  end
+
 
 end

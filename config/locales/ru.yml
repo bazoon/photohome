@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  title: 'Тюменский дом фотографии'
   fio: 'ФИО'
   edit: 'Редактировать'
   email: 'Почта'
