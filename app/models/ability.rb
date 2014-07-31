@@ -4,6 +4,7 @@ class Ability
   def initialize(user)
     # user ||= User.new # guest user (not logged in)
     
+
     #Registered users
     if user 
 
@@ -42,6 +43,14 @@ class Ability
     can :manage, Photo, user_id: user.id
     can :create, Photo
 
+    can :view, Photo do |photo|
+      user.age >= photo.age_policy_age
+    end
+
+    can :view, SitePhoto do |site_photo|
+      user.age >= site_photo.age_policy_age
+    end
+
     can :create, :Like
     can :manage, :Like, user_id: user.id
     can :read, Article
@@ -57,6 +66,17 @@ class Ability
     else    
       #Unregistered users
       can :read, [Photo, Novelty, Article, Comment]
+      
+      can :view, Photo do |photo|
+        photo.age_policy_age <= 16 
+      end  
+      
+      can :view, SitePhoto do |site_photo|
+        site_photo.age_policy_age <= 16 
+      end  
+
+
+
     end
         
     

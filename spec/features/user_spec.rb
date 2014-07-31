@@ -21,6 +21,7 @@ describe "Actions a User can not do" do
   before do
     Warden.test_mode!    
     visit new_user_session_path
+    # save_and_open_page
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: 'changeme'
     click_button 'Sign in'
@@ -48,8 +49,8 @@ describe "Actions a User can not do" do
     page.should have_content("Admin area !")
   end
  
-  it "User can't see admin site_photos page" do
-    visit '/admin/site_photos'
+  it "User can't see admin albums page" do
+    visit '/admin/albums'
     page.should have_content("Admin area !")
   end
 

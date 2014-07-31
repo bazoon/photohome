@@ -4,11 +4,10 @@
    <h3>Тюменский дом фотографии
    представляет вашему вниманию виртуальную выставку
    <br>
-   <%= link_to elki(@setting_decorator.album.title), album_path(@setting_decorator.album) %>
+   <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) %>
    </h3>
    <small><%= t('authors') %> : <%= @setting_decorator.album.authors %></small>
   </p>
-
 
 
 
@@ -20,7 +19,7 @@
      <% @setting_decorator.photos.each do |photo| %>
 
      
-      <a href="<%= photo.image_url(:normal) %>"></a>
+      <a href="<%= photo.image_url_for_main_carousel(current_user, session[:agreed], :normal) %>"></a>
         
      <% end %> 
   </div>
@@ -98,7 +97,7 @@
  
       <% @last_photos.each do |photo|  %>
        <div class="col-sm-3">
-     
+
          <%= render partial: "photos/thumb", locals: { photo: photo, path: gallery_show_path(photo) } %>
          <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
      
@@ -107,3 +106,30 @@
   </div>
 
   <% end %>
+
+
+
+
+
+<div class="modal fade" id = "age_agreement">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Соглашение</h4>
+      </div>
+      <div class="modal-body">
+        <p>Я подтверждаю, что являются совершеннолетним.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <%= link_to 'Я согласен', age_agreement_agreed_path %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+

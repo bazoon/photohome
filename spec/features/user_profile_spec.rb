@@ -23,7 +23,7 @@ describe "Actions a User can do within profile" do
     visit new_user_session_path
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: 'changeme'
-    click_button 'Sign in'
+    click_button 'Sign in' 
   end
 
 

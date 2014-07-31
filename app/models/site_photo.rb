@@ -1,5 +1,7 @@
 class SitePhoto < ActiveRecord::Base
 
+ include PhotoAgePolicy
+
  belongs_to :album, class_name: "Admin::Album"
  belongs_to :photo
  belongs_to :policy, class_name: "Admin::AgePolicy", :foreign_key => 'age_policy_id'

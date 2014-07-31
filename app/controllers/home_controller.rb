@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  skip_before_filter :authenticate_user!, only: [:index]
+  skip_before_filter :authenticate_user!, only: [:index,:test]
 
   def index
 
@@ -15,8 +15,6 @@ class HomeController < ApplicationController
 
   def test
     @photos = Photo.all
-
-
   end
 
 

@@ -1,6 +1,8 @@
 class Photo < ActiveRecord::Base
 	# belongs_to :gallery
 
+  include PhotoAgePolicy
+
   scope :published, -> { where("published = ?", true) }
 
   belongs_to :user

@@ -91,3 +91,15 @@ production:
   port: 3306
   secure_auth: false
 
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: photohome_test
+  username: vit
+  password: t97888
+  # host: 127.0.0.1
+  pool: 25
+  port: 3306
+  secure_auth: false
+
+

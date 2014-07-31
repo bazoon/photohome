@@ -14,10 +14,11 @@ class Admin::SettingDecorator
       @album = @setting.album
 	  end    
 
-
-
   end
 
+  def album_title
+    album && album.title
+  end
   
   
 end

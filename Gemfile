@@ -46,9 +46,12 @@ gem 'simple_form', '>= 3.0.0.rc'
 
 gem 'better_errors'
 gem 'binding_of_caller'
+
 gem 'guard-bundler'
 gem 'guard-rails'
 gem 'guard-rspec'
+gem 'guard-cucumber'
+
 gem 'hub', :require=>nil
 gem 'quiet_assets'
 gem 'rb-fchange', :require=>false

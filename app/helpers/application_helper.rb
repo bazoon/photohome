@@ -155,7 +155,7 @@ module ApplicationHelper
   end
 
   def elki(text)
-    "&laquo;".html_safe+text+"&raquo;".html_safe
+    "&laquo;".html_safe+text+"&raquo;".html_safe if text 
   end
 
   def edit_link_to(title, s)

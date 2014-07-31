@@ -7,7 +7,8 @@ class Admin::Setting < ActiveRecord::Base
    belongs_to :article
 
    def self.footer
-   	Admin::Setting.first.footer
+   	setting = Admin::Setting.first
+   	setting && setting.footer
    end
    
 
