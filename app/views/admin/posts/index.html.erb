@@ -21,7 +21,7 @@
         <td><%= admin_post.age_policy_age %>+ </td>
         <td>
         <%= 
-          link_to promote_icon("p#{admin_post.id}", admin_post.promoted?), [:promote,:admin,admin_post], remote: true, method: :post %>
+          link_to promote_icon("p#{admin_post.id}", admin_post.promoted?), edit_admin_post_promotion_path(admin_post), remote: true %>
         </td>
 
         <td><%= link_to show_icon, [:admin, admin_post] %></td>

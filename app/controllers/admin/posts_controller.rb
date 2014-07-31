@@ -75,13 +75,7 @@ class Admin::PostsController < Admin::BaseController
     end
   end
 
-  def promote
-    @admin_post.promote_as_main
-    respond_to do |format|
-      format.js {  }
-    end  
-  end
-
+ 
   private
 
     # Use callbacks to share common setup or constraints between actions.

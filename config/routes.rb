@@ -26,6 +26,7 @@ Photohome::Application.routes.draw do
   post "upload/get_image"
   get "photo_ajax/theme_tokens"
   get 'test' => "home#test", as: :test
+
   get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
   post 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
   post 'jury_rating', to: 'jury#rating', :as => :jury_rating
@@ -113,19 +114,11 @@ Photohome::Application.routes.draw do
 
 
         
-        resources :novelties, controller: "posts", type: "Novelty" do
-          member do
-            post 'promote'
-          end
+        resources :novelties, controller: "posts", type: "Novelty"
+        resources :articles, controller: "posts", type: "Article" 
+        resources :post_promotion, only: :edit
 
-        end
 
-        resources :articles, controller: "posts", type: "Article" do
-          member do
-          post 'promote' 
-        end
-
-        end
         resources :topics
         resources :age_policies
 
