@@ -166,5 +166,9 @@ module ApplicationHelper
     content_for :title, page_title.to_s + " " + request.original_url + " " + I18n.t(:title)
   end
 
+  def eighteen_image
+    asset_path("eighteen_image.png")
+  end
+  
 
 end

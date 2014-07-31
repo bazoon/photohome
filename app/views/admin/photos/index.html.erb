@@ -15,7 +15,7 @@
       <% l4 = exclaim_icon unless photo.seen %>
 
       <%= render partial: "photos/caption", locals: { photo: photo, links: [l1,l2,l3,l4] } %>
-      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo) } %>
+      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo), user: current_user, agreed: session[:agreed] } %>
 
       
       

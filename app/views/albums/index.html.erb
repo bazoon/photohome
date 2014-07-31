@@ -12,8 +12,8 @@
    	  <div class="col-sm-3" >
     	<div class="thumbnail">  
       <%= render partial: "photos/thumb", locals: { photo: photo, path: album_carousel_path(album.id,photo.id) } %>
-       	<%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
-      	<%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
+      <%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
+      <%= render partial: "photos/caption", locals: { photo: photo, links: [l1] } %>
     	</div>
     
   	</div>
