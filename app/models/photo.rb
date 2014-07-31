@@ -46,6 +46,7 @@ class Photo < ActiveRecord::Base
   VALUE = -> (s){s[:value]}  
 
   belongs_to :topic
+  
   mount_uploader :image, ImageUploader
 
 	acts_as_taggable_on :themes
