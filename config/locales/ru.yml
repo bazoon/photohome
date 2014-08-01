@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  album: "Галерея"
   all: "Все"
   unseen: "Непросмотренные"
   last_24: "За последние 24 часа"

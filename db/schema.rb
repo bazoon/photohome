@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20140731142404) do
     t.string   "articles"
     t.integer  "article_id"
     t.text     "footer"
+    t.string   "adult_image"
   end
 
   create_table "comments", force: true do |t|
