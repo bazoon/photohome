@@ -1,5 +1,8 @@
 <% cache(cache_key_album_last_photos) do %>
 
+<% breadcrumb :albums %>
+
+
 <% @albums.each do |album| %>
 <p>
 <h3><%= link_to album.title, album_path(album) %></h3>

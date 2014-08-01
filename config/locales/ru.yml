@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  user_profile: "Профиль"
+  albums: "Галереи"
   title: 'Тюменский дом фотографии'
   fio: 'ФИО'
   edit: 'Редактировать'

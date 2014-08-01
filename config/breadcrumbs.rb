@@ -64,9 +64,31 @@ crumb :admin_article do |article|
   parent :admin_articles
 end
 
+crumb :last_photos do
+  link I18n.t(:last_photos), gallery_index_path
+end
 
+crumb :last_photo do |last_photo|
+  link last_photo.title, gallery_show_path(last_photo)
+  parent :last_photos
+end
 
+crumb :albums do
+  link I18n.t(:albums), albums_path
+end
 
+crumb :album do |album|
+  link album.title, album_path(album)
+  parent :albums
+end
+
+crumb :authors do
+  link I18n.t(:authors), author_index_path
+end
+
+crumb :user_profile do
+  link I18n.t(:user_profile), user_profile_path
+end
 
 # crumb :project_issues do |project|
 #   link "Issues", project_issues_path(project)

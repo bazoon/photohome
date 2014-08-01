@@ -170,5 +170,14 @@ module ApplicationHelper
     asset_path("eighteen_image.png")
   end
   
+  def title
+    path = breadcrumbs {|links| links.map(&:text).join("::") } 
+    unless path.nil? || path.blank?
+      path + " — " + I18n.t(:title)
+    else
+      I18n.t(:title)
+    end
+  end
+
 
 end
