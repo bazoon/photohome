@@ -2,8 +2,12 @@
 <%= current_user && current_user.avatar && image_tag(current_user.avatar_url(:thumb),class: "img-polaroid") %>
 
 <ul class="nav">
-      <li><%= link_to "Новые",admin_photos_path %></li>
-      <li><%= link_to "Удаленные",deleted_admin_photos_path  %></li>
-      <li><%= link_to "Ревью",review_admin_photos_path  %></li>
+			<li><%= link_to "Все",admin_photos_path(scope: :all) %></li>
+			<li><%= link_to "Не просмотренные",admin_photos_path(scope: :unseen) %></li>
+			<li><%= link_to "Последние 24 часа",admin_photos_path(scope: :last_24) %></li>
+			<li><%= link_to "Неопубликованные",admin_photos_path(scope: :unpublished) %></li>
+			<li><%= link_to "18+",admin_photos_path(scope: :adults) %></li>
+      <li><%= link_to "Удаленные", admin_photos_path(scope: :deleted)  %></li>
+      <li><%= link_to "Ревью",review_admin_photos_path(scope: :review)  %></li>
      
 </ul>

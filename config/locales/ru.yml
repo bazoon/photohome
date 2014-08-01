@@ -20,6 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  all: "Все"
+  unseen: "Непросмотренные"
+  last_24: "За последние 24 часа"
+  unpublished: "Неопубликованные"
+  for_adults: "18+"
+  for_review: "Для ревью"
+  deleted_photos: "Удаленные"
   user_profile: "Профиль"
   albums: "Галереи"
   title: 'Тюменский дом фотографии'

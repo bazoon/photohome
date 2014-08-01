@@ -3,7 +3,38 @@ class Photo < ActiveRecord::Base
 
   include PhotoAgePolicy
 
+  PORTFOLIO_ID = 0
+  REVIEW_ID = 1
+
+  DESTINATIONS = [
+
+     {label: I18n.t("portfolio"),value: PORTFOLIO_ID},
+    {label: I18n.t("review"),value: REVIEW_ID}
+    
+    ]
+
+  
+  REVIEW_LIMIT = 3
+  RIVIEW_PERIOD = 7
+
+  PORTFOLIO_LIMIT = 30
+  PORTFOLIO_PERIOD = 30
+
+  LABEL = -> (s){s[:label]}
+  VALUE = -> (s){s[:value]}
+
+
   scope :published, -> { where("published = ?", true) }
+  scope :unpublished, -> { where("published = ?", false) }
+  scope :seen, -> { where("seen = ?", true) }
+  scope :unseen, -> { where("seen = ?", false) }
+  scope :last_24, -> { where(created_at: (DateTime.now - 24)..DateTime.now) }
+  scope :adults, -> { joins(:age_policy).merge(Admin::AgePolicy.adults) }
+  scope :deleted, -> { where("deleted = ?", true) }
+  scope :not_deleted, -> { where("deleted = ?", false) }
+  scope :review, -> { where("destination_id = ?", REVIEW_ID) }
+  
+
 
   belongs_to :user
 
@@ -23,27 +54,8 @@ class Photo < ActiveRecord::Base
 
 
 
-  PORTFOLIO_ID = 0
-  REVIEW_ID = 1
 
-  DESTINATIONS = [
-
-    {label: I18n.t("portfolio"),value: PORTFOLIO_ID},
-    {label: I18n.t("review"),value: REVIEW_ID}
-    
-  ]
-
-  
-  REVIEW_LIMIT = 3
-  RIVIEW_PERIOD = 7
-
-  PORTFOLIO_LIMIT = 30
-  PORTFOLIO_PERIOD = 30
-
-
-
-  LABEL = -> (s){s[:label]}
-  VALUE = -> (s){s[:value]}  
+   
 
   belongs_to :topic
   

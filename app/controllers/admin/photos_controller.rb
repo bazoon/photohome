@@ -3,7 +3,39 @@ class Admin::PhotosController < Admin::BaseController
   layout "moder_photo_layout"
   
   def index
-    @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false)
+    # @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false)
+    scope = params[:scope]
+
+    @photos = case scope
+      when "all"
+        @title = I18n.t(:all)
+        Photo.all.not_deleted
+      when "unseen"
+        @title = I18n.t(:unseen)
+        Photo.unseen.not_deleted  
+      when "last_24"
+        @title = I18n.t(:last_24)
+        Photo.last_24.not_deleted
+      when "unpublished"
+        @title = I18n.t(:unpublished)
+        Photo.unpublished.not_deleted
+      when "adults"
+        @title = I18n.t(:for_adults)
+        Photo.adults.not_deleted
+      when "deleted"
+        @title = I18n.t(:deleted_photos)
+        Photo.deleted
+      when "review"
+        @title = I18n.t(:for_review)
+        Photo.review.not_deleted
+      else
+        @title = I18n.t(:all)
+        Photo.all.not_deleted
+    end
+    
+    @photos.order("seen asc,published asc,updated_at desc")
+
+
   end
 
   def deleted
