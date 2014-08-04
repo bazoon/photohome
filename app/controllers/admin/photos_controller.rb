@@ -31,9 +31,7 @@ class Admin::PhotosController < Admin::BaseController
       else
         @title = I18n.t(:all)
         Photo.all.not_deleted
-    end
-    
-    @photos.order("seen asc,published asc,updated_at desc")
+    end.order("seen asc, created_at desc")
 
 
   end

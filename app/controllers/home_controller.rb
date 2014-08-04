@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
   def index
 
-    setting = Admin::Setting.includes(:photos).first
+    setting = Admin::Setting.first
     @setting_decorator = Admin::SettingDecorator.new(setting) 
 
     # @last_photos = Photo.where(published: true).last(4)

@@ -11,12 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.tokeninput
-//= require jquery.ui.dialog
-
-
+//= require jquery-ui/dialog
 
 
 // Or peek any of them yourself

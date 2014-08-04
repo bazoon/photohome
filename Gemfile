@@ -64,13 +64,15 @@ gem 'rspec-rails'
 
 gem 'puma'
 gem 'russian'
+
 gem 'jquery-ui-rails'
+
 gem 'devise-russian'
 # gem 'binding_of_caller'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', :require => 'RMagick'
 # gem "mini_magick"
 gem 'acts-as-taggable-on'
 gem 'sanitize'
