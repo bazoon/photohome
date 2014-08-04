@@ -399,7 +399,7 @@ DEPENDENCIES
   rb-inotify
   redactor-rails
   rmagick
-  rolify (~> 3.3.0.rc4)
+  rolify
   rspec-rails
   russian
   sanitize

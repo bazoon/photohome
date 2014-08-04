@@ -29,3 +29,7 @@
 <% end  %>
 
 <br>
+
+<h2>
+<%= link_to t('remove_cache'), cache_operation_path, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, :Cache %>  
+</h2>

@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  remove_cache: "Удалить файлы кеша"
   album: "Галерея"
   all: "Все"
   unseen: "Непросмотренные"
@@ -217,6 +218,9 @@ ru:
       wait: "Запрос находится на рассмотрении"
       time_ago: "Отправлен"
   admin:
+    settings:
+      index:
+        title: "Настройки"
     messages:
       index:
         title: "Тема"

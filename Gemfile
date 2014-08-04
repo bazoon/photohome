@@ -41,7 +41,7 @@ gem 'figaro'
 gem 'mysql2'
 # gem 'sqlite3'
 
-gem 'rolify', '~> 3.3.0.rc4'
+gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 
 gem 'better_errors'

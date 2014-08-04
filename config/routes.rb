@@ -1,8 +1,6 @@
 Photohome::Application.routes.draw do
 
 
-
-
   get "age_agreement/agreed"
   
   mount RedactorRails::Engine => '/redactor_rails'
@@ -34,7 +32,7 @@ Photohome::Application.routes.draw do
   get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile
   get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
     
-
+  resource :cache_operation, only: [:destroy]
    
   scope "(:locale)", locale: /en|ru/ do
 

@@ -12,7 +12,7 @@ class AlbumsController < ApplicationController
   end
 
   def carousel
-    @site_photo = SitePhoto.find(params[:site_photo_id])
+    @site_photo = SitePhoto.find(params[:site_photo_id]).includes(:user)
     @others = @album.site_photos
   end
 
