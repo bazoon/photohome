@@ -4,5 +4,6 @@ then
     echo "Running"
 else
     echo "Stopped"
+    cd /var/www/photohome
     /var/www/photohome/photohome_start.sh
 fi

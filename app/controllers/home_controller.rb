@@ -14,7 +14,9 @@ class HomeController < ApplicationController
 
 
   def test
-    @photos = Photo.all
+    # @photos = Photo.all
+    # expire_fragment(AlbumHelper::cache_key_album_last_photos)
+    render text: "OK"
   end
 
 

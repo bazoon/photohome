@@ -4,7 +4,7 @@ class Admin::PhotosController < Admin::BaseController
   
   def index
     # @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false)
-    scope = params[:scope]
+    @scope = params[:scope]
 
     @photos = case scope
       when "all"
