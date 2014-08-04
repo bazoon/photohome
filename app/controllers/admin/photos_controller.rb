@@ -6,7 +6,7 @@ class Admin::PhotosController < Admin::BaseController
     # @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false)
     @scope = params[:scope]
 
-    @photos = case scope
+    @photos = case @scope
       when "all"
         @title = I18n.t(:all)
         Photo.all.not_deleted
