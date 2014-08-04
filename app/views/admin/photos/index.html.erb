@@ -11,10 +11,11 @@
       
       <% l1 = link_to photo.published ? eye_open_icon("photo#{photo.id}") : eye_close_icon("photo#{photo.id}") ,publish_admin_photo_path(photo),remote: true %>
       <% l2 = link_to edit_icon, edit_admin_photo_path(photo) %>
-      <% l3 = link_to del_icon, admin_photo_path(photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } %>
-      <% l4 = exclaim_icon unless photo.seen %>
+      <% l3 = link_to del_icon, admin_photo_path(photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } unless photo.deleted %>
+      <% l4 = link_to arrow_up_icon, undelete_admin_photo_path(photo), method: :get,remote: true, data: { confirm: 'Are you sure?' } if photo.deleted %>
+      <% l5 = exclaim_icon unless photo.seen %>
 
-      <%= render partial: "photos/caption", locals: { photo: photo, links: [l1,l2,l3,l4] } %>
+      <%= render partial: "photos/caption", locals: { photo: photo, links: [l1,l2,l3,l4,l5] } %>
       <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo), user: current_user, agreed: session[:agreed] } %>
 
       
