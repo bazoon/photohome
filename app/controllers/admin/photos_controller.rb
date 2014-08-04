@@ -1,4 +1,4 @@
-class Admin::PhotosController < Admin::BaseController
+  class Admin::PhotosController < Admin::BaseController
 
   layout "moder_photo_layout"
   
@@ -31,7 +31,7 @@ class Admin::PhotosController < Admin::BaseController
       else
         @title = I18n.t(:all)
         Photo.all.not_deleted
-    end.order("seen asc, created_at desc")
+    end.order("seen asc, created_at desc").paginate(page: params[:page], per_page: 16)
 
 
   end
@@ -46,6 +46,14 @@ class Admin::PhotosController < Admin::BaseController
 
   def show
     @photo = Photo.find(params[:id])
+    @photo_ids = params[:photo_ids]
+    
+    photos = @photo_ids.split(",").map(&:to_i)
+    
+    index = photos.index(@photo.id)
+    @prior_photo_id = photos[index - 1] if index > 0
+    @next_photo_id = photos[index + 1] if index < photos.count - 1
+
     @photo.see unless @photo.seen
   end
 

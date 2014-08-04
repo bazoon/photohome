@@ -4,6 +4,7 @@
     </div>
  </div>
 
+<%= will_paginate(@photos) %>
  
   <% @photos.each_with_index do |photo,index| %>
   
@@ -14,9 +15,9 @@
       <% l3 = link_to del_icon, admin_photo_path(photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } unless photo.deleted %>
       <% l4 = link_to arrow_up_icon, undelete_admin_photo_path(photo), method: :get,remote: true, data: { confirm: 'Are you sure?' } if photo.deleted %>
       <% l5 = exclaim_icon unless photo.seen %>
-
+      
       <%= render partial: "photos/caption", locals: { photo: photo, links: [l1,l2,l3,l4,l5] } %>
-      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo), user: current_user, agreed: session[:agreed] } %>
+      <%= render partial: "photos/thumb", locals: { photo: photo, path: admin_photo_path(photo, photo_ids: @photos.map(&:id).join(",")), user: current_user, agreed: session[:agreed] } %>
 
       
       

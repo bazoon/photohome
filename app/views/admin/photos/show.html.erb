@@ -1,6 +1,9 @@
 
-<%= link_to '<=', admin_photo_path(@photo) %>
+<%= link_to '<=', admin_photo_path(@prior_photo_id, photo_ids: @photo_ids) if @prior_photo_id %>
+<%= link_to '=>', admin_photo_path(@next_photo_id,photo_ids: @photo_ids) if @next_photo_id %>
+
 <%= render partial: "photos/image", locals: { photo: @photo } %>
+
 <%= link_to edit_icon, edit_admin_photo_path(@photo) %>
 <%= link_to del_icon, admin_photo_path(@photo), method: :delete,remote: true, data: { confirm: 'Are you sure?' } %>
 
