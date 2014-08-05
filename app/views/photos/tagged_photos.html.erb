@@ -1,4 +1,4 @@
-<h1><%=t '.caption' %></h1>
+<h1><%= @name %></h1>
 
 <%= will_paginate(@photos) %>
 
@@ -16,7 +16,7 @@
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
-        <td><%= link_to image_tag(photo.image_url(:thumb)),user_photo_path(@user,photo) %> <%= red_label(t("deleted")) if photo.deleted %></td>
+        <td><%= render partial: "photos/thumb", locals: { photo: photo, path: user_photo_path(@user, photo) } %> <%= red_label(t("deleted")) if photo.deleted %></td>
         <td>
          <%= link_to(edit_icon, edit_user_photo_path(@user,photo)) if can? :manage, photo %></td>
         <td>
