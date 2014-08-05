@@ -188,4 +188,13 @@ module ApplicationHelper
   end
 
 
+  def backward_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-step-backward")
+  end
+
+  def forward_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-step-forward")
+  end
+
+
 end
