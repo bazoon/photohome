@@ -14,4 +14,18 @@ module UserHelper
   end
 
 
+  def field_info(user, field, date = false)
+
+
+
+    tds = unless date
+      content_tag(:td, "#{I18n.t(field)}") + content_tag(:td, user.send(field))
+    else
+      content_tag(:td, "#{I18n.t(field)}") + content_tag(:td, I18n.l(user.send(field)))
+    end
+
+    content_tag(:tr, tds)	 
+  end
+
+
 end

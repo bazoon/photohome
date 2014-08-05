@@ -1,3 +1,30 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<h3><%= t('user') %></h3>
+
+<%= red_label(t('unfilled_profile')) if @user.profile_empty? %>
+
+<br>
+<table class="table table-responsive table-striped">
+<%=  field_info(@user,:name) %>
+<%=  field_info(@user,:last_name) %>
+<%=  field_info(@user,:birth_date, true) %>
+<%=  field_info(@user,:age) %>
+<%=  field_info(@user,:sign_in_count) %>
+<%=  field_info(@user,:current_sign_in_at, true) %>
+<%=  field_info(@user,:last_sign_in_at, true) %>
+<%=  field_info(@user,:current_sign_in_ip) %>
+<%=  field_info(@user,:last_sign_in_ip) %>
+<%=  field_info(@user,:created_at, true) %>
+<%=  field_info(@user,:updated_at, true) %>
+<%=  field_info(@user,:confirmed_at, true) %>
+<%=  field_info(@user,:confirmation_sent_at, true) %>
+<%=  field_info(@user,:zip) %>
+<%=  field_info(@user,:adress) %>
+<%=  field_info(@user,:zip_code) %>
+<%=  field_info(@user,:city) %>
+<%=  field_info(@user,:country) %>
+<%=  field_info(@user,:phone) %>
+<%=  field_info(@user,:about) %>
+<%=  field_info(@user,:login) %>
+<%=  field_info(@user,:slug) %>
+
+</table>
