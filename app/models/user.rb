@@ -97,5 +97,9 @@ class User < ActiveRecord::Base
     birth_date.nil? ? 0 : (Date.today - birth_date).to_i / 365
   end
 
+  def adult?
+    age > 18
+  end
+
 
 end
