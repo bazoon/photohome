@@ -2,7 +2,8 @@
 
 <%= red_label(t('unfilled_profile')) if @user.profile_empty? %>
 
-<br>
+<br><br>
+
 <table class="table table-responsive table-striped">
 <%=  field_info(@user,:name) %>
 <%=  field_info(@user,:last_name) %>
@@ -28,3 +29,6 @@
 <%=  field_info(@user,:slug) %>
 
 </table>
+
+<h3><%= t('message') %></h3>
+<%= render partial: "letters/admin_form", locals: {from_user: current_user, to_user: @user, letter: @letter } %>
