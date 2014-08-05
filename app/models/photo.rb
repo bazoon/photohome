@@ -28,7 +28,7 @@ class Photo < ActiveRecord::Base
   scope :unpublished, -> { where("published = ?", false) }
   scope :seen, -> { where("seen = ?", true) }
   scope :unseen, -> { where("seen = ?", false) }
-  scope :last_24, -> { where(created_at: (24.hours.ago..DateTime.now)) }
+  scope :last_24, -> { where(created_at: (24.hours.ago..Time.zone.now)) }
   scope :adults, -> { joins(:age_policy).merge(Admin::AgePolicy.adults) }
   scope :deleted, -> { where("deleted = ?", true) }
   scope :not_deleted, -> { where("deleted = ?", false) }

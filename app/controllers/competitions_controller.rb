@@ -25,7 +25,7 @@ class CompetitionsController < ApplicationController
     @all_jury_count = @competition.jury.count
     @competition_photos = @competition.competition_photos.where(banned: false)
 
-    @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > DateTime.now)
+    @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > Time.zone.now )
     @user = current_user
     # fresh_when(@competition_photos)
   end

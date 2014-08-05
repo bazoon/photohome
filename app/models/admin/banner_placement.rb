@@ -4,8 +4,8 @@ class Admin::BannerPlacement < ActiveRecord::Base
   TOP = 0
   BOTTOM = 1
 
-  scope :top, -> { where("start_date < ? and end_date >= ? and place_id = ?", Time.now, Time.now, TOP) } 
-  scope :bottom, -> { where("start_date < ? and end_date >= ? and place_id = ?", Time.now, Time.now, BOTTOM) } 
+  scope :top, -> { where("start_date < ? and end_date >= ? and place_id = ?", Time.zone.now, Time.zone.now, TOP) } 
+  scope :bottom, -> { where("start_date < ? and end_date >= ? and place_id = ?", Time.zone.now, Time.zone.now, BOTTOM) } 
   scope :active, -> { where(active: true) } 
   scope :random, -> { where("id in (?)", all.map(&:id).to_a.sample)  }
   

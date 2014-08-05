@@ -76,7 +76,7 @@ class Competition < ActiveRecord::Base
 
  # past last_date ?
   def overdue?
-    last_date < Time.now
+    last_date < Time.zone.now
   end
 
   def can_jury?(user)

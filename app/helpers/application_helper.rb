@@ -196,5 +196,9 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-step-forward")
   end
 
+  def now
+    Time.zone.now
+  end
+
 
 end
