@@ -21,5 +21,13 @@
 	<% end %>
 </p>
 
+<% if photo.user %>
+<strong>Теги: </strong>
+	<% @photo.themes.each do |theme| %>
+	<%= link_to theme,tagged_photos_path(user_id: photo.user.id, name: theme.name)  %>
+	<% end %>
+<% end  %>
+
+
 
 <hr/>

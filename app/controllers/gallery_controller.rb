@@ -18,6 +18,7 @@ class GalleryController < ApplicationController
   def show
     
     @photo = Photo.find(params[:photo_id])
+    @themes = @photo.themes
     #Нужно подумать об изменениях комментариев при кешировании !!!
     
     # fresh_when last_modified: @photo.created_at.utc, etag: @photo
