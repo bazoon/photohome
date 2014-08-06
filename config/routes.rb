@@ -1,11 +1,11 @@
 Photohome::Application.routes.draw do
 
 
-  get "age_agreement/agreed"
+ 
   
   mount RedactorRails::Engine => '/redactor_rails'
 
-  root :to => "home#index"
+ 
 
   concern :commentable do
     resources :comments
@@ -19,22 +19,33 @@ Photohome::Application.routes.draw do
 
   put 'ajax/test'
 
-  get "gallery/index"
-  get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
+  
+  
   post "upload/get_image"
   get "photo_ajax/theme_tokens"
   get 'test' => "home#test", as: :test
 
-  get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
+  
   post 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
   post 'jury_rating', to: 'jury#rating', :as => :jury_rating
  
-  get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile
-  get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
     
   resource :cache_operation, only: [:destroy]
    
   scope "(:locale)", locale: /en|ru/ do
+ 
+
+     get "age_agreement/agreed"   
+     get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
+     get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile  
+     resources :home, only: [:index]
+
+
+     root :to => redirect(status: 302) {|params, _| "/#{params[:locale]}/home"}
+
+     get "gallery/index"
+     get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
+     get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
 
     devise_for :users, :controllers => {:registrations => "registrations"}
 
