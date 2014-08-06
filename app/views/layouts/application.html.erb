@@ -8,11 +8,22 @@
     <title><%= title %></title>
     
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53566425-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
   
 
   </head>
@@ -51,4 +62,6 @@
   
   
   </body>
+
+
 </html>
