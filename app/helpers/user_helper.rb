@@ -21,7 +21,8 @@ module UserHelper
     tds = unless date
       content_tag(:td, "#{I18n.t(field)}") + content_tag(:td, user.send(field))
     else
-      content_tag(:td, "#{I18n.t(field)}") + content_tag(:td, I18n.l(user.send(field)))
+      date = user.send(field)
+      content_tag(:td, "#{I18n.t(field)}") + content_tag(:td, I18n.l(date)) if date
     end
 
     content_tag(:tr, tds)	 
