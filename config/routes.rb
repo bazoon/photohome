@@ -41,7 +41,8 @@ Photohome::Application.routes.draw do
      resources :home, only: [:index]
 
 
-     root :to => redirect(status: 302) {|params, _| "/#{params[:locale]}/home"}
+     # root :to => redirect(status: 302) {|params, _| home_index_path}
+     get "/" => "home#index", :as => "root"
 
      get "gallery/index"
      get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
