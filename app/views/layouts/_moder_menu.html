@@ -1,5 +1,5 @@
 <li><%=link_to "Тикеты",admin_messages_path if can? :manage,Message %></li>
 <li><%=link_to "Фотографии",admin_photos_path if can? :manage,Photo %>  </li>
 
-<li><%=link_to "Галереи", admin_albums_path if can? :manage, Admin::Album %>  </li>
+<li><%=link_to I18n.t(:galleries), admin_albums_path if can? :manage, Admin::Album %>  </li>
 <li><%=link_to "Настройки", admin_settings_path if can? :manage, Admin::Setting %>  </li>

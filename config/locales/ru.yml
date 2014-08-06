@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  galleries: "Галереи"
   message: "Сообщение"
   unfilled_profile: "Профиль не заполнен !"
   user: "Пользователь"
