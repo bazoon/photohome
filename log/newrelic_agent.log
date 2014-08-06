@@ -153,3 +153,169 @@
 [08/05/14 12:52:48 +0600 Mac-mini-VITALIY-2.local (4720)] INFO : Installing Rails 4 view instrumentation
 [08/05/14 12:52:48 +0600 Mac-mini-VITALIY-2.local (4720)] INFO : Installing Rails 4 Error instrumentation
 [08/05/14 12:52:48 +0600 Mac-mini-VITALIY-2.local (4720)] INFO : Finished instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Environment: development
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Dispatcher: mongrel
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Application: photohome72
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Environment: development
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : No known dispatcher detected.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Application: photohome72
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Net instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Net instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Finished instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:38:57 +0600 Mac-mini-VITALIY-2.local (1206)] INFO : Finished instrumentation
+[08/06/14 08:38:59 +0600 Mac-mini-VITALIY-2.local (1156)] INFO : Doing deferred dependency-detection before Rack startup
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Environment: development
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Dispatcher: mongrel
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Application: photohome72
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Net instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:48:30 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Finished instrumentation
+[08/06/14 08:48:31 +0600 Mac-mini-VITALIY-2.local (1350)] INFO : Doing deferred dependency-detection before Rack startup
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Environment: development
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Dispatcher: mongrel
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Application: photohome72
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Net instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Finished instrumentation
+[08/06/14 08:49:38 +0600 Mac-mini-VITALIY-2.local (1409)] INFO : Doing deferred dependency-detection before Rack startup
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Environment: development
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Dispatcher: mongrel
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Application: photohome72
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Net instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Finished instrumentation
+[08/06/14 08:50:36 +0600 Mac-mini-VITALIY-2.local (1466)] INFO : Doing deferred dependency-detection before Rack startup
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Starting the New Relic agent in "development" environment.
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Reading configuration from config/newrelic.yml
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : New Relic Agent Developer Mode enabled.
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Environment: development
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Dispatcher: mongrel
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Application: photohome72
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : Agent configured not to send data in this environment.
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing ActiveRecord 4 instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing legacy Excon instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Net instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing deferred Rack instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Rack::Builder middleware instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Rails 3+ middleware instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Rails 4 Controller instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Rails 4 view instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Installing Rails 4 Error instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Finished instrumentation
+[08/06/14 08:54:17 +0600 Mac-mini-VITALIY-2.local (1558)] INFO : Doing deferred dependency-detection before Rack startup
+[08/06/14 09:20:53 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:20:53 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:20:53 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:20:53 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:20:54 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:22:07 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with id=31
+[08/06/14 09:22:13 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with id=31
+[08/06/14 09:22:14 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with id=31
+[08/06/14 09:22:15 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for nil:NilClass
+[08/06/14 09:24:46 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/vitaliynesterenko/Desktop/projects/rails/photohome/app/views/photos/_image.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+';	 2photo.themes.each do |theme| 
+  	       ^
+[08/06/14 09:25:48 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb6006cf10>
+[08/06/14 09:25:48 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63e37340>
+[08/06/14 09:25:48 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb677417a8>
+[08/06/14 09:25:48 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb67073250>
+[08/06/14 09:25:48 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb4feac1b8>
+[08/06/14 09:25:49 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb5ad161e0>
+[08/06/14 09:25:49 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb499fb778>
+[08/06/14 09:25:52 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63d276f8>
+[08/06/14 09:25:52 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb66c6bdd8>
+[08/06/14 09:25:52 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb549a1560>
+[08/06/14 09:25:52 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb5289ab00>
+[08/06/14 09:25:52 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb628a59f0>
+[08/06/14 09:25:59 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb62a7ea88>
+[08/06/14 09:25:59 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63e2f2f8>
+[08/06/14 09:25:59 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb66ba38d8>
+[08/06/14 09:25:59 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63e66c58>
+[08/06/14 09:26:00 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb5ce33198>
+[08/06/14 09:26:00 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb48e01288>
+[08/06/14 09:26:00 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb5ef60d98>
+[08/06/14 09:26:01 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63b074b8>
+[08/06/14 09:26:01 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb48957048>
+[08/06/14 09:26:01 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb66f2b578>
+[08/06/14 09:26:01 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb63fdb638>
+[08/06/14 09:26:02 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb5c97bf10>
+[08/06/14 09:27:39 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x007fcb58c66e18>
+[08/06/14 09:30:50 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/06/14 09:32:40 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/vitaliynesterenko/Desktop/projects/rails/photohome/app/views/photos/_image.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting '('
+'; if photo.user && photo.themes && not photo.themes.blank?  
+                                             ^
+/Users/vitaliynesterenko/Desktop/projects/rails/photohome/app/views/photos/_image.html.erb:35: syntax error, unexpected keyword_ensure, expecting end-of-input
+[08/06/14 09:33:12 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SitePhoto#themes delegated to photo.themes, but photo is nil: #<SitePhoto id: 23, photo_id: nil, image: "x_b09d0451.jpg", album_id: 1, created_at: "2014-07-29 05:18:07", updated_at: "2014-07-29 05:18:07", title: "123", age_policy_id: 1, user_name: "", user_id: 1>
+[08/06/14 09:33:12 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SitePhoto#themes delegated to photo.themes, but photo is nil: #<SitePhoto id: 24, photo_id: nil, image: "90195.jpg", album_id: 1, created_at: "2014-07-29 05:18:53", updated_at: "2014-07-30 10:13:28", title: "wds", age_policy_id: 5, user_name: "", user_id: 1>
+[08/06/14 09:33:24 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SitePhoto#themes delegated to photo.themes, but photo is nil: #<SitePhoto id: 23, photo_id: nil, image: "x_b09d0451.jpg", album_id: 1, created_at: "2014-07-29 05:18:07", updated_at: "2014-07-29 05:18:07", title: "123", age_policy_id: 1, user_name: "", user_id: 1>
+[08/06/14 09:33:24 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SitePhoto#themes delegated to photo.themes, but photo is nil: #<SitePhoto id: 24, photo_id: nil, image: "90195.jpg", album_id: 1, created_at: "2014-07-29 05:18:53", updated_at: "2014-07-30 10:13:28", title: "wds", age_policy_id: 5, user_name: "", user_id: 1>
+[08/06/14 09:33:36 +0600 Mac-mini-VITALIY-2.local (1558)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SitePhoto#themes delegated to photo.themes, but photo is nil: #<SitePhoto id: 23, photo_id: nil, image: "x_b09d0451.jpg", album_id: 1, created_at: "2014-07-29 05:18:07", updated_at: "2014-07-29 05:18:07", title: "123", age_policy_id: 1, user_name: "", user_id: 1>

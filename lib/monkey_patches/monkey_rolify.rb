@@ -7,3 +7,4 @@ module Rolify
     end
   end
 end
+

@@ -7,6 +7,8 @@ class SitePhoto < ActiveRecord::Base
  belongs_to :policy, class_name: "Admin::AgePolicy", :foreign_key => 'age_policy_id'
  belongs_to :user
 
+
+
  validates :album_id, :age_policy_id, presence: true
 
  #TODO: validates :photo_id, presence: true, unless: :image? 
@@ -49,8 +51,9 @@ class SitePhoto < ActiveRecord::Base
 	  age_policy && age_policy.age
 	end
 
-
-
+	def themes
+		photo && photo.themes
+	end
 
 
 end
