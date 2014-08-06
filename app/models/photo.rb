@@ -108,6 +108,7 @@ class Photo < ActiveRecord::Base
 	def theme_tokens=(tokens)
 		self.theme_list = ""
     
+    tokens = tokens.split(",").uniq.join(",")    
     
     User.current.tag(self, :with => tokens, :on => :themes)
    
@@ -187,6 +188,7 @@ class Photo < ActiveRecord::Base
       if tags.empty?
         tags = [id: "#{name}",name: "New: #{name}"]
       end 
+
       tags
   end
 
