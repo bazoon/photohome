@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  access_denied: "Нет доступа !"
   galleries: "Галереи"
   message: "Сообщение"
   unfilled_profile: "Профиль не заполнен !"
@@ -250,7 +251,7 @@ ru:
         title: "Настройки"
     messages:
       index:
-        title: "Тема"
+        title: "Темы"
         new: "Новое сообщение"
         content: "Содержание" 
         reason: "Причина обращения"
@@ -354,5 +355,8 @@ ru:
         title: "Редактировать"
       new:
         title: "Добавить возраст"
+    topics:
+      index:
+        title: "Темы"
 
 

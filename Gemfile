@@ -52,6 +52,9 @@ gem 'guard-rails'
 gem 'guard-rspec'
 gem 'guard-cucumber'
 
+
+
+
 gem 'hub', :require=>nil
 gem 'quiet_assets'
 gem 'rb-fchange', :require=>false

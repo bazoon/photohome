@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805050920) do
+ActiveRecord::Schema.define(version: 20140808043616) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -195,7 +195,7 @@ ActiveRecord::Schema.define(version: 20140805050920) do
     t.float    "rating"
   end
 
-  create_table "letter_users", force: true do |t|
+  create_table "letter_people", force: true do |t|
     t.integer  "letter_id"
     t.integer  "user_id"
     t.datetime "created_at"

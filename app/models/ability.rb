@@ -59,7 +59,7 @@ class Ability
     can :manage, Letter, user_id: user.id
    
     can :read, Letter do |letter|
-      letter.letter_users.any? { |lu| lu.user.id == user.id }
+      letter.people.any? { |lu| lu.user.id == user.id }
     end
 
     can :request, Competition 

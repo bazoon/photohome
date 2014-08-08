@@ -171,15 +171,23 @@ module ApplicationHelper
   end
   
   def title
+
+
     
-    path = breadcrumbs do |links|
+    
+    links = breadcrumbs.tap {|links|}
+   
 
-     if links.count >= 1 
-      links[1..-1].map(&:text).join(" :: ") 
-     end
-
+    path = if links.count >= 1 
+      links[1..-1].map(&:text) 
     end
+
+
+    path = path.join(" :: ") if path
     
+
+    
+
     unless path.nil? || path.blank?
       path + " :: " + I18n.t(:title)
     else

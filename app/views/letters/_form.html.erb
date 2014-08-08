@@ -13,7 +13,7 @@
     </div>
 
     <div class="form-group">
-    <%= f.input :letter_users_tokens, :input_html => {data: {load: @letter.letter_users.map {|lu| {id: lu.user.id, name: lu.user.full_name}}   }} %>
+    <%= f.input :people_tokens, :input_html => {data: {load: @letter.people.map {|p| {id: p.user.id, name: p.user.full_name}}   }} %>
     </div>
     
     

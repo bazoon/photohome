@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   
 
   def index
-    authorize! :index, @user, :message => 'Not authorized as an administrator.'
+    authorize! :index, @user, :message => I18n.t(:access_denied) 
     @users = User.includes(:roles).paginate(:page => params[:page], per_page: 25)
   end
 
   def confirm
-    authorize! :confirm, @user, :message => 'Not authorized as an administrator.'
+    authorize! :confirm, @user, :message => I18n.t(:access_denied) 
     @user = User.friendly.find(params[:id])
 
     @user.skip_confirmation!
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    authorize! :update, @user, :message => 'Not authorized as an administrator.'
+    authorize! :update, @user, :message => I18n.t(:access_denied) 
     @user = User.friendly.find(params[:id])
       
     @user.role_ids = params[:user]["role_ids"]
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   end
     
   def destroy
-    authorize! :destroy, @user, :message => 'Not authorized as an administrator.'
+    authorize! :destroy, @user, :message => I18n.t(:access_denied) 
     user = User.friendly.find(params[:id])
     unless user == current_user
       user.destroy

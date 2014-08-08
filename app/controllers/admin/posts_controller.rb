@@ -12,7 +12,6 @@ class Admin::PostsController < Admin::BaseController
   def index
     @admin_posts = post_type.all
     @post_sym = post_sym
-    fresh_when(@admin_posts)
   end
 
   # GET /admin/articles/1
@@ -105,7 +104,7 @@ class Admin::PostsController < Admin::BaseController
 
   def verify_permission
     # redirect_to root_path, alert: "Admin area !" current_user && current_user.is_stuff?
-    render :text => "Admin area !" unless current_user && (current_user.is_stuff? || current_user.is_writer?)
+    render :text => I18n.t(:access_denied) unless current_user && (current_user.is_stuff? || current_user.is_writer?)
   end
 
 

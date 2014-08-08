@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  $('#letter_letter_users_tokens').tokenInput('/ajax/users',{theme: 'facebook',prePopulate: $('#letter_letter_users_tokens').data('load')})
+  $('#letter_people_tokens').tokenInput('/ajax/users',{theme: 'facebook',prePopulate: $('#letter_people_tokens').data('load')})

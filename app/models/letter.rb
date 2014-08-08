@@ -1,32 +1,29 @@
 class Letter < ActiveRecord::Base
   belongs_to :user
-  has_many :letter_users
+  has_many :people
   acts_as_commentable
 
   validates :user_id, presence: true
  
 
-  attr_reader :letter_users_tokens
+  attr_reader :people_tokens
 
+  def people_tokens=(tokens)
 
-
-
-  def letter_users_tokens=(tokens)
-
-    self.letter_users.delete_all  
+    self.people.delete_all  
     self.save!
 
     # raise Exception
     
     tokens.split(",").each do |user_id|
-      letter_user = LetterUser.create!(letter_id: self.id, user_id: user_id)    
+      letter_user = Letter::Person.create!(letter_id: self.id, user_id: user_id)    
     end
 
   end
   
 
   def recipient_names
-    letter_users.map { |lu| lu.user.full_name  }
+    people.map { |person| person.user.full_name  }
   end
 
   def from
@@ -34,7 +31,7 @@ class Letter < ActiveRecord::Base
   end
 
   def recipients
-    letter_users.map(&:user)
+    people.map(&:user)
   end
 
 end

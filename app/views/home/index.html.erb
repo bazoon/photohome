@@ -3,9 +3,9 @@
    <h3>Тюменский дом фотографии
    представляет вашему вниманию виртуальную выставку
    <br>
-   <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) %>
+   <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) if @setting_decorator.album %>
    </h3>
-   <small><%= t('authors') %> : <%= @setting_decorator.album.authors %></small>
+   <small><%= t('authors') %> : <%= @setting_decorator.album.authors if @setting_decorator.album && @setting_decorator.album.authors %></small>
   </p>
 
 
