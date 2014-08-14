@@ -7,6 +7,7 @@ class AlbumsController < ApplicationController
     @last_photos = SitePhoto.last(4)
   end
 
+
   def show
     @site_photos = @album.last_photos
   end
