@@ -25,7 +25,7 @@ describe "success" do
     fill_in 'user_email', with: admin.email
     fill_in 'user_password', with: 'changeme'
     click_button 'Sign in'
-    save_and_open_page    
+      
   end
   
  

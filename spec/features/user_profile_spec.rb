@@ -50,10 +50,12 @@ it "Can see own profile" do
     User.stub(:current).and_return(user)   
      
     photo = FactoryGirl.build(:photo)
-    photo.save
+    photo.user = user
     photo.theme_tokens = "mood town"
+    photo.save
 
     visit user_cloud_path(user_id: user.id, locale: 'ru')
+    # save_and_open_page 
     page.should have_content("mood")
     page.should have_content("town")
   end
