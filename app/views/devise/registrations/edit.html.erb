@@ -75,9 +75,6 @@
 
 
 <script>
-
-
-   $( "input.date_picker" ).datepicker( $.datepicker.regional[ "ru" ]);
-
-
+   $( "input.date_picker" ).datepicker({yearRange: "<%= Time.zone.now.year - 90%>:<%= Time.zone.now.year - 5%>"});
+   $.datepicker.setDefaults($.datepicker.regional["ru"]);
 </script>

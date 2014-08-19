@@ -19,6 +19,7 @@ ru:
         password: "Пароль"
         password_confirmation: "Подтверждение"
         login: 'Псевдоним'
+        birth_date: 'Дата рождения'
         last_name: 'Фамилия'
         remember_me: 'Запомнить меня'
         about: 'Обо мне'
@@ -91,6 +92,6 @@ ru:
 
     # hints:
     #   defaults:
-    #     username: 'User name to sign in.'
+    #     /name: 'User name to sign in.'
     #     password: 'No special characters, please.'
 
