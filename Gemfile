@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
 gem 'rails', '4.0.5'
-gem 'sass-rails', '~> 4.0.0'
 
 
 gem 'sprockets', '<= 2.11.0'
@@ -22,8 +21,9 @@ gem 'yui-compressor'
 gem 'cssminify'
 # gem 'bootstrap-sass'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'sass-rails', '>= 3.2'
 
-gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'therubyracer'
 

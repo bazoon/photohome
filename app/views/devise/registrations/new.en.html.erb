@@ -12,7 +12,11 @@
   <%= f.input :email, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
   <%= f.input :password, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
   <%= f.input :password_confirmation, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
-  <br/>
+  <br>
+  <%= render "terms" %>  
+  <%= f.input :terms_of_service,  as: :boolean, :input_html => {style: "margin: 0px"} %>
+  
+
   <%= f.button :submit, 'Зарегистрироваться', :class => 'btn-primary' %>
   <br/>
   <br/>

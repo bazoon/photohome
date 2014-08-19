@@ -40,7 +40,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-editable-rails (0.0.7)
       railties (>= 3.1)
-    bootstrap-sass (3.1.1.1)
+    bootstrap-sass (3.2.0.1)
       sass (~> 3.2)
     builder (3.1.4)
     bullet (4.13.1)
@@ -371,7 +371,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-editable-rails
-  bootstrap-sass (~> 3.1.1)
+  bootstrap-sass (~> 3.2.0)
   bullet
   cancan
   capybara
@@ -423,7 +423,7 @@ DEPENDENCIES
   rspec-rails
   russian
   sanitize
-  sass-rails (~> 4.0.0)
+  sass-rails (>= 3.2)
   selenium-webdriver
   simple_form (>= 3.0.0.rc)
   simplecov

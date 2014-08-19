@@ -20,6 +20,7 @@ ru:
         password_confirmation: "Подтверждение"
         login: 'Псевдоним'
         birth_date: 'Дата рождения'
+        terms_of_service: "Согласен с правилами"
         last_name: 'Фамилия'
         remember_me: 'Запомнить меня'
         about: 'Обо мне'

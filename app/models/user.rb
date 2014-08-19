@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   validates :name, :email, presence: true
+  validates :terms_of_service, acceptance: true, on: :create, allow_nil: false
   
   # after_save :set_friendly_id
 
