@@ -3,11 +3,13 @@ class SiteRule < ActiveRecord::Base
 
 
 	def self.rules(locale)
-		self.where(locale: locale).first.rules
+		rule = self.where(locale: locale).first
+		rule && rule.rules
 	end
 
 	def self.rules_digest(locale)
-		self.where(locale: locale).first.rules_digest
+		rule = self.where(locale: locale).first
+		rule && rule.rules_digest
 	end
 
 end
