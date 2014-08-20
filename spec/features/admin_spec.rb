@@ -9,7 +9,8 @@ describe "success" do
 
   let(:admin) do 
     user = FactoryGirl.build(:user)
-    user.skip_confirmation!
+    user.skip_confirmation! 
+    
     user.save!
     user.add_role("admin")
     user
@@ -24,6 +25,7 @@ describe "success" do
     visit new_user_session_path
     fill_in 'user_email', with: admin.email
     fill_in 'user_password', with: 'changeme'
+    
     click_button 'Sign in'
       
   end
