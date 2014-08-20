@@ -4,6 +4,8 @@ Photohome::Application.routes.draw do
  
   
   
+  get "about/us"
+  get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
 
  

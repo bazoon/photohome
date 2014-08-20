@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  rules: "Правила"
+  about_us: "О нас"
   saved: 'Данные сохранены'
   access_denied: "Нет доступа !"
   galleries: "Галереи"
