@@ -9,7 +9,7 @@ class SiteRule < ActiveRecord::Base
 	end
 
 	def self.rules_digest(locale)
-		@@rules[locale] ||= self.where(locale: locale).first.rules_digest
+		@@rules_digest[locale] ||= self.where(locale: locale).first.rules_digest
 	end
 
 end
