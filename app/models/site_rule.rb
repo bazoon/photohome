@@ -1,15 +1,13 @@
 class SiteRule < ActiveRecord::Base
 	validates :locale, presence: true
 
-	@@rules = {}
-	@@rules_digest = {}
 
 	def self.rules(locale)
-		@@rules[locale] ||= self.where(locale: locale).first.rules
+		self.where(locale: locale).first.rules
 	end
 
 	def self.rules_digest(locale)
-		@@rules_digest[locale] ||= self.where(locale: locale).first.rules_digest
+		self.where(locale: locale).first.rules_digest
 	end
 
 end
