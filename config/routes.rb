@@ -3,6 +3,7 @@ Photohome::Application.routes.draw do
 
  
   
+  
   mount RedactorRails::Engine => '/redactor_rails'
 
  
@@ -179,6 +180,7 @@ Photohome::Application.routes.draw do
 
         end  
 
+        resources :site_rules
           
       end
     

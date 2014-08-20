@@ -1,0 +1,33 @@
+<h2><%= t('rules') %></h2>
+
+
+
+<%= link_to(t('.new'), new_admin_site_rule_path, {class: "btn btn-primary"}) %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('locale') %></th>
+      <th><%= t('.rules') %></th>
+      <th><%= t('rules_digest') %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+<tbody>
+
+	<% @site_rules.each do |rule| %>
+		<tr>
+			<td><%= raw rule.locale %></td>	
+			<td><%= raw rule.rules %></td>	
+			<td><%= raw rule.rules_digest %></td>	
+			<td><%= link_to(edit_icon, edit_admin_site_rule_path(rule)) %></td>
+			<td><%= link_to(del_icon, [:admin, rule], method: :delete, data: { confirm: 'Are you sure?' }) %></td>
+		</tr>
+
+
+ <% end %>
+
+</tbody>
+</table>

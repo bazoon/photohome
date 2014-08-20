@@ -30,6 +30,11 @@
 
 <br>
 
-<h2>
+<h3>
 <%= link_to t('remove_cache'), cache_operation_path, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, :Cache %>  
-</h2>
+</h3>
+
+<h3>
+  <%= link_to t('rules'), admin_site_rules_path %>
+
+</h3>
