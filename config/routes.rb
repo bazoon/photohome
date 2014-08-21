@@ -4,6 +4,7 @@ Photohome::Application.routes.draw do
  
   
   
+
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -115,6 +116,7 @@ Photohome::Application.routes.draw do
   
    
       # ADMIN routes
+    resource :cloud, only: [:show]  
 
       namespace :admin do
 
