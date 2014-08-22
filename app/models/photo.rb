@@ -106,13 +106,16 @@ class Photo < ActiveRecord::Base
 
 
 	def theme_tokens=(tokens)
-		self.theme_list = ""
+		tokens = tokens.split(",").uniq.join(",")   
     
-    tokens = tokens.split(",").uniq.join(",")    
+    # self.theme_list.remove(tokens)
+    self.theme_list = tokens
     
-    User.current.tag(self, :with => tokens, :on => :themes)
-   
-    # self.save!
+    
+    self.user.tag(self, :with => tokens, :on => :themes)
+     
+    # self.save
+     # raise Exception
 	end
 
 
@@ -193,7 +196,7 @@ class Photo < ActiveRecord::Base
   end
 
   def age_policy_age
-    age_policy && age_policy.age
+    (age_policy && age_policy.age) || 18
   end
 
   def user_name

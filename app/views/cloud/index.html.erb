@@ -1,0 +1,21 @@
+<div id="cloud" class="well">
+
+<% @freqs.each do |f| %>
+  <%= link_to f[0], cloud_path(f[0]), rel: f[1] %>
+<% end %> 
+
+</div>
+
+<script>
+
+
+$.fn.tagcloud.defaults = {
+  size: {start: 8, end: 76, unit: 'pt'},
+  color: {start: '#6a95bd', end: '#cc6c60'}
+}; 
+
+$(function () {
+  $('#cloud a').tagcloud();
+});
+
+</script>

@@ -116,7 +116,7 @@ Photohome::Application.routes.draw do
   
    
       # ADMIN routes
-    resource :cloud, only: [:show]  
+    resources :cloud, only: [:index, :show]  
 
       namespace :admin do
 

@@ -51,8 +51,8 @@ class SitePhoto < ActiveRecord::Base
 	  age_policy && age_policy.age
 	end
 
-	def themes
-		photo && photo.themes
+	def theme_list
+		photo && photo.theme_list
 	end
 
 

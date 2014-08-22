@@ -2530,3 +2530,66 @@
 [08/22/14 09:43:57 +0600 MacBook-Pro-VITALIY.local (60758)] INFO : Installing Rails 4 Error instrumentation
 [08/22/14 09:43:57 +0600 MacBook-Pro-VITALIY.local (60758)] INFO : Finished instrumentation
 [08/22/14 09:43:57 +0600 MacBook-Pro-VITALIY.local (60758)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Starting the New Relic agent in "development" environment.
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : New Relic Agent Developer Mode enabled.
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Environment: development
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Dispatcher: mongrel
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Application: photohome72
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] WARN : Agent configured not to send data in this environment.
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing ActiveRecord 4 instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing legacy Excon instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Net instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing deferred Rack instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Rack::Builder middleware instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Rails 3+ middleware instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Rails 4 Controller instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Rails 4 view instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Installing Rails 4 Error instrumentation
+[08/22/14 10:11:10 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Finished instrumentation
+[08/22/14 10:11:11 +0600 MacBook-Pro-VITALIY.local (60979)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Starting the New Relic agent in "development" environment.
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : New Relic Agent Developer Mode enabled.
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Environment: development
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Dispatcher: mongrel
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Application: photohome72
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : Agent configured not to send data in this environment.
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing ActiveRecord 4 instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing legacy Excon instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Net instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing deferred Rack instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Rack::Builder middleware instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Rails 3+ middleware instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Rails 4 Controller instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Rails 4 view instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Installing Rails 4 Error instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Finished instrumentation
+[08/22/14 10:18:40 +0600 MacBook-Pro-VITALIY.local (61036)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 10:48:28 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x00000119accbe0>
+[08/22/14 10:48:31 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010e52a968>
+[08/22/14 10:48:31 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x00000103fe2988>
+[08/22/14 10:48:31 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x00000101acfe98>
+[08/22/14 10:48:31 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010aef02a8>
+[08/22/14 10:48:31 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010e449418>
+[08/22/14 10:48:37 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000011ad5a140>
+[08/22/14 10:48:38 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x000001139fcf90>
+[08/22/14 10:48:38 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010ca6db20>
+[08/22/14 10:48:38 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x00000101d22150>
+[08/22/14 10:48:38 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x000001154d6b90>
+[08/22/14 10:49:32 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010c8718f8>
+[08/22/14 10:49:33 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `theme_list' for #<SitePhoto:0x0000010cd60d78>
+[08/22/14 10:50:08 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `themes' for #<SitePhoto:0x00000115caea48>
+[08/22/14 11:28:27 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/vitaliynesterenko/projects/photohome/app/views/cloud/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...t_buffer.append=( "alert("hello") " );@output_buffer.safe_ap...
+...                               ^
+[08/22/14 11:31:26 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `f1' for #<#<Class:0x0000010e49a908>:0x0000011ab00458>
+[08/22/14 11:31:35 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `+' for nil:NilClass
+[08/22/14 11:35:23 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/vitaliynesterenko/projects/photohome/app/views/cloud/index.html.erb:7: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+   word_array += "{text: '#{f[0]}', weight: #{f[1]} "}, 
+                                                      ^
+[08/22/14 11:35:58 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (1 for 0)
