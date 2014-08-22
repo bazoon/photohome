@@ -103,7 +103,7 @@ class User < ActiveRecord::Base
   end
 
   def face
-    avatar_url(:thumb) || url = Gravatar.new(email).image_url
+    avatar_url(:thumb) || Gravatar.new(email).image_url(size: 50)
 
   end
 
