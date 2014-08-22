@@ -72,7 +72,6 @@ class Photo < ActiveRecord::Base
   
   def initialize(params=nil, user_id=nil, published=false)
     super(params)
-    self.user_id = user_id
     self.published = published
   end
 

@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
 
+  @@current_user = nil
+
+
+
   extend FriendlyId
   friendly_id :login, use: :slugged
 
@@ -41,10 +45,12 @@ class User < ActiveRecord::Base
 
   #Для доступа к current_user в моделях
   def self.current
-    Thread.current[:user]
+    # Thread.current[:user]
+    @@current_user
   end
   def self.current=(user)
-    Thread.current[:user] = user
+    # Thread.current[:user] = user
+    @@current_user = user
   end
 
   # before_save :see

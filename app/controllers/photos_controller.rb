@@ -40,7 +40,8 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new()
+    @photo = Photo.new
+    @user = current_user
   end
 
   # GET /photos/1/edit
@@ -51,10 +52,8 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-
+  
     @photo = Photo.new(photo_params, current_user.id, true)
-    # raise Exception
-
     authorize! :create, @photo #manualy authorize
 
     respond_to do |format|
