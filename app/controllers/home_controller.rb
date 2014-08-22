@@ -17,10 +17,24 @@ class HomeController < ApplicationController
     # @photos = Photo.all
     # expire_fragment(AlbumHelper::cache_key_album_last_photos)
 
-    Photo.all.each do |p|
-      p.theme_list = p.themes.map(&:name).uniq.join(",")
-      p.save
+    # Photo.all.each do |p|
+    #   p.theme_list = p.themes.map(&:name).uniq.join(",")
+    #   p.save
+    # end
+
+    ActsAsTaggableOn::Tag.all.each do |tag|
+
+      count=ActsAsTaggableOn::Tagging.all.select {|t| t.tag_id == tag.id }.count
+      # tag.taggings_count = count
+      # tag.save
+      
+      
+      ActsAsTaggableOn::Tag.reset_counters(tag.id, :taggings)      
+
+
+
     end
+
 
     render text: "OK"
   end

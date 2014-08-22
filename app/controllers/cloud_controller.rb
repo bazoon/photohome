@@ -2,7 +2,7 @@ class CloudController < ApplicationController
 
   def show
   	@tag_name = params[:id]
-  	@photos = Photo.tagged_with(@tag_name, on: "themes").paginate(:page => params[:page],per_page: 12)
+  	@photos = Photo.tagged_with(@tag_name, on: "themes").uniq.paginate(:page => params[:page],per_page: 12)
   end
 
   def index

@@ -46,6 +46,7 @@ class Photo < ActiveRecord::Base
 
 
   validates :user_id, presence: true
+  validates :age_policy_id, presence: true
 
   before_save :check_limits
   self.per_page = 4

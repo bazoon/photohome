@@ -2593,3 +2593,7 @@
    word_array += "{text: '#{f[0]}', weight: #{f[1]} "}, 
                                                       ^
 [08/22/14 11:35:58 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (1 for 0)
+[08/22/14 12:33:09 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/22/14 12:34:52 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: comparison of Fixnum with nil failed
+[08/22/14 14:13:45 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/22/14 14:34:01 +0600 MacBook-Pro-VITALIY.local (61036)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 'ActsAsTaggableOn::Tag' has no association called 'taggings_count'
