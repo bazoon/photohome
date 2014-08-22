@@ -10,7 +10,7 @@ class Admin::SettingDecorator
 	    @photos = @setting.site_photos if @setting.album
 	    @novelty = @setting.novelty if @setting.novelty
 	    @first_article = @setting.article
-	    @other_articles = Article.ids(@setting.articles)
+	    @other_articles = Article.selected_ids(@setting.articles)
       @album = @setting.album
 	  end    
 

@@ -3,7 +3,7 @@ class Article < Post
 
   scope :random, lambda {|n| where("id in (?)", all.map(&:id).to_a.sample(n))  }
 
-  scope :ids, lambda {|s| s.nil? ? Article.none :  where("id in (?)", s.split(",")) }
+  scope :selected_ids, lambda {|s| s.nil? ? Article.none :  where("id in (?)", s.split(",")) }
 
 
   def first_image_src
