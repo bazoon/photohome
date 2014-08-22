@@ -16,6 +16,12 @@ class HomeController < ApplicationController
   def test
     # @photos = Photo.all
     # expire_fragment(AlbumHelper::cache_key_album_last_photos)
+
+    Photo.all.each do |p|
+      p.theme_list = p.themes.map(&:name).uniq.join(",")
+      p.save
+    end
+
     render text: "OK"
   end
 
