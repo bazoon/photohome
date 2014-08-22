@@ -156,6 +156,9 @@ GEM
     goldiloader (0.0.5)
       activerecord (>= 3.2, < 4.2)
       activesupport (>= 3.2, < 4.2)
+    gravatar-ultimate (2.0.0)
+      activesupport (>= 2.3.14)
+      rack
     gretel (3.0.7)
       rails (>= 3.2.0)
     guard (2.6.1)
@@ -400,6 +403,7 @@ DEPENDENCIES
   fotoramajs
   friendly_id (~> 5.0.0)
   goldiloader
+  gravatar-ultimate
   gretel
   guard-bundler
   guard-cucumber

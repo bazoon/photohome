@@ -117,3 +117,4 @@ gem "bullet", :group => "development"
 gem 'goldiloader'
 gem 'awesome_print', :group => "development"
 gem 'bootstrap-editable-rails'
+gem 'gravatar-ultimate'

@@ -102,5 +102,9 @@ class User < ActiveRecord::Base
     age > 18
   end
 
+  def face
+    avatar_url(:thumb) || url = Gravatar.new(email).image_url
+
+  end
 
 end
