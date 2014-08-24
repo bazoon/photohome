@@ -1,5 +1,8 @@
 class CloudController < ApplicationController
 
+
+  skip_before_filter :authenticate_user!
+
   def show
   	@tag_name = params[:id]
   	@photos = Photo.tagged_with(@tag_name, on: "themes").uniq.paginate(:page => params[:page],per_page: 12)
