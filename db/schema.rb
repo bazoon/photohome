@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820040348) do
+ActiveRecord::Schema.define(version: 20140825043645) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -369,6 +369,7 @@ ActiveRecord::Schema.define(version: 20140820040348) do
     t.string   "login"
     t.string   "slug"
     t.date     "birth_date"
+    t.integer  "photos_count"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
