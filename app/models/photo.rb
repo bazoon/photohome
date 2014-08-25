@@ -136,6 +136,7 @@ class Photo < ActiveRecord::Base
     self.deleted = true  
     self.delayed_job_id=self.remove_attached_image.id
     self.save!
+    self.destroy
   end
 
   def undelete
