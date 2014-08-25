@@ -29,7 +29,7 @@ class PhotosController < ApplicationController
     @user = User.friendly.find(params[:user_id])
     @name = params[:name]
     # raise Exception
-    @photos = Photo.tagged_with(@name, :on => :themes, :owned_by => @user).paginate(:page => params[:page],per_page: 8)
+    @photos = @user.photos.tagged_with(@name, :on => :themes, :owned_by => @user).paginate(:page => params[:page],per_page: 8)
     # fresh_when(@photos)
   end
 
