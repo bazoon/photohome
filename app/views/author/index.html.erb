@@ -2,6 +2,8 @@
 
 <% breadcrumb :authors %>
 
+<h1><%= t("authors") %>
+<small><sup>*</sup></small></h1>
 <% @users.each do |user| %>
 
 <li style = "padding-bottom: 3px">
@@ -13,3 +15,10 @@
 <% end  %>
 
 </ul>
+
+<br>
+<br>
+<br>
+<br>
+
+<small>* Пользователи сайта загрузившие фотографии (одну или более) </small>
