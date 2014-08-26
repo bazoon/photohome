@@ -18,7 +18,7 @@ class Admin::Album < ActiveRecord::Base
 
 
     def self.import_from_tags(tag_list, album_id)
-        photos = Photo.tagged_with(tag_list, on: "themes")
+        photos = Photo.tagged_with(tag_list, on: "themes").uniq
         
         photos.each do |photo|
             site_photo = SitePhoto.new
