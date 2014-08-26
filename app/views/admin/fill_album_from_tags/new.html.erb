@@ -1,0 +1,13 @@
+<%= form_tag(admin_album_fill_album_from_tags_path(@album.id), method: :post) do %>
+
+
+ <div class="form-group">
+    <%= text_field_tag :photo_theme_tokens, nil,:input_html => {data: {load: {}}} %>
+ </div>
+
+ <div class="form-group">
+    <%= submit_tag t('save') %>
+ <div>
+
+
+<% end %>

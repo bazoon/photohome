@@ -1,6 +1,8 @@
 <h1><%= @album.title %></h1>
 
 <%= link_to t('new'), new_admin_album_site_photo_path(@album),{class: "btn btn-primary"}  %>
+<%= link_to t('import_from_tags'), new_admin_album_fill_album_from_tag_path(@album),{class: "btn btn-primary"}  %>
+
 
 <br><br>
 

@@ -21,10 +21,10 @@
 	<% end %>
 </p>
 
-<% if photo.user && photo.theme_list && (not photo.theme_list.blank?)  %>
+<% if photo.user && photo.theme_tags && (not photo.theme_tags.blank?)  %>
 
 <strong>Теги: </strong>
-	<% photo.theme_list.each do |theme| %>
+	<% photo.theme_tags.each do |theme| %>
 	<%= link_to theme,tagged_photos_path(user_id: photo.user.id, name: theme)  %>
 	<% end %>
 <% end  %>

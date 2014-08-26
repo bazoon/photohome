@@ -105,13 +105,17 @@ class Photo < ActiveRecord::Base
   end
 
 
+  def theme_tags
+    self.themes.uniq.map(&:name)
+    
+  end
+
+
 	def theme_tokens=(tokens)
 		tokens = tokens.split(",").uniq.join(",")   
     
     # self.theme_list.remove(tokens)
-    self.theme_list = tokens
-    
-    
+    # self.theme_list = tokens
     self.user.tag(self, :with => tokens, :on => :themes)
      
     # self.save

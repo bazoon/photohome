@@ -77,6 +77,7 @@ class PhotosController < ApplicationController
     # render text: params.inspect
     respond_to do |format|
       if @photo.update(photo_params)
+        
         format.html { redirect_to user_photo_path(@user,@photo), notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else

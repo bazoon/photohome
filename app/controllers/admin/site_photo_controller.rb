@@ -22,6 +22,7 @@ def choose
    @photo = Photo.find(@photo_id)
 end  
 
+
 def show
   
 end

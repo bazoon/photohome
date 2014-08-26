@@ -2,9 +2,6 @@ Photohome::Application.routes.draw do
 
 
  
-  
-  
-
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -90,7 +87,8 @@ Photohome::Application.routes.draw do
 
 
       resources :site_photos, concerns: :commentable
-    
+      
+
       resources :competitions, only: [:index, :show] do
 
         member do
@@ -168,8 +166,10 @@ Photohome::Application.routes.draw do
         #Альбомы сайта
         resources :albums do
           resources :site_photo
+          resources :fill_album_from_tags, only: [:new, :create]
         end
         
+
        
         resources :photos, only: [:index, :show, :destroy,:edit,:update] do
           member do 
