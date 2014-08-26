@@ -18,16 +18,22 @@ class Admin::Album < ActiveRecord::Base
 
 
     def self.import_from_tags(tag_list, album_id)
-        photos = Photo.tagged_with(tag_list, on: "themes").uniq
         
-        photos.each do |photo|
-            site_photo = SitePhoto.new
-            site_photo.title = photo.title
-            site_photo.age_policy_id = photo.age_policy_id
-            site_photo.photo_id = photo.id
-            site_photo.album_id = album_id
-            return false unless site_photo.save
-        end
+        tags = tag_list.split(",")
+
+        tags.each do |tag|
+
+            photos = Photo.tagged_with(tag, on: "themes").uniq
+
+            photos.each do |photo|
+                site_photo = SitePhoto.new
+                site_photo.title = photo.title
+                site_photo.age_policy_id = photo.age_policy_id
+                site_photo.photo_id = photo.id
+                site_photo.album_id = album_id
+                return false unless site_photo.save
+            end
+        end    
 
         true
 
