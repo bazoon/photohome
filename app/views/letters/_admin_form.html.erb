@@ -13,9 +13,10 @@
     </div>
 
     <div class="form-group">
-    <%= f.input :letter_users_tokens, :input_html => {data: {load:  [{id: to_user.id, name: to_user.full_name}] }   } %>
+    <%= f.input :people_tokens, :input_html => {data: {load:  [{id: to_user.id, name: to_user.full_name}] }   } %>
     </div>
   
+    
     
     <%= f.button :submit, value: t('save'),input_html: {class: "btn btn-default"} %>
   

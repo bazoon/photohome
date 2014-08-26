@@ -67,7 +67,7 @@ ru:
       letter:
         title: "Заголовок"
         content: Содержание
-        letter_people_tokens: "Адресаты"
+        people_tokens: "Адресаты"
       admin_setting:
         album: "Галерея"
         novelty: "Главная новость"
