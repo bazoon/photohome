@@ -9,7 +9,7 @@ class Admin::FillAlbumFromTagsController < ApplicationController
     
     theme_tokens = params[:photo_theme_tokens]
     if Admin::Album.import_from_tags(theme_tokens, @album.id)
-        redirect_to admin_albums_path, notice: 'Album was successfully created.' 
+        redirect_to admin_album_path(@album.id), notice: 'Album was successfully created.' 
     else
         redirect_to new_admin_album_fill_album_from_tag_path(@album.id), notice('error')
 
