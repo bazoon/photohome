@@ -25,16 +25,22 @@ class Admin::Album < ActiveRecord::Base
         photos = []
 
         tags.each do |tag|
-            photos << Photo.tagged_with(tag, on: "themes").uniq
+            photos << Photo.tagged_with(tag, on: "themes").flatten
         end    
 
-        photos.uniq.each do |photo|
-            site_photo = SitePhoto.new
-            site_photo.title = photo.title
-            site_photo.age_policy_id = photo.age_policy_id
-            site_photo.photo_id = photo.id
-            site_photo.album_id = album_id
-            return false unless site_photo.save
+        
+        photos.flatten!
+        photos.uniq!
+
+      
+
+        photos.each do |photo|
+
+            album_photo = AlbumPhoto.new
+            album_photo.photo_id = photo.id
+            album_photo.album_id = album_id
+            
+            return false unless album_photo.save
         end
 
         true
