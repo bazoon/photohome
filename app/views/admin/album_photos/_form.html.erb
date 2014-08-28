@@ -1,0 +1,38 @@
+<%= simple_form_for([@album, @album_photo]) do |f| %>
+   <%= f.error_notification %>
+
+    <!-- Загрузка только внешних фотографий -->
+
+    
+
+    <%= f.fields_for @photo do |fp| %>
+
+        <div class="form-group">
+        <%= fp.input :title,:input_html => {class: "form-control"} %>
+        </div>
+
+        <div class="form-group">
+        <%= fp.input :author,:input_html => {class: "form-control"} %>
+        </div>
+
+        <%= fp.hidden_field :image_cache %>
+        <div class="form-group">
+        <%= fp.file_field :image,:input_html => {class: "form-control"} %>
+        </div>
+
+        <div class="form-group">
+        <%= fp.association :age_policy, collection: Admin::AgePolicy.order('age'),selected: Admin::AgePolicy.first, :input_html => {class: "form-control"}%>
+        </div>
+
+    <% end %>
+    
+    <%= f.hidden_field :album_id, value: @album.id %>
+    
+    <%= f.button :submit,value: t(:save), class: "btn btn-default" %>
+
+
+
+  
+<% end %>
+
+<br>

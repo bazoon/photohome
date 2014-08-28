@@ -2,6 +2,8 @@ Photohome::Application.routes.draw do
 
 
  
+
+  
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -110,9 +112,11 @@ Photohome::Application.routes.draw do
     
     get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo     
 
+    
     # TODO: 0 Make site_photo without admin prefix
   
-   
+    
+
       # ADMIN routes
     resources :cloud, only: [:index, :show]  
 
@@ -166,11 +170,16 @@ Photohome::Application.routes.draw do
         #Альбомы сайта
         resources :albums do
           resources :site_photo
+          resources :album_photos, only: [:new, :edit, :create, :update,:destroy,:show]
           resources :fill_album_from_tags, only: [:new, :create]
+          resources :fill_album_from_selected, only: [:create]
+
         end
         
+        get '/album_photos/choose/:photo_id', to: 'album_photos#choose', as: :choose_album_photo  
+        get '/choose_for_album/:photo_id', to: 'ajax#choose_for_album', as: :choose_for_album
+        put '/remove_from_chosen/:photo_id', to: 'ajax#remove_from_chosen', as: :remove_from_chosen
 
-       
         resources :photos, only: [:index, :show, :destroy,:edit,:update] do
           member do 
             get 'publish',as: :publish

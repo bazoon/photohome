@@ -39,5 +39,32 @@ class Admin::AjaxController < ApplicationController
 
   end
 
+  def choose_for_album
+    session[:chosen_for_album] ||= []
+    session[:chosen_for_album] << params[:photo_id]
+
+    prepare_photos
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def remove_from_chosen
+
+    photo_id = params[:photo_id]
+    session[:chosen_for_album].delete(photo_id)
+    prepare_photos
+    respond_to do |format|
+
+      format.js
+
+    end
+  end
+
+protected
+  def prepare_photos
+    @chosen_photos = session[:chosen_for_album].uniq
+    @photos = Photo.find(@chosen_photos)
+  end
 
 end

@@ -1,8 +1,9 @@
 <h1><%= @album.title %></h1>
 
-<%= link_to t('new'), new_admin_album_site_photo_path(@album),{class: "btn btn-primary"}  %>
+<%= link_to t('new'), new_admin_album_album_photo_path(@album),{class: "btn btn-primary"}  %>
 <%= link_to t('import_from_tags'), new_admin_album_fill_album_from_tag_path(@album),{class: "btn btn-primary"}  %>
-
+<%= link_to( t('import_from_selected'), admin_album_fill_album_from_selected_index_path(@album),
+:method => :post, class: "btn btn-primary") %>
 
 <br><br>
 
@@ -10,16 +11,16 @@
 
 <div class="row">
 
-   <% @album.site_photos.each_with_index do |photo,index| %>
+   <% @album.album_photos.each_with_index do |photo,index| %>
   
     <div class="col-sm-3" >
   
     <div class="thumbnail">  
      
-      <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
-      <%- l1 = link_to del_icon, site_photo_path(photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
-      <%- l2 = link_to edit_icon, edit_admin_album_site_photo_path(@album.id,photo.id) if is_stuff? %>
-      <%= render partial: "photos/caption", locals: { photo: photo, links: [l2, l1] } %>
+      <%= render partial: "photos/thumb", locals: { photo: photo.photo, path: new_admin_album_album_photo_path(@album.id, photo.id) } %>
+      <%- l1 = link_to del_icon, admin_album_album_photo_path(@album.id, photo.id), method: :delete, data: { confirm: 'Are you sure?' } if is_stuff? %>
+      <%- l2 = link_to edit_icon, edit_admin_album_album_photo_path(@album.id,photo.id) if is_stuff? %>
+      <%= render partial: "photos/caption", locals: { photo: photo.photo, links: [l2, l1] } %>
 
      
     </div>

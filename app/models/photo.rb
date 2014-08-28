@@ -44,6 +44,8 @@ class Photo < ActiveRecord::Base
 
   has_many :competitions, through: :competition_photos
 
+  has_many :album_photos
+
 
   validates :user_id, presence: true
   validates :age_policy_id, presence: true
@@ -131,8 +133,8 @@ class Photo < ActiveRecord::Base
 
   handle_asynchronously :remove_attached_image, :run_at => Proc.new { 24.hours.from_now }
 
-  def author
-    user && user.full_name
+  def author_name
+    author || user && user.full_name
   end
 
   def delete_in_24_hours

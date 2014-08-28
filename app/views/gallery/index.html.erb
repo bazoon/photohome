@@ -1,5 +1,7 @@
 <% breadcrumb :last_photos %>
 
+<%= render partial: 'admin/ajax/chosen' %>
+
 <%= will_paginate @last_photos %>
 
 <div class="row">
