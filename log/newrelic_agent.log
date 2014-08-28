@@ -3104,3 +3104,192 @@
 [08/28/14 10:10:20 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `flatten!' for nil:NilClass
 [08/28/14 10:14:01 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for #<Array:0x0000010c37e210>
 [08/28/14 10:17:05 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/28/14 10:34:56 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for nil:NilClass
+[08/28/14 10:35:25 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `photo_comment_path' for #<#<Class:0x0000011344e238>:0x0000011344d180>
+[08/28/14 10:35:25 +0600 MacBook-Pro-VITALIY.local (10974)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `photo_comment_path' for #<#<Class:0x0000011344e238>:0x00000105dc3d30>
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Environment: development
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Dispatcher: mongrel
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Application: photohome72
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] WARN : Agent configured not to send data in this environment.
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing legacy Excon instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Net instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing deferred Rack instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Finished instrumentation
+[08/28/14 10:35:51 +0600 MacBook-Pro-VITALIY.local (15005)] INFO : Doing deferred dependency-detection before Rack startup
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Environment: development
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Dispatcher: mongrel
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Application: photohome72
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : Agent configured not to send data in this environment.
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing legacy Excon instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Net instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing deferred Rack instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Finished instrumentation
+[08/28/14 10:36:10 +0600 MacBook-Pro-VITALIY.local (15010)] INFO : Doing deferred dependency-detection before Rack startup
+[08/28/14 10:43:10 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010aad58d0>
+[08/28/14 10:43:11 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001130b12d8>
+[08/28/14 10:43:11 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000114319858>
+[08/28/14 10:43:12 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000102473a08>
+[08/28/14 10:43:12 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000115079340>
+[08/28/14 10:43:13 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000114253dd8>
+[08/28/14 10:43:13 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010580ad80>
+[08/28/14 10:43:13 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010656a2a0>
+[08/28/14 10:43:14 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001023b9c70>
+[08/28/14 10:43:14 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001017668b0>
+[08/28/14 10:43:15 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000103306070>
+[08/28/14 10:43:15 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010269dd10>
+[08/28/14 10:43:16 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000106203788>
+[08/28/14 10:43:16 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001065f26a0>
+[08/28/14 10:43:17 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109f3cde8>
+[08/28/14 10:43:17 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000101777890>
+[08/28/14 10:43:18 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001033d0dc0>
+[08/28/14 10:43:18 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010acb7400>
+[08/28/14 10:43:20 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001061912c8>
+[08/28/14 10:43:20 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010ab0db90>
+[08/28/14 10:43:21 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d2af7c0>
+[08/28/14 10:43:21 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001060583c0>
+[08/28/14 10:43:22 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109dff598>
+[08/28/14 10:43:22 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d76dff0>
+[08/28/14 10:43:23 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000105e6b210>
+[08/28/14 10:43:23 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001034d4960>
+[08/28/14 10:43:24 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000106138b00>
+[08/28/14 10:43:24 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010346d0a8>
+[08/28/14 10:43:25 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109caa260>
+[08/28/14 10:43:25 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000101ff05d0>
+[08/28/14 10:43:26 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010aec3668>
+[08/28/14 10:43:26 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d1a9a88>
+[08/28/14 10:43:27 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000105fe0230>
+[08/28/14 10:43:28 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000103635f70>
+[08/28/14 10:43:28 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000105e22128>
+[08/28/14 10:43:29 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010267e410>
+[08/28/14 10:43:29 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000106191548>
+[08/28/14 10:43:30 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000102567770>
+[08/28/14 10:43:30 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010edb6938>
+[08/28/14 10:43:31 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010a8a3490>
+[08/28/14 10:43:31 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d7758e0>
+[08/28/14 10:43:32 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109973330>
+[08/28/14 10:43:32 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d737720>
+[08/28/14 10:43:33 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001032a6d00>
+[08/28/14 10:43:33 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d6d7988>
+[08/28/14 10:43:34 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000101942ff8>
+[08/28/14 10:43:34 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000103677448>
+[08/28/14 10:43:35 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001135e6a78>
+[08/28/14 10:43:35 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010ae51950>
+[08/28/14 10:43:36 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001131b2c40>
+[08/28/14 10:43:36 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010a81b4c8>
+[08/28/14 10:43:37 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109cd14f0>
+[08/28/14 10:43:37 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109a71bd8>
+[08/28/14 10:43:37 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001023f9aa0>
+[08/28/14 10:43:38 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000114760880>
+[08/28/14 10:43:38 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010d40a7f0>
+[08/28/14 10:43:39 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010e76b9c0>
+[08/28/14 10:43:39 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010ab5e900>
+[08/28/14 10:43:40 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000112a51c08>
+[08/28/14 10:43:40 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000109a20918>
+[08/28/14 10:43:41 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010ef5e510>
+[08/28/14 10:43:41 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001144f19f0>
+[08/28/14 10:43:42 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000106658928>
+[08/28/14 10:43:42 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000112ad0df0>
+[08/28/14 10:43:43 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x00000113231cc0>
+[08/28/14 10:43:43 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x0000010244a220>
+[08/28/14 10:43:44 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001144bb5d0>
+[08/28/14 10:43:44 +0600 MacBook-Pro-VITALIY.local (15010)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `' for #<Photo:0x000001130dbd80>
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Environment: development
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : No known dispatcher detected.
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Application: photohome72
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] WARN : Agent configured not to send data in this environment.
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing legacy Excon instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Net instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing deferred Rack instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 10:46:38 +0600 MacBook-Pro-VITALIY.local (15188)] INFO : Finished instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Environment: development
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : No known dispatcher detected.
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Application: photohome72
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] WARN : Agent configured not to send data in this environment.
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing legacy Excon instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Net instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing deferred Rack instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 10:50:12 +0600 MacBook-Pro-VITALIY.local (15224)] INFO : Finished instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Environment: development
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Dispatcher: mongrel
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Application: photohome72
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : Agent configured not to send data in this environment.
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing legacy Excon instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Net instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing deferred Rack instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Finished instrumentation
+[08/28/14 10:51:58 +0600 MacBook-Pro-VITALIY.local (15243)] INFO : Doing deferred dependency-detection before Rack startup
+[08/28/14 11:17:25 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `model_name' for NilClass:Class
+[08/28/14 11:17:37 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `model_name' for NilClass:Class
+[08/28/14 11:17:57 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/28/14 11:22:08 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `album_photo' for #<Admin::AlbumPhotosController:0x00000116623470>
+[08/28/14 11:22:49 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `album_photo' for #<Admin::AlbumPhotosController:0x0000011ba314e0>
+[08/28/14 11:23:55 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Exception
+[08/28/14 11:25:33 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Возникли ошибки: User не может быть пустым
+[08/28/14 11:26:58 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=aa
+[08/28/14 11:26:58 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=aa
+[08/28/14 11:27:09 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=iie
+[08/28/14 11:27:09 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=iie
+[08/28/14 11:27:11 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=0
+[08/28/14 11:27:11 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find Photo with 'id'=0
+[08/28/14 11:28:26 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `site_photo_path' for #<#<Class:0x000001133d1c10>:0x000001133d0ab8>
+[08/28/14 11:28:27 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `site_photo_path' for #<#<Class:0x000001133d1c10>:0x0000010b974b48>
+[08/28/14 11:30:43 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined local variable or method `l1' for #<#<Class:0x000001133d1c10>:0x000001098f9eb8>
+[08/28/14 11:31:07 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with 'id'=12
+[08/28/14 11:31:07 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with 'id'=12
+[08/28/14 11:42:32 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with 'id'=26
+[08/28/14 11:42:32 +0600 MacBook-Pro-VITALIY.local (15243)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find SitePhoto with 'id'=26

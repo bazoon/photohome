@@ -8,12 +8,12 @@
 
 <div class="row">
 
-   <% @album.site_photos.each_with_index do |photo,index| %>
+   <% @album.album_photos.each_with_index do |album_photo,index| %>
   
     <div class="col-sm-3" >
       <div class="thumbnail">  
-	      <%= render partial: "photos/thumb", locals: { photo: photo, path: site_photo_path(photo) } %>
-	      <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
+	      <%= render partial: "photos/thumb", locals: { photo: album_photo.photo, path: album_photo_path(album_photo) } %>
+	      <%= render partial: "photos/caption", locals: { photo: album_photo.photo, links: [] } %>
 	    </div>
 	  </div>
 

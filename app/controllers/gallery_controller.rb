@@ -23,7 +23,7 @@ class GalleryController < ApplicationController
 
   def show
     
-    @photo = Photo.find(params[:photo_id])
+    @photo = Photo.friendly.find(params[:photo_id])
     @themes = @photo.theme_tags
     #Нужно подумать об изменениях комментариев при кешировании !!!
     

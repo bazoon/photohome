@@ -2,6 +2,9 @@ class Photo < ActiveRecord::Base
 	# belongs_to :gallery
 
   include PhotoAgePolicy
+  extend FriendlyId
+
+  friendly_id :title, use: :slugged
 
   PORTFOLIO_ID = 0
   REVIEW_ID = 1

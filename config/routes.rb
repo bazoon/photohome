@@ -88,7 +88,8 @@ Photohome::Application.routes.draw do
       end
 
 
-      resources :site_photos, concerns: :commentable
+      resources :photos, concerns: :commentable, only: [:show]
+      resources :album_photos, only: [:show], concerns: :commentable
       
 
       resources :competitions, only: [:index, :show] do

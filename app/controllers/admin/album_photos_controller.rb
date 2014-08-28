@@ -1,5 +1,5 @@
 class Admin::AlbumPhotosController < ApplicationController
-  before_action :set_album_photo, only: [:edit,:show, :update, :destroy]
+  before_action :set_album_photo, only: [:edit, :update, :destroy]
 
   def new
     @photo = Photo.new
@@ -14,20 +14,20 @@ class Admin::AlbumPhotosController < ApplicationController
 
   end
 
-  def show
-    
-  end
-
   def create
-    album_photo = AlbumPhoto.new(album_photo_params.except(:photo))
-    photo = album_photo.build_photo(album_photo_params[:photo])
-    photo.user_id = current_user.id
+    @album_photo = AlbumPhoto.new(album_photo_params.except(:photo))
+    @album = Admin::Album.find(@album_photo.album_id)
+    @photo = Photo.new(album_photo_params[:photo])
+    @photo.user_id = current_user.id
+    @photo.save
+    @album_photo.photo_id = @photo.id
     
-  
+    
     
     respond_to do |format|
-      if album_photo.save
-        format.html { redirect_to admin_album_path(album_photo.album), notice: 'album_photo was successfully added.' }
+      if @album_photo.save
+
+        format.html { redirect_to admin_album_path(@album_photo.album), notice: 'album_photo was successfully added.' }
       else
         format.html { render action: 'new' }
       end

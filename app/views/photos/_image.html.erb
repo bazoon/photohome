@@ -15,9 +15,9 @@
 <p>
 	<strong>Автор: </strong>
 	<% if photo.user %>
-  	<%= link_to(photo.author, user_profile_path(photo.user))  %>
+  	<%= link_to(photo.author_name, user_profile_path(photo.user))  %>
 	<% else %>
-		<%= photo.author %>
+		<%= photo.author_name %>
 	<% end %>
 </p>
 
