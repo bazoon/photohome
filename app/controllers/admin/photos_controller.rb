@@ -45,7 +45,7 @@
   end
 
   def show
-    @photo = Photo.find(params[:id])
+    @photo = Photo.friendly.find(params[:id])
     @photo_ids = params[:photo_ids]
     
     photos = @photo_ids.split(",").map(&:to_i)
@@ -58,12 +58,12 @@
   end
 
   def edit
-      @photo = Photo.find(params[:id])
+      @photo = Photo.friendly.find(params[:id])
   end
 
   def publish
     @id = params[:id]
-    @published = Photo.find(@id).publish
+    @published = Photo.friendly.find(@id).publish
 
     respond_to do |format|
       format.js
@@ -73,7 +73,7 @@
 
   def destroy
     @id = params[:id]
-    @photo = Photo.find(@id)
+    @photo = Photo.friendly.find(@id)
     @photo.delete_in_24_hours
 
     respond_to do |format|
@@ -84,7 +84,7 @@
 
   def undelete
     @id = params[:id]
-    @photo = Photo.find(@id)
+    @photo = Photo.friendly.find(@id)
     @photo.undelete
 
     respond_to do |format|
@@ -94,7 +94,7 @@
   end
 
   def update
-     @photo = Photo.find(params[:id])
+     @photo = Photo.friendly.find(params[:id])
     respond_to do |format|
       if @photo.update(photo_params)
         format.html { redirect_to admin_photos_path, notice: 'Photo was successfully updated.' }

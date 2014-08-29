@@ -10,7 +10,7 @@ class Admin::AlbumPhotosController < ApplicationController
   end
 
   def edit
-    @photo = Photo.find(@album_photo.photo_id)
+    @photo = Photo.friendly.find(@album_photo.photo_id)
 
   end
 
