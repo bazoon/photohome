@@ -62,8 +62,11 @@
   end
 
   def publish
-    @id = params[:id]
-    @published = Photo.friendly.find(@id).publish
+    
+    photo = Photo.friendly.find(params[:id])
+    @published  = photo.publish
+    @id = photo.id
+
 
     respond_to do |format|
       format.js
