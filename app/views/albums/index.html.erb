@@ -15,7 +15,7 @@
 			  
    	  <div class="col-sm-3" >
     	<div class="thumbnail">  
-      <%= render partial: "photos/thumb", locals: { photo: album_photo.photo, path: gallery_show_path(album_photo.photo) } %>
+      <%= render partial: "photos/thumb", locals: { photo: album_photo.photo, path: album_carousel_path(album,album_photo) } %>
  
       <%= render partial: "photos/caption", locals: { photo: album_photo.photo, links: [] } %>
     	</div>
