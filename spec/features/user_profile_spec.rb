@@ -49,8 +49,9 @@ it "Can see own profile" do
     
     User.stub(:current).and_return(user)   
      
-    photo = FactoryGirl.build(:photo)
-    photo.user = user
+    photo = FactoryGirl.build(:accessible_photo)
+    photo.user = user    
+    
     photo.theme_tokens = "mood town"
     photo.save
 

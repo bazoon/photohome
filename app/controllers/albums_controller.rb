@@ -4,17 +4,17 @@ class AlbumsController < ApplicationController
 
   def index
   	@albums = Admin::Album.all
-    @last_photos = SitePhoto.last(4)
+    # @last_photos = Photo.last(4)
   end
 
 
   def show
-    @site_photos = @album.last_photos
+    
   end
 
   def carousel
-    @site_photo = SitePhoto.find(params[:site_photo_id])
-    @others = @album.site_photos
+    @album_photo = AlbumPhoto.find(params[:album_photo_id])
+    @others = @album.album_photos
   end
 
 

@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-	# belongs_to :gallery
+
 
   include PhotoAgePolicy
   extend FriendlyId

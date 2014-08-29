@@ -15,7 +15,6 @@ class Ability
       if user.has_role? :moder
         can :manage, Novelty  
         can :manage, Admin::Album
-        can :manage, SitePhoto  
         can :manage, Admin::Setting
         can :manage, Article
       end
@@ -47,9 +46,6 @@ class Ability
       user.age >= photo.age_policy_age
     end
 
-    can :view, SitePhoto do |site_photo|
-      user.age >= site_photo.age_policy_age
-    end
 
     can :create, :Like
     can :manage, :Like, user_id: user.id
@@ -71,9 +67,6 @@ class Ability
         photo.age_policy_age <= 16 
       end  
       
-      can :view, SitePhoto do |site_photo|
-        site_photo.age_policy_age <= 16 
-      end  
 
 
 

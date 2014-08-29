@@ -3,6 +3,7 @@
 <% cache(cache_key_album_last_photos) do %>
 
 
+
 <% @albums.each do |album| %>
 <p>
 <h3><%= link_to album.title, album_path(album) %></h3>
@@ -10,13 +11,13 @@
 
 <small><%= t('authors') %> : <%= album.authors %></small>
 </p>
-	<% album.last_photos.each_with_index do |photo,index| %>
+	<% album.last_photos.each_with_index do |album_photo,index| %>
 			  
    	  <div class="col-sm-3" >
     	<div class="thumbnail">  
-      <%= render partial: "photos/thumb", locals: { photo: photo, path: album_carousel_path(album.id,photo.id) } %>
+      <%= render partial: "photos/thumb", locals: { photo: album_photo.photo, path: gallery_show_path(album_photo.photo) } %>
  
-      <%= render partial: "photos/caption", locals: { photo: photo, links: [] } %>
+      <%= render partial: "photos/caption", locals: { photo: album_photo.photo, links: [] } %>
     	</div>
     
   	</div>

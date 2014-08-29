@@ -5,11 +5,11 @@
 
 <div class="fotorama" data-shuffle="false" data-nav="thumbs" data-width="100%" >
 			
-		 <a href="<%= @site_photo.image_url(:normal) %>" data-fit="scaledown"></a>
-     <% @others.each do |photo| %>
+		 <a href="<%= @album_photo.image_url(:normal) %>" data-fit="scaledown"></a>
+     <% @others.each do |album_photo| %>
 	   	
-	   	<% unless photo.id == @site_photo.id  %>  
-	     <a href="<%= photo.image_url(:normal) %>" data-fit="scaledown"></a>
+	   	<% unless album_photo.id == @album_photo.id  %>  
+	     <a href="<%= album_photo.image_url(:normal) %>" data-fit="scaledown"></a>
      	<% end %>
      
      <% end %> 
@@ -20,6 +20,6 @@
 
 <button type="button" class="btn btn-default btn-lg">
 
-	<%= link_to comment_icon, site_photo_path(@site_photo), class: 'comlink' %>
+	<%= link_to comment_icon, gallery_show_path(@album_photo.photo), class: 'comlink' %>
 </button>
 

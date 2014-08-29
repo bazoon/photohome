@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
   end
 
   def view
-    @photo = Photo.find(params[:photo_id])
+    @photo = Photo.friendly.find(params[:photo_id])
     # fresh_when(@photo)
   end
 
@@ -105,7 +105,7 @@ class PhotosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
-      @photo = Photo.find(params[:id])
+      @photo = Photo.friendly.find(params[:id])
     end
 
     def set_user

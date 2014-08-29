@@ -1,17 +1,16 @@
 class Admin::Album < ActiveRecord::Base
-  has_many :site_photos, dependent: :destroy
   has_many :album_photos, dependent: :destroy
   has_many :photos, through: :album_photos
 
   SHOW_COUNT = 4
 
 	def last_photos
-		photos.last(SHOW_COUNT)
+		album_photos.last(SHOW_COUNT)
 	end
 
   #!!!optimize this via sql ?
 	def authors
-		photos.includes(:user).map(&:author_name).compact.uniq
+		photos.map(&:author_name).compact.uniq
 		# SitePhoto.find(site_photos.ids) #.pluck(:author)
 		# SitePhoto.find_by_sql("select author from site_photos where id in (#{site_photos.ids.split(",")} )")
 		# SitePhoto.where(id: site_photos.ids).pluck(:user_name)

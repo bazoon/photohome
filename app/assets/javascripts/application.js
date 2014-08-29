@@ -76,7 +76,7 @@ $('.fotorama').on(
     var re = /\d+/;
     var href = fotorama.activeFrame.img
     var id = href.match(re)
-    var image_path = "/site_photos/"+id;  
+    var image_path = "/gallery/show/"+id;  
 //!!! Здесь нет префикса языка 
 
     $(".comlink").attr('href',image_path)

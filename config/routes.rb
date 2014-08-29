@@ -1,20 +1,12 @@
 Photohome::Application.routes.draw do
-
-
- 
-
   
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
 
- 
-
   concern :commentable do
     resources :comments
   end
-
-       
   
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
@@ -109,15 +101,9 @@ Photohome::Application.routes.draw do
 
     resources :albums, only: [:index, :show]   
     
-    get "/albums/:id/site_photo/:site_photo_id", to: 'albums#carousel', as: :album_carousel
+    get "/albums/:id/album_photo/:album_photo_id", to: 'albums#carousel', as: :album_carousel
     
-    get '/site_photos/choose/:photo_id', to: 'site_photos#choose', as: :choose_site_photo     
-
     
-    # TODO: 0 Make site_photo without admin prefix
-  
-    
-
       # ADMIN routes
     resources :cloud, only: [:index, :show]  
 
@@ -165,12 +151,9 @@ Photohome::Application.routes.draw do
 
 
         #Галлерея сайта
-        # resources :site_photos 
-
                 
-        #Альбомы сайта
         resources :albums do
-          resources :site_photo
+          
           resources :album_photos, only: [:new, :edit, :create, :update,:destroy,:show]
           resources :fill_album_from_tags, only: [:new, :create]
           resources :fill_album_from_selected, only: [:create]

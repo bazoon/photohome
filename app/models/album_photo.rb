@@ -6,4 +6,11 @@ class AlbumPhoto < ActiveRecord::Base
     validates :album_id, :photo_id, presence: true
     acts_as_commentable
 
+
+
+    def image_url(kind)
+        photo.image_url(kind)
+    end
+
+
 end

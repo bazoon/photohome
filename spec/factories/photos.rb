@@ -9,6 +9,7 @@ FactoryGirl.define do
 	    user_id 1
 	    image "accessible_photo"
 	    association :age_policy, factory: :age_policy_6
+	    
 	  end
 
 	  factory :restricted_photo do
