@@ -2,5 +2,8 @@
      description: "О Тюменском доме фотографии",
      keywords: %w(правила тюмень фотография)
 %>
+
+<% breadcrumb :about_rules %>
+
 <h1><%= I18n.t(:rules) %></h1>
 <%= raw SiteRule.rules(I18n.locale) %>

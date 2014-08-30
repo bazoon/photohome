@@ -6,6 +6,15 @@ crumb :competitions do
   link I18n.t(:contests), competitions_path
 end
 
+crumb :about_us do
+  link I18n.t(:about_us), about_us_path
+end
+
+crumb :about_rules do
+  link I18n.t(:rules), about_rules_path
+end
+
+
 crumb :competition do |competition|
   link competition.title, competition_path(competition)
   parent :competitions
