@@ -10,10 +10,8 @@ class Admin::Album < ActiveRecord::Base
 
   #!!!optimize this via sql ?
 	def authors
-		photos.map(&:author_name).compact.uniq
-		# SitePhoto.find(site_photos.ids) #.pluck(:author)
-		# SitePhoto.find_by_sql("select author from site_photos where id in (#{site_photos.ids.split(",")} )")
-		# SitePhoto.where(id: site_photos.ids).pluck(:user_name)
+		authors = photos.map(&:author_name).compact.uniq
+		authors.count == 1 ? authors.first : authors
 	end
 
 

@@ -5,11 +5,8 @@
    <br>
    <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) if @setting_decorator.album %>
    </h3>
-   <small><%= t('authors') %> : <%= @setting_decorator.album.authors if @setting_decorator.album && @setting_decorator.album.authors %></small>
+   <small><%= author_label(@setting_decorator.album) %> : <%= @setting_decorator.authors if @setting_decorator.album && @setting_decorator.album.authors %></small>
   </p>
-
-
-
 
 <% if @setting_decorator.photos  %>
   <div class="fotorama" data-autoplay="true" data-width="100%"
@@ -23,10 +20,7 @@
      <% end %> 
   </div>
 
-
   <% end %>
-
-
   
   <% if @setting_decorator.novelty  %>
     <div>
@@ -37,8 +31,6 @@
       <small> <%= age_badge(@setting_decorator.novelty.age_policy_age)%> </small>
     </div>
    <% end %>
-
-
 
 
 <div style="clear:both;"></div>

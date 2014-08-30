@@ -9,7 +9,7 @@
 <h3><%= link_to album.title, album_path(album) %></h3>
 
 
-<small><%= t('authors') %> : <%= album.authors %></small>
+<small><%= author_label(album) %> : <%= album.authors %></small>
 </p>
 	<% album.last_photos.each_with_index do |album_photo,index| %>
 			  

@@ -13,4 +13,9 @@ module AlbumHelper
     "album_photo/all-#{count1}-#{count}-#{max_updated_at}-#{I18n.locale}"
   end
 
+  def author_label(album)
+    album.authors.is_a?(Array) ? I18n.t(:authors) : I18n.t(:author)
+  end
+
+
 end
