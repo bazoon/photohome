@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-    <title><%= title %></title>
-    
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Photohome" %>">
+  
+  
+    <%= metamagic title: "Тюменский дом фотографии", description: "Тюменский дом фотографии", keywords: %w(Тюмень фотография дом фотоискусство история) %>
+  
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>

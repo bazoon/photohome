@@ -110,6 +110,7 @@ gem 'simplecov', :require => false, :group => :test
 gem 'gretel'
 gem 'selenium-webdriver'
 gem "rails_best_practices"
+gem 'metamagic'
 
 
 
