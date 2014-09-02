@@ -8,7 +8,8 @@ class CompetitionPhoto < ActiveRecord::Base
   attr_reader :photo_ids
 
   delegate :image_url,:title,to: :photo
-  delegate :image_url,:title,to: :photo
+  delegate :image_url_for_others,to: :photo
+
   has_many :jury_ratings
   has_many :likes
 

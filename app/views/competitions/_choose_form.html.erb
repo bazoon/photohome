@@ -10,10 +10,17 @@
       <div class="row">
         <% @photos.each_with_index do |photo,index| %>
              
-          <%= link_to_function(image_tag(photo.image_url(:thumb)),"add_photo(#{photo.id})",id: "ph#{photo.id}",:class => "thumbnail") %>
+
+          <%= link_to(image_tag(photo.image_url(:thumb)),"#", onclick: "add_photo(#{photo.id}); return false",id: "ph#{photo.id}",:class => "thumbnail") %>
          
         <% end %>
       </div>  
     </div>  
 
       </div>
+
+<script>
+  
+
+
+</script>
