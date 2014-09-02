@@ -104,7 +104,9 @@ module ApplicationHelper
     content_tag(:span,"",class:  approved ? "glyphicon glyphicon-thumbs-up" : "glyphicon glyphicon-thumbs-down",style: "font-size: 20px", id: id)
   end
 
-  
+  def letter_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-envelope")
+  end
 
   def comment_icon
     content_tag(:span,"",class: "glyphicon glyphicon-comment")

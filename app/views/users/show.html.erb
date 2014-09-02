@@ -4,6 +4,8 @@
 
 <br><br>
 
+<%= link_to(letter_icon, admin_user_letter_senders_path(@user), remote: true) if is_stuff? %>
+
 <table class="table table-responsive table-striped">
 <%=  field_info(@user,:name) %>
 <%=  field_info(@user,:last_name) %>
@@ -30,5 +32,5 @@
 
 </table>
 
-<h3><%= t('message') %></h3>
-<%= render partial: "letters/admin_form", locals: {from_user: current_user, to_user: @user, letter: @letter } %>
+
+

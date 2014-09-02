@@ -1,0 +1,2 @@
+<h3><%= t('message') %></h3>
+<%= render partial: "letters/admin_form", locals: {from_user: current_user, to_user: @user, letter: Letter.new } %>

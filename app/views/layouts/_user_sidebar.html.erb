@@ -11,5 +11,11 @@
   <li class= <%= "active" if params[:controller] == "photos" %>><%= link_to t("photos_"),user_photos_path(@user) %></li>
   <li class= <%= "active" if params[:controller] == "user_cloud" %>><%= link_to t("cloud"),user_cloud_path(@user) %></li>
 
+
+
   <%= render(:partial => "layouts/current_user_links", locals: {user: @user}) if @user == current_user %>
+
+  <li><%= link_to(letter_icon, admin_user_letter_senders_path(@user), remote: true) if is_stuff? %></li>
+  
+
 </ul>

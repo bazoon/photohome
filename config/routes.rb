@@ -1,5 +1,6 @@
 Photohome::Application.routes.draw do
   
+
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -177,7 +178,8 @@ Photohome::Application.routes.draw do
 
         end  
 
-        resources :site_rules
+        get '/letter/show/:user_id', to: 'user_letter_senders#show', as: :user_letter_senders
+        post '/letter/post', to: 'user_letter_senders#create', as: :user_letter_post
           
       end
     

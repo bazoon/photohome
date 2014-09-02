@@ -1,4 +1,4 @@
-<%= simple_form_for([from_user, letter]) do |f| %>
+<%= simple_form_for([from_user, letter], url: admin_user_letter_post_path) do |f| %>
   
   <%= f.error_notification %>
 
