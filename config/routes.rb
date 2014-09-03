@@ -1,6 +1,7 @@
 Photohome::Application.routes.draw do
   
 
+
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -159,6 +160,8 @@ Photohome::Application.routes.draw do
           resources :fill_album_from_tags, only: [:new, :create]
           resources :fill_album_from_selected, only: [:create]
 
+          
+
         end
         
         get '/album_photos/choose/:photo_id', to: 'album_photos#choose', as: :choose_album_photo  
@@ -181,6 +184,7 @@ Photohome::Application.routes.draw do
         get '/letter/show/:user_id', to: 'user_letter_senders#show', as: :user_letter_senders
         post '/letter/post', to: 'user_letter_senders#create', as: :user_letter_post
           
+        resources :stats, only: [:index, :show]  
       end
     
 

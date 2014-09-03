@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   skip_before_filter :authenticate_user!
 
   def index
-  	@albums = Admin::Album.all
+  	@albums = Admin::Album.all.order('created_at desc')
     # @last_photos = Photo.last(4)
   end
 

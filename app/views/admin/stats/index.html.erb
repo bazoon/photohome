@@ -1,0 +1,33 @@
+
+<h1>Статистика</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Показатель</th>
+      <th>Значение</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+      
+    <tr>
+        <td>Количество новых пользователей</td>
+        <td><%= @stats.new_users_count %></td>
+    </tr>
+
+    <tr>
+        <td>Количество новых фотографий</td>
+        <td><%= @stats.new_photo_count %></td>
+    </tr>
+    
+    <tr>
+        <td>Количество незакрытых тикетов</td>
+        <td><%= @stats.active_ticket_count %></td>
+    </tr>
+
+
+  </tbody>
+
+</table>
