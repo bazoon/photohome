@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
     @answer = answer
     @user = user
 
-    mail(to: @user.email, subject: 'Photohome message !')
+    
   end  
 
 end

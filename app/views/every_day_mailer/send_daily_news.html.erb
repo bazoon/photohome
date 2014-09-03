@@ -1,0 +1,8 @@
+<h1>Новости</h1>
+
+<% @info.articles.each do |a| %>
+
+<h2><%=  a.title %></h2>
+<p><%= raw a.digest %></p>
+
+<% end %>

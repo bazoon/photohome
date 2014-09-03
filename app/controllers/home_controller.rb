@@ -35,8 +35,8 @@ class HomeController < ApplicationController
 
     # end
 
-
-    render text: "OK"
+    EveryDayMailer.welcome_email(User.find(1))
+    render text: ENV.inspect
   end
 
 
