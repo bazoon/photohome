@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140904041028) do
+ActiveRecord::Schema.define(version: 20140904050608) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -85,6 +85,15 @@ ActiveRecord::Schema.define(version: 20140904041028) do
     t.integer  "article_id"
     t.text     "footer"
     t.string   "adult_image"
+  end
+
+  create_table "admin_subscription_logs", force: true do |t|
+    t.string   "resource"
+    t.integer  "resource_id"
+    t.date     "sent"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "album_photos", force: true do |t|

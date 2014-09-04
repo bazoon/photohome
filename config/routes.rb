@@ -195,7 +195,5 @@ Photohome::Application.routes.draw do
 
 
 
-    
-
-
+r
 end

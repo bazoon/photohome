@@ -120,3 +120,5 @@ gem 'awesome_print', :group => "development"
 gem 'bootstrap-editable-rails'
 gem 'gravatar-ultimate'
 gem 'whenever', :require => false
+gem 'sidekiq'
+gem 'sidekiq_mailer'

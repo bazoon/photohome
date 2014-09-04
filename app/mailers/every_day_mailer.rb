@@ -7,18 +7,10 @@ class EveryDayMailer < ActionMailer::Base
   #   en.every_day_mailer.send_daily_news.subject
   #
 
-  def send_daily_news
-    @info = EveryDayInfo.new
-    
-
-    
-    mail(to: "vith@yandex.com", subject: 'Photohome message !')
-
+  def send_daily_news(user, info)
+    @info = info
+    mail(to: user.email, subject: 'Новости Тюменского дома фотографии')
   end
 
-   def welcome_email(user)
-    @user = user
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
-  end
+  
 end
