@@ -1,0 +1,20 @@
+<h1><%= t("subscriptions") %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr >
+      <th class="span2"><%= t(".kind") %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @user_subscriptions %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t(".new"), new_user_subscription_path(current_user), class: "btn btn-primary" %>

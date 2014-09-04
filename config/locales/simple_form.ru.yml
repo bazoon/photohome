@@ -93,6 +93,8 @@ ru:
         locale: 'Язык'
         rules: 'Правила'
         rules_digest: 'Дайджест'
+      user_subscription:
+        kind: "Тип подписки"
 
 
 

@@ -10,6 +10,8 @@
 <ul class="nav nav-pills nav-stacked" >
   <li class= <%= "active" if params[:controller] == "photos" %>><%= link_to t("photos_"),user_photos_path(@user) %></li>
   <li class= <%= "active" if params[:controller] == "user_cloud" %>><%= link_to t("cloud"),user_cloud_path(@user) %></li>
+  <li class= <%= "active" if params[:controller] == "user_subscriptions" %>><%= link_to t("subscriptions"), user_subscriptions_path(@user) %></li>
+
 
 
 

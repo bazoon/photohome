@@ -1,0 +1,22 @@
+<%= simple_form_for([current_user,@user_subscription], url: @url, method: @method) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+        <%= f.input :kind, 
+        collection: UserSubscription::KINDS,
+        label_method: UserSubscription::LABEL, 
+        value_method: UserSubscription::VALUE, 
+        :input_html => {class: "form-control"} %>
+
+
+  </div>
+
+  
+  
+   
+   
+   <%= f.button :submit, value: t('save'), class: "btn btn-default" %>
+  
+<% end %>
+
+<br>

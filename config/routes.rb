@@ -1,7 +1,5 @@
 Photohome::Application.routes.draw do
   
-
-
   get "about/us"
   get "about/rules"
   mount RedactorRails::Engine => '/redactor_rails'
@@ -79,6 +77,7 @@ Photohome::Application.routes.draw do
         resources :messages, concerns: :commentable 
         resources :letters, concerns: :commentable 
         resources :incoming_letters, only: [:index, :show]
+        resources :subscriptions, controller: 'user_subscriptions'
       end
 
 
@@ -106,9 +105,10 @@ Photohome::Application.routes.draw do
     get "/albums/:id/album_photo/:album_photo_id", to: 'albums#carousel', as: :album_carousel
     
     
-      # ADMIN routes
+    
     resources :cloud, only: [:index, :show]  
 
+        # ADMIN routes
       namespace :admin do
 
          put 'ajax/test'

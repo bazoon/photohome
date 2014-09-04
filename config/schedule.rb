@@ -5,7 +5,7 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+# set :output, "/Users/vitaliynesterenko/projects/photohome/cron.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -17,8 +17,8 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.minutes do
-    runner "EveryDayMailer.send_dayly_news"
+every 1.minute do
+    runner "EveryDayMailer.send_daily_news.deliver"
 end
 
 # Learn more: http://github.com/javan/whenever

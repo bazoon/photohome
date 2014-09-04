@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  on_news: "Новости сайта"
+  on_site_photos: "Галереи сайта"
+  on_user_photos: "Фотографии пользователя"
+  subscriptions: "Подписки"
   tags: "Теги"
   author: "Автор"
   rules: "Правила"
@@ -250,6 +254,15 @@ ru:
     show:
       wait: "Запрос находится на рассмотрении"
       time_ago: "Отправлен"
+  user_subscriptions:
+    index:
+      kind: "Тип подписки"
+      new: "Новая подписка"
+    new:
+      new: "Новая подписка"
+    edit:
+      edit: "Редактировать подписку"
+
   admin:
     settings:
       index:

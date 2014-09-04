@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   has_many :messages, dependent: :destroy
   has_many :jury,class_name: "Admin::Jury"
   has_many :letters, dependent: :destroy
+  has_many :user_subscriptions
   
   acts_as_tagger
 
