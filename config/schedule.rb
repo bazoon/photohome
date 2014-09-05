@@ -18,7 +18,7 @@
 # end
 
 every 1.minute do
-    runner "EveryDayMailer.send_daily_news.deliver"
+    runner "DailySender.new.send_news_to_all_subscribed"
 end
 
 # Learn more: http://github.com/javan/whenever

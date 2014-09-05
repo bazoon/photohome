@@ -1,5 +1,5 @@
 class EveryDayMailer < ActionMailer::Base
-  default from: "domfoto72@gmail.com"
+  default from: "vith@yandex.ru"
 
   # include Sidekiq::Mailer
   

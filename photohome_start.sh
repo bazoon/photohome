@@ -5,7 +5,7 @@
 
 #sidekiq
 cd /var/www/photohome
-bundle exec sidekiq -d -L /var/www/photohome/log/sidekiq.log
+bundle exec sidekiq -d -L /var/www/photohome/log/sidekiq.log -e production
 
 #main
 /home/deployer/.rbenv/versions/2.1.0/bin/puma -d -e production
