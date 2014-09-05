@@ -134,8 +134,6 @@ class Photo < ActiveRecord::Base
     save
   end
 
-  handle_asynchronously :remove_attached_image, :run_at => Proc.new { 24.hours.from_now }
-
   def author_name
     author || user && user.full_name
   end
@@ -143,17 +141,17 @@ class Photo < ActiveRecord::Base
   def delete_in_24_hours
     self.published = false
     self.deleted = true  
-    self.delayed_job_id=self.remove_attached_image.id
-    self.save!
-    self.destroy
+    self.sidekiq_id = DeletePhotoWorker.perform_at(1.minutes.from_now, self.id)
+    self.save
   end
 
   def undelete
-    if self.delayed_job_id
-      Delayed::Job.find(self.delayed_job_id).destroy 
+    
+    if self.sidekiq_id
+      Workers.remove_job(self.sidekiq_id)
       self.published = true
       self.deleted = false
-      self.save!
+      self.save
     end  
   end
 

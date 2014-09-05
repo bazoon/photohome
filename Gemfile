@@ -122,5 +122,5 @@ gem 'gravatar-ultimate'
 gem 'whenever', :require => false
 gem 'sidekiq'
 # gem 'sidekiq_mailer'
-# gem 'sinatra', require: false
-# gem 'slim'
+gem 'sinatra', require: false
+gem 'slim'

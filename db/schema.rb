@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140904050608) do
+ActiveRecord::Schema.define(version: 20140905040722) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -260,6 +260,7 @@ ActiveRecord::Schema.define(version: 20140904050608) do
     t.integer  "age_policy_id"
     t.string   "author"
     t.string   "slug"
+    t.string   "sidekiq_id"
   end
 
   add_index "photos", ["slug"], name: "index_photos_on_slug", unique: true, using: :btree

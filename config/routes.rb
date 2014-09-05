@@ -196,7 +196,7 @@ Photohome::Application.routes.draw do
 
 
 
-# require 'sidekiq/web'
-# mount Sidekiq::Web, at: "/sidekiq"
+require 'sidekiq/web'
+mount Sidekiq::Web, at: "/sidekiq"
 
 end
