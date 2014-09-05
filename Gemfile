@@ -14,7 +14,7 @@ gem "daemons"
 
 # RAILS_ENV=production script/delayed_job start
 # RAILS_ENV=production script/delayed_job stop
-gem 'delayed_job_active_record'
+# gem 'delayed_job_active_record'
 
 gem 'newrelic_rpm'
 gem 'yui-compressor'
@@ -111,8 +111,6 @@ gem 'gretel'
 gem 'selenium-webdriver'
 gem "rails_best_practices"
 gem 'metamagic'
-
-
 
 gem "bullet", :group => "development"
 gem 'goldiloader'

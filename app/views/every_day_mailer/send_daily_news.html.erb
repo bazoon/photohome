@@ -1,8 +1,17 @@
 <h1>Новости</h1>
 
-<% @info.articles.each do |a| %>
+<%- @info.novelties.each do |a| -%>
 
-<h2><%=  a.title %></h2>
+<h2><%= a.title %></h2>
 <p><%= raw a.digest %></p>
+<hr>
+<%- end -%>
 
-<% end %>
+<h1>Статьи</h1>
+
+<%- @info.articles.each do |a| -%>
+
+<h2><%= a.title %></h2>
+<p><%= raw a.digest %></p>
+<hr>
+<%- end -%>
