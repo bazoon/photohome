@@ -10,6 +10,11 @@ class EveryDayInfo
         # @novelties = Novelty.all
         # @articles = Article.all
     end
+
+    def empty?
+        
+        @novelties.count == 0 && @articles.count == 0
+    end
     
 
 

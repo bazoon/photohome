@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
 
   extend FriendlyId
 
+  ## FIXME: some
   friendly_id :title, use: :slugged
 
   def author

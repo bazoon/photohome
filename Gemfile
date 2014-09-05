@@ -98,7 +98,6 @@ gem 'babosa'
 gem 'jquery-turbolinks'
 gem 'pry'
 
-
 gem 'capybara'
 gem 'zeus'
 
