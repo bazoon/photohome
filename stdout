@@ -451,3 +451,7 @@
 [11628] 05 Sep 14:48:13.087 * Background saving started by pid 11743
 [11743] 05 Sep 14:48:13.088 * DB saved on disk
 [11628] 05 Sep 14:48:13.188 * Background saving terminated with success
+[11628] 05 Sep 14:53:14.041 * 10 changes in 300 seconds. Saving...
+[11628] 05 Sep 14:53:14.041 * Background saving started by pid 11835
+[11835] 05 Sep 14:53:14.043 * DB saved on disk
+[11628] 05 Sep 14:53:14.142 * Background saving terminated with success
