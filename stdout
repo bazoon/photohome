@@ -312,3 +312,59 @@
 [9433] 05 Sep 10:41:01.007 * Background saving started by pid 10181
 [10181] 05 Sep 10:41:01.009 * DB saved on disk
 [9433] 05 Sep 10:41:01.108 * Background saving terminated with success
+[9433] 05 Sep 10:46:02.011 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 10:46:02.013 * Background saving started by pid 10253
+[10253] 05 Sep 10:46:02.015 * DB saved on disk
+[9433] 05 Sep 10:46:02.114 * Background saving terminated with success
+[9433] 05 Sep 10:51:03.082 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 10:51:03.082 * Background saving started by pid 10303
+[10303] 05 Sep 10:51:03.085 * DB saved on disk
+[9433] 05 Sep 10:51:03.183 * Background saving terminated with success
+[9433] 05 Sep 10:56:04.076 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 10:56:04.077 * Background saving started by pid 10350
+[10350] 05 Sep 10:56:04.079 * DB saved on disk
+[9433] 05 Sep 10:56:04.178 * Background saving terminated with success
+[9433] 05 Sep 11:01:05.074 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:01:05.075 * Background saving started by pid 10415
+[10415] 05 Sep 11:01:05.077 * DB saved on disk
+[9433] 05 Sep 11:01:05.176 * Background saving terminated with success
+[9433] 05 Sep 11:06:06.058 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:06:06.059 * Background saving started by pid 10479
+[10479] 05 Sep 11:06:06.061 * DB saved on disk
+[9433] 05 Sep 11:06:06.160 * Background saving terminated with success
+[9433] 05 Sep 11:11:07.023 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:11:07.024 * Background saving started by pid 10531
+[10531] 05 Sep 11:11:07.026 * DB saved on disk
+[9433] 05 Sep 11:11:07.125 * Background saving terminated with success
+[9433] 05 Sep 11:16:08.069 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:16:08.070 * Background saving started by pid 10584
+[10584] 05 Sep 11:16:08.073 * DB saved on disk
+[9433] 05 Sep 11:16:08.171 * Background saving terminated with success
+[9433] 05 Sep 11:21:09.031 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:21:09.032 * Background saving started by pid 10652
+[10652] 05 Sep 11:21:09.034 * DB saved on disk
+[9433] 05 Sep 11:21:09.134 * Background saving terminated with success
+[9433] 05 Sep 11:26:10.088 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:26:10.088 * Background saving started by pid 10684
+[10684] 05 Sep 11:26:10.090 * DB saved on disk
+[9433] 05 Sep 11:26:10.190 * Background saving terminated with success
+[9433] 05 Sep 11:31:11.018 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:31:11.019 * Background saving started by pid 10723
+[10723] 05 Sep 11:31:11.021 * DB saved on disk
+[9433] 05 Sep 11:31:11.121 * Background saving terminated with success
+[9433] 05 Sep 11:36:12.085 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:36:12.089 * Background saving started by pid 10779
+[10779] 05 Sep 11:36:12.092 * DB saved on disk
+[9433] 05 Sep 11:36:12.190 * Background saving terminated with success
+[9433] 05 Sep 11:41:13.057 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:41:13.058 * Background saving started by pid 10832
+[10832] 05 Sep 11:41:13.060 * DB saved on disk
+[9433] 05 Sep 11:41:13.159 * Background saving terminated with success
+[9433] 05 Sep 11:46:14.036 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:46:14.038 * Background saving started by pid 10891
+[10891] 05 Sep 11:46:14.040 * DB saved on disk
+[9433] 05 Sep 11:46:14.139 * Background saving terminated with success
+[9433] 05 Sep 11:51:15.030 * 10 changes in 300 seconds. Saving...
+[9433] 05 Sep 11:51:15.032 * Background saving started by pid 10949
+[10949] 05 Sep 11:51:15.034 * DB saved on disk
+[9433] 05 Sep 11:51:15.133 * Background saving terminated with success
