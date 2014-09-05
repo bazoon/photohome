@@ -1,6 +1,8 @@
 class EveryDayMailer < ActionMailer::Base
   default from: "domfoto72@gmail.com"
 
+  # include Sidekiq::Mailer
+  
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #

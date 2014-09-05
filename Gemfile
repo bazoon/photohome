@@ -121,4 +121,6 @@ gem 'bootstrap-editable-rails'
 gem 'gravatar-ultimate'
 gem 'whenever', :require => false
 gem 'sidekiq'
-gem 'sidekiq_mailer'
+# gem 'sidekiq_mailer'
+# gem 'sinatra', require: false
+# gem 'slim'
