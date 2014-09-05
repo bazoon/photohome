@@ -16,7 +16,7 @@
 
 
   <%= render(:partial => "layouts/current_user_links", locals: {user: @user}) if @user == current_user %>
-  # TODO: путь к админ контроллеру поправить на общий
+  <!-- # TODO: путь к админ контроллеру поправить на общий -->
   <li><%= link_to(letter_icon, admin_user_letter_senders_path(@user), remote: true)  %></li>
   
 
