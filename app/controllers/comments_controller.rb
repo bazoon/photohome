@@ -55,8 +55,17 @@ class CommentsController < ApplicationController
 
     def load_commentable
       prefix = params[:comment][:commentable]
-      @commentable = prefix+"_id"
-      @commentable = prefix.camelize.constantize.friendly.find(params[prefix+"_id"])
+      # @commentable = prefix+"_id"
+      @model = prefix.camelize.constantize
+      
+      #TODO: возможно вынести отдельно
+      @commentable = if @model.respond_to?(:friendly)
+        @model.friendly.find(params[prefix+"_id"])
+      else
+        @model.find(params[prefix+"_id"])
+      end
+       
+
     end
 
 
