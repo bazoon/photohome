@@ -2,6 +2,7 @@ Photohome::Application.routes.draw do
   
   get "about/us"
   get "about/rules"
+
   mount RedactorRails::Engine => '/redactor_rails'
 
   concern :commentable do
@@ -113,6 +114,7 @@ Photohome::Application.routes.draw do
 
          put 'ajax/test'
 
+        resources :site_rules
         resources :messages, concerns: :commentable
         resources :banners      
         resources :banner_placements
