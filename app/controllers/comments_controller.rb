@@ -54,6 +54,7 @@ class CommentsController < ApplicationController
 
 
     def load_commentable
+      binding.pry
       prefix = params[:comment][:commentable]
       # @commentable = prefix+"_id"
       @model = prefix.camelize.constantize

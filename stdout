@@ -471,3 +471,9 @@
 [11628] 05 Sep 15:13:18.025 * Background saving started by pid 13138
 [13138] 05 Sep 15:13:18.027 * DB saved on disk
 [11628] 05 Sep 15:13:18.127 * Background saving terminated with success
+[11628 | signal handler] (1410943536) Received SIGTERM, scheduling shutdown...
+[11628] 17 Sep 14:45:36.170 # User requested shutdown...
+[11628] 17 Sep 14:45:36.172 * Saving the final RDB snapshot before exiting.
+[11628] 17 Sep 14:45:36.178 * DB saved on disk
+[11628] 17 Sep 14:45:36.178 * Removing the pid file.
+[11628] 17 Sep 14:45:36.178 # Redis is now ready to exit, bye bye...
