@@ -12,19 +12,19 @@ end
 
 def update
   user_ids = params[:admin_jury][:user_tokens]
-  competition_id = params[:competition]
+  competition = Competition.friendly.find(params[:competition])
   user_ids = user_ids.split(",")
 
   user_ids.each do |id|   
 
 
-    is_there = Admin::Jury.where(user_id: id,competition_id: competition_id).count > 0
+    is_there = Admin::Jury.where(user_id: id,competition: competition).count > 0
 
         
-    if (not is_there) && competition_id
+    if (not is_there) && competition
       jury = Admin::Jury.new
       jury.user_id = id
-      jury.competition_id = competition_id
+      jury.competition = competition
       jury.save!
     end
 
