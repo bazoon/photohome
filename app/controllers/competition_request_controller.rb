@@ -4,7 +4,7 @@ class CompetitionRequestController < ApplicationController
 
 
   def show
-    @request = CompetitionRequest.friendly.find(params[:id])
+    @request = CompetitionRequest.find(params[:id])
   end
 
   def create
