@@ -8,7 +8,7 @@ class Admin::CompetitionRequestsController < ApplicationController
 
 
   def edit
-
+    
 
   end
 
