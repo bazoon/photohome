@@ -13,6 +13,10 @@ class CompetitionPhotoApply
                                             @user.id,@competition.id).references(:photos)
   end
 
+
+  def by_nomination
+    @by_nomination ||= @_photos.group_by { |p| p.nomination.title }
+  end
  
 
   def create(photo_ids,nomination_id)

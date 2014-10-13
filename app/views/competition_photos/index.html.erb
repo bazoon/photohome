@@ -6,26 +6,37 @@
 <% breadcrumb :competition_photos, @apply_info.competition %>
 
 <br>
-<%= link_to t(:apply),aply_competition_path(@apply_info.competition),{class: "btn btn-primary"} %>
+<%= link_to t(:load_photos), aply_competition_path(@apply_info.competition), {class: "btn btn-primary"} %>
 
-<h1><%= @apply_info.competition.title %></h1>
-<h2>Отправленные фотографии</h2>
+<% if @apply_info.photos.empty? %>
+  <h2><%= t('no_photo_loaded') %></h2>
+<% else %>
+  <h2><%= t('loaded_photos') %></h2>
+<% end %>
+
+
 <br>
-<div class="row">
 
-    <% @apply_info.photos.each_with_index do | competition_photo,index| %>
+    <% @apply_info.by_nomination.each_key do |nomination| %>
+    <h2>  <%= nomination %></h2>
+    <div class="row">
+    
+
+    <% @apply_info.by_nomination[nomination].each_with_index do |competition_photo,index| %>
  
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <%= render partial: "photos/thumb", locals: { photo: competition_photo, path: gallery_show_path(competition_photo.photo) } %>
-      <%- l1 = link_to del_icon, competition_photo_path(@apply_info.competition, competition_photo), method: :delete, data: { confirm: 'Are you sure?' } unless @apply_info.competition.overdue? %>
-      <%= render partial: "photos/caption", locals: { photo: competition_photo.photo, links: [l1] } %>
-    </div>
+      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <%= render partial: "photos/thumb", locals: { photo: competition_photo, path: gallery_show_path(competition_photo.photo) } %>
+        <%- l1 = link_to del_icon, competition_photo_path(@apply_info.competition, competition_photo), method: :delete, data: { confirm: 'Are you sure?' } unless @apply_info.competition.overdue? %>
+        <%= render partial: "photos/caption", locals: { photo: competition_photo.photo, links: [l1] } %>
+      </div>
+    
+    <% end %>
 
   
 
 
-    
+    </div>
   <% end %>
   
-</div>
+
 

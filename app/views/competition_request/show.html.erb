@@ -1,4 +1,4 @@
-<h3>Статус запроса</h3>
+<h3><%= t('request_sent') %></h3>
 
 <p> <%= @request.decision || t("competition_requests.show.wait") %>  </p>
 <p> <%= t("competition_requests.show.time_ago") %>: <%= distance_of_time_in_words(Time.zone.now, @request.created_at) %> </p>

@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  no_photo_loaded: "Пока нет загруженных фотографий, нажмите на кнопку выше."
+  loaded_photos: "Загруженные фотографии"
+  load_photos: "Загрузить фотографии"
+  request_sent: "Ваш запрос был отправлен администратору, зайдите сюда позже, когда запрос будет одобрен."
   history: "История"
   send_request: "Подать запрос"
   on_news: "Новости сайта"
