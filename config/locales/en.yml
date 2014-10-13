@@ -20,6 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  history: "History"
+  choose_competition: "Choose"
+  sent_letters: "Sent"
+  in_letters: "Incoming"
+  tags: "Tags"
+  authors: "Authors"
+  last_photos: "Last photos"  
+  galleries: "Galleries"
+  about_us: "About us"
+  home: "Home"
+  send_request: "Send request"
+  photos_: "Photos"
   rules: "Terms of use"
   save: "Save"
   opened: "Opened"
@@ -85,7 +97,7 @@ en:
       index:
         list: "Contests"
         title: "Title"
-        last_date: "Last date"
+        last_date: "Send photos till"
         open_date: "Open date"      
       aply:
         choose_photo: "Choose photographs"

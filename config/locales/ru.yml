@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  history: "История"
+  send_request: "Подать запрос"
   on_news: "Новости сайта"
   on_site_photos: "Галереи сайта"
   on_user_photos: "Фотографии пользователя"
@@ -205,8 +207,8 @@ ru:
       index:
         list: "Конкурсы"
         title: "Название"
-        last_date: "Дата сдачи работ"
-        open_date: "Дата открытия" 
+        last_date: "Сдать работы до"
+        open_date: "Дата оглашения результатов" 
         type: "Тип конкурса"     
       aply:
         choose_photo: "Выберите фотографии"

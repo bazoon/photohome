@@ -1,9 +1,9 @@
 <li class="dropdown  <%= "active" if params[:controller] == "albums" || params[:controller] == "gallery" %>">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Фотографии<b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t('photos_') %><b class="caret"></b></a>
  
   <ul class="dropdown-menu">
     
-    <li><%= link_to I18n.t(:galleries), albums_path %></li>
+    <li><%= link_to I18n.t("galleries"), albums_path %></li>
     <li><%= link_to I18n.t("last_photos"), gallery_index_path %></li>
     
     <li><%= link_to I18n.t('authors'), author_index_path %> </li>
