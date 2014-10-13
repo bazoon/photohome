@@ -21,7 +21,7 @@ crumb :competition do |competition|
 end
 
 crumb :view_competition_photos do |competition|
-  link I18n.t(:photos_), view_photos_competition_path(competition)
+  link competition.title, view_photos_competition_path(competition)
   parent :competitions
 end
 

@@ -15,17 +15,17 @@
 <p>
 	<strong>Автор: </strong>
 	<% if photo.user %>
-  	<%= link_to(photo.author_name, user_profile_path(photo.user))  %>
+  	<%= link_to(photo.author_name, user_profile_path(photo.user)) %>
 	<% else %>
 		<%= photo.author_name %>
 	<% end %>
 </p>
 
-<% if photo.user && photo.theme_tags && (not photo.theme_tags.blank?)  %>
+<% if photo.user && photo.theme_tags && (not photo.theme_tags.blank?) %>
 
 <strong>Теги: </strong>
 	<% photo.theme_tags.each do |theme| %>
-	<%= link_to theme,tagged_photos_path(user_id: photo.user.id, name: theme)  %>
+	<%= link_to theme,tagged_photos_path(user_id: photo.user.id, name: theme) %>
 	<% end %>
 <% end  %>
 

@@ -42,7 +42,10 @@ Photohome::Application.routes.draw do
 
      get "gallery/index"
      get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
+     get '/gallery/show_anonymous/:photo_id', to: 'gallery#show_anonymous', as: :gallery_show_anonymous
      get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
+
+     
 
     devise_for :users, :controllers => {:registrations => "registrations"}
 

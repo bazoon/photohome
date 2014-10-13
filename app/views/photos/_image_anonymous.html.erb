@@ -1,0 +1,11 @@
+<p class="text-center">
+  <%= image_tag photo.image_url_for_others(current_user,session[:agreed], :normal) %>
+</p>
+
+<p>
+ <%= age_badge(photo.age_policy_age) %> 
+</p>
+
+
+
+<hr/>

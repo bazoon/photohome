@@ -1,4 +1,5 @@
 <% breadcrumb :view_competition_photos, @competition %>
+
 <br>
 <%= link_to "Положение о конкурсе", competition_path(@competition) %>
 
@@ -13,8 +14,9 @@
     
     
             
-   <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_path(competition_photo.photo) } %>
-    
+   <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_anonymous_path(competition_photo.photo) } %>
+
+
 
   
      <%- l0 = "#{competition_photo.jury_count} / #{@all_jury_count}" %>

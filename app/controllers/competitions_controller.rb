@@ -30,6 +30,7 @@ class CompetitionsController < ApplicationController
     # fresh_when(@competition_photos)
   end
 
+
   def choose_photo
     @photos = current_user.photos.paginate(:page => params[:page],per_page: 8)
     respond_to do |format|

@@ -12,6 +12,8 @@ class  CompetitionPhotosController < ApplicationController
     @apply_info = CompetitionPhotoApply.new(competition, current_user)
   end
 
+  
+
   def destroy
     
     respond_to do |format|

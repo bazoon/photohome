@@ -33,4 +33,8 @@ class GalleryController < ApplicationController
     # respond_with(@photo) if stale?(:etag => @photo, :last_modified => @photo.created_at.utc)
   end
 
+  def show_anonymous
+    @photo = Photo.friendly.find(params[:photo_id])
+  end
+
 end
