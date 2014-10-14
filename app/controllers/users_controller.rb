@@ -7,12 +7,8 @@ class UsersController < ApplicationController
 
     authorize! :index, @user, :message => I18n.t(:access_denied) 
     
-<<<<<<< HEAD
+
     role_id = params[:users][:role_id] if params[:user]
-=======
-    role_id = params[:users][:role_id]
->>>>>>> c12e3fe20b9a8e04febd2a480ceac0975a8a9922
-    # binding.pry
 
     if role_id
       @users =  User.includes(:roles).where(roles: {id: role_id }).paginate(:page => params[:page], per_page: 25)
