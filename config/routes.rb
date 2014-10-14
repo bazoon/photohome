@@ -75,6 +75,11 @@ Photohome::Application.routes.draw do
 
         member do
           post 'confirm', as: :confirm
+         
+        end
+
+        collection do
+           get 'select_roles', as: :select_roles
         end
 
       	resources :photos, concerns: :commentable 

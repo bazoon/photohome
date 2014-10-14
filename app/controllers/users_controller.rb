@@ -4,8 +4,23 @@ class UsersController < ApplicationController
   
 
   def index
+
     authorize! :index, @user, :message => I18n.t(:access_denied) 
-    @users = User.includes(:roles).paginate(:page => params[:page], per_page: 25)
+    
+    role_id = params[:users][:role_id] if params[:user]
+    # binding.pry
+
+    if role_id
+      @users =  User.includes(:roles).where(roles: {id: role_id }).paginate(:page => params[:page], per_page: 25)
+    else
+      @users = User.includes(:roles).paginate(:page => params[:page], per_page: 25)
+    end
+
+    
+  end
+
+  def select_roles
+    @roles = Role.all
   end
 
   def confirm

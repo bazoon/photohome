@@ -1,6 +1,9 @@
 <h3><%= t('users') %></h3>
 <div class="span8">
 <%= will_paginate @users %>
+
+<%= link_to "Select roles", select_roles_users_path %>
+<br>
 <table class="table table-condensed">
   <thead>
     <tr>
