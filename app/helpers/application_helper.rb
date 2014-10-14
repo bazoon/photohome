@@ -67,6 +67,12 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-tower")
   end
 
+  def ok_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-ok")
+  end
+
+  
+
 
   def nomination_icon
     content_tag(:span,"",class: "glyphicon glyphicon-book")

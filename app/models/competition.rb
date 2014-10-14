@@ -78,8 +78,12 @@ class Competition < ActiveRecord::Base
   end
 
   def has_approved_request_for?(user)
-    request = competition_requests.where(user: user).first
-    open? || (request && request.approved?)
+    @request_ ||= competition_requests.where(user: user).first
+  end
+
+  def can_upload_photo?(user)
+    @request_ ||= competition_requests.where(user: user).first
+    open? || (@request_ && @request_.approved?)
   end
 
  # past last_date ?

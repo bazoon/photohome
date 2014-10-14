@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  participate: "Я участвую ?"
   see_hints: "Смотри подсказки внизу"
   hints: "Подсказки"
   competition_info: "Информация о конкурсе"

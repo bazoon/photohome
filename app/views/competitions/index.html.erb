@@ -17,6 +17,7 @@
       <th><%= t(".type") %></th>
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
+      <th><%= t("participate") %></th>
       <th colspan="3"></th>
       
     </tr>
@@ -24,15 +25,17 @@
 
   <tbody>
     <% @competitions.each do |competition| %>
+      
       <tr>
         <td><%= link_to competition.title,view_photos_competition_path(competition) %></td>
         <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
+        <td><%= ok_icon if  competition.has_approved_request_for?(current_user) %></td>
         <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => t('photos_')) %></td>
         <td><%= link_to show_icon, competition %></td>
         <% hint = competition.has_approved_request_for?(current_user) ? t('load_photos') : t('send_request') %>
-        <td><%= link_to request_icon(competition.has_approved_request_for?(current_user)), competition_requests_path(competition), 
+        <td><%= link_to request_icon(competition.can_upload_photo?(current_user)), competition_requests_path(competition), 
           title: hint, method: :post if can?(:request, competition) %></td>
         
 
