@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905040722) do
+ActiveRecord::Schema.define(version: 20141014042028) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"

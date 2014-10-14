@@ -4,38 +4,37 @@
 <%= link_to "Положение о конкурсе", competition_path(@competition) %>
 
 <h1>Конкурсные фотографии</h1>
+ <%= will_paginate @competition_photos %>
 <br>
 
-<div class="row">
+  <% @by_nomination.each_key do |nomination| %>
+    <h2> <%= nomination %></h2>
+    <div class="row">
+      
+      <% @by_nomination[nomination].each_with_index do |competition_photo,index| %>
+      
+        <div class="col-sm-3 thumb">
+       
+          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_anonymous_path(competition_photo.photo) } %>
 
-    <% @competition_photos.each_with_index do |competition_photo,index| %>
-  
-    <div class="col-sm-3 thumb">
-    
-    
-            
-   <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_anonymous_path(competition_photo.photo) } %>
+        <%- l0 = "#{competition_photo.jury_count} / #{@all_jury_count}" %>
+        <%- l1 = content_tag(:span,competition_photo.like_count,class: "label label-primary",id: "like_count#{competition_photo.id}") %>
+        
+        <% if can?(:read, Competition)  %>
+        <%- icon = competition_photo.liked_by(@user) ? unlike_icon("like#{competition_photo.id}") : like_icon("like#{competition_photo.id}") %>
+        <%- l2 = link_to(icon, like_path(competition_photo), remote: true) if @can_like%>
+        <% end %>
 
+        <%= render partial: "photos/caption", locals: { photo: competition_photo.photo, links: [l0,l1,l2] } %>
+        
+        </div>
 
-
-  
-     <%- l0 = "#{competition_photo.jury_count} / #{@all_jury_count}" %>
-     <%- l1 = content_tag(:span,competition_photo.like_count,class: "label label-primary",id: "like_count#{competition_photo.id}") %>
-    
-    <% if can?(:read, Competition)  %>
-    <%- icon = competition_photo.liked_by(@user) ? unlike_icon("like#{competition_photo.id}") : like_icon("like#{competition_photo.id}") %>
-    <%- l2 = link_to(icon, like_path(competition_photo), remote: true) if @can_like%>
-    <% end %>
-
-    <%= render partial: "photos/caption", locals: { photo: competition_photo.photo, links: [l0,l1,l2] } %>
-    
-    
-    
-    
+      <% end %>  
     
     
   </div>
 
-  <% end %>
+  <% end  %>
+
+
   
-</div>

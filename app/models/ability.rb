@@ -58,7 +58,10 @@ class Ability
       letter.people.any? { |lu| lu.user.id == user.id }
     end
 
-    can :request, Competition 
+    can :request, Competition do |competition|
+      !competition.overdue?
+    end
+
     else    
       #Unregistered users
       can :read, [Photo, Novelty, Article, Comment]

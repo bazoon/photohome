@@ -30,11 +30,13 @@ class CompetitionPhotoApply
 
     ActiveRecord::Base.transaction do
       ids.each do |id|
-        CompetitionPhoto.create!(photo_id: id,competition_id: competition.id,nomination_id: nomination_id)
+        CompetitionPhoto.create!(photo_id: id,competition_id: competition.id, nomination_id: nomination_id)
       end  
     end
 
   end
+
+
 
   def check(nomination_id)
     raise Exceptions::EmptyNomination if nomination_id.empty?

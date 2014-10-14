@@ -72,8 +72,12 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-book")
   end  
 
-  def request_icon
-    content_tag(:span,"",class: "glyphicon glyphicon-envelope")
+  def request_icon(has_approved_request)
+    if has_approved_request
+      content_tag(:span,"",class: "glyphicon glyphicon-picture")
+    else
+      content_tag(:span,"",class: "glyphicon glyphicon-envelope")
+    end
   end
 
   def photo_icon
@@ -205,6 +209,11 @@ module ApplicationHelper
   def forward_icon
     content_tag(:span,"",class: "glyphicon glyphicon-step-forward")
   end
+
+  def picture_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-picture")
+  end
+  
 
   def now
     Time.zone.now

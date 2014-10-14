@@ -40,7 +40,7 @@ class  CompetitionPhotosController < ApplicationController
     respond_to do |format|
       
       begin
-        photo_apply.create(photo_ids,nomination_id)
+        photo_apply.create(photo_ids, nomination_id)
         format.html { redirect_to competition_photos_path(competition.id), notice: I18n.t(:photos_saved) }
       rescue Exception => e
         format.html { redirect_to competition_photos_path(competition.id), :flash => { :error => e.message } }              

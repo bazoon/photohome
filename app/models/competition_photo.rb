@@ -2,6 +2,7 @@ class CompetitionPhoto < ActiveRecord::Base
   belongs_to :nomination, class_name: "Admin::Nomination"
   belongs_to :photo
   belongs_to :competition
+  has_many :competition_requests, through: :competition
 
   # delegate :user, to: :photo 
 
@@ -10,8 +11,8 @@ class CompetitionPhoto < ActiveRecord::Base
   delegate :image_url,:title,to: :photo
   delegate :image_url_for_others,to: :photo
 
-  has_many :jury_ratings
-  has_many :likes
+  has_many :jury_ratings, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
 
   # before_destroy -> do 

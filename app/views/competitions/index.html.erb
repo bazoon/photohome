@@ -33,7 +33,11 @@
         <td><%= ld competition.open_date %></td>
         <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => t('photos_')) %></td>
         <td><%= link_to show_icon, competition %></td>
-        <td><%= link_to request_icon, competition_requests_path(competition), title: t('send_request'), method: :post if can?(:request, competition) %></td>
+        <% hint = competition.has_approved_request_for?(current_user) ? t('load_photos') : t('send_request') %>
+        <td><%= link_to request_icon(competition.has_approved_request_for?(current_user)), competition_requests_path(competition), 
+          title: hint, method: :post if can?(:request, competition) %></td>
+        
+
        </tr>
     <% end %>
   </tbody>

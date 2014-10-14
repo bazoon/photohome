@@ -1,13 +1,13 @@
 class Competition < ActiveRecord::Base
 
-  has_many :jury,class_name: "Admin::Jury"
-  has_many :nominations,class_name: "Admin::Nomination"
+  has_many :jury, class_name: "Admin::Jury", dependent: :destroy
+  has_many :nominations,class_name: "Admin::Nomination", dependent: :destroy
 
-  has_many :competition_photos,dependent: :destroy
+  has_many :competition_photos, dependent: :destroy
   
   has_many :jury_ratings, through: :competition_photos
   has_many :users, through: :jury
-  has_many :competition_requests
+  has_many :competition_requests, dependent: :destroy
   
   
   validate Proc.new {|c| errors.add(:last_date, I18n.t(:incorrect_last_date)) if c.last_date > c.open_date}
@@ -42,6 +42,10 @@ class Competition < ActiveRecord::Base
     self.status_id == OPEN
   end
 
+  def closed?
+    self.status_id != OPEN
+  end
+
   def fiap?
     self.type_id == FIAP
   end
@@ -73,6 +77,10 @@ class Competition < ActiveRecord::Base
     statistics
   end
 
+  def has_approved_request_for?(user)
+    request = competition_requests.where(user: user).first
+    open? || (request && request.approved?)
+  end
 
  # past last_date ?
   def overdue?
