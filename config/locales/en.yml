@@ -20,6 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  send_request: "Send request"
+  see_hints: "see_hints below"
+  hints: "Hints"
+  competition_info: "Competition info"
+  no_photo_loaded: "No photo loaded"
+  load_photos: "Upload photos"
   history: "History"
   choose_competition: "Choose"
   sent_letters: "Sent"

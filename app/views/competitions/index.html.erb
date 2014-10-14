@@ -17,9 +17,7 @@
       <th><%= t(".type") %></th>
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th colspan="3"></th>
       
     </tr>
   </thead>
@@ -44,3 +42,17 @@
 </table>
 
 <br>
+
+<sup><%= t('hints') %></sup>
+<p class="small">
+  
+<%= photo_icon %> : <%= t('competition_info') %>
+<br>
+<%= request_icon(false) %> : <%= t('send_request') %>
+<br>
+<%= request_icon(true) %> : <%= t('load_photos') %>
+
+
+</p>
+
+
