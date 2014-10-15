@@ -2,7 +2,11 @@ class CompetitionRequest < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :competition
+
   
+
+  validates :user_id, uniqueness: { scope: :competition_id,
+    message: 'Only one request per competition' }
       
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable

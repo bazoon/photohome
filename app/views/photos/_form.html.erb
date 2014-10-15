@@ -27,7 +27,7 @@
 
     <%= f.hidden_field :user_id, value: @user.id %>
     
-    <%= f.button :submit,value: t(:save), class: "btn btn-default" %>
+    <%= f.button :submit,value: t(:save), class: "btn btn-default", data: {disable_with: "Submitting..."} %>
   
 <% end %>
 
