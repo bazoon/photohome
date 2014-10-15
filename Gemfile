@@ -103,6 +103,7 @@ gem 'zeus'
 
 gem 'database_cleaner'
 gem 'email_spec'
+
 gem 'launchy'
 
 gem 'simplecov', :require => false, :group => :test

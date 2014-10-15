@@ -1,6 +1,6 @@
 class Letter < ActiveRecord::Base
   belongs_to :user
-  has_many :people
+  has_many :people, dependent: :destroy
   acts_as_commentable
 
   validates :user_id, presence: true

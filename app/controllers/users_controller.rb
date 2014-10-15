@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     authorize! :update, @user, :message => I18n.t(:access_denied) 
     @user = User.friendly.find(params[:id])
       
-    @user.role_ids = params[:users]["role_ids"]
+    @user.role_ids = params[:user]["role_ids"]
 
     # binding.pry
 
