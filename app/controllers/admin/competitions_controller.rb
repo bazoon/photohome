@@ -12,7 +12,9 @@ class Admin::CompetitionsController < Admin::BaseController
   
   def view_posted
     @all_jury_count = @competition.jury.count
-    @competition_photos = @competition.competition_photos.sort_by {|cp|  -cp.average_rating}
+    # @competition_photos = @competition.competition_photos.sort_by {|cp|  -cp.average_rating}
+
+    @competition_photos = @competition.competition_photos.sort_by { |cp|  -cp.average_rating }.paginate(page: params[:page],per_page: 8)
   end
 
   def stats
