@@ -90,31 +90,27 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
-    
     respond_to do |format|
-      if @photo.destroy
-        format.html { redirect_to user_photos_path(current_user),notice: I18n.t(:photo_was_deleted) }
+      if @photo.participate_in_competition?
+        format.html { redirect_to :back, notice: I18n.t(:participate_in_competition) }
       else
-        format.html { redirect_to user_photos_path(current_user),:flash => { :error => I18n.t(:paricipate_in_competition) }   }
+        @photo.destroy
+        format.html { redirect_to user_photos_path(current_user), notice: I18n.t(:photo_was_deleted) }
       end
-
-
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_photo
-      @photo = Photo.friendly.find(params[:id])
-    end
 
-    def set_user
-      @user = User.friendly.find(params[:user_id])
-    end
+  def set_photo
+    @photo = Photo.friendly.find(params[:id])
+  end
 
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def photo_params
-      params.require(:photo).permit(:title, :user_id, :image,:image_cache,:theme_tokens,:topic_id,:destination_id,:age_policy_id)
-    end
+  def set_user
+    @user = User.friendly.find(params[:user_id])
+  end
+  
+  def photo_params
+    params.require(:photo).permit(:title, :user_id, :image,:image_cache,:theme_tokens,:topic_id,:destination_id,:age_policy_id)
+  end
 end

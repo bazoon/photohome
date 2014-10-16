@@ -1,29 +1,8 @@
 module CompetitionPhotoHelper
 
 
-# class EmptyNomination < Exception
-# end
-
-# class NoPhotoAttached < Exception
-# end
-
-# class ClosedCompetition < Exception
-#    def initialize(msg = I18n.t(:comp_photo_already_posted))
-#     super(msg)
-#   end
-# end
-
-# class DuplicatePhoto < Exception
-
-#   def initialize(msg = I18n.t(:comp_photo_already_posted))
-#     super(msg)
-#   end
-
-# end
-
-# class MaxNominationCapacity < Exception
-# end
-
-
+  def ban_helper(competition_photo)
+    content_tag(:span, "banned",class: "label label-danger") if competition_photo.banned
+  end
 
 end

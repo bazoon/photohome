@@ -56,13 +56,6 @@ class Photo < ActiveRecord::Base
   before_save :check_limits
   self.per_page = 4
 
-  before_destroy :check_for_competition
-
-
-
-
-   
-
   belongs_to :topic
   
   mount_uploader :image, ImageUploader
@@ -80,8 +73,8 @@ class Photo < ActiveRecord::Base
     self.published = published
   end
 
-  def check_for_competition
-    competition_photos.count == 0
+  def participate_in_competition?
+    competition_photos.count > 0
   end
 
   def check_limits

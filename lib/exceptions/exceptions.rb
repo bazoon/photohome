@@ -51,4 +51,16 @@ module Exceptions
   end 
 
 
+  class ParticipateInCompetition < Exception    
+    
+    def initialize(msg = I18n.t(:participate_in_competition))
+      super(msg)
+    end
+   
+  end 
+
+
+
+
+
 end

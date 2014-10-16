@@ -9,11 +9,16 @@ class  Admin::CompetitionPhotosController < Admin::BaseController
     end
   end
 
+  def ban
+    @competition_photo = CompetitionPhoto.find(params[:competition_photo_id])
+    @competition_photo.update(banned: !@competition_photo.banned)
+  end
 
-private
 
-def set_competition
-  @competition_photo = CompetitionPhoto.find(params[:id])
-end
+  private
+
+  def set_competition
+    @competition_photo = CompetitionPhoto.find(params[:id])
+  end
 
 end

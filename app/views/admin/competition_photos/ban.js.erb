@@ -1,0 +1,7 @@
+
+
+<% if @competition_photo.banned %>
+  $("#competition_photo_<%= @competition_photo.id %>").html('<%= ban_helper(@competition_photo) %>')
+<% else %>
+  $("#competition_photo_<%= @competition_photo.id %>").html('')
+<% end %>

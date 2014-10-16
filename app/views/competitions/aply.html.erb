@@ -10,7 +10,7 @@
     </div>
 
     <div class="form-group">
-    <%= f.input :nomination_id, collection: @nominations,label_method: :title,value_method: :id %>
+    <%= f.input :nomination_id, collection: @nominations, label_method: :title_plus_count, value_method: :id %>
     </div>
 
     <%= link_to t(".choose_photo"),choose_photo_competition_path(@competition), remote: true %> <br/>

@@ -59,7 +59,7 @@ ru:
         title: "Название"
         description: "Описание"   
       competition_photo:
-        nomination_id: "Номинация" 
+        nomination_id: "Номинация / Количество фотографий в номинации" 
       admin_album:
         title: "Название" 
         authors: "Авторы"

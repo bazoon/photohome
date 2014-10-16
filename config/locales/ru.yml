@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  participate_in_competition: "Это фото удалить нельзя, оно участвует в конкурсе"
   competition_photos: "Конкурсные фотографии"
   participate: "Я участвую ?"
   see_hints: "Смотри подсказки внизу"

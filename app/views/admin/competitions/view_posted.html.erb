@@ -4,9 +4,11 @@
   <thead>
     <tr >
       <th class="col-md-4">Название</th>
+      <th></th>
       <th>Голоса</th>
       <th>Место</th>
       <th>Средний рейтинг</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,7 +18,8 @@
   <tbody>
     <% @competition_photos.each do |competition_photo| %>
       <tr>
-        <td><%= competition_photo.title %> <%= competition_photo.banned ? red_label("banned") : "" %></td>
+        <td><%= competition_photo.title %></td>
+        <td id="competition_photo_<%=competition_photo.id%>"><%= ban_helper(competition_photo) %></td> 
         <td><%= "#{competition_photo.jury_count} / #{@all_jury_count} " %></td>
         
 
@@ -35,6 +38,9 @@
         <td> 
          <%=link_to del_icon, admin_competition_photo_path(competition_photo), method: :delete, data: { confirm: 'Are you sure?' } %> 
         </td>
+        
+        <td><%= link_to ban_icon, admin_competition_photo_ban_path(competition_photo), method: :patch, remote: true %></td>
+
 
       </tr>
     <% end %>

@@ -145,7 +145,10 @@ Photohome::Application.routes.draw do
             get 'stats',as: :stats 
           end  
           
-          resources :competition_photos, only: :destroy, shallow: true
+          resources :competition_photos, only: [:destroy], shallow: true do
+            patch 'ban'
+
+          end
 
           resources :nominations
           resources :jury, only: [:index, :update, :destroy]
