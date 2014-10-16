@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014042028) do
+ActiveRecord::Schema.define(version: 20141016113227) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.boolean  "active"
   end
 
+  add_index "admin_banner_placements", ["banner_id"], name: "index_admin_banner_placements_on_banner_id", using: :btree
+  add_index "admin_banner_placements", ["place_id"], name: "index_admin_banner_placements_on_place_id", using: :btree
+
   create_table "admin_banners", force: true do |t|
     t.string   "image"
     t.string   "link"
@@ -59,12 +62,16 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.integer  "competition_request_id"
   end
 
+  add_index "admin_competition_request_responses", ["response_id"], name: "index_admin_competition_request_responses_on_response_id", using: :btree
+
   create_table "admin_juries", force: true do |t|
     t.integer  "competition_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "admin_juries", ["user_id"], name: "index_admin_juries_on_user_id", using: :btree
 
   create_table "admin_nominations", force: true do |t|
     t.string   "title"
@@ -74,6 +81,8 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.integer  "competition_id"
     t.integer  "max_photo_count"
   end
+
+  add_index "admin_nominations", ["competition_id"], name: "index_admin_nominations_on_competition_id", using: :btree
 
   create_table "admin_settings", force: true do |t|
     t.integer  "album_id"
@@ -86,6 +95,10 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.text     "footer"
     t.string   "adult_image"
   end
+
+  add_index "admin_settings", ["album_id"], name: "index_admin_settings_on_album_id", using: :btree
+  add_index "admin_settings", ["article_id"], name: "index_admin_settings_on_article_id", using: :btree
+  add_index "admin_settings", ["novelty_id"], name: "index_admin_settings_on_novelty_id", using: :btree
 
   create_table "admin_subscription_logs", force: true do |t|
     t.string   "resource"
@@ -102,6 +115,8 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "album_photos", ["photo_id"], name: "index_album_photos_on_photo_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "title",            limit: 50, default: ""
@@ -152,6 +167,10 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.boolean  "banned",         default: false
   end
 
+  add_index "competition_photos", ["competition_id"], name: "index_competition_photos_on_competition_id", using: :btree
+  add_index "competition_photos", ["nomination_id"], name: "index_competition_photos_on_nomination_id", using: :btree
+  add_index "competition_photos", ["photo_id"], name: "index_competition_photos_on_photo_id", using: :btree
+
   create_table "competition_requests", force: true do |t|
     t.integer  "competition_id"
     t.integer  "user_id"
@@ -161,6 +180,9 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.integer  "response_id",    default: 0
     t.text     "answer"
   end
+
+  add_index "competition_requests", ["competition_id"], name: "index_competition_requests_on_competition_id", using: :btree
+  add_index "competition_requests", ["user_id"], name: "index_competition_requests_on_user_id", using: :btree
 
   create_table "competitions", force: true do |t|
     t.string   "title"
@@ -211,12 +233,18 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.float    "rating"
   end
 
+  add_index "jury_ratings", ["competition_photo_id"], name: "index_jury_ratings_on_competition_photo_id", using: :btree
+  add_index "jury_ratings", ["user_id"], name: "index_jury_ratings_on_user_id", using: :btree
+
   create_table "letter_people", force: true do |t|
     t.integer  "letter_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "letter_people", ["letter_id"], name: "index_letter_people_on_letter_id", using: :btree
+  add_index "letter_people", ["user_id"], name: "index_letter_people_on_user_id", using: :btree
 
   create_table "letters", force: true do |t|
     t.string   "title"
@@ -235,6 +263,9 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.datetime "updated_at"
   end
 
+  add_index "likes", ["competition_photo_id"], name: "index_likes_on_competition_photo_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
+
   create_table "messages", force: true do |t|
     t.string   "title"
     t.text     "content"
@@ -244,6 +275,8 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.integer  "reason_id"
     t.integer  "status_id",  default: 0
   end
+
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "photos", force: true do |t|
     t.string   "title"
@@ -263,7 +296,11 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.string   "sidekiq_id"
   end
 
+  add_index "photos", ["age_policy_id"], name: "index_photos_on_age_policy_id", using: :btree
+  add_index "photos", ["destination_id"], name: "index_photos_on_destination_id", using: :btree
   add_index "photos", ["slug"], name: "index_photos_on_slug", unique: true, using: :btree
+  add_index "photos", ["topic_id"], name: "index_photos_on_topic_id", using: :btree
+  add_index "photos", ["user_id"], name: "index_photos_on_user_id", using: :btree
 
   create_table "pictures", force: true do |t|
     t.string   "title"
@@ -284,6 +321,9 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.integer  "age_policy_id"
     t.string   "slug"
   end
+
+  add_index "posts", ["age_policy_id"], name: "index_posts_on_age_policy_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "redactor_assets", force: true do |t|
     t.integer  "user_id"
@@ -367,6 +407,8 @@ ActiveRecord::Schema.define(version: 20141014042028) do
     t.datetime "updated_at"
     t.integer  "author_id"
   end
+
+  add_index "user_subscriptions", ["user_id"], name: "index_user_subscriptions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
