@@ -22,7 +22,7 @@ Photohome::Application.routes.draw do
   get 'test' => "home#test", as: :test
 
   
-  post 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
+  get 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
   post 'jury_rating', to: 'jury#rating', :as => :jury_rating
  
     
