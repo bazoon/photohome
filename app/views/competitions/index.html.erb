@@ -36,7 +36,7 @@
         <td><%= ok_icon if  competition.has_approved_request_for?(current_user) %></td>
         <td><%= link_to(photo_icon,  view_photos_competition_path(competition),:title => t('photos_')) %></td>
         <td><%= link_to show_icon, competition %></td>
-        <% hint = competition.has_approved_request_for?(current_user) ? t('load_photos') : t('send_request') %>
+        <% hint = competition.can_upload_photo?(current_user) ? t('load_photos') : t('send_request') %>
         <td><%= link_to request_icon(competition.can_upload_photo?(current_user)), competition_requests_path(competition), 
           title: hint, method: :post if can?(:request, competition) %></td>
         
