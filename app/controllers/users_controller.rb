@@ -6,16 +6,16 @@ class UsersController < ApplicationController
   def index
 
     authorize! :index, @user, :message => I18n.t(:access_denied) 
-    
+    role_id = params[:users][:role_id] if params[:users]
 
-    role_id = params[:users][:role_id] if params[:user]
-
-    if role_id
-      @users =  User.includes(:roles).where(roles: {id: role_id }).paginate(:page => params[:page], per_page: 25)
+    @users =
+    if params[:users] && role_id
+      User.includes(:roles).where(roles: {id: role_id })
+    elsif params[:users] 
+      User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
     else
-      @users = User.includes(:roles).paginate(:page => params[:page], per_page: 25)
-    end
-
+      User.includes(:roles)
+    end.paginate(page: params[:page], per_page: 25)
     
   end
 
