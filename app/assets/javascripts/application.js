@@ -39,6 +39,17 @@ $('.jury_rate').on('rating.change', function(event, value, caption) {
   $.post( "/jury_rating", { rate: value, data: data  }, function(data) {} );
 });
 
+$('.jury_rate').on('rating.clear', function(event) {
+  var data = $(this).attr("data");
+  $.post( "/jury_rating", { rate: 0, data: data  }, function(data) {} ); 
+});
+
+$('.final_estimate').on('rating.clear', function(event) {
+  var data = $(this).attr("data");
+  $.post( "/admin/final_rating", { rate: 0, data: data  }, function(data) {} );
+});
+
+
 $('.final_estimate').on('rating.change', function(event, value, caption) {
   var data = $(this).attr("data");
   $.post( "/admin/final_rating", { rate: value, data: data  }, function(data) {} );

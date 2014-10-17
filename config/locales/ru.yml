@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  likes: "likes"
+  place: "Место"
+  rating: "Рейтинг"
+  competition_results: "Итоги конкурса: "
   participate_in_competition: "Это фото удалить нельзя, оно участвует в конкурсе"
   competition_photos: "Конкурсные фотографии"
   participate: "Я участвую ?"
@@ -216,6 +220,7 @@ ru:
         new: "Новый конкурс"
       index:
         list: "Конкурсы"
+        results: "Итоги"
         title: "Название"
         last_date: "Сдать работы до"
         open_date: "Дата оглашения результатов" 

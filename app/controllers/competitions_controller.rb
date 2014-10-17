@@ -1,6 +1,6 @@
 class CompetitionsController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:index, :view_photos, :show]
-  before_action :set_competition, only: [:show, :aply,:choose_photo,:view_photos]
+  before_action :set_competition, only: [:show, :aply, :choose_photo, :view_photos, :results]
 
   # GET /competitions
   # GET /competitions.json
@@ -34,14 +34,28 @@ class CompetitionsController < ApplicationController
 
 
   def choose_photo
-    @photos = current_user.photos.paginate(:page => params[:page],per_page: 8)
+    @photos = current_user.photos.paginate(:page => params[:page], per_page: 8)
     respond_to do |format|
       format.js
-    end  
+    end
+  end
+
+
+  def results
+    
+    if @competition.ready_to_be_published?
+      @competition_photos = @competition.competition_photos.to_a.sort_by {|cp| [cp.place,cp.average_rating]}
+      @by_nomination = @competition_photos.group_by {|cp| cp.nomination.title }
+    else  
+      redirect_to :back, notice: 'Not published yet !'
+    end 
+
   end
 
   
   private
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_competition
       @competition = Competition.friendly.find(params[:id])

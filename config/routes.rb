@@ -100,6 +100,7 @@ Photohome::Application.routes.draw do
           get 'aply', as: :aply
           get 'choose_photo', as: :choose_photo
           get 'view_photos',as: :view_photos
+          get 'results'
         end  
 
         resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 

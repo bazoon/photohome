@@ -1,0 +1,29 @@
+<h2><%= t('competition_results') %></h2>
+<h1><%= @competition.title %></h1>
+
+<br><br>
+
+<% @by_nomination.each_key do |nomination| %>
+    <h2> <%= nomination %></h2>
+    <div class="row">
+      
+      <% @by_nomination[nomination].each_with_index do |competition_photo,index| %>
+      
+        <div class="col-sm-3 thumb">
+       
+          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_path(competition_photo.photo) } %>
+
+        <%- rating = "#{ t('rating') } : #{competition_photo.average_rating }" %>
+        <%- place = "#{ t('place') } : #{competition_photo.place }" %>
+        <%- likes = "#{ t('likes') } : #{competition_photo.likes.count }" %>
+          
+        <%= render partial: "photos/result_caption", locals: { photo: competition_photo.photo, rating: rating, place: place, likes: likes } %>
+        
+        </div>
+
+      <% end %>  
+    
+    
+  </div>
+
+  <% end  %>

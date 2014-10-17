@@ -14,6 +14,12 @@ class CompetitionPhoto < ActiveRecord::Base
   has_many :jury_ratings, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  scope :with_rating, select("competition_photos.*")
+    .select('count(rating) as rating')
+    .joins('jury_ratings')
+    .group('competition_photos.id')
+    .order('rating asc')
+
 
   # before_destroy -> do 
   #   raise Exceptions::ClosedCompetition if competition.overdue? 

@@ -14,6 +14,7 @@
   <thead>
     <tr>
       <th><%= t(".title") %></th>
+      <th><%= t(".results") %></th>
       <th><%= t(".type") %></th>
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
@@ -28,6 +29,7 @@
       
       <tr>
         <td><%= link_to competition.title,view_photos_competition_path(competition) %></td>
+        <td><%= link_to horn_icon, results_competition_path(competition) %></td>
         <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>

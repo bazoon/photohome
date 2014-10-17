@@ -75,6 +75,11 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-ban-circle")
   end
 
+  
+
+  def horn_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-bullhorn")
+  end
 
   def nomination_icon
     content_tag(:span,"",class: "glyphicon glyphicon-book")
