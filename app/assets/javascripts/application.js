@@ -34,27 +34,33 @@
 
 $(document).ready(function() {
 
-
-
-$('.jury_rate').on('click',function() {
-    var data = $(this).attr("data");
-    var rate = this.value;
-    $.post( "/jury_rating", { rate: rate, data: data  }, function(data) {
-
-        // alert(data);
-
-    } );
+$('.jury_rate').on('rating.change', function(event, value, caption) {
+  var data = $(this).attr("data");
+  $.post( "/jury_rating", { rate: value, data: data  }, function(data) {} );
 });
 
-$('.final_estimate').on('click',function() {
-    var data = $(this).attr("data");
-    var rate = this.value;
-    $.post( "/admin/final_rating", { rate: rate, data: data  }, function(data) {
-
-        // alert(data);
-
-    } );
+$('.final_estimate').on('rating.change', function(event, value, caption) {
+  var data = $(this).attr("data");
+  $.post( "/admin/final_rating", { rate: value, data: data  }, function(data) {} );
 });
+
+// $('.jury_rate').on('click',function() {
+    
+//     var data = $(this).attr("data");
+//     var rate = this.value;
+//     $.post( "/jury_rating", { rate: rate, data: data  }, function(data) {
+
+//         // alert(data);
+
+//     } );
+// });
+
+// $('.final_estimate').on('click',function() {
+//     var data = $(this).attr("data");
+//     var rate = this.value;
+//     $.post( "/admin/final_rating", { rate: rate, data: data  }, function(data) {} );
+
+// });
 
 
 $('.fotorama').fotorama({

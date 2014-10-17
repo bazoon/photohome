@@ -158,7 +158,7 @@ module ApplicationHelper
   def jury_rate(user_id, competition_photo_id, value, klass)
     content_tag(:input,nil,type: "number", class: "rating #{klass}", min: 0, max: 10,
                 step: 0.5, "data-size" => "sm".html_safe ,"data-hover-enabled" => false,
-                data: "#{user_id}:#{competition_photo_id}.html_safe", value: value.to_s.html_safe)
+                data: "#{user_id}:#{competition_photo_id}", "data-stars" => 10, value: value.to_s.html_safe)
   end
 
 
