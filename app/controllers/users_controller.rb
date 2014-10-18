@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     role_id = params[:users][:role_id] if params[:users]
 
     @users =
-    if params[:users] && role_id
+    if params[:users] && !role_id.blank?
       User.includes(:roles).where(roles: {id: role_id })
     elsif params[:users] 
       User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
