@@ -32,7 +32,7 @@ gem 'therubyracer'
 #                               :branch => '3.0.0'
 gem 'flexslider'
 
-gem 'cancan'
+gem 'cancancan'
 gem 'devise'
 gem 'figaro'
 

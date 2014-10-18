@@ -14,7 +14,7 @@ class CompetitionPhoto < ActiveRecord::Base
   has_many :jury_ratings, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  scope :with_rating, -> { select("competition_photos.id, place") 
+  scope :with_rating, -> { select("competition_photos.id, place, nomination_id, photo_id") 
         .joins('left join jury_ratings on jury_ratings.competition_photo_id=competition_photos.id')
         .select("sum(rating) as av_rating")
         .group('competition_photos.id')

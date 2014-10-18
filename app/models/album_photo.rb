@@ -9,7 +9,7 @@ class AlbumPhoto < ActiveRecord::Base
 
 
     def image_url(kind)
-        photo.image_url(kind)
+      photo.image_url(kind)
     end
 
 
