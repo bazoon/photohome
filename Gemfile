@@ -44,13 +44,13 @@ gem 'mysql2'
 gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 
-gem 'better_errors'
-gem 'binding_of_caller'
+gem 'better_errors', :group => :development
+gem 'binding_of_caller', :group => :development
 
-gem 'guard-bundler'
-gem 'guard-rails'
-gem 'guard-rspec'
-gem 'guard-cucumber'
+# gem 'guard-bundler'
+# gem 'guard-rails'
+# gem 'guard-rspec'
+# gem 'guard-cucumber'
 
 
 
@@ -86,7 +86,7 @@ gem 'acts_as_commentable'
 gem 'fotoramajs'
 gem 'railroady'
 gem 'country_select'
-gem 'fog', "~> 1.3.1"
+# gem 'fog', "~> 1.3.1"
 gem 'foreman'
 # gem "spring", :group => :development
 gem 'coveralls', require: false
@@ -96,29 +96,29 @@ gem 'babosa'
 # gem 'rails_12factor'
 
 gem 'jquery-turbolinks'
-gem 'pry'
+gem 'pry', :group => :development
 
-gem 'capybara'
-gem 'zeus'
+gem 'capybara', :group => :development
+gem 'zeus', :group => :development
 
 gem 'database_cleaner'
-gem 'email_spec'
+# gem 'email_spec', :group => :development
 
 gem 'launchy'
 
 gem 'simplecov', :require => false, :group => :test
 gem 'gretel'
-gem 'selenium-webdriver'
-gem "rails_best_practices"
+gem 'selenium-webdriver', :group => :development
+gem "rails_best_practices", :group => :development
 gem 'metamagic'
 
 gem "bullet", :group => "development"
 gem 'goldiloader'
 gem 'awesome_print', :group => "development"
-gem 'bootstrap-editable-rails'
+# gem 'bootstrap-editable-rails'
 gem 'gravatar-ultimate'
 gem 'whenever', :require => false
 gem 'sidekiq'
 # gem 'sidekiq_mailer'
-gem 'sinatra', require: false
-gem 'slim'
+# gem 'sinatra', require: false
+# gem 'slim'
