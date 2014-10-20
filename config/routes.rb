@@ -99,7 +99,8 @@ Photohome::Application.routes.draw do
         member do
           get 'aply', as: :aply
           get 'choose_photo', as: :choose_photo
-          get 'view_photos',as: :view_photos
+          get 'view_photos/:nomination_id', to: 'competitions#view_photos', as: :view_photos
+          get 'view_nominations', as: :view_nominations
           get 'results'
         end  
 

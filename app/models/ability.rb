@@ -63,6 +63,10 @@ class Ability
       !competition.overdue?
     end
 
+    can :like, Competition do |competition|
+      (user.created_at < competition.created_at) && (competition.open_date > Time.zone.now)
+    end
+
     else    
       #Unregistered users
       can :read, [Photo, Novelty, Article, Comment]

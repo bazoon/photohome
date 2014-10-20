@@ -1,6 +1,6 @@
 class CompetitionsController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:index, :view_photos, :show]
-  before_action :set_competition, only: [:show, :aply, :choose_photo, :view_photos, :results]
+  before_action :set_competition, only: [:show, :aply, :choose_photo, :view_photos, :view_nominations,:results]
 
   # GET /competitions
   # GET /competitions.json
@@ -23,16 +23,19 @@ class CompetitionsController < ApplicationController
   end
 
   def view_photos
+    nomination_id = params[:nomination_id]
+    @nomination = Admin::Nomination.find(nomination_id)
+    # binding.pry
     @all_jury_count = @competition.jury.count
-    # @competition_photos = @competition.competition_photos.order(:nomination_id).where(banned: false).paginate(page: params[:page],per_page: 8)
-    @competition_photos = CompetitionPhoto.with_rating.paginate(page: params[:page],per_page: 8)
-    @by_nomination = @competition_photos.group_by {|cp| cp.nomination.title }
-
-    @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > Time.zone.now )
+    @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id).with_rating.paginate(page: params[:page], per_page: 8)
+    # @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > Time.zone.now )
     @user = current_user
     # fresh_when(@competition_photos)
   end
 
+  def view_nominations
+    
+  end
 
   def choose_photo
     @photos = current_user.photos.paginate(:page => params[:page], per_page: 8)

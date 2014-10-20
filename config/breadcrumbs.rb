@@ -20,9 +20,14 @@ crumb :competition do |competition|
   parent :competitions
 end
 
-crumb :view_competition_photos do |competition|
-  link competition.title, view_photos_competition_path(competition)
-  parent :competitions
+crumb :view_competition_nominations do |competition|
+  link I18n.t(:nominations_), view_nominations_competition_path(competition)
+  parent :competition, competition
+end
+
+crumb :view_competition_photos do |competition, nomination|
+  link nomination.title, view_photos_competition_path(competition, nomination.id)
+  parent :view_competition_nominations, competition
 end
 
 crumb :competition_photos do |competition|

@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  nominations_: "Номинации"
   likes: "likes"
   place: "Место"
   rating: "Рейтинг"
