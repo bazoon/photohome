@@ -53,7 +53,7 @@ class CompetitionsController < ApplicationController
     if @competition.ready_to_be_published? || can?(:jury, @competition)
       nomination_id = params[:nomination_id]
       @nomination = Admin::Nomination.find(nomination_id) 
-      @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id).to_a.sort_by { |cp| [cp.place==0 ? 1000: cp.place, cp.average_rating] }
+      @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id).to_a.sort_by { |cp| [cp.place==0 ? 1000: cp.place, -cp.average_rating] }
     else
       redirect_to :back, notice: 'Not published yet !'
     end
