@@ -3,6 +3,7 @@ class CompetitionRequest < ActiveRecord::Base
   belongs_to :user
   belongs_to :competition
 
+
   
 
   validates :user_id, uniqueness: { scope: :competition_id,
@@ -20,6 +21,7 @@ class CompetitionRequest < ActiveRecord::Base
   OTHER_REASONS = 100
   BANNED = 1000
   
+  scope :accepted, -> { where(response_id: ACCEPTED) }
 
   RESPONSES = [
     {label: I18n.t("responses.awaiting"), value: AWAITING },

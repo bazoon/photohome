@@ -78,7 +78,7 @@ class Competition < ActiveRecord::Base
   end
 
   def has_approved_request_for?(user)
-    @request_ ||= competition_requests.where(user: user).first
+    @request_ ||= competition_requests.accepted.where(user: user).first
   end
 
   def can_upload_photo?(user)
