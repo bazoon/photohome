@@ -1,6 +1,6 @@
 class CompetitionsController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:index, :view_photos, :show]
-  before_action :set_competition, only: [:show, :aply, :choose_photo, :view_photos, :view_nominations,:results]
+  before_action :set_competition, except: [:index]
 
   # GET /competitions
   # GET /competitions.json
@@ -44,15 +44,19 @@ class CompetitionsController < ApplicationController
     end
   end
 
+  def results_nominations
+    
+  end
 
   def results
     
-    if @competition.ready_to_be_published?
-      @competition_photos = @competition.competition_photos.to_a.sort_by {|cp| [cp.place,cp.average_rating]}
-      @by_nomination = @competition_photos.group_by {|cp| cp.nomination.title }
-    else  
+    if @competition.ready_to_be_published? || can?(:jury, @competition)
+      nomination_id = params[:nomination_id]
+      @nomination = Admin::Nomination.find(nomination_id) 
+      @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id).to_a.sort_by { |cp| [cp.place==0 ? 1000: cp.place, cp.average_rating] }
+    else
       redirect_to :back, notice: 'Not published yet !'
-    end 
+    end
 
   end
 

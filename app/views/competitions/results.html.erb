@@ -1,13 +1,15 @@
+<% breadcrumb :results_photos, @competition, @nomination %>
+
 <h2><%= t('competition_results') %></h2>
 <h1><%= @competition.title %></h1>
 
-<br><br>
 
-<% @by_nomination.each_key do |nomination| %>
-    <h2> <%= nomination %></h2>
+
+<h3> <%= @nomination.title %></h3>
+
     <div class="row">
       
-      <% @by_nomination[nomination].each_with_index do |competition_photo,index| %>
+      <% @competition_photos.each_with_index do |competition_photo,index| %>
       
         <div class="col-sm-3 thumb">
        
@@ -25,5 +27,3 @@
     
     
   </div>
-
-  <% end  %>

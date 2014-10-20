@@ -36,6 +36,10 @@ class Ability
         can :update, JuryRating, user_id: user.id
       end  
 
+    can :jury, Competition do |competition|
+      competition.jury.map(&:user_id).include?(user.id)
+    end  
+
 
     can :read, Message
     can :manage, Comment, user_id: user.id

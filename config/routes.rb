@@ -101,7 +101,8 @@ Photohome::Application.routes.draw do
           get 'choose_photo', as: :choose_photo
           get 'view_photos/:nomination_id', to: 'competitions#view_photos', as: :view_photos
           get 'view_nominations', as: :view_nominations
-          get 'results'
+          get 'results/:nomination_id', to: 'competitions#results', as: :results
+          get 'results_nominations'
         end  
 
         resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 

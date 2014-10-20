@@ -1,0 +1,14 @@
+<% breadcrumb :results_competition_nominations, @competition %>
+
+<h1><%= @competition.title %></h1>
+
+<ul class="list-unstyled">
+
+<%- @competition.nominations.each do |nomination| %>
+
+<li><h3><%= link_to nomination.title, results_competition_path(@competition, nomination) %></h3></li>
+
+
+<%- end %>
+
+</ul>
