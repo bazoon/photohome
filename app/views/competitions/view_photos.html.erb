@@ -1,12 +1,12 @@
 <% breadcrumb :view_competition_photos, @competition, @nomination %>
 
-<br>
-<%= link_to "Положение о конкурсе", competition_path(@competition) %>
 
 <h1><%= @competition.title %></h1>
 
 <h2>Конкурсные фотографии</h2>
- <%= will_paginate @competition_photos %>
+
+
+<%= will_paginate @competition_photos %>
 <br>
 
   
