@@ -1,5 +1,5 @@
 class CompetitionsController < ApplicationController
-  skip_before_filter :authenticate_user!, only: [:index, :view_photos, :show]
+  skip_before_filter :authenticate_user!, only: [:index, :view_photos, :show, :view_nominations, :results_nominations]
   before_action :set_competition, except: [:index]
 
   # GET /competitions
