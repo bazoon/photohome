@@ -75,10 +75,8 @@
   end
 
   def destroy
-    @id = params[:id]
-    @photo = Photo.friendly.find(@id)
+    @photo = Photo.friendly.find(params[:id])
     @photo.delete_in_24_hours
-
     respond_to do |format|
       format.js
     end 
