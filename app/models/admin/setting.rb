@@ -14,9 +14,9 @@ class Admin::Setting < ActiveRecord::Base
    end
 
    def self.adult_image_url(kind)
-   		return @@adult_image_url if defined? @@adult_image_url
-   		setting = Admin::Setting.first
-   		@@adult_image_url = setting && setting.adult_image_url(kind)
+		return @@adult_image_url if defined? @@adult_image_url
+		setting = Admin::Setting.first
+		@@adult_image_url = setting && setting.adult_image_url(kind)
    end
 
 end

@@ -3,25 +3,23 @@
      keywords: %w(Тюмень фотография дом фотоискусство фотоклуб)
 %>
 
+  <% if @setting_decorator.album %>
+    <p>
+     <h3>Тюменский дом фотографии
+     представляет вашему вниманию виртуальную выставку
+     <br>
+     <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) if @setting_decorator.album %>
+     </h3>
+     <small><%= author_label(@setting_decorator.album) %> : <%= @setting_decorator.authors if @setting_decorator.album && @setting_decorator.album.authors %></small>
+    </p>
+  <% end %>
 
-  <p>
-   <h3>Тюменский дом фотографии
-   представляет вашему вниманию виртуальную выставку
-   <br>
-   <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) if @setting_decorator.album %>
-   </h3>
-   <small><%= author_label(@setting_decorator.album) %> : <%= @setting_decorator.authors if @setting_decorator.album && @setting_decorator.album.authors %></small>
-  </p>
-
-<% if @setting_decorator.photos  %>
+  <% if @setting_decorator.photos  %>
   <div class="fotorama" data-autoplay="true" data-width="100%"
       data-transition="crossfade" data-fit="scaledown">
 
      <% @setting_decorator.photos.each do |photo| %>
-
-     
       <a href="<%= photo.image_url_for_main_carousel(current_user, session[:agreed], :normal) %>"></a>
-        
      <% end %> 
   </div>
 

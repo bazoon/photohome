@@ -12,7 +12,7 @@ class Admin::SettingDecorator
 	    @first_article = @setting.article
 	    @other_articles = Article.selected_ids(@setting.articles)
       @album = @setting.album
-      @authors = @album.authors
+      @authors = @album.authors if @album
       
 	  end    
 
