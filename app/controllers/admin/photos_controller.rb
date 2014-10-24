@@ -6,7 +6,7 @@
     # @photos = Photo.all.order("seen asc,published asc,updated_at desc").where(deleted: false)
     @scope = params[:scope]
 
-    @title = I18n.t(@scope)
+    @title = @scope ? I18n.t(@scope) : I18n.t(:all)
 
     @photos = Photo.with_scope(@scope)    
     @photos = @photos.order("seen asc, created_at desc").paginate(page: params[:page], per_page: 16)
