@@ -55,6 +55,7 @@ ru:
         open_date: "Дата открытия конкурса"
         type_id: "Тип конкурса"
         status_id: "Статус конкурса"
+        num_stars: "Количество баллов"
       admin_nomination:
         title: "Название"
         description: "Описание"   

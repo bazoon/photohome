@@ -97,7 +97,7 @@ class Admin::CompetitionsController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def competition_params
-      params.require(:competition).permit(:title, :description, :last_date,:open_date,:status_id,:type_id)
+      params.require(:competition).permit(:title, :description, :last_date,:open_date,:status_id,:type_id, :num_stars)
     end
 
 end

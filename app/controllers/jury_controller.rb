@@ -8,20 +8,14 @@ class JuryController < ApplicationController
 
 
   def rating
-
-    
-    
     id = params["data"]
     user_id,competition_photo_id = id.split(":")
     rate = params["rate"]
-
-    # binding.pry
 
     jury_rating = JuryRating.find_or_create_by(user_id: user_id, competition_photo_id: competition_photo_id)
     
     authorize! :update, jury_rating
     jury_rating.rating = rate
-
         
     respond_to do |format|
 
@@ -30,9 +24,7 @@ class JuryController < ApplicationController
       else
         format.json { render json: -1, status: 500 }
       end
-        
     end 
-
   end
 
 
@@ -48,6 +40,10 @@ class JuryController < ApplicationController
     @competition_photos = CompetitionPhoto.where(competition_id: @competition.id, banned: false).paginate(:page => params[:page], per_page: 10)
     # @competition_photos = CompetitionPhoto.joins(:competition_requests).includes(:photo).includes(:nomination).where(competition_requests: {response_id: 1}, banned: false, competition_id: @competition.id).distinct.order(:nomination_id).paginate(:page => params[:page])
     @user = current_user
+  end
+
+  def show
+    @photo = Photo.friendly.find(params[:photo_id])
   end
 
 

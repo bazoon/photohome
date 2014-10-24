@@ -22,9 +22,9 @@ Photohome::Application.routes.draw do
   get 'test' => "home#test", as: :test
 
   
-  get 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos    
-  post 'jury_rating', to: 'jury#rating', :as => :jury_rating
- 
+  get 'jury_view_photos', to: 'jury#view_photos', as: :jury_view_photos
+  post 'jury_rating', to: 'jury#rating', as: :jury_rating
+  get 'jury_show/:photo_id', to: 'jury#show', as: :jury_show
     
   resource :cache_operation, only: [:destroy]
    
