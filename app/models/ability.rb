@@ -63,7 +63,7 @@ class Ability
     end
 
     can :request, Competition do |competition|
-      !competition.overdue?
+      competition.accepts_requests? && !competition.overdue?
     end
 
     can :like, Competition do |competition|

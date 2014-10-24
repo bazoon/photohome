@@ -1,5 +1,6 @@
 class Admin::CompetitionsController < Admin::BaseController
-  before_action :set_competition, only: [:show, :edit, :update, :destroy,:view_posted,:final_judge,:stats]
+
+  before_action :set_competition, only: [:show, :edit, :update, :destroy, :view_posted, :final_judge, :stats]
 
   # GET /competitions
   # GET /competitions.json
@@ -97,7 +98,7 @@ class Admin::CompetitionsController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def competition_params
-      params.require(:competition).permit(:title, :description, :last_date,:open_date,:status_id,:type_id, :num_stars)
+      params.require(:competition).permit(:title, :description, :last_date,:open_date,:status_id,:type_id, :num_stars, :accept_date)
     end
 
 end

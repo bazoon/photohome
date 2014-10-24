@@ -12,7 +12,7 @@ class Competition < ActiveRecord::Base
   
   
   validate Proc.new {|c| errors.add(:last_date, I18n.t(:incorrect_last_date)) if c.last_date > c.open_date}
-  validates :last_date, :open_date, :title, :type_id, :status_id, :num_stars, presence: true
+  validates :last_date, :accept_date, :open_date, :title, :type_id, :status_id, :num_stars, presence: true
 
   extend FriendlyId
   friendly_id :title, use: :slugged
@@ -88,6 +88,11 @@ class Competition < ActiveRecord::Base
 
 
  # past last_date ?
+
+  def accepts_requests?
+    accept_date && accept_date < Time.zone.now
+  end
+
   def overdue?
     last_date < Time.zone.now
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024030011) do
+ActiveRecord::Schema.define(version: 20141024052751) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -195,6 +195,7 @@ ActiveRecord::Schema.define(version: 20141024030011) do
     t.date     "open_date"
     t.string   "slug"
     t.integer  "num_stars"
+    t.date     "accept_date"
   end
 
   create_table "delayed_jobs", force: true do |t|

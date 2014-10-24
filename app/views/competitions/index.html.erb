@@ -16,6 +16,7 @@
       <th><%= t(".title") %></th>
       <th><%= t(".results") %></th>
       <th><%= t(".type") %></th>
+      <th><%= t(".accept_date") %></th>
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
       <th><%= t("participate") %></th>
@@ -31,6 +32,7 @@
         <td><%= link_to competition.title,view_nominations_competition_path(competition) %></td>
         <td><%= link_to horn_icon, results_nominations_competition_path(competition) %></td>
         <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
+        <td><%= ld competition.accept_date %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
         <%- status_icon = question_icon if competition.has_awaiting_request?(current_user) %>
