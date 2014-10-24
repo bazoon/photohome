@@ -11,10 +11,10 @@ class Photo < ActiveRecord::Base
 
   DESTINATIONS = [
 
-     {label: I18n.t("portfolio"),value: PORTFOLIO_ID},
-    {label: I18n.t("review"),value: REVIEW_ID}
+    { label: I18n.t('portfolio'), value: PORTFOLIO_ID },
+    { label: I18n.t('review'), value: REVIEW_ID }
     
-    ]
+  ]
 
   
   REVIEW_LIMIT = 3
@@ -23,8 +23,8 @@ class Photo < ActiveRecord::Base
   PORTFOLIO_LIMIT = 30
   PORTFOLIO_PERIOD = 30
 
-  LABEL = -> (s){s[:label]}
-  VALUE = -> (s){s[:value]}
+  LABEL = -> (s) { s[:label] }
+  VALUE = -> (s) { s[:value] }
 
 
   scope :published, -> { where("published = ?", true) }
@@ -64,10 +64,18 @@ class Photo < ActiveRecord::Base
   
   acts_as_commentable
 
-	# attr_accessible :theme_tokens
-	attr_reader :theme_tokens
+  attr_reader :theme_tokens
 
-  
+  def self.next(id)
+    where('photos.id > ?', id).first
+  end
+
+  def self.prev(id)
+    where('photos.id < ?', id).last
+  end
+
+
+
   def initialize(params=nil, user_id=nil, published=false)
     super(params)
     self.published = published
@@ -204,6 +212,27 @@ class Photo < ActiveRecord::Base
     user.full_name if user
   end
 
+  def self.with_scope(scope)
   
+    case scope
+    when 'all'
+      not_deleted
+    when 'unseen'
+      unseen.not_deleted
+    when 'last_24'
+      last_24.not_deleted
+    when 'unpublished'
+      unpublished.not_deleted
+    when 'adults'
+      adults.not_deleted
+    when 'deleted'
+      deleted
+    when 'review'
+      review.not_deleted
+    else
+      all.not_deleted
+    end
+  end
+
  
 end
