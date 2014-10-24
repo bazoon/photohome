@@ -1,11 +1,27 @@
-<p>
-  <strong>Название:</strong>
-  <%= @photo.title %>
-</p>
+<h2><%= @competition_photo.nomination.title %></h2>
+
+
+
 
 <p class="text-center">
   
-  <%= image_tag @photo.image_url(:normal)%>
+  <%= image_tag @competition_photo.photo.image_url(:normal)%>
 </p>
+
+<% if @competition_photo.photo &&  @competition_photo.photo.title %>
+<p>
+  <strong>Название:</strong>
+  <%= @competition_photo.photo.title %>
+</p>
+
+<%- end %>
+
+
+<div style="float: right">
+  <%= link_to backward_icon, jury_show_path(@prev) if @prev %>
+  <%= link_to forward_icon, jury_show_path(@next) if @next %>
+</div>
+
+<%= jury_rate(current_user.id, @competition_photo.id, @competition_photo.jury_rating(@user.id), "jury_rate",@competition_photo.competition.num_stars) %>
 
 <hr/>

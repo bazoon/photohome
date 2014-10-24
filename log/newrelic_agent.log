@@ -6341,3 +6341,4 @@
 [10/24/14 09:00:10 +0600 MacBook-Pro-VITALIY.local (33936)] INFO : Installing Rails 4 view instrumentation
 [10/24/14 09:00:10 +0600 MacBook-Pro-VITALIY.local (33936)] INFO : Installing Rails 4 Error instrumentation
 [10/24/14 09:00:10 +0600 MacBook-Pro-VITALIY.local (33936)] INFO : Finished instrumentation
+[10/24/14 09:24:27 +0600 MacBook-Pro-VITALIY.local (14765)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: wrong number of arguments (0 for 1)

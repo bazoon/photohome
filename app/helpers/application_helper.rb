@@ -160,10 +160,10 @@ module ApplicationHelper
 
 
 
-  def jury_rate(user_id, competition_photo_id, value, klass)
-    content_tag(:input,nil,type: "number", class: "rating #{klass}", min: 0, max: 10,
+  def jury_rate(user_id, competition_photo_id, value, klass, num_stars)
+    content_tag(:input,nil,type: "number", class: "rating #{klass}", min: 0, max: num_stars,
                 step: 0.5, "data-size" => "sm".html_safe ,"data-hover-enabled" => false,
-                data: "#{user_id}:#{competition_photo_id}", "data-stars" => 10, value: value.to_s.html_safe)
+                data: "#{user_id}:#{competition_photo_id}", "data-stars" => num_stars, value: value.to_s.html_safe)
   end
 
 

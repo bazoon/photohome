@@ -43,7 +43,10 @@ class JuryController < ApplicationController
   end
 
   def show
-    @photo = Photo.friendly.find(params[:photo_id])
+    @competition_photo = CompetitionPhoto.find(params[:photo_id])
+    others = @competition_photo.competition.competition_photos
+    @next = others.next(@competition_photo.id)
+    @prev = others.prev(@competition_photo.id)
   end
 
 

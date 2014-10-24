@@ -22,7 +22,7 @@
     <tr>
 
       <td>
-        <%= link_to image_tag(competition_photo.photo.image_url(:thumb), class: "img-responsive"), jury_show_path(competition_photo.photo) %>
+        <%= link_to image_tag(competition_photo.photo.image_url(:thumb), class: "img-responsive"), jury_show_path(competition_photo) %>
       </td>  
       
       <td>
@@ -30,7 +30,7 @@
       </td>
 
       <td>
-        <%= jury_rate(@user.id,competition_photo.id, competition_photo.jury_rating(@user.id),"jury_rate") %>
+        <%= jury_rate(@user.id,competition_photo.id, competition_photo.jury_rating(@user.id),"jury_rate", @competition.num_stars) %>
         
       </td>
 

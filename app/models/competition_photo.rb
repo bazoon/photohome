@@ -30,6 +30,16 @@ class CompetitionPhoto < ActiveRecord::Base
   NORMAL = 0
   BANNED = 1000
 
+  def self.next(id)
+    where('competition_photos.id > ?', id).first
+  end
+
+  def self.prev(id)
+    where('competition_photos.id < ?', id).last
+  end
+
+
+
   def ban
     self.banned = true
     self.save!
