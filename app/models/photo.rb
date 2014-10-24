@@ -225,7 +225,7 @@ class Photo < ActiveRecord::Base
       unpublished.not_deleted
     when 'adults'
       adults.not_deleted
-    when 'deleted'
+    when 'deleted_photos'
       deleted
     when 'review'
       review.not_deleted
