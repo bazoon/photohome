@@ -33,7 +33,9 @@
         <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
-        <td><%= ok_icon if competition.has_approved_request_for?(current_user) %></td>
+        <%- status_icon = question_icon if competition.has_awaiting_request?(current_user) %>
+        <%- status_icon ||= ok_icon if competition.participate?(current_user) %>
+        <td><%= status_icon %></td>
         <td><%= link_to(photo_icon, view_nominations_competition_path(competition),:title => t('photos_')) %></td>
         <td><%= link_to show_icon, competition %></td>
         <% hint = competition.can_upload_photo?(current_user) ? t('load_photos') : t('send_request') %>

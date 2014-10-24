@@ -227,6 +227,12 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-picture")
   end
   
+  def question_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-question-sign")
+  end
+  
+
+  
 
   def now
     Time.zone.now

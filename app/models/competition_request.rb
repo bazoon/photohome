@@ -2,17 +2,12 @@ class CompetitionRequest < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :competition
-
-
-  
-
   validates :user_id, uniqueness: { scope: :competition_id,
     message: 'Only one request per competition' }
       
   #Банит фотографии если запрос сохраняется со статусом забанен
   include CompetitionPhotoBannable
   # include CompetitionRequestNotifieble
-
 
   AWAITING = 0
   ACCEPTED = 1
@@ -22,6 +17,7 @@ class CompetitionRequest < ActiveRecord::Base
   BANNED = 1000
   
   scope :accepted, -> { where(response_id: ACCEPTED) }
+  scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
 
   RESPONSES = [
     {label: I18n.t("responses.awaiting"), value: AWAITING },
@@ -32,13 +28,13 @@ class CompetitionRequest < ActiveRecord::Base
     {label: I18n.t("responses.banned"), value: BANNED }
   ]
 
-
-
   LABEL = -> (s) { s[:label] }
   VALUE = -> (s) { s[:value] }  
 
   def self.user_request(competition, user)
-    self.find_or_create_by(competition_id: competition.id, user_id: user.id)
+    request = self.find_or_create_by(competition_id: competition.id, user_id: user.id)
+    request.update(response_id: ACCEPTED) if competition.open?
+    request
   end
 
   def user_name

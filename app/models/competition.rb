@@ -4,6 +4,7 @@ class Competition < ActiveRecord::Base
   has_many :nominations,class_name: "Admin::Nomination", dependent: :destroy
 
   has_many :competition_photos, dependent: :destroy
+  has_many :photos, through: :competition_photos
   
   has_many :jury_ratings, through: :competition_photos
   has_many :users, through: :jury
@@ -33,10 +34,8 @@ class Competition < ActiveRecord::Base
     {label: I18n.t("private"),value: PRIVATE }
   ]
 
-
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
-
 
   def open?
     self.status_id == OPEN
@@ -50,22 +49,14 @@ class Competition < ActiveRecord::Base
     self.type_id == FIAP
   end
 
-
   def stats
-    
     photo_count = competition_photos.count
     jury_count = jury.count
     should_rate_count = photo_count * jury_count
     rated_count = jury_ratings.count
-
-    
-
     jury_members = []
-
     users.each do |u|
-
-      jury_members <<  {name: u.name,count: jury_ratings.where(user_id: u.id).count}  
-    
+      jury_members <<  { name: u.name,count: jury_ratings.where(user_id: u.id).count }
     end  
 
     statistics = {}
@@ -81,10 +72,20 @@ class Competition < ActiveRecord::Base
     @request_ ||= competition_requests.accepted.where(user: user).first
   end
 
-  def can_upload_photo?(user)
-    @request_ ||= competition_requests.where(user: user).first
-    open? || (@request_ && @request_.approved?)
+  def participate?(user)
+    photos.where(user_id: user).count > 0
   end
+
+  def has_awaiting_request?(user)
+    competition_requests.unaccepted.where(user: user).first
+  end
+
+
+  def can_upload_photo?(user)
+    open? || has_approved_request_for?(user)
+  end
+
+
 
  # past last_date ?
   def overdue?
