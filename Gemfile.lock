@@ -118,6 +118,8 @@ GEM
       thor (~> 0.14)
     flexslider (2.2.0)
       sass-rails (>= 3.1.0)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     foreman (0.75.0)
       dotenv (~> 0.11.1)
       thor (~> 0.19.1)
@@ -137,6 +139,7 @@ GEM
     hitimes (1.2.2)
     hub (1.12.2)
     i18n (0.6.11)
+    i18n_yaml_sorter (0.2.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -353,6 +356,7 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   flexslider
+  font-awesome-rails
   foreman
   fotoramajs
   friendly_id (~> 5.0.0)
@@ -360,6 +364,7 @@ DEPENDENCIES
   gravatar-ultimate
   gretel
   hub
+  i18n_yaml_sorter
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks

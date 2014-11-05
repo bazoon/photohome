@@ -76,8 +76,12 @@ class Competition < ActiveRecord::Base
     photos.where(user_id: user).count > 0
   end
 
-  def has_awaiting_request?(user)
+  def has_unaccepted_request?(user)
     competition_requests.unaccepted.where(user: user).first
+  end
+
+  def has_awaiting_request?(user)
+    competition_requests.awaiting.where(user: user).first
   end
 
 

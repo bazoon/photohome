@@ -10,6 +10,8 @@
 
 <%= will_paginate @competitions %>
 
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -35,9 +37,16 @@
         <td><%= ld competition.accept_date %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
+        
+        
+
+
         <%- status_icon = question_icon if competition.has_awaiting_request?(current_user) %>
         <%- status_icon ||= ok_icon if competition.participate?(current_user) %>
+        <%- status_icon ||= stop_icon if competition.has_unaccepted_request?(current_user) %>
+        
         <td><%= status_icon %></td>
+        
         <td><%= link_to(photo_icon, view_nominations_competition_path(competition),:title => t('photos_')) %></td>
         <td><%= link_to show_icon, competition %></td>
         <% hint = competition.can_upload_photo?(current_user) ? t('load_photos') : t('send_request') %>

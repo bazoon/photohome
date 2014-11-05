@@ -18,384 +18,376 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
-  nominations_: "Номинации"
-  likes: "likes"
-  place: "Место"
-  rating: "Рейтинг"
-  competition_results: "Итоги конкурса: "
-  participate_in_competition: "Это фото удалить нельзя, оно участвует в конкурсе"
-  competition_photos: "Конкурсные фотографии"
-  participate: "Я участвую ?"
-  see_hints: "Смотри подсказки внизу"
-  hints: "Подсказки"
-  competition_info: "Информация о конкурсе"
-  no_photo_loaded: "Пока нет загруженных фотографий, нажмите на кнопку выше."
-  loaded_photos: "Загруженные фотографии"
-  load_photos: "Загрузить фотографии"
-  request_sent: "Ваш запрос был отправлен администратору, зайдите сюда позже, когда запрос будет одобрен."
-  request_status: "Статус запроса"
-  history: "История"
-  send_request: "Подать запрос"
-  on_news: "Новости сайта"
-  on_site_photos: "Галереи сайта"
-  on_user_photos: "Фотографии пользователя"
-  subscriptions: "Подписки"
-  tags: "Теги"
-  author: "Автор"
-  rules: "Правила"
-  about_us: "О нас"
-  saved: 'Данные сохранены'
-  access_denied: "Нет доступа !"
-  galleries: "Галереи"
-  message: "Сообщение"
-  unfilled_profile: "Профиль не заполнен !"
-  user: "Пользователь"
-  email: "Поча"                  
-  sign_in_count: "Число вхождений"    
-  current_sign_in_at: "Текущий сеанс"
-  last_sign_in_at: "Последний раз заходил"
-  current_sign_in_ip: "Текущий IP"
-  last_sign_in_ip: "Последний IP"
-  created_at: "Дата регистрации"
-  updated_at: "Дата последнего изменения"
-  name: "Имя"
-  confirmed_at: "Дата подтверждения регистрации"
-  confirmation_sent_at: "Дата отправки подтверждения"
-  last_name: "Фамилия"
-  zip: "Индекс"
-  adress: "Адрес"
-  zip_code: "Индекс"
-  city: "Город"
-  country: "Страна"
-  phone: "Телефон"
   about: "О пользователе"
-  login: "Логин"
-  slug: "Slug"
-  birth_date: "Дата рождения"
-  age: "Возраст"
-  remove_cache: "Удалить файлы кеша"
-  album: "Галерея"
-  all: "Все"
-  unseen: "Непросмотренные"
-  last_24: "За последние 24 часа"
-  unpublished: "Неопубликованные"
-  adults: "18+"
-  for_review: "Для ревью"
-  deleted_photos: "Удаленные"
-  user_profile: "Профиль"
-  albums: "Галереи"
-  title: 'Тюменский дом фотографии'
-  fio: 'ФИО'
-  edit: 'Редактировать'
-  email: 'Почта'
-  registered: 'Зарегистрирован'
-  confirmed: 'Активирован'
-  confirmation: 'Активация'
-  unconfirmed: 'Активировать'
-  authors: 'Авторы'
-  role: 'Роль'
-  login: 'Псевдоним'
-  save: "Сохранить"
-  opened: "Открыто"
-  in_process: "Обрабатывается"
-  closed: "Закрыто"
-  complaint: "Жалоба"
-  proposal: "Предложение"
-  contest: "Конкурс"
-  comments: "Коментарии"
-  portfolio: "Портфолио"
-  review: "Ревью"
-  deleted: "Файл будет удален"
-  review_quote_exceeded: "Превышен предел загрузки фотографий на ревью"
-  portfolio_quote_exceeded: "Превышен предел загрузки фотографий в портфолио"
-  usial: "Обычный"
-  fiap: "FIAP"
-  open: "Открытый"
-  private: "Закрытый"
-  comp_photo_already_posted: "Фотография уже была отправлена на этот конкурс ! "
-  apply: "Подать заявку"
-  nomination_empty: "Не указана номинация"
-  photo_ids_empty: "Не выбраны фотографии"
-  competition_too_late: "Срок приема работ прошел"
-  max_nomination_capacity_exceeded: "Превышел предел размещения фотографии в эту номинацию"
-  profile_empty: "Для участия в ФИАП конкурсе у Вас не полностью заполнен профиль ! Заполните его и повторите попытку."
-  gallery: "Фотографии"
-  contests: "Конкурсы"
-  news: "Новости"
-  project_name: "ТДФ"
-  sign_in: "Войти"
-  login: "Войти"
-  sign_out: "Выйти"
-  forgot_password: "Забыли пароль ?"
-  did_not_recieved_confirmation: "Не получили инструкции для подвтерждения учетной записи ?"
-  paricipate_in_competition: "Фотография учавствовала в 1 или более конкурсах и не может быть удалена"
-  photo_was_deleted: "Фотография была удалена"
-  incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
-  # Для хлебных крошек названия
-  contests: "Конкурсы"
-  home: "На главную"
-  apply_: "Подать заявку"
-  photos_: "Фотографии"
-  sent_photos: "Отправленные фотографии"
-  novelties_: "Новости"
-  articles_: "Статьи" # _ чтобы не подхватывалось articles в названии таблицы 
-  more: "...еще"
-  new: "Новая запись"
-  edit_user: "Редактировать личные данные"
-  last_photos: "Последние фотографии"  
-  competition_: "Конкурс"
-  status: "Статус"
-  avatar_picture: "Картинка аватара"
-  more_articles: "Еще статьи ..."
-  change_password: "Личные данные"
-  we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"
-  leave_it_blank: "Оставте это поле пустым, если не хотите менять пароль."
-  cancel_account: "Закрыть мою учетную запись"
-  profile: "Профиль"
-  sign_up: "Регистрация"
-  cloud: "Облако" 
-  sent_letters: "Исходящие"
-  in_letters: "Входящие"
-  jury: "Жюри"
-  tickets: "Тикеты"
-  photos_saved: "Фотографии были успешно сохранены !"
-  image: "Изображение"    
-  yess: "Да"
-  nno: "Нет"
-  top: "Верх"
-  bottom: "Низ"
-  new_record_added: "Новая запись добавлена"
-  record_updated: "Запись обновлена"
-  promoted: "На главной ?" 
-  status_changed: "Изменение статуса заявки"
-  choose_photo: "Выберите фотографии"
-  choose_competition: "Сделать выбор"
-  jury_choose_competition: "Текущие конкурсы"
-  
-  # Для ответов на запросы на конкурсы
-  responses:
-    awaiting: "Ожидает рассмотрения"
-    accepted: "Заявка утверждена."
-    no_money: "Отказ. Участие не оплачено."
-    no_condition: "Отказ. Не выполнены условия участия."
-    other_reasons: "Отказ. Иная причина."
-    awaiting: "Ожидает рассмотрения"
-    no_decision: "Нет решения"
-    banned: "Забанен"
-  
-  # photos: "PHH"
-  photos:
-    index:
-      title: "Название" 
-      new: "Новая фотография"
-      caption: "Фотографии"
-    new:
-      age_policy: "Возрастное ограничение"
-      new: "Новая фотография"
-    edit:
-      title: "Редактировать"
-  topics:
+  about_us: "О нас"
+  access_denied: "Нет доступа !"
+  admin:
+    age_policies:
+      edit:
+        title: "Редактировать"
+      index: 
+        age: "Возраст +"    
+        title: "Возрастная классификация"
+      new:
+        title: "Добавить возраст"
+    albums:
       index:
         name: "Название"
-        content: "Описание"
-        title: "Темы"
-        new_topic: "Новая тема"
-  messages:
-    index:
-      title: "Тема"
-      new: "Новое сообщение"
-      content: "Содержание" 
-      reason: "Причина обращения"
-      status: "Статус"
-      messages: "Тикеты"
-    show:
-      title: "Тема"   
-      content: "Содержание" 
-      reason: "Причина обращения"
-      status: "Статус"
-    new:
-      title: "Новое сообщение"   
-  competitions:
+        new: "Новая галерея"
+        title: "Галереи"
+      new:
+        new_album: "Новая галерея"
+    articles:
+      new:
+        title: "Новая статья"
+    banner_placements:
+      edit:
+        title: "Редактировать"
+      index:
+        active: "Активен"
+        banner: "Баннер"
+        end_date: "Конечная дата"
+        place: "Место"
+        start_date: "Начальная дата"
+        title: "Размещение баннеров"
+      show:
+        active: "Активен"  
+        banner: "Баннер"
+        end_date: "Конечная дата"
+        place: "Место"
+        start_date: "Начальная дата"
+        title: "Размещение баннеров"
+    banners:
+      edit:
+        image: "Изображение"      
+        title: "Редактировать"
+      index:
+        active: "Активен"
+        banners: "Баннеры"
+        image: "Изображение"
+        link: "Ссылка"
+        title: "Название"
+      show:
+        image: "Изображение"
+        link: "Ссылка"
+        title: "Название"
+    competitions:
+      edit:
+        edit: "Редактировать"
+      index:
+        accept_date: "Дата начала приема"
+        last_date: "Дата сдачи работ"
+        list: "Конкурсы"
+        new: "Новый конкурс"
+        open_date: "Дата открытия"
+        title: "Название"
+        type: "Тип"
       new:
         new: "Новый конкурс"
+      view_posted:
+        caption: "Фотографии"  
+    messages:
       index:
-        list: "Конкурсы"
-        results: "Итоги"
+        content: "Содержание" 
+        messages: "Сообщения"    
+        new: "Новое сообщение"
+        reason: "Причина обращения"
+        status: "Статус"
+        title: "Темы"
+      show:
+        content: "Содержание" 
+        reason: "Причина обращения"
+        status: "Статус"
+        title: "Тема"   
+    nominations:
+      edit:
+        edit: "Редактировать номинацию"  
+      index:  
+        description: "Описание"
+        list: "Номинации"             
+        max_photo_count: "Макс. кол-во фотографий"
         title: "Название"
-        accept_date: "Дата начала приема"
-        last_date: "Сдать работы до"
-        open_date: "Дата оглашения результатов" 
-        type: "Тип конкурса"     
+      new:
+        new: "Новая номинация"
+    novelties:
+      new:
+        title: "Написать новость"
+    posts:
+      edit:
+        title: "Редактировать запись"    
+      index:
+        age_policy: "Ограничение"
+        new: "Новая запись"
+        title: "Название"
+      new:
+        title: "Новая запись"
+      show:
+        content: "Содержание"
+        digest: "Дайджест"
+        title: "Название"
+    settings:
+      index:
+        title: "Настройки"
+    site_photos:
+      index: 
+        title: "Галлерея сайта"
+    topics:
+      index:
+        title: "Темы"
+  adress: "Адрес"
+  adults: "18+"
+  age: "Возраст"
+  album: "Галерея"
+  albums: "Галереи"
+  all: "Все"
+  apply: "Подать заявку"
+  apply_: "Подать заявку"
+  articles:
+    list:
+      articles: "Статьи"   
+  articles_: "Статьи" # _ чтобы не подхватывалось articles в названии таблицы 
+  more: "...еще"
+  author: "Автор"
+  authors: 'Авторы'
+  avatar_picture: "Картинка аватара"
+  birth_date: "Дата рождения"
+  bottom: "Низ"
+  cancel_account: "Закрыть мою учетную запись"
+  change_password: "Личные данные"
+  choose_competition: "Сделать выбор"
+  choose_photo: "Выберите фотографии"
+  city: "Город"
+  closed: "Закрыто"
+  cloud: "Облако" 
+  comments: "Коментарии"
+  comp_photo_already_posted: "Фотография уже была отправлена на этот конкурс ! "
+  competition_: "Конкурс"
+  competition_info: "Информация о конкурсе"
+  competition_photos: "Конкурсные фотографии"
+  competition_requests:
+    index:
+      decision: "Решение"
+      requests: "Рассмотреть запрос"
+      title: "Заявки"
+      user_name: "ФИО пользователя"
+    show:
+      time_ago: "Отправлен"
+      wait: "Запрос находится на рассмотрении"
+  competition_results: "Итоги конкурса: "
+  competition_too_late: "Срок приема работ прошел"
+  competitions:
       aply:
         choose_photo: "Выберите фотографии"
         choose_photo_title: "Выбор фотографий для конкурса"
+      index:
+        accept_date: "Дата начала приема"
+        last_date: "Сдать работы до"
+        list: "Конкурсы"
+        open_date: "Дата оглашения результатов" 
+        results: "Итоги"
+        title: "Название"
+        type: "Тип конкурса"     
+      new:
+        new: "Новый конкурс"
       show:
         last_date: "Дата сдачи работ"
         open_date: "Дата открытия"      
         title: "Название"     
-  articles:
-    list:
-      articles: "Статьи"   
-  letters:
-    index:
-      letters: "Исходящие"
-      title: "Тема"
-      new: "Новое сообщение"
-      recipients: "Кому" 
-      messages: "Сообщения"
-    show:
-      title: "Тема"   
-      content: "Содержание" 
-      recipients: "Кому" 
-    new:
-      new: "Создать сообщение"
-    edit:
-      edit: "Редактировать"
+  complaint: "Жалоба"
+  confirmation: 'Активация'
+  confirmation_sent_at: "Дата отправки подтверждения"
+  confirmed: 'Активирован'
+  confirmed_at: "Дата подтверждения регистрации"
+  contest: "Конкурс"
+  contests: "Конкурсы"
+  contests: "Конкурсы"
+  country: "Страна"
+  created_at: "Дата регистрации"
+  current_sign_in_at: "Текущий сеанс"
+  current_sign_in_ip: "Текущий IP"
+  deleted: "Файл будет удален"
+  deleted_photos: "Удаленные"
+  did_not_recieved_confirmation: "Не получили инструкции для подвтерждения учетной записи ?"
+  edit: 'Редактировать'
+  edit_user: "Редактировать личные данные"
+  email: 'Почта'
+  fiap: "FIAP"
+  fio: 'ФИО'
+  for_review: "Для ревью"
+  forgot_password: "Забыли пароль ?"
+  galleries: "Галереи"
+  gallery: "Фотографии"
+  hints: "Подсказки"
+  history: "История"
+  home: "На главную"
+  image: "Изображение"    
+  in_letters: "Входящие"
+  in_process: "Обрабатывается"
   incoming_letters:
     index:
-      letters: "Входящие"
-      title: "Тема"
-      recipients: "Кому" 
       from: "От кого"
-    show:
-      title: "Тема"   
-      content: "Содержание" 
+      letters: "Входящие"
       recipients: "Кому" 
+      title: "Тема"
     new:
       new: "Создать сообщение"
-  competition_requests:
-    index:
-      title: "Заявки"
-      user_name: "ФИО пользователя"
-      decision: "Решение"
-      requests: "Рассмотреть запрос"
     show:
-      wait: "Запрос находится на рассмотрении"
-      time_ago: "Отправлен"
+      content: "Содержание" 
+      recipients: "Кому" 
+      title: "Тема"   
+  incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
+  # Для хлебных крошек названия
+  jury: "Жюри"
+  jury_choose_competition: "Текущие конкурсы"
+  # Для ответов на запросы на конкурсы
+  last_24: "За последние 24 часа"
+  last_name: "Фамилия"
+  last_photos: "Последние фотографии"  
+  last_sign_in_at: "Последний раз заходил"
+  last_sign_in_ip: "Последний IP"
+  leave_it_blank: "Оставте это поле пустым, если не хотите менять пароль."
+  letters:
+    edit:
+      edit: "Редактировать"
+    index:
+      letters: "Исходящие"
+      messages: "Сообщения"
+      new: "Новое сообщение"
+      recipients: "Кому" 
+      title: "Тема"
+    new:
+      new: "Создать сообщение"
+    show:
+      content: "Содержание" 
+      recipients: "Кому" 
+      title: "Тема"   
+  likes: "likes"
+  load_photos: "Загрузить фотографии"
+  loaded_photos: "Загруженные фотографии"
+  login: "Войти"
+  login: "Логин"
+  login: 'Псевдоним'
+  max_nomination_capacity_exceeded: "Превышел предел размещения фотографии в эту номинацию"
+  message: "Сообщение"
+  messages:
+    index:
+      content: "Содержание" 
+      messages: "Тикеты"
+      new: "Новое сообщение"
+      reason: "Причина обращения"
+      status: "Статус"
+      title: "Тема"
+    new:
+      title: "Новое сообщение"   
+    show:
+      content: "Содержание" 
+      reason: "Причина обращения"
+      status: "Статус"
+      title: "Тема"   
+  more_articles: "Еще статьи ..."
+  name: "Имя"
+  new: "Новая запись"
+  new_record_added: "Новая запись добавлена"
+  news: "Новости"
+  nno: "Нет"
+  no_photo_loaded: "Пока нет загруженных фотографий, нажмите на кнопку выше."
+  nomination_empty: "Не указана номинация"
+  nominations_: "Номинации"
+  novelties_: "Новости"
+  on_news: "Новости сайта"
+  on_site_photos: "Галереи сайта"
+  on_user_photos: "Фотографии пользователя"
+  open: "Открытый"
+  opened: "Открыто"
+  paricipate_in_competition: "Фотография учавствовала в 1 или более конкурсах и не может быть удалена"
+  participate: "Я участвую ?"
+  participate_in_competition: "Это фото удалить нельзя, оно участвует в конкурсе"
+  phone: "Телефон"
+  photo_ids_empty: "Не выбраны фотографии"
+  photo_was_deleted: "Фотография была удалена"
+  photos:
+    edit:
+      title: "Редактировать"
+    index:
+      caption: "Фотографии"
+      new: "Новая фотография"
+      title: "Название" 
+    new:
+      age_policy: "Возрастное ограничение"
+      new: "Новая фотография"
+  photos_: "Фотографии"
+  photos_saved: "Фотографии были успешно сохранены !"
+  place: "Место"
+  portfolio: "Портфолио"
+  portfolio_quote_exceeded: "Превышен предел загрузки фотографий в портфолио"
+  private: "Закрытый"
+  profile: "Профиль"
+  profile_empty: "Для участия в ФИАП конкурсе у Вас не полностью заполнен профиль ! Заполните его и повторите попытку."
+  project_name: "ТДФ"
+  promoted: "На главной ?" 
+  proposal: "Предложение"
+  rating: "Рейтинг"
+  record_updated: "Запись обновлена"
+  registered: 'Зарегистрирован'
+  remove_cache: "Удалить файлы кеша"
+  request_sent: "Ваш запрос был отправлен администратору, зайдите сюда позже, когда запрос будет одобрен."
+  request_status: "Статус запроса"
+  responses:
+    accepted: "Заявка утверждена."
+    awaiting: "Ожидает рассмотрения"
+    awaiting: "Ожидает рассмотрения"
+    banned: "Забанен"
+  # photos: "PHH"
+    no_condition: "Отказ. Не выполнены условия участия."
+    no_decision: "Нет решения"
+    no_money: "Отказ. Участие не оплачено."
+    other_reasons: "Отказ. Иная причина."
+  review: "Ревью"
+  review_quote_exceeded: "Превышен предел загрузки фотографий на ревью"
+  role: 'Роль'
+  rules: "Правила"
+  save: "Сохранить"
+  saved: 'Данные сохранены'
+  see_hints: "Смотри подсказки внизу"
+  send_request: "Подать запрос"
+  sent_letters: "Исходящие"
+  sent_photos: "Отправленные фотографии"
+  sign_in: "Войти"
+  sign_in_count: "Число вхождений"    
+  sign_out: "Выйти"
+  sign_up: "Регистрация"
+  slug: "Slug"
+  status: "Статус"
+  status_changed: "Изменение статуса заявки"
+  subscriptions: "Подписки"
+  tags: "Теги"
+  tickets: "Тикеты"
+  title: 'Тюменский дом фотографии'
+  top: "Верх"
+  topics:
+      index:
+        content: "Описание"
+        name: "Название"
+        new_topic: "Новая тема"
+        title: "Темы"
+  unconfirmed: 'Активировать'
+  unfilled_profile: "Профиль не заполнен !"
+  unpublished: "Неопубликованные"
+  unseen: "Непросмотренные"
+  updated_at: "Дата последнего изменения"
+  user: "Пользователь"
+  user_profile: "Профиль"
   user_subscriptions:
+    edit:
+      edit: "Редактировать подписку"
     index:
       kind: "Тип подписки"
       new: "Новая подписка"
     new:
       new: "Новая подписка"
-    edit:
-      edit: "Редактировать подписку"
-
-  admin:
-    settings:
-      index:
-        title: "Настройки"
-    messages:
-      index:
-        title: "Темы"
-        new: "Новое сообщение"
-        content: "Содержание" 
-        reason: "Причина обращения"
-        status: "Статус"
-        messages: "Сообщения"    
-      show:
-        title: "Тема"   
-        content: "Содержание" 
-        reason: "Причина обращения"
-        status: "Статус"
-    competitions:
-      new:
-        new: "Новый конкурс"
-      index:
-        list: "Конкурсы"
-        type: "Тип"
-        title: "Название"
-        last_date: "Дата сдачи работ"
-        open_date: "Дата открытия"
-        accept_date: "Дата начала приема"
-        new: "Новый конкурс"
-      view_posted:
-        caption: "Фотографии"  
-      edit:
-        edit: "Редактировать"
-    nominations:
-      new:
-        new: "Новая номинация"
-      index:  
-        list: "Номинации"             
-        title: "Название"
-        description: "Описание"
-        max_photo_count: "Макс. кол-во фотографий"
-      edit:
-        edit: "Редактировать номинацию"  
-    novelties:
-      new:
-        title: "Написать новость"
-    articles:
-      new:
-        title: "Новая статья"
-
-    albums:
-      index:
-        title: "Галереи"
-        name: "Название"
-        new: "Новая галерея"
-      new:
-        new_album: "Новая галерея"
-    site_photos:
-      index: 
-        title: "Галлерея сайта"
-    posts:
-      index:
-        title: "Название"
-        new: "Новая запись"
-        age_policy: "Ограничение"
-      new:
-        title: "Новая запись"
-      edit:
-        title: "Редактировать запись"    
-      show:
-        title: "Название"
-        content: "Содержание"
-        digest: "Дайджест"
-    banners:
-      index:
-        banners: "Баннеры"
-        title: "Название"
-        link: "Ссылка"
-        active: "Активен"
-        image: "Изображение"
-      show:
-        title: "Название"
-        link: "Ссылка"
-        image: "Изображение"
-      edit:
-        title: "Редактировать"
-        image: "Изображение"      
-    banner_placements:
-      index:
-        title: "Размещение баннеров"
-        banner: "Баннер"
-        place: "Место"
-        start_date: "Начальная дата"
-        end_date: "Конечная дата"
-        active: "Активен"
-      edit:
-        title: "Редактировать"
-      show:
-        title: "Размещение баннеров"
-        banner: "Баннер"
-        place: "Место"
-        start_date: "Начальная дата"
-        end_date: "Конечная дата"
-        active: "Активен"  
-    age_policies:
-      index: 
-        title: "Возрастная классификация"
-        age: "Возраст +"    
-      edit:
-        title: "Редактировать"
-      new:
-        title: "Добавить возраст"
-    topics:
-      index:
-        title: "Темы"
-
-
+  usial: "Обычный"
+  we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"
+  yess: "Да"
+  zip: "Индекс"
+  zip_code: "Индекс"

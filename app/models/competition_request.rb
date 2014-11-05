@@ -17,6 +17,7 @@ class CompetitionRequest < ActiveRecord::Base
   BANNED = 1000
   
   scope :accepted, -> { where(response_id: ACCEPTED) }
+  scope :awaiting, -> { where(response_id: AWAITING) }
   scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
 
   RESPONSES = [

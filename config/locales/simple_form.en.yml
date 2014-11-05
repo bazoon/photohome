@@ -1,28 +1,27 @@
 en:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
-    required:
-      text: 'required'
-      mark: '*'
-      # You can uncomment the line below if you need to overwrite the whole required html.
-      # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
     # Labels and hints examples
+    hints:
+      defaults:
+        password: 'No special characters, please.'
+        username: 'User name to sign in.'
     labels:
       defaults:
         password: 'Password'
         terms_of_service: 'Agreed'
       topics:
-        new:
-          name: 'Название'
-          content: "Описание"
         edit:
           email: 'E-mail.'
-    hints:
-      defaults:
-        username: 'User name to sign in.'
-        password: 'No special characters, please.'
-
+        new:
+          content: "Описание"
+          name: 'Название'
+    "no": 'No'
+    required:
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+      text: 'required'
+    "yes": 'Yes'

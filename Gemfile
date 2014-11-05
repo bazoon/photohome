@@ -119,6 +119,8 @@ gem 'awesome_print', :group => "development"
 gem 'gravatar-ultimate'
 gem 'whenever', :require => false
 gem 'sidekiq'
+gem 'i18n_yaml_sorter', :group => :development
+gem "font-awesome-rails"
 # gem 'sidekiq_mailer'
 # gem 'sinatra', require: false
 # gem 'slim'

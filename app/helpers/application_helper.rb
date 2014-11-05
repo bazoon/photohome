@@ -129,6 +129,12 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-comment")
   end
   
+  def stop_icon
+    fa_icon("minus-circle", style: "color: red")
+    # content_tag(:span,"",class: "glyphicon glyphicon-minus-sign", style: "color: red")
+  end
+
+  
 
   def ru_icon
     # image_tag(asset_path("ru.png"))
