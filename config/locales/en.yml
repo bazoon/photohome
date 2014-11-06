@@ -19,6 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
+  tdp_presents: "The Tyumen House of the photography presents to your attention a virtual exhibition"
   about_us: "About us"
   apply: "apply"
   articles_: "Articles"

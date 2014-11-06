@@ -5,8 +5,7 @@
 
   <% if @setting_decorator.album %>
     <p>
-     <h3>Тюменский дом фотографии
-     представляет вашему вниманию виртуальную выставку
+     <h3><%= t(:tdp_presents) %>
      <br>
      <%= link_to elki(@setting_decorator.album_title), album_path(@setting_decorator.album) if @setting_decorator.album %>
      </h3>
@@ -34,6 +33,26 @@
       <small> <%= age_badge(@setting_decorator.novelty.age_policy_age)%> </small>
     </div>
    <% end %>
+   <div style="clear:both;padding-top: 20px"></div>
+
+   <div class="row">
+
+     <% @setting_decorator.other_novelties.each_with_index  do |novelty, index| %>
+                
+          <div class="col-xs-6" style="height: 200px" >
+              <%= age_badge(novelty.age_policy_age) %>
+              <%= link_to novelty.title, novelty_path(novelty) %>
+              
+              <%= raw novelty.digest %>
+            
+              
+              
+              
+            
+          </div>
+
+     <% end %>
+   </div>
 
 
 <div style="clear:both;"></div>

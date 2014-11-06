@@ -16,18 +16,20 @@ class AjaxController < ApplicationController
   end
 
 
-  def articles
+  def novelties
     respond_to do |format|
       
       title = params[:q].mb_chars.capitalize
 
-      articles = Article.where("title like ?",["%#{title}%"])
+      novelties = Novelty.where("title like ?",["%#{title}%"])
       # format.js { users.inspect}
-      format.js {render json: articles.map { |a| {:id => a.id, :name => a.title} }.to_json  }
+      format.js {render json: novelties.map { |a| {:id => a.id, :name => a.title} }.to_json  }
     
     end 
     
   end
+
+
 
 
   def test

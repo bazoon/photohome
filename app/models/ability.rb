@@ -18,6 +18,7 @@ class Ability
         can :manage, Admin::Setting
         can :manage, Article
         can :manage, Competition
+        can :manage, Stats
       end
 
       if user.has_role? :writer
