@@ -21,6 +21,10 @@ class CompetitionPhoto < ActiveRecord::Base
         .order('place,sum(rating)')
   }
 
+  scope :not_banned, -> { where(banned: false) }
+
+
+
   # before_destroy -> do 
   #   raise Exceptions::ClosedCompetition if competition.overdue? 
   #   true

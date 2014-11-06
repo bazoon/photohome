@@ -44,9 +44,6 @@ ActiveRecord::Schema.define(version: 20141024052751) do
     t.boolean  "active"
   end
 
-  add_index "admin_banner_placements", ["banner_id"], name: "index_admin_banner_placements_on_banner_id", using: :btree
-  add_index "admin_banner_placements", ["place_id"], name: "index_admin_banner_placements_on_place_id", using: :btree
-
   create_table "admin_banners", force: true do |t|
     t.string   "image"
     t.string   "link"
@@ -62,16 +59,12 @@ ActiveRecord::Schema.define(version: 20141024052751) do
     t.integer  "competition_request_id"
   end
 
-  add_index "admin_competition_request_responses", ["response_id"], name: "index_admin_competition_request_responses_on_response_id", using: :btree
-
   create_table "admin_juries", force: true do |t|
     t.integer  "competition_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "admin_juries", ["user_id"], name: "index_admin_juries_on_user_id", using: :btree
 
   create_table "admin_nominations", force: true do |t|
     t.string   "title"
@@ -81,8 +74,6 @@ ActiveRecord::Schema.define(version: 20141024052751) do
     t.integer  "competition_id"
     t.integer  "max_photo_count"
   end
-
-  add_index "admin_nominations", ["competition_id"], name: "index_admin_nominations_on_competition_id", using: :btree
 
   create_table "admin_settings", force: true do |t|
     t.integer  "album_id"

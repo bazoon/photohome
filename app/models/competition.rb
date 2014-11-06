@@ -10,9 +10,9 @@ class Competition < ActiveRecord::Base
   has_many :users, through: :jury
   has_many :competition_requests, dependent: :destroy
   
-  
+  validates :last_date, :accept_date, :open_date, :title, :type_id, :status_id, :num_stars, presence: true  
   validate Proc.new {|c| errors.add(:last_date, I18n.t(:incorrect_last_date)) if c.last_date > c.open_date}
-  validates :last_date, :accept_date, :open_date, :title, :type_id, :status_id, :num_stars, presence: true
+
 
   extend FriendlyId
   friendly_id :title, use: :slugged
@@ -50,13 +50,14 @@ class Competition < ActiveRecord::Base
   end
 
   def stats
-    photo_count = competition_photos.count
+    photo_count = competition_photos.not_banned.count
     jury_count = jury.count
     should_rate_count = photo_count * jury_count
-    rated_count = jury_ratings.count
+    rated_count = jury_ratings.joins(:competition_photo).where('competition_photos.banned = false').count
     jury_members = []
+
     users.each do |u|
-      jury_members <<  { name: u.name,count: jury_ratings.where(user_id: u.id).count }
+      jury_members <<  { name: u.name, count: jury_ratings.where(user_id: u.id).count }
     end  
 
     statistics = {}

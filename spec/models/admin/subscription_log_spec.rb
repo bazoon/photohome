@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Admin::SubscriptionLog, :type => :model do
   pending "add some examples to (or delete) #{__FILE__}"

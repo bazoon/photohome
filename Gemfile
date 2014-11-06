@@ -96,13 +96,14 @@ gem 'babosa'
 # gem 'rails_12factor'
 
 gem 'jquery-turbolinks'
-gem 'pry', :group => :development
+# gem 'pry', :group => :development
+gem 'jazz_hands', :group => :development
 
 gem 'capybara', :group => :development
 gem 'zeus', :group => :development
 
 gem 'database_cleaner'
-# gem 'email_spec', :group => :development
+gem 'email_spec', :group => :development
 
 gem 'launchy'
 

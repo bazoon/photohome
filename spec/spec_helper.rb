@@ -20,6 +20,7 @@ RSpec.configure do |config|
   config.include(EmailSpec::Matchers)
   config.include Rails.application.routes.url_helpers
   config.include Devise::TestHelpers, :type => :controller
+  config.include FactoryGirl::Syntax::Methods
 
   # config.include Capybara::DSL
   config.include Capybara::DSL
