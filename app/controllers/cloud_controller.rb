@@ -9,7 +9,9 @@ class CloudController < ApplicationController
   end
 
   def index
-  	@freqs = Photo.tag_counts_on(:themes).map {|t| [t.name,t.taggings_count]}
+  	# @freqs = Photo.tag_counts_on(:themes).map {|t| [t.name, t.taggings_count]}
+    @freqs = Tag.select('name, sum(taggings_count) as tcount').group('name').map {|t| [t.name, t.tcount]}
+    binding.pry
   end
 
 end
