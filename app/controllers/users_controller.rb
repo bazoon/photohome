@@ -8,19 +8,30 @@ class UsersController < ApplicationController
     authorize! :index, @user, :message => I18n.t(:access_denied) 
     role_id = params[:users][:role_id] if params[:users]
 
-    @users =
-    if params[:users] && !role_id.blank?
-      User.includes(:roles).where(roles: {id: role_id })
-    elsif params[:users] 
-      User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
-    else
-      User.includes(:roles)
+    @users = if params[:users]
+
+      if role_id.blank?
+        User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
+      else
+
+        if role_id.to_i >= 0
+          User.includes(:roles).where(roles: {id: role_id })    
+        else
+          User.where(confirmed_at: nil)
+        end
+
+      end 
+
+    else  
+      User.includes(:roles)  
     end.paginate(page: params[:page], per_page: 25)
+
     
   end
 
   def select_roles
-    @roles = Role.all
+    @roles = Role.pluck(:id, :name)
+    @roles << [-1, "Не активированные"]
   end
 
   def confirm
