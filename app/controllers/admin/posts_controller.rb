@@ -3,7 +3,7 @@ class Admin::PostsController < Admin::BaseController
 
   before_filter :verify_permission
 
-  load_and_authorize_resource except: [:create], :find_by => :slug # for friendly_id
+  load_and_authorize_resource except: [:create, :edit], :find_by => :slug # for friendly_id
   
   
 
@@ -26,7 +26,7 @@ class Admin::PostsController < Admin::BaseController
 
   # GET /admin/articles/1/edit
   def edit
-
+    authorize! @admin_post, :update
   end
 
   # POST /admin/articles
@@ -79,7 +79,6 @@ class Admin::PostsController < Admin::BaseController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_post
-      # binding.pry
 
       @admin_post = post_type.friendly.find(params[:id])
 
