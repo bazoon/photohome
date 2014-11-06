@@ -9,7 +9,7 @@
   <%= f.input :name, :autofocus => true, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
   <%= f.input :last_name, :autofocus => true, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
 
-  <%= f.input :birth_date, as: :date, start_year: Time.zone.now.year - 90, end_year: Time.zone.now.year - 10, as: :date_picker, :input_html => {class: "form-control", :autocomplete => "off"}  %>
+  <%= f.input :birth_date, as: :date, start_year: Time.zone.now.year - 90, end_year: Time.zone.now.year - 10, :input_html => {class: "form-control", :autocomplete => "off"}  %>
 
   <%= f.input :email, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
   <%= f.input :password, :required => true, :input_html => {class: "form-control", :autocomplete => "off"} %>
@@ -28,8 +28,10 @@
 
 <script>
    // $( "input.date_picker" ).datepicker({yearRange: "<%= Time.zone.now.year - 90%>:<%= Time.zone.now.year - 5%>"});
-
+   
    // $.datepicker.setDefaults($.datepicker.regional["ru"]);
-    $("input.date_picker").datepicker($.datepicker.regional["ru"])
-    $( "input.date_picker" ).datepicker( "option", "yearRange", "<%= Time.zone.now.year - 90%>:<%= Time.zone.now.year - 5%>" )
+    // $("input.date_picker").datepicker($.datepicker.regional["ru"])
+    // $( "input.date_picker" ).datepicker( "option", "yearRange", "<%= Time.zone.now.year - 90%>:<%= Time.zone.now.year - 5%>" )
+    // $("#user_birth_date").val(<%= resource.birth_date.to_s %>)
+
 </script>

@@ -53,7 +53,7 @@ class Competition < ActiveRecord::Base
     photo_count = competition_photos.not_banned.count
     jury_count = jury.count
     should_rate_count = photo_count * jury_count
-    rated_count = jury_ratings.joins(:competition_photo).where('competition_photos.banned = false').count
+    rated_count = jury_ratings.joins(:competition_photo).where('competition_photos.banned = false and jury_ratings.rating > 0').count
     jury_members = []
 
     users.each do |u|

@@ -6556,3 +6556,5 @@
 [11/06/14 11:49:05 +0500 MacBook-Pro-VITALIY.local (82805)] INFO : Installing Rails 4 Error instrumentation
 [11/06/14 11:49:05 +0500 MacBook-Pro-VITALIY.local (82805)] INFO : Finished instrumentation
 [11/06/14 11:49:07 +0500 MacBook-Pro-VITALIY.local (82805)] INFO : Doing deferred dependency-detection before Rack startup
+[11/06/14 16:45:01 +0500 MacBook-Pro-VITALIY.local (82805)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unknown column 'admin_jury_ratings.rating' in 'where clause'
+[11/06/14 16:45:01 +0500 MacBook-Pro-VITALIY.local (82805)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unknown column 'admin_jury_ratings.rating' in 'where clause'
