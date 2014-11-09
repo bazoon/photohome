@@ -1,27 +1,107 @@
-en:
+ru:
   simple_form:
-    error_notification:
-      default_message: "Please review the problems below:"
-    # Labels and hints examples
-    hints:
-      defaults:
-        password: 'No special characters, please.'
-        username: 'User name to sign in.'
-    labels:
-      defaults:
-        password: 'Password'
-        terms_of_service: 'Agreed'
-      topics:
-        edit:
-          email: 'E-mail.'
-        new:
-          content: "Описание"
-          name: 'Название'
-    "no": 'No'
+    "yes": 'Да'
+    "no": 'Нет'
     required:
+      text: 'Обязательное поле'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
-      text: 'required'
-    "yes": 'Yes'
+    error_notification:
+      default_message: "Возникла ошибка при сохранении. Возможно, Вы забыли заполнить необходимое поле."
+    # Labels and hints examples
+    labels:
+      defaults:
+        name: "Имя"
+        email: "Почта"
+        password: "Пароль"
+        password_confirmation: "Введите пароль повторно"
+        login: 'Псевдоним'
+        birth_date: 'Дата рождения'
+        terms_of_service: "Согласен с правилами"
+        last_name: 'Фамилия'
+        remember_me: 'Запомнить меня'
+        about: 'Обо мне'
+        digest: "Дайджест"
+        content: "Содержание"
+        title: "Название"
+        user_name: "Автор"
+        policy: "Возрастное ограничение"
+      topic:
+        new:
+          name: 'Название'
+          content: "Описание"
+        edit:
+          email: 'E-mail.'
+      message:
+        title: "Тема"
+        content: "Содержание" 
+        reason:  "Причина"
+      photo:
+        title: "Название"
+        topic: "Раздел"
+        destination_id: "Назначение:"
+        age_policy: "Возрастное ограничение:"
+        theme_tokens: "Теги"
+      comment:
+        title: "Заголовок"
+        comment: "Комментарий"  
+      competition:
+        title: "Название"
+        description: "Положение о конкурсе"
+        last_date: "Сдать работы до"
+        open_date: "Дата оглашения оценок"
+        type_id: "Тип конкурса"
+        status_id: "Статус конкурса"
+        num_stars: "Количество баллов"
+        accept_date: "Дата начала приема"
+      admin_nomination:
+        title: "Название"
+        description: "Описание"   
+      competition_photo:
+        nomination_id: "Номинация / Количество фотографий в номинации" 
+      admin_album:
+        title: "Название" 
+        authors: "Авторы"
+        description: "Описание"
+      letter:
+        title: "Заголовок"
+        content: Содержание
+        people_tokens: "Адресаты"
+      admin_setting:
+        album: "Галерея"
+        novelty: "Главная новость"
+        article: "Главная статья"
+        articles: "Статьи"
+        footer: "Подвал"
+      admin_banner:
+        title: "Название"
+        link: "Ссылка"
+        image: "Изображение"
+        active: "Активен"
+      admin_banner_placement:
+        banner: "Баннер"
+        place_id: "Место"
+        active: "Активно"
+        start_date: "Дата начала"
+        end_date: "Дата окончания"
+      admin_age_policy:
+        age: "Возраст"
+      competition_request:
+        response_id: "Ответ"
+        answer: "Пояснение"
+      site_rule:
+        locale: 'Язык'
+        rules: 'Правила'
+        rules_digest: 'Дайджест'
+      user_subscription:
+        kind: "Тип подписки"
+
+
+
+    # hints:
+    #   defaults:
+    #     /name: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+

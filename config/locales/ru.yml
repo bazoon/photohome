@@ -4,7 +4,7 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#  !!!!! ??  I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
 #
@@ -28,7 +28,7 @@ ru:
   competition_results: "Итоги конкурса: "
   participate_in_competition: "Это фото удалить нельзя, оно участвует в конкурсе"
   competition_photos: "Конкурсные фотографии"
-  participate: "Я участвую ?"
+  participate: "Участие"
   see_hints: "Смотри подсказки внизу"
   hints: "Подсказки"
   competition_info: "Информация о конкурсе"
@@ -65,14 +65,13 @@ ru:
   confirmed_at: "Дата подтверждения регистрации"
   confirmation_sent_at: "Дата отправки подтверждения"
   last_name: "Фамилия"
-  zip: "Индекс"
   adress: "Адрес"
   zip_code: "Индекс"
   city: "Город"
   country: "Страна"
   phone: "Телефон"
   about: "О пользователе"
-  slug: "Slug" #???????????????????????????????
+  slug: "Slug" 
   birth_date: "Дата рождения"
   age: "Возраст"
   remove_cache: "Удалить файлы кеша"
@@ -113,21 +112,21 @@ ru:
   fiap: "FIAP"
   open: "Открытый"
   private: "Закрытый"
-  comp_photo_already_posted: "Эта фотография уже была отправлена в текущий конкурс ! "
+  comp_photo_already_posted: "Эта фотография уже была отправлена в текущий конкурс! "
   apply: "Подать заявку"
   nomination_empty: "Не указана номинация"
   photo_ids_empty: "Нет выбранных фотографий"
   competition_too_late: "Срок приема работ истёк"
   max_nomination_capacity_exceeded: "Превышен придел размещения фотографии в эту номинацию"
-  profile_empty: "У Вас не полностью заполнен профиль ! Заполните его и повторите попытку для участия в конкурсе FIAP."
+  profile_empty: "У Вас не полностью заполнен профиль! Заполните его и повторите попытку для участия в конкурсе FIAP."
   gallery: "Фотографии"
   contests: "Конкурсы"
   news: "Новости"
   project_name: "ТДФ"
   sign_in: "Войти"
   sign_out: "Выйти"
-  forgot_password: "Забыли пароль ?"
-  did_not_recieved_confirmation: "Не получили инструкции для подвтерждения учетной записи ?"
+  forgot_password: "Забыли пароль?"
+  did_not_recieved_confirmation: "Не получили инструкции для подвтерждения учетной записи?"
   paricipate_in_competition: "Эта фотография учавствовала в 1 или более конкурсах и не может быть удалена"
   photo_was_deleted: "Фотография была удалена"
   incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
@@ -319,7 +318,7 @@ ru:
         list: "Номинации"             
         title: "Название"
         description: "Описание"
-        max_photo_count: "Макс. кол-во фотографий"
+        max_photo_count: "Кол-во фотографий"
       edit:
         edit: "Редактировать номинацию"  
     novelties:

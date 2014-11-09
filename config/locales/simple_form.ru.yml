@@ -16,7 +16,7 @@ ru:
         name: "Имя"
         email: "Почта"
         password: "Пароль"
-        password_confirmation: "Подтверждение"
+        password_confirmation: "Введите пароль повторно"
         login: 'Псевдоним'
         birth_date: 'Дата рождения'
         terms_of_service: "Согласен с правилами"

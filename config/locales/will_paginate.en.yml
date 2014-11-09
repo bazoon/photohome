@@ -1,0 +1,28 @@
+ru:
+  will_paginate:
+    next_label: Next →
+    page_entries_info:
+      single_page:
+        zero: ! '%{model} not found'
+        one: "%{model} <b>%{count}<b> in total"
+        few: "%{model} <b>%{count}<b> in total"
+        many: "%{model} <b>%{count}<b> in total"
+        other: "%{model} <b>%{count}<b> in total"
+      single_page_html:
+        zero: ! '%{model} не найдены'
+        one: "%{model} <b>%{count}<b> in total"
+        few: "%{model} <b>%{count}<b> in total"
+        many: "%{model} <b>%{count}<b> in total"
+        other: "%{model} <b>%{count}<b> in total"
+      multi_page:
+        one: "%{model} %{from} - %{to} of %{count} in total"
+        few: "%{model} %{from} - %{to} of %{count} in total"
+        many: "%{model} %{from} - %{to} of %{count} in total"
+        other: "%{model} %{from} - %{to} of %{count} in total"
+      multi_page_html:
+        one: "%{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total"
+        few: "%{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total"
+        many: "%{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total"
+        other: "%{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b> in total"
+    page_gap: ! '&hellip;'
+    previous_label: ← Prev.

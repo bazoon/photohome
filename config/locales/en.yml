@@ -4,7 +4,7 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#  !!!!! ??  I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
 #
@@ -18,97 +18,377 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-en:
-  tdp_presents: "The Tyumen House of the photography presents to your attention a virtual exhibition"
+
+ru:
+  tdp_presents: "The Tyumen House of the Photography presents to your attention a virtual exhibition"
+  nominations_: "Nominations"
+  likes: "like"
+  place: "Place"
+  rating: "Raiting"
+  competition_results: "Results: "
+  participate_in_competition: "It's forbidden to remove photography participating in a competition."
+  competition_photos: "Competition photos"
+  participate: "Participate"
+  see_hints: "See hints below"
+  hints: "hints"
+  competition_info: "Competition information"
+  no_photo_loaded: "No photos loaded yet, press button above."
+  loaded_photos: "Loaded photos."
+  load_photos: "Load photos"
+  request_sent: "We have recieved your request. You will be informed about our decision within 2 days."
+  request_status: "Request status"
+  history: "History"
+  send_request: "Request"
+  on_news: "Site news"
+  on_site_photos: "Site galleries"
+  on_user_photos: "User photos"
+  subscriptions: "Subscriptions"
+  tags: "Tag"
+  author: "Author"
+  rules: "Terms"
   about_us: "About us"
-  apply: "apply"
-  articles_: "Articles"
-  authors: "Authors"
-  change_password: "Change password"
-  choose_competition: "Choose"
+  saved: 'Saved.'
+  access_denied: "Access denied !"
+  galleries: "Galleries"
+  message: "Message"
+  unfilled_profile: "Attention ! Profile is is not filled"
+  user: "User"
+  email: "Email"                  
+  sign_in_count: "Число вхождений"    
+  current_sign_in_at: "Текущий сеанс"
+  last_sign_in_at: "Последний раз заходил"
+  current_sign_in_ip: "Текущий IP"
+  last_sign_in_ip: "Последний IP"
+  created_at: "Дата регистрации"
+  updated_at: "Дата последнего изменения"
+  name: "Name"
+  confirmed_at: "Дата подтверждения регистрации"
+  confirmation_sent_at: "Дата отправки подтверждения"
+  last_name: "Lastname"
+  adress: "Address"
+  zip_code: "Zip"
+  city: "Town"
+  country: "Country"
+  phone: "Phone"
+  about: "About"
+  slug: "Slug" 
+  birth_date: "Birth date"
+  age: "Age"
+  remove_cache: "Удалить файлы кеша"
+  album: "Gallery"
+  all: "Все"
+  unseen: "Непросмотренные"
+  last_24: "За последние 24 часа"
+  unpublished: "Неопубликованные"
+  adults: "18+"
+  for_review: "Для ревью"
+  deleted_photos: "Удаленные"
+  user_profile: "Профиль"
+  albums: "Galleries"
+  title: 'Tyumen House of Photography'
+  fio: 'Full name'
+  edit: 'edit'
+  registered: 'registered'
+  confirmed: 'confirmed'
+  confirmation: 'confirmation'
+  unconfirmed: 'Confirm'
+  authors: 'Authors'
+  role: 'Role'
+  login: 'login'
+  save: "save"
+  opened: "opened"
+  in_process: "in process"
   closed: "closed"
+  complaint: "complaint"
+  proposal: "proposal"
+  contest: "competition"
   comments: "comments"
-  comp_photo_already_posted: "photo have been alreade posted"
-  competition_info: "Competition info"
-  competition_too_late: "contest is closed"
-  competitions:
-      aply:
-        choose_photo: "Choose photographs"
-        choose_photo_title: "Choosing photo for competition"
+  portfolio: "Portfolio"
+  review: "Revie"
+  deleted: "File will be deleted soon"
+  review_quote_exceeded: "Limit exceeded"
+  portfolio_quote_exceeded: "Limit exceeded"
+  usial: "Usial"
+  fiap: "FIAP"
+  open: "Open"
+  private: "Private"
+  comp_photo_already_posted: "One (or more) of loaded photos was already loaded for this competition before."
+  apply: "Apply"
+  nomination_empty: "No nomination chosen"
+  photo_ids_empty: "No photo"
+  competition_too_late: "Too late !"
+  max_nomination_capacity_exceeded: "Maximum nomination capacity exceeded!"
+  profile_empty: "You should fill your profile according to FIAP rules."
+  gallery: "Photographies"
+  contests: "Competitions"
+  news: "News"
+  project_name: "TDP"
+  sign_in: "Sign in"
+  sign_out: "Sign out"
+  forgot_password: "Forget your password?"
+  did_not_recieved_confirmation: "Did not recieved confirmation?"
+  paricipate_in_competition: "This photography can not be deleted."
+  photo_was_deleted: "Photo was deleted"
+  incorrect_last_date: "Дата сдачи работ должна быть до даты открытия конкурса"
+  # Для хлебных крошек названия
+  home: "Home"
+  apply_: "Apply"
+  photos_: "Photos"
+  sent_photos: "Sent photos"
+  novelties_: "News"
+  articles_: "Articles" # _ чтобы не подхватывалось articles в названии таблицы 
+  more: "...more"
+  new: "New"
+  edit_user: "Edit profile"
+  last_photos: "Last photos"  
+  competition_: "Competition"
+  status: "Status"
+  avatar_picture: "Avatar"
+  more_articles: "More articles..."
+  change_password: "Change password"
+  we_need_your_current_password: "We need your current password"
+  leave_it_blank: "Leave it blank if do not want to change your password"
+  cancel_account: "Cancel my account"
+  profile: "Profile"
+  sign_up: "Sign up"
+  cloud: "Tag cloud" 
+  sent_letters: "Sent letters"
+  in_letters: "Incoming letters"
+  jury: "Jury"
+  tickets: "Tickets"
+  photos_saved: "Photos was seved"
+  image: "image"    
+  yess: "yes"
+  nno: "no"
+  top: "top"
+  bottom: "bottom"
+  new_record_added: "New record added"
+  record_updated: "Record updated"
+  promoted: "Promoted" 
+  status_changed: "Change status"
+  choose_photo: "Choose photos"
+  choose_competition: "Choose"
+  jury_choose_competition: "Current competition"
+  # Для ответов на запросы на конкурсы
+  responses:
+    awaiting: "Awaiting"
+    accepted: "Accepted"
+    no_money: "Please pay money for participation."
+    no_condition: "Competition terms was not met"
+    other_reasons: "Other reason. Contact admin"
+    no_decision: "No decision"
+    banned: "banned"
+  # photos: "PHH"
+  photos:
+    index:
+      title: "Title" 
+      new: "New photography"
+      caption: "Фотографии"
+    new:
+      age_policy: "Age policy"
+      new: "New photography"
+    edit:
+      title: "Edit"
+  topics:
       index:
-        last_date: "Send photos till"
-        list: "Contests"
-        open_date: "Open date"      
+        name: "Names"
+        content: "Content"
         title: "Title"
+        new_topic: "New topic"
+  messages:
+    index:
+      title: "Title"
+      new: "New message"
+      content: "Content" 
+      reason: "Reason"
+      status: "Status"
+      messages: "Tickets"
+    show:
+      title: "Subject"   
+      content: "Content" 
+      reason: "Reason"
+      status: "Status"
+    new:
+      title: "Title"   
+  competitions:
       new:
-        new: "New"
+        new: "New competition"
+      index:
+        list: "Competitions"
+        results: "Results"
+        title: "Title"
+        accept_date: "Accept date"
+        last_date: "Last date"
+        open_date: "Open date" 
+        type: "Competition type"     
+      aply:
+        choose_photo: "Choose photo"
+        choose_photo_title: "Choose photos"
       show:
         last_date: "Last date"
         open_date: "Open date"      
-        title: "Title"        
-  complaint: "complaint"
-  contest: "contest"
-  contests: "Contests"
-  deleted: "will be deleted"
-  fiap: "FIAP"
-  forgot_password: "Forgot password ?"
-  galleries: "Galleries"
-  gallery: "Gallery"
-  hints: "Hints"
-  history: "History"
-  home: "Home"
-  in_letters: "Incoming"
-  in_process: "in process"
-  last_photos: "Last photos"  
-  load_photos: "Upload photos"
-  max_nomination_capacity_exceeded: "max limimit reached"
-  messages:
+        title: "Title"     
+  articles:
+    list:
+      articles: "Articles"   
+  letters:
     index:
-      content: "Content" 
+      letters: "Messages"
+      title: "subject"
+      new: "New message"
+      recipients: "Recipients" 
       messages: "Messages"
-      new: "New"
-      reason: "Reason"
-      status: "Status"
-      title: "Title"
     show:
-      content: "Content" 
-      reason: "Reason"
-      status: "Stats"
-      title: "Title"   
-  news: "News"
-  no_photo_loaded: "No photo loaded"
-  nomination_empty: "no nomination chosen"
-  open: "open"
-  opened: "Opened"
-  photo_ids_empty: "no photo chosen"
-  photos:
+      title: "subject"   
+      content: "content" 
+      recipients: "recipients" 
+    new:
+      new: "New message"
+    edit:
+      edit: "Edit"
+  incoming_letters:
     index:
-      caption: "Gallery"
+      letters: "Incoming letters"
+      title: "subject"
+      recipients: "recipients" 
+      from: "from"
+    show:
+      title: "subject"   
+      content: "content" 
+      recipients: "recipients" 
+    new:
       new: "New"
-      title: "Title" 
+  competition_requests:
+    index:
+      title: "Competitions"
+      user_name: "Username"
+      decision: "Desicion"
+      requests: "Request"
+    show:
+      wait: "awaiting"
+      time_ago: "Sent"
+  user_subscriptions:
+    index:
+      kind: "Subscription type"
+      new: "New subscription"
+    new:
+      new: "New subscription"
+    edit:
+      edit: "Edit"
+
+  admin:
+    settings:
+      index:
+        title: "Настройки"
+    messages:
+      index:
+        title: "Темы"
+        new: "Новое сообщение"
+        content: "Содержание" 
+        reason: "Причина обращения"
+        status: "Статус"
+        messages: "Сообщения"    
+      show:
+        title: "Тема"   
+        content: "Содержание" 
+        reason: "Причина обращения"
+        status: "Статус"
+    competitions:
+      new:
+        new: "Новый конкурс"
+      index:
+        list: "Конкурсы"
+        type: "Тип"
+        title: "Название"
+        last_date: "Дата сдачи работ"
+        open_date: "Дата открытия"
+        accept_date: "Дата начала приема"
+        new: "Новый конкурс"
+      view_posted:
+        caption: "Фотографии"  
+      edit:
+        edit: "Редактировать"
+    nominations:
+      new:
+        new: "Новая номинация"
+      index:  
+        list: "Nominations"             
+        title: "Название"
+        description: "Описание"
+        max_photo_count: "Кол-во фотографий"
+      edit:
+        edit: "Редактировать номинацию"  
+    novelties:
+      new:
+        title: "Написать новость"
+    articles:
+      new:
+        title: "Новая статья"
+
+    albums:
+      index:
+        title: "Галереи"
+        name: "Название"
+        new: "Новая галерея"
+      new:
+        new_album: "Новая галерея"
+    site_photos:
+      index: 
+        title: "Gallery сайта"
+    posts:
+      index:
+        title: "Название"
+        new: "Новая запись"
+        age_policy: "Ограничение"
+      new:
+        title: "Новая запись"
+      edit:
+        title: "Редактировать запись"    
+      show:
+        title: "Название"
+        content: "Содержание"
+        digest: "Дайджест"
+    banners:
+      index:
+        banners: "Баннеры"
+        title: "Название"
+        link: "Ссылка"
+        active: "Активен"
+        image: "Изображение"
+      show:
+        title: "Название"
+        link: "Ссылка"
+        image: "Изображение"
+      edit:
+        title: "Редактировать"
+        image: "Изображение"      
+    banner_placements:
+      index:
+        title: "Размещение баннеров"
+        banner: "Баннер"
+        place: "Место"
+        start_date: "Начальная дата"
+        end_date: "Конечная дата"
+        active: "Активен"
+      edit:
+        title: "Редактировать"
+      show:
+        title: "Размещение баннеров"
+        banner: "Баннер"
+        place: "Место"
+        start_date: "Начальная дата"
+        end_date: "Конечная дата"
+        active: "Активен"  
+    age_policies:
+      index: 
+        title: "Возрастная классификация"
+        age: "Возраст +"    
+      edit:
+        title: "Редактировать"
+      new:
+        title: "Добавить возраст"
     topics:
-        index:
-          content: "Description"
-          name: "Name"
-          new_topic: "New topic"
-          title: "Themes"
-  photos_: "Photos"
-  portfolio: "portfolio"
-  portfolio_quote_exceeded: "portfolio quote exceeded"
-  private: "private"
-  profile: "Profile"
-  project_name: "Photohome"
-  proposal: "proposal"
-  review: "review"
-  review_quote_exceeded: "review quote exceeded"
-  rules: "Terms of use"
-  save: "Save"
-  see_hints: "see_hints below"
-  send_request: "Send request"
-  send_request: "Send request"
-  sent_letters: "Sent"
-  sign_in: "Sign in"
-  sign_out: "Sign out"
-  sign_up: "Sign up"
-  tags: "Tags"
-  usial: "regulat"
+      index:
+        title: "Темы"
+
+
