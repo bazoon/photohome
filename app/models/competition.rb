@@ -65,7 +65,7 @@ class Competition < ActiveRecord::Base
     jury_members = []
 
     users.each do |u|
-      jury_members <<  { name: u.name, count: jury_ratings.where(user_id: u.id).count }
+      jury_members <<  { name: u.name, count: jury_ratings.joins(:competition_photo).where('competition_photos.banned = false and user_id = ? and rating > 0', u.id).count }
     end  
 
     statistics = {}
