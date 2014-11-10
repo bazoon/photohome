@@ -13,7 +13,7 @@ end
 private
 	
 	def post_type
-		binding.pry
+		# binding.pry
     params[:type].constantize
   end
 

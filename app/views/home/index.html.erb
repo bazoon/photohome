@@ -26,7 +26,7 @@
   
   <% if @setting_decorator.novelty  %>
     <div>
-     <h3> Главная новость</h3>
+     <h3> <%= t('main_novelty') %> </h3>
       <img src = "<%= @setting_decorator.novelty.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
       <h2> <%= link_to  @setting_decorator.novelty.title, novelty_path(@setting_decorator.novelty) %> </h2>
       <p> <%= raw @setting_decorator.novelty.digest %>  </p>
@@ -59,7 +59,7 @@
   <br>
    <% if @setting_decorator.first_article %>
       <div>
-      <h3> Рекомендуемая статья</h3>
+      <h3> <%= t('recommended_article') %> </h3>
         <img src = "<%= @setting_decorator.first_article.first_image_src %>" height="30%" width="30%" style="float: left; padding-right: 20px;" />
         
         <h3><%= link_to @setting_decorator.first_article.title, article_path(@setting_decorator.first_article) %></h3>
@@ -105,7 +105,7 @@
 
 
   <% if @last_photos  %>
-  <h3>Последние фотографии</h3>
+  <h3><%= t('last_photos') %></h3>
   <div class="row" style="padding-bottom: 70px">    
  
       <% @last_photos.each do |photo|  %>

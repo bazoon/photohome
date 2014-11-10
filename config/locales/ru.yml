@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  authors_description: "Пользователи сайта загрузившие фотографии (одну или более)"
+  about_me: "Обо мне"
+  recommended_article: "Рекомендуемая статья"
+  main_novelty: "Главная новость"
   tdp_presents: "Тюменский дом фотографии представляет вашему вниманию виртуальную выставку"
   nominations_: "Номинации"
   likes: "Понравилось"

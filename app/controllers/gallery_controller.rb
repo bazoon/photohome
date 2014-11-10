@@ -17,7 +17,6 @@ class GalleryController < ApplicationController
 
 
     @last_photos = Photo.published_non_competition_photos.paginate(:page => params[:page],per_page: 12)
-
   end
 
 

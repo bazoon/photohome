@@ -13,14 +13,16 @@
 
 </p>
 	<% album.last_photos.each_with_index do |album_photo,index| %>
-			  
+
+      <% if album_photo.photo %>			  
    	  <div class="col-sm-3" >
     	<div class="thumbnail">  
       <%= render partial: "photos/thumb", locals: { photo: album_photo.photo, path: album_carousel_path(album,album_photo) } %>
- 
       <%= render partial: "photos/caption", locals: { photo: album_photo.photo, links: [] } %>
     	</div>
-    
+      <% end %>
+ 
+
   	</div>
 
   <% end %>

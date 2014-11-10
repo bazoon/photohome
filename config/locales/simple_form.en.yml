@@ -1,102 +1,102 @@
-ru:
+en:
   simple_form:
-    "yes": 'Да'
-    "no": 'Нет'
+    "yes": 'yes'
+    "no": 'no'
     required:
-      text: 'Обязательное поле'
+      text: 'Required'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Возникла ошибка при сохранении. Возможно, Вы забыли заполнить необходимое поле."
+      default_message: "Error. It seems you forgot to fill required field."
     # Labels and hints examples
     labels:
       defaults:
-        name: "Имя"
-        email: "Почта"
-        password: "Пароль"
-        password_confirmation: "Введите пароль повторно"
-        login: 'Псевдоним'
-        birth_date: 'Дата рождения'
-        terms_of_service: "Согласен с правилами"
-        last_name: 'Фамилия'
-        remember_me: 'Запомнить меня'
-        about: 'Обо мне'
-        digest: "Дайджест"
-        content: "Содержание"
-        title: "Название"
-        user_name: "Автор"
-        policy: "Возрастное ограничение"
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        login: 'Login'
+        birth_date: 'Birth date'
+        terms_of_service: "Accept"
+        last_name: 'Last name'
+        remember_me: 'Remember me'
+        about: 'About'
+        digest: "digest"
+        content: "Content"
+        title: "Title"
+        user_name: "Author"
+        policy: "Age restriction"
       topic:
         new:
-          name: 'Название'
-          content: "Описание"
+          name: 'Title'
+          content: "Description"
         edit:
-          email: 'E-mail.'
+          email: 'Email'
       message:
-        title: "Тема"
-        content: "Содержание" 
-        reason:  "Причина"
+        title: "Subject"
+        content: "Content" 
+        reason:  "Reason"
       photo:
-        title: "Название"
-        topic: "Раздел"
-        destination_id: "Назначение:"
-        age_policy: "Возрастное ограничение:"
-        theme_tokens: "Теги"
+        title: "Title"
+        topic: "Topic"
+        destination_id: "Purpose:"
+        age_policy: "Age restriction:"
+        theme_tokens: "Tags"
       comment:
-        title: "Заголовок"
-        comment: "Комментарий"  
+        title: "Title"
+        comment: "Comment"  
       competition:
-        title: "Название"
-        description: "Положение о конкурсе"
-        last_date: "Сдать работы до"
-        open_date: "Дата оглашения оценок"
-        type_id: "Тип конкурса"
-        status_id: "Статус конкурса"
-        num_stars: "Количество баллов"
-        accept_date: "Дата начала приема"
+        title: "Title"
+        description: "Description"
+        last_date: "Last date"
+        open_date: "Announcment date"
+        type_id: "Competition type"
+        status_id: "Status"
+        num_stars: "Num stars"
+        accept_date: "Start date"
       admin_nomination:
-        title: "Название"
-        description: "Описание"   
+        title: "Title"
+        description: "Description"   
       competition_photo:
-        nomination_id: "Номинация / Количество фотографий в номинации" 
+        nomination_id: "Nomination / Max photos count" 
       admin_album:
-        title: "Название" 
-        authors: "Авторы"
-        description: "Описание"
+        title: "Title" 
+        authors: "Author"
+        description: "Description"
       letter:
-        title: "Заголовок"
-        content: Содержание
-        people_tokens: "Адресаты"
+        title: "Title"
+        content: "Content"
+        people_tokens: "Recipients"
       admin_setting:
-        album: "Галерея"
-        novelty: "Главная новость"
-        article: "Главная статья"
-        articles: "Статьи"
-        footer: "Подвал"
+        album: "Gallery"
+        novelty: "Main news"
+        article: "Main article"
+        articles: "Articles"
+        footer: "Footer"
       admin_banner:
-        title: "Название"
-        link: "Ссылка"
-        image: "Изображение"
-        active: "Активен"
+        title: "Title"
+        link: "Link"
+        image: "Image"
+        active: "Active?"
       admin_banner_placement:
-        banner: "Баннер"
-        place_id: "Место"
-        active: "Активно"
-        start_date: "Дата начала"
-        end_date: "Дата окончания"
+        banner: "Banner"
+        place_id: "Place"
+        active: "Active?"
+        start_date: "Start date"
+        end_date: "End date"
       admin_age_policy:
-        age: "Возраст"
+        age: "Age"
       competition_request:
-        response_id: "Ответ"
-        answer: "Пояснение"
+        response_id: "Response"
+        answer: "Answer"
       site_rule:
-        locale: 'Язык'
-        rules: 'Правила'
-        rules_digest: 'Дайджест'
+        locale: 'Locale'
+        rules: 'Rule'
+        rules_digest: 'Digest'
       user_subscription:
-        kind: "Тип подписки"
+        kind: "Subscription type"
 
 
 

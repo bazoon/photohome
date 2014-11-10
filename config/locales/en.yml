@@ -20,7 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  tdp_presents: "The Tyumen House of the Photography presents to your attention a virtual exhibition"
+  authors_description: "Users loaded 1 or more photos"
+  about_me: "About me"
+  last_photos: "Last photos"
+  recommended_article: "Recommended article"
+  main_novelty: "Main news"
+  tdp_presents: "The Tyumen House of Photography presents to your attention a virtual exhibition"
   nominations_: "Nominations"
   likes: "like"
   place: "Place"
@@ -83,7 +88,7 @@ en:
   adults: "18+"
   for_review: "Для ревью"
   deleted_photos: "Удаленные"
-  user_profile: "Профиль"
+  user_profile: "Profile"
   albums: "Galleries"
   title: 'Tyumen House of Photography'
   fio: 'Full name'
@@ -145,7 +150,7 @@ en:
   status: "Status"
   avatar_picture: "Avatar"
   more_articles: "More articles..."
-  change_password: "Change password"
+  change_password: "Edit profile"
   we_need_your_current_password: "We need your current password"
   leave_it_blank: "Leave it blank if do not want to change your password"
   cancel_account: "Cancel my account"
@@ -183,7 +188,7 @@ en:
     index:
       title: "Title" 
       new: "New photography"
-      caption: "Фотографии"
+      caption: "Photos"
     new:
       age_policy: "Age policy"
       new: "New photography"
