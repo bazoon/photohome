@@ -99,7 +99,7 @@ en:
   unconfirmed: 'Confirm'
   authors: 'Authors'
   role: 'Role'
-  login: 'login'
+  login: 'Nickname'
   save: "save"
   opened: "opened"
   in_process: "in process"

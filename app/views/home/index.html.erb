@@ -33,9 +33,8 @@
       <small> <%= age_badge(@setting_decorator.novelty.age_policy_age)%> </small>
     </div>
    <% end %>
-   <div style="clear:both;padding-top: 20px"></div>
 
-   <div class="row">
+   <div style="clear:both"></div>
 
      <% @setting_decorator.other_novelties.each_with_index  do |novelty, index| %>
                 
@@ -44,19 +43,13 @@
               <%= link_to novelty.title, novelty_path(novelty) %>
               
               <%= raw novelty.digest %>
-            
-              
-              
-              
-            
           </div>
 
      <% end %>
-   </div>
+   
 
-
-<div style="clear:both;"></div>
-  <br>
+<div style="clear:both"></div>
+  
    <% if @setting_decorator.first_article %>
       <div>
       <h3> <%= t('recommended_article') %> </h3>
@@ -69,7 +62,7 @@
         <p><%= raw @setting_decorator.first_article.digest %> 
         <small> <%= age_badge(@setting_decorator.first_article.age_policy_age) %>  </small>
      
-    <div style="clear:both;padding-top: 20px"></div>
+    <div style="clear:both"></div>
 
       <div class="muted"><%= t("more_articles") %></div>
       <div class="row">
