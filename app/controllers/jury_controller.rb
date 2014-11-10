@@ -29,15 +29,26 @@ class JuryController < ApplicationController
 
 
   def choose_competition
-    @competitions = Competition.where("open_date > ?", Time.zone.now)
+    # @competitions = Competition.where("open_date > ?", Time.zone.now)
     @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ?",current_user.id,Time.zone.now)
   end
 
 
   def view_photos
-    @competition = Competition.friendly.find(params[:jury][:competition_id])
+    @competition = Competition.friendly.find(params[:competition_id])
+    scope =params[:scope]
     redirect_to root_path,alert: "You are not allowed to jury this competition !" unless can? :jury, @competition
-    @competition_photos = CompetitionPhoto.where(competition_id: @competition.id, banned: false).paginate(:page => params[:page], per_page: 10)
+
+    @competition_photos =
+      if scope == 'unrated'
+        CompetitionPhoto.unrated_by(current_user, @competition)
+      else
+        CompetitionPhoto.where(competition_id: @competition.id, banned: false)
+      end.paginate(:page => params[:page], per_page: 10)
+
+    @should_jury = @competition.competition_photos.not_banned.count  
+    @juried = @competition.jury_rating_count_for(current_user)
+    
     # @competition_photos = CompetitionPhoto.joins(:competition_requests).includes(:photo).includes(:nomination).where(competition_requests: {response_id: 1}, banned: false, competition_id: @competition.id).distinct.order(:nomination_id).paginate(:page => params[:page])
     @user = current_user
   end
