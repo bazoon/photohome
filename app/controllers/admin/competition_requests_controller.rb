@@ -35,7 +35,7 @@ private
   end
 
   def request_params
-    params.require(:competition_request).permit(:response_id, :answer)
+    params.require(:competition_request).permit(:response_id, :answer, :permited_nomination_count)
   end  
 
 end

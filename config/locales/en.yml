@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  competition_rules: "Competition rules"
   authors_description: "Users loaded 1 or more photos"
   about_me: "About me"
   last_photos: "Last photos"
@@ -123,6 +124,7 @@ en:
   photo_ids_empty: "No photo"
   competition_too_late: "Too late !"
   max_nomination_capacity_exceeded: "Maximum nomination capacity exceeded!"
+  exceeded_paid_nominations: "Exceeded paid nominations limit"
   profile_empty: "You should fill your profile according to FIAP rules."
   gallery: "Photographies"
   contests: "Competitions"
@@ -223,15 +225,15 @@ en:
         results: "Results"
         title: "Title"
         accept_date: "Accept date"
-        last_date: "Last date"
-        open_date: "Open date" 
+        last_date: "Submissions to"
+        open_date: "Notification" 
         type: "Competition type"     
       aply:
         choose_photo: "Choose photo"
         choose_photo_title: "Choose photos"
       show:
-        last_date: "Last date"
-        open_date: "Open date"      
+        last_date: "Submissions to"
+        open_date: "Notification"      
         title: "Title"     
   articles:
     list:

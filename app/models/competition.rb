@@ -37,6 +37,10 @@ class Competition < ActiveRecord::Base
   LABEL = -> (s){s[:label]}
   VALUE = -> (s){s[:value]}  
 
+  def loaded_in_nominations(user)
+    
+  end
+
   def jury_rating_count_for(user)
     jury_ratings.where(user_id: user.id).joins(:competition_photo).where(competition_photos: {banned: false}).count
   end

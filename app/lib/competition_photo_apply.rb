@@ -19,7 +19,7 @@ class CompetitionPhotoApply
   end
  
 
-  def create(photo_ids,nomination_id)
+  def create(photo_ids, nomination_id)
 
     raise Exceptions::NoPhotoAttached if photo_ids.empty?
     check(nomination_id)
@@ -43,6 +43,18 @@ class CompetitionPhotoApply
     raise Exceptions::ClosedCompetition if @competition.overdue?
     raise Exceptions::ProfileEmpty unless @competition.valid_for_fiap?(@user) 
     raise Exceptions::MaxNominationCapacity unless can_post_in_nomination?(nomination_id,@user)
+    raise Exceptions::ExceededPaidNominations if exceeded_paid_nominations?(nomination_id)
+  end
+
+  def exceeded_paid_nominations?(nomination_id)
+    return false unless @competition.fiap?
+    
+    # binding.pry
+    nominations = Admin::Nomination.nominations_for(@user, @competition)
+    return false if nominations.include?(nomination_id.try(:to_i))
+
+    request = @competition.competition_requests.where(user: @user).first
+    nominations.count >= request.permited_nomination_count
   end
 
 

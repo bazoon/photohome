@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  competition_rules: "Положение о конкурсе"
   authors_description: "Пользователи сайта загрузившие фотографии (одну или более)"
   about_me: "Обо мне"
   recommended_article: "Рекомендуемая статья"
@@ -122,6 +123,7 @@ ru:
   photo_ids_empty: "Нет выбранных фотографий"
   competition_too_late: "Срок приема работ истёк"
   max_nomination_capacity_exceeded: "Превышен придел размещения фотографии в эту номинацию"
+  exceeded_paid_nominations: "Превышен предел оплаченных номинаций"
   profile_empty: "У Вас не полностью заполнен профиль! Заполните его и повторите попытку для участия в конкурсе FIAP."
   gallery: "Фотографии"
   contests: "Конкурсы"
@@ -225,15 +227,15 @@ ru:
         results: "Итоги"
         title: "Название"
         accept_date: "Дата начала приема"
-        last_date: "Сдать работы до"
-        open_date: "Дата оглашения результатов" 
+        last_date: "Работы сдать до"
+        open_date: "Дата оглашения результатов"
         type: "Тип конкурса"     
       aply:
         choose_photo: "Выберите фотографии"
         choose_photo_title: "Выбор фотографий для конкурса"
       show:
-        last_date: "Дата сдачи работ"
-        open_date: "Дата открытия"      
+        last_date: "Работы сдать до"
+        open_date: "Дата оглашения результатов"      
         title: "Название"     
   articles:
     list:

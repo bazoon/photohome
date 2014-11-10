@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106063743) do
+ActiveRecord::Schema.define(version: 20141110084728) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -175,11 +175,12 @@ ActiveRecord::Schema.define(version: 20141106063743) do
   create_table "competition_requests", force: true do |t|
     t.integer  "competition_id"
     t.integer  "user_id"
-    t.boolean  "approved",       default: false
+    t.boolean  "approved",                  default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "response_id",    default: 0
+    t.integer  "response_id",               default: 0
     t.text     "answer"
+    t.integer  "permited_nomination_count", default: 0
   end
 
   add_index "competition_requests", ["competition_id"], name: "index_competition_requests_on_competition_id", using: :btree

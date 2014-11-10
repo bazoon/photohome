@@ -35,6 +35,14 @@ module Exceptions
     end
   end
 
+    class ExceededPaidNominations < Exception
+    def initialize(msg = I18n.t(:exceeded_paid_nominations))
+      super(msg)
+    end
+  end
+
+
+
   class PhotoParicipateInCompetition < Exception
     def initialize(msg = I18n.t(:max_nomination_capacity_exceeded))
       super(msg)
@@ -58,6 +66,8 @@ module Exceptions
     end
    
   end 
+
+
 
 
 
