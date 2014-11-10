@@ -22,7 +22,8 @@ class CompetitionPhotoApply
   def create(photo_ids, nomination_id)
 
     raise Exceptions::NoPhotoAttached if photo_ids.empty?
-    check(nomination_id)
+
+    
 
     ids = photo_ids.split(",")
 
@@ -30,6 +31,7 @@ class CompetitionPhotoApply
 
     ActiveRecord::Base.transaction do
       ids.each do |id|
+        check(nomination_id)
         CompetitionPhoto.create!(photo_id: id,competition_id: competition.id, nomination_id: nomination_id)
       end  
     end

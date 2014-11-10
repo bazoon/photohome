@@ -17,7 +17,7 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirmation"
-        login: 'Login'
+        login: 'Nickname'
         birth_date: 'Birth date'
         terms_of_service: "Accept"
         last_name: 'Last name'
