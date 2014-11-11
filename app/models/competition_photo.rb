@@ -2,6 +2,7 @@ class CompetitionPhoto < ActiveRecord::Base
   belongs_to :nomination, class_name: "Admin::Nomination"
   belongs_to :photo
   belongs_to :competition
+  has_many :jury_ratings, through: :competition
   has_many :competition_requests, through: :competition
 
   # delegate :user, to: :photo 

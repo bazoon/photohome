@@ -47,6 +47,8 @@ class JuryController < ApplicationController
       end.paginate(:page => params[:page], per_page: 10)
 
     @should_jury = @competition.competition_photos.not_banned.count  
+    
+
     @juried = @competition.jury_rating_count_for(current_user)
     
     # @competition_photos = CompetitionPhoto.joins(:competition_requests).includes(:photo).includes(:nomination).where(competition_requests: {response_id: 1}, banned: false, competition_id: @competition.id).distinct.order(:nomination_id).paginate(:page => params[:page])

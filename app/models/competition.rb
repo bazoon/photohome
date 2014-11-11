@@ -42,7 +42,7 @@ class Competition < ActiveRecord::Base
   end
 
   def jury_rating_count_for(user)
-    jury_ratings.where(user_id: user.id).joins(:competition_photo).where(competition_photos: {banned: false}).count
+    jury_ratings.where('user_id=? and rating > 0', user.id).joins(:competition_photo).where(competition_photos: {banned: false}).count
   end
 
   def open?
