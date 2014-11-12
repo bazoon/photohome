@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  choose_nomination: "Выбрать номинацию"
   competition_rules: "Положение о конкурсе"
   authors_description: "Пользователи сайта загрузившие фотографии (одну или более)"
   about_me: "Обо мне"

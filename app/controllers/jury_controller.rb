@@ -36,15 +36,30 @@ class JuryController < ApplicationController
 
   def view_photos
     @competition = Competition.friendly.find(params[:competition_id])
-    scope =params[:scope]
-    redirect_to root_path,alert: "You are not allowed to jury this competition !" unless can? :jury, @competition
+    @scope = params[:scope]
+    
+
+    @nomination_id = params[:jury] ? params[:jury][:nomination_id] : params[:nomination_id]
+    @nomination_id = @nomination_id.empty? ? nil : @nomination_id.try(:to_i) if @nomination_id
+    
+
+
+    redirect_to root_path, alert: "You are not allowed to jury this competition !" unless can? :jury, @competition
 
     @competition_photos =
-      if scope == 'unrated'
+      if @scope == 'unrated'
         CompetitionPhoto.unrated_by(current_user, @competition)
       else
         CompetitionPhoto.where(competition_id: @competition.id, banned: false)
-      end.paginate(:page => params[:page], per_page: 10)
+      end
+
+    if @nomination_id
+      @competition_photos = @competition_photos.select {|cp| cp.nomination_id == @nomination_id }
+    end
+
+    @competition_photos = @competition_photos.paginate(:page => params[:page], per_page: 10)
+
+    # binding.pry
 
     @should_jury = @competition.competition_photos.not_banned.count  
     

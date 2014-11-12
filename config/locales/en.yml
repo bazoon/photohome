@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  choose_nomination: "Choose nomination"
   competition_rules: "Competition rules"
   authors_description: "Users loaded 1 or more photos"
   about_me: "About me"

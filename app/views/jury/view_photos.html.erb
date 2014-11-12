@@ -10,8 +10,15 @@
   осталось <%= @should_jury - @juried %> 
 </p>
 
-<%= link_to 'Все', jury_view_photos_path(@competition, :all) %>
-<%= link_to 'Нежуреные', jury_view_photos_path(@competition, :unrated) %>
+<%- all_class = @scope == "all" ? "btn btn-success" : "btn btn-default" %>
+<%= link_to 'Все', jury_view_photos_path(@competition, :all, nomination_id: @nomination_id), class: all_class %>
+
+<%- unrated_class = @scope == "unrated" ? "btn btn-success" : "btn btn-default" %>
+<%= link_to 'Нежуреные', jury_view_photos_path(@competition, :unrated, nomination_id: @nomination_id), class: unrated_class %>
+
+
+<%= render partial: 'nomination_form' %>
+
 
 <table class="table table-striped">
   

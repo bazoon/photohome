@@ -1,0 +1,19 @@
+<%= simple_form_for(:jury, url: jury_view_photos_path(@competition, @scope), method: :get) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :nomination_id, 
+        label: t('choose_nomination'),
+        collection: @competition.nominations,
+        label_method: :title, 
+        value_method: :id, 
+        :input_html => {class: "form-control"},
+        :selected => @nomination_id %>
+
+    </div>
+    
+    
+    <%= f.button :submit, value: I18n.t("save"), input_html: {class: "btn btn-default" } %>
+  
+<% end %>
