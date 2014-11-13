@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  less_than_1000: "Ширина фотографии должна быть не более 1000 пикселей"
   save_chosen: "Сохранить выбор"
   filter: "Отфильтровать"
   choose_nomination: "Выбрать номинацию"

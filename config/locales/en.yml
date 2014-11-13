@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  less_than_1000: "Photography should have width no more than 1000 pixels. Resize it please."
   save_chosen: "Save chosen"
   filter: "Filter"
   choose_nomination: "Choose nomination"
