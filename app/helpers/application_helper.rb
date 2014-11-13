@@ -63,6 +63,11 @@ module ApplicationHelper
     content_tag(:span,s,class: "label label-success")
   end
 
+  def yellow_label(s)
+    content_tag(:span,s,class: "label label-warning")
+  end
+  
+
   def jury_icon
     content_tag(:span,"",class: "glyphicon glyphicon-tower")
   end
