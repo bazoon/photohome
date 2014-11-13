@@ -25,6 +25,7 @@
 //= require turbolinks
 //= require redactor-rails
 //= require fotorama
+//= require bootstrap-filestyle
 
 
 //= require_tree .
