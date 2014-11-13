@@ -9,7 +9,7 @@ en:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Error. It seems you forgot to fill required field."
+      default_message: "Error. May be you forgot to fill something or exceeded upload file size?"
     # Labels and hints examples
     # 
     

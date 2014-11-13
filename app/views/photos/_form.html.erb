@@ -1,4 +1,5 @@
 <%= simple_form_for([current_user, @photo]) do |f| %>
+
   <%= f.error_notification %>
 
     <div class="form-group">
@@ -9,6 +10,8 @@
     <div class="form-group">
     <%= f.file_field :image, class: "form-control filestyle" %>
     </div>
+    <%= f.error :image %>
+
 
     <div class="form-group">
     <%= f.association :topic,:input_html => {class: "form-control"} %>

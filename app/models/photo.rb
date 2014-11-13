@@ -52,6 +52,7 @@ class Photo < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :age_policy_id, presence: true
+  validate :photo_size_validation
 
   before_save :check_limits
   self.per_page = 4
@@ -233,6 +234,15 @@ class Photo < ActiveRecord::Base
       all.not_deleted
     end
   end
+
+    private
+
+    def photo_size_validation
+      # binding.pry
+      errors.add(:image, "should be less than 0.2MB") if image.size > 200.kilobytes
+      width, height = FastImage.size(image.file.file)
+      errors.add(:image, "width should be less than 1000px") if width > 800
+    end
 
  
 end
