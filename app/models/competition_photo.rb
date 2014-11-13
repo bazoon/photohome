@@ -39,9 +39,21 @@ class CompetitionPhoto < ActiveRecord::Base
   BANNED = 1000
 
   def self.unrated_by(user, competition)
-    find_by_sql("select * from competition_photos where competition_id=#{competition.id} and banned =false and not id in
-    (select competition_photos.id from competition_photos, jury_ratings
-    where (banned = false) and (competition_id = #{competition.id}) and (jury_ratings.competition_photo_id = competition_photos.id) and (jury_ratings.rating > 0) and (jury_ratings.user_id=#{user.id}))")
+    # find_by_sql("select * from competition_photos where competition_id=#{competition.id} and banned =false and not id in
+    # (select competition_photos.id from competition_photos, jury_ratings
+    # where (banned = false) and (competition_id = #{competition.id}) and (jury_ratings.competition_photo_id = competition_photos.id) and (jury_ratings.rating > 0) and (jury_ratings.user_id=#{user.id}))")
+
+    
+    competition.competition_photos.where(banned: false).where.not id: 
+      CompetitionPhoto.select(:id)
+                      .distinct
+                      .joins(:competition, :jury_ratings)
+                      .where(banned: false)
+                      .where('jury_ratings.rating > 0')
+                      .where(jury_ratings: { user: user })
+    
+                  
+
   end
 
   def self.next(id)

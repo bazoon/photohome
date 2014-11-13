@@ -33,7 +33,8 @@
       <tr>
         <td><%= link_to competition.title,view_nominations_competition_path(competition) %></td>
         <td><%= link_to horn_icon, results_nominations_competition_path(competition) %></td>
-        <td><%= competition.open? ? green_label(t("open")) : red_label(t("private")) %></td>
+        <% type =competition.fiap? ? green_label(t("fiap")) :  competition.open? ? green_label(t("open")) : red_label(t("private")) %>
+        <td><%= type %></td>
         <td><%= ld competition.accept_date %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>

@@ -11,6 +11,17 @@ en:
     error_notification:
       default_message: "Error. It seems you forgot to fill required field."
     # Labels and hints examples
+    # 
+    
+    activerecord:
+      models:
+        photo: Photo
+      attributes:
+        photo:
+          image: "Choose photo"
+
+
+
     labels:
       defaults:
         name: "Name"
@@ -28,6 +39,7 @@ en:
         title: "Title"
         user_name: "Author"
         policy: "Age restriction"
+        image: "Choose"
       topic:
         new:
           name: 'Title'
@@ -44,6 +56,7 @@ en:
         destination_id: "Purpose:"
         age_policy: "Age restriction:"
         theme_tokens: "Tags"
+        image: "Choose file"
       comment:
         title: "Title"
         comment: "Comment"  

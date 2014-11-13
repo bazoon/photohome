@@ -15,7 +15,7 @@
 
     <%= link_to t(".choose_photo"),choose_photo_competition_path(@competition), remote: true %> <br/>
 <br>
-    <%= f.button :submit,input_html: {class: "btn btn-default"},value: "Сохранить выбор" %>
+    <%= f.button :submit,input_html: {class: "btn btn-default"}, value: t('save_chosen') %>
     
   <div id="next"></div>
 <% end %>

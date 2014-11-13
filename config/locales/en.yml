@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  save_chosen: "Save chosen"
   filter: "Filter"
   choose_nomination: "Choose nomination"
   competition_rules: "Competition rules"
