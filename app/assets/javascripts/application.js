@@ -31,6 +31,8 @@
 
 $(document).ready(function() {
 
+ $('[data-toggle="tooltip"]').tooltip()
+
 $('.jury_rate').on('rating.change', function(event, value, caption) {
   var data = $(this).attr("data");
   $.post( "/jury_rating", { rate: value, data: data  }, function(data) {} );

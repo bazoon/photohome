@@ -15,10 +15,11 @@
        
           <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_path(competition_photo.photo) } %>
 
-        <%- rating = "#{ t('rating') } : #{competition_photo.average_rating }" %>
-        <%- place = "#{ t('place') } : #{competition_photo.place }" %>
-        <%- likes = "#{ t('likes') } : #{competition_photo.likes.count }" %>
+        <%- rating ="R: #{competition_photo.average_rating }" %>
+        <%- place = "P: #{competition_photo.place }" %>
+        <%- likes = "L: #{competition_photo.likes.count }" %>
           
+
         <%= render partial: "photos/result_caption", locals: { photo: competition_photo.photo, rating: rating, place: place, likes: likes } %>
         
         </div>

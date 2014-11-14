@@ -1,9 +1,12 @@
-<div class="caption">
- <small> <%= age_badge(photo.age_policy_age) %> </small>
+<div class="caption" style="margin-top: -10px;padding-bottom: 45px">
+ <small style="float: left"> <%= age_badge(photo.age_policy_age) %> </small>
   
   <span style = "float: right">  
-  <span class="label label-warning"><%= place %></span>
-    <span class="label label-success"><%= rating %></span>
-    <span class="label label-info"><%= likes %></span>
+  <span class="label label-warning" data-toggle="tooltip" data-placement="left" 
+  title="<%= t('place') %>"><%= place %></span>
+    <span class="label label-success" data-toggle="tooltip" data-placement="left" 
+  title="<%= t('rating') %>"><%= rating %></span>
+    <span class="label label-info" data-toggle="tooltip" data-placement="left" 
+  title="<%= t('likes') %>"><%= likes %></span>
   </span>
 </div>  
