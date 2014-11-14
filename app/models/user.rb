@@ -119,9 +119,10 @@ class User < ActiveRecord::Base
   end
 
   def country_name
-    return country unless country
-    c = ISO3166::Country[country]
-    c.translations[I18n.locale.to_s] || c.name
+    if country
+      c = ISO3166::Country[country]
+      c.translations[I18n.locale.to_s] || c.name if c
+    end
   end
 
   def birth_date_valid?
