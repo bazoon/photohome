@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   validates :name, :email, presence: true
+  validates :birth_date, presence: { message: I18n.t("incorrect_birth_date") }
   validate :birth_date_valid?
   validates :terms_of_service, acceptance: true, on: :create, allow_nil: false
   
