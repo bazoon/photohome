@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   validates :name, :email, presence: true
+  validate :birth_date_valid?
   validates :terms_of_service, acceptance: true, on: :create, allow_nil: false
   
   # after_save :set_friendly_id
@@ -116,5 +117,10 @@ class User < ActiveRecord::Base
     avatar_url(:thumb) || Gravatar.new(email).image_url(size: 50)
 
   end
+
+
+  def birth_date_valid?
+    # binding.pry
+  end  
 
 end

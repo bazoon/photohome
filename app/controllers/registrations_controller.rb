@@ -1,6 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :update_sanitized_params, if: :devise_controller?
 
+  
+
   # layout "user_profile_layout", except: [:new]
 
   def update_sanitized_params

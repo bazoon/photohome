@@ -126,6 +126,7 @@ gem "rails-erd", :group => :development
 gem 'bootstrap-filestyle-rails'
 gem 'fastimage'
 
+
 # gem 'sidekiq_mailer'
 # gem 'sinatra', require: false
 # gem 'slim'
