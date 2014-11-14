@@ -116,9 +116,12 @@ class User < ActiveRecord::Base
 
   def face
     avatar_url(:thumb) || Gravatar.new(email).image_url(size: 50)
-
   end
 
+  def country_name
+    c = ISO3166::Country[country]
+    c.translations[I18n.locale.to_s] || c.name
+  end
 
   def birth_date_valid?
     # binding.pry

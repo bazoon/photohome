@@ -1,5 +1,6 @@
 Photohome::Application.routes.draw do
   
+  
   get "about/us"
   get "about/rules"
 
@@ -124,7 +125,10 @@ Photohome::Application.routes.draw do
         # ADMIN routes
       namespace :admin do
 
-         put 'ajax/test'
+        put 'ajax/test'
+        
+        
+
 
         resources :site_rules
         resources :messages, concerns: :commentable
@@ -143,6 +147,8 @@ Photohome::Application.routes.draw do
         resources :age_policies
 
         resources :competitions do
+
+          resource :request_forms, only: :show
 
           member do
             get 'view_posted',as: :view_posted 

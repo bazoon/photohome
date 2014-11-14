@@ -3,12 +3,12 @@
 
 <p>
   <strong><%= t(".last_date") %></strong>
-  <%= @competition.last_date %>
+  <%= ld @competition.last_date %>
 </p>
 
 <p>
   <strong><%= t(".open_date") %></strong>
-  <%= @competition.open_date %>
+  <%= ld @competition.open_date %>
 </p>
 
 
@@ -25,6 +25,8 @@
 </p>
 
 
+<%= link_to 'Заявки', admin_competition_request_forms_path(@competition) %>
+<br>
 
 <%= link_to 'Edit', edit_admin_competition_path(@competition) %> |
-<%= link_to 'Back1', admin_competitions_path %>
+<%= link_to 'Back', admin_competitions_path %>
