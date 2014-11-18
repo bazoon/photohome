@@ -1,12 +1,13 @@
 <% meta title: "Тюменский дом фотографии",
      description: "Тюменский дом фотографии",
-     keywords: %w(Тюмень фотография дом фотоискусство фотоклуб),
-     og: {
-      image: asset_url('logo1.jpg'),
-      title: "Тюменский дом Фотографии",
-      url: root_url
-     }
+     keywords: %w(Тюмень фотография дом фотоискусство фотоклуб)
 %>
+
+<% meta og: {
+          image: asset_url('logo1.jpg'),
+          title: "Тюменский дом Фотографии",
+          url: root_url
+     } %>
 
   <% if @setting_decorator.album %>
     <p>

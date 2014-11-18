@@ -23,7 +23,7 @@ class Letter < ActiveRecord::Base
   
 
   def recipient_names
-    people.map { |person| person.user.full_name  }
+    people.map { |person| person.user.full_name if person.user }.compact
   end
 
   def from

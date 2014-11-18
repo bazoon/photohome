@@ -122,5 +122,9 @@ class Competition < ActiveRecord::Base
     not (fiap? && user.profile_empty?)
   end
 
+  def nomination_count
+    nominations.count
+  end
+
 
 end

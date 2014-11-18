@@ -14,7 +14,6 @@ class Admin::CompetitionRequestsController < ApplicationController
 
   #Admin only !!!
   def update
-
     if @competition_request.update(request_params)
       CompetitionRequestNotification.notify(@competition_request,current_user)
       redirect_to admin_competition_requests_path(@competition_request.competition)

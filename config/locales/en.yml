@@ -284,6 +284,7 @@ en:
       user_name: "Username"
       decision: "Desicion"
       requests: "Request"
+      permited_nomination_count: "Nomination count"
     show:
       wait: "awaiting"
       time_ago: "Sent"

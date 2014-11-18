@@ -12,7 +12,8 @@
     </div>
 
     <div class="form-group">
-        <%= f.input :permited_nomination_count, :input_html => {class: "form-control", value: @competition_request.competition.nominations.count} %>
+        <%= f.input :permited_nomination_count, 
+            :input_html => {class: "form-control"} %>
     </div>
     
 

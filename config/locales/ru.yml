@@ -284,6 +284,7 @@ ru:
       title: "Заявки"
       user_name: "ФИО пользователя"
       decision: "Решение"
+      permited_nomination_count: "Кол-во номинаций"
       requests: "Рассмотреть запрос"
     show:
       wait: "Запрос находится на рассмотрении"

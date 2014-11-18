@@ -34,7 +34,7 @@ class CompetitionRequest < ActiveRecord::Base
   VALUE = -> (s) { s[:value] }  
 
   def self.user_request(competition, user)
-    request = self.find_or_create_by(competition_id: competition.id, user_id: user.id)
+    request = self.find_or_create_by(competition_id: competition.id, user_id: user.id, permited_nomination_count: competition.nomination_count)
     request.update(response_id: ACCEPTED) if competition.open?
     request
   end
