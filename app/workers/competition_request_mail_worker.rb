@@ -8,7 +8,7 @@ include Sidekiq::Worker
         competition_title = competition_request.competition.title
         decision = competition_request.decision
         answer = competition_request.answer
-        
+        puts competition_request.inspect
         UserMailer.message_email(competition_request.user, competition_title, decision, answer).deliver
     end
 
