@@ -1,4 +1,4 @@
 #!/bin/bash
-export HOST="domfoto72.ru"
+export HOST="so.ru"
 export DB_USER_NAME="vit"
 export DB_PASSWORD="t97888"
