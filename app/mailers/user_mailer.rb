@@ -17,6 +17,6 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: @user.email, subject: 'Изменение статуса заявки')
     
-  end  
+  end
 
 end

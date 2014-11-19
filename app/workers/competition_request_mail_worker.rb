@@ -5,6 +5,7 @@ include Sidekiq::Worker
     def perform(competition_request_id)
         competition_request = CompetitionRequest.find(competition_request_id)
         
+        
         competition_title = competition_request.competition.title
         decision = competition_request.decision
         answer = competition_request.answer
