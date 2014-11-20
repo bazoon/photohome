@@ -9,7 +9,7 @@ class CompetitionRequestNotification
   def self.send_letter(competition_request_id, user_id)
 
     # CompetitionRequestLetterWorker.perform_async(competition_request_id, user_id)
-    CompetitionRequestLetterWorker.perform_async(competition_request_id, user_id)
+    CompetitionRequestLetterWorker.new.perform(competition_request_id, user_id)
 
 
   end

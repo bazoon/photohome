@@ -6,7 +6,7 @@
 #sidekiq
 cd /var/www/photohome
 /home/deployer/.rbenv/shims/bundle install
-/home/deployer/.rbenv/shims/bundle exec sidekiq -c 10 -d -L /var/www/photohome/log/sidekiq.log -e production
+/home/deployer/.rbenv/shims/bundle exec sidekiq -c 3 -d -L /var/www/photohome/log/sidekiq.log -e production
 
 
 #main
