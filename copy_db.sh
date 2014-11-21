@@ -1,0 +1,1 @@
+scp deployer@109.237.110.40:/var/www/photohome/photohome_db.sql /Users/vitaliynesterenko/projects/photohome/photohome_db.sql
