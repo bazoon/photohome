@@ -125,6 +125,7 @@ gem "font-awesome-rails"
 gem "rails-erd", :group => :development
 gem 'bootstrap-filestyle-rails'
 gem 'fastimage'
+gem 'sitemap_generator'
 
 
 # gem 'sidekiq_mailer'
