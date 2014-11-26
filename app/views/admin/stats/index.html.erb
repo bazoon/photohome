@@ -31,3 +31,7 @@
   </tbody>
 
 </table>
+
+
+<%= line_chart User.group_by_day(:created_at).count %>
+

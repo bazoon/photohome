@@ -127,6 +127,9 @@ gem 'bootstrap-filestyle-rails'
 gem 'fastimage'
 gem 'sitemap_generator'
 
+gem "chartkick"
+gem 'groupdate'
+
 
 # gem 'sidekiq_mailer'
 # gem 'sinatra', require: false
