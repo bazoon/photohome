@@ -32,6 +32,5 @@
 
 </table>
 
-
-<%= line_chart User.group(:created_at).count %>
+<%= line_chart User.group('month(created_at)').count %>
 
