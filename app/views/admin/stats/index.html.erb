@@ -31,7 +31,7 @@
   </tbody>
 
 </table>
-h2 Пользователи
+<h2> Пользователи</h2>
 <%= line_chart User.group('month(created_at)').count %>
-h2 Фотографии
+<h2> Фотографии</h2>
 <%= line_chart Photo.group('month(created_at)').count %>
