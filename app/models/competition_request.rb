@@ -64,5 +64,10 @@ class CompetitionRequest < ActiveRecord::Base
     BANNED
   end
 
+  def nomination_count
+    return permited_nomination_count if competition.open? || approved?
+    0
+  end
+
 
 end

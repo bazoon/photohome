@@ -15,7 +15,7 @@
     <% @competition_requests.each do |request| %>
       <tr>
         <td><%= link_to request.user_name, user_profile_path(request.user) %></td>
-        <td> <%= request.permited_nomination_count %></td>
+        <td> <%= request.nomination_count %></td>
         <td> <%= request.decision %></td>
         
         <td> <%= link_to(t("competition_requests.index.requests"), edit_admin_request_path(request),  class: "btn btn-primary")  %></td>

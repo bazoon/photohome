@@ -342,6 +342,8 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
+    sitemap_generator (5.0.5)
+      builder
     slop (3.6.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -459,6 +461,7 @@ DEPENDENCIES
   sidekiq
   simple_form (>= 3.0.0.rc)
   simplecov
+  sitemap_generator
   sprockets (<= 2.11.0)
   therubyracer
   turbolinks
