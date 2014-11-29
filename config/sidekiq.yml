@@ -1,0 +1,7 @@
+---
+  :concurrency: 3
+  :pidfile: /var/www/domfoto72/data/www/domfoto72.ru/tmp/pids/sidekiq.pid
+  staging:
+    :concurrency: 10
+  production:
+    :concurrency: 3
