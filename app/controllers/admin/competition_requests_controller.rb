@@ -46,7 +46,7 @@ private
   end  
 
   def set_filter
-    @response_id = params[:filter][:response_id]
+    @response_id = params[:filter][:response_id] if params[:filter]
   end
 
 end
