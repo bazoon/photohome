@@ -22,12 +22,12 @@ class CompetitionRequest < ActiveRecord::Base
   scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
 
   RESPONSES = [
-    {label: I18n.t("responses.awaiting"), value: AWAITING },
-    {label: I18n.t("responses.accepted"), value: ACCEPTED },
-    {label: I18n.t("responses.no_money"), value: NO_MONEY },
-    {label: I18n.t("responses.no_condition"), value: NO_CONDITION },
-    {label: I18n.t("responses.other_reasons"), value: OTHER_REASONS },
-    {label: I18n.t("responses.banned"), value: BANNED }
+    { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },
+    { label: -> { I18n.t("responses.accepted") }, value: ACCEPTED },
+    { label: -> { I18n.t("responses.no_money") }, value: NO_MONEY },
+    { label: -> { I18n.t("responses.no_condition") }, value: NO_CONDITION },
+    { label: -> { I18n.t("responses.other_reasons") }, value: OTHER_REASONS },
+    { label: -> { I18n.t("responses.banned") }, value: BANNED }
   ]
 
   LABEL = -> (s) { s[:label] }
@@ -51,7 +51,8 @@ class CompetitionRequest < ActiveRecord::Base
   end
 
   def decision
-    RESPONSES.select { |r| r[:value] == self.response_id }.first[:label]
+    response = RESPONSES.find { |r| r[:value] == response_id }
+    response[:label].call
   end
 
   def approved?
