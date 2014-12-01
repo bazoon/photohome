@@ -1,9 +1,17 @@
 class Admin::CompetitionRequestsController < ApplicationController
   before_action :set_competition, only: [:create, :index]
   before_action :set_request, only: [:edit, :update]
+  before_action :set_filter, only: [:index]
 
   def index
-    @competition_requests = CompetitionRequest.where(competition_id: @competition.id).paginate(:page => params[:page], per_page: 16)
+    # binding.pry
+    @competition_requests =
+      if @response_id.blank?
+        @competition.competition_requests
+        
+      else
+        @competition.competition_requests.with_response(@response_id)  
+      end.paginate(page: params[:page], per_page: 16)
   end
 
 
@@ -36,5 +44,9 @@ private
   def request_params
     params.require(:competition_request).permit(:response_id, :answer, :permited_nomination_count)
   end  
+
+  def set_filter
+    @response_id = params[:filter][:response_id]
+  end
 
 end

@@ -20,6 +20,7 @@ class CompetitionRequest < ActiveRecord::Base
   scope :accepted, -> { where(response_id: ACCEPTED) }
   scope :awaiting, -> { where(response_id: AWAITING) }
   scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
+  scope :with_response, -> (response_id) { where('response_id = ?', response_id) }
 
   RESPONSES = [
     { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },
@@ -30,7 +31,7 @@ class CompetitionRequest < ActiveRecord::Base
     { label: -> { I18n.t("responses.banned") }, value: BANNED }
   ]
 
-  LABEL = -> (s) { s[:label] }
+  LABEL = -> (s) { s[:label].call }
   VALUE = -> (s) { s[:value] }  
 
   def self.user_request(competition, user)
