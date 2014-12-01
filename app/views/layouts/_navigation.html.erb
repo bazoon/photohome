@@ -16,9 +16,6 @@
     <%= link_to I18n.t("profile"), user_profile_path(current_user) %>
     </li>
     
-    <li>
-      <%= incoming_mail_alert %>
-    </li>
 
   <% else %>
     <li>
@@ -26,3 +23,12 @@
     </li>
   <% end %>
 
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('.letter-alert').fadeIn(12000);
+  $('.letter-alert').effect("shake")
+});
+
+</script>

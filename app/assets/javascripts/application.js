@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require jquery.tokeninput
 //= require jquery-ui/dialog
+//= require jquery-ui/effect.all
 
 // Or peek any of them yourself
 //= require bootstrap

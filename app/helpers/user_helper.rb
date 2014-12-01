@@ -15,9 +15,8 @@ module UserHelper
   end
 
   def incoming_mail_alert
-    count = Letter.joins(:people).where("seen = ? and letter_people.user_id = ?",false, current_user.id).count
-
-    link_to("#{I18n.t('mail_alert')} (#{count})", user_incoming_letters_path(current_user), class: "letter-alert") if count > 0
+    @count ||= Letter.joins(:people).where("seen = ? and letter_people.user_id = ?",false, current_user.id).count
+    link_to("#{I18n.t('mail_alert')} (#{@count})", user_incoming_letters_path(current_user), class: "letter-alert") if @count > 0
   end
 
 
