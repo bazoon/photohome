@@ -9,12 +9,16 @@ class Photo < ActiveRecord::Base
   PORTFOLIO_ID = 0
   REVIEW_ID = 1
 
-  DESTINATIONS = [
+  # DESTINATIONS = [
+  #   { label: I18n.t('portfolio'), value: PORTFOLIO_ID },
+  #   { label: I18n.t('review'), value: REVIEW_ID }
+  # ]
 
-    { label: I18n.t('portfolio'), value: PORTFOLIO_ID },
-    { label: I18n.t('review'), value: REVIEW_ID }
-    
+   DESTINATIONS = [
+    { label: I18n.t('portfolio'), value: PORTFOLIO_ID }
+    # { label: I18n.t('review'), value: REVIEW_ID }
   ]
+
 
   
   REVIEW_LIMIT = 3
