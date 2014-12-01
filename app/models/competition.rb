@@ -12,7 +12,8 @@ class Competition < ActiveRecord::Base
   
   validates :last_date, :accept_date, :open_date, :title, :type_id, :status_id, :num_stars, presence: true  
   validate Proc.new {|c| errors.add(:last_date, I18n.t(:incorrect_last_date)) if c.last_date > c.open_date}
-
+  
+  scope :active, -> { where('open_date > ?', Time.zone.now)  }
 
   extend FriendlyId
   friendly_id :title, use: :slugged
