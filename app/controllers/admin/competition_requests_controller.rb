@@ -3,15 +3,18 @@ class Admin::CompetitionRequestsController < ApplicationController
   before_action :set_request, only: [:edit, :update]
   before_action :set_filter, only: [:index]
 
+
   def index
     # binding.pry
     @competition_requests =
-      if @response_id.blank?
-        @competition.competition_requests
-        
-      else
+      if not @response_id.blank?
         @competition.competition_requests.with_response(@response_id)  
-      end.paginate(page: params[:page], per_page: 16)
+      elsif not @name.blank?
+        @competition.competition_requests.with_user_last_name_like(@name)
+      else
+        @competition.competition_requests
+      end.paginate(page: params[:page], per_page: 16)  
+
   end
 
 
@@ -47,6 +50,7 @@ private
 
   def set_filter
     @response_id = params[:filter][:response_id] if params[:filter]
+    @name = params[:search][:name] if params[:search]
   end
 
 end

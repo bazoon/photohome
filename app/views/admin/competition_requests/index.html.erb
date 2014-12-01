@@ -2,7 +2,30 @@
 
 <%= will_paginate @competition_requests %>
 
-<%= render partial: 'admin/competition_requests/filter_form' %>
+
+<div role = "tabpanel">
+  
+   <!-- Nav tabs -->
+  <ul id="my" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#filter" aria-controls="filter" role="tab" data-toggle="tab">Фильтр</a></li>
+    <li role="presentation"><a href="#search" aria-controls="search" role="tab" data-toggle="tab">Поиск</a></li>
+    
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="filter"> 
+      <%= render partial: 'admin/competition_requests/filter_form' %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="search"> 
+      <%= render partial: 'admin/competition_requests/search_form' %>
+    </div>
+  </div>
+
+</div>
+
+
+
 
 <table class="table table-striped">
   <thead>
@@ -29,3 +52,14 @@
 </table>
 
 <br>
+
+<script>
+
+  <%- if not @response_id.blank? %>
+    $('#my a:first').tab('show')
+  <%- elsif not @name.blank? %>
+    $('#my a:last').tab('show')
+  <%- end %>
+
+</script>
+

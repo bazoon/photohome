@@ -21,6 +21,9 @@ class CompetitionRequest < ActiveRecord::Base
   scope :awaiting, -> { where(response_id: AWAITING) }
   scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
   scope :with_response, -> (response_id) { where('response_id = ?', response_id) }
+  scope :with_user_last_name_like, -> (last_name) { includes(:user).joins(:user).where('last_name like ? or last_name like ? or last_name like ?', "%#{last_name}", "#{last_name}%", "%#{last_name}%")  }
+
+
 
   RESPONSES = [
     { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },

@@ -1,0 +1,13 @@
+<%= simple_form_for(:search, url: admin_competition_requests_path(@competition), method: :get) do |f| %>
+  <%= f.error_notification %>
+
+
+    <div class="form-group">
+    <%= f.input :name, input_html: { maxlength: 40 } %>
+
+    </div>
+    
+    <%= f.button :submit, value: t("filter"), input_html: {class: "btn btn-default" } %>
+    
+  
+<% end %>

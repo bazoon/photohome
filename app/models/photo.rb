@@ -96,7 +96,7 @@ class Photo < ActiveRecord::Base
   def check_portfolio_limit
     return true if self.destination_id != PORTFOLIO_ID
     on_review_count = Photo.where("destination_id=? and user_id=? and created_at >=?",PORTFOLIO_ID,self.user_id,PORTFOLIO_PERIOD.days.ago).count
-    return true if on_review_count < PORTFOLIO_LIMIT
+    return true if on_review_count <= PORTFOLIO_LIMIT
     self.errors.add(:destination_id, I18n.t(:portfolio_quote_exceeded)) 
     false
   end
@@ -105,7 +105,7 @@ class Photo < ActiveRecord::Base
   def check_review_limit
     return true if self.destination_id != 1
     on_review_count = Photo.where("destination_id=? and user_id=? and created_at >=?",REVIEW_ID,self.user_id,RIVIEW_PERIOD.days.ago).count
-    return true if on_review_count < REVIEW_LIMIT
+    return true if on_review_count <= REVIEW_LIMIT
     self.errors.add(:destination_id, I18n.t(:review_quote_exceeded)) 
     # binding.pry
     false

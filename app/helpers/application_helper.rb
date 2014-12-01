@@ -242,6 +242,9 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-question-sign")
   end
   
+  def active?(bound)
+    bound.blank?  ? "" : "active"
+  end
 
   
 
