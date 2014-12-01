@@ -15,7 +15,7 @@ class LettersController < ApplicationController
   # GET /letters/1
   # GET /letters/1.json
   def show
-    @letter.update({ seen: true })
+    @letter.mark_as_seen(current_user)
   end
 
 

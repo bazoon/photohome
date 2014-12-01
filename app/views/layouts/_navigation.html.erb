@@ -9,11 +9,17 @@
   <% end %>
   
   <% if user_signed_in? %>
-  
+    
+    
+
     <li>
     <%= link_to I18n.t("profile"), user_profile_path(current_user) %>
     </li>
-   
+    
+    <li>
+      <%= incoming_mail_alert %>
+    </li>
+
   <% else %>
     <li>
     <%= link_to I18n.t("sign_up"), new_user_registration_path %>

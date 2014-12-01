@@ -21,6 +21,9 @@ class Letter < ActiveRecord::Base
 
   end
   
+  def mark_as_seen(letter_user)
+    update({ seen: true }) unless letter_user == user
+  end
 
   def recipient_names
     people.map { |person| person.user.full_name if person.user }.compact
