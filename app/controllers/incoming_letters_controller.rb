@@ -6,7 +6,8 @@ class IncomingLettersController < ApplicationController
 
   
   def index
-    @letters = Letter.includes(:people).joins(:people).where("letter_people.user_id = ?",[@user.id]).order(updated_at: :desc)
+    @letters = Letter.incoming_for(@user)
+    
   end
 
   # def show

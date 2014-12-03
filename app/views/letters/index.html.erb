@@ -18,7 +18,7 @@
 
   <tbody>
     <% @letters.each do |letter| %>
-      <tr class= <%= "bold" unless letter.seen %>>
+      <tr class= <%= "bold" unless current_user.saw?(letter) %>>
         <td><%= link_to letter.title, user_letter_path(@user.id,letter)  %> </td>
         <td><%= letter.recipient_names %></td>
         <td><%= l letter.updated_at, format: :long  %></td>

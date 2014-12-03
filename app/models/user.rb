@@ -33,7 +33,8 @@ class User < ActiveRecord::Base
   has_many :competition_requests, dependent: :destroy
 
   has_many :user_subscriptions
-  
+  has_many :letter_views
+
   acts_as_tagger
 
   #change id to other attr !!!
@@ -128,6 +129,10 @@ class User < ActiveRecord::Base
   def birth_date_valid?
     # binding.pry
   end  
+
+  def saw?(letter)
+    letter_views.find_by(letter_id: letter.id)
+  end
 
   
 

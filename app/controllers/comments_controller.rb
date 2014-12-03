@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
 
     @comment = Comment.create_comment(comment_params, @commentable, current_user.id)
-    
+    @commentable.mark_as_unseen if @commentable.respond_to?(:mark_as_unseen)
   
     
     respond_to do |format|

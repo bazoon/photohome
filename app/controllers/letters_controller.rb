@@ -7,9 +7,13 @@ class LettersController < ApplicationController
   load_and_authorize_resource except: [:create] 
 
   # GET /letters
-  # GET /letters.json
+  # GET /letters.jsonl
   def index
+    # binding.pry
     @letters = current_user.letters.order(updated_at: :desc,seen: :desc)
+    
+
+
   end
 
   # GET /letters/1

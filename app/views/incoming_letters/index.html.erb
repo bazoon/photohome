@@ -17,9 +17,10 @@
     </tr>
   </thead>
 
+ 
   <tbody>
     <% @letters.each do |letter| %>
-      <tr class= <%= "bold" unless letter.seen %>>
+      <tr class= <%= "bold" unless current_user.saw?(letter) %>>
         <td><%= link_to letter.title, user_letter_path(letter.user.id,letter) %></td>
         <td><%= link_to letter.from, user_letter_path(letter.user.id,letter) %></td>
         <td><%= letter.recipient_names %></td>

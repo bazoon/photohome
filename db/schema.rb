@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110084728) do
+ActiveRecord::Schema.define(version: 20141203041905) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -249,6 +249,14 @@ ActiveRecord::Schema.define(version: 20141110084728) do
 
   add_index "letter_people", ["letter_id"], name: "index_letter_people_on_letter_id", using: :btree
   add_index "letter_people", ["user_id"], name: "index_letter_people_on_user_id", using: :btree
+
+  create_table "letter_views", force: true do |t|
+    t.integer  "letter_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "seen",       default: false
+  end
 
   create_table "letters", force: true do |t|
     t.string   "title"
