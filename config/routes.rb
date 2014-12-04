@@ -1,6 +1,7 @@
 Photohome::Application.routes.draw do
   
   
+  
   get "about/us"
   get "about/rules"
 
@@ -89,7 +90,25 @@ Photohome::Application.routes.draw do
         resources :letters, concerns: :commentable 
         resources :incoming_letters, only: [:index, :show]
         resources :subscriptions, controller: 'user_subscriptions'
+
+         resources :conversations, only: [:index, :show, :new, :create] do
+            
+            collection do
+              post :admin_create
+
+            end
+
+            member do
+              post :reply
+              post :trash
+              post :untrash
+            end
+          end
+
       end
+
+
+        
 
 
       resources :photos, concerns: :commentable, only: [:show]

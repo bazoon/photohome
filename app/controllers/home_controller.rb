@@ -14,29 +14,65 @@ class HomeController < ApplicationController
 
 
   def test
-    # @photos = Photo.all
-    # expire_fragment(AlbumHelper::cache_key_album_last_photos)
+    
+    Mailboxer::Conversation.destroy_all
+    
 
-    # Photo.all.each do |p|
-    #   p.theme_list = p.themes.map(&:name).uniq.join(",")
-    #   p.save
-    # end
+    Letter.all.each do |letter|
 
-    # ActsAsTaggableOn::Tag.all.each do |tag|
-
-    #   count=ActsAsTaggableOn::Tagging.all.select {|t| t.tag_id == tag.id }.count
-    #   # tag.taggings_count = count
-    #   # tag.save
       
+
+      conversation = Mailboxer::Conversation.create(subject: letter.title)
+
+      recipient_ids = [letter.user_id]
+      recipient_ids += letter.people.map(&:user_id)
+
+      notification = Mailboxer::Notification.create(type: 'Mailboxer::Message',
+                    body: letter.content,sender_id: letter.user_id, subject: letter.title,
+                    sender_type: 'User', conversation_id: conversation.id)
+
       
-    #   ActsAsTaggableOn::Tag.reset_counters(tag.id, :taggings)      
+
+      Mailboxer::Receipt.create(receiver_id: letter.user_id,
+                  receiver_type: 'User', notification_id: notification.id,
+                  mailbox_type: 'sentbox')
+
+
+      letter.people.all.each do |person|
+        Mailboxer::Receipt.create(receiver_id: person.user_id,
+                  receiver_type: 'User', notification_id: notification.id,
+                  mailbox_type: 'inbox')
+      end
+
+      letter.comments.all.each do |comment|
+
+        notification = Mailboxer::Notification.create(type: 'Mailboxer::Message', 
+                    body: comment.comment, sender_id: comment.user_id, subject: letter.title,
+                    sender_type: 'User', conversation_id: conversation.id)
+
+        Mailboxer::Receipt.create(receiver_id: comment.user.id,
+                    receiver_type: 'User', notification_id: notification.id,
+                    mailbox_type: 'sentbox')
+
+
+        recipient_ids.each do |recipient_id|
+          
+            m=Mailboxer::Receipt.create(receiver_id: recipient_id,
+                    receiver_type: 'User', notification_id: notification.id,
+                    mailbox_type: 'inbox')
+            # binding.pry
+          
+        end
 
 
 
-    # end
+      end
 
-    # EveryDayMailer.welcome_email(User.find(1))
-    # render text: ENV.inspect
+
+
+    end
+
+
   end
 
 

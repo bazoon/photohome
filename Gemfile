@@ -130,6 +130,7 @@ gem 'sitemap_generator'
 
 gem "chartkick"
 gem 'groupdate'
+gem 'mailboxer'
 
 
 # gem 'sidekiq_mailer'

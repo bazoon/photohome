@@ -1,5 +1,5 @@
 
 $("#admin_letter_form").replaceWith("<%= j render('admin/user_letter_senders/form', from_user: current_user, to_user: @user, letter: @letter) %>")
 $("#button").click()
-$('#letter_people_tokens').tokenInput('/ajax/users',{theme: 'facebook',prePopulate: $('#letter_people_tokens').data('load')})
+$('#conversation_recipients').tokenInput('/ajax/users',{theme: 'facebook',prePopulate: $('#conversation_recipients').data('load')})
 

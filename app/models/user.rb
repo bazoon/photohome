@@ -36,6 +36,8 @@ class User < ActiveRecord::Base
   has_many :letter_views
 
   acts_as_tagger
+  # acts_as_messageable
+  include Mailboxer::Models::Messageable
 
   #change id to other attr !!!
 

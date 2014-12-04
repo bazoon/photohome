@@ -20,6 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  message_sent: "Сообщение отправлено"
+  start_conversation: "Написать сообщение"
+  inbox: "Входящие"
+  sentbox: "Отправленные"
+  trash: "Корзина"
+  send: 'Отправить'
+  cancel: "Отменить"
+  recipients: "Участники"
+  subject: "Предмет обсуждения"
+  body: "Текст"
+  from: "От кого"
+  new_conversation: "Новое сообщение"
+  trash_letters: "Корзина"
   mail_alert: "Новые сообщения "
   choose_response: "Статус"
   incorrect_birth_date: "Дата рождения не заполнена или заполнена не верно"

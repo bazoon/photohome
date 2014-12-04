@@ -5,8 +5,8 @@
       <%= t('messages_') %> <span class="caret"></span><%= incoming_mail_icon %>
     </a>
     <ul class="dropdown-menu">
-      <li><%= link_to t("sent_letters"),user_letters_path(user) %></li>
-      <li><%= link_to t("in_letters") ,user_incoming_letters_path(user) %></li>    
+      <li><%= link_to t("in_letters"), user_conversations_path(current_user, box: :inbox) %></li>
+      <li><%= link_to t("sent_letters") , user_conversations_path(current_user, box: :sentbox)%></li> <li><%= link_to t("trash_letters") , user_conversations_path(current_user, box: :trash)%></li>   
     </ul>
   </li>
 

@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  trash_letters: "Trash"
   mail_alert: "New messages "
   incorrect_birth_date: "Birth date is empty or incorrect"
   less_than_1000: "Photography should have width no more than 1000 pixels. Resize it please."
