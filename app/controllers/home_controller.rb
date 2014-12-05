@@ -27,8 +27,11 @@ class HomeController < ApplicationController
       recipient_ids = [letter.user_id]
       recipient_ids += letter.people.map(&:user_id)
 
+      body = letter.content.empty? ? " " : letter.content
+      subject = letter.title.empty? ? " " : letter.title
+
       notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message',
-                    body: letter.content,sender_id: letter.user_id, subject: letter.title,
+                    body: body ,sender_id: letter.user_id, subject: subject,
                     sender_type: 'User', conversation_id: conversation.id)
 
       
@@ -39,6 +42,7 @@ class HomeController < ApplicationController
 
 
       letter.people.all.each do |person|
+
         Mailboxer::Receipt.create!(receiver_id: person.user_id,
                   receiver_type: 'User', notification_id: notification.id,
                   mailbox_type: 'inbox')
@@ -46,8 +50,11 @@ class HomeController < ApplicationController
 
       letter.comments.all.each do |comment|
 
+        body = comment.comment? ? " " : comment.comment
+        subject = letter.title.empty? ? " " : letter.title
+
         notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message', 
-                    body: comment.comment, sender_id: comment.user_id, subject: letter.title,
+                    body: body, sender_id: comment.user_id, subject: subject,
                     sender_type: 'User', conversation_id: conversation.id)
 
         Mailboxer::Receipt.create!(receiver_id: comment.user.id,
