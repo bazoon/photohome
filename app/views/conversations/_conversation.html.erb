@@ -3,7 +3,13 @@
 <tr class= <%= "bold" unless conversation.is_read?(current_user) %>>
   <td><%= link_to conversation.subject, user_conversation_path(@user, conversation) %></td>
   <td><%= conversation.originator.full_name %></td>
-  <td><small><%= conversation.recipients.map(&:full_name) %></small></td>
+  
+  <td>
+    <small>
+      <%= render partial: 'conversations/recipient', collection: conversation.recipients, locals: { conversation: conversation } %>
+    </small>
+  </td>
+
   <td><%= link_to del_icon, trash_user_conversation_path(@user, conversation, box: @box), method: :post if @box !="trash"%></td>
   <td><%= link_to arrow_up_icon, untrash_user_conversation_path(@user, conversation, box: @box), method: :post if @box == "trash" %></td>
   <td></td>

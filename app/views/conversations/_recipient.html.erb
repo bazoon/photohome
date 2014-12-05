@@ -1,0 +1,10 @@
+<%- if conversation.is_unread?(recipient) %>
+<span class="label label-success">
+  <%= recipient.full_name %>
+</span>
+<%- else %>
+<span class="label label-default">
+  <%= recipient.full_name %>
+</span>
+<%- end %>
+<br>
