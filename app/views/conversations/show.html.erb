@@ -1,0 +1,20 @@
+<h1><%=conversation.subject %></h1>
+<ul class="list-unstyled">
+  <%= content_tag_for(:li, conversation.receipts_for(current_user), class: 'receipt') do |receipt| %>
+  
+  <div class="row">
+  
+    <div class="col-md-1 avatar">
+       <%= image_tag(User.find(receipt.message.sender_id).avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;") %> 
+    </div>
+ 
+    <div class="col-md-5">
+      <%- message = receipt.message %>
+      <p><%= message.body %></p>
+    </div>
+
+  </div>
+  <%- end %>
+</ul>
+
+<%= render 'conversations/message_form', conversation: conversation %>

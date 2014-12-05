@@ -1,0 +1,23 @@
+<h1><%= t(@box) %></h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("subject") %></th>
+        <th><%= t("from") %></th>
+        <th><%= t("recipients") %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    
+    <%= render partial: 'conversations/conversation', collection: @current_box %>
+
+  </table>
+
+<%= link_to t('start_conversation'), :new_user_conversation, class: "btn btn-primary"  %>
+
+

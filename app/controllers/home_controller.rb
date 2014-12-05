@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
 
 
-  def test
+  def test2
     
     Mailboxer::Conversation.destroy_all
     
@@ -54,12 +54,11 @@ class HomeController < ApplicationController
                     receiver_type: 'User', notification_id: notification.id,
                     mailbox_type: 'sentbox')
 
-
         recipient_ids.each do |recipient_id|
           
-            m=Mailboxer::Receipt.create(receiver_id: recipient_id,
+            Mailboxer::Receipt.create(receiver_id: recipient_id,
                     receiver_type: 'User', notification_id: notification.id,
-                    mailbox_type: 'inbox')
+                    mailbox_type: 'inbox') if recipient_id != comment.user_id
             # binding.pry
           
         end

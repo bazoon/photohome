@@ -15,7 +15,7 @@ module UserHelper
   def incoming_mail_alert
     if current_user
       @count = current_user.mailbox.inbox(unread: true).count
-      link_to("#{I18n.t('mail_alert')} (#{@count})", user_incoming_letters_path(current_user), class: "letter-alert-link") if @count > 0
+      link_to("#{I18n.t('mail_alert')} (#{@count})", user_conversations_path(current_user, box: :inbox), class: "letter-alert-link") if @count > 0
     end
 
   end

@@ -49,8 +49,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.friendly.find(params[:id])
-    @letter = Letter.new
-    @letter.user = @user
+    # @letter = Letter.new
+    # @letter.user = @user
   end
   
   def update

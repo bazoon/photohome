@@ -56,11 +56,9 @@ class Ability
 
     can :read, Article
     can :read, Novelty
-    cannot :read, Letter
-    can :manage, Letter, user_id: user.id
    
-    can :read, Letter do |letter|
-      letter.people.any? { |lu| lu.user.id == user.id }
+    can :read, Mailboxer::Conversation do |conversation|
+      conversation.is_participant?(user)
     end
 
     can :request, Competition do |competition|

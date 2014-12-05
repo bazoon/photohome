@@ -7,8 +7,7 @@ class UserLetterSender
 
 
   def send_letter(title, content)
-    letter = Letter.create!(user_id: @from_user.id, title: title, content: content)
-    Letter::Person.create!(letter_id: letter.id, user_id: @to_user.id) 
+    @from_user.send_message(@to_user, content, title)
   end
   
   
