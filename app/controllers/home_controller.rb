@@ -14,10 +14,11 @@ class HomeController < ApplicationController
 
 
   def test2
+
     
     Mailboxer::Conversation.destroy_all
     
-
+    binding.pry
     Letter.all.each do |letter|
 
       
@@ -27,26 +28,26 @@ class HomeController < ApplicationController
       recipient_ids = [letter.user_id]
       recipient_ids += letter.people.map(&:user_id)
 
-      notification = Mailboxer::Notification.create(type: 'Mailboxer::Message',
+      notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message',
                     body: letter.content,sender_id: letter.user_id, subject: letter.title,
                     sender_type: 'User', conversation_id: conversation.id)
-
+      
       
 
-      Mailboxer::Receipt.create(receiver_id: letter.user_id,
-                  receiver_type: 'User', notification_id: notification.id,
-                  mailbox_type: 'sentbox')
+        Mailboxer::Receipt.create!(receiver_id: letter.user_id,
+                    receiver_type: 'User', notification_id: notification.id,
+                    mailbox_type: 'sentbox')
 
 
-      letter.people.all.each do |person|
-        Mailboxer::Receipt.create(receiver_id: person.user_id,
-                  receiver_type: 'User', notification_id: notification.id,
-                  mailbox_type: 'inbox')
-      end
+        letter.people.all.each do |person|
+          Mailboxer::Receipt.create(receiver_id: person.user_id,
+                    receiver_type: 'User', notification_id: notification.id,
+                    mailbox_type: 'inbox')
+      
 
       letter.comments.all.each do |comment|
 
-        notification = Mailboxer::Notification.create(type: 'Mailboxer::Message', 
+        notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message', 
                     body: comment.comment, sender_id: comment.user_id, subject: letter.title,
                     sender_type: 'User', conversation_id: conversation.id)
 
