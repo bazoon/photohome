@@ -50,7 +50,7 @@ class HomeController < ApplicationController
 
       letter.comments.all.each do |comment|
 
-        body = comment.comment? ? " " : comment.comment
+        body = comment.comment.empty? ? " " : comment.comment
         subject = letter.title.empty? ? " " : letter.title
 
         notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message', 
