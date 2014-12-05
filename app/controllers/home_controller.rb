@@ -27,8 +27,8 @@ class HomeController < ApplicationController
       recipient_ids = [letter.user_id]
       recipient_ids += letter.people.map(&:user_id)
 
-      body = letter.content.empty? ? " " : letter.content
-      subject = letter.title.empty? ? " " : letter.title
+      body = letter.content.empty? ? "..." : letter.content
+      subject = letter.title.empty? ? "..." : letter.title
 
       notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message',
                     body: body ,sender_id: letter.user_id, subject: subject,
@@ -50,8 +50,8 @@ class HomeController < ApplicationController
 
       letter.comments.all.each do |comment|
 
-        body = comment.comment.empty? ? " " : comment.comment
-        subject = letter.title.empty? ? " " : letter.title
+        body = comment.comment.empty? ? "..." : comment.comment
+        subject = letter.title.empty? ? "..." : letter.title
 
         notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message', 
                     body: body, sender_id: comment.user_id, subject: subject,
