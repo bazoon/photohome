@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
 
 
-  def test
+  def test2
     
     Mailboxer::Conversation.destroy_all
     
