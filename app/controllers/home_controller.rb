@@ -13,17 +13,16 @@ class HomeController < ApplicationController
   end
 
 
-  def test2
-
+  def test
     
     Mailboxer::Conversation.destroy_all
     
-    binding.pry
+
     Letter.all.each do |letter|
 
       
 
-      conversation = Mailboxer::Conversation.create(subject: letter.title)
+      conversation = Mailboxer::Conversation.create!(subject: letter.title)
 
       recipient_ids = [letter.user_id]
       recipient_ids += letter.people.map(&:user_id)
@@ -31,19 +30,19 @@ class HomeController < ApplicationController
       notification = Mailboxer::Notification.create!(type: 'Mailboxer::Message',
                     body: letter.content,sender_id: letter.user_id, subject: letter.title,
                     sender_type: 'User', conversation_id: conversation.id)
-      
+
       
 
-        Mailboxer::Receipt.create!(receiver_id: letter.user_id,
-                    receiver_type: 'User', notification_id: notification.id,
-                    mailbox_type: 'sentbox')
+      Mailboxer::Receipt.create!(receiver_id: letter.user_id,
+                  receiver_type: 'User', notification_id: notification.id,
+                  mailbox_type: 'sentbox')
 
 
-        letter.people.all.each do |person|
-          Mailboxer::Receipt.create(receiver_id: person.user_id,
-                    receiver_type: 'User', notification_id: notification.id,
-                    mailbox_type: 'inbox')
-      
+      letter.people.all.each do |person|
+        Mailboxer::Receipt.create!(receiver_id: person.user_id,
+                  receiver_type: 'User', notification_id: notification.id,
+                  mailbox_type: 'inbox')
+      end
 
       letter.comments.all.each do |comment|
 
@@ -51,13 +50,13 @@ class HomeController < ApplicationController
                     body: comment.comment, sender_id: comment.user_id, subject: letter.title,
                     sender_type: 'User', conversation_id: conversation.id)
 
-        Mailboxer::Receipt.create(receiver_id: comment.user.id,
+        Mailboxer::Receipt.create!(receiver_id: comment.user.id,
                     receiver_type: 'User', notification_id: notification.id,
                     mailbox_type: 'sentbox')
 
         recipient_ids.each do |recipient_id|
           
-            Mailboxer::Receipt.create(receiver_id: recipient_id,
+            Mailboxer::Receipt.create!(receiver_id: recipient_id,
                     receiver_type: 'User', notification_id: notification.id,
                     mailbox_type: 'inbox') if recipient_id != comment.user_id
             # binding.pry

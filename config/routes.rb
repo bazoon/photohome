@@ -22,7 +22,7 @@ Photohome::Application.routes.draw do
   
   post "upload/get_image"
   get "photo_ajax/theme_tokens"
-  get 'test2' => "home#test2", as: :test
+  get 'test' => "home#test", as: :test
 
   
   get 'jury_view_photos/:competition_id/:scope', to: 'jury#view_photos', as: :jury_view_photos
