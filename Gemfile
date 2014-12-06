@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.0'
 gem 'rails', '4.1.1'
 
+gem 'rails_admin'
 
 gem 'sprockets', '<= 2.11.0'
 gem 'uglifier', '>= 1.3.0'
@@ -68,8 +69,6 @@ gem 'rspec-rails'
 
 gem 'puma'
 gem 'russian'
-
-gem 'jquery-ui-rails'
 
 gem 'devise-russian'
 # gem 'binding_of_caller'

@@ -75,6 +75,10 @@ class User < ActiveRecord::Base
   	has_role?("admin")       	
   end       
 
+  def is_admin?
+    admin?
+  end
+
   def moder?
     has_role("moder")
   end

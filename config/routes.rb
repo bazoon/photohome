@@ -2,6 +2,7 @@ Photohome::Application.routes.draw do
   
   
   
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "about/us"
   get "about/rules"
 
