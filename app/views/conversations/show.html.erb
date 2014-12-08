@@ -1,11 +1,20 @@
 <h1><%=conversation.subject %></h1>
+<p>
+  <%= "#{ t('from')}: #{conversation.originator.full_name }" %>
+</p> 
+
+<p><%= t('recipients') %></p>
+
+  <%= render partial: 'conversations/recipient', collection: conversation.recipients, locals: { conversation: conversation } %>
+<br><hr>
 <ul class="list-unstyled">
   <%= content_tag_for(:li, conversation.receipts_for(current_user), class: 'receipt') do |receipt| %>
   
   <div class="row">
   
-    <div class="col-md-1 avatar">
+    <div class="col-md-3 avatar">
        <%= image_tag(User.find(receipt.message.sender_id).avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;") %> 
+       <p class="small"><%= receipt.message.sender.full_name %></p>
     </div>
  
     <div class="col-md-5">

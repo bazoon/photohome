@@ -10,8 +10,11 @@
     </small>
   </td>
 
-  <td><%= link_to del_icon, trash_user_conversation_path(@user, conversation, box: @box), method: :post if @box !="trash"%></td>
-  <td><%= link_to arrow_up_icon, untrash_user_conversation_path(@user, conversation, box: @box), method: :post if @box == "trash" %></td>
+  <%- if can? :manage, conversation %>
+    <td><%= link_to del_icon, trash_user_conversation_path(@user, conversation, box: @box), method: :post if @box !="trash"%></td>
+    <td><%= link_to arrow_up_icon, untrash_user_conversation_path(@user, conversation, box: @box), method: :post if @box == "trash" %></td>
+  <%- end %>
+
   <td></td>
   <td></td>
 </tr>

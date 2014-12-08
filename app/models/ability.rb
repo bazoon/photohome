@@ -57,6 +57,10 @@ class Ability
     can :read, Article
     can :read, Novelty
    
+    can :manage, Mailboxer::Conversation do |conversation|
+      conversation.originator == user
+    end
+
     can :read, Mailboxer::Conversation do |conversation|
       conversation.is_participant?(user)
     end
