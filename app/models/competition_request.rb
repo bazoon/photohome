@@ -76,5 +76,18 @@ class CompetitionRequest < ActiveRecord::Base
     0
   end
 
+  def response_compare
+    case response_id
+    when AWAITING
+      0
+    when NO_MONEY
+      8
+    when ACCEPTED
+      9
+    else
+      10
+    end
+  end
+
 
 end

@@ -5,7 +5,7 @@ class Admin::RequestFormsController < ApplicationController
     
     @competition_requests = @competition.competition_requests.sort_by do |r|
 
-      [r.response_id, r.user.full_name]
+      [r.response_compare, r.user.full_name]
 
 
 
