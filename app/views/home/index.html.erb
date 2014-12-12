@@ -44,7 +44,7 @@
 
      <% @setting_decorator.other_novelties.each_with_index  do |novelty, index| %>
                 
-          <div class="col-xs-6" style="height: 200px" >
+          <div class="col-xs-6">
               <%= age_badge(novelty.age_policy_age) %>
               <%= link_to novelty.title, novelty_path(novelty) %>
               
