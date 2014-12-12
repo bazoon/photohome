@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  created_at: "Дата"
   show_main_header: "Показывать главный заголовок"
   message_sent: "Сообщение отправлено"
   start_conversation: "Написать сообщение"
@@ -85,7 +86,6 @@ ru:
   last_sign_in_at: "Последний раз заходил"
   current_sign_in_ip: "Текущий IP"
   last_sign_in_ip: "Последний IP"
-  created_at: "Дата регистрации"
   updated_at: "Дата последнего изменения"
   name: "Имя"
   confirmed_at: "Дата подтверждения регистрации"

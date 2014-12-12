@@ -1,6 +1,8 @@
 <h1><%=conversation.subject %></h1>
 <p>
   <%= "#{ t('from')}: #{conversation.originator.full_name }" %>
+  <br>
+  <%= "#{ t('created_at')}: #{ ld(conversation.originator.created_at) }" %>
 </p> 
 
 <p><%= t('recipients') %></p>
@@ -20,6 +22,9 @@
     <div class="col-md-5">
       <%- message = receipt.message %>
       <p><%= message.body %></p>
+      <div class="col-md-5">
+        <span class="small text-muted"><%= ld(receipt.created_at) %></span>
+      </div>
     </div>
 
   </div>

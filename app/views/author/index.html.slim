@@ -1,0 +1,16 @@
+- breadcrumb :authors 
+
+h1 = t("authors")
+
+= will_paginate @users
+
+.row
+  .col-md-12
+    .row
+    - @users.each do |user|
+      .col-md-2
+        .thumbnail
+          = link_to image_tag(user.face), user_profile_path(user), class: 'thumbnail'
+          .caption
+            = user.full_name
+            

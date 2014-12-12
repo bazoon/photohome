@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  send: 'Send'
+  cancel: 'Cancel'
+  created_at: 'created at'
+  from: 'from'
   trash_letters: "Trash"
   mail_alert: "New messages "
   incorrect_birth_date: "Birth date is empty or incorrect"
@@ -72,7 +76,6 @@ en:
   last_sign_in_at: "Последний раз заходил"
   current_sign_in_ip: "Текущий IP"
   last_sign_in_ip: "Последний IP"
-  created_at: "Дата регистрации"
   updated_at: "Дата последнего изменения"
   name: "Name"
   confirmed_at: "Дата подтверждения регистрации"
