@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20141203101928) do
-
+ActiveRecord::Schema.define(version: 20141212055209) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -97,6 +95,7 @@ ActiveRecord::Schema.define(version: 20141203101928) do
     t.text     "footer"
     t.string   "adult_image"
     t.string   "novelties"
+    t.boolean  "show_main_header", default: true
   end
 
   add_index "admin_settings", ["album_id"], name: "index_admin_settings_on_album_id", using: :btree

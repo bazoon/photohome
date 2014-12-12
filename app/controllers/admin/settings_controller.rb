@@ -71,6 +71,6 @@ class Admin::SettingsController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_setting_params
-      params[:admin_setting].permit(:album_id,:novelty_id,:article_count,:articles, :novelties,:article_id, :footer, :adult_image)
+      params[:admin_setting].permit(:album_id,:novelty_id,:article_count,:articles, :novelties,:article_id, :footer, :adult_image, :show_main_header)
     end
 end
