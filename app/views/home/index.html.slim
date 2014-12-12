@@ -21,7 +21,7 @@
 div style="clear:both" 
 hr
 - if @setting_decorator.photos 
-  .fotorama data-autoplay="true" data-fit="contain" data-transition="crossfade" data-width="100%" 
+  .fotorama data-autoplay="true" data-fit="scaledown" data-transition="crossfade" data-width="100%" 
     - @setting_decorator.photos.each do |photo| 
       = link_to '', photo.image_url_for_main_carousel(current_user, session[:agreed], :normal)
 
