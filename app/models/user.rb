@@ -35,6 +35,10 @@ class User < ActiveRecord::Base
   has_many :user_subscriptions
   has_many :letter_views
 
+  scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
+
+  scope :without_role, -> { find_by_sql('select *from users where id not in (select distinct user_id from users_roles)') }
+
   acts_as_tagger
   # acts_as_messageable
   include Mailboxer::Models::Messageable
@@ -101,7 +105,7 @@ class User < ActiveRecord::Base
   end
 
   def full_name
-    "#{name} #{last_name}"
+    "#{last_name} #{name}"
   end
 
   def profile_empty?
@@ -121,8 +125,12 @@ class User < ActiveRecord::Base
     age > 18
   end
 
-  def face
-    avatar_url(:thumb) || Gravatar.new(email).image_url(size: 50)
+  def face(type = :thumb)
+    if type
+      avatar_url(type) || Gravatar.new(email).image_url(size: 50)
+    else
+      avatar_url || Gravatar.new(email).image_url(size: 50)
+    end
   end
 
   def country_name

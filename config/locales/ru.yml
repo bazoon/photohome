@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  clubers: "Наш фотоклуб"
+  pre_clubers: "Кандидаты в фотоклуб"
+  vips: "Известные фотографы"
+  guests: "Гости"
   created_at: "Дата"
   show_main_header: "Показывать главный заголовок"
   message_sent: "Сообщение отправлено"

@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  clubers: "Our club"
+  pre_clubers: "Candidates"
+  vips: "Wellknown photographers"
+  guests: "Guests"
   send: 'Send'
   cancel: 'Cancel'
   created_at: 'created at'

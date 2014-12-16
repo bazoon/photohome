@@ -1,7 +1,7 @@
 <div style="padding-top: 20px">
    
   <div>
-    <%= image_tag(@user.face, class: "img-polaroid") %>
+    <%= image_tag(@user.face(:thumb), class: "img-polaroid") %>
   </div>
   <small ><%= @user && @user.full_name %></small>
 

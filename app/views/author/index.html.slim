@@ -2,30 +2,36 @@
 
 h1 
   = t("authors")
-  small
-    sup
-      |*
-
-
-ul class="list-unstyled"
-  - @users.each do |user| 
-
-    li style = ("padding-bottom: 3px")
-      = image_tag(user.face, class: "img-rounded")
-      |&nbsp;
-      = link_to user.full_name,user_profile_path(user)
   
-br
-br
-br
-br
+
+
+
+div role="tabpanel" 
+  /! Nav tabs
+  ul.nav.nav-tabs role="tablist" 
+    li.active role="presentation" 
+      a aria-controls="clubers" data-toggle="tab" href="#clubers" role="tab"
+        = t('clubers')
+    li role="presentation" 
+      a aria-controls="preclubers" data-toggle="tab" href="#preclubers" role="tab"
+        = t('pre_clubers')
+    li role="presentation" 
+      a aria-controls="vips" data-toggle="tab" href="#vips" role="tab"
+        = t('vips')
+    li role="presentation" 
+      a aria-controls="guests" data-toggle="tab" href="#guests" role="tab"
+        = t('guests')
+  /! Tab panes
+  .tab-content
+    #clubers.tab-pane.active role="tabpanel"  
+      = render partial: 'author/users', locals: { users: @users.with_role("cluber") }
+    #preclubers.tab-pane role="tabpanel"  
+      = render partial: 'author/users', locals: { users: @users.with_role("pre_cluber") }
+    #vips.tab-pane role="tabpanel"  
+      = render partial: 'author/users', locals: { users: @users.with_role("VIP")}
+    #guests.tab-pane role="tabpanel"  
+      = render partial: 'author/users', locals: { users: @users.without_role }
 
 
 
 
-
-
-small
-  |*
-  = t('authors_description')
-            
