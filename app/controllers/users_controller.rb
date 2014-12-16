@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
     else  
       User.includes(:roles)  
-    end.paginate(page: params[:page], per_page: 25)
+    end.order('created_at desc').paginate(page: params[:page], per_page: 25)
 
     
   end

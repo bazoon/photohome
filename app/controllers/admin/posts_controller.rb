@@ -10,7 +10,7 @@ class Admin::PostsController < Admin::BaseController
   # GET /admin/articles
   # GET /admin/articles.json
   def index
-    @admin_posts = post_type.all
+    @admin_posts = post_type.order('created_at desc')
     @post_sym = post_sym
   end
 

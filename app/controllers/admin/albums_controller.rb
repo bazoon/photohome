@@ -2,7 +2,7 @@ class Admin::AlbumsController < Admin::BaseController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
 def index
-  @albums = Admin::Album.all
+  @albums = Admin::Album.order('created_at desc')
 end
 
 def edit
