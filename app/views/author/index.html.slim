@@ -2,9 +2,6 @@
 
 h1 
   = t("authors")
-  
-
-
 
 div role="tabpanel" 
   /! Nav tabs
@@ -24,13 +21,13 @@ div role="tabpanel"
   /! Tab panes
   .tab-content
     #clubers.tab-pane.active role="tabpanel"  
-      = render partial: 'author/users', locals: { users: @users.with_role("cluber") }
+      = render partial: 'author/users', locals: { users: @clubers }
     #preclubers.tab-pane role="tabpanel"  
-      = render partial: 'author/users', locals: { users: @users.with_role("pre_cluber") }
+      = render partial: 'author/users', locals: { users: @pre_clubers }
     #vips.tab-pane role="tabpanel"  
-      = render partial: 'author/users', locals: { users: @users.with_role("VIP")}
+      = render partial: 'author/users', locals: { users: @vips }
     #guests.tab-pane role="tabpanel"  
-      = render partial: 'author/users', locals: { users: @users.without_role }
+      = render partial: 'author/users', locals: { users: @guests }
 
 
 

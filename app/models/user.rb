@@ -37,7 +37,9 @@ class User < ActiveRecord::Base
 
   scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
 
-  scope :without_role, -> { find_by_sql('select *from users where id not in (select distinct user_id from users_roles)') }
+  scope :without_role, -> { User.where.not(id: UsersRole.uniq.pluck(:user_id)) }
+
+
 
   acts_as_tagger
   # acts_as_messageable
