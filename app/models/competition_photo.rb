@@ -23,9 +23,8 @@ class CompetitionPhoto < ActiveRecord::Base
   }
 
   scope :not_banned, -> { where(banned: false) }
-  scope :with_nomination, -> (nom_id) do
-    nom_id.empty?  ? all : where(nomination_id: nom_id)
-  end
+  scope :with_nomination, -> (nom_id) { where(nomination_id: nom_id) }
+  
 
 
 

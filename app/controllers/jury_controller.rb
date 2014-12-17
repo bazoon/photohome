@@ -53,6 +53,7 @@ class JuryController < ApplicationController
         CompetitionPhoto.where(competition_id: @competition.id, banned: false)
       end
 
+
     if @nomination_id
       @competition_photos = @competition_photos.select {|cp| cp.nomination_id == @nomination_id }
     end
@@ -72,7 +73,13 @@ class JuryController < ApplicationController
 
   def show
     @competition_photo = CompetitionPhoto.find(params[:photo_id])
-    others = @competition_photo.competition.competition_photos
+    others = @competition_photo
+              .competition.competition_photos
+              .with_nomination(@competition_photo.nomination_id)
+              .not_banned
+
+
+
     @next = others.next(@competition_photo.id)
     @prev = others.prev(@competition_photo.id)
   end
