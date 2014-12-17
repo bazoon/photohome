@@ -70,6 +70,15 @@ class ApplicationController < ActionController::Base
   end
   
 
+  def masquerading?
+   session[:admin_id].present?
+  end
+  
+  helper_method :masquerading?
+
+  def authorize_admin
+    current_user.admin? || masquerading?
+  end
 
 
 end

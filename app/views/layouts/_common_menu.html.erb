@@ -13,3 +13,13 @@
   <%=link_to(I18n.t("articles_"),list_articles_path) if can? :read, Article %>
 </li>
 
+<%- if masquerading? && current_user %>
+
+
+<li>
+  
+  <%= link_to("Выйти из сумрака", user_masquerade_path(current_user.id,0), :data => { :confirm => "Are you sure?" }, :method => :delete, style: 'color: red') %>
+</li>
+
+<% end %>
+

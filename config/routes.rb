@@ -1,7 +1,7 @@
 Photohome::Application.routes.draw do
   
   
-  
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "about/us"
   get "about/rules"
@@ -76,6 +76,8 @@ Photohome::Application.routes.draw do
       get 'tagged_photos/user_id/:user_id/name/:name', to: 'photos#tagged_photos', as: :tagged_photos
 
     	resources :users do
+
+        resources :masquerades, only: [:new, :destroy]
 
         member do
           post 'confirm', as: :confirm
