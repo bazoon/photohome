@@ -15,6 +15,7 @@ class NoveltiesController < ApplicationController
   end
 
 private
+
   def set_novelty
       @novelty = Novelty.friendly.find(params[:id])
     end
