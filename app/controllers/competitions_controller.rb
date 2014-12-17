@@ -27,7 +27,7 @@ class CompetitionsController < ApplicationController
     @nomination = Admin::Nomination.find(nomination_id)
     # binding.pry
     @all_jury_count = @competition.jury.count
-    @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id, banned: false).with_rating.paginate(page: params[:page], per_page: 8)
+    @competition_photos = @competition.competition_photos.where(nomination_id: nomination_id, banned: false).with_rating.order('competition_photos.created_at desc').paginate(page: params[:page], per_page: 8)
     # @can_like = current_user && (current_user.created_at < @competition.created_at) && (@competition.open_date > Time.zone.now )
     @user = current_user
     # fresh_when(@competition_photos)

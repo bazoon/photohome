@@ -33,7 +33,7 @@ class GalleryController < ApplicationController
   end
 
   def show_anonymous
-    @photo = Photo.friendly.find(params[:photo_id]).order('created_at desc')
+    @photo = Photo.friendly.find(params[:photo_id])
   end
 
 end
