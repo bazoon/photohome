@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
   skip_before_filter :authenticate_user!
 
+  #list of articles
   def list
     @articles = Article.order(updated_at: :desc).paginate(:page => params[:page])
    #fresh_when(@articles)
