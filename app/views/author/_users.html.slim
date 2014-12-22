@@ -4,7 +4,7 @@ br
   .col-md-12
     .row
     - users.each do |user|
-      .col-md-2.user_box
+      .col-sm-3
         = image_tag(user.face(nil), class: "img-rounded author-image")
-        br
-        = link_to user.full_name,user_profile_path(user)
+        .caption
+          = link_to user.full_name,user_profile_path(user)
