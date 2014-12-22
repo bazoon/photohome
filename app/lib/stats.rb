@@ -6,6 +6,7 @@ class Stats
     attr_reader :active_competition_requests
     attr_reader :active_photos
     attr_reader :active_waiting_competition_requests
+    attr_reader :active_accepted_competition_requests
 
 
     def initialize
@@ -18,11 +19,13 @@ class Stats
         active_competitions = Competition.active
         @active_competition_requests = 0
         @active_waiting_competition_requests = 0
+        @active_accepted_competition_requests = 0
         @active_photos = 0
         
         active_competitions.each do |competition|
           @active_competition_requests += competition.competition_requests.count
           @active_waiting_competition_requests += competition.competition_requests.awaiting.count
+          @active_accepted_competition_requests += competition.competition_requests.accepted.count
           @active_photos += competition.competition_photos.count
         end
 
