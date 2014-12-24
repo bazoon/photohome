@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  update: 'Сохранить'
+  back: 'Назад'
+  unhappy: "Вас что-то не устраивает?"
   clubers: "Наш фотоклуб"
   pre_clubers: "Кандидаты в фотоклуб"
   vips: "Известные фотографы"
@@ -174,7 +177,7 @@ ru:
   last_photos: "Новые фотографии"  
   competition_: "Конкурс"
   status: "Статус"
-  avatar_picture: "Картинка аватара"
+  avatar_picture: "Картинка аватара, нажмите 'CHOOSE FILE' и выберите нужный файл"
   more_articles: "Еще статьи ..."
   change_password: "Личные данные"
   we_need_your_current_password: "Нам нужен Ваш текущий пароль для подтверждения изменений"
@@ -212,7 +215,7 @@ ru:
   responses:
     awaiting: "Ожидает рассмотрения"
     accepted: "Заявка утверждена."
-    no_money: "Отказ. Участие не оплачено."
+    no_money: "Заявка принята. Просьба оплатить участие."
     no_condition: "Отказ. Не выполнены условия участия."
     other_reasons: "Отказ. Иная причина."
     awaiting: "Ожидает рассмотрения"
@@ -259,7 +262,7 @@ ru:
         results: "Итоги"
         title: "Название"
         accept_date: "Дата начала приема"
-        last_date: "Работы сдать до"
+        last_date: "Последний срок сдачи работ"
         open_date: "Дата оглашения результатов"
         type: "Тип конкурса"     
       aply:

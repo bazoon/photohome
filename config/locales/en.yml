@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  update: 'Update'
+  unhappy: 'Unhappy?'
+  back: 'Back'
   clubers: "Our club"
   pre_clubers: "Candidates"
   vips: "Wellknown photographers"
@@ -202,7 +205,7 @@ en:
   responses:
     awaiting: "Awaiting"
     accepted: "Accepted"
-    no_money: "Please pay money for participation."
+    no_money: "Your request accepted. Please pay money for participation."
     no_condition: "Contest terms was not met"
     other_reasons: "Please contact admin"
     no_decision: "No decision"
@@ -247,7 +250,7 @@ en:
         results: "Results"
         title: "Title"
         accept_date: "Accept date"
-        last_date: "Submissions to"
+        last_date: "Deadline"
         open_date: "Notification" 
         type: "Contest type"     
       aply:

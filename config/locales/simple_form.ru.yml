@@ -28,6 +28,8 @@ ru:
         title: "Название"
         user_name: "Автор"
         policy: "Возрастное ограничение"
+        current_password: "Текущий пароль"
+        avatar: "Файл для профиля"
       topic:
         new:
           name: 'Название'
