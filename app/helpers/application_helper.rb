@@ -143,13 +143,14 @@ module ApplicationHelper
 
   def ru_icon
     # image_tag(asset_path("ru.png"))
-    "EN"
+    # "EN"
+    content_tag(:span, 'EN', style: 'color: red')
   end
 
   def en_icon
     # image_tag(asset_path("gb.png"))
     
-    "RU"
+    content_tag(:span, 'RU', style: 'color: red')
   end
 
   def age_badge(age)
