@@ -19,6 +19,11 @@ ru:
         password_confirmation: "Введите пароль повторно"
         login: 'Псевдоним'
         birth_date: 'Дата рождения'
+        adress: "Адрес"
+        zip_code: "Индекс"
+        city: "Город"
+        country: "Страна"
+        phone: "Телефон"
         terms_of_service: "Согласен с правилами"
         last_name: 'Фамилия'
         remember_me: 'Запомнить меня'
