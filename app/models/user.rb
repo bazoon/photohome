@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   # validates :last_name, :adress, :zip_code, :city, :country, presence: true
   
   has_many :photos, dependent: :destroy
-  has_many :messages, dependent: :destroy
+  
   has_many :jury,class_name: "Admin::Jury"
   has_many :letters, dependent: :destroy
   has_many :competition_requests, dependent: :destroy
@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   acts_as_tagger
   # acts_as_messageable
   include Mailboxer::Models::Messageable
-
+  has_many :messages, dependent: :destroy
   #change id to other attr !!!
 
   # def to_param 
