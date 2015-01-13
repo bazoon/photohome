@@ -39,6 +39,7 @@ en:
         country: 'Country'
         phone: 'Phone'
         password: 'Password'
+        current_password: 'Current password'
         about: 'About'
         digest: "digest"
         content: "Content"
