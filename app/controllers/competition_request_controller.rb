@@ -8,16 +8,22 @@ class CompetitionRequestController < ApplicationController
   end
 
   def create
-    competition_request = CompetitionRequest.user_request(@competition, current_user)
+    if not @competition.valid_for_fiap?(current_user)
+      redirect_to :back, notice: I18n.t('profile_empty')
+    else
+      competition_request = CompetitionRequest.user_request(@competition, current_user)
+
+      if @competition.open? || competition_request.approved?
+        redirect_to competition_photos_path(@competition)
+      else
+        redirect_to request_path(competition_request)
+      end
+
+    end
     
 
-    if not @competition.valid_for_fiap?(current_user)
-      redirect_to :back, notice: I18n.t('profile_empty')  
-    elsif @competition.open? || competition_request.approved?
-      redirect_to competition_photos_path(@competition)
-    else
-      redirect_to request_path(competition_request)
-    end
+    
+    
 
     # render text: params.inspect
 
