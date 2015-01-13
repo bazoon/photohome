@@ -60,7 +60,7 @@ class CompetitionRequest < ActiveRecord::Base
   end
 
   def nomination_count
-    return permited_nomination_count if competition.open? || approved?
+    return permited_nomination_count if competition.open? || accepted?
     0
   end
 
