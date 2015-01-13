@@ -122,7 +122,6 @@ GEM
     email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
-    enum_help (0.0.12)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -463,7 +462,6 @@ DEPENDENCIES
   devise
   devise-russian
   email_spec
-  enum_help
   factory_girl_rails
   fastimage
   figaro

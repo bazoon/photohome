@@ -69,7 +69,8 @@ class Photo < ActiveRecord::Base
   
   acts_as_commentable
 
-  attr_reader :theme_tokens
+  # attr_reader :theme_tokens
+  
 
   def self.next(id)
     where('photos.id > ?', id).first
@@ -78,8 +79,6 @@ class Photo < ActiveRecord::Base
   def self.prev(id)
     where('photos.id < ?', id).last
   end
-
-
 
   def initialize(params=nil, user_id=nil, published=false)
     super(params)
@@ -121,9 +120,12 @@ class Photo < ActiveRecord::Base
     
   end
 
+  def theme_tokens
+    @theme_tokens
+  end
 
 	def theme_tokens=(tokens)
-		tokens = tokens.split(",").uniq.join(",")   
+		@theme_tokens = tokens.split(",").uniq.join(",")   
     
     # self.theme_list.remove(tokens)
     # self.theme_list = tokens
