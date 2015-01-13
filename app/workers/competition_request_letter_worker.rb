@@ -8,7 +8,7 @@ include Sidekiq::Worker
         competition_title = competition_request.competition.title
         decision = competition_request.decision
         answer = competition_request.answer
-        uls.send_letter(competition_title,"#{I18n.t('status_changed')}: #{decision}. #{answer} ")
+        uls.send_letter(competition_title,"#{I18n.t('status_changed', locale: user.locale)}: #{decision}. #{answer} ")
     end
 
 

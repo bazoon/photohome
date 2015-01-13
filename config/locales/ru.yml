@@ -203,6 +203,17 @@ ru:
   choose_photo: "Выберите фотографии"
   choose_competition: "Сделать выбор"
   jury_choose_competition: "Текущие конкурсы"
+  enums:
+    competition_request:
+      response_id:
+        awaiting: "Ожидает рассмотрения"
+        accepted: "Заявка утверждена."
+        no_money: "Заявка обработана. Ожидание оплаты."
+        no_condition: "Отказ. Не выполнены условия участия."
+        other_reasons: "Отказ. Иная причина."
+        awaiting: "Ожидает рассмотрения"
+        no_decision: "Нет решения"
+        banned: "Забанен"
   
   errors:
     messages:
@@ -211,16 +222,6 @@ ru:
       carrierwave_download_error: "Couldn't download image."
       extension_white_list_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
       extension_black_list_error: "You are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}"
-  # Для ответов на запросы на конкурсы
-  responses:
-    awaiting: "Ожидает рассмотрения"
-    accepted: "Заявка утверждена."
-    no_money: "Заявка обработана. Ожидание оплаты."
-    no_condition: "Отказ. Не выполнены условия участия."
-    other_reasons: "Отказ. Иная причина."
-    awaiting: "Ожидает рассмотрения"
-    no_decision: "Нет решения"
-    banned: "Забанен"
   
   # photos: "PHH"
   photos:

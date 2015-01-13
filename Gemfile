@@ -131,6 +131,7 @@ gem "chartkick"
 gem 'groupdate'
 gem 'mailboxer'
 gem 'slim-rails'
+gem 'enum_help'
 
 
 # gem 'sidekiq_mailer'

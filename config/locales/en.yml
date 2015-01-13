@@ -193,6 +193,16 @@ en:
   choose_photo: "Choose photos"
   choose_competition: "Choose"
   jury_choose_competition: "Current competition"
+  enums:
+    competition_request:
+      response_id:
+        awaiting: "Awaiting"
+        accepted: "Accepted"
+        no_money: "Your request accepted. Please pay money for participation."
+        no_condition: "Contest terms was not met"
+        other_reasons: "Please contact admin"
+        no_decision: "No decision"
+        banned: "banned"
 
   errors:
     messages:

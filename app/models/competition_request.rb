@@ -16,26 +16,28 @@ class CompetitionRequest < ActiveRecord::Base
   NO_CONDITION = 3
   OTHER_REASONS = 100
   BANNED = 1000
+
+  enum response_id: { "awaiting" => 0, "accepted" => 1, "no_money" => 2, "no_condition" => 3, "other_reasons" => 100, "banned" => 1000 }
   
   scope :accepted, -> { where(response_id: ACCEPTED) }
   scope :awaiting, -> { where(response_id: AWAITING) }
   scope :unaccepted, -> { where('response_id != ?', ACCEPTED) }
-  scope :with_response, -> (response_id) { where('response_id = ?', response_id) }
+  scope :with_response, -> (response_id) { send(response_id) }
   scope :with_user_last_name_like, -> (last_name) { includes(:user).joins(:user).where('last_name like ? or last_name like ? or last_name like ?', "%#{last_name}", "#{last_name}%", "%#{last_name}%")  }
 
 
 
   RESPONSES = [
-    { label: -> { I18n.t("responses.awaiting", locale: user.locale) }, value: AWAITING },
-    { label: -> { I18n.t("responses.accepted", locale: user.locale) }, value: ACCEPTED },
-    { label: -> { I18n.t("responses.no_money", locale: user.locale) }, value: NO_MONEY },
-    { label: -> { I18n.t("responses.no_condition", locale: user.locale) }, value: NO_CONDITION },
-    { label: -> { I18n.t("responses.other_reasons", locale: user.locale) }, value: OTHER_REASONS },
-    { label: -> { I18n.t("responses.banned", locale: user.locale) }, value: BANNED }
+    { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },
+    { label: -> { I18n.t("responses.accepted") }, value: ACCEPTED },
+    { label: -> { I18n.t("responses.no_money") }, value: NO_MONEY },
+    { label: -> { I18n.t("responses.no_condition") }, value: NO_CONDITION },
+    { label: -> { I18n.t("responses.other_reasons") }, value: OTHER_REASONS },
+    { label: -> { I18n.t("responses.banned") }, value: BANNED }
   ]
 
   LABEL = -> (s) { s[:label].call }
-  VALUE = -> (s) { s[:value] }  
+  VALUE = -> (s) { s[:value] }
 
   def self.user_request(competition, user)
     request = where(competition_id: competition.id, user_id: user.id).first
@@ -55,8 +57,9 @@ class CompetitionRequest < ActiveRecord::Base
   end
 
   def decision
-    response = RESPONSES.find { |r| r[:value] == response_id }
-    response[:label].call
+    # response = RESPONSES.find { |r| r[:value] == response_id }
+    # response[:label].call
+    I18n.t("enums.competition_request.response_id.#{response_id}", locale: user.locale)
   end
 
   def approved?
@@ -88,6 +91,11 @@ class CompetitionRequest < ActiveRecord::Base
       10
     end
   end
+
+  def self.restricted_statuses
+    statuses.except :failed, :destroyed
+  end
+
 
 
 end

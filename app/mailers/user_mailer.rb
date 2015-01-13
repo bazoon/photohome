@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
     @answer = answer
     @user = user
     
-    I18n.with_locale(@user.locale)
+    I18n.with_locale(@user.locale) do
       mail(to: @user.email, subject: 'Изменение статуса заявки')
     end
     

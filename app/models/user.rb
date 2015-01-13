@@ -149,7 +149,8 @@ class User < ActiveRecord::Base
   end
 
   def locale
-    name =~ /[А-Я]|[а-я]/ ? 'ru' : 'en'
+    @locale ||= name =~ /[А-Я]|[а-я]/ ? 'ru' : 'en'
+    @locale
   end
 
 end
