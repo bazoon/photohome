@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-group">
-    <%= f.input :theme_tokens, :input_html => {data: {load: @photo.theme_tags.map {|t| {id: t,name: t}}   }} %>
+    <%= f.input :themetokens, :input_html => {data: {load: @photo.theme_tags.map {|t| {id: t,name: t }}  }} %>
     </div>
 
     <%= f.hidden_field :user_id, value: @user.id %>

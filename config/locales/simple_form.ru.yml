@@ -50,7 +50,7 @@ ru:
         topic: "Раздел"
         destination_id: "Назначение:"
         age_policy: "Возрастное ограничение:"
-        theme_tokens: "Теги"
+        themetokens: "Теги"
       comment:
         title: "Заголовок"
         comment: "Комментарий"  

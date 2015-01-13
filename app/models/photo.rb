@@ -120,16 +120,16 @@ class Photo < ActiveRecord::Base
     
   end
 
-  def theme_tokens
+  def themetokens
     @theme_tokens
   end
 
-	def theme_tokens=(tokens)
+	def themetokens=(tokens)
 		@theme_tokens = tokens.split(",").uniq.join(",")   
     
     # self.theme_list.remove(tokens)
     # self.theme_list = tokens
-    self.user.tag(self, :with => tokens, :on => :themes)
+    self.user.tag(self, :with => @theme_tokens, :on => :themes)
      
     # self.save
      # raise Exception

@@ -62,7 +62,7 @@ en:
         topic: "Topic"
         destination_id: "Purpose:"
         age_policy: "Age restriction:"
-        theme_tokens: "Tags"
+        themetokens: "Tags"
         image: "Choose file"
       comment:
         title: "Title"
