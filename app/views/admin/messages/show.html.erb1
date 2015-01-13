@@ -35,11 +35,17 @@
 
 <% @message.comments.each do |c| %>
 
+
+<div
+
 <div>
    <%= image_tag(c.user.avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;") %> 
+   <%= link_to del_icon, [current_user,@message,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy,c %>
+ </div> 
+
   <div><%= c.comment %></div>
-</div>
- <%= link_to del_icon, [current_user,@message,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy,c%>
+
+ 
 
 <div style="clear: left; height: 20px;" ></div>
 

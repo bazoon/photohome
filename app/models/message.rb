@@ -2,6 +2,8 @@ class Message < ActiveRecord::Base
   belongs_to :user
   acts_as_commentable
 
+  delegate :full_name, to: :user
+
   OPEN = 0
   IN_PROGRESS = 1
   CLOSED = 2  
