@@ -26,19 +26,6 @@ class CompetitionRequest < ActiveRecord::Base
   scope :with_user_last_name_like, -> (last_name) { includes(:user).joins(:user).where('last_name like ? or last_name like ? or last_name like ?', "%#{last_name}", "#{last_name}%", "%#{last_name}%")  }
 
 
-
-  RESPONSES = [
-    { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },
-    { label: -> { I18n.t("responses.accepted") }, value: ACCEPTED },
-    { label: -> { I18n.t("responses.no_money") }, value: NO_MONEY },
-    { label: -> { I18n.t("responses.no_condition") }, value: NO_CONDITION },
-    { label: -> { I18n.t("responses.other_reasons") }, value: OTHER_REASONS },
-    { label: -> { I18n.t("responses.banned") }, value: BANNED }
-  ]
-
-  LABEL = -> (s) { s[:label].call }
-  VALUE = -> (s) { s[:value] }
-
   def self.user_request(competition, user)
     request = where(competition_id: competition.id, user_id: user.id).first
     return request if request
@@ -57,8 +44,6 @@ class CompetitionRequest < ActiveRecord::Base
   end
 
   def decision
-    # response = RESPONSES.find { |r| r[:value] == response_id }
-    # response[:label].call
     I18n.t("enums.competition_request.response_id.#{response_id}", locale: user.locale)
   end
 

@@ -33,6 +33,7 @@ en:
         terms_of_service: "Accept"
         last_name: 'Last name'
         remember_me: 'Remember me'
+        adress: 'Address'
         about: 'About'
         digest: "digest"
         content: "Content"
