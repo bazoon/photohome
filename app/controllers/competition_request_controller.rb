@@ -7,12 +7,14 @@ class CompetitionRequestController < ApplicationController
     @request = CompetitionRequest.find(params[:id])
   end
 
-  def createc
+  def create
+    
     if not @competition.valid_for_fiap?(current_user)
       redirect_to :back, notice: I18n.t('profile_empty')
     else
       competition_request = CompetitionRequest.user_request(@competition, current_user)
-
+      
+      
       if @competition.open? || competition_request.accepted?
         redirect_to competition_photos_path(@competition)
       else
