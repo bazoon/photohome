@@ -26,12 +26,12 @@ class CompetitionRequest < ActiveRecord::Base
 
 
   RESPONSES = [
-    { label: -> { I18n.t("responses.awaiting") }, value: AWAITING },
-    { label: -> { I18n.t("responses.accepted") }, value: ACCEPTED },
-    { label: -> { I18n.t("responses.no_money") }, value: NO_MONEY },
-    { label: -> { I18n.t("responses.no_condition") }, value: NO_CONDITION },
-    { label: -> { I18n.t("responses.other_reasons") }, value: OTHER_REASONS },
-    { label: -> { I18n.t("responses.banned") }, value: BANNED }
+    { label: -> { I18n.t("responses.awaiting", locale: user.locale) }, value: AWAITING },
+    { label: -> { I18n.t("responses.accepted", locale: user.locale) }, value: ACCEPTED },
+    { label: -> { I18n.t("responses.no_money", locale: user.locale) }, value: NO_MONEY },
+    { label: -> { I18n.t("responses.no_condition", locale: user.locale) }, value: NO_CONDITION },
+    { label: -> { I18n.t("responses.other_reasons", locale: user.locale) }, value: OTHER_REASONS },
+    { label: -> { I18n.t("responses.banned", locale: user.locale) }, value: BANNED }
   ]
 
   LABEL = -> (s) { s[:label].call }

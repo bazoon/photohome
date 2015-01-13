@@ -1,0 +1,14 @@
+<h1>Hello <%= @user.full_name %> !</h1>
+
+
+<p>
+  Current status of your request: <b> <%= @decision %> </b>
+  <br>
+  <% unless @answer.blank? %>
+    <p>
+      Admin comment: <i> <%= @answer %> </i>
+    </p>
+
+  <% end  %>
+
+</p>

@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
 
   @@current_user = nil
 
-
-
   extend FriendlyId
   friendly_id :login, use: :slugged
 
@@ -150,6 +148,8 @@ class User < ActiveRecord::Base
     letter_views.find_by(letter_id: letter.id)
   end
 
-  
+  def locale
+    name =~ /[А-Я]|[а-я]/ ? 'ru' : 'en'
+  end
 
 end
