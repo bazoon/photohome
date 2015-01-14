@@ -310,6 +310,7 @@ ru:
       decision: "Решение"
       permited_nomination_count: "Кол-во номинаций"
       requests: "Рассмотреть запрос"
+      photo_count: 'Количество фотографий'
     show:
       wait: "Запрос находится на рассмотрении"
       time_ago: "Отправлен"

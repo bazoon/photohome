@@ -33,6 +33,7 @@
       <th><%= t("competition_requests.index.user_name") %></th>
       <th><%= t("competition_requests.index.permited_nomination_count") %></th>
       <th><%= t("competition_requests.index.decision") %></th>
+      <th><%= t("competition_requests.index.photo_count") %></th>
     </tr>
   </thead>
 
@@ -40,8 +41,9 @@
     <% @competition_requests.each do |request| %>
       <tr>
         <td><%= link_to request.user_name, user_profile_path(request.user) %></td>
-        <td> <%= request.nomination_count %></td>
-        <td> <%= request.decision %></td>
+        <td><%= request.nomination_count %></td>
+        <td><%= request.decision %></td>
+        <td><%= request.competition_photos.count %></td>
         
         <td> <%= link_to(t("competition_requests.index.requests"), edit_admin_request_path(request),  class: "btn btn-primary")  %></td>
         
