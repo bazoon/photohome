@@ -199,6 +199,7 @@ class Photo < ActiveRecord::Base
     self.published
   end
 
+  #TODO: this method conflicts with enum_help !!
   def self.theme_tokens(name)
     
       tags = self.tag_counts_on(:themes).where("name like ?",["%#{name}%"])

@@ -14,9 +14,9 @@ class CompetitionRequest < ActiveRecord::Base
 
   enum response_id: { "awaiting" => 0, "accepted" => 1, "no_money" => 2, "no_condition" => 3, "other_reasons" => 100, "banned" => 1000 }
   
-  scope :accepted, -> { where(response_id: 'accepted') }
-  scope :awaiting, -> { where(response_id: 'awaiting') }
-  scope :unaccepted, -> { where('response_id != ?', 'accepted') }
+  # scope :accepted, -> { where(response_id: 'accepted') }
+  # scope :awaiting, -> { where(response_id: 'awaiting') }
+  scope :unaccepted, -> { where('response_id != ?', response_ids['accepted']) }
   scope :with_response, -> (response_id) { send(response_id) }
   scope :with_user_last_name_like, -> (last_name) { includes(:user).joins(:user).where('last_name like ? or last_name like ? or last_name like ?', "%#{last_name}", "#{last_name}%", "%#{last_name}%")  }
 
