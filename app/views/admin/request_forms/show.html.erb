@@ -10,6 +10,7 @@
     <th>Количество номинаций</th>  
     <th class="small">Почта</th>  
     <th class="small">Телефон</th>  
+    <th class="small">Количество фотографий</th>  
     <th class="small">Примечания</th>  
   </tr>
 
@@ -23,6 +24,7 @@
       <td><%= request.nomination_count %></td>  
       <td class="small"><%= request.user.email %></td>
       <td class="small"><%= request.user.phone %></td>
+      <td><%= request.competition_photos.count %></td>
       <td></td>
     </tr>
 

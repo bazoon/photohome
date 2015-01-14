@@ -7,8 +7,6 @@ class Admin::RequestFormsController < ApplicationController
 
       [r.response_compare, r.user.full_name]
 
-
-
     end
 
   end
