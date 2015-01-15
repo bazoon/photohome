@@ -5,13 +5,11 @@ class CommentsController < ApplicationController
 
 
   def create
-    
     # @comment = @commentable.comments.build(params[:comment])  
     # @comment = Comment.new(comment_params)
     # @comment.user_id = current_user.id
     # @comment.commentable = @commentable
     # @comment.save
-
 
     @comment = Comment.create_comment(comment_params, @commentable, current_user.id)
     @commentable.mark_as_unseen if @commentable.respond_to?(:mark_as_unseen)
@@ -21,20 +19,17 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to :back }
       else
-        format.html { render :action => 'new' }
+        format.html { redirect_to :back, notice: @comment.errors.messages[:comment].try(:first)}
       end
     end
-    
-      # render :text => @commentable.inspect
-    end
+
+  end
 
   def update
   
   end
 
   def destroy
-    # render text: params[:id].inspect
-
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to :back }

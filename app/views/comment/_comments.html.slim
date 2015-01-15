@@ -1,0 +1,18 @@
+h4= t("comments")
+
+-resource.comments.each do |c|
+  .row
+    .col-md-2
+      = image_tag(c.user.avatar_url(:thumb),class: "img-polaroid",style: "float: left;margin-right: 5px;")
+      = link_to del_icon, [resource,c], method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, c 
+    .col-md-6
+      strong= link_to(c.user.full_name, user_profile_path(c.user))
+      br
+      small=c.comment 
+  
+  
+
+div style=("clear: left; height: 20px;") 
+
+hr
+
