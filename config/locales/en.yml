@@ -200,7 +200,7 @@ en:
         accepted: "Accepted"
         no_money: "Your request accepted. Please pay money for participation."
         no_condition: "Contest terms was not met"
-        other_reasons: "Please contact admin"
+        other_reasons: "RefusedOther reason"
         no_decision: "No decision"
         banned: "banned"
 
