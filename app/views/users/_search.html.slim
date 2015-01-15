@@ -1,7 +1,7 @@
 = simple_form_for(:search, url: users_path, method: :get) do |f|
   = f.error_notification 
   .form-group
-    = f.input :search, input_html: { maxlength: 40 }
+    = f.input :term, input_html: { maxlength: 40 }
   = f.button :submit, value: t("search"), input_html: { class: "btn btn-default" }
 
 br

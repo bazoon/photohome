@@ -34,9 +34,12 @@ class User < ActiveRecord::Base
   has_many :letter_views
 
   scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
+  scope :with_role_id, -> (role_id) { includes(:roles).where(roles: {id: role_id }) }
 
-  scope :without_role, -> { User.where.not(id: UsersRole.uniq.pluck(:user_id)) }
+  scope :without_role, -> { where.not(id: UsersRole.uniq.pluck(:user_id)) }
+
   scope :search_by_last_name_or_email, -> (search) do
+  scope :unconfirmed, -> { where(confirmed: nil) }
 
     User.where("last_name like ? or last_name like ? or last_name like ? or email like ? or email like ? or email like ?", 
               "%#{search}%", "%#{search}", "#{search}%", "%#{search}%", "%#{search}", "#{search}%")

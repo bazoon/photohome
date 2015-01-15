@@ -1,35 +1,18 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
-  
+  before_action :select_users, only: :index
 
   def index
     
     authorize! :index, @user, :message => I18n.t(:access_denied) 
-    role_id = params[:users][:role_id] if params[:users]
+    
+    
 
-    @users = if params[:users]
-
-      if role_id.blank?
-        User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
-      else
-        if role_id.to_i >= 0
-          User.includes(:roles).where(roles: {id: role_id })    
-        else
-          User.where(confirmed_at: nil)
-        end
-      end 
-
-    else  
-      search = params[:search][:search] if params[:search]
-      
-      if search.blank?
-        User.all #TODO: remove all!
-      else
-        User.search_by_last_name_or_email(search)
-      end.includes(:roles)
-
-    end.order('users.created_at desc').paginate(page: params[:page], per_page: 25)
+    @users = select_users
+                .includes(:roles)
+                .order('users.created_at desc')
+                .paginate(page: params[:page], per_page: 25)
 
     
   end
@@ -91,4 +74,33 @@ class UsersController < ApplicationController
   #   params.require(:user).permit(:name, :email, :country,:password, :salt, :encrypted_password,:avatar)
   # end
   
+  private
+
+
+  def select_users
+    role_id = params[:roles][:role_id] if params[:roles]
+    search = params[:search][:term] if params[:search]
+    
+    if role_id
+      users_with_roles(role_id)
+    elsif search
+      users_by_search(search) 
+    else
+      User.all
+    end
+  end 
+
+  def users_with_roles(role_id)
+    if role_id.blank?
+      User.without_role
+    else
+      role_id.to_i >= 0 ? User.with_role_id(role_id) : User.unconfirmed
+    end 
+  end
+  
+  def users_by_search(search)
+    search.blank? ? User.all : User.search_by_last_name_or_email(search)
+  end
+
+
 end

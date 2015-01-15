@@ -3,7 +3,7 @@
 <h3>Choose roles</h3>
 
 
-<%= simple_form_for :users, :url => users_path, method: :get do |f| %>
+<%= simple_form_for :roles, :url => users_path, method: :get do |f| %>
    
     <div class="form-group">
       <%= f.input :role_id, selected: 1, label: "Role", collection: @roles,  :include_blank => "Без роли", label_method: -> (c) { c[1] }, value_method: -> (c) { c[0] }, :input_html => { class: "form-control"} %>
