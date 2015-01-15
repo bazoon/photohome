@@ -108,7 +108,7 @@ class Competition < ActiveRecord::Base
   end
 
   def overdue?
-    last_date > Time.zone.now
+    Time.zone.now > last_date
   end
 
   def ready_to_be_published?
