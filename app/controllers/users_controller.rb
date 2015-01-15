@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   
 
   def index
-
+    
     authorize! :index, @user, :message => I18n.t(:access_denied) 
     role_id = params[:users][:role_id] if params[:users]
 
@@ -13,17 +13,21 @@ class UsersController < ApplicationController
       if role_id.blank?
         User.where.not(id: User.includes(:roles).where(roles: {id: Role.pluck(:id) }).pluck(:id))
       else
-
         if role_id.to_i >= 0
           User.includes(:roles).where(roles: {id: role_id })    
         else
           User.where(confirmed_at: nil)
         end
-
       end 
 
     else  
-      User.includes(:roles)  
+      search = params[:search][:search] if params[:search]
+      
+      if search.blank?
+        User.includes(:roles)
+      else
+        User.search_by_last_name_or_email(search)
+      end
     end.order('users.created_at desc').paginate(page: params[:page], per_page: 25)
 
     

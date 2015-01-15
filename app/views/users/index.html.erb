@@ -2,6 +2,7 @@
 <div class="span8">
 <%= will_paginate @users %>
 <br/>
+<%= render partial: 'users/search' %>
 <%= link_to "Все пользователи", users_path %> |
 <%= link_to "Выбрать роль", select_roles_users_path %>
 

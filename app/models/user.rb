@@ -36,7 +36,13 @@ class User < ActiveRecord::Base
   scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
 
   scope :without_role, -> { User.where.not(id: UsersRole.uniq.pluck(:user_id)) }
+  scope :search_by_last_name_or_email, -> (search) do
 
+    User.where("name like ? or name like ? or name like ? or email like ? or email like ? or email like ?", 
+              "%#{search}%", "%#{search}", "#{search}%", "%#{search}%", "%#{search}", "#{search}%")
+
+
+  end
 
 
   acts_as_tagger

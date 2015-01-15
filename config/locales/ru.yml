@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  search: 'Искать'
   update: 'Сохранить'
   back: 'Назад'
   unhappy: "Вас что-то не устраивает?"
