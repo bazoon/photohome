@@ -24,10 +24,11 @@ class UsersController < ApplicationController
       search = params[:search][:search] if params[:search]
       
       if search.blank?
-        User.includes(:roles)
+        User.all #TODO: remove all!
       else
         User.search_by_last_name_or_email(search)
-      end
+      end.includes(:roles)
+
     end.order('users.created_at desc').paginate(page: params[:page], per_page: 25)
 
     
