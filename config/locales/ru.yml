@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  unrated: 'Нежуреные фотографии'
+  all: 'Все фотографии'
   search: 'Искать'
   update: 'Сохранить'
   back: 'Назад'

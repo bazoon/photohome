@@ -34,7 +34,7 @@
     <tr>
 
       <td>
-        <%= link_to image_tag(competition_photo.photo.image_url(:thumb), class: "img-responsive"), jury_show_path(competition_photo) %>
+        <%= link_to image_tag(competition_photo.photo.image_url(:thumb), class: "img-responsive"), jury_show_path(@scope, competition_photo, @nomination_id) %>
       </td>  
       
       <td>

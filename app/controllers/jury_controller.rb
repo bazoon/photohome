@@ -4,8 +4,6 @@ class JuryController < ApplicationController
   before_filter :verify_if_jury
   before_action :set_user
   layout "user_profile_layout"
-  
-
 
   def rating
     id = params["data"]
@@ -39,7 +37,7 @@ class JuryController < ApplicationController
     @scope = params[:scope]
     
 
-    @nomination_id = params[:jury] ? params[:jury][:nomination_id] : params[:nomination_id]
+    @nomination_id = params[:nominations] ? params[:nominations][:nomination_id] : params[:nomination_id]
     @nomination_id = @nomination_id.empty? ? nil : @nomination_id.try(:to_i) if @nomination_id
     
 
@@ -73,6 +71,11 @@ class JuryController < ApplicationController
 
   def show
     @competition_photo = CompetitionPhoto.find(params[:photo_id])
+    @scope = params[:scope]
+    # binding.pry
+    @nomination_id = params[:nomination_id]
+
+    
     others = @competition_photo
               .competition.competition_photos
               .with_nomination(@competition_photo.nomination_id)
