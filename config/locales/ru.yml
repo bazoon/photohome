@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  nomination: 'Номинация'
+  nomination_: 'Номинация'
   photos_: 'Фотографии'
   unrated: 'Нежуреные фотографии'
   all: 'Все фотографии'
