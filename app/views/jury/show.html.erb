@@ -20,8 +20,8 @@
 
 
 <div style="float: right">
-  <%= link_to image_tag(@prev.image_url(:thumb)), jury_show_path(@scope, @prev, @nomination_id) if @prev %>
-  <%= link_to image_tag(@next.image_url(:thumb)), jury_show_path(@scope, @next, @nomination_id) if @next %>
+  <%= link_to image_tag(@prev.image_url(:thumb), style: 'height: 30px'), jury_show_path(@scope, @prev, @nomination_id) if @prev %>
+  <%= link_to image_tag(@next.image_url(:thumb), style: 'height: 30px'), jury_show_path(@scope, @next, @nomination_id) if @next %>
 </div>
 
 <%= jury_rate(current_user.id, @competition_photo.id, @competition_photo.jury_rating(@user.id), "jury_rate",@competition_photo.competition.num_stars) %>
