@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  left: 'Left'
   nom: 'Nomination'
   photos_: 'Photos'
   unrated: 'unrated'
