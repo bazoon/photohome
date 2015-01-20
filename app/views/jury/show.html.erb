@@ -16,7 +16,7 @@
 
 <%- end %>
 
-<%= link_to "#{t('back')} (#{t(@scope)})", jury_view_photos_path(@competition_photo.competition, @scope, @nomination_id) %>
+<%= link_to t('back'), jury_view_photos_path(@competition_photo.competition, @scope, @nomination_id) %>
 
 
 <div style="float: right">

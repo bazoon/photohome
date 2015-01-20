@@ -6,15 +6,15 @@
 <%= will_paginate @competition_photos %>
  
 <p>
-  Всего <%= @should_jury %> 
-  осталось <%= @should_jury - @juried %> 
+  <%= t('all') %> <%= @should_jury %> 
+  <%= t('left') %> <%= @should_jury - @juried %> 
 </p>
 
 <%- all_class = @scope == "all" ? "btn btn-success" : "btn btn-default" %>
-<%= link_to 'Все', jury_view_photos_path(@competition, :all, nomination_id: @nomination_id), class: all_class %>
+<%= link_to t('all'), jury_view_photos_path(@competition, :all, nomination_id: @nomination_id), class: all_class %>
 
 <%- unrated_class = @scope == "unrated" ? "btn btn-success" : "btn btn-default" %>
-<%= link_to 'Нежуреные', jury_view_photos_path(@competition, :unrated, nomination_id: @nomination_id), class: unrated_class %>
+<%= link_to t('unrated'), jury_view_photos_path(@competition, :unrated, nomination_id: @nomination_id), class: unrated_class %>
 
 
 <%= render partial: 'nomination_form' %>
@@ -23,10 +23,9 @@
 <table class="table table-striped">
   
   <tr>
-    <td>Фотография</td>
-    <td>Номинация</td>
-    <td>Оценка
-    </td>
+    <td><%= t('photos') %></td>
+    <td><%= t('nomination') %></td>
+    <td><%= t('rating') %></td>
   </tr>
 
   <% @competition_photos.each_with_index do | competition_photo,index| %>
