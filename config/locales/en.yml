@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  unrated: 'unrated'
   update: 'Update'
   unhappy: 'Unhappy?'
   back: 'Back'
@@ -99,7 +100,7 @@ en:
   age: "Age"
   remove_cache: "Удалить файлы кеша"
   album: "Gallery"
-  all: "Все"
+  all: "All"
   unseen: "Непросмотренные"
   last_24: "За последние 24 часа"
   unpublished: "Неопубликованные"
