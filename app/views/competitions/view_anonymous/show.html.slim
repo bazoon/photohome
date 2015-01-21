@@ -1,0 +1,13 @@
+p.text-center
+  =image_tag @competition_photo.image_url_for_others(current_user,session[:agreed], :normal)
+
+
+.row.text-center
+  .col-sm-3
+    = link_to image_tag(@prev.image_url(:thumb), style: 'height: 50px'), anonymous_competition_photo_path(@prev) if @prev
+  .col-sm-6
+    hr
+  .col-sm-3  
+    = link_to image_tag(@next.image_url(:thumb), style: 'height: 50px'), anonymous_competition_photo_path(@next) if @next 
+br
+p= age_badge(@competition_photo.photo.age_policy_age)

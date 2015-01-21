@@ -34,6 +34,7 @@ class GalleryController < ApplicationController
 
   def show_anonymous
     @photo = Photo.friendly.find(params[:photo_id])
+    
   end
 
 end

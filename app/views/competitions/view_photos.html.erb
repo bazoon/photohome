@@ -17,7 +17,7 @@
       <% @competition_photos.each_with_index do |competition_photo,index| %>
       
         <div class="col-sm-3 thumb">
-          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_anonymous_path(competition_photo.photo) } %>
+          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: anonymous_competition_photo_path(competition_photo) } %>
 
         <%- l0 = "#{competition_photo.jury_count} / #{@all_jury_count}" %>
         <%- l1 = content_tag(:span,competition_photo.like_count,class: "label label-primary",id: "like_count#{competition_photo.id}") %>
