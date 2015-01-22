@@ -1,0 +1,39 @@
+p.text-center
+  =image_tag @competition_photo.image_url_for_others(current_user,session[:agreed], :normal)
+
+
+.row.text-center
+  .col-sm-3
+    = link_to image_tag(@prev.image_url(:thumb), style: 'height: 50px'), result_competition_photo_path(@prev) if @prev
+  .col-sm-6
+    hr
+  .col-sm-3  
+    = link_to image_tag(@next.image_url(:thumb), style: 'height: 50px'), result_competition_photo_path(@next) if @next 
+br
+p= age_badge(@competition_photo.photo.age_policy_age)
+
+p
+  | Автор: &nbsp;
+  = link_to @competition_photo.photo.author_name, user_profile_path(@competition_photo.photo.user)
+
+
+- rating ="R: #{@competition_photo.average_rating }"
+- place = "P: #{@competition_photo.place }"
+- likes = "L: #{@competition_photo.likes.count }"
+
+.row
+  .col-sm-2
+    span.label.label-success
+      = t('rating')
+      | &nbsp;
+      = rating      
+  .col-sm-2
+    span.label.label-warning
+      = t('place')
+      | &nbsp;
+      = place        
+  .col-sm-2
+    span.label.label-info
+      = t('likes')
+      | &nbsp;
+      = likes     

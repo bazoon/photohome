@@ -13,7 +13,7 @@
       
         <div class="col-sm-3 thumb">
        
-          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: gallery_show_path(competition_photo.photo) } %>
+          <%= render partial: "photos/thumb", locals: { photo: competition_photo.photo, path: result_competition_photo_path(competition_photo) } %>
 
         <%- rating ="R: #{competition_photo.average_rating }" %>
         <%- place = "P: #{competition_photo.place }" %>

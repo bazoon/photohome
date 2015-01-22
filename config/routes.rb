@@ -1,9 +1,14 @@
 Photohome::Application.routes.draw do
   
+  
   get 'competitions/view_anonymous/:competition_photo_id', 
       to: 'competitions/view_anonymous#show',
       as: :anonymous_competition_photo
   
+  get 'competitions/view_result/:competition_photo_id',
+      to: 'competitions/view_result#show',
+      as: :result_competition_photo
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "about/us"
@@ -49,7 +54,6 @@ Photohome::Application.routes.draw do
 
      get "gallery/index"
      get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
-     get '/gallery/show_anonymous/:photo_id', to: 'gallery#show_anonymous', as: :gallery_show_anonymous
      get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
 
      
@@ -128,8 +132,8 @@ Photohome::Application.routes.draw do
           get 'choose_photo', as: :choose_photo
           get 'view_photos/:nomination_id', to: 'competitions#view_photos', as: :view_photos
           get 'view_nominations', as: :view_nominations
-          get 'results/:nomination_id', to: 'competitions#results', as: :results
           get 'results_nominations'
+          get 'results/:nomination_id', to: 'competitions#results', as: :results
         end  
 
         resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 
