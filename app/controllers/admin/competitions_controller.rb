@@ -2,6 +2,7 @@ class Admin::CompetitionsController < Admin::BaseController
 
   before_action :set_competition, only: [:show, :edit, :update, :destroy, :view_posted, :final_judge, :stats]
 
+  before_action :load_nomination, only: [:view_posted]
   # GET /competitions
   # GET /competitions.json
   def index
@@ -13,9 +14,15 @@ class Admin::CompetitionsController < Admin::BaseController
   
   def view_posted
     @all_jury_count = @competition.jury.count
-    # @competition_photos = @competition.competition_photos.sort_by {|cp|  -cp.average_rating}
+    
+    @competition_photos = if not @nomination_id.blank?
+      @competition.competition_photos
+                  .with_nomination(@nomination_id)
+    else
+      @competition.competition_photos
+    end.sort_by { |cp|  -cp.average_rating }.paginate(page: params[:page],per_page: 8)
 
-    @competition_photos = @competition.competition_photos.sort_by { |cp|  -cp.average_rating }.paginate(page: params[:page],per_page: 8)
+    
   end
 
   def stats
@@ -95,6 +102,12 @@ class Admin::CompetitionsController < Admin::BaseController
     def set_competition
       @competition = Competition.friendly.find(params[:id])
     end
+
+    def load_nomination
+      @nomination_id = params.fetch(:nominations,{}).fetch(:nomination_id, nil)
+      # binding.pry
+    end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def competition_params

@@ -1,0 +1,16 @@
+= simple_form_for(:nominations, url: view_posted_admin_competition_path(@competition), method: :get) do |f|
+    = f.error_notification
+
+
+    .form-group
+        = f.input :nomination_id, 
+            label: t('choose_nomination'),
+            collection: @competition.nominations,
+            label_method: :title, 
+            value_method: :id, 
+            :input_html => {class: "form-control"},
+            :selected => @nomination_id,
+            :include_blank => ''
+
+    = f.button :submit, value: t("filter"), input_html: {class: "btn btn-default" }
+  

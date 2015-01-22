@@ -1317,3 +1317,8 @@
 [01/22/15 10:37:22 +0500 MacBook-Pro-VITALIY.local (26696)] INFO : Installing Rails 4 view instrumentation
 [01/22/15 10:37:22 +0500 MacBook-Pro-VITALIY.local (26696)] INFO : Installing Rails 4 Error instrumentation
 [01/22/15 10:37:22 +0500 MacBook-Pro-VITALIY.local (26696)] INFO : Finished instrumentation
+[01/22/15 12:08:05 +0500 MacBook-Pro-VITALIY.local (84775)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Unknown line indicator
+  /Users/vitaliynesterenko/projects/photohome/app/views/admin/competitions/_nomination_filter.html.slim, Line 13, Column 12
+    :include_blank => ''
+    ^
+

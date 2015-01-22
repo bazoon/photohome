@@ -1,0 +1,40 @@
+h1 
+  = t('.caption')
+= will_paginate @competition_photos 
+
+= render partial: 'admin/competitions/nomination_filter'
+
+table.table.table-striped
+  thead
+    tr
+      th.col-md-4 Название
+      th
+      th Голоса
+      th Место
+      th Средний рейтинг
+      th
+      th
+      th
+      th
+  tbody
+    - @competition_photos.each do |competition_photo| 
+      tr
+        td 
+          = "#{competition_photo.title} / #{competition_photo.nomination.title}" 
+        td id="competition_photo_=competition_photo.id>"
+          = ban_helper(competition_photo) 
+        td 
+          = "#{competition_photo.jury_count} / #{@all_jury_count}" 
+        td
+          = final_estimate(competition_photo.place, competition_photo.id, "final_estimate")  
+        td
+          = competition_photo.average_rating 
+        td
+          = link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) 
+        td
+          = link_to del_icon, admin_competition_photo_path(competition_photo), method: :delete, data: { confirm: 'Are you sure?' } 
+        td 
+          = link_to ban_icon, admin_competition_photo_ban_path(competition_photo), method: :patch, remote: true 
+    
+br
+
