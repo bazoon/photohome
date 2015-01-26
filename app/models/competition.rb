@@ -90,9 +90,10 @@ class Competition < ActiveRecord::Base
       
       corr[j.user.full_name] = {}
 
-      jury.each do |i|  
+      j_ratings = ratings.select {|e| e[0] == j.user }
+      next if j_ratings.length == 0
 
-        j_ratings = ratings.select {|e| e[0] == j.user }
+      jury.each do |i|  
 
         i_ratings = ratings.select {|e| e[0] == i.user }
 
