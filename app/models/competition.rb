@@ -98,7 +98,6 @@ class Competition < ActiveRecord::Base
         i_ratings = ratings.select {|e| e[0] == i.user }
 
 
-        binding.pry
         corr[j.user.full_name][i.user.full_name] = PearsonCorrelation.new(i_ratings.map {|e| e[1]}, j_ratings.map {|e| e[1]}).corr
 
       end
