@@ -78,6 +78,34 @@ class Competition < ActiveRecord::Base
     statistics
   end
 
+  def jury_stats
+    require "corr"
+    
+    corr = {}
+    ratings = JuryRating.for_competition(id).order(:id).map {|e| [e.user, e.rating]}
+
+
+
+    jury.each do |j|
+      
+      corr[j.user.full_name] = {}
+
+      jury.each do |i|  
+
+        j_ratings = ratings.select {|e| e[0] == j.user }
+
+        i_ratings = ratings.select {|e| e[0] == i.user }
+
+
+        binding.pry
+        corr[j.user.full_name][i.user.full_name] = PearsonCorrelation.new(i_ratings.map {|e| e[1]}, j_ratings.map {|e| e[1]}).corr
+
+      end
+    end
+
+    corr
+  end
+
   def has_approved_request_for?(user)
     @request_ ||= competition_requests.accepted.where(user: user).first
   end

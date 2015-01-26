@@ -27,6 +27,8 @@ class Admin::CompetitionsController < Admin::BaseController
 
   def stats
     @stats = @competition.stats
+
+    
   end
 
   def final_rating

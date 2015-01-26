@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.5'
 gem 'rails', '4.1.1'
 
 gem 'rails_admin'
@@ -96,8 +96,8 @@ gem 'babosa'
 # gem 'rails_12factor'
 
 gem 'jquery-turbolinks'
-# gem 'pry', :group => :development
-gem 'jazz_hands', :group => :development
+gem 'pry', :group => :development
+# gem 'jazz_hands', :group => :development
 
 gem 'capybara', :group => :development
 gem 'zeus', :group => :development
@@ -132,6 +132,7 @@ gem 'groupdate'
 gem 'mailboxer'
 gem 'slim-rails'
 gem 'enum_help'
+gem 'rack-mini-profiler'
 
 
 # gem 'sidekiq_mailer'

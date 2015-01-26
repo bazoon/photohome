@@ -1,6 +1,7 @@
 Photohome::Application.routes.draw do
   
   
+
   get 'competitions/view_anonymous/:competition_photo_id', 
       to: 'competitions/view_anonymous#show',
       as: :anonymous_competition_photo
