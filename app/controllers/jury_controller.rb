@@ -28,7 +28,7 @@ class JuryController < ApplicationController
 
   def choose_competition
     # @competitions = Competition.where("open_date > ?", Time.zone.now)
-    @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ? and jury_closed != ?",current_user.id, Time.zone.now, true)
+    @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ? and jury_date >= ?",current_user.id, Time.zone.now.to_date, Time.zone.now.to_date)
   end
 
 

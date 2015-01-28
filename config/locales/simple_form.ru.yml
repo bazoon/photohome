@@ -63,7 +63,7 @@ ru:
         status_id: "Статус конкурса"
         num_stars: "Количество баллов"
         accept_date: "Дата начала приема"
-        jury_closed: "Голосование закрыто"
+        jury_date: "Голосование открыто до"
       admin_nomination:
         title: "Название"
         description: "Описание"   
