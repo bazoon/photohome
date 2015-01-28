@@ -11,7 +11,8 @@ Photohome::Application.routes.draw do
       as: :result_competition_photo
 
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  
   get "about/us"
   get "about/rules"
 
@@ -246,7 +247,7 @@ Photohome::Application.routes.draw do
 
 
 
-
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
 
 
