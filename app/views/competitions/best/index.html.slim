@@ -7,14 +7,18 @@ h1
 table.table.table-striped
   thead
     tr
+      th №
       th = t('photo_title')
       th = t('author')
       th = t('average_rating')
       th = t('place')
       th
   tbody
+    - num = @start_num
     - @competition_photos.each do |competition_photo| 
       tr
+        td
+          = num
         td 
           = "#{competition_photo.title} / #{competition_photo.nomination.title}" 
         td
@@ -25,6 +29,7 @@ table.table.table-striped
           = competition_photo.place
         td
           = link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) 
+        - num += 1
     
 br
 
