@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  photo_title: "Title"
+  author: "Author"
+  average_rating: 'Rating'
+  best_photos: 'Best photos'
   left: 'Left'
   nom: 'Nomination'
   photos_: 'Photos'

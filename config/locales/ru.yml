@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  photo_title: "Название фотографии"
+  author: "Автор"
+  average_rating: "Средний рейтинг"
+  best_photos: 'Лучшие работы'
   left: 'Осталось'
   nom: 'Номинация'
   photos_: 'Фотографии'

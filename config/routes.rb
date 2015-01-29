@@ -1,14 +1,17 @@
 Photohome::Application.routes.draw do
   
-  
 
-  get 'competitions/view_anonymous/:competition_photo_id', 
+  namespace :competitions do
+    get 'view_anonymous/:competition_photo_id', 
       to: 'competitions/view_anonymous#show',
       as: :anonymous_competition_photo
   
-  get 'competitions/view_result/:competition_photo_id',
+    get 'view_result/:competition_photo_id',
       to: 'competitions/view_result#show',
       as: :result_competition_photo
+  end
+
+  
 
 
   
@@ -140,6 +143,7 @@ Photohome::Application.routes.draw do
 
         resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 
         resources :requests, controller: "competition_request", shallow: true, only: [:show, :create] 
+        resources :best, only: [:index], controller: 'competitions/best'
       end  
 
       # get "album/index"

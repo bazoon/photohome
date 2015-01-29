@@ -170,6 +170,10 @@ module ApplicationHelper
     content_tag(:span,"",class: "glyphicon glyphicon-user")
   end
 
+  def start_icon
+    content_tag(:span,"",class: "glyphicon glyphicon-star")
+  end
+
 
 
   def jury_rate(user_id, competition_photo_id, value, klass, num_stars)

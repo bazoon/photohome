@@ -22,7 +22,7 @@
       <th><%= t(".last_date") %></th>
       <th><%= t(".open_date") %></th>
       <th><%= t("participate") %></th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
       
     </tr>
   </thead>
@@ -38,10 +38,6 @@
         <td><%= ld competition.accept_date %></td>
         <td><%= ld competition.last_date %></td>
         <td><%= ld competition.open_date %></td>
-        
-        
-
-
         <%- status_icon = question_icon if competition.has_awaiting_request?(current_user) %>
         <%- status_icon ||= ok_icon if competition.participate?(current_user) %>
         <%- status_icon ||= stop_icon if competition.has_unaccepted_request?(current_user) %>
@@ -53,7 +49,8 @@
         <% hint = competition.can_upload_photo?(current_user) ? t('load_photos') : t('send_request') %>
         <td><%= link_to request_icon(competition.can_upload_photo?(current_user)), competition_requests_path(competition), 
           title: hint, method: :post if can?(:request, competition) %></td>
-        
+
+        <td><%= link_to start_icon, competition_best_index_path(competition) if can?(:jury, competition) %></td>
 
        </tr>
     <% end %>

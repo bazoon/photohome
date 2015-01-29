@@ -1,0 +1,2 @@
+module Competitions::BestHelper
+end
