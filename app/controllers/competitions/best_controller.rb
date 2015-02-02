@@ -25,7 +25,9 @@ class Competitions::BestController < ApplicationController
         csv = CSV.generate do |csv|
                 csv << ["Нвзвание", "Номинация", "ФИО", "Рейтинг", "Место"]
                 @competition_photos.each do |cp|
-                  csv << [cp.title, cp.nomination.title, cp.photo.user.full_name, cp.average_rating, cp.place]
+                  if cp.photo
+                    csv << [cp.title, cp.nomination.title, cp.photo.user.full_name, cp.average_rating, cp.place]
+                  end
                 end
               end
         send_data csv
