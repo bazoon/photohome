@@ -129,6 +129,16 @@ class CompetitionPhoto < ActiveRecord::Base
     rating = jury_ratings.where(user_id: user_id).try(:[],0).try(:rating) || 0
   end
 
+  def self.as_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |item|
+        csv << item.attributes.values_at(*column_names)
+      end
+      
+    end
+  end
+
   
 end
 
