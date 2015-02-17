@@ -1,18 +1,20 @@
-<h1>
-  <%= novelty.title %>
-</h1>
+<div class="novelty">
+  <h1>
+    <%= novelty.title %>
+  </h1>
 
-<p>
-  <%= raw novelty.content %>
-</p>
+  <p>
+    <%= raw novelty.content %>
+  </p>
 
-<p><%= age_badge(novelty.age_policy_age) %></p>
+  <p><%= age_badge(novelty.age_policy_age) %></p>
 
-<small>
-  <%=ld novelty.created_at %>
-</small>
-<br>
+  <small>
+    <%=ld novelty.created_at %>
+  </small>
+  <br>
 
 
-<%= render partial: "comment/comments", locals: {resource: novelty } %>
-<%= render partial: "comment/form2", locals: { user: nil, resource: novelty } %>
+  <%= render partial: "comment/comments", locals: {resource: novelty } %>
+  <%= render partial: "comment/form2", locals: { user: nil, resource: novelty } %>
+</div>
