@@ -18,25 +18,10 @@ class Competition < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  enum type_id: { "usial" => 0, "fiap" => 1 }
+  enum status_id: { "open" => 0, "closed" => 1 }
 
-  USIAL= 0
-  FIAP = 1
-
-  TYPES = [
-    { label: I18n.t("usial"), value: USIAL },
-    { label: I18n.t("fiap"), value: FIAP }
-  ]
-
-  OPEN = 0
-  PRIVATE = 1
-
-  STATUSES = [
-    {label: I18n.t("open"),value: OPEN },
-    {label: I18n.t("private"),value: PRIVATE }
-  ]
-
-  LABEL = -> (s){s[:label]}
-  VALUE = -> (s){s[:value]}  
+  
 
   def loaded_in_nominations(user)
     
@@ -46,18 +31,12 @@ class Competition < ActiveRecord::Base
     jury_ratings.where('user_id=? and rating > 0', user.id).joins(:competition_photo).where(competition_photos: {banned: false}).count
   end
 
-  def open?
-    self.status_id == OPEN
-  end
-
+  
   def closed?
-    self.status_id != OPEN
+    !open?
   end
 
-  def fiap?
-    self.type_id == FIAP
-  end
-
+  
   def stats
     photo_count = competition_photos.not_banned.count
     jury_count = jury.count

@@ -21,6 +21,7 @@ public/uploads
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+log/newrelic_agent.log
 /tmp
 
 
