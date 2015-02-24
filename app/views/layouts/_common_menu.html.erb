@@ -1,9 +1,22 @@
 
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Конкурсы<b class="caret"></b></a>
+ 
+  <ul class="dropdown-menu">
+    <li class= <%= "active" if params[:controller] == "competitions" ||  params[:controller] == "competition_photos"%>>
+     <%= link_to I18n.t("contests"),competitions_path %>
+    </li>  
+    <li class= <%= "active" if params[:controller] == "competitions" ||  params[:controller] == "competition_photos"%>>
+      <%= link_to I18n.t("contests"),competitions_path %>
+    </li>
+    
+  </ul>
+
+</li>
 
 
-<li class= <%= "active" if params[:controller] == "competitions" ||  params[:controller] == "competition_photos"%>>
-  <%= link_to I18n.t("contests"),competitions_path %>
- </li>
+
+
 
 <li class= <%= "active" if params[:controller] == "novelties" %>>
   <%=link_to(I18n.t("news"),list_novelties_path) if can? :read, Novelty %>
@@ -14,12 +27,8 @@
 </li>
 
 <%- if masquerading? && current_user %>
-
-
-<li>
-  
-  <%= link_to("Выйти из сумрака", user_masquerade_path(current_user.id,0), :data => { :confirm => "Are you sure?" }, :method => :delete, style: 'color: red') %>
-</li>
-
+  <li>
+    <%= link_to("Выйти из сумрака", user_masquerade_path(current_user.id,0), :data => { :confirm => "Are you sure?" }, :method => :delete, style: 'color: red') %>
+  </li>
 <% end %>
 

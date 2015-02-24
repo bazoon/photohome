@@ -20,6 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  сompetition_title: "Название"
+  results: "Итоги"
+  title: "Название"
+  accept_date: "Дата начала приема"
+  last_date: "Последний срок сдачи работ"
+  open_date: "Дата оглашения результатов"
+  jury_date: "Голосовать до"
+  type: "Тип конкурса"     
+  _competitions: 'Конкурсы'
+  photofinishes: 'Фотофиниши'
   photo_title: "Название фотографии"
   author: "Автор"
   average_rating: "Средний рейтинг"

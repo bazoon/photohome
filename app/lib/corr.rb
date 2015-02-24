@@ -17,7 +17,7 @@ class BasicStats
 end
 
 class PearsonCorrelation
-  attr_reader :covariance, :corr_calc
+  attr_reader :covariance, :corr_calc, :corr
 
   def initialize(list1, list2)
     @list1 = list1
@@ -51,4 +51,14 @@ class PearsonCorrelation
   end
 
 end
+
+# l1 = [1,4,7,9,12]
+# l2 = [3,1,4,6,8]
+
+# p PearsonCorrelation.new(l1, l2).corr
+
+
+
+
+
 

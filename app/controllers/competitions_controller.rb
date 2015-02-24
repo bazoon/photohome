@@ -5,8 +5,8 @@ class CompetitionsController < ApplicationController
   # GET /competitions
   # GET /competitions.json
   def index
-    @competitions = Competition.all.order(:created_at).paginate(page: params[:page])
-    
+    @competitions = Competition.non_fotofinish.order(:created_at).paginate(page: params[:page])
+    @fotofinishes = Competition.fotofinish.order(:created_at).paginate(page: params[:page])
     # fresh_when(@competitions)
   end
 

@@ -8,54 +8,10 @@
 
 <h1><%= t(".list") %></h1>
 
-<%= will_paginate @competitions %>
+<%= render partial: 'competitions/competitions', locals: { competitions: @competitions, title: t('_competitions') } %>
+<%= render partial: 'competitions/competitions', locals: { competitions: @fotofinishes, title: t('photofinishes') } %>
 
 
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= t(".title") %></th>
-      <th><%= t(".results") %></th>
-      <th><%= t(".type") %></th>
-      <th><%= t(".accept_date") %></th>
-      <th><%= t(".last_date") %></th>
-      <th><%= t(".open_date") %></th>
-      <th><%= t("participate") %></th>
-      <th colspan="4"></th>
-      
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @competitions.each do |competition| %>
-      
-      <tr>
-        <td><%= link_to competition.title,view_nominations_competition_path(competition) %></td>
-        <td><%= link_to horn_icon, results_nominations_competition_path(competition) %></td>
-        <% type =competition.fiap? ? yellow_label(t("fiap")) :  competition.open? ? green_label(t("open")) : red_label(t("private")) %>
-        <td><%= type %></td>
-        <td><%= ld competition.accept_date %></td>
-        <td><%= ld competition.last_date %></td>
-        <td><%= ld competition.open_date %></td>
-        <%- status_icon = question_icon if competition.has_awaiting_request?(current_user) %>
-        <%- status_icon ||= ok_icon if competition.participate?(current_user) %>
-        <%- status_icon ||= stop_icon if competition.has_unaccepted_request?(current_user) %>
-        
-        <td><%= status_icon %></td>
-        
-        <td><%= link_to(photo_icon, view_nominations_competition_path(competition),:title => t('photos_')) %></td>
-        <td><%= link_to show_icon, competition %></td>
-        <% hint = competition.can_upload_photo?(current_user) ? t('load_photos') : t('send_request') %>
-        <td><%= link_to request_icon(competition.can_upload_photo?(current_user)), competition_requests_path(competition), 
-          title: hint, method: :post if can?(:request, competition) %></td>
-
-        <td><%= link_to start_icon, competition_best_index_path(competition) if can?(:jury, competition) %></td>
-
-       </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 

@@ -133,6 +133,7 @@ gem 'mailboxer'
 gem 'slim-rails'
 gem 'enum_help'
 gem 'rack-mini-profiler'
+gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/safe'
 
 
 # gem 'sidekiq_mailer'

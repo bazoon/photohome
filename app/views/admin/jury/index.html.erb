@@ -1,32 +1,17 @@
 <h1>Жюри</h1>
   <%= simple_form_for [@competition,@jury], :url => admin_update_jury_path(@competition), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
 
-
       <%= f.input :user_tokens,label: "Новый член жюри", :input_html => {data: {load: ""   }} %>
-
-                
 
       <%= f.button :submit,class: "btn btn-default"  ,style: "visibility: hidden" %>
    <% end %>
 
 
-<table class="table table-striped">
-  <thead>
-    <tr >
-      <th class="span2">Имя</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= link_to 'Добавить всех участников', move_all_admin_competition_jury_index_path(@competition), method: :post, remote: true, class: 'btn btn-warning' %>
 
-  <tbody>
-    <% @jurys.each do |j| %>
-      <tr>
-        <td><%= j.user.full_name %></td>
-        <td><%= link_to del_icon, admin_competition_jury_path(@competition,j), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
-      </tr>  
-    <% end %>
-  </tbody>
-</table>
 
+<%= link_to 'Удалить всех',delete_all_admin_competition_jury_index_path(@competition), method: :delete, remote: true, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+
+
+<%= render partial: 'admin/jury/jury_table', locals: { jurys: @jurys, competition: @competition }%>

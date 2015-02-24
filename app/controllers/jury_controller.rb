@@ -12,7 +12,9 @@ class JuryController < ApplicationController
 
     jury_rating = JuryRating.find_or_create_by(user_id: user_id, competition_photo_id: competition_photo_id)
     
+    authorize! :jury, CompetitionPhoto.find(competition_photo_id)
     authorize! :update, jury_rating
+    
     jury_rating.rating = rate
         
     respond_to do |format|
@@ -28,7 +30,16 @@ class JuryController < ApplicationController
 
   def choose_competition
     # @competitions = Competition.where("open_date > ?", Time.zone.now)
-    @competitions = Competition.joins(:jury).where("admin_juries.user_id=? and open_date > ? and jury_date >= ?",current_user.id, Time.zone.now.to_date, Time.zone.now.to_date)
+    @competitions = Competition.joins(:jury).
+                                where("admin_juries.user_id=? and open_date > ? and jury_date >= ?",
+                                current_user.id, Time.zone.now.to_date, Time.zone.now.to_date)
+    # finish = Competition.fotofinish.where("open_date > ? and jury_date >= ?",
+    #                             Time.zone.now.to_date, Time.zone.now.to_date)
+
+    # finish = Competition.fotofinish.joins(:competition_requests).
+    #             where('competition_requests.response_id=? and competition_requests.user_id=? and open_date > ? and jury_date >= ?',
+    #             1, current_user.id, Time.zone.now.to_date, Time.zone.now.to_date)  
+    
   end
 
 
@@ -91,7 +102,7 @@ class JuryController < ApplicationController
 private
 
   def verify_if_jury
-    redirect_to root_path,alert: "Jury area !" unless current_user && current_user.in_jury?
+    redirect_to root_path, alert: "Jury area !" unless current_user && current_user.in_jury?
   end
 
   def set_user

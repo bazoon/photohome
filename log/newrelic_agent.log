@@ -1732,3 +1732,60 @@
 [02/20/15 14:14:12 +0500 MacBook-Pro-VITALIY.local (50502)] INFO : Installing Rails 4 Error instrumentation
 [02/20/15 14:14:12 +0500 MacBook-Pro-VITALIY.local (50502)] INFO : Finished instrumentation
 [02/20/15 14:14:13 +0500 MacBook-Pro-VITALIY.local (50502)] INFO : Doing deferred dependency-detection before Rack startup
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Starting the New Relic agent in "development" environment.
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : New Relic Agent Developer Mode enabled.
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Environment: development
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Dispatcher: mongrel
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Application: photohome72
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] WARN : Agent configured not to send data in this environment.
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing ActiveRecord 4 instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Net instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing deferred Rack instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Rack::Builder middleware instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Rails 3+ middleware instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Sidekiq instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Rails 4 Controller instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Rails 4 view instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Installing Rails 4 Error instrumentation
+[02/24/15 09:01:05 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Finished instrumentation
+[02/24/15 09:01:06 +0500 MacBook-Pro-VITALIY.local (6191)] INFO : Doing deferred dependency-detection before Rack startup
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Starting the New Relic agent in "development" environment.
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : New Relic Agent Developer Mode enabled.
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Environment: development
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Dispatcher: mongrel
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Application: photohome72
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] WARN : Agent configured not to send data in this environment.
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing ActiveRecord 4 instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Net instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing deferred Rack instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Rack::Builder middleware instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Rails 3+ middleware instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Sidekiq instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Rails 4 Controller instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Rails 4 view instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Installing Rails 4 Error instrumentation
+[02/24/15 09:05:27 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Finished instrumentation
+[02/24/15 09:05:28 +0500 MacBook-Pro-VITALIY.local (6303)] INFO : Doing deferred dependency-detection before Rack startup
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Starting the New Relic agent in "development" environment.
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Reading configuration from config/newrelic.yml (/Users/vitaliynesterenko/projects/photohome)
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : New Relic Agent Developer Mode enabled.
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Environment: development
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Dispatcher: mongrel
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Application: photohome72
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] WARN : Agent configured not to send data in this environment.
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing ActiveRecord 4 instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Net instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing deferred Rack instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Rack::Builder middleware instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Rails 3+ middleware instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Sidekiq instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Rails 4 Controller instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Rails 4 view instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Installing Rails 4 Error instrumentation
+[02/24/15 17:05:30 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Finished instrumentation
+[02/24/15 17:05:31 +0500 MacBook-Pro-VITALIY.local (27828)] INFO : Doing deferred dependency-detection before Rack startup

@@ -100,8 +100,29 @@ class CompetitionPhoto < ActiveRecord::Base
     likes.where(user_id: user.id).count > 0
   end
 
+  def rating_sd
+    average = average_rating
+    Math.sqrt(jury_ratings.map { |jr| (jr.rating - average)**2 }.reduce(&:+) / jury_ratings.count)
+  end
+
+  def togather_coeff
+    average_rating / rating_sd
+  end
+
   def average_rating
-    jury_ratings.average(:rating).to_f.round(2)
+    # jury_ratings.average(:rating).to_f.round(2)
+    jury_ratings.extend(DescriptiveStatistics)
+    jury_ratings.mean(&:rating).to_f.round(3)
+  end
+
+  def sd
+    jury_ratings.extend(DescriptiveStatistics)
+    jury_ratings.standard_deviation(&:rating).to_f.round(2)
+  end
+
+  def median
+    jury_ratings.extend(DescriptiveStatistics)
+    jury_ratings.median(&:rating).to_f.round(2)
   end
   
   def sum_rating

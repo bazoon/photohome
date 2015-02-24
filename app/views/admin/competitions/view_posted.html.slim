@@ -12,6 +12,8 @@ table.table.table-striped
       th Голоса
       th Место
       th Средний рейтинг
+      th Отклонение
+      th Медиана
       th
       th
       th
@@ -29,6 +31,10 @@ table.table.table-striped
           = final_estimate(competition_photo.place, competition_photo.id, "final_estimate")  
         td
           = competition_photo.average_rating 
+        td
+          = competition_photo.sd
+        td
+          = competition_photo.median
         td
           = link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) 
         td

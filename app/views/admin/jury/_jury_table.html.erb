@@ -1,0 +1,16 @@
+<div id="jury_table">
+  <table class="table table-striped">
+    <thead>
+      <tr >
+        <th class="span2">Имя</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render partial: 'admin/jury/jury', collection: jurys, locals: {competition: competition } %>
+    </tbody>
+  </table>
+
+</div>

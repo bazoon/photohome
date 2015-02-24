@@ -195,7 +195,12 @@ Photohome::Application.routes.draw do
           end
 
           resources :nominations
-          resources :jury, only: [:index, :update, :destroy]
+          resources :jury, only: [:index, :update, :destroy] do
+            collection do 
+              post :move_all, as: :move_all
+              delete :delete_all
+            end
+          end
           
 
           resources :requests, controller: "competition_requests", only: [:index, :edit, :create, :update] ,shallow: true 

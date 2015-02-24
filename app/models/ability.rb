@@ -27,19 +27,23 @@ class Ability
         can :read, Post
         
         can :manage, Post do |article|
-            article.user_id == user.id    
+          article.user_id == user.id    
         end
 
 
       end
 
-    if user.in_jury?
-      can :update, JuryRating, user_id: user.id
-    end  
+    
+    can :update, JuryRating, user_id: user.id if user.in_jury?
+    
 
     can :jury, Competition do |competition|
-      competition.jury.map(&:user_id).include?(user.id)
+      competition.jury.map(&:user).include?(user)
     end  
+
+    can :jury, CompetitionPhoto do |cp|
+      cp.photo.user != user
+    end
 
 
     can :read, Message

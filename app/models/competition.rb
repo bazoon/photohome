@@ -15,10 +15,14 @@ class Competition < ActiveRecord::Base
   
   scope :active, -> { where('open_date > ?', Time.zone.now)  }
 
+
+  scope :non_fotofinish, -> { where('type_id != 2') }
+  scope :fotofinish, -> { where('type_id =?', 2) }
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  enum type_id: { "usial" => 0, "fiap" => 1 }
+  enum type_id: { "usial" => 0, "fiap" => 1, 'finish' => 2 }
   enum status_id: { "open" => 0, "closed" => 1 }
 
   
@@ -64,7 +68,7 @@ class Competition < ActiveRecord::Base
     ratings = JuryRating.for_competition(id).order(:id).map {|e| [e.user, e.rating]}
 
 
-
+    binding.pry
     jury.each do |j|
       
       corr[j.user.full_name] = {}

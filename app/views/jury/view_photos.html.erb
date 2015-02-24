@@ -41,8 +41,7 @@
       </td>
 
       <td>
-        <%= jury_rate(@user.id,competition_photo.id, competition_photo.jury_rating(@user.id),"jury_rate", @competition.num_stars) %>
-        
+        <%= jury_rate(@user.id,competition_photo.id, competition_photo.jury_rating(@user.id),"jury_rate", @competition.num_stars) if can? :jury, competition_photo %>
       </td>
 
     </tr>

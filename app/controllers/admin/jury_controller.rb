@@ -1,12 +1,27 @@
 class Admin::JuryController < Admin::BaseController
  before_action :set_jury, only: [:destroy]
 
+
 def index
   # render text: params.inspect
   @competition = Competition.friendly.find(params[:competition_id])
   @jurys = Admin::Jury.where("competition_id = ?", @competition.id)
   @jury = Admin::Jury.new
   # render text: @jurys.inspect
+end
+
+def move_all
+  @competition = Competition.friendly.find(params[:competition_id])
+  @competition.competition_requests.accepted.each do |cr|
+    Admin::Jury.create(user: cr.user, competition: @competition)
+  end
+  @jurys = @competition.jury
+end
+
+def delete_all
+  @competition = Competition.friendly.find(params[:competition_id])
+  @competition.jury.delete_all
+  @jurys = @competition.jury
 end
 
 
@@ -16,10 +31,8 @@ def update
   user_ids = user_ids.split(",")
 
   user_ids.each do |id|   
-
-
+  
     is_there = Admin::Jury.where(user_id: id,competition: competition).count > 0
-
         
     if (not is_there) && competition
       jury = Admin::Jury.new
@@ -28,10 +41,8 @@ def update
       jury.save!
     end
 
-  end  
+end  
 
-
-  
   redirect_to :back
 
 end

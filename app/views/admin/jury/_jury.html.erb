@@ -1,0 +1,4 @@
+<tr>
+  <td><%= jury.user.full_name %></td>
+  <td><%= link_to del_icon, admin_competition_jury_path(competition,jury), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>  

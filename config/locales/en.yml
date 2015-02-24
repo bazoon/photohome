@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  _competitions: 'Competitions'
+  photofinishes: 'Photofinshes'
   photo_title: "Title"
   author: "Author"
   average_rating: 'Rating'
