@@ -14,6 +14,8 @@ table.table.table-striped
       th Средний рейтинг
       th Отклонение
       th Медиана
+      th VIP Средний рейтинг
+      th VIP Медиана
       th
       th
       th
@@ -35,6 +37,10 @@ table.table.table-striped
           = competition_photo.sd
         td
           = competition_photo.median
+        td
+          = competition_photo.vip_average_rating
+        td
+          = competition_photo.vip_median
         td
           = link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) 
         td

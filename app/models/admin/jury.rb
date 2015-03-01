@@ -3,6 +3,8 @@ class Admin::Jury < ActiveRecord::Base
   belongs_to :user
   belongs_to :competition
 
+  scope :vip, -> { where(vip: true) }
+
   attr_reader :user_tokens
 
 

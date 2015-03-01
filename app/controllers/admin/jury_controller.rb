@@ -1,5 +1,5 @@
 class Admin::JuryController < Admin::BaseController
- before_action :set_jury, only: [:destroy]
+ before_action :set_jury, only: [:destroy, :vip]
 
 
 def index
@@ -24,6 +24,9 @@ def delete_all
   @jurys = @competition.jury
 end
 
+def vip
+  @jury.update(vip: (not @jury.vip))
+end
 
 def update
   user_ids = params[:admin_jury][:user_tokens]

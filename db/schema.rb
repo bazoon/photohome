@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128043345) do
+ActiveRecord::Schema.define(version: 20150301111131) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150128043345) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "vip",            default: false
   end
 
   add_index "admin_juries", ["user_id"], name: "index_admin_juries_on_user_id", using: :btree

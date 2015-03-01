@@ -1,0 +1,5 @@
+<%- if @jury.vip %>
+  $("#jury_<%= @jury.id %>").removeClass('silver').addClass('red')
+<%- else %>
+  $("#jury_<%= @jury.id %>").removeClass('red').addClass('silver')
+<% end %>

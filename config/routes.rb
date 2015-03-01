@@ -196,6 +196,10 @@ Photohome::Application.routes.draw do
 
           resources :nominations
           resources :jury, only: [:index, :update, :destroy] do
+            member do  
+              get 'vip', as: :vip 
+            end
+
             collection do 
               post :move_all, as: :move_all
               delete :delete_all
