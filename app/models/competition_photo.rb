@@ -109,35 +109,42 @@ class CompetitionPhoto < ActiveRecord::Base
     average_rating / rating_sd
   end
 
-  def average_rating
-    jury_ratings.extend(DescriptiveStatistics)
-    jury_ratings.mean(&:rating).to_f.round(3)
-  end
+  def average_rating(role=nil)
+    jr = if role
+           vips ||= User.with_role(role).map(&:id)
+           jury_ratings.where(user_id: vips)
+         else
+           jury_ratings
+         end
 
-  def vip_average_rating
-    @vips ||= User.with_role('vip').map(&:id)
-
-    jr = jury_ratings.where(user_id: @vips)
     jr.extend(DescriptiveStatistics)
     jr.mean(&:rating).to_f.round(2)
   end
 
-  def vip_median
-    @vips ||= User.with_role('vip').map(&:id)
+  
+  
+  def sd(role=nil)
+    jr = if role
+           vips ||= User.with_role(role).map(&:id)
+           jury_ratings.where(user_id: vips)
+         else
+           jury_ratings
+         end
 
-    jr = jury_ratings.where(user_id: @vips)
+    jr.extend(DescriptiveStatistics)
+    jr.standard_deviation(&:rating).to_f.round(2)
+  end
+
+  def median(role=nil)
+    jr = if role
+           vips ||= User.with_role(role).map(&:id)
+           jury_ratings.where(user_id: vips)
+         else
+           jury_ratings
+         end
+
     jr.extend(DescriptiveStatistics)
     jr.median(&:rating).to_f.round(2)
-  end
-
-  def sd
-    jury_ratings.extend(DescriptiveStatistics)
-    jury_ratings.standard_deviation(&:rating).to_f.round(2)
-  end
-
-  def median
-    jury_ratings.extend(DescriptiveStatistics)
-    jury_ratings.median(&:rating).to_f.round(2)
   end
   
   def sum_rating

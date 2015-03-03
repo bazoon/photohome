@@ -185,7 +185,7 @@ module ApplicationHelper
 
   def final_estimate(place, competition_photo_id, klass)
     content_tag(:input,nil,type: "number", class: "rating #{klass}", min: 0, max: 3,
-                step: 1, "data-size" => "md".html_safe, "data-stars" => 3, 
+                step: 1, "data-size" => "md".html_safe, "data-stars" => 3, 'data-size' => 'xs',
                 data: competition_photo_id.to_s.html_safe,value: place.to_s.html_safe)
   end
 

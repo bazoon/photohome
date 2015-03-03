@@ -7,19 +7,16 @@ h1
 table.table.table-striped
   thead
     tr
-      th.col-md-4 Название
+      th Название
       th
       th Голоса
       th Место
-      th Средний рейтинг
-      th Отклонение
-      th Медиана
-      th VIP Средний рейтинг
-      th VIP Медиана
-      th
-      th
-      th
-      th
+      th Показатели
+      th 
+      th 
+      th 
+      
+      
   tbody
     - @competition_photos.each do |competition_photo| 
       tr
@@ -32,21 +29,42 @@ table.table.table-striped
         td
           = final_estimate(competition_photo.place, competition_photo.id, "final_estimate")  
         td
-          = competition_photo.average_rating 
-        td
-          = competition_photo.sd
-        td
-          = competition_photo.median
-        td
-          = competition_photo.vip_average_rating
-        td
-          = competition_photo.vip_median
+          | Средний рейтинг: &nbsp;
+          .pull-right
+            = competition_photo.average_rating 
+          br
+          | Отклонение: &nbsp;
+          .pull-right
+            = competition_photo.sd
+          br
+          | Медиана: &nbsp;
+          .pull-right
+            = competition_photo.median  
+          br
+          br
+          b
+            | Худсовет
+          br
+          | Средний рейтинг: &nbsp;
+          .pull-right
+            = competition_photo.average_rating('Art')
+          br
+          | Медиана: &nbsp;
+          .pull-right
+            = competition_photo.median('Art')
+          br
+          | Отклонение: &nbsp;
+          .pull-right
+            = competition_photo.sd('Art')
+
         td
           = link_to image_tag(competition_photo.image_url(:thumb)),photo_view_path(competition_photo.photo) 
         td
           = link_to del_icon, admin_competition_photo_path(competition_photo), method: :delete, data: { confirm: 'Are you sure?' } 
         td 
           = link_to ban_icon, admin_competition_photo_ban_path(competition_photo), method: :patch, remote: true 
+      
+
     
 br
 
