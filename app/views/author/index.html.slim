@@ -16,6 +16,9 @@ div role="tabpanel"
       a aria-controls="vips" data-toggle="tab" href="#vips" role="tab"
         = t('vips')
     li role="presentation" 
+      a aria-controls="vips" data-toggle="tab" href="#friends" role="tab"
+        = t('friends')
+    li role="presentation" 
       a aria-controls="guests" data-toggle="tab" href="#guests" role="tab"
         = t('guests')
   /! Tab panes
@@ -26,6 +29,8 @@ div role="tabpanel"
       = render partial: 'author/users', locals: { users: @pre_clubers }
     #vips.tab-pane role="tabpanel"  
       = render partial: 'author/users', locals: { users: @vips }
+    #friends.tab-pane role="tabpanel"  
+      = render partial: 'author/users', locals: { users: @friends }
     #guests.tab-pane role="tabpanel"  
       = render partial: 'author/users', locals: { users: @guests }
 
