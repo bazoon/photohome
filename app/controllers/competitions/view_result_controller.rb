@@ -1,4 +1,6 @@
 class Competitions::ViewResultController < ApplicationController
+  skip_before_filter :authenticate_user!
+  
   def show
     @competition_photo = CompetitionPhoto.find(params[:competition_photo_id])
 
