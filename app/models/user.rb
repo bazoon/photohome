@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
   scope :with_role_id, -> (role_id) { includes(:roles).where(roles: {id: role_id }) }
 
   scope :without_role, -> { where.not(id: UsersRole.uniq.pluck(:user_id)) }
-  scope :unconfirmed, -> { where(confirmed: nil) }
+  scope :unconfirmed, -> { where(confirmed_at: nil) }
 
   scope :search_by_last_name_or_email, -> (search) do
     User.where("last_name like ? or last_name like ? or last_name like ? or email like ? or email like ? or email like ?", 
