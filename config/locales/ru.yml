@@ -259,8 +259,8 @@ ru:
       index:
         name: "Название"
         content: "Описание"
-        title: "Темы"
-        new_topic: "Новая тема"
+        title: "Жанры"
+        new_topic: "Новый жанр"
   messages:
     index:
       title: "Тема"
@@ -459,6 +459,6 @@ ru:
         title: "Добавить возраст"
     topics:
       index:
-        title: "Темы"
+        title: "Жанры"
 
 

@@ -1,0 +1,26 @@
+h1
+  | Темы
+
+table.table.table-striped
+  thead
+    tr
+      th
+        | Название
+      th
+        | Использована?
+      th
+      th
+    
+  tbody
+    -@themes.each do |theme| %
+      tr
+        td= theme.name
+        td= theme.used
+        td= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_admin_theme_path(theme) 
+        td= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), admin_theme_path(theme), method: :delete, data: { confirm: 'Are you sure?' }
+      
+br
+
+= link_to t('Новая тема'), new_admin_theme_path, { class: "btn btn-primary" }
+|&nbsp;&nbsp;
+= link_to t('Случайная тема'), random_theme_admin_themes_path, { class: "btn btn-warning" }

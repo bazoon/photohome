@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301111131) do
+ActiveRecord::Schema.define(version: 20150318055033) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -460,6 +460,13 @@ ActiveRecord::Schema.define(version: 20150301111131) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
+
+  create_table "themes", force: true do |t|
+    t.string   "name"
+    t.boolean  "used"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "topics", force: true do |t|
     t.string   "name"

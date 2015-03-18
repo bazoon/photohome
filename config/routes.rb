@@ -1,14 +1,12 @@
 Photohome::Application.routes.draw do
-  
 
-  
-    get 'competitions/view_anonymous/:competition_photo_id', 
-      to: 'competitions/view_anonymous#show',
-      as: :anonymous_competition_photo
-  
-    get 'competitions/view_result/:competition_photo_id',
-      to: 'competitions/view_result#show',
-      as: :result_competition_photo
+  get 'competitions/view_anonymous/:competition_photo_id', 
+    to: 'competitions/view_anonymous#show',
+    as: :anonymous_competition_photo
+
+  get 'competitions/view_result/:competition_photo_id',
+    to: 'competitions/view_result#show',
+    as: :result_competition_photo
   
   
 
@@ -162,7 +160,15 @@ Photohome::Application.routes.draw do
         put 'ajax/test'
         
         
+        resources :themes do
+          collection do  
+            get 'random_theme', as: :random_theme
+          end
 
+          member do
+            get 'use_theme', as: :use_theme
+          end  
+        end
 
         resources :site_rules
         resources :messages, concerns: :commentable

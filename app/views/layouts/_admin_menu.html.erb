@@ -11,7 +11,9 @@
 
     <li><%= link_to 'Статистика', admin_stats_path if can? :manage, Stats %></li>
     <li><%= link_to 'Пользователи', users_path if can? :manage, User %></li>
-    <li><%= link_to 'Темы', admin_topics_path if can? :manage, Topic%></li>
+    <li><%= link_to 'Жанры', admin_topics_path if can? :manage, Topic %></li>
+    <li><%= link_to 'Темы', admin_themes_path if can? :manage, Theme %></li>
+    
     <li><%= link_to "Конкурсы",admin_competitions_path if can? :manage, Competition%></li>
     <li><%= link_to "Возрастная классификация",admin_age_policies_path if can? :manage, Admin::AgePolicy%></li>
     <li><%= link_to "Баннеры",admin_banners_path if can? :manage, Admin::Banner %></li>
