@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   has_many :user_subscriptions
   has_many :letter_views
 
-  scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
+  # scope :with_role, -> (role) { includes(:roles).joins(:roles).where(roles: {name: role}) }
   scope :with_role_id, -> (role_id) { includes(:roles).where(roles: {id: role_id }) }
 
   scope :without_role, -> { where.not(id: UsersRole.uniq.pluck(:user_id)) }

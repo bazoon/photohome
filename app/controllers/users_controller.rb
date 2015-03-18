@@ -4,22 +4,15 @@ class UsersController < ApplicationController
   before_action :select_users, only: :index
 
   def index
-    
     authorize! :index, @user, :message => I18n.t(:access_denied) 
-    
-    
-
     @users = select_users
-                .includes(:roles)
                 .order('users.created_at desc')
                 .paginate(page: params[:page], per_page: 25)
-
-    
   end
 
   def select_roles
-    @roles = Role.pluck(:id, :name)
-    @roles << [-1, "Не активированные"]
+    @roles = Role.pluck(:name)
+    @roles << 'unconfirmed'
   end
 
   def confirm
@@ -78,11 +71,11 @@ class UsersController < ApplicationController
 
 
   def select_users
-    role_id = params[:roles][:role_id] if params[:roles]
+    role_name = params[:roles][:name] if params[:roles]
     search = params[:search][:term] if params[:search]
     
-    if role_id
-      users_with_roles(role_id)
+    if role_name
+      users_with_roles(role_name)
     elsif search
       users_by_search(search) 
     else
@@ -90,11 +83,11 @@ class UsersController < ApplicationController
     end
   end 
 
-  def users_with_roles(role_id)
-    if role_id.blank?
+  def users_with_roles(role_name)
+    if role_name.blank?
       User.without_role
     else
-      role_id.to_i >= 0 ? User.with_role_id(role_id) : User.unconfirmed
+      role_name != 'unconfirmed' ? User.with_role(role_name) : User.unconfirmed
     end 
   end
   

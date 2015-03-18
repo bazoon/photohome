@@ -32,7 +32,6 @@
       <%= user.confirmed_at.nil? ? link_to(t('unconfirmed'), confirm_user_path(user), method: :post,remote: true, data: { confirm: 'Are you sure?' }) : t('confirmed') %>
       </span>
       </td>
-
       <td><%= user.roles.map(&:name) unless user.roles.first.nil? %></td>
       <td>
         <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
