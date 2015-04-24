@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  documents: "Документы"
   friends: 'Друзья'
   сompetition_title: "Название"
   results: "Итоги"
@@ -235,6 +236,12 @@ ru:
         awaiting: "Ожидает рассмотрения"
         no_decision: "Нет решения"
         banned: "Забанен"
+    document:
+      status:
+        not_for_vote: "Не для голосования"
+        voting: "Идет голосование"
+        accepted: "Документ принят"
+        rejected: "Документ не принят"
   
   errors:
     messages:

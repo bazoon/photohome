@@ -35,6 +35,8 @@ ru:
         policy: "Возрастное ограничение"
         current_password: "Текущий пароль"
         avatar: "Файл для профиля"
+        creation_date: "Дата"
+        status: "Статус" 
       topic:
         new:
           name: 'Название'

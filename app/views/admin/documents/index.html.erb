@@ -1,0 +1,33 @@
+<h1>Документы</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Дата</th>
+      <th>Статус</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.title %></td>
+        <td><%= ld(document.creation_date) %></td>
+        <td><%= t("enums.document.status.#{document.status}") %></td>
+        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-folder-open"), admin_document_path(document) %></td>
+        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_admin_document_path(document) %></td>
+        <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), admin_document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Спам", admin_document_spam_path(document), class: 'btn btn-danger' -%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Новый документ", new_admin_document_path, { class: "btn btn-primary" }%>

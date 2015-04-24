@@ -3,6 +3,10 @@
 </li>  
   
 
+<li class= <%= "active" if params[:controller] == "documents" %>>
+  <%=link_to(I18n.t("documents"), documents_path) if can? :read, Document %>
+</li>
+
 <li class= <%= "active" if params[:controller] == "novelties" %>>
   <%=link_to(I18n.t("news"),list_novelties_path) if can? :read, Novelty %>
 </li>

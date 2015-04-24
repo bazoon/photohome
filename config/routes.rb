@@ -21,6 +21,7 @@ Photohome::Application.routes.draw do
   concern :commentable do
     resources :comments
   end
+
   
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
@@ -44,6 +45,14 @@ Photohome::Application.routes.draw do
    
   scope "(:locale)", locale: /en|ru/ do
  
+    resources :documents, only: [:index, :show] do
+      member do
+        put 'vote', to: 'documents#vote', as: :vote
+        put 'downvote', to: 'documents#downvote', as: :downvote
+      end
+    end
+ 
+
 
      get "age_agreement/agreed"   
      get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
@@ -185,6 +194,14 @@ Photohome::Application.routes.draw do
 
         resources :topics
         resources :age_policies
+        resources :documents do
+          get 'spam', to: 'documents#spam', as: :spam
+          put 'accept', to: 'documents#accept', as: :accept
+          put 'reject', to: 'documents#reject', as: :reject
+        end
+
+        
+  
 
         resources :competitions do
 

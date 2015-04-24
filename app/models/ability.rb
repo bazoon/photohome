@@ -47,6 +47,13 @@ class Ability
 
 
     can :read, Message
+
+    if user.has_role? :cluber
+      can :read, Document 
+    end
+
+      
+
     can :manage, Comment, user_id: user.id
     can :write, Comment
     can :manage, Photo, user_id: user.id

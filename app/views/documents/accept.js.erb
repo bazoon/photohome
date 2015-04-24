@@ -1,0 +1,3 @@
+var id = <%= escape_javascript "#{@document.id}" %>
+
+$("#doc-"+id).html(<%= j render 'accepted' %> );

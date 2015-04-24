@@ -8,6 +8,6 @@ include Sidekiq::Worker
     decision = competition_request.decision
     answer = competition_request.answer
     UserMailer.message_email(competition_request.user, competition_title, decision, answer).deliver
-    end
+  end
 
 end

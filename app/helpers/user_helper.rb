@@ -17,8 +17,13 @@ module UserHelper
       @count = current_user.mailbox.inbox(unread: true).count
       link_to("#{I18n.t('mail_alert')} (#{@count})", user_conversations_path(current_user, box: :inbox), class: "letter-alert-link") if @count > 0
     end
-
   end
+
+  def voiting_in_progress(current_user)
+    need ||= Document.need_too_vote?(current_user)
+    return unless need
+    link_to('Голосуй, а то проиграешь!', documents_path)
+end
 
 
   def field_info(user, field, date = false)

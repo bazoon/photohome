@@ -1,0 +1,2 @@
+var id = <%= escape_javascript "#{@document.id}" %>
+$("#doc-"+id).html("<%= escape_javascript render 'documents/td', doc: @document %>");

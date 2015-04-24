@@ -22,4 +22,15 @@ class UserMailer < ActionMailer::Base
     
   end
 
+  def voting_email(user, document)
+    @user = user
+    @document = document
+
+    I18n.with_locale(@user.locale) do
+      mail(to: @user.email, subject: 'Голосование')
+    end
+
+  end
+
+
 end

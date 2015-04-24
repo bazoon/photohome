@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318055033) do
+ActiveRecord::Schema.define(version: 20150424040436) do
 
   create_table "admin_age_policies", force: true do |t|
     t.integer  "age"
@@ -44,9 +44,6 @@ ActiveRecord::Schema.define(version: 20150318055033) do
     t.boolean  "active"
   end
 
-  add_index "admin_banner_placements", ["banner_id"], name: "index_admin_banner_placements_on_banner_id", using: :btree
-  add_index "admin_banner_placements", ["place_id"], name: "index_admin_banner_placements_on_place_id", using: :btree
-
   create_table "admin_banners", force: true do |t|
     t.string   "image"
     t.string   "link"
@@ -62,8 +59,6 @@ ActiveRecord::Schema.define(version: 20150318055033) do
     t.integer  "competition_request_id"
   end
 
-  add_index "admin_competition_request_responses", ["response_id"], name: "index_admin_competition_request_responses_on_response_id", using: :btree
-
   create_table "admin_juries", force: true do |t|
     t.integer  "competition_id"
     t.integer  "user_id"
@@ -71,8 +66,6 @@ ActiveRecord::Schema.define(version: 20150318055033) do
     t.datetime "updated_at"
     t.boolean  "vip",            default: false
   end
-
-  add_index "admin_juries", ["user_id"], name: "index_admin_juries_on_user_id", using: :btree
 
   create_table "admin_nominations", force: true do |t|
     t.string   "title"
@@ -82,8 +75,6 @@ ActiveRecord::Schema.define(version: 20150318055033) do
     t.integer  "competition_id"
     t.integer  "max_photo_count"
   end
-
-  add_index "admin_nominations", ["competition_id"], name: "index_admin_nominations_on_competition_id", using: :btree
 
   create_table "admin_settings", force: true do |t|
     t.integer  "album_id"
@@ -218,6 +209,15 @@ ActiveRecord::Schema.define(version: 20150318055033) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "documents", force: true do |t|
+    t.string   "title"
+    t.text     "content",       limit: 16777215
+    t.integer  "status",                         default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "creation_date"
+  end
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -528,6 +528,21 @@ ActiveRecord::Schema.define(version: 20150318055033) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+
+  create_table "votes", force: true do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", name: "mb_opt_outs_on_conversations_id", column: "conversation_id"
 
