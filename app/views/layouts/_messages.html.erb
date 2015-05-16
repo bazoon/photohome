@@ -18,7 +18,7 @@
 
 
 
-<%- if voiting_in_progress(current_user) %>
+<%- if current_user && voiting_in_progress(current_user) %>
 <div class="alert alert-warning alert-dismissible letter-alert" style="display: none" role="alert">
   <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
   <h3><%= voiting_in_progress(current_user) %></h3>
