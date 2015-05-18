@@ -1,6 +1,7 @@
 class Document < ActiveRecord::Base
   acts_as_votable
-  enum status: { "not_for_vote" => 0, "voting" => 1, "accepted" => 2, "rejected" => 3 }
+
+  enum status: { "not_for_vote" => 0, "voting" => 1, "accepted" => 2, "rejected" => 3, "open" => 4 }
 
   scope :active, -> { Document.voting }
 

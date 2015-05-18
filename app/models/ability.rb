@@ -47,8 +47,17 @@ class Ability
 
 
     can :read, Message
+    
+    can :read, Document do |document|
+      document.open?
+    end
 
     if user.has_role? :cluber
+      can :read, Document 
+      can :vote, Document
+    end
+
+    if user.has_role? :pre_cluber
       can :read, Document 
     end
 

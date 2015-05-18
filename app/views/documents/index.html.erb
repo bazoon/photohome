@@ -15,7 +15,7 @@
   <tbody>
     <% @documents.each do |doc| %>
       <tr id="doc-<%= doc.id %>">
-        <%= render partial: 'td', locals: { doc: doc } %>
+        <%= render partial: 'td', locals: { doc: doc } if can? :read, doc %>
       </tr>
     <% end %>
   </tbody>

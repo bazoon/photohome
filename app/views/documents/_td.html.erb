@@ -4,7 +4,7 @@
 <td><%= doc.dislikes %></td>
 <td><%= t("enums.document.status.#{doc.status}") %></td>
 
-<%- if doc.voting?  %> 
-  <td><%= link_to like_icon(1), vote_document_path(doc), method: :put, data: { confirm: 'Are you sure?' }, remote: true unless current_user.liked?(doc)%></td>
+<%- if (doc.voting?)  && (can? :vote, doc) %> 
+  <td><%= link_to like_icon(1), vote_document_path(doc), method: :put, data: { confirm: 'Are you sure?' }, remote: true unless current_user.liked?(doc) %></td>
   <td><%= link_to unlike_icon(1), downvote_document_path(doc), method: :put, data: { confirm: 'Are you sure?' }, remote: true unless current_user.disliked?(doc)%></td>
 <%- end %>

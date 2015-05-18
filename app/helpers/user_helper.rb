@@ -20,7 +20,7 @@ module UserHelper
   end
 
   def voiting_in_progress(current_user)
-    return unless current_user
+    return unless current_user && current_user.has_role?(:cluber)
     need ||= Document.need_too_vote?(current_user)
     return unless need
     link_to('Голосуй, а то проиграешь!', documents_path)

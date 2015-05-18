@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
-  before_action :ensure_club_membership
+  
+  before_action :ensure_club_membership, only: [:vote, :downvote]
 
 
   def index

@@ -242,6 +242,7 @@ ru:
         voting: "Идет голосование"
         accepted: "Документ принят"
         rejected: "Документ не принят"
+        open: "Публичный документ"
   
   errors:
     messages:
