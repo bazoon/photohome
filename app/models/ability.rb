@@ -61,6 +61,12 @@ class Ability
       can :read, Document 
     end
 
+    if user.has_role? :friend
+      can :read, Document do |document|
+       document.accepted? 
+      end
+    end
+
       
 
     can :manage, Comment, user_id: user.id
