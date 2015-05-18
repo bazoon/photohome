@@ -11,7 +11,8 @@ class Admin::DocumentsController < Admin::BaseController
   def spam
     @document = Document.find(params[:document_id])
     User.with_role('cluber').each do |user|
-      VotingWorker.perform_async(user.id, @document.id)    
+      # VotingWorker.perform_async(user.id, @document.id)   
+      UserMailer.delay_for(2.seconds).voting_email(user, @document).deliver
     end
   end
 
