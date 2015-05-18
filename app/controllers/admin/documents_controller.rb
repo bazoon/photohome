@@ -12,7 +12,7 @@ class Admin::DocumentsController < Admin::BaseController
     @document = Document.find(params[:document_id])
     User.with_role('cluber').each do |user|
       # VotingWorker.perform_async(user.id, @document.id)   
-      UserMailer.delay_for(2.seconds).voting_email(user, @document).deliver
+      UserMailer.delay_for(2.seconds).voting_email(user, @document)
     end
   end
 
