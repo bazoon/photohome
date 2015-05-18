@@ -1,4 +1,4 @@
-<h1>Документы</h1>
+<h1>Документы2</h1>
 
 <table class="table table-striped">
   <thead>
@@ -23,6 +23,7 @@
         <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-pencil"), edit_admin_document_path(document) %></td>
         <td><%= link_to content_tag(:span,"",class: "ui-icon ui-icon-minus"), admin_document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to "Спам", admin_document_spam_path(document), class: 'btn btn-danger' -%></td>
+        <td><%= link_to 'Уклонисты', admin_document_unvoted_path(document) %></td>
       </tr>
     <% end %>
   </tbody>

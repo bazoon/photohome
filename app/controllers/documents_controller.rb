@@ -21,6 +21,7 @@ class DocumentsController < ApplicationController
     @document.downvote(current_user)
   end
 
+ 
 
   private
 

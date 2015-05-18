@@ -198,6 +198,7 @@ Photohome::Application.routes.draw do
           get 'spam', to: 'documents#spam', as: :spam
           put 'accept', to: 'documents#accept', as: :accept
           put 'reject', to: 'documents#reject', as: :reject
+          get 'unvoted', to: 'documents#unvoted', as: :unvoted
         end
 
         

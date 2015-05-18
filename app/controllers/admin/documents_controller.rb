@@ -64,6 +64,12 @@ class Admin::DocumentsController < Admin::BaseController
     @document.reject
   end
 
+  def unvoted
+    @document = Document.find(params[:document_id])
+
+    @users = User.with_role(:cluber).select { |user| !user.voted_for?(@document) }
+  end
+
 
   private
  
