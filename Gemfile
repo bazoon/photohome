@@ -40,7 +40,7 @@ gem 'figaro'
 
 
 # gem 'pg'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 # gem 'sqlite3'
 
 gem 'rolify'
