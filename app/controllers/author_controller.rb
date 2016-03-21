@@ -9,7 +9,7 @@ class AuthorController < ApplicationController
     @pre_clubers = User.with_role("pre_cluber").order(:last_name, :name)
     @vips = User.with_role("VIP").order(:last_name, :name)
     @friends = User.with_role("Friend").order(:last_name, :name)
-    @guests = User.without_role.order(:last_name, :name)
+    @guests = User.without_role.order(:last_name, :name).non_blocked
 
   end
 

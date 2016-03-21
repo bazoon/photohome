@@ -10,6 +10,7 @@ class Admin::ThemesController < ApplicationController
 
   def random_theme
     @theme = Theme.where(used: false).sample
+    render text: 'Не из чего выбрать!' unless @theme
   end
 
   def use_theme

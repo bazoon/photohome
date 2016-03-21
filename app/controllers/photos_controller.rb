@@ -1,7 +1,8 @@
 class PhotosController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:index, :show, :tagged_photos]
-  before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :new, :create,:update]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  
 
   layout "user_profile_layout", except: :view
 
@@ -34,7 +35,7 @@ class PhotosController < ApplicationController
   end
 
   def view
-    @photo = Photo.friendly.find(params[:photo_id])
+    @photo = Photo.find(params[:photo_id])
     # fresh_when(@photo)
   end
 
@@ -103,7 +104,8 @@ class PhotosController < ApplicationController
   private
 
   def set_photo
-    @photo = Photo.friendly.find(params[:id])
+    # render text: params[:id]
+    @photo = Photo.find(params[:id])
   end
 
   def set_user

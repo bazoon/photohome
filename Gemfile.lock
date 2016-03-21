@@ -283,6 +283,8 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    recaptcha (1.1.0)
+      json
     redactor-rails (0.5.0)
       devise
       mime-types
@@ -484,6 +486,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  recaptcha
   redactor-rails
   rmagick
   rolify

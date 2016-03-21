@@ -135,6 +135,7 @@ gem 'enum_help'
 gem 'rack-mini-profiler'
 gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/safe'
 gem 'acts_as_votable', '~> 0.10.0'
+gem "recaptcha", require: "recaptcha/rails"
 
 # gem 'sidekiq_mailer'
 # gem 'sinatra', require: false

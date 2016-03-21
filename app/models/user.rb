@@ -20,13 +20,13 @@ class User < ActiveRecord::Base
   validates :birth_date, presence: { message: I18n.t("incorrect_birth_date") }
   validate :birth_date_valid?
   validates :terms_of_service, acceptance: true, on: :create, allow_nil: false
-  
+
   # after_save :set_friendly_id
 
   # validates :last_name, :adress, :zip_code, :city, :country, presence: true
-  
+
   has_many :photos, dependent: :destroy
-  
+
   has_many :jury,class_name: "Admin::Jury"
   has_many :letters, dependent: :destroy
   has_many :competition_requests, dependent: :destroy
@@ -39,9 +39,10 @@ class User < ActiveRecord::Base
 
   scope :without_role, -> { where.not(id: UsersRole.uniq.pluck(:user_id)) }
   scope :unconfirmed, -> { where(confirmed_at: nil) }
+  scope :non_blocked, -> { where(blocked: nil) }
 
   scope :search_by_last_name_or_email, -> (search) do
-    User.where("last_name like ? or last_name like ? or last_name like ? or email like ? or email like ? or email like ?", 
+    User.where("last_name like ? or last_name like ? or last_name like ? or email like ? or email like ? or email like ?",
               "%#{search}%", "%#{search}", "#{search}%", "%#{search}%", "%#{search}", "#{search}%")
   end
 
@@ -52,11 +53,11 @@ class User < ActiveRecord::Base
   has_many :messages, dependent: :destroy
   #change id to other attr !!!
 
-  # def to_param 
+  # def to_param
   #   name
   # end
 
-  # 
+  #
 
   def should_generate_new_friendly_id?
     true#new_record?
@@ -78,13 +79,13 @@ class User < ActiveRecord::Base
 
   # def see
   #   binding.pry
-  #   a = self.name 
+  #   a = self.name
   # end
 
 
   def admin?
-  	has_role?("admin")       	
-  end       
+  	has_role?("admin")
+  end
 
   def is_admin?
     admin?
@@ -100,15 +101,15 @@ class User < ActiveRecord::Base
 
 
   def is_stuff?
-  	has_role?("admin") || has_role?("moder")	   	   	
-  end	   	   
+  	has_role?("admin") || has_role?("moder")
+  end
 
   def in_jury?
     self.jury && self.jury.count > 0
   end
 
   def is_writer?
-    self.has_role?("writer")    
+    self.has_role?("writer")
   end
 
   def full_name
@@ -149,7 +150,7 @@ class User < ActiveRecord::Base
 
   def birth_date_valid?
     # binding.pry
-  end  
+  end
 
   def saw?(letter)
     letter_views.find_by(letter_id: letter.id)
@@ -158,6 +159,14 @@ class User < ActiveRecord::Base
   def locale
     @locale ||= name =~ /[А-Я]|[а-я]/ ? 'ru' : 'en'
     @locale
+  end
+
+  def account_active?
+    !blocked
+  end
+
+  def active_for_authentication?
+    super && account_active?
   end
 
 end

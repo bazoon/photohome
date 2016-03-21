@@ -10,7 +10,8 @@ table.table.table-striped
       th №
       th = t('photo_title')
       th = t('author')
-      th = t('average_rating')
+      th Рейтинг худсовета
+      th Рейтинг участников
       th = t('place')
       th
   tbody
@@ -24,7 +25,9 @@ table.table.table-striped
         td
           = link_to competition_photo.photo.user.full_name, user_profile_path(competition_photo.photo.user)
         td
-          = competition_photo.average_rating 
+          = competition_photo.average_rating('Art')
+        td
+          = competition_photo.average_rating
         td
           = competition_photo.place
         td

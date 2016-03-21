@@ -2,7 +2,7 @@ h1
   | Случайная тема: 
   |&nbsp;
   |&laquo;
-  = "#{@theme.name}"
+  = "#{@theme && @theme.name}"
   |&raquo;
   |&nbsp;&nbsp;
   = link_to t('Использовать?'), use_theme_admin_theme_path(@theme), { class: "btn btn-warning" }

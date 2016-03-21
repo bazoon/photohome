@@ -1,18 +1,18 @@
 Photohome::Application.routes.draw do
 
-  get 'competitions/view_anonymous/:competition_photo_id', 
+  get 'competitions/view_anonymous/:competition_photo_id',
     to: 'competitions/view_anonymous#show',
     as: :anonymous_competition_photo
 
   get 'competitions/view_result/:competition_photo_id',
     to: 'competitions/view_result#show',
     as: :result_competition_photo
-  
-  
 
 
-  
-  
+
+
+
+
   get "about/us"
   get "about/rules"
 
@@ -22,7 +22,7 @@ Photohome::Application.routes.draw do
     resources :comments
   end
 
-  
+
   get "like/like/:competition_photo_id", to: 'like#like', as: :like
   get "ajax/users"
   get "ajax/articles"
@@ -30,33 +30,33 @@ Photohome::Application.routes.draw do
 
   put 'ajax/test'
 
-  
-  
+
+
   post "upload/get_image"
   get "photo_ajax/theme_tokens"
   get 'test' => "home#test", as: :test
 
-  
+
   get 'jury_view_photos/:competition_id/:scope(/:nomination_id)', to: 'jury#view_photos', as: :jury_view_photos
   post 'jury_rating', to: 'jury#rating', as: :jury_rating
   get 'jury_show/:scope/:photo_id(/:nomination_id)', to: 'jury#show', as: :jury_show
-    
+
   resource :cache_operation, only: [:destroy]
-   
+
   scope "(:locale)", locale: /en|ru/ do
- 
+
     resources :documents, only: [:index, :show] do
       member do
         put 'vote', to: 'documents#vote', as: :vote
         put 'downvote', to: 'documents#downvote', as: :downvote
       end
     end
- 
 
 
-     get "age_agreement/agreed"   
+
+     get "age_agreement/agreed"
      get 'user_cloud/:user_id', to: 'user_cloud#cloud', as: :user_cloud
-     get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile  
+     get 'user_profile/:locale/:user_id', to: 'user_profile#edit',as: :user_profile
      resources :home, only: [:index]
 
 
@@ -67,29 +67,29 @@ Photohome::Application.routes.draw do
      get '/gallery/show/:photo_id', to: 'gallery#show', as: :gallery_show
      get 'jury_choose_competition', to: 'jury#choose_competition',as: :jury_choose_competition
 
-     
+
 
     devise_for :users, :controllers => {:registrations => "registrations"}
 
       resources :author, only: [:index]
-    	
+
       resources :novelties, concerns: :commentable, only: [:show,:new,:edit,:destroy] do
         collection do
           get 'list'
         end
-      end  
+      end
 
       resources :articles, concerns: :commentable, only: [:show,:new,:edit,:destroy] do
         collection do
           get 'list'
         end
-      end  
+      end
 
       #distinct path for viewing photo without comments, author ...
       resources :photos do
         get 'view', as: :view
         # put 'update_'
-      end  
+      end
 
       get 'tagged_photos/user_id/:user_id/name/:name', to: 'photos#tagged_photos', as: :tagged_photos
 
@@ -99,21 +99,21 @@ Photohome::Application.routes.draw do
 
         member do
           post 'confirm', as: :confirm
-         
+          post 'unconfirm', as: :unconfirm
         end
 
         collection do
            get 'select_roles', as: :select_roles
         end
 
-      	resources :photos, concerns: :commentable 
-        resources :messages, concerns: :commentable 
-        resources :letters, concerns: :commentable 
+      	resources :photos, concerns: :commentable
+        resources :messages, concerns: :commentable
+        resources :letters, concerns: :commentable
         resources :incoming_letters, only: [:index, :show]
         resources :subscriptions, controller: 'user_subscriptions'
 
          resources :conversations, only: [:index, :show, :new, :create] do
-            
+
             collection do
               post :admin_create
 
@@ -129,12 +129,12 @@ Photohome::Application.routes.draw do
       end
 
 
-        
+
 
 
       resources :photos, concerns: :commentable, only: [:show]
       resources :album_photos, only: [:show], concerns: :commentable
-      
+
 
       resources :competitions, only: [:index, :show] do
 
@@ -145,50 +145,50 @@ Photohome::Application.routes.draw do
           get 'view_nominations', as: :view_nominations
           get 'results_nominations'
           get 'results/:nomination_id', to: 'competitions#results', as: :results
-        end  
+        end
 
-        resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos' 
-        resources :requests, controller: "competition_request", shallow: true, only: [:show, :create] 
+        resources :photos, only: [:index, :destroy, :create], controller: 'competition_photos'
+        resources :requests, controller: "competition_request", shallow: true, only: [:show, :create]
         resources :best, only: [:index], controller: 'competitions/best'
-      end  
+      end
 
       # get "album/index"
       # get "album/show"
 
-    resources :albums, only: [:index, :show]   
-    
+    resources :albums, only: [:index, :show]
+
     get "/albums/:id/album_photo/:album_photo_id", to: 'albums#carousel', as: :album_carousel
-    
-    
-    
-    resources :cloud, only: [:index, :show]  
+
+
+
+    resources :cloud, only: [:index, :show]
 
         # ADMIN routes
       namespace :admin do
 
         put 'ajax/test'
-        
-        
+
+
         resources :themes do
-          collection do  
+          collection do
             get 'random_theme', as: :random_theme
           end
 
           member do
             get 'use_theme', as: :use_theme
-          end  
+          end
         end
 
         resources :site_rules
         resources :messages, concerns: :commentable
-        resources :banners      
+        resources :banners
         resources :banner_placements
         resources :settings
 
 
-        
+
         resources :novelties, controller: "posts", type: "Novelty"
-        resources :articles, controller: "posts", type: "Article" 
+        resources :articles, controller: "posts", type: "Article"
         resources :post_promotion, only: :edit
 
 
@@ -201,18 +201,18 @@ Photohome::Application.routes.draw do
           get 'unvoted', to: 'documents#unvoted', as: :unvoted
         end
 
-        
-  
+
+
 
         resources :competitions do
 
           resource :request_forms, only: :show
 
           member do
-            get 'view_posted',as: :view_posted 
-            get 'stats',as: :stats 
-          end  
-          
+            get 'view_posted',as: :view_posted
+            get 'stats',as: :stats
+          end
+
           resources :competition_photos, only: [:destroy], shallow: true do
             patch 'ban'
 
@@ -220,20 +220,20 @@ Photohome::Application.routes.draw do
 
           resources :nominations
           resources :jury, only: [:index, :update, :destroy] do
-            member do  
-              get 'vip', as: :vip 
+            member do
+              get 'vip', as: :vip
             end
 
-            collection do 
+            collection do
               post :move_all, as: :move_all
               delete :delete_all
             end
           end
-          
 
-          resources :requests, controller: "competition_requests", only: [:index, :edit, :create, :update] ,shallow: true 
 
-        end  
+          resources :requests, controller: "competition_requests", only: [:index, :edit, :create, :update] ,shallow: true
+
+        end
 
         put '/admin/competitions/:competition/jury', to: 'jury#update', as: :update_jury
 
@@ -243,42 +243,42 @@ Photohome::Application.routes.draw do
 
 
         #Галлерея сайта
-                
+
         resources :albums do
-          
+
           resources :album_photos, only: [:new, :edit, :create, :update,:destroy,:show]
           resources :fill_album_from_tags, only: [:new, :create]
           resources :fill_album_from_selected, only: [:create]
 
-          
+
 
         end
-        
-        get '/album_photos/choose/:photo_id', to: 'album_photos#choose', as: :choose_album_photo  
+
+        get '/album_photos/choose/:photo_id', to: 'album_photos#choose', as: :choose_album_photo
         get '/choose_for_album/:photo_id', to: 'ajax#choose_for_album', as: :choose_for_album
         put '/remove_from_chosen/:photo_id', to: 'ajax#remove_from_chosen', as: :remove_from_chosen
 
         resources :photos, only: [:index, :show, :destroy,:edit,:update] do
-          member do 
+          member do
             get 'publish',as: :publish
-            get 'undelete',as: :undelete  
-          end 
+            get 'undelete',as: :undelete
+          end
 
           collection do
             get 'deleted',as: :deleted
-            get 'review',as: :review 
+            get 'review',as: :review
           end
 
-        end  
+        end
 
         get '/letter/show/:user_id', to: 'user_letter_senders#show', as: :user_letter_senders
         post '/letter/post', to: 'user_letter_senders#create', as: :user_letter_post
-          
-        resources :stats, only: [:index, :show]  
-      end
-    
 
-   
+        resources :stats, only: [:index, :show]
+      end
+
+
+
     end
 
 

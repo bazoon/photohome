@@ -2,9 +2,9 @@ class Photo < ActiveRecord::Base
 
 
   include PhotoAgePolicy
-  extend FriendlyId
+  # extend FriendlyId
 
-  friendly_id :title, use: :slugged
+  # friendly_id :title, use: :slugged
 
   PORTFOLIO_ID = 0
   REVIEW_ID = 1

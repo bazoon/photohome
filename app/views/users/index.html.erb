@@ -26,7 +26,7 @@
       <td><%= link_to user.full_name, user %></td>
       <td><%= user.email %></td>
       <td><%= ld(user.created_at.to_date) %></td>
-      
+
       <td>
       <span id="confirm<%= user.id %>">
       <%= user.confirmed_at.nil? ? link_to(t('unconfirmed'), confirm_user_path(user), method: :post,remote: true, data: { confirm: 'Are you sure?' }) : t('confirmed') %>
@@ -37,7 +37,8 @@
         <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
         <%= render user %>
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
+      <%- block_text = user.blocked ? "Разблокировать" : "Заблокировать" %>
+      <td><%= link_to(block_text, unconfirm_user_path(user), :data => { :confirm => "Are you sure?" }, :method => :post, :class => 'btn btn-mini') unless user == current_user %></td>
       <td>
         <%= link_to "Маскировка", new_user_masquerade_path(user), class: 'btn btn-mini' %>
       </td>

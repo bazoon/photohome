@@ -9,10 +9,9 @@ class Competitions::BestController < ApplicationController
       format.html do
         @competition_photos = @competition.competition_photos
                                       .not_banned
-                                      .to_a.sort_by { |cp| [-cp.average_rating, cp.place == 0 ? 1000: cp.place] }
+                                      .to_a.sort_by { |cp| [-cp.average_rating('Art'), cp.place == 0 ? 1000: cp.place] }
                                       .paginate(page: params[:page], per_page: 8)
         @start_num = params[:page].nil? ? 1 : (params[:page].to_i-1)*8 + 1
-
       end
 
       format.csv do  
