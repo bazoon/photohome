@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :update_sanitized_params, if: :devise_controller?
-  prepend_before_action :check_captcha, only: [:create]
+  # prepend_before_action :check_captcha, only: [:create]
 
 
   # layout "user_profile_layout", except: [:new]
