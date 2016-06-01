@@ -247,7 +247,7 @@ class Photo < ActiveRecord::Base
     def photo_size_validation
       # binding.pry
       # errors.add(:image, "should be less than 0.2MB") if image.size > 200.kilobytes
-      return if user.is_admin?
+      return if user.is_admin? || user.is_vip?
       width, _ = FastImage.size(image.file.file)
       errors.add(:image, I18n.t(:less_than_1000)) if width > 1000
     end

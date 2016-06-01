@@ -104,6 +104,10 @@ class User < ActiveRecord::Base
   	has_role?("admin") || has_role?("moder")
   end
 
+  def is_vip?
+    has_role?("VIP") || has_role?("vip")
+  end
+
   def in_jury?
     self.jury && self.jury.count > 0
   end
