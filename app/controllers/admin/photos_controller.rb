@@ -10,8 +10,6 @@
 
     @photos = Photo.with_scope(@scope)    
     @photos = @photos.order("seen asc, created_at desc").paginate(page: params[:page], per_page: 16)
-
-
   end
 
   def deleted
@@ -23,7 +21,7 @@
   end
 
   def show
-    @photo = Photo.friendly.find(params[:id])
+    @photo = Photo.find(params[:id])
     @scope = params[:scope]
     photos = Photo.with_scope(@scope)
     @next_photo_id = photos.next(@photo.id)
@@ -32,12 +30,12 @@
   end
 
   def edit
-      @photo = Photo.friendly.find(params[:id])
+      @photo = Photo.find(params[:id])
   end
 
   def publish
     
-    photo = Photo.friendly.find(params[:id])
+    photo = Photo.find(params[:id])
     @published  = photo.publish
     @id = photo.id
 
@@ -49,7 +47,7 @@
   end
 
   def destroy
-    @photo = Photo.friendly.find(params[:id])
+    @photo = Photo.find(params[:id])
     @photo.delete_in_24_hours
     respond_to do |format|
       format.js
@@ -59,7 +57,7 @@
 
   def undelete
     @id = params[:id]
-    @photo = Photo.friendly.find(@id)
+    @photo = Photo.find(@id)
     @photo.undelete
 
     respond_to do |format|
@@ -69,7 +67,7 @@
   end
 
   def update
-     @photo = Photo.friendly.find(params[:id])
+     @photo = Photo.find(params[:id])
     respond_to do |format|
       if @photo.update(photo_params)
         format.html { redirect_to admin_photos_path, notice: 'Photo was successfully updated.' }
