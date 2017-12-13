@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"802014c51d","applicationID":"1965552","transactionName":"cg1WEUUKDwpTRRtbV1wHFxFSFhc=","queueTime":0,"applicationTime":272,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js","extra":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+    <title>Тюменский дом фотографии</title>
+    
+    <meta name="description" content="Photohome">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href="/assets/application-a6428e6ed6de276eb442f1e03335afa2.css" media="all" rel="stylesheet" />
+    <script src="/assets/application-cf63c7df407679eb4bb86f75cd189bdf.js"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="TQrSpH6ncgdyutsiFwt/OJct6tjba1eXqZtb8lVftmM=" name="csrf-token" />
+    
+  
+
+  </head>
+
+  <body class="back">
+     
+        
+    
+
+      <section class="container" style = "background: #ffffff">
+      <div class="content row" >
+      <section class="main col col-lg-12" style = "margin-bottom: 20px">
+          <div class="content row">
+  <div class="col-lg-12">
+    <header class="clearfix">
+    
+      <section id="branding">
+      
+
+        <a href="/?locale=ru"><img alt="Logo1" src="/assets/logo1-96aefb0f9489b3e137043a6d37dae343.jpg" /></a>
+     
+
+      
+      </section><!-- branding -->
+
+      <section class="navbar navbar-inverse" >
+    
+        
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+     
+        </div>
+
+         <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown ">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Фотографии<b class="caret"></b></a>
+ 
+  <ul class="dropdown-menu">
+    
+    <li><a href="/ru/albums">Галерея</a></li>
+    <li><a href="/gallery/index?locale=ru">Последние фотографии</a></li>
+    
+    <li><a href="/ru/author">Авторы</a> </li>
+
+  </ul>
+</li>
+
+            
+
+
+
+<li class= >
+  <a href="/ru/competitions">Конкурсы</a>
+ </li>
+
+<li class= >
+  <a href="/ru/novelties/list">Новости</a>
+</li>
+
+<li class= >
+  <a href="/ru/articles/list">Статьи</a>
+</li>
+
+
+            
+                <li>
+    <a href="/ru/users/sign_in">Войти</a>
+    </li>
+  
+    <li>
+    <a href="/ru/users/sign_up">Регистрация</a>
+    </li>
+
+
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+           <li>
+<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#age_agreement">
+  18+
+</button>
+</li>
+
+            
+<li>
+  <a href="/test?locale=en">RU</a>
+</li>
+
+          </ul>
+         </div>
+   
+    </section> 
+
+
+    </header><!-- header -->
+  </div><!-- column -->
+</div><!-- content -->
+          <div id="top_banners" style="padding-bottom: 10px" >
+  
+ 
+
+</div>
+
+       
+        </section>
+        <section class="main col col-lg-12" style = "margin-bottom: 20px">
+           
+          
+          <div id ="flash_box">
+</div>
+
+          <h1>Hello</h1>
+
+<a href="#" id="username" data-type="text" data-resource="post" data-name="username" data-url="/posts/1" data-original-title="Enter username">superuser</a>
+
+<ul>
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="2" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Счастливый билетик</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="18" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Жизнь собачья. #1</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="19" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Однажды на лавочке</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="20" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Пейзаж близ Кулаково. Три дороги.</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="21" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">и...Яблоки...</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="22" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Архиметрия. #1</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="23" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Третий день рождения</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="24" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Выставка</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="25" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Дочка</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="26" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Автопортрет с дочерью</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="27" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">В гостях</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="28" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Семейный портрет</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="29" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Детский сон</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="30" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Над тундрами Ямала</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="31" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">В вертолёте</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="32" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Волонтёры за работой</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="33" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Охотник за закатами</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="34" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">А что это здесь происходит?!</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="35" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Спокойствие острова Белый</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="36" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Test</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="37" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Игры. Дворовая команда. #1</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="38" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Ливень</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="39" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow"></a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="40" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow"></a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="41" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow"></a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="42" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow"></a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="43" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Пары.</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="44" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Шарик</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="45" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Игры. Дворовая команда. #2</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="46" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Игры. Дворовая команда. #3</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="47" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Однажды на лавочке. Трое.</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="48" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="49" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="50" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="51" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="52" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="53" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="54" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="55" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="56" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="58" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="59" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="60" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Коммунистическая улица</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="62" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Качели</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="63" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">Мотоциклисты</a>
+	
+	</li>
+
+	
+	<li>
+		
+		<a class="edit" data-method="put" data-pk="64" data-remote="true" data-resourse="post" data-title="Enter" data-type="select" data-url="ajax/test" href="/ajax/test?locale=ru" rel="nofollow">*</a>
+	
+	</li>
+
+
+<script>
+
+$(function(){
+    $('.edit').editable({
+        value: 2,    
+        source: [{value:3, text:0}, {value:4, text:6}, {value:5, text:12}, {value:6, text:16}, {value:7, text:18}]
+    });
+});
+
+
+
+
+</script>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+        </section><!-- main -->
+       
+      </div><!-- content -->
+    
+  
+ 
+
+      <br>
+<footer class="row">
+    <nav class="col col-lg-12">
+      <div id="top_banners" style="padding-bottom: 10px" >
+ 
+ 
+
+</div>
+  
+      <ul class="breadcrumb">
+        <li>© Тюменский дом фотографии. 2014 г.  
+Phone: +7 3452 998755</li>
+        
+      </ul><!-- breadcrumb -->
+    </nav><!-- nav -->
+  </footer><!-- footer --> 
+  
+
+</section><!-- container -->
+
+  
+<div class="modal fade" id = "age_agreement">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Соглашение</h4>
+      </div>
+      <div class="modal-body">
+        <p>Я подтверждаю, что являются совершеннолетним.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <a href="/age_agreement/agreed?locale=ru">Я согласен</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+  
+  
+  </body>
+</html>

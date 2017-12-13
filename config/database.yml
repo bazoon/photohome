@@ -23,26 +23,26 @@
 #    port: 5432
 #    template: template0
 
+# development:
+  # adapter: mysql2
+  # encoding: utf8
+  # database: photohome
+  # username: photo
+  # password: A6y5X3o1
+  # # host: 127.0.0.1
+  # pool: 25
+  # port: 3306
+  # secure_auth: false
 development:
   adapter: mysql2
   encoding: utf8
   database: photohome_development
-  username: vit
-  password: t97888
+  username: fotodom
+  password: Ajnjrke,72
   # host: 127.0.0.1
-  pool: 25
   port: 3306
+  pool: 25
   secure_auth: false
-
-  # adapter: mysql2
-  # encoding: utf8
-  # database: photohome_development
-  # username: root
-  # password: t97888
-  # # host: 127.0.0.1
-  # port: 3306
-  # pool: 25
-  # secure_auth: false
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -84,8 +84,8 @@ production:
   adapter: mysql2
   encoding: utf8
   database: photohome_development
-  username: vit
-  password: t97888
+  username: fotodom
+  password: Ajnjrke,72
   # host: 127.0.0.1
   pool: 25
   port: 3306

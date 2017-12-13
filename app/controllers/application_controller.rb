@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
 
 
  
-  def configure_permitted_parameters
+  def configure_permitted_parameters_old
     registration_params = [:name, :login,:avatar, :about, :email, :password, :password_confirmation, :country,:last_name, :adress, :zip_code, :city, :phone, :birth_date]
 
     if params[:action] == 'update'
@@ -69,6 +69,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+  end
+
+
 
   def masquerading?
    session[:admin_id].present?

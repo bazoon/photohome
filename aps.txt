@@ -1,0 +1,6 @@
+Puma starting in single mode...
+* Version 2.7.1, codename: Earl of Sandwich Partition
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://0.0.0.0:9292
+* Daemonizing...

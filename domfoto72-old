@@ -1,0 +1,73 @@
+<VirtualHost 81.177.157.58:80>
+	ServerName domfoto72.ru
+	ServerAlias www.domfoto72.ru
+	DocumentRoot /var/www/domfoto72/data/www/domfoto72.ru
+ 	
+	<location /uploads>
+	  ProxyPass !
+	</location>
+	<location /assets>
+   	 ProxyPass !
+  	</location>
+ 	 <location /system>
+   	 ProxyPass !
+ 	 </location>
+ 
+ 	ProxyPass / http://127.0.0.1:9292/
+	ProxyPassReverse / http://127.0.0.1:9292/
+
+	ServerAdmin webmaster@domfoto72.ru
+	AddDefaultCharset UTF-8
+	AssignUserID domfoto72 domfoto72
+	CustomLog /var/www/httpd-logs/domfoto72.ru.access.log combined
+	ErrorLog /var/www/httpd-logs/domfoto72.ru.error.log
+	ScriptAlias /cgi-bin/ /var/www/domfoto72/data/www/domfoto72.ru/cgi-bin/
+	<FilesMatch "\.ph(p[3-5]?|tml)$">
+		SetHandler application/x-httpd-php
+	</FilesMatch>
+	<FilesMatch "\.phps$">
+		SetHandler application/x-httpd-php-source
+	</FilesMatch>
+	<IfModule php5_module>
+		php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f webmaster@domfoto72.ru"
+		php_admin_value upload_tmp_dir "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value session.save_path "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value open_basedir "/var/www/domfoto72/data:."
+	</IfModule>
+	<IfModule php7_module>
+		php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f webmaster@domfoto72.ru"
+		php_admin_value upload_tmp_dir "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value session.save_path "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value open_basedir "/var/www/domfoto72/data:."
+	</IfModule>
+</VirtualHost>
+	<IfModule headers_module>
+		Header always set Strict-Transport-Security "max-age=31536000; preload"
+	</IfModule>
+	<FilesMatch "\.ph(p[3-5]?|tml)$">
+		SetHandler application/x-httpd-php
+	</FilesMatch>
+	<FilesMatch "\.phps$">
+		SetHandler application/x-httpd-php-source
+	</FilesMatch>
+	<IfModule php5_module>
+		php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f webmaster@domfoto72.ru"
+		php_admin_value upload_tmp_dir "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value session.save_path "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value open_basedir "/var/www/domfoto72/data:."
+	</IfModule>
+	<IfModule php7_module>
+		php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f webmaster@domfoto72.ru"
+		php_admin_value upload_tmp_dir "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value session.save_path "/var/www/domfoto72/data/mod-tmp"
+		php_admin_value open_basedir "/var/www/domfoto72/data:."
+	</IfModule>
+<Directory /var/www/domfoto72/data/www/domfoto72.ru>
+	Options +Includes +ExecCGI
+	<IfModule php5_module>
+		php_admin_flag engine on
+	</IfModule>
+	<IfModule php7_module>
+		php_admin_flag engine on
+	</IfModule>
+</Directory>

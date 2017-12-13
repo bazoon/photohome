@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
   # layout "user_profile_layout", except: [:new]
 
   def update_sanitized_params
-    devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :last_name, :login, :about, :email, :country, :password, :password_confirmation,:avatar,:terms_of_service, :birth_date)}
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :last_name, :login, :about, :email, :country, :password, :password_confirmation,:avatar,:terms_of_service, :birth_date])
   end
 
 

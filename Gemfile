@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
-gem 'rails', '4.1.1'
+ruby '2.3.4'
+gem 'rails', '4.1.16'
 
 gem 'rails_admin'
 
@@ -75,7 +75,7 @@ gem 'devise-russian'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'carrierwave'
-gem 'rmagick', :require => 'RMagick'
+gem 'rmagick'
 # gem "mini_magick"
 gem 'acts-as-taggable-on'
 gem 'sanitize'

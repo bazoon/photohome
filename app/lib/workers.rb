@@ -1,6 +1,6 @@
 class Workers
 
-    require 'sidekiq/api'
+#    require 'sidekiq/api'
 
     def self.remove_job(jid)
         r=Sidekiq::ScheduledSet.new
