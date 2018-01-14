@@ -8,7 +8,12 @@
 
 <h1><%= t(".list") %></h1>
 
-<%= render partial: 'competitions/competitions', locals: { competitions: @competitions, title: t('_competitions') } %>
+<h2><%= t(".current") %></h2>
+<%= render partial: 'competitions/competitions', locals: { competitions: @current_competitions, title: t('_competitions') } %>
+
+
+<h2><%= t(".old") %></h2>
+<%= render partial: 'competitions/competitions', locals: { competitions: @old_competitions, title: t('_competitions') } %>
 <%= render partial: 'competitions/competitions', locals: { competitions: @fotofinishes, title: t('photofinishes') } %>
 
 

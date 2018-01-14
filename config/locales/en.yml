@@ -267,6 +267,8 @@ en:
       new:
         new: "New contest"
       index:
+        old: 'Old contests'
+        current: 'Current contests'
         list: "Contests"
         results: "Results"
         title: "Title"

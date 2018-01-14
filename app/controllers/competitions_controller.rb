@@ -5,8 +5,13 @@ class CompetitionsController < ApplicationController
   # GET /competitions
   # GET /competitions.json
   def index
+    current_date = Date.current
     @competitions = Competition.non_fotofinish.order(:created_at).paginate(page: params[:page])
     @fotofinishes = Competition.fotofinish.order(:created_at).paginate(page: params[:page])
+    
+    @old_competitions = @competitions.where('open_date <= ?', current_date)
+    @current_competitions = @competitions.where('open_date > ?', current_date)
+
     # fresh_when(@competitions)
   end
 
