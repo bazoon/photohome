@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def ld(d)
-    I18n.l(d, format: :long) unless d.nil?
+    d.strftime("%d.%m.%Y") unless d.nil?
   end  
 
 
