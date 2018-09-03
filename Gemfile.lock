@@ -139,7 +139,7 @@ GEM
       thor (~> 0.19.1)
     fotoramajs (4.6.4)
       sprockets (>= 2)
-    friendly_id (5.0.5)
+    friendly_id (5.2.4)
       activerecord (>= 4.0.0)
     goldiloader (1.0.1)
       activerecord (>= 3.2, < 5.1)
@@ -447,7 +447,7 @@ DEPENDENCIES
   font-awesome-rails
   foreman
   fotoramajs
-  friendly_id (~> 5.0.0)
+  friendly_id (~> 5.2.4)
   goldiloader
   gravatar-ultimate
   gretel
