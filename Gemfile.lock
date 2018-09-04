@@ -149,7 +149,7 @@ GEM
       rack
     gretel (3.0.9)
       rails (>= 3.1.0)
-    groupdate (3.2.0)
+    groupdate (3.2.1)
       activesupport (>= 3)
     haml (5.0.4)
       temple (>= 0.8.0)
