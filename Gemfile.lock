@@ -93,7 +93,7 @@ GEM
       simplecov (>= 0.7)
       term-ansicolor
       thor
-    crass (1.0.3)
+    crass (1.0.4)
     cssminify (1.0.2)
     daemons (1.2.6)
     database_cleaner (1.6.2)
@@ -323,7 +323,7 @@ GEM
     rubyzip (1.2.2)
     russian (0.6.0)
       i18n (>= 0.5.0)
-    sanitize (4.6.0)
+    sanitize (4.6.6)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)
