@@ -23,7 +23,7 @@ gem 'yui-compressor'
 gem 'cssminify'
 # gem 'bootstrap-sass'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sass-rails', '>= 3.2'
 
 
